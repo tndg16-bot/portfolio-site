@@ -331,20 +331,30 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Coming Soon */}
+          {/* GitHub Actions CI & Multi-Agent Workflow */}
           <motion.div
             whileInView="visible"
             initial="hidden"
             viewport={{ once: true }}
             variants={itemVariants}
-            className="glass-panel group relative flex flex-col items-center justify-center rounded-3xl p-8 border border-dashed border-white/10 hover:border-teal-500/20 transition-all duration-500 bg-black/10 min-h-[280px]"
+            className="glass-panel group relative flex flex-col rounded-3xl p-8 border border-white/5 hover:border-teal-500/30 transition-all duration-500 bg-black/20"
           >
-            <div className="text-4xl mb-4 opacity-50">🚀</div>
-            <h3 className="text-xl font-bold text-zinc-500 mb-2">Coming Soon</h3>
-            <p className="text-zinc-600 text-sm text-center">
-              新しいAIツールを開発中...<br />
-              お楽しみに！
+            <div className="absolute -top-4 -right-4 bg-gradient-to-br from-green-500/30 to-emerald-500/30 p-3 rounded-xl backdrop-blur-md border border-green-500/30 text-green-400 group-hover:scale-110 transition-transform duration-500">
+              <Cpu size={24} />
+            </div>
+            <div className="text-4xl mb-4">⚙️</div>
+            <h3 className="text-xl font-bold text-white mb-2">GitHub Actions CI/CD</h3>
+            <p className="text-zinc-400 text-sm mb-4 flex-grow">
+              PRごとの自動Lint/Buildチェック、AIエージェント協調開発のためのマルチエージェント階層構造を構築。
             </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">GitHub Actions</span>
+              <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">CI/CD</span>
+              <span className="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded-full">Multi-Agent</span>
+            </div>
+            <div className="text-zinc-500 text-sm">
+              ✅ 本番運用中
+            </div>
           </motion.div>
         </div>
       </section>
