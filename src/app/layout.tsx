@@ -15,6 +15,7 @@ const notoJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://takahiro-motoyama.vercel.app'),
   title: "本山 貴裕 | Life Self-Determination",
   description: "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
 };
