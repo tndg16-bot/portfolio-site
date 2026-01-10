@@ -1,0 +1,80 @@
+{
+  "common": {
+    "home": "ホーム",
+    "about": "プロフィール",
+    "philosophy": "哲学",
+    "sessions": "セッション",
+    "contact": "お問い合わせ",
+    "language": "言語",
+    "bookSession": "セッションを予約",
+    "contactUs": "お問い合わせ"
+  },
+  "home": {
+    "hero": {
+      "title": "人生の自己決定を取り戻す",
+      "subtitle": "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。"
+    },
+    "philosophy": {
+      "spiritualResilience": "聖域を守る",
+      "description": "外部の評価や「正解」に振り回されない、自己決定の核を確立する。"
+    },
+    "future": {
+      "title": "未来をデザインする",
+      "description": "AIと哲学で、自分だけの人生を。"
+    }
+  },
+  "about": {
+    "title": "判断軸を取り戻して、自分で決められる人を増やしたい",
+    "description": "「ノウハウ依存」から卒業した先に、本当の自由がある。",
+    "services": {
+      "title": "私がやっていること",
+      "service1": "意思決定の整理（価値観／理想／現状／ギャップ／次の一歩）",
+      "service2": "期限に向けたロードマップ設計（3ヶ月プラン、週次の型、今週の行動3つ）",
+      "service3": "現実面（キャリア／収入設計／AI活用）を「価値観に沿う範囲で」整理"
+    }
+  },
+  "philosophy": {
+    "title": "人生の自己決定を取り戻す",
+    "description": "溢れる情報と「正解」の押し付けから、魂の呼吸を守り抜く。",
+    "principles": [
+      {
+        "title": "内なる聖域を守る",
+        "subtitle": "Spiritual Resilience",
+        "description": "外部の評価や「正解」に振り回されない、自己決定の核を確立する。"
+      },
+      {
+        "title": "自分の価値は自分で決める",
+        "subtitle": "Self-Determination",
+        "description": "他者の期待ではなく、自身の内なる声に従う勇気を育む。"
+      },
+      {
+        "title": "AIを創造の武器に",
+        "subtitle": "AI Practical Wisdom",
+        "description": "テクノロジーを「道具」から「思考パートナー」へ昇華させる。"
+      },
+      {
+        "title": "静寂の中の確信",
+        "subtitle": "Quiet Confidence",
+        "description": "情報の洪水から距離を置き、直感を研ぎ澄ます。"
+      }
+    ]
+  },
+  "sessions": {
+    "title": "自分の人生を、自分で決める力を取り戻す",
+    "description": "情報過多の時代に、外からの「正解」ではなく、内なる「確信」を再構築する。",
+    "targetAudience": "こんな方へ",
+    "booking": {
+      "title": "セッションを予約",
+      "description": "無料のモヤモヤ整理セッションを受けてみませんか？"
+    }
+  },
+  "contact": {
+    "title": "あなたの一歩をお待ちしています",
+    "description": "変化への第一歩は、小さな「問い合わせ」から始まります。",
+    "methods": {
+      "consultation": "無料相談を予約",
+      "email": "メールで問い合わせ",
+      "line": "LINE公式アカウント"
+    }
+  }
+}

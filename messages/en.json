@@ -1,0 +1,80 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "philosophy": "Philosophy",
+    "sessions": "Sessions",
+    "contact": "Contact",
+    "language": "Language",
+    "bookSession": "Book a Session",
+    "contactUs": "Contact Us"
+  },
+  "home": {
+    "hero": {
+      "title": "Regain Your Self-Determination",
+      "subtitle": "From 'how-to dependency' to 'life self-determination'. Design your autonomous life with AI and philosophy."
+    },
+    "philosophy": {
+      "spiritualResilience": "Protect Your Inner Sanctuary",
+      "description": "Establish the core of self-determination, untethered from external judgment and 'right answers'."
+    },
+    "future": {
+      "title": "Design Your Future",
+      "description": "With AI and philosophy, create a life that's uniquely yours."
+    }
+  },
+  "about": {
+    "title": "Help More People Make Their Own Decisions",
+    "description": "True freedom awaits beyond 'how-to dependency'.",
+    "services": {
+      "title": "What I Do",
+      "service1": "Decision Clarity (values / vision / current state / gaps / next step)",
+      "service2": "Roadmap Design (3-month plan, weekly framework, 3 actions for this week)",
+      "service3": "Reality Alignment (career / income design / AI usage) within your values"
+    }
+  },
+  "philosophy": {
+    "title": "Regain Life Self-Determination",
+    "description": "Protect your soul's breath from the flood of information and imposed 'right answers'.",
+    "principles": [
+      {
+        "title": "Protect Inner Sanctuary",
+        "subtitle": "Spiritual Resilience",
+        "description": "Establish the core of self-determination, untethered from external judgment and 'right answers'."
+      },
+      {
+        "title": "Your Value, Your Choice",
+        "subtitle": "Self-Determination",
+        "description": "Cultivate the courage to follow your inner voice, not others' expectations."
+      },
+      {
+        "title": "AI as Creative Weapon",
+        "subtitle": "AI Practical Wisdom",
+        "description": "Elevate technology from 'tool' to 'thinking partner'."
+      },
+      {
+        "title": "Confidence in Stillness",
+        "subtitle": "Quiet Confidence",
+        "description": "Distance yourself from the information flood and sharpen your intuition."
+      }
+    ]
+  },
+  "sessions": {
+    "title": "Regain the Power to Decide Your Own Life",
+    "description": "In an age of information overload, rebuild inner certainty instead of seeking external 'right answers'.",
+    "targetAudience": "Who This Is For",
+    "booking": {
+      "title": "Book a Session",
+      "description": "Ready to try a free clarity session?"
+    }
+  },
+  "contact": {
+    "title": "Your First Step Awaits",
+    "description": "Every transformation begins with a simple 'hello'.",
+    "methods": {
+      "consultation": "Book Free Consultation",
+      "email": "Email Us",
+      "line": "LINE Official Account"
+    }
+  }
+}

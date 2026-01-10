@@ -61,7 +61,8 @@ async function fetchGitHubCommits(): Promise<GitHubCommit[]> {
 
     const response = await fetch(url, {
         headers,
-        cache: 'no-store' // Disable caching for real-time data
+        cache: 'force-cache',
+        next: { revalidate: 300 } // 5分ごとに再検証
     });
 
     if (!response.ok) {

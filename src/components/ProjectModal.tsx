@@ -13,6 +13,7 @@ interface Project {
     status: 'not_started' | 'in_progress' | 'completed';
     description?: string;
     issueNumber?: number;
+    issueUrl?: string;
     subtasks?: Subtask[];
     progress?: number;
 }
@@ -119,15 +120,15 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                             )}
 
                             {/* Footer (Issue Link) */}
-                            {project.issueNumber && (
+                            {(project.issueUrl || project.issueNumber) && (
                                 <div className="mt-8 pt-6 border-t border-white/5 flex justify-end">
                                     <a
-                                        href={`https://github.com/tndg16-bot/papa/issues/${project.issueNumber}`}
+                                        href={project.issueUrl ?? `https://github.com/tndg16-bot/papa/issues/${project.issueNumber}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-sm text-zinc-500 hover:text-teal-400 transition-colors flex items-center gap-2"
                                     >
-                                        GitHub Issue #{project.issueNumber} を開く ↗
+                                        GitHub Issue{project.issueNumber ? ` #${project.issueNumber}` : ''} を開く ↗
                                     </a>
                                 </div>
                             )}

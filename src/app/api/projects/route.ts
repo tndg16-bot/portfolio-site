@@ -18,6 +18,7 @@ interface GitHubIssue {
     state: string;
     labels: { name: string }[];
     body: string | null;
+    html_url: string;
 }
 
 interface Subtask {
@@ -30,6 +31,7 @@ interface Project {
     status: 'not_started' | 'in_progress' | 'completed';
     description?: string;
     issueNumber?: number;
+    issueUrl?: string;
     subtasks?: Subtask[];
     progress?: number;
 }
@@ -95,7 +97,11 @@ async function fetchGitHubIssuesForRepo(repo: string): Promise<GitHubIssue[]> {
     };
     if (GITHUB_TOKEN) headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
 
-    const response = await fetch(url, { headers, cache: 'no-store' });
+    const response = await fetch(url, { 
+        headers, 
+        cache: 'force-cache',
+        next: { revalidate: 300 } // 5分ごとに再検証
+    });
     if (!response.ok) return [];
     return response.json();
 }
@@ -111,6 +117,8 @@ async function fetchGitHubIssues(): Promise<GitHubIssue[]> {
             issue.title.match(/^\[PROJECT\]/i) ||
             issue.title.match(/^\[FEATURE\]/i) ||
             issue.title.match(/^\[WIP\]/i) ||
+            issue.title.match(/^\[Portfolio\]/i) ||
+            issue.title.match(/^\[Infra\]/i) ||
             issue.labels.some(l => ['project', 'feature', 'milestone'].includes(l.name.toLowerCase()))
         )
     );
@@ -137,6 +145,7 @@ function parseGitHubIssues(issues: GitHubIssue[]): { projects: Project[]; stats:
             status: parseIssueStatus(issue),
             description: issue.body?.slice(0, 100) || undefined,
             issueNumber: issue.number,
+            issueUrl: issue.html_url,
             subtasks,
             progress
         };
@@ -174,6 +183,7 @@ export async function GET() {
                 name: 'ノウハウ依存脱却ワークの開発',
                 status: 'in_progress' as const,
                 issueNumber: 6,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/6',
                 progress: 50,
                 subtasks: [
                     { title: 'ワークシート設計', completed: true },
@@ -184,6 +194,7 @@ export async function GET() {
                 name: '自己肯定感の源泉発見セッション',
                 status: 'not_started' as const,
                 issueNumber: 7,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/7',
                 progress: 0,
                 subtasks: []
             },
@@ -191,6 +202,7 @@ export async function GET() {
                 name: '過去の解釈変換メソッド',
                 status: 'not_started' as const,
                 issueNumber: 8,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/8',
                 progress: 0,
                 subtasks: []
             },
@@ -198,6 +210,7 @@ export async function GET() {
                 name: '人は人を通して磨かれる',
                 status: 'not_started' as const,
                 issueNumber: 9,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/9',
                 progress: 0,
                 subtasks: []
             },
@@ -205,6 +218,7 @@ export async function GET() {
                 name: '独自の商品設計',
                 status: 'not_started' as const,
                 issueNumber: 10,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/10',
                 progress: 0,
                 subtasks: []
             },
@@ -212,6 +226,7 @@ export async function GET() {
                 name: '案件獲得戦略',
                 status: 'not_started' as const,
                 issueNumber: 11,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/11',
                 progress: 0,
                 subtasks: []
             },
@@ -219,6 +234,7 @@ export async function GET() {
                 name: '最速収益化ロードマップ',
                 status: 'not_started' as const,
                 issueNumber: 12,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/12',
                 progress: 0,
                 subtasks: []
             },
@@ -226,6 +242,7 @@ export async function GET() {
                 name: '本業×副業統合戦略',
                 status: 'not_started' as const,
                 issueNumber: 13,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/13',
                 progress: 0,
                 subtasks: []
             },
@@ -233,6 +250,7 @@ export async function GET() {
                 name: 'Claude Code並列開発',
                 status: 'in_progress' as const,
                 issueNumber: 14,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/14',
                 progress: 60,
                 subtasks: [
                     { title: 'ドキュメント作成', completed: true },
@@ -246,6 +264,7 @@ export async function GET() {
                 name: 'Git/GitHub連携',
                 status: 'not_started' as const,
                 issueNumber: 15,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/15',
                 progress: 0,
                 subtasks: []
             },
@@ -253,6 +272,7 @@ export async function GET() {
                 name: 'ポートフォリオサイト完成',
                 status: 'completed' as const,
                 issueNumber: 1,
+                issueUrl: 'https://github.com/tndg16-bot/portfolio-site/issues/1',
                 progress: 100,
                 subtasks: [
                     { title: '要件定義', completed: true },

@@ -2,9 +2,22 @@
 
 import { motion, Variants } from "framer-motion";
 import { ArrowRight, Compass, Cpu, Target, CheckCircle2, Sparkles, Zap, Shield } from "lucide-react";
+import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
-import Dashboard from "@/components/Dashboard";
-import BookingForm from "@/components/BookingForm";
+
+const Dashboard = dynamic(() => import('@/components/Dashboard'), {
+  loading: () => <div className="flex items-center justify-center min-h-[400px]">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
+  </div>,
+  ssr: true
+});
+
+const BookingForm = dynamic(() => import('@/components/BookingForm'), {
+  loading: () => <div className="flex items-center justify-center min-h-[400px]">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
+  </div>,
+  ssr: false
+});
 
 export default function Home() {
   const containerVariants: Variants = {

@@ -2,9 +2,16 @@
 
 import { motion, Variants } from "framer-motion";
 import { CheckCircle2, ArrowRight, Clock, Video, MessageCircle, ShieldCheck, HelpCircle, CalendarDays } from "lucide-react";
-import BookingForm from "@/components/BookingForm";
+import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import Link from "next/link";
+
+const BookingForm = dynamic(() => import('@/components/BookingForm'), {
+  loading: () => <div className="flex items-center justify-center min-h-[400px]">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
+  </div>,
+  ssr: true
+});
 
 export default function SessionsPage() {
     const containerVariants: Variants = {
