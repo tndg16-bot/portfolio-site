@@ -3,7 +3,14 @@ import { NextResponse } from 'next/server';
 // Environment variables for GitHub integration
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_OWNER = process.env.GITHUB_OWNER || 'tndg16-bot';
-const GITHUB_REPO = process.env.GITHUB_REPO || 'papa';
+const GITHUB_REPOS = [
+    'papa',
+    'nihongo-mate',
+    'gamified-mandala-chart',
+    'kindle-pdf-extension',
+    'portfolio-site',
+    'gamified-mandala'
+];
 
 interface GitHubIssue {
     number: number;
@@ -34,40 +41,11 @@ interface Stats {
     notStarted: number;
 }
 
-function parseIssueStatus(issue: GitHubIssue): 'not_started' | 'in_progress' | 'completed' {
-    // Check if issue is closed
-    if (issue.state === 'closed') {
-        return 'completed';
-    }
-
-    // Check for in-progress labels
-    const inProgressLabels = ['in-progress', 'in progress', 'wip', 'doing'];
-    const hasInProgressLabel = issue.labels.some(label =>
-        inProgressLabels.includes(label.name.toLowerCase())
-    );
-
-    if (hasInProgressLabel) {
-        return 'in_progress';
-    }
-
-    // Check title for M-number items with progress indicators
-    const progressMatch = issue.title.match(/\[(\d+)\/(\d+)\]/);
-    if (progressMatch) {
-        const current = parseInt(progressMatch[1]);
-        const total = parseInt(progressMatch[2]);
-        if (current > 0 && current < total) return 'in_progress';
-        if (current >= total) return 'completed';
-    }
-
-    // Default to not_started for open issues
-    return 'not_started';
-}
-
 function parseSubtasks(body: string | null): Subtask[] {
     if (!body) return [];
 
-    // Match '- [ ] ' or '- [x] ' (case insensitive)
-    const regex = /-\s*\[([ xX])\]\s*(.+)/g;
+    // Improved regex to support both '-' and '*' and handle different spacing
+    const regex = /^[*-]\s*\[([ xX])\]\s*(.+)/gm;
     const subtasks: Subtask[] = [];
     let match;
 
@@ -80,41 +58,71 @@ function parseSubtasks(body: string | null): Subtask[] {
     return subtasks;
 }
 
-async function fetchGitHubIssues(): Promise<GitHubIssue[]> {
-    const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/issues?state=all&per_page=100`;
+function parseIssueStatus(issue: GitHubIssue): 'not_started' | 'in_progress' | 'completed' {
+    if (issue.state === 'closed') return 'completed';
 
+    const subtasks = parseSubtasks(issue.body);
+    const completedCount = subtasks.filter(t => t.completed).length;
+
+    // If there are subtasks and some are done, it's in progress
+    if (subtasks.length > 0 && completedCount > 0 && completedCount < subtasks.length) {
+        return 'in_progress';
+    }
+
+    const inProgressLabels = ['in-progress', 'in progress', 'wip', 'doing', 'active', 'processing'];
+    const hasInProgressLabel = issue.labels.some(label =>
+        inProgressLabels.includes(label.name.toLowerCase())
+    );
+
+    if (hasInProgressLabel) return 'in_progress';
+
+    // Title status check [1/5] etc
+    const progressMatch = issue.title.match(/\[(\d+)\/(\d+)\]/);
+    if (progressMatch) {
+        const current = parseInt(progressMatch[1]);
+        const total = parseInt(progressMatch[2]);
+        if (current > 0 && current < total) return 'in_progress';
+        if (current >= total) return 'completed';
+    }
+
+    return 'not_started';
+}
+
+async function fetchGitHubIssuesForRepo(repo: string): Promise<GitHubIssue[]> {
+    const url = `https://api.github.com/repos/${GITHUB_OWNER}/${repo}/issues?state=all&per_page=50`;
     const headers: HeadersInit = {
         'Accept': 'application/vnd.github.v3+json',
     };
+    if (GITHUB_TOKEN) headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
 
-    if (GITHUB_TOKEN) {
-        headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
-    }
+    const response = await fetch(url, { headers, cache: 'no-store' });
+    if (!response.ok) return [];
+    return response.json();
+}
 
-    const response = await fetch(url, {
-        headers,
-        cache: 'no-store' // Disable caching for real-time data
-    });
+async function fetchGitHubIssues(): Promise<GitHubIssue[]> {
+    const allIssues = await Promise.all(GITHUB_REPOS.map(repo => fetchGitHubIssuesForRepo(repo)));
+    const issues = allIssues.flat();
 
-    if (!response.ok) {
-        throw new Error(`GitHub API responded with ${response.status}: ${response.statusText}`);
-    }
-
-    const issues: GitHubIssue[] = await response.json();
-
-    // Filter to only M-numbered issues (project items)
     return issues.filter(issue =>
-        issue.title.match(/^\[M\d+\]/) ||
-        issue.title.includes('[Portfolio]') ||
-        issue.title.includes('[Infra]')
+        !issue.hasOwnProperty('pull_request') && // Filter out PRs
+        (
+            issue.title.match(/^\[M\d+\]/) ||
+            issue.title.match(/^\[PROJECT\]/i) ||
+            issue.title.match(/^\[FEATURE\]/i) ||
+            issue.title.match(/^\[WIP\]/i) ||
+            issue.labels.some(l => ['project', 'feature', 'milestone'].includes(l.name.toLowerCase()))
+        )
     );
 }
 
 function parseGitHubIssues(issues: GitHubIssue[]): { projects: Project[]; stats: Stats } {
     const projects: Project[] = issues.map(issue => {
-        // Extract clean name from title (remove [M1] etc.)
         const cleanName = issue.title
             .replace(/^\[M\d+\]\s*/, '')
+            .replace(/^\[PROJECT\]\s*/i, '')
+            .replace(/^\[FEATURE\]\s*/i, '')
+            .replace(/^\[WIP\]\s*/i, '')
             .replace(/^\[Portfolio\]\s*/, '')
             .replace(/^\[Infra\]\s*/, '');
 
@@ -158,6 +166,7 @@ export async function GET() {
         });
     } catch (error) {
         console.error('Error fetching GitHub issues:', error);
+
 
         // Return mock data for development/fallback
         const fallbackProjects: Project[] = [
