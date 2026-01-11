@@ -3,7 +3,7 @@ import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { LiquidCursor } from "@/components/LiquidCursor";
 import { SectionBackground } from "@/components/SectionBackground";
-import { StructuredData } from "@/components/StructuredData";
+import { PersonJsonLd, OrganizationJsonLd, WebsiteJsonLd } from "@/components/JsonLd";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,10 +16,10 @@ const notoJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://your-portfolio-url.vercel.app"),
+  metadataBase: new URL("https://takahiro-motoyama.vercel.app"),
   title: {
-    default: "本山 貴裕 | Life Self-Determination Protocol",
-    template: "%s | 本山 貴裕"
+    default: "本山 貴大 | Life Self-Determination Protocol",
+    template: "%s | 本山 貴大"
   },
   description: "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
   keywords: [
@@ -33,29 +33,29 @@ export const metadata: Metadata = {
     "モヤモヤ整理",
     "対話セッション"
   ],
-  authors: [{ name: "本山貴裕" }],
-  creator: "本山貴裕",
-  publisher: "本山貴裕",
+  authors: [{ name: "本山貴大" }],
+  creator: "本山貴大",
+  publisher: "本山貴大",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    url: "https://your-portfolio-url.vercel.app",
-    siteName: "本山 貴裕 | Life Self-Determination Protocol",
-    title: "本山 貴裕 | Life Self-Determination Protocol",
+    url: "https://takahiro-motoyama.vercel.app",
+    siteName: "本山 貴大 | Life Self-Determination Protocol",
+    title: "本山 貴大 | Life Self-Determination Protocol",
     description: "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
     images: [
       {
         url: "/images/ogp-default.jpg",
         width: 1200,
         height: 630,
-        alt: "本山 貴裕 | Life Self-Determination Protocol"
+        alt: "本山 貴大 | Life Self-Determination Protocol"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "本山 貴裕 | Life Self-Determination Protocol",
+    title: "本山 貴大 | Life Self-Determination Protocol",
     description: "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
     images: ["/images/ogp-default.jpg"],
     creator: "@your-twitter-handle"
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   alternates: {
-    canonical: "https://your-portfolio-url.vercel.app"
+    canonical: "https://takahiro-motoyama.vercel.app"
   }
 };
 
@@ -83,7 +83,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
       </head>
       <body className={`${inter.variable} ${notoJP.variable} font-sans antialiased bali-bg overflow-x-hidden`}>
-        <StructuredData />
+        <PersonJsonLd />
+        <OrganizationJsonLd />
+        <WebsiteJsonLd />
         <SectionBackground />
         <LiquidCursor />
         {children}

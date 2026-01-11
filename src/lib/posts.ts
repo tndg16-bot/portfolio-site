@@ -23,7 +23,7 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as { date: string; title: string; description?: string }),
     };
   });
   // Sort posts by date
@@ -60,10 +60,29 @@ export async function getPostData(slug: string) {
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
+  // Get description from metadata or generate from content
+  const data = matterResult.data as { date: string; title: string; description?: string };
+  let description = data.description;
+  
+  if (!description) {
+    // Strip markdown and newlines to get plain text
+    const plainText = matterResult.content
+      .replace(/#+\s/g, '') // Remove headers
+      .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1') // Remove links
+      .replace(/(\r\n|\n|\r)/gm, ' ') // Replace newlines with spaces
+      .replace(/\s+/g, ' ') // Collapse multiple spaces
+      .trim();
+    
+    description = plainText.length > 100 
+      ? plainText.slice(0, 100) + '...' 
+      : plainText;
+  }
+
   // Combine the data with the id and contentHtml
   return {
     slug,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string }),
+    description,
+    ...data,
   };
 }
