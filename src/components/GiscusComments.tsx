@@ -8,9 +8,9 @@ export default function GiscusComments() {
       <Giscus
         id="comments"
         repo="tndg16-bot/portfolio-site"
-        repoId="PLACEHOLDER_REPO_ID" // TODO: Set this after enabling GitHub Discussions
-        category="Comments"
-        categoryId="PLACEHOLDER_CATEGORY_ID" // TODO: Set this after enabling GitHub Discussions
+        repoId="R_kgDOQ2r01Q"
+        category="General"
+        categoryId="DIC_kwDOQ2r01c4C01dx"
         mapping="pathname"
         term="Welcome to @giscus/react component!"
         reactionsEnabled="1"
