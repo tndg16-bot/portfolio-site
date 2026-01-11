@@ -1,0 +1,46 @@
+
+> portfolio@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by process 259968, using available port 3001 instead.
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\chatg\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\chatg\Obsidian Vault\papa\Apps\portfolio\package-lock.json
+   * C:\Users\chatg\Obsidian Vault\papa\package-lock.json
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.1.87:3001
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 2.5s
+○ Compiling / ...
+ GET /sessions 200 in 10.8s (compile: 9.4s, render: 1456ms)
+ GET / 200 in 11.0s (compile: 10.3s, render: 657ms)
+✓ Compiled in 218ms
+✓ Compiled in 385ms
+✓ Compiled in 95ms
+✓ Compiled in 319ms
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+⚠ `images.domains` is deprecated in favor of `images.remotePatterns`. Please update next.config.ts to protect your application from malicious users.
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\chatg\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\chatg\Obsidian Vault\papa\Apps\portfolio\package-lock.json
+   * C:\Users\chatg\Obsidian Vault\papa\package-lock.json
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.1.87:3001
+- Environments: .env.local
+- Experiments (use with caution):
+  · optimizePackageImports
+
+✓ Starting...
+✓ Ready in 3.7s

@@ -154,3 +154,63 @@ textarea {
   scrollbar-width: thin;
   scrollbar-color: rgba(45, 212, 191, 0.4) rgba(0, 0, 0, 0.2);
 }
+
+/* ========================================
+   Accessibility Improvements
+   ======================================== */
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip link focus styles */
+.skip-link:focus {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 50;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: black;
+  border-radius: 0.5rem;
+  outline: 2px solid #14b8a6;
+}
+
+/* Focus visible indicator */
+*:focus-visible {
+  outline: 2px solid #14b8a6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .text-zinc-300 {
+    color: #ffffff;
+  }
+  
+  .text-zinc-400 {
+    color: #e5e5e5;
+  }
+}

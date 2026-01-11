@@ -16,6 +16,7 @@ interface Project {
     status: "not_started" | "in_progress" | "completed";
     description?: string;
     issueNumber?: number;
+    issueUrl?: string;
     subtasks?: Subtask[];
     progress?: number;
 }
