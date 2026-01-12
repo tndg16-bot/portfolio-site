@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "本山 貴大 | Life Self-Determination Protocol",
     description: "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
     images: ["/images/ogp-default.jpg"],
-    creator: "@your-twitter-handle"
+    // creator: "Set your Twitter handle here when available"
   },
   icons: {
     icon: "/favicon.ico",

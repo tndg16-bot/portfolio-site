@@ -6,8 +6,8 @@ export const jsonLdPerson = {
   "familyName": "本山",
   "jobTitle": "Life Self-Determination Coach",
   "description": "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
-  "url": "https://your-portfolio-url.vercel.app",
-  "image": "https://your-portfolio-url.vercel.app/images/profile.jpg",
+  "url": "https://takahiro-motoyama.vercel.app",
+  "image": "https://takahiro-motoyama.vercel.app/images/profile.jpg",
   "sameAs": [
     "https://www.linkedin.com/in/takahiro-motoyama/"
   ],
@@ -26,8 +26,8 @@ export const jsonLdOrganization = {
   "@type": "Organization",
   "name": "本山 貴裕 | Life Self-Determination Protocol",
   "description": "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
-  "url": "https://your-portfolio-url.vercel.app",
-  "logo": "https://your-portfolio-url.vercel.app/images/logo.png",
+  "url": "https://takahiro-motoyama.vercel.app",
+  "logo": "https://takahiro-motoyama.vercel.app/images/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -41,12 +41,12 @@ export const jsonLdWebSite = {
   "@type": "WebSite",
   "name": "本山 貴裕 | Life Self-Determination Protocol",
   "description": "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
-  "url": "https://your-portfolio-url.vercel.app",
+  "url": "https://takahiro-motoyama.vercel.app",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://your-portfolio-url.vercel.app/search?q={search_term_string}"
+      "urlTemplate": "https://takahiro-motoyama.vercel.app/search?q={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   }
@@ -67,7 +67,7 @@ export const jsonLdService = {
   },
   "availableChannel": {
     "@type": "ServiceChannel",
-    "serviceUrl": "https://your-portfolio-url.vercel.app/sessions",
+    "serviceUrl": "https://takahiro-motoyama.vercel.app/sessions",
     "serviceMode": "online"
   },
   "offers": {

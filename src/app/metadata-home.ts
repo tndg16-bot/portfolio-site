@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "本山 貴裕 | Life Self-Determination Protocol",
     description: "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
-    url: "https://your-portfolio-url.vercel.app",
+    url: "https://takahiro-motoyama.vercel.app",
     images: [{ url: "/images/ogp-default.jpg", width: 1200, height: 630 }]
   },
   alternates: {
-    canonical: "https://your-portfolio-url.vercel.app"
+    canonical: "https://takahiro-motoyama.vercel.app"
   }
 };
