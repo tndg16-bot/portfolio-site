@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact | 本山 貴裕",
     description: "お気軽にご連絡ください。無料相談の予約やメールでの問い合わせも承っております。",
-    url: "https://your-portfolio-url.vercel.app/contact",
+    url: "https://takahiro-motoyama.vercel.app/contact",
     images: [{ url: "/images/ogp-contact.jpg", width: 1200, height: 630 }]
   },
   alternates: {
-    canonical: "https://your-portfolio-url.vercel.app/contact"
+    canonical: "https://takahiro-motoyama.vercel.app/contact"
   }
 };

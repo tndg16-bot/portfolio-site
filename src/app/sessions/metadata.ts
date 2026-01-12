@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sessions | 本山 貴裕",
     description: "60分で、価値観と判断軸を言語化して、次の一歩まで落とします。無料のモヤモヤ整理セッションを予約。",
-    url: "https://your-portfolio-url.vercel.app/sessions",
+    url: "https://takahiro-motoyama.vercel.app/sessions",
     images: [{ url: "/images/ogp-sessions.jpg", width: 1200, height: 630 }]
   },
   alternates: {
-    canonical: "https://your-portfolio-url.vercel.app/sessions"
+    canonical: "https://takahiro-motoyama.vercel.app/sessions"
   }
 };

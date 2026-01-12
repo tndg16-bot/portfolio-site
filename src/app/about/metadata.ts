@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About | 本山 貴裕",
     description: "「判断軸を取り戻して、自分で決められる人を増やしたい」。コーチング理念と経歴をご紹介。",
-    url: "https://your-portfolio-url.vercel.app/about",
+    url: "https://takahiro-motoyama.vercel.app/about",
     images: [{ url: "/images/ogp-about.jpg", width: 1200, height: 630 }]
   },
   alternates: {
-    canonical: "https://your-portfolio-url.vercel.app/about"
+    canonical: "https://takahiro-motoyama.vercel.app/about"
   }
 };
