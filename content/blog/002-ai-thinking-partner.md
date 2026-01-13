@@ -1,7 +1,7 @@
 ---
 title: AIを思考パートナーとして使う方法
 description: "AIに任せるのではなく、AIと協働する。より深い思考と創造のために"
-date: "2026-01-10"
+date: "2026-01-02"
 category: "AI"
 tags: ["AI", "ツール", "思考法"]
 published: true

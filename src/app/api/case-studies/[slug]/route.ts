@@ -7,10 +7,11 @@ import { getCaseStudyBySlug } from '@/data/case-studies';
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const caseStudy = getCaseStudyBySlug(params.slug);
+    const { slug } = await params;
+    const caseStudy = getCaseStudyBySlug(slug);
 
     if (!caseStudy) {
       return NextResponse.json(
