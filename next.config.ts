@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'your-portfolio-url.vercel.app',
+        hostname: 'takahiro-motoyama.vercel.app',
         pathname: '/images/**',
       },
       {
