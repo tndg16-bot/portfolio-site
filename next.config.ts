@@ -10,11 +10,16 @@ const nextConfig: NextConfig = {
         hostname: 'your-portfolio-url.vercel.app',
         pathname: '/images/**',
       },
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
     ],
   },
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
+  allowedDevOrigins: ['*'],
 };
 
 export default nextConfig;
