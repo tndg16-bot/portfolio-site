@@ -14,6 +14,7 @@ export interface PostData {
   category?: string;
   tags?: string[];
   published?: boolean;
+  relatedPosts?: PostData[];
 }
 
 export interface TocHeading {
@@ -189,6 +190,9 @@ export async function getPostData(slug: string) {
       : plainText;
   }
 
+  // Get related posts
+  const relatedPosts = getRelatedPosts(slug, data.tags);
+
   // Combine the data with the id and contentHtml
   return {
     slug,
@@ -200,5 +204,34 @@ export async function getPostData(slug: string) {
     category: data.category,
     tags: data.tags,
     published: data.published,
+    relatedPosts,
   };
+}
+
+// Get related posts based on tags
+export function getRelatedPosts(currentSlug: string, tags: string[] = [], limit: number = 3): PostData[] {
+  if (!tags || tags.length === 0) return [];
+
+  const allPosts = getSortedPostsData();
+
+  const relatedPosts = allPosts
+    .filter(post =>
+      post.id !== currentSlug && // Exclude current post
+      post.tags?.some(tag => tags.includes(tag)) // Must share at least one tag
+    )
+    .map(post => {
+      // Calculate relevance score (number of matching tags)
+      const matchingTags = post.tags?.filter(tag => tags.includes(tag)).length || 0;
+      return { ...post, score: matchingTags };
+    })
+    .sort((a, b) => {
+      // Sort by score (descending), then by date (descending)
+      if (b.score !== a.score) {
+        return b.score - a.score;
+      }
+      return a.date < b.date ? 1 : -1;
+    })
+    .slice(0, limit);
+
+  return relatedPosts;
 }

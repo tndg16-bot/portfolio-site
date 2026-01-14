@@ -23,6 +23,11 @@ const BookingForm = dynamic(() => import('@/components/BookingForm'), {
   ssr: false
 });
 
+const FeaturedBlogSection = dynamic(() => import('@/components/FeaturedBlogSection'), {
+  loading: () => <div className="h-96 w-full animate-pulse bg-white/5 rounded-3xl mb-24"></div>,
+  ssr: false
+});
+
 export default function Home() {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -99,9 +104,12 @@ export default function Home() {
               無料で適性診断
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
-            <button className="glass-card flex h-14 items-center gap-2 rounded-full px-8 text-lg font-bold text-teal-50 border border-white/10 hover:bg-white/5 transition-all">
-              メソッドを探究する
-            </button>
+            <Link
+              href="/blog"
+              className="glass-card flex h-14 items-center gap-2 rounded-full px-8 text-lg font-bold text-teal-50 border border-white/10 hover:bg-white/5 transition-all"
+            >
+              ブログを読む
+            </Link>
           </motion.div>
         </motion.div>
 
@@ -267,6 +275,9 @@ export default function Home() {
 
       {/* Dashboard Section */}
       <Dashboard />
+
+      {/* Blog Section */}
+      <FeaturedBlogSection />
 
       {/* Projects Section */}
       <section id="section-projects" className="w-full max-w-7xl px-4 py-24 min-h-[70vh] flex flex-col items-center justify-center">

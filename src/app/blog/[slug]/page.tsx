@@ -8,6 +8,7 @@ import ShareButtons from '@/components/ShareButtons';
 import GiscusComments from '@/components/GiscusComments';
 import TableOfContents from '@/components/TableOfContents';
 import ArticleCTA from '@/components/ArticleCTA';
+import RelatedPosts from '@/components/RelatedPosts';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import { ArrowLeft, Calendar, Tag, Folder } from 'lucide-react';
 
@@ -192,6 +193,11 @@ export default async function PostPage({ params }: Props) {
               <h3 className="text-lg font-semibold mb-4 text-zinc-300">この記事をシェアする</h3>
               <ShareButtons url={url} title={post.title} />
             </div>
+
+            {/* Related Posts */}
+            {post.relatedPosts && post.relatedPosts.length > 0 && (
+              <RelatedPosts posts={post.relatedPosts} />
+            )}
 
             {/* Back to Blog (Bottom) */}
             <div className="mt-8 text-center">
