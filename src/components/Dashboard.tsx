@@ -19,6 +19,7 @@ interface Project {
     issueUrl?: string;
     subtasks?: Subtask[];
     progress?: number;
+    repo?: string;
 }
 
 interface Stats {
@@ -173,6 +174,11 @@ export default function Dashboard() {
                                         <div className="text-sm font-medium text-white truncate group-hover:text-teal-400 transition-colors">
                                             {project.name}
                                         </div>
+                                        {project.repo && (
+                                            <span className="text-xs px-2 py-0.5 rounded bg-violet-500/20 text-violet-400 font-mono">
+                                                {project.repo}
+                                            </span>
+                                        )}
                                         {project.description && (
                                             <div className="text-xs text-zinc-500 truncate">
                                                 {project.description}
