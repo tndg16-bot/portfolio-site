@@ -11,8 +11,9 @@ const navItems = [
   { href: '/about', label: 'About' },
   { href: '/philosophy', label: 'Philosophy' },
   { href: '/sessions', label: 'Sessions' },
+  { href: '/case-studies', label: 'Case Studies' },
+  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
-  { href: '/useful-info', label: 'Useful Info' },
 ];
 
 const externalLinks = [

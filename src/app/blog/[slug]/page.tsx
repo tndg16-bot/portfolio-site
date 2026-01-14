@@ -6,6 +6,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ShareButtons from '@/components/ShareButtons';
 import GiscusComments from '@/components/GiscusComments';
+import TableOfContents from '@/components/TableOfContents';
+import ArticleCTA from '@/components/ArticleCTA';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import { ArrowLeft, Calendar, Tag, Folder } from 'lucide-react';
 
@@ -160,6 +162,11 @@ export default async function PostPage({ params }: Props) {
               </div>
             </header>
 
+            {/* Table of Contents */}
+            {post.headings && post.headings.length > 0 && (
+              <TableOfContents headings={post.headings} />
+            )}
+
             {/* Article Content */}
             <div
               className="prose prose-lg prose-invert prose-zinc max-w-none
@@ -176,6 +183,9 @@ export default async function PostPage({ params }: Props) {
                 prose-hr:border-zinc-700"
               dangerouslySetInnerHTML={{ __html: post.contentHtml }}
             />
+
+            {/* Article CTA */}
+            <ArticleCTA />
 
             {/* Bottom Share Section */}
             <div className="mt-16 pt-8 border-t border-zinc-800">

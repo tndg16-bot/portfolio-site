@@ -16,6 +16,33 @@ export interface PostData {
   published?: boolean;
 }
 
+export interface TocHeading {
+  id: string;
+  text: string;
+  level: number;
+}
+
+// Extract headings from markdown content for Table of Contents
+export function extractHeadings(markdown: string): TocHeading[] {
+  const headingRegex = /^(#{2,3})\s+(.+)$/gm;
+  const headings: TocHeading[] = [];
+  let match;
+
+  while ((match = headingRegex.exec(markdown)) !== null) {
+    const level = match[1].length;
+    const text = match[2].trim();
+    // Create URL-friendly ID
+    const id = text
+      .toLowerCase()
+      .replace(/[^\w\s\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf]/g, '')
+      .replace(/\s+/g, '-');
+
+    headings.push({ id, text, level });
+  }
+
+  return headings;
+}
+
 export interface ContentStatus {
   totalPosts: number;
   publishedPosts: number;
@@ -120,11 +147,22 @@ export async function getPostData(slug: string) {
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
+  // Extract headings for Table of Contents
+  const headings = extractHeadings(matterResult.content);
+
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(html)
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  let contentHtml = processedContent.toString();
+
+  // Add IDs to h2 and h3 elements for TOC linking
+  headings.forEach(({ id, text }) => {
+    // Match h2 and h3 tags containing the heading text
+    const escapedText = text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(<h[23])>\\s*${escapedText}\\s*</h[23]>`, 'gi');
+    contentHtml = contentHtml.replace(regex, `$1 id="${id}">${text}</h2>`);
+  });
 
   // Get all metadata from frontmatter
   const data = matterResult.data as {
@@ -155,6 +193,7 @@ export async function getPostData(slug: string) {
   return {
     slug,
     contentHtml,
+    headings,
     description,
     title: data.title,
     date: data.date,

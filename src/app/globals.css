@@ -214,3 +214,103 @@ textarea {
     color: #e5e5e5;
   }
 }
+
+/* ========================================
+   Article Highlight Boxes (#39)
+   ======================================== */
+
+/* キーポイントボックス（teal背景） */
+.highlight-box-key {
+  background: rgba(20, 184, 166, 0.1);
+  border-left: 4px solid #14b8a6;
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.highlight-box-key::before {
+  content: '💡 Key Point';
+  display: block;
+  font-weight: 700;
+  color: #14b8a6;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* 注意事項ボックス（amber背景） */
+.highlight-box-warning {
+  background: rgba(251, 191, 36, 0.1);
+  border-left: 4px solid #f59e0b;
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.highlight-box-warning::before {
+  content: '⚠️ 注意';
+  display: block;
+  font-weight: 700;
+  color: #f59e0b;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* まとめボックス（gray背景） */
+.highlight-box-summary {
+  background: rgba(113, 113, 122, 0.15);
+  border-left: 4px solid #71717a;
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.highlight-box-summary::before {
+  content: '📝 まとめ';
+  display: block;
+  font-weight: 700;
+  color: #a1a1aa;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* 引用ブロック強化 */
+.prose blockquote {
+  position: relative;
+  border-left-color: #14b8a6 !important;
+  background: rgba(20, 184, 166, 0.05);
+  padding: 1rem 1.5rem !important;
+  border-radius: 0 8px 8px 0;
+  font-style: normal !important;
+}
+
+.prose blockquote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 3rem;
+  color: rgba(20, 184, 166, 0.2);
+  font-family: serif;
+  line-height: 1;
+}
+
+/* インラインハイライト */
+.inline-highlight {
+  background: linear-gradient(120deg, rgba(20, 184, 166, 0.2) 0%, rgba(20, 184, 166, 0.3) 100%);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* prose内での太字テキストのハイライト強化 */
+.prose strong {
+  color: #ffffff;
+  background: linear-gradient(120deg, transparent 0%, transparent 50%, rgba(20, 184, 166, 0.15) 50%, rgba(20, 184, 166, 0.15) 100%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 0.3s ease;
+}
+
+.prose strong:hover {
+  background-position: 0%;
+}

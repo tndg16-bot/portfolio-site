@@ -7,11 +7,12 @@ import Image from 'next/image';
 export interface Testimonial {
   id: string;
   name: string;
-  position: string;
-  company: string;
-  avatar?: string;
+  position?: string;
+  company?: string;
+  avatar?: string | { initials: string; imageUrl?: string };
   rating: number;
-  text: string;
+  text?: string;
+  content?: string;
   project?: string;
 }
 
@@ -61,12 +62,12 @@ export default function TestimonialCard({
 
       {/* Text */}
       <blockquote className="text-zinc-300 leading-relaxed mb-6 relative z-10">
-        <p className="text-base md:text-lg">{testimonial.text}</p>
+        <p className="text-base md:text-lg">{testimonial.text || testimonial.content}</p>
       </blockquote>
 
       {/* Author */}
       <div className="flex items-center gap-4">
-        {testimonial.avatar ? (
+        {testimonial.avatar && typeof testimonial.avatar === 'string' ? (
           <div className="relative w-12 h-12 md:w-14 md:h-14">
             <Image
               src={testimonial.avatar}
@@ -76,9 +77,21 @@ export default function TestimonialCard({
               sizes="56px"
             />
           </div>
+        ) : testimonial.avatar && typeof testimonial.avatar === 'object' && testimonial.avatar.imageUrl ? (
+          <div className="relative w-12 h-12 md:w-14 md:h-14">
+            <Image
+              src={testimonial.avatar.imageUrl}
+              alt={`${testimonial.name} avatar`}
+              fill
+              className="object-cover rounded-full border-2 border-teal-500/30 group-hover:border-teal-500/50 transition-colors"
+              sizes="56px"
+            />
+          </div>
         ) : (
           <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-teal-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg">
-            {testimonial.name.charAt(0)}
+            {testimonial.avatar && typeof testimonial.avatar === 'object' 
+              ? testimonial.avatar.initials 
+              : testimonial.name.charAt(0)}
           </div>
         )}
 
