@@ -6,16 +6,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'takahiro-motoyama.vercel.app',
-      },
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-      },
-      {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '3000',
+        hostname: 'your-portfolio-url.vercel.app',
+        pathname: '/images/**',
       },
       {
         protocol: 'https',

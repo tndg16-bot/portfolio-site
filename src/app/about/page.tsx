@@ -50,8 +50,8 @@ export default function AboutPage() {
 
     const notFitFor = [
         "何もせずに正解だけ欲しい",
-        "自分の前提を変える気がない（検証や改善をする気がない）",
-        "行動のコミットが難しい状態（環境や時間が整っていない等）",
+        "自分の前提を変える気がない",
+        "行動のコミットが難しい状態",
     ];
 
     return (
@@ -306,7 +306,7 @@ export default function AboutPage() {
                         className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-500/20 via-purple-500/10 to-pink-500/20 border border-white/10 p-12 text-center"
                     >
                         <motion.h2 variants={itemVariants} className="text-3xl font-bold text-white mb-4">
-                            もし、頭の中が散らかっていて進めないなら、まずは整理しましょう
+                            頭の中が散らかっていて進めないなら、まずは整理しましょう
                         </motion.h2>
                         <motion.p variants={itemVariants} className="text-xl text-zinc-300 mb-8">
                             60分で、価値観と判断軸を言語化して、次の一歩まで落とします。
