@@ -5,7 +5,9 @@ import Link from 'next/link';
 import ShareButtons from '@/components/ShareButtons';
 import GiscusComments from '@/components/GiscusComments';
 import AuthorBio from '@/components/AuthorBio';
+import NewsletterForm from '@/components/NewsletterForm';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
+import Script from 'next/script'; // Add Script import
 
 type Props = {
   params: Promise<{
@@ -190,12 +192,56 @@ export default async function PostPage({ params }: Props) {
             <ShareButtons url={url} title={post.title} />
           </div>
 
+          {/* Newsletter */}
+          <div className="mt-16 mb-8">
+            <NewsletterForm />
+          </div>
+
           {/* Comments */}
           <div className="mt-12 border-t border-zinc-800 pt-8">
             <h3 className="text-xl font-semibold mb-4 text-zinc-300">コメント</h3>
             <GiscusComments />
           </div>
         </article>
+
+        {/* Mermaid.js Script for Rendering Diagrams */}
+        <Script
+          type="module"
+          strategy="afterInteractive"
+          src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"
+        />
+        <Script id="mermaid-init" strategy="afterInteractive">
+          {`
+            // Wait for mermaid to load then init
+            import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs').then((mermaid) => {
+              mermaid.default.initialize({
+                startOnLoad: true,
+                theme: 'dark',
+                securityLevel: 'loose',
+                fontFamily: 'sans-serif'
+              });
+              
+              // Find all code blocks with language-mermaid and render them
+              // Note: Remark usually outputs <pre><code class="language-mermaid">
+              // Mermaid expects <pre class="mermaid"> or <div class="mermaid">
+              // We need to transform them or tell mermaid to look for .language-mermaid
+              
+              const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+              mermaidBlocks.forEach((block, index) => {
+                const pre = block.parentElement;
+                if (pre) {
+                   // Create a div for mermaid to render into
+                   const div = document.createElement('div');
+                   div.className = 'mermaid';
+                   div.textContent = block.textContent;
+                   pre.parentNode.replaceChild(div, pre);
+                }
+              });
+              
+              mermaid.default.run();
+            });
+          `}
+        </Script>
       </div>
     );
   } catch {
