@@ -34,7 +34,6 @@ interface Project {
     issueUrl?: string;
     subtasks?: Subtask[];
     progress?: number;
-    repo?: string; // リポジトリ名
 }
 
 interface Stats {
@@ -98,8 +97,8 @@ async function fetchGitHubIssuesForRepo(repo: string): Promise<GitHubIssue[]> {
     };
     if (GITHUB_TOKEN) headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
 
-    const response = await fetch(url, {
-        headers,
+    const response = await fetch(url, { 
+        headers, 
         cache: 'force-cache',
         next: { revalidate: 300 } // 5分ごとに再検証
     });
@@ -107,25 +106,25 @@ async function fetchGitHubIssuesForRepo(repo: string): Promise<GitHubIssue[]> {
     return response.json();
 }
 
-interface IssueWithRepo extends GitHubIssue {
-    repo: string;
-}
+async function fetchGitHubIssues(): Promise<GitHubIssue[]> {
+    const allIssues = await Promise.all(GITHUB_REPOS.map(repo => fetchGitHubIssuesForRepo(repo)));
+    const issues = allIssues.flat();
 
-async function fetchGitHubIssues(): Promise<IssueWithRepo[]> {
-    const allIssuesArrays = await Promise.all(
-        GITHUB_REPOS.map(async (repo) => {
-            const issues = await fetchGitHubIssuesForRepo(repo);
-            return issues.map(issue => ({ ...issue, repo }));
-        })
+    return issues.filter(issue =>
+        !issue.hasOwnProperty('pull_request') && // Filter out PRs
+        (
+            issue.title.match(/^\[M\d+\]/) ||
+            issue.title.match(/^\[PROJECT\]/i) ||
+            issue.title.match(/^\[FEATURE\]/i) ||
+            issue.title.match(/^\[WIP\]/i) ||
+            issue.title.match(/^\[Portfolio\]/i) ||
+            issue.title.match(/^\[Infra\]/i) ||
+            issue.labels.some(l => ['project', 'feature', 'milestone'].includes(l.name.toLowerCase()))
+        )
     );
-    const issues = allIssuesArrays.flat();
-
-    // All issues, no filtering by labels (show everything)
-    return issues.filter(issue => !issue.hasOwnProperty('pull_request'));
 }
 
-
-function parseGitHubIssues(issues: IssueWithRepo[]): { projects: Project[]; stats: Stats } {
+function parseGitHubIssues(issues: GitHubIssue[]): { projects: Project[]; stats: Stats } {
     const projects: Project[] = issues.map(issue => {
         const cleanName = issue.title
             .replace(/^\[M\d+\]\s*/, '')
@@ -148,8 +147,7 @@ function parseGitHubIssues(issues: IssueWithRepo[]): { projects: Project[]; stat
             issueNumber: issue.number,
             issueUrl: issue.html_url,
             subtasks,
-            progress,
-            repo: issue.repo, // リポジトリ名を追加
+            progress
         };
     });
 

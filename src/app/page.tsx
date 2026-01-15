@@ -3,11 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import { ArrowRight, Compass, Cpu, Target, CheckCircle2, Sparkles, Zap, Shield } from "lucide-react";
 import dynamic from 'next/dynamic';
-import Link from "next/link";
 import Header from "@/components/Header";
-import { getFeaturedTestimonials } from "@/data/testimonials";
-import TestimonialCard from "@/components/TestimonialCard";
-import { Star } from "lucide-react";
 
 const Dashboard = dynamic(() => import('@/components/Dashboard'), {
   loading: () => <div className="flex items-center justify-center min-h-[400px]">
@@ -20,11 +16,6 @@ const BookingForm = dynamic(() => import('@/components/BookingForm'), {
   loading: () => <div className="flex items-center justify-center min-h-[400px]">
     <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
   </div>,
-  ssr: false
-});
-
-const FeaturedBlogSection = dynamic(() => import('@/components/FeaturedBlogSection'), {
-  loading: () => <div className="h-96 w-full animate-pulse bg-white/5 rounded-3xl mb-24"></div>,
   ssr: false
 });
 
@@ -104,12 +95,9 @@ export default function Home() {
               無料で適性診断
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
-            <Link
-              href="/blog"
-              className="glass-card flex h-14 items-center gap-2 rounded-full px-8 text-lg font-bold text-teal-50 border border-white/10 hover:bg-white/5 transition-all"
-            >
-              ブログを読む
-            </Link>
+            <button className="glass-card flex h-14 items-center gap-2 rounded-full px-8 text-lg font-bold text-teal-50 border border-white/10 hover:bg-white/5 transition-all">
+              メソッドを探究する
+            </button>
           </motion.div>
         </motion.div>
 
@@ -276,9 +264,6 @@ export default function Home() {
       {/* Dashboard Section */}
       <Dashboard />
 
-      {/* Blog Section */}
-      <FeaturedBlogSection />
-
       {/* Projects Section */}
       <section id="section-projects" className="w-full max-w-7xl px-4 py-24 min-h-[70vh] flex flex-col items-center justify-center">
         <motion.div
@@ -387,56 +372,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="section-testimonials" className="w-full max-w-7xl px-4 py-24">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={containerVariants}
-          className="text-center mb-16"
-        >
-          <motion.div variants={itemVariants} className="mb-4 flex justify-center">
-            <div className="flex items-center gap-2 rounded-full bg-teal-500/10 px-4 py-1 text-sm font-medium text-teal-400 border border-teal-500/20">
-              <Star size={16} />
-              <span>Testimonials</span>
-            </div>
-          </motion.div>
-          <motion.h2 variants={itemVariants} className="text-4xl font-bold md:text-5xl text-white mb-4">
-            お客様の声
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-zinc-400 text-lg max-w-2xl mx-auto">
-            セッションを通じて変化を体験された方々からのフィードバック
-          </motion.p>
-        </motion.div>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {getFeaturedTestimonials().slice(0, 3).map((testimonial, index) => (
-            <TestimonialCard
-              key={testimonial.id}
-              testimonial={testimonial}
-              index={index}
-              variant="default"
-            />
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-12"
-        >
-          <Link
-            href="/case-studies"
-            className="inline-flex items-center gap-2 glass-card hover:bg-white/5 text-teal-400 px-6 py-3 rounded-full font-medium transition-all border border-teal-500/20"
-          >
-            すべての事例を見る
-            <ArrowRight size={16} />
-          </Link>
-        </motion.div>
-      </section>
-
       {/* Booking Form Section */}
       <BookingForm />
 
@@ -468,8 +403,6 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8 text-zinc-300 font-medium">
             <a href="/philosophy" className="hover:text-teal-400 transition-colors">Philosophy</a>
             <a href="/sessions" className="hover:text-teal-400 transition-colors">Sessions</a>
-            <a href="/case-studies" className="hover:text-teal-400 transition-colors">Case Studies</a>
-            <a href="/blog" className="hover:text-teal-400 transition-colors">Blog</a>
             <a href="https://ai-diagnosis-six.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">🤖 AI診断</a>
             <a href="https://lin.ee/VAYurUv" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">LINE</a>
           </div>
