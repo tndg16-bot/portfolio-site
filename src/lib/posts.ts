@@ -214,3 +214,43 @@ export async function getPostData(slug: string): Promise<PostContent> {
   };
 }
 
+// Get related posts based on tags and category
+export function getRelatedPosts(currentSlug: string, limit: number = 3): PostData[] {
+  const allPosts = getSortedPostsData();
+  const currentPostIndex = allPosts.findIndex(p => p.id === currentSlug);
+
+  if (currentPostIndex === -1) {
+    return allPosts.slice(0, limit);
+  }
+
+  const currentPost = allPosts[currentPostIndex];
+  const currentTags = currentPost.tags || [];
+  const currentCategory = currentPost.category;
+
+  // Score each post based on relevance
+  const scoredPosts = allPosts
+    .filter(post => post.id !== currentSlug)
+    .map(post => {
+      let score = 0;
+
+      // Same category: +2 points
+      if (post.category && post.category === currentCategory) {
+        score += 2;
+      }
+
+      // Matching tags: +1 point each
+      if (post.tags) {
+        const matchingTags = post.tags.filter(tag =>
+          currentTags.some(ct => ct.toLowerCase() === tag.toLowerCase())
+        );
+        score += matchingTags.length;
+      }
+
+      return { post, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(item => item.post);
+
+  return scoredPosts;
+}

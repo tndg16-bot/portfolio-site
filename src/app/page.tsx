@@ -81,10 +81,13 @@ export default function Home() {
             variants={itemVariants}
             className="flex flex-wrap justify-center gap-4"
           >
-            <button className="flex h-14 items-center gap-2 rounded-full bg-white px-8 text-lg font-bold text-teal-900 transition-all hover:bg-teal-50 hover:scale-105 active:scale-95 shadow-xl group">
+            <a
+              href="/sessions"
+              className="flex h-14 items-center gap-2 rounded-full bg-white px-8 text-lg font-bold text-teal-900 transition-all hover:bg-teal-50 hover:scale-105 active:scale-95 shadow-xl group"
+            >
               羅針盤を手にする
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </button>
+            </a>
             <a
               href="https://ai-diagnosis-six.vercel.app"
               target="_blank"
@@ -95,9 +98,12 @@ export default function Home() {
               無料で適性診断
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
-            <button className="glass-card flex h-14 items-center gap-2 rounded-full px-8 text-lg font-bold text-teal-50 border border-white/10 hover:bg-white/5 transition-all">
+            <a
+              href="/philosophy"
+              className="glass-card flex h-14 items-center gap-2 rounded-full px-8 text-lg font-bold text-teal-50 border border-white/10 hover:bg-white/5 transition-all"
+            >
               メソッドを探究する
-            </button>
+            </a>
           </motion.div>
         </motion.div>
 
@@ -252,10 +258,13 @@ export default function Home() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            <button className="flex h-16 w-full max-w-md mx-auto items-center justify-center gap-3 rounded-full bg-gradient-to-r from-teal-500 to-teal-400 text-xl font-bold text-white transition-all hover:brightness-110 hover:shadow-2xl active:scale-95 shadow-xl">
+            <a
+              href="/sessions"
+              className="flex h-16 w-full max-w-md mx-auto items-center justify-center gap-3 rounded-full bg-gradient-to-r from-teal-500 to-teal-400 text-xl font-bold text-white transition-all hover:brightness-110 hover:shadow-2xl active:scale-95 shadow-xl"
+            >
               「人生の再定義」セッションを予約
               <ArrowRight className="h-6 w-6" />
-            </button>
+            </a>
             <p className="mt-6 text-sm text-zinc-500">※限定枠のため、審査制とさせていただいております。</p>
           </motion.div>
         </motion.div>
@@ -400,9 +409,13 @@ export default function Home() {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8 text-zinc-300 font-medium">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 text-zinc-300 font-medium text-sm">
+            <a href="/about" className="hover:text-teal-400 transition-colors">About</a>
             <a href="/philosophy" className="hover:text-teal-400 transition-colors">Philosophy</a>
             <a href="/sessions" className="hover:text-teal-400 transition-colors">Sessions</a>
+            <a href="/blog" className="hover:text-teal-400 transition-colors">Blog</a>
+            <a href="/faq" className="hover:text-teal-400 transition-colors">FAQ</a>
+            <a href="/contact" className="hover:text-teal-400 transition-colors">Contact</a>
             <a href="https://ai-diagnosis-six.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">🤖 AI診断</a>
             <a href="https://lin.ee/VAYurUv" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">LINE</a>
           </div>

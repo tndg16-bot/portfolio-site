@@ -1,4 +1,4 @@
-import { getAllPostIds, getPostData } from '@/lib/posts';
+import { getAllPostIds, getPostData, getRelatedPosts } from '@/lib/posts';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
@@ -149,6 +149,40 @@ export default async function PostPage({ params }: Props) {
 
           {/* Author Bio */}
           <AuthorBio className="mt-12" />
+
+          {/* Related Posts */}
+          {(() => {
+            const relatedPosts = getRelatedPosts(slug, 3);
+            if (relatedPosts.length === 0) return null;
+            return (
+              <div className="mt-12 border-t border-zinc-800 pt-8">
+                <h3 className="text-xl font-semibold mb-6 text-zinc-300">関連記事</h3>
+                <div className="grid gap-4 md:grid-cols-3">
+                  {relatedPosts.map((relatedPost) => (
+                    <Link
+                      key={relatedPost.id}
+                      href={`/blog/${relatedPost.id}`}
+                      className="glass-card p-4 rounded-xl hover:border-teal-500/30 transition-all group block"
+                    >
+                      <h4 className="text-sm font-semibold text-white group-hover:text-teal-400 transition-colors line-clamp-2 mb-2">
+                        {relatedPost.title}
+                      </h4>
+                      <div className="flex items-center gap-2 text-xs text-zinc-500">
+                        {relatedPost.category && (
+                          <span className="px-2 py-0.5 bg-teal-500/10 text-teal-400 rounded">
+                            {relatedPost.category}
+                          </span>
+                        )}
+                        {relatedPost.readingTime && (
+                          <span>📖 {relatedPost.readingTime}分</span>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
 
           {/* Share section */}
           <div className="mt-12 border-t border-zinc-800 pt-8">

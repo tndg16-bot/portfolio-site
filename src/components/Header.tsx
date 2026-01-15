@@ -11,8 +11,8 @@ const navItems = [
   { href: '/about', label: 'About' },
   { href: '/philosophy', label: 'Philosophy' },
   { href: '/sessions', label: 'Sessions' },
+  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
-  { href: '/useful-info', label: 'Useful Info' },
 ];
 
 const externalLinks = [
@@ -38,8 +38,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative py-2 text-sm font-medium transition-colors ${
-                  pathname === item.href
+                className={`relative py-2 text-sm font-medium transition-colors ${pathname === item.href
                     ? 'text-teal-400'
                     : 'text-zinc-400 hover:text-white'
                   }`}
@@ -89,8 +88,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`py-2 text-sm font-medium transition-colors ${
-                    pathname === item.href
+                  className={`py-2 text-sm font-medium transition-colors ${pathname === item.href
                       ? 'text-teal-400'
                       : 'text-zinc-400 hover:text-white'
                     }`}
