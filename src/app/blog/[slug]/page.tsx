@@ -1,8 +1,10 @@
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import ShareButtons from '@/components/ShareButtons';
 import GiscusComments from '@/components/GiscusComments';
+import AuthorBio from '@/components/AuthorBio';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 
 type Props = {
@@ -16,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const { slug } = await params;
     const post = await getPostData(slug);
-    
+
     // Create the OGP image URL with the title query parameter
     const ogImageUrl = `https://takahiro-motoyama.vercel.app/api/og?title=${encodeURIComponent(post.title)}`;
 
@@ -46,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         images: [ogImageUrl],
       },
     };
-  } catch (error) {
+  } catch {
     return {
       title: 'Post not found',
     };
@@ -57,7 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export function generateStaticParams() {
   const paths = getAllPostIds();
   return paths.map(path => ({
-      slug: path.params.slug
+    slug: path.params.slug
   }));
 }
 
@@ -70,42 +72,100 @@ export default async function PostPage({ params }: Props) {
     const ogImageUrl = `https://takahiro-motoyama.vercel.app/api/og?title=${encodeURIComponent(post.title)}`;
 
     return (
-      <article className="container mx-auto p-4 prose lg:prose-xl prose-invert">
-        <ArticleJsonLd
-          title={post.title}
-          description={post.description}
-          datePublished={post.date}
-          url={url}
-          image={ogImageUrl}
-        />
-        <BreadcrumbJsonLd
-          items={[
-            { name: 'Home', url: 'https://takahiro-motoyama.vercel.app' },
-            { name: 'Blog', url: 'https://takahiro-motoyama.vercel.app/blog' },
-            { name: post.title, url: url },
-          ]}
-        />
-        <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
-        <div className="text-gray-500 mb-2">{post.date}</div>
-        
-        <div className="mb-8">
-          <ShareButtons url={url} title={post.title} />
-        </div>
+      <div className="container mx-auto px-4 py-8">
+        <article className="max-w-3xl mx-auto">
+          <ArticleJsonLd
+            title={post.title}
+            description={post.description || ''}
+            datePublished={post.date}
+            url={url}
+            image={ogImageUrl}
+          />
+          <BreadcrumbJsonLd
+            items={[
+              { name: 'Home', url: 'https://takahiro-motoyama.vercel.app' },
+              { name: 'Blog', url: 'https://takahiro-motoyama.vercel.app/blog' },
+              { name: post.title, url: url },
+            ]}
+          />
 
-        <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+          {/* Back link */}
+          <Link
+            href="/blog"
+            className="text-teal-400 hover:text-teal-300 transition-colors mb-6 inline-block"
+          >
+            ← ブログ一覧に戻る
+          </Link>
 
-        <div className="mt-12 border-t border-gray-800 pt-8">
-          <h3 className="text-xl font-semibold mb-4 text-gray-300">Share this post</h3>
-          <ShareButtons url={url} title={post.title} />
-        </div>
+          {/* Article Header */}
+          <header className="mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+              {post.title}
+            </h1>
 
-        <div className="mt-12 border-t border-gray-800 pt-8">
-          <h3 className="text-xl font-semibold mb-4 text-gray-300">Comments</h3>
-          <GiscusComments />
-        </div>
-      </article>
+            {/* Meta information */}
+            <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400">
+              <time dateTime={post.date}>{post.date}</time>
+
+              {post.readingTime && (
+                <span className="reading-time-badge">
+                  📖 {post.readingTime}分で読める
+                </span>
+              )}
+
+              {post.category && (
+                <span className="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs">
+                  {post.category}
+                </span>
+              )}
+            </div>
+
+            {/* Tags */}
+            {post.tags && post.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-4">
+                {post.tags.map((tag) => (
+                  <Link
+                    key={tag}
+                    href={`/blog/tag/${encodeURIComponent(tag.toLowerCase())}`}
+                    className="blog-tag"
+                  >
+                    #{tag}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </header>
+
+          {/* Share buttons */}
+          <div className="mb-8">
+            <ShareButtons url={url} title={post.title} />
+          </div>
+
+          {/* Article Content */}
+          <div
+            className="prose-blog"
+            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+          />
+
+          {/* Author Bio */}
+          <AuthorBio className="mt-12" />
+
+          {/* Share section */}
+          <div className="mt-12 border-t border-zinc-800 pt-8">
+            <h3 className="text-xl font-semibold mb-4 text-zinc-300">この記事をシェア</h3>
+            <ShareButtons url={url} title={post.title} />
+          </div>
+
+          {/* Comments */}
+          <div className="mt-12 border-t border-zinc-800 pt-8">
+            <h3 className="text-xl font-semibold mb-4 text-zinc-300">コメント</h3>
+            <GiscusComments />
+          </div>
+        </article>
+      </div>
     );
-  } catch (error) {
+  } catch {
     notFound();
   }
 }
+

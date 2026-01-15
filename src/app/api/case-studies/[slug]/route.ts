@@ -1,16 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCaseStudyBySlug } from '@/data/case-studies';
 
+type RouteContext = {
+  params: Promise<{ slug: string }>;
+};
+
 /**
  * GET /api/case-studies/[slug]
  * Get specific case study by slug
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: { slug: string } }
+  context: RouteContext
 ) {
   try {
-    const caseStudy = getCaseStudyBySlug(params.slug);
+    const { slug } = await context.params;
+    const caseStudy = getCaseStudyBySlug(slug);
 
     if (!caseStudy) {
       return NextResponse.json(
@@ -37,3 +42,4 @@ export async function GET(
     );
   }
 }
+

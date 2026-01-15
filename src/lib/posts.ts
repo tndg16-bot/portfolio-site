@@ -6,7 +6,42 @@ import html from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), 'content', 'blog');
 
-export function getSortedPostsData() {
+// Types
+export interface PostData {
+  id: string;
+  date: string;
+  title: string;
+  description?: string;
+  category?: string;
+  tags?: string[];
+  readingTime?: number;
+}
+
+export interface PostContent extends PostData {
+  slug: string;
+  contentHtml: string;
+}
+
+// Calculate reading time (Japanese: 400 chars/min, English: 200 words/min)
+export function calculateReadingTime(content: string): number {
+  // Count Japanese characters (Hiragana, Katakana, Kanji)
+  const japaneseChars = (content.match(/[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf]/g) || []).length;
+
+  // Count English words
+  const englishWords = content
+    .replace(/[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf]/g, '') // Remove Japanese
+    .split(/\s+/)
+    .filter(word => word.length > 0).length;
+
+  // Calculate time: Japanese 400 chars/min, English 200 words/min
+  const japaneseMinutes = japaneseChars / 400;
+  const englishMinutes = englishWords / 200;
+
+  // Return ceiling of total minutes, minimum 1 minute
+  return Math.max(1, Math.ceil(japaneseMinutes + englishMinutes));
+}
+
+export function getSortedPostsData(): PostData[] {
   // Get file names under /content/blog
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
@@ -19,21 +54,89 @@ export function getSortedPostsData() {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
+    const data = matterResult.data as {
+      date: string;
+      title: string;
+      description?: string;
+      category?: string;
+      tags?: string[];
+      published?: boolean;
+    };
+
+    // Skip unpublished posts
+    if (data.published === false) {
+      return null;
+    }
+
+    // Skip future posts
+    const postDate = new Date(data.date);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (postDate > today) {
+      return null;
+    }
+
+    // Calculate reading time
+    const readingTime = calculateReadingTime(matterResult.content);
 
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string; description?: string }),
+      readingTime,
+      category: data.category,
+      tags: data.tags,
+      date: data.date,
+      title: data.title,
+      description: data.description,
     };
   });
-  // Sort posts by date
-  return allPostsData.sort((a, b) => {
+
+  // Filter out null posts and sort by date
+  const validPosts = allPostsData.filter((post): post is NonNullable<typeof post> => post !== null);
+
+  return validPosts.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
     } else {
       return -1;
     }
   });
+}
+
+// Get all unique tags from all posts
+export function getAllTags(): string[] {
+  const posts = getSortedPostsData();
+  const tagSet = new Set<string>();
+
+  posts.forEach(post => {
+    if (post.tags) {
+      post.tags.forEach(tag => tagSet.add(tag));
+    }
+  });
+
+  return Array.from(tagSet).sort();
+}
+
+// Get posts filtered by tag
+export function getPostsByTag(tag: string): PostData[] {
+  const posts = getSortedPostsData();
+  return posts.filter(post =>
+    post.tags && post.tags.some(t => t.toLowerCase() === tag.toLowerCase())
+  );
+}
+
+// Get all unique categories
+export function getAllCategories(): string[] {
+  const posts = getSortedPostsData();
+  const categorySet = new Set<string>();
+
+  posts.forEach(post => {
+    if (post.category) {
+      categorySet.add(post.category);
+    }
+  });
+
+  return Array.from(categorySet).sort();
 }
 
 export function getAllPostIds() {
@@ -47,7 +150,17 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(slug: string) {
+// Get all tag slugs for static generation
+export function getAllTagSlugs() {
+  const tags = getAllTags();
+  return tags.map((tag) => ({
+    params: {
+      tag: tag.toLowerCase(),
+    },
+  }));
+}
+
+export async function getPostData(slug: string): Promise<PostContent> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -61,9 +174,15 @@ export async function getPostData(slug: string) {
   const contentHtml = processedContent.toString();
 
   // Get description from metadata or generate from content
-  const data = matterResult.data as { date: string; title: string; description?: string };
+  const data = matterResult.data as {
+    date: string;
+    title: string;
+    description?: string;
+    category?: string;
+    tags?: string[];
+  };
   let description = data.description;
-  
+
   if (!description) {
     // Strip markdown and newlines to get plain text
     const plainText = matterResult.content
@@ -72,17 +191,26 @@ export async function getPostData(slug: string) {
       .replace(/(\r\n|\n|\r)/gm, ' ') // Replace newlines with spaces
       .replace(/\s+/g, ' ') // Collapse multiple spaces
       .trim();
-    
-    description = plainText.length > 100 
-      ? plainText.slice(0, 100) + '...' 
+
+    description = plainText.length > 100
+      ? plainText.slice(0, 100) + '...'
       : plainText;
   }
 
+  // Calculate reading time
+  const readingTime = calculateReadingTime(matterResult.content);
+
   // Combine the data with the id and contentHtml
   return {
+    id: slug,
     slug,
     contentHtml,
     description,
-    ...data,
+    readingTime,
+    category: data.category,
+    tags: data.tags,
+    date: data.date,
+    title: data.title,
   };
 }
+

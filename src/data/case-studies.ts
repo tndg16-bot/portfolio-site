@@ -52,6 +52,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 'case-study-2',
+    slug: 'decision-speed-improvement',
     title: '社内意思決定が遅いマネージャーが、意思決定スピードを2倍に',
     subtitle: '意思決定フレームワークを導入し、組織効率を改善',
     client: {
@@ -96,6 +97,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: 'case-study-3',
+    slug: 'original-service-launch',
     title: 'ノウハウ依存で立ち止まっているコンサルタントが、独自サービスを立ち上げ',
     subtitle: '「他社の真似」からの脱却と自己決定の確立',
     client: {

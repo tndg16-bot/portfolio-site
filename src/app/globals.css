@@ -214,3 +214,254 @@ textarea {
     color: #e5e5e5;
   }
 }
+
+/* ========================================
+   📖 Blog Article Typography - Japanese Optimized
+   ======================================== */
+
+.prose-blog {
+  /* Base Typography */
+  font-size: 17px;
+  line-height: 1.9;
+  max-width: 65ch;
+  
+  /* Colors for dark theme */
+  --tw-prose-body: #e4e4e7;
+  --tw-prose-headings: #fafafa;
+  --tw-prose-links: #2dd4bf;
+  --tw-prose-bold: #fafafa;
+  --tw-prose-quotes: #a1a1aa;
+  --tw-prose-quote-borders: #2dd4bf;
+  --tw-prose-code: #2dd4bf;
+  --tw-prose-pre-bg: rgba(0, 0, 0, 0.4);
+}
+
+/* Paragraph spacing */
+.prose-blog p {
+  margin-bottom: 2em;
+}
+
+/* H1 Styling */
+.prose-blog h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  color: var(--tw-prose-headings);
+}
+
+/* H2 Styling - With border */
+.prose-blog h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(45, 212, 191, 0.4);
+  color: var(--tw-prose-headings);
+  position: relative;
+}
+
+.prose-blog h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #2dd4bf, #10b981);
+}
+
+/* H3 Styling - With left border */
+.prose-blog h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(45, 212, 191, 0.5);
+  color: var(--tw-prose-headings);
+}
+
+/* H4 Styling */
+.prose-blog h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--tw-prose-headings);
+}
+
+/* Anchor links on headings */
+.prose-blog h2:hover .anchor-link,
+.prose-blog h3:hover .anchor-link {
+  opacity: 1;
+}
+
+.prose-blog .anchor-link {
+  opacity: 0;
+  margin-left: 0.5rem;
+  color: #2dd4bf;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+/* Links */
+.prose-blog a {
+  color: var(--tw-prose-links);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.prose-blog a:hover {
+  color: #5eead4;
+}
+
+/* Lists */
+.prose-blog ul,
+.prose-blog ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+.prose-blog li {
+  margin-bottom: 0.5em;
+}
+
+.prose-blog li::marker {
+  color: #2dd4bf;
+}
+
+/* Blockquotes */
+.prose-blog blockquote {
+  border-left: 4px solid var(--tw-prose-quote-borders);
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: var(--tw-prose-quotes);
+  margin: 2rem 0;
+  background: rgba(45, 212, 191, 0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+/* Code blocks */
+.prose-blog pre {
+  background: var(--tw-prose-pre-bg);
+  border-radius: 8px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.prose-blog code {
+  color: var(--tw-prose-code);
+  font-size: 0.9em;
+}
+
+.prose-blog :not(pre) > code {
+  background: rgba(45, 212, 191, 0.1);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* Strong text */
+.prose-blog strong {
+  color: var(--tw-prose-bold);
+  font-weight: 600;
+}
+
+/* Horizontal rule */
+.prose-blog hr {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin: 3rem 0;
+}
+
+/* Images */
+.prose-blog img {
+  border-radius: 8px;
+  margin: 2rem auto;
+}
+
+.prose-blog figure {
+  margin: 2rem 0;
+}
+
+.prose-blog figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  margin-top: 0.75rem;
+}
+
+/* Reading time badge */
+.reading-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: #2dd4bf;
+}
+
+/* Tag styles */
+.blog-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: #2dd4bf;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.blog-tag:hover {
+  background: rgba(45, 212, 191, 0.2);
+  border-color: rgba(45, 212, 191, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Author bio section */
+.author-bio {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.author-bio-avatar {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(45, 212, 191, 0.3);
+}
+
+.author-bio-content {
+  flex: 1;
+}
+
+.author-bio-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fafafa;
+  margin-bottom: 0.5rem;
+}
+
+.author-bio-description {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  line-height: 1.6;
+}
