@@ -2,9 +2,65 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
-import html from 'remark-html';
+import { visit } from 'unist-util-visit';
+import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
+import rehypeStringify from 'rehype-stringify';
+import remarkGfm from 'remark-gfm';
+import type { Element as HastElement } from 'hast';
+import type { Root as HastRoot } from 'hast';
 
 const postsDirectory = path.join(process.cwd(), 'content', 'blog');
+
+// Custom rehype plugin to process images with captions
+const rehypeImageCaption = () => {
+  return (tree: HastRoot) => {
+    visit(tree, 'element', (node: HastElement) => {
+      // Check if this is an img element
+      if (node.tagName === 'img') {
+        const alt = (node.properties?.alt as string) || '';
+        const src = (node.properties?.src as string) || '';
+        const title = (node.properties?.title as string) || '';
+
+        // Create a figure element to wrap the image
+        const figure: HastElement = {
+          type: 'element',
+          tagName: 'figure',
+          properties: { className: ['prose-image-figure'] },
+          children: []
+        };
+
+        // Add image with data attributes for next/image
+        const img: HastElement = {
+          type: 'element',
+          tagName: 'img',
+          properties: {
+            ...node.properties,
+            'data-next-image': 'true',
+            'data-caption': title || ''
+          },
+          children: []
+        };
+
+        figure.children!.push(img);
+
+        // Add caption if title exists
+        if (title) {
+          const figcaption: HastElement = {
+            type: 'element',
+            tagName: 'figcaption',
+            properties: { className: ['prose-image-caption'] },
+            children: [{ type: 'text', value: title }]
+          };
+          figure.children!.push(figcaption);
+        }
+
+        // Replace the img element with the figure element
+        Object.assign(node, figure);
+      }
+    });
+  };
+};
 
 // Types
 export interface PostData {
@@ -45,9 +101,6 @@ export function getSortedPostsData(): PostData[] {
   // Get file names under /content/blog
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '');
-
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -61,6 +114,7 @@ export function getSortedPostsData(): PostData[] {
       category?: string;
       tags?: string[];
       published?: boolean;
+      slug?: string;
     };
 
     // Skip unpublished posts
@@ -78,6 +132,9 @@ export function getSortedPostsData(): PostData[] {
 
     // Calculate reading time
     const readingTime = calculateReadingTime(matterResult.content);
+
+    // Use slug from frontmatter if available, otherwise use filename sans extension
+    const id = data.slug || fileName.replace(/\.md$/, '');
 
     // Combine the data with the id
     return {
@@ -139,12 +196,20 @@ export function getAllCategories(): string[] {
   return Array.from(categorySet).sort();
 }
 
+
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const matterResult = matter(fileContents);
+
+    // Retrieve slug from frontmatter or fallback to filename
+    const slug = matterResult.data.slug || fileName.replace(/\.md$/, '');
+
     return {
       params: {
-        slug: fileName.replace(/\.md$/, ''),
+        slug: slug,
       },
     };
   });
@@ -160,18 +225,50 @@ export function getAllTagSlugs() {
   }));
 }
 
+
 export async function getPostData(slug: string): Promise<PostContent> {
-  const fullPath = path.join(postsDirectory, `${slug}.md`);
+  // Find the file that matches the slug
+  const fileNames = fs.readdirSync(postsDirectory);
+  let targetFileName = '';
+
+  for (const fileName of fileNames) {
+    const fullPath = path.join(postsDirectory, fileName);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const matterResult = matter(fileContents);
+    const fileSlug = matterResult.data.slug || fileName.replace(/\.md$/, '');
+
+    if (fileSlug === slug) {
+      targetFileName = fileName;
+      break;
+    }
+  }
+
+  // Fallback: if no match found (shouldn't happen if getStaticPaths is correct), try using slug as filename
+  if (!targetFileName) {
+    targetFileName = `${slug}.md`;
+  }
+
+  const fullPath = path.join(postsDirectory, targetFileName);
+
+  // Check if file exists (safety check)
+  if (!fs.existsSync(fullPath)) {
+    throw new Error(`Post not found for slug: ${slug}`);
+  }
+
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
-  // Use remark to convert markdown into HTML string
+  // Use remark to convert markdown into HTML string with image caption support
   const processedContent = await remark()
-    .use(html)
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
+    .use(rehypeImageCaption)
+    .use(rehypeStringify)
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const contentHtml = String(processedContent);
 
   // Get description from metadata or generate from content
   const data = matterResult.data as {
@@ -180,6 +277,7 @@ export async function getPostData(slug: string): Promise<PostContent> {
     description?: string;
     category?: string;
     tags?: string[];
+    slug?: string;
   };
   let description = data.description;
 
