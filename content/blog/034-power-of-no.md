@@ -1,9 +1,12 @@
 ---
-title: "断る勇気 - NOと言うことで得られるもの"
-date: "2026-01-27"
-category: "Mindset"
-tags: ["Mindset", "Communication", "Boundaries"]
-description: "頼まれると断れない。でもその「YES」が、あなたの本当に大切なものを奪っているかもしれません。"
+title: 断る勇気 - NOと言うことで得られるもの
+date: '2026-02-03'
+category: Mindset
+tags:
+  - Mindset
+  - Communication
+  - Boundaries
+description: 頼まれると断れない。でもその「YES」が、あなたの本当に大切なものを奪っているかもしれません。
 published: true
 ---
 
@@ -36,6 +39,20 @@ published: true
 そう教えられてきた価値観が邪魔をします。
 
 ## NOと言うことで得られるもの
+
+### 「断る」ことの効用
+
+```mermaid
+graph TD
+    SayNO[NOと言う] --> Time[時間の確保]
+    SayNO --> Energy[エネルギー温存]
+    SayNO --> Trust[信頼の獲得<br>(誠実さ)]
+    SayNO --> Self[自尊心の向上<br>(境界線)]
+    
+    Time --> Value[本当に大切なことに<br>集中できる]
+    
+    style time fill:#facc15,stroke:#000,stroke-width:2px
+```
 
 ### 1. 時間
 

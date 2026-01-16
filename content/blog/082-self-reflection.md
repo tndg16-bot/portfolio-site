@@ -1,9 +1,12 @@
 ---
-title: "内省の技術 - 自分を知るための問いかけ"
-date: "2026-03-16"
-category: "コーチング"
-tags: ["Self-reflection", "Coaching", "Self-awareness"]
-description: "忙しさの中で自分を見失っていませんか？定期的な内省が、人生の羅針盤になります。"
+title: 内省の技術 - 自分を知るための問いかけ
+date: '2026-03-23'
+category: コーチング
+tags:
+  - Self-reflection
+  - Coaching
+  - Self-awareness
+description: 忙しさの中で自分を見失っていませんか？定期的な内省が、人生の羅針盤になります。
 published: true
 ---
 
@@ -18,6 +21,19 @@ published: true
 
 自分の思考、感情、行動を意識的に振り返ること。
 自動操縦から手動操縦に切り替える時間。
+
+### 内省のサイクル（コルブの経験学習）
+
+```mermaid
+graph TD
+    Act[具体的経験<br>(Do)] --> Ref[内省的観察<br>(Look)]
+    Ref --> Con[概念化<br>(Think)]
+    Con --> Plan[試行計画<br>(Plan)]
+    Plan --> Act
+    
+    style Ref fill:#facc15
+    style Plan fill:#2dd4bf,color:#fff
+```
 
 ## なぜ内省が重要か
 

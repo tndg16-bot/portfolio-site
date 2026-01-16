@@ -1,9 +1,12 @@
 ---
-title: "「比較」をやめられない脳との付き合い方"
-date: "2026-01-30"
-category: "Mindset"
-tags: ["Mindset", "Self-awareness", "Mental Health"]
-description: "隣の芝生は青く見える。SNSで他人と比較して落ち込む。そんな自分を責めないでください。比較は人間の本能です。"
+title: 「比較」をやめられない脳との付き合い方
+date: '2026-02-06'
+category: Mindset
+tags:
+  - Mindset
+  - Self-awareness
+  - Mental Health
+description: 隣の芝生は青く見える。SNSで他人と比較して落ち込む。そんな自分を責めないでください。比較は人間の本能です。
 published: true
 ---
 
@@ -29,6 +32,21 @@ SNSで見る知人は充実している。
 問題は、**どう比較するか**です。
 
 ## 有害な比較、有益な比較
+
+### 比較の解剖図
+
+```mermaid
+mindmap
+  root((比較))
+    有害 (Self-Destruction)
+      持たざるものへの注目
+      他人と比較
+      違うステージと比較
+    有益 (Self-Growth)
+      過去の自分と比較
+      ロールモデル(目標)
+      学びの抽出
+```
 
 ### 有害な比較
 

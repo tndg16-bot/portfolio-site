@@ -1,11 +1,14 @@
 ---
-title: "\"時間がない\"は幻想 - 脳をだますポモドーロ・テクニック活用法"
-description: "集中力が続かない人へ。25分という魔法の時間で生産性を劇的に上げる"
-date: "2026-01-12"
-category: "生産性"
-tags: ["ポモドーロ", "時間管理", "集中力"]
+title: '"時間がない"は幻想 - 脳をだますポモドーロ・テクニック活用法'
+description: 集中力が続かない人へ。25分という魔法の時間で生産性を劇的に上げる
+date: '2026-01-17'
+category: 生産性
+tags:
+  - ポモドーロ
+  - 時間管理
+  - 集中力
 published: true
-slug: "pomodoro-technique"
+slug: pomodoro-technique
 ---
 
 ## はじめに
@@ -31,6 +34,21 @@ slug: "pomodoro-technique"
 1. 25分間、一つのタスクに集中
 2. 5分間の休憩
 3. これを4回繰り返したら、15-30分の長い休憩
+
+### ポモドーロ・サイクル
+
+```mermaid
+stateDiagram-v2
+    [*] --> Focus: タスク開始
+    state "集中 (25分)" as Focus
+    state "休憩 (5分)" as Break
+    state "長休憩 (15-30分)" as LongBreak
+    
+    Focus --> Break: タイマー終了
+    Break --> Focus: サイクル再開 (1-3回目)
+    Break --> LongBreak: 4サイクル完了
+    LongBreak --> Focus: リフレッシュ後
+```
 
 シンプルですが、効果は絶大です。
 

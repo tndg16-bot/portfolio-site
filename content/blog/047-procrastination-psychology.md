@@ -1,9 +1,12 @@
 ---
-title: "先延ばしの心理学 - なぜ大事なことほど後回しにするのか"
-date: "2026-02-09"
-category: "Mental Model"
-tags: ["Procrastination", "Productivity", "Psychology"]
-description: "やるべきことはわかっている。でも、手が動かない。先延ばしのメカニズムを理解し、克服する方法。"
+title: 先延ばしの心理学 - なぜ大事なことほど後回しにするのか
+date: '2026-02-16'
+category: Mental Model
+tags:
+  - Procrastination
+  - Productivity
+  - Psychology
+description: やるべきことはわかっている。でも、手が動かない。先延ばしのメカニズムを理解し、克服する方法。
 published: true
 ---
 
@@ -24,6 +27,21 @@ published: true
 その感情を避けるために、別のこと（SNS、動画、掃除など）に逃げる。
 
 つまり、先延ばしとは「感情の問題」であり、「時間管理の問題」ではないのです。
+
+### 先延ばしの「負のループ」
+
+```mermaid
+stateDiagram-v2
+    [*] --> Anxiety: タスク直面<br>(不安・退屈)
+    Anxiety --> Avoidance: 回避行動<br>(SNS・掃除)
+    Avoidance --> Relief: 一時的な安心<br>(ドーパミン)
+    Relief --> Guilt: 自己嫌悪<br>(罪悪感)
+    Guilt --> Anxiety: ストレス増大<br>(さらにやりにくくなる)
+    
+    note right of Avoidance
+      ここが「先延ばし」
+    end note
+```
 
 ## なぜ大事なことほど先延ばすのか
 

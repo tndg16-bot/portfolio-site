@@ -24,11 +24,11 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/50 backdrop-blur-xl border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-japan-indigo/10">
       <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold bg-gradient-to-r from-teal-400 to-purple-400 bg-clip-text text-transparent">
+          <Link href="/" className="text-xl font-bold bg-gradient-to-r from-japan-indigo to-japan-vermilion bg-clip-text text-transparent">
             Takahiro Motoyama
           </Link>
 
@@ -39,15 +39,15 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`relative py-2 text-sm font-medium transition-colors ${pathname === item.href
-                    ? 'text-teal-400'
-                    : 'text-zinc-400 hover:text-white'
+                  ? 'text-japan-indigo'
+                  : 'text-zinc-500 hover:text-japan-indigo'
                   }`}
               >
                 {item.label}
                 {pathname === item.href && (
                   <motion.div
                     layoutId="activeNav"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-teal-400 to-purple-400"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-japan-indigo to-japan-vermilion"
                   />
                 )}
               </Link>
@@ -58,7 +58,7 @@ export default function Header() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-2 px-3 text-sm font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:brightness-110 transition-all"
+                className="py-2 px-3 text-sm font-medium bg-gradient-to-r from-japan-indigo to-japan-vermilion text-white rounded-full hover:brightness-110 transition-all"
               >
                 {item.label}
               </a>
@@ -67,7 +67,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-zinc-400 hover:text-white"
+            className="md:hidden p-2 text-zinc-500 hover:text-japan-indigo"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -80,7 +80,7 @@ export default function Header() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden mt-4 pb-4 border-t border-white/10 pt-4"
+            className="md:hidden mt-4 pb-4 border-t border-japan-indigo/10 pt-4"
           >
             <div className="flex flex-col gap-3">
               {navItems.map((item) => (
@@ -89,8 +89,8 @@ export default function Header() {
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className={`py-2 text-sm font-medium transition-colors ${pathname === item.href
-                      ? 'text-teal-400'
-                      : 'text-zinc-400 hover:text-white'
+                    ? 'text-japan-indigo'
+                    : 'text-zinc-500 hover:text-japan-indigo'
                     }`}
                 >
                   {item.label}
@@ -103,7 +103,7 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}
-                  className="py-2 px-3 text-sm font-medium bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full text-center hover:brightness-110 transition-all"
+                  className="py-2 px-3 text-sm font-medium bg-gradient-to-r from-japan-indigo to-japan-vermilion text-white rounded-full text-center hover:brightness-110 transition-all"
                 >
                   {item.label}
                 </a>

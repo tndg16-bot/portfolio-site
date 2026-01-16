@@ -1,9 +1,12 @@
 ---
-title: "ディープワークの時代 - なぜ集中力が最強のスキルになったのか"
-date: "2026-01-16"
-category: "Productivity"
-tags: ["Productivity", "Focus", "Work Style"]
-description: "通知、メール、会議…分断される現代の仕事。集中力を取り戻し、圧倒的な成果を出すディープワークの技術。"
+title: ディープワークの時代 - なぜ集中力が最強のスキルになったのか
+date: '2026-01-23'
+category: Productivity
+tags:
+  - Productivity
+  - Focus
+  - Work Style
+description: 通知、メール、会議…分断される現代の仕事。集中力を取り戻し、圧倒的な成果を出すディープワークの技術。
 published: true
 ---
 
@@ -26,6 +29,24 @@ published: true
 メールの返信、雑務、会議など、集中力を必要としない作業です。
 
 ## なぜディープワークが価値を持つのか
+
+### Deep vs Shallow
+
+```mermaid
+quadrantChart
+    title 仕事の価値マトリックス
+    x-axis 誰でもできる --> 専門性が高い
+    y-axis 価値が低い --> 価値が高い
+    quadrant-1 シャローワーク (会議/メール)
+    quadrant-2 雑務・管理
+    quadrant-3 専門的作業
+    quadrant-4 ディープワーク (創造/解決)
+    
+    "メール返信": [0.2, 0.2]
+    "定例会議": [0.1, 0.3]
+    "コーディング": [0.8, 0.8]
+    "戦略立案": [0.9, 0.9]
+```
 
 ### 1. AIに代替されにくい
 

@@ -1,9 +1,12 @@
 ---
-title: "Noと言われてからが始まり - 営業マインドセット"
-date: "2026-03-29"
-category: "キャリア"
-tags: ["Sales", "Mindset", "Rejection"]
-description: "断られるのが怖い？Noは終わりではなく、始まりです。拒絶を恐れないマインドセット。"
+title: Noと言われてからが始まり - 営業マインドセット
+date: '2026-04-05'
+category: キャリア
+tags:
+  - Sales
+  - Mindset
+  - Rejection
+description: 断られるのが怖い？Noは終わりではなく、始まりです。拒絶を恐れないマインドセット。
 published: true
 ---
 
@@ -21,6 +24,21 @@ published: true
 群れから排除されることは、かつて死を意味しました。
 
 だから脳は、拒絶を避けようとします。
+
+### Noは成功への通過点
+
+```mermaid
+graph TD
+    Try[提案・アプローチ] --> Result{反応は？}
+    Result -->|No| Learn[学習・改善]
+    Learn --> Refine[アプローチ改善]
+    Refine --> Try
+    
+    Result -->|Yes| Success[成功]
+    
+    style Success fill:#facc15,stroke-width:4px
+    style Learn fill:#2dd4bf,color:#fff
+```
 
 ## 「No」への新しい見方
 

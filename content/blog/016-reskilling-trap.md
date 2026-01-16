@@ -1,11 +1,14 @@
 ---
-title: "「リスキリング」の罠 - 学ぶだけで終わらない人の共通点"
-description: "学習だけで満足していませんか？成果につなげるリスキリングの方法"
-date: "2026-01-12"
-category: "キャリア"
-tags: ["リスキリング", "学習", "キャリア"]
+title: 「リスキリング」の罠 - 学ぶだけで終わらない人の共通点
+description: 学習だけで満足していませんか？成果につなげるリスキリングの方法
+date: '2026-01-16'
+category: キャリア
+tags:
+  - リスキリング
+  - 学習
+  - キャリア
 published: true
-slug: "reskilling-trap"
+slug: reskilling-trap
 ---
 
 ## はじめに
@@ -77,6 +80,19 @@ slug: "reskilling-trap"
 ---
 
 ## 実践的なリスキリングの進め方
+
+### アウトプット先行型学習モデル
+
+```mermaid
+graph TD
+    Goal[目的設定<br>何に使う？] --> Plan[最小学習<br>まず20%学ぶ]
+    Plan --> Practice[実践<br>現場・副業]
+    Practice --> Output[アウトプット<br>成果物・発信]
+    Output --> Feedback[フィードバック]
+    Feedback -->|不足分を学習| Plan
+    
+    style Practice fill:#1e293b,stroke:#facc15,stroke-width:4px
+```
 
 ### Step 1: 目的を明確にする
 

@@ -1,9 +1,12 @@
 ---
-title: "人生の優先順位 - 大きな石から入れる"
-date: "2026-04-02"
-category: "コーチング"
-tags: ["Priorities", "Life", "Time Management"]
-description: "「忙しい」と言いながら、本当に大切なことに時間を使えていますか？大きな石の法則。"
+title: 人生の優先順位 - 大きな石から入れる
+date: '2026-04-09'
+category: コーチング
+tags:
+  - Priorities
+  - Life
+  - Time Management
+description: 「忙しい」と言いながら、本当に大切なことに時間を使えていますか？大きな石の法則。
 published: true
 ---
 
@@ -41,6 +44,25 @@ published: true
 - 他人の都合に合わせた予定
 
 これらは「緊急」に見えるので、先に対応してしまう。
+
+### 優先順位の入れ方
+
+```mermaid
+graph TD
+    subgraph Bad[悪い例: 砂が先]
+    Sand1[砂・細石<br>雑務・緊急] --> Full[満杯]
+    Full -.->|入らない| Rock1[大きな石<br>重要]
+    end
+    
+    subgraph Good[良い例: 石が先]
+    Rock2[大きな石<br>重要] --> Space[隙間あり]
+    Space --> Sand2[砂・細石<br>雑務・緊急]
+    Sand2 --> Full2[全部入る]
+    end
+    
+    style Rock2 fill:#2dd4bf,color:#fff
+    style Rock1 fill:#ef4444,color:#fff
+```
 
 ## 大きな石を先に入れる
 

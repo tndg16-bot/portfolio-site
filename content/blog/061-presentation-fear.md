@@ -1,10 +1,13 @@
 ---
-title: "プレゼン恐怖症を克服する"
-date: "2026-02-23"
-category: "キャリア"
-tags: ["プレゼンテーション","コミュニケーション","心理学"]
-description: "人前で話すのが苦手。緊張で頭が真っ白になる。そんな恐怖を乗り越える具体的な方法。"
-slug: "presentation-fear"
+title: プレゼン恐怖症を克服する
+date: '2026-03-02'
+category: キャリア
+tags:
+  - プレゼンテーション
+  - コミュニケーション
+  - 心理学
+description: 人前で話すのが苦手。緊張で頭が真っ白になる。そんな恐怖を乗り越える具体的な方法。
+slug: presentation-fear
 published: true
 ---
 
@@ -16,21 +19,26 @@ published: true
 ## 概念図解
 
 
+### 恐怖のサイクルからの脱出
+
 ```mermaid
-mindmap
-  root((プレゼン恐怖症を克服する))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+graph TD
+    subgraph Fear[負のループ]
+    Prepare[準備不足] --> Anxiety[不安・緊張]
+    Anxiety --> Failure[失敗体験]
+    Failure --> Trauma[恐怖の強化]
+    Trauma --> Prepare
+    end
+
+    subgraph Success[正のループ]
+    Small[小さな場数] --> Check[準備とリハーサル]
+    Check --> Done[成功体験]
+    Done --> Conf[自信]
+    Conf --> Small
+    end
+
+    style Failure fill:#ef4444,color:#fff
+    style Done fill:#2dd4bf,color:#fff
 ```
 
 

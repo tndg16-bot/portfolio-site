@@ -1,9 +1,12 @@
 ---
-title: "マルチタスクの幻想 - 脳は同時処理できない"
-date: "2026-01-21"
-category: "Productivity"
-tags: ["Productivity", "Focus", "Neuroscience"]
-description: "複数のことを同時にこなしているつもりが、実は何も成し遂げていない。脳科学が明かすマルチタスクの真実。"
+title: マルチタスクの幻想 - 脳は同時処理できない
+date: '2026-01-28'
+category: Productivity
+tags:
+  - Productivity
+  - Focus
+  - Neuroscience
+description: 複数のことを同時にこなしているつもりが、実は何も成し遂げていない。脳科学が明かすマルチタスクの真実。
 published: true
 ---
 
@@ -38,6 +41,26 @@ A→B→A→B→A…と、意識を切り替えているだけ。
 結果として、マルチタスクをする人は、シングルタスクの人より**50%も効率が下がる**という研究結果があります。
 
 ## マルチタスクが引き起こす問題
+
+### スイッチング・コストの正体
+
+```mermaid
+gantt
+    title シングルタスク vs マルチタスク
+    dateFormat  HH:mm
+    axisFormat %H:%mm
+    
+    section シングル
+    タスクA (集中)   :done, a1, 09:00, 30m
+    タスクB (集中)   :done, b1, after a1, 30m
+    
+    section マルチ
+    タスクA (細切れ) :active, a2, 09:00, 10m
+    切替ロス        :crit, c1, after a2, 5m
+    タスクB (細切れ) :active, b2, after c1, 10m
+    切替ロス        :crit, c2, after b2, 5m
+    タスクA (再開)   :active, a3, after c2, 10m
+```
 
 ### 1. 浅い思考になる
 

@@ -1,9 +1,12 @@
 ---
-title: "セルフトーク - 自分への語りかけが人生を変える"
-date: "2026-03-20"
-category: "Mindset"
-tags: ["Mindset", "Self-talk", "Psychology"]
-description: "頭の中で自分に何と言っていますか？その声が、あなたの行動と結果を決めています。"
+title: セルフトーク - 自分への語りかけが人生を変える
+date: '2026-03-27'
+category: Mindset
+tags:
+  - Mindset
+  - Self-talk
+  - Psychology
+description: 頭の中で自分に何と言っていますか？その声が、あなたの行動と結果を決めています。
 published: true
 ---
 
@@ -27,6 +30,23 @@ published: true
 - 感情を左右する
 - 行動を決める
 - 結果に影響する
+
+### 思考-感情-行動のループ
+
+```mermaid
+graph TD
+    Talk[セルフトーク<br>思考] -->|ネガティブ| Emotion[感情<br>不安・恐怖]
+    Emotion --> Action[行動<br>回避・停止]
+    Action --> Result[結果<br>失敗・停滞]
+    Result --> Talk
+    
+    Talk -->|ポジティブ| Emotion2[感情<br>勇気・希望]
+    Emotion2 --> Action2[行動<br>挑戦・継続]
+    Action2 --> Result2[結果<br>成長・達成]
+    
+    style Action2 fill:#2dd4bf,color:#fff
+    style Action fill:#ef4444,color:#fff
+```
 
 ## ネガティブなセルフトークのパターン
 

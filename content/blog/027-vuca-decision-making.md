@@ -1,9 +1,12 @@
 ---
-title: "「正解」を探すな - VUCA時代の意思決定"
-date: "2026-01-20"
-category: "思考法"
-tags: ["Decision Making", "Mindset", "Business"]
-description: "変化が激しく、予測不能な時代。唯一の正解を探すのではなく、仮説を立てて検証するマインドセットが求められています。"
+title: 「正解」を探すな - VUCA時代の意思決定
+date: '2026-01-27'
+category: 思考法
+tags:
+  - Decision Making
+  - Mindset
+  - Business
+description: 変化が激しく、予測不能な時代。唯一の正解を探すのではなく、仮説を立てて検証するマインドセットが求められています。
 published: true
 ---
 
@@ -61,7 +64,18 @@ published: true
 
 ### Step 4: 繰り返す
 
-仮説→検証→学習→新しい仮説…のサイクルを回し続ける。
+### 仮説検証サイクル
+
+```mermaid
+graph TD
+    Hypothesis[仮説: たぶんこうだ] --> Action[実験: 小さく試す]
+    Action --> Result[結果: データ]
+    Result --> Learn[学習: 事実の解釈]
+    Learn -->|修正| Hypothesis2[新仮説]
+    Learn -->|確信| Expand[本格展開]
+    
+    style Action fill:#1e293b,stroke:#2dd4bf,stroke-width:4px
+```
 
 このイテレーション（反復）が、不確実な時代を生き抜く力になります。
 

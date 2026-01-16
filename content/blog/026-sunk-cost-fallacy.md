@@ -1,9 +1,12 @@
 ---
-title: "「もったいない」が人生を蝕む - サンクコストバイアスからの脱却"
-date: "2026-01-19"
-category: "Mental Model"
-tags: ["Mental Model", "Decision Making", "Mindset"]
-description: "「ここまでやったから」「せっかく投資したから」。過去への執着が、未来の選択肢を狭めています。"
+title: 「もったいない」が人生を蝕む - サンクコストバイアスからの脱却
+date: '2026-01-26'
+category: Mental Model
+tags:
+  - Mental Model
+  - Decision Making
+  - Mindset
+description: 「ここまでやったから」「せっかく投資したから」。過去への執着が、未来の選択肢を狭めています。
 published: true
 ---
 
@@ -43,6 +46,20 @@ published: true
 - 自分に合わない業界にしがみつく
 
 ## 脱却するための3つの質問
+
+### サンクコスト脱却フロー
+
+```mermaid
+graph TD
+    Start[継続するか迷う] -->|Question| Q1{今からゼロで<br>始めるとしても<br>同じ選択をする？}
+    Q1 -->|No| Stop[損切り・撤退]
+    Stop -->|Resource| New[新しい機会へ投資]
+    
+    Q1 -->|Yes| Continue[継続]
+    
+    New --> Growth[未来の成長]
+    Continue -->|状況により| Bias[バイアスの可能性あり<br>要警戒]
+```
 
 ### 質問1: 今から始めるとしても、同じ選択をするか？
 

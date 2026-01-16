@@ -7,14 +7,14 @@ import Header from "@/components/Header";
 
 const Dashboard = dynamic(() => import('@/components/Dashboard'), {
   loading: () => <div className="flex items-center justify-center min-h-[400px]">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-japan-indigo"></div>
   </div>,
-  ssr: true
+  ssr: false
 });
 
 const BookingForm = dynamic(() => import('@/components/BookingForm'), {
   loading: () => <div className="flex items-center justify-center min-h-[400px]">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-japan-indigo"></div>
   </div>,
   ssr: false
 });
@@ -43,7 +43,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20">
+    <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20 text-japan-charcoal">
       <Header />
       {/* Hero Section */}
       <section id="section-hero" className="relative flex min-h-screen w-full flex-col items-center justify-center px-4">
@@ -54,7 +54,7 @@ export default function Home() {
           className="glass-panel z-10 w-full max-w-4xl rounded-3xl p-8 md:p-16 text-center shadow-2xl backdrop-blur-xl"
         >
           <motion.div variants={itemVariants} className="mb-6 flex justify-center">
-            <div className="flex items-center gap-2 rounded-full bg-teal-500/10 px-4 py-1 text-sm font-medium text-teal-400 border border-teal-500/20">
+            <div className="flex items-center gap-2 rounded-full bg-japan-indigo/5 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/10">
               <Sparkles size={16} />
               <span>Life Self-Determination Protocol</span>
             </div>
@@ -62,15 +62,15 @@ export default function Home() {
 
           <motion.h1
             variants={itemVariants}
-            className="mb-6 text-4xl font-bold tracking-tight md:text-7xl leading-tight text-white drop-shadow-sm"
+            className="mb-6 text-4xl font-bold tracking-tight md:text-7xl leading-tight drop-shadow-sm text-japan-indigo"
           >
             静寂の中で、<br />
-            <span className="text-forest">「自分の直感」</span>を再編する
+            <span className="text-japan-gradient">「自分の直感」</span>を再編する
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="mb-10 text-lg text-zinc-200 md:text-2xl font-light leading-relaxed max-w-2xl mx-auto"
+            className="mb-10 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto text-zinc-600"
           >
             溢れる情報と「正解」の押し付けから、魂の呼吸を守り抜く。<br />
             深い静寂の中で研ぎ澄まされる直感と、最先端AIの力が、<br />
@@ -83,7 +83,7 @@ export default function Home() {
           >
             <a
               href="/sessions"
-              className="flex h-14 items-center gap-2 rounded-full bg-white px-8 text-lg font-bold text-teal-900 transition-all hover:bg-teal-50 hover:scale-105 active:scale-95 shadow-xl group"
+              className="flex h-14 items-center gap-2 rounded-full bg-japan-indigo px-8 text-lg font-bold text-white transition-all hover:bg-japan-indigo/90 hover:scale-105 active:scale-95 shadow-xl group"
             >
               羅針盤を手にする
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -92,7 +92,7 @@ export default function Home() {
               href="https://ai-diagnosis-six.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-14 items-center gap-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-8 text-lg font-bold text-white transition-all hover:brightness-110 hover:scale-105 active:scale-95 shadow-xl group"
+              className="flex h-14 items-center gap-2 rounded-full bg-japan-vermilion px-8 text-lg font-bold text-white transition-all hover:brightness-110 hover:scale-105 active:scale-95 shadow-xl group"
             >
               <Sparkles className="h-5 w-5" />
               無料で適性診断
@@ -100,7 +100,7 @@ export default function Home() {
             </a>
             <a
               href="/philosophy"
-              className="glass-card flex h-14 items-center gap-2 rounded-full px-8 text-lg font-bold text-teal-50 border border-white/10 hover:bg-white/5 transition-all"
+              className="glass-card flex h-14 items-center gap-2 rounded-full px-8 text-lg font-bold text-japan-indigo border border-japan-indigo/20 hover:bg-japan-indigo/5 transition-all"
             >
               メソッドを探究する
             </a>
@@ -132,7 +132,7 @@ export default function Home() {
                 repeat: Infinity,
                 delay: i * 0.7,
               }}
-              className="absolute text-teal-400/30"
+              className="absolute text-japan-indigo"
               style={{
                 top: pos.top,
                 left: pos.left,
@@ -145,23 +145,24 @@ export default function Home() {
       </section>
 
       {/* Philosophy Section */}
-      <section id="section-philosophy" className="w-full max-w-7xl px-4 py-24 min-h-screen flex items-center">
+      <section id="section-philosophy" className="w-full max-w-7xl px-4 py-24 min-h-screen flex items-center relative">
+        <div className="absolute inset-0 pattern-seigaiha opacity-30 z-[-1]" />
         <div className="grid gap-8 md:grid-cols-2 lg:gap-12 w-full">
           <motion.div
             whileInView="visible"
             initial="hidden"
             viewport={{ once: true, margin: "-100px" }}
             variants={itemVariants}
-            className="glass-panel group relative flex flex-col justify-center rounded-3xl p-10 md:p-14 border border-white/5 hover:border-teal-500/30 transition-all duration-700 bg-black/20"
+            className="glass-panel group relative flex flex-col justify-center rounded-3xl p-10 md:p-14 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-all duration-700 bg-white/60"
           >
-            <div className="absolute -top-6 -left-6 bg-teal-500/20 p-4 rounded-2xl backdrop-blur-md border border-teal-500/30 text-teal-400 group-hover:scale-110 transition-transform duration-500">
+            <div className="absolute -top-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border border-japan-indigo/10 text-japan-indigo group-hover:scale-110 transition-transform duration-500">
               <Shield size={32} />
             </div>
-            <h2 className="mb-6 text-3xl font-bold md:text-5xl leading-tight">
+            <h2 className="mb-6 text-3xl font-bold md:text-5xl leading-tight text-japan-indigo">
               内なる聖域。<br />
-              <span className="text-forest font-light">Spiritual Resilience</span>
+              <span className="text-japan-gradient font-light">Spiritual Resilience</span>
             </h2>
-            <p className="mb-8 text-zinc-300 leading-relaxed text-lg">
+            <p className="mb-8 text-zinc-600 leading-relaxed text-lg">
               外部の評価や「稼げるノウハウ」に依存するほど、人生の主導権は遠のきます。
               自身の過去を冷徹に再定義し、他者の期待に侵食されない「自己決定の核」を確立します。
             </p>
@@ -172,12 +173,12 @@ export default function Home() {
                 { title: "メンタル・レジリエンス", desc: "荒波を乗りこなす精神の柔軟性。" }
               ].map((item) => (
                 <div key={item.title} className="flex gap-4 group/item">
-                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-500/20 text-teal-400 group-hover/item:scale-110 transition-all">
+                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-japan-indigo/10 text-japan-indigo group-hover/item:scale-110 transition-all">
                     <CheckCircle2 className="h-4 w-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-teal-50">{item.title}</h4>
-                    <p className="text-sm text-zinc-400">{item.desc}</p>
+                    <h4 className="font-bold text-japan-indigo">{item.title}</h4>
+                    <p className="text-sm text-zinc-500">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -189,16 +190,16 @@ export default function Home() {
             initial="hidden"
             viewport={{ once: true, margin: "-100px" }}
             variants={itemVariants}
-            className="glass-panel group relative flex flex-col justify-center rounded-3xl p-10 md:p-14 border border-white/5 hover:border-teal-500/30 transition-all duration-700 bg-black/20"
+            className="glass-panel group relative flex flex-col justify-center rounded-3xl p-10 md:p-14 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-all duration-700 bg-white/60"
           >
-            <div className="absolute -top-6 -right-6 bg-teal-500/20 p-4 rounded-2xl backdrop-blur-md border border-teal-500/30 text-teal-400 group-hover:scale-110 transition-transform duration-500">
+            <div className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-lg border border-japan-indigo/10 text-japan-indigo group-hover:scale-110 transition-transform duration-500">
               <Zap size={32} />
             </div>
-            <h2 className="mb-6 text-3xl font-bold md:text-5xl leading-tight">
+            <h2 className="mb-6 text-3xl font-bold md:text-5xl leading-tight text-japan-indigo">
               創造の武器。<br />
-              <span className="text-forest font-light">AI practical Wisdom</span>
+              <span className="text-japan-gradient font-light">AI practical Wisdom</span>
             </h2>
-            <p className="mb-8 text-zinc-300 leading-relaxed text-lg">
+            <p className="mb-8 text-zinc-600 leading-relaxed text-lg">
               意志を社会へ実装するための「加速装置」としてのAI。
               単なる「使い方」ではなく、あなたの思想を自律的に拡張させる「デジタル分身」としてのAI設計を伝授します。
             </p>
@@ -209,12 +210,12 @@ export default function Home() {
                 { title: "自律型ビジネスモデル", desc: "時間と場所を自己決定するための構造。" }
               ].map((item) => (
                 <div key={item.title} className="flex gap-4 group/item">
-                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-500/20 text-teal-400 group-hover/item:scale-110 transition-all">
+                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-japan-indigo/10 text-japan-indigo group-hover/item:scale-110 transition-all">
                     <CheckCircle2 className="h-4 w-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-teal-50">{item.title}</h4>
-                    <p className="text-sm text-zinc-400">{item.desc}</p>
+                    <h4 className="font-bold text-japan-indigo">{item.title}</h4>
+                    <p className="text-sm text-zinc-500">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -224,31 +225,32 @@ export default function Home() {
       </section>
 
       {/* Future Section (Indoor Focus) */}
-      <section id="section-future" className="w-full max-w-6xl px-4 py-24 min-h-screen flex items-center justify-center">
+      <section id="section-future" className="w-full max-w-6xl px-4 py-24 min-h-screen flex items-center justify-center relative">
+        <div className="absolute inset-0 pattern-asanoha opacity-30 z-[-1]" />
         <motion.div
           whileInView={{ opacity: 1, scale: 1 }}
           initial={{ opacity: 0, scale: 0.95 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="glass-panel relative max-w-3xl rounded-3xl p-12 md:p-20 text-center overflow-hidden border border-teal-500/10 shadow-3xl"
+          className="glass-panel relative max-w-3xl rounded-3xl p-12 md:p-20 text-center overflow-hidden border border-japan-indigo/10 shadow-3xl bg-white/80"
         >
           {/* Subtle Glow Effect */}
-          <div className="absolute -inset-10 bg-teal-500/5 blur-[100px] pointer-events-none" />
+          <div className="absolute -inset-10 bg-japan-gold/5 blur-[100px] pointer-events-none" />
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="mb-8 text-4xl font-bold md:text-6xl text-white leading-tight"
+            className="mb-8 text-4xl font-bold md:text-6xl text-japan-indigo leading-tight"
           >
             静かな確信から、<br />
-            <span className="text-forest">世界を変える一歩</span>を。
+            <span className="text-japan-gradient">世界を変える一歩</span>を。
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="mb-12 text-zinc-300 text-lg md:text-xl font-light leading-relaxed"
+            className="mb-12 text-zinc-600 text-lg md:text-xl font-light leading-relaxed"
           >
             あなたの内なる静寂から紡がれる「問い」こそが、<br />
             AI時代における最強のコモディティ化への対抗手段となります。
@@ -260,7 +262,7 @@ export default function Home() {
           >
             <a
               href="/sessions"
-              className="flex h-16 w-full max-w-md mx-auto items-center justify-center gap-3 rounded-full bg-gradient-to-r from-teal-500 to-teal-400 text-xl font-bold text-white transition-all hover:brightness-110 hover:shadow-2xl active:scale-95 shadow-xl"
+              className="flex h-16 w-full max-w-md mx-auto items-center justify-center gap-3 rounded-full bg-japan-indigo text-xl font-bold text-white transition-all hover:bg-japan-indigo/90 hover:shadow-2xl active:scale-95 shadow-xl"
             >
               「人生の再定義」セッションを予約
               <ArrowRight className="h-6 w-6" />
@@ -283,15 +285,15 @@ export default function Home() {
           className="text-center mb-16"
         >
           <motion.div variants={itemVariants} className="mb-4 flex justify-center">
-            <div className="flex items-center gap-2 rounded-full bg-teal-500/10 px-4 py-1 text-sm font-medium text-teal-400 border border-teal-500/20">
+            <div className="flex items-center gap-2 rounded-full bg-japan-indigo/5 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/10">
               <Cpu size={16} />
               <span>AI Tools</span>
             </div>
           </motion.div>
-          <motion.h2 variants={itemVariants} className="text-4xl font-bold md:text-5xl text-white mb-4">
+          <motion.h2 variants={itemVariants} className="text-4xl font-bold md:text-5xl text-japan-indigo mb-4">
             AI活用プロジェクト
           </motion.h2>
-          <motion.p variants={itemVariants} className="text-zinc-400 text-lg max-w-2xl mx-auto">
+          <motion.p variants={itemVariants} className="text-zinc-500 text-lg max-w-2xl mx-auto">
             自己決定力を加速させるためのAIツールを開発しています
           </motion.p>
         </motion.div>
@@ -307,22 +309,22 @@ export default function Home() {
             viewport={{ once: true }}
             variants={itemVariants}
             whileHover={{ scale: 1.02, y: -5 }}
-            className="glass-panel group relative flex flex-col rounded-3xl p-8 border border-white/5 hover:border-teal-500/30 transition-all duration-500 bg-black/20 cursor-pointer"
+            className="glass-panel group relative flex flex-col rounded-3xl p-8 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-all duration-500 bg-white/60 cursor-pointer"
           >
-            <div className="absolute -top-4 -right-4 bg-gradient-to-br from-purple-500/30 to-pink-500/30 p-3 rounded-xl backdrop-blur-md border border-purple-500/30 text-purple-400 group-hover:scale-110 transition-transform duration-500">
+            <div className="absolute -top-4 -right-4 bg-white p-3 rounded-xl shadow-md border border-purple-500/20 text-purple-600 group-hover:scale-110 transition-transform duration-500">
               <Sparkles size={24} />
             </div>
             <div className="text-4xl mb-4">🤖</div>
-            <h3 className="text-xl font-bold text-white mb-2">AI副業適性診断</h3>
-            <p className="text-zinc-400 text-sm mb-4 flex-grow">
+            <h3 className="text-xl font-bold text-japan-indigo mb-2">AI副業適性診断</h3>
+            <p className="text-zinc-600 text-sm mb-4 flex-grow">
               5問の質問で、あなたに向いているAI副業タイプを診断。MBTI分析も可能。
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs bg-teal-500/20 text-teal-400 px-2 py-1 rounded-full">React</span>
-              <span className="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded-full">TypeScript</span>
-              <span className="text-xs bg-pink-500/20 text-pink-400 px-2 py-1 rounded-full">Vercel</span>
+              <span className="text-xs bg-japan-indigo/10 text-japan-indigo px-2 py-1 rounded-full">React</span>
+              <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">TypeScript</span>
+              <span className="text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded-full">Vercel</span>
             </div>
-            <div className="flex items-center text-teal-400 text-sm font-medium group-hover:gap-3 transition-all">
+            <div className="flex items-center text-japan-indigo text-sm font-medium group-hover:gap-3 transition-all">
               診断を試す <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
           </motion.a>
@@ -333,20 +335,20 @@ export default function Home() {
             initial="hidden"
             viewport={{ once: true }}
             variants={itemVariants}
-            className="glass-panel group relative flex flex-col rounded-3xl p-8 border border-white/5 hover:border-teal-500/30 transition-all duration-500 bg-black/20"
+            className="glass-panel group relative flex flex-col rounded-3xl p-8 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-all duration-500 bg-white/60"
           >
-            <div className="absolute -top-4 -right-4 bg-gradient-to-br from-blue-500/30 to-cyan-500/30 p-3 rounded-xl backdrop-blur-md border border-blue-500/30 text-blue-400 group-hover:scale-110 transition-transform duration-500">
+            <div className="absolute -top-4 -right-4 bg-white p-3 rounded-xl shadow-md border border-blue-500/20 text-blue-600 group-hover:scale-110 transition-transform duration-500">
               <Target size={24} />
             </div>
             <div className="text-4xl mb-4">📋</div>
-            <h3 className="text-xl font-bold text-white mb-2">タスク管理ツール</h3>
-            <p className="text-zinc-400 text-sm mb-4 flex-grow">
+            <h3 className="text-xl font-bold text-japan-indigo mb-2">タスク管理ツール</h3>
+            <p className="text-zinc-600 text-sm mb-4 flex-grow">
               Google Calendar/Tasks連携。音声入力対応で、素早くタスクを登録。
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">React</span>
-              <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full">Google API</span>
-              <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">Voice</span>
+              <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">React</span>
+              <span className="text-xs bg-cyan-100 text-cyan-700 px-2 py-1 rounded-full">Google API</span>
+              <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Voice</span>
             </div>
             <div className="text-zinc-500 text-sm">
               🔒 プライベート利用
@@ -359,20 +361,20 @@ export default function Home() {
             initial="hidden"
             viewport={{ once: true }}
             variants={itemVariants}
-            className="glass-panel group relative flex flex-col rounded-3xl p-8 border border-white/5 hover:border-teal-500/30 transition-all duration-500 bg-black/20"
+            className="glass-panel group relative flex flex-col rounded-3xl p-8 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-all duration-500 bg-white/60"
           >
-            <div className="absolute -top-4 -right-4 bg-gradient-to-br from-green-500/30 to-emerald-500/30 p-3 rounded-xl backdrop-blur-md border border-green-500/30 text-green-400 group-hover:scale-110 transition-transform duration-500">
+            <div className="absolute -top-4 -right-4 bg-white p-3 rounded-xl shadow-md border border-green-500/20 text-green-600 group-hover:scale-110 transition-transform duration-500">
               <Cpu size={24} />
             </div>
             <div className="text-4xl mb-4">⚙️</div>
-            <h3 className="text-xl font-bold text-white mb-2">GitHub Actions CI/CD</h3>
-            <p className="text-zinc-400 text-sm mb-4 flex-grow">
+            <h3 className="text-xl font-bold text-japan-indigo mb-2">GitHub Actions CI/CD</h3>
+            <p className="text-zinc-600 text-sm mb-4 flex-grow">
               PRごとの自動Lint/Buildチェック、AIエージェント協調開発のためのマルチエージェント階層構造を構築。
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">GitHub Actions</span>
-              <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">CI/CD</span>
-              <span className="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded-full">Multi-Agent</span>
+              <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">GitHub Actions</span>
+              <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">CI/CD</span>
+              <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Multi-Agent</span>
             </div>
             <div className="text-zinc-500 text-sm">
               ✅ 本番運用中
@@ -385,14 +387,14 @@ export default function Home() {
       <BookingForm />
 
       {/* Footer */}
-      <footer className="w-full py-20 text-center border-t border-white/5 bg-black/20">
+      <footer className="w-full py-20 text-center border-t border-japan-indigo/5 bg-japan-indigo/5">
         <div className="max-w-4xl mx-auto px-4">
           {/* LINE CTA */}
-          <div className="mb-12 p-8 rounded-2xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
+          <div className="mb-12 p-8 rounded-2xl bg-white/50 border border-japan-indigo/10 shadow-sm">
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
               <div className="text-center md:text-left">
-                <h3 className="text-xl font-bold text-white mb-2">🎁 LINE登録で無料特典</h3>
-                <p className="text-zinc-400 text-sm">AI副業ロードマップPDF + 初回相談無料</p>
+                <h3 className="text-xl font-bold text-japan-indigo mb-2">🎁 LINE登録で無料特典</h3>
+                <p className="text-zinc-600 text-sm">AI副業ロードマップPDF + 初回相談無料</p>
               </div>
               <a
                 href="https://lin.ee/VAYurUv"
@@ -409,15 +411,15 @@ export default function Home() {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 text-zinc-300 font-medium text-sm">
-            <a href="/about" className="hover:text-teal-400 transition-colors">About</a>
-            <a href="/philosophy" className="hover:text-teal-400 transition-colors">Philosophy</a>
-            <a href="/sessions" className="hover:text-teal-400 transition-colors">Sessions</a>
-            <a href="/blog" className="hover:text-teal-400 transition-colors">Blog</a>
-            <a href="/faq" className="hover:text-teal-400 transition-colors">FAQ</a>
-            <a href="/contact" className="hover:text-teal-400 transition-colors">Contact</a>
-            <a href="https://ai-diagnosis-six.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">🤖 AI診断</a>
-            <a href="https://lin.ee/VAYurUv" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">LINE</a>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 text-zinc-600 font-medium text-sm">
+            <a href="/about" className="hover:text-japan-indigo transition-colors">About</a>
+            <a href="/philosophy" className="hover:text-japan-indigo transition-colors">Philosophy</a>
+            <a href="/sessions" className="hover:text-japan-indigo transition-colors">Sessions</a>
+            <a href="/blog" className="hover:text-japan-indigo transition-colors">Blog</a>
+            <a href="/faq" className="hover:text-japan-indigo transition-colors">FAQ</a>
+            <a href="/contact" className="hover:text-japan-indigo transition-colors">Contact</a>
+            <a href="https://ai-diagnosis-six.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition-colors">🤖 AI診断</a>
+            <a href="https://lin.ee/VAYurUv" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 transition-colors">LINE</a>
           </div>
           <p className="text-zinc-500 text-sm tracking-widest uppercase">© 2026 Takahiro Motoyama. Designed for Self-Determination.</p>
         </div>

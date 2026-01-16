@@ -1,9 +1,12 @@
 ---
-title: "境界線を引く - 健全な人間関係のために"
-date: "2026-03-17"
-category: "Mindset"
-tags: ["Boundaries", "Relationships", "Self-care"]
-description: "他人の期待に応えすぎて疲れていませんか？健全な境界線が、あなたを守ります。"
+title: 境界線を引く - 健全な人間関係のために
+date: '2026-03-24'
+category: Mindset
+tags:
+  - Boundaries
+  - Relationships
+  - Self-care
+description: 他人の期待に応えすぎて疲れていませんか？健全な境界線が、あなたを守ります。
 published: true
 ---
 
@@ -19,6 +22,24 @@ published: true
 
 自分と他者の間に引く、見えない線。
 ここまでは責任を持つ、ここからは持たない、という区切り。
+
+### 健全な境界線
+
+```mermaid
+graph LR
+    Me((自分))
+    Others((他者))
+    
+    subgraph Boundary[境界線]
+    Resp[自分の責任<br>感情・行動・価値観]
+    end
+    
+    Me --- Resp
+    Resp -.-|No!| Others
+    Others -- 侵入 --> Resp
+    
+    style Resp fill:#2dd4bf,color:#fff,stroke-width:2px
+```
 
 ## 境界線の種類
 

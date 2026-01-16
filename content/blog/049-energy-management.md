@@ -1,9 +1,12 @@
 ---
-title: "エネルギーマネジメント - 時間ではなくエネルギーを管理する"
-date: "2026-02-11"
-category: "Productivity"
-tags: ["Productivity", "Energy", "Performance"]
-description: "時間は誰にも24時間。差がつくのは「エネルギーをどう使うか」です。"
+title: エネルギーマネジメント - 時間ではなくエネルギーを管理する
+date: '2026-02-18'
+category: Productivity
+tags:
+  - Productivity
+  - Energy
+  - Performance
+description: 時間は誰にも24時間。差がつくのは「エネルギーをどう使うか」です。
 published: true
 ---
 
@@ -26,6 +29,20 @@ published: true
 でも、エネルギーは管理によって増やすことができます。
 
 ## 4つのエネルギー源
+
+### エネルギーのピラミッド
+
+```mermaid
+block-beta
+    columns 1
+    Spiritual["精神 (目的・価値観)"]
+    Mental["頭脳 (集中・思考)"]
+    Emotional["感情 (質・関係性)"]
+    Physical["身体 (睡眠・食事・運動)"]
+    
+    style Physical fill:#94a3b8,stroke:#fff
+    style Spiritual fill:#facc15,stroke:#fff
+```
 
 ### 1. 体のエネルギー
 

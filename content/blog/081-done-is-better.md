@@ -1,9 +1,12 @@
 ---
-title: "「完璧」より「完了」を目指す"
-date: "2026-03-15"
-category: "Productivity"
-tags: ["Productivity", "Perfectionism", "Action"]
-description: "完璧を求めて動けなくなるより、まず完了させる。Done is better than perfectの実践法。"
+title: 「完璧」より「完了」を目指す
+date: '2026-03-22'
+category: Productivity
+tags:
+  - Productivity
+  - Perfectionism
+  - Action
+description: 完璧を求めて動けなくなるより、まず完了させる。Done is better than perfectの実践法。
 published: true
 ---
 
@@ -12,6 +15,27 @@ published: true
 「もう少し良くしてから」
 「まだ準備が足りない」
 「これでは出せない」
+
+### 完了主義 vs 完璧主義
+
+```mermaid
+graph TD
+    subgraph Done[完了主義 (Iterative)]
+    V1[Ver 1.0<br>60%] --> Feed1[フィードバック]
+    Feed1 --> V2[Ver 2.0<br>80%]
+    V2 --> Feed2[フィードバック]
+    Feed2 --> V3[Ver 3.0<br>90%]
+    end
+
+    subgraph Perfect[完璧主義 (Waterfal)]
+    Plan[計画・修正] --> Plan
+    Plan --> Plan
+    Plan -->|期限切れ| Zero[成果ゼロ]
+    end
+
+    style V3 fill:#2dd4bf,color:#fff
+    style Zero fill:#ef4444,color:#fff
+```
 
 完璧を求めるあまり、何も完了しない。
 そんな経験はありませんか？

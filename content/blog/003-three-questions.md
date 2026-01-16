@@ -1,11 +1,14 @@
 ---
 title: 判断軸を見つける3つの質問
-description: "迷ったときに使える、シンプルだけど深い3つの問い"
-date: "2026-01-10"
-category: "コーチング"
-tags: ["判断軸", "問い", "コーチング"]
+description: 迷ったときに使える、シンプルだけど深い3つの問い
+date: '2026-01-03'
+category: コーチング
+tags:
+  - 判断軸
+  - 問い
+  - コーチング
 published: true
-slug: "three-questions-to-find-your-compass"
+slug: three-questions-to-find-your-compass
 ---
 
 ## はじめに
@@ -38,6 +41,19 @@ slug: "three-questions-to-find-your-compass"
 ---
 
 ## 3つの問い
+
+### 決断の羅針盤フロー
+
+```mermaid
+graph TD
+    Start[迷う決断] --> Q1{Q1: 価値観に<br>合っている？}
+    Q1 -->|No| Stop[却下]
+    Q1 -->|Yes| Q2{Q2: 10年後の自分は<br>評価する？}
+    Q2 -->|No| Stop
+    Q2 -->|Yes| Q3{Q3: 最悪のケースを<br>受け入れられる？}
+    Q3 -->|No| R[リスク対策を考える]
+    Q3 -->|Yes| Go[実行する]
+```
 
 ### 問い1: 「この選択が、私の大切にしている価値観に合っているか？」
 

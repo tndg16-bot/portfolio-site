@@ -1,9 +1,12 @@
 ---
-title: "逆算思考 - ゴールから今日を決める"
-date: "2026-04-01"
-category: "思考法"
-tags: ["Thinking", "Goal Setting", "Planning"]
-description: "目標から逆算して今日やることを決める。戦略的な計画の立て方。"
+title: 逆算思考 - ゴールから今日を決める
+date: '2026-04-08'
+category: 思考法
+tags:
+  - Thinking
+  - Goal Setting
+  - Planning
+description: 目標から逆算して今日やることを決める。戦略的な計画の立て方。
 published: true
 ---
 
@@ -30,9 +33,20 @@ published: true
 「達成したい状態」から逆算して、今日やることを決める。
 
 メリット：
-- 無駄がなくなる
 - 優先順位が明確になる
 - モチベーションが維持しやすい
+
+### 逆算思考のタイムライン
+
+```mermaid
+timeline
+    title 未来から現在へ
+    1年後 : ゴール達成 (月10万)
+    6ヶ月後 : 中間目標 (月2万)
+    3ヶ月後 : 最初の成果 (月1万)
+    今週 : 準備完了
+    今日 : 最初の一歩
+```
 
 ## 逆算思考の実践
 

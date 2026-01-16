@@ -82,7 +82,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#000000" />
       </head>
-      <body className={`${inter.variable} ${notoJP.variable} font-sans antialiased bali-bg overflow-x-hidden`}>
+      <body className={`${inter.variable} ${notoJP.variable} font-sans antialiased japan-bg overflow-x-hidden`}>
         <PersonJsonLd />
         <OrganizationJsonLd />
         <WebsiteJsonLd />

@@ -1,9 +1,13 @@
 ---
-title: "決断疲れを防ぐ - 判断力を温存する技術"
-date: "2026-01-14"
-category: "Productivity"
-tags: ["Productivity", "Decision Making", "Mental Energy"]
-description: "毎日多くの決断を迫られると、判断力が低下する。決断疲れを防いで、重要な判断に集中する方法。"
+title: 決断疲れを防ぐ - 判断力を温存する技術
+date: '2026-01-21'
+category: Productivity
+tags:
+  - Productivity
+  - Decision Making
+  - Mental Energy
+description: 毎日多くの決断を迫られると、判断力が低下する。決断疲れを防いで、重要な判断に集中する方法。
+slug: decision-fatigue
 published: true
 ---
 
@@ -31,12 +35,28 @@ published: true
 
 自制心が弱まり、衝動買いや暴飲暴食をしやすくなる。
 
-## 決断疲れを防ぐ方法
+## 決断疲れとは？
 
-### 1. ルーティン化する
+私たちは1日に35,000回もの決断をしていると言われています。夕方になるとパフォーマンスが落ちるのは当然です。
 
-毎日同じ服を着る（スティーブ・ジョブズ方式）。
-朝食を固定する。
+
+## 決断疲れのメカニズム
+
+```mermaid
+graph TD
+    Morning[朝: エネルギー 100%] -->|重要な決断| Noon[昼: 残量 70%]
+    Noon -->|些細な迷い| Evening[夕方: 残量 30%]
+    Evening -->|先延ばし| Night[夜: 枯渇 0%]
+    
+    Night -.->|判断ミス・衝動| Error[質の低い選択]
+    
+    style Morning fill:#2dd4bf,stroke:#fff
+    style Night fill:#ef4444,stroke:#fff
+```
+
+## 対策：決断を減らす
+
+スティーブ・ジョブズが同じ服を着ていたのは有名ですが、これは「服を選ぶ」という決断を節約するためです。
 通勤ルートを決める。
 
 小さな決断を減らすことで、重要な決断に力を残せます。

@@ -40,6 +40,24 @@ slug: "ai-information-gathering"
 
 ## AI対話の強み
 
+### 検索 vs AI対話
+
+```mermaid
+graph LR
+    subgraph Google[従来: 検索型]
+    User1[ユーザー] -->|キーワード| Search[検索エンジン]
+    Search -->|大量のリンク| Results[情報の断片]
+    Results -->|統合・整理| User1
+    end
+    
+    subgraph AI[現在: 対話型]
+    User2[ユーザー] -->|質問・文脈| ChatAI[AI]
+    ChatAI -->|要約・回答| Answer[整理された知見]
+    end
+    
+    style Answer stroke:#2dd4bf,stroke-width:4px
+```
+
 ### 1. 質問を理解してくれる
 
 AIは自然言語を理解します。

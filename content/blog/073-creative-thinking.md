@@ -1,10 +1,13 @@
 ---
-title: "クリエイティブ思考を鍛える5つの習慣"
-date: "2026-03-07"
-category: "思考法"
-tags: ["創造性","思考法","イノベーション"]
-description: "クリエイティブな人は生まれつき？いいえ、創造性は習慣で鍛えられます。"
-slug: "creative-thinking"
+title: クリエイティブ思考を鍛える5つの習慣
+date: '2026-03-14'
+category: 思考法
+tags:
+  - 創造性
+  - 思考法
+  - イノベーション
+description: クリエイティブな人は生まれつき？いいえ、創造性は習慣で鍛えられます。
+slug: creative-thinking
 published: true
 ---
 
@@ -16,21 +19,21 @@ published: true
 ## 概念図解
 
 
+### 発散と収束（ダブルダイヤモンド）
+
 ```mermaid
-mindmap
-  root((クリエイティブ思考を鍛える5つの習慣))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+graph LR
+    Prob[課題] --> Diverge1{発散<br>広げる}
+    Diverge1 --> Converge1{収束<br>絞る}
+    Converge1 --> Def[定義]
+    
+    Def --> Diverge2{発散<br>アイデア}
+    Diverge2 --> Converge2{収束<br>具体化}
+    Converge2 --> Sol[解決策]
+    
+    style Diverge1 fill:#94a3b8,stroke-dasharray: 5 5
+    style Diverge2 fill:#94a3b8,stroke-dasharray: 5 5
+    style Sol fill:#2dd4bf,color:#fff
 ```
 
 

@@ -1,10 +1,13 @@
 ---
-title: "メールに支配されない働き方"
-date: "2026-03-10"
-category: "生産性"
-tags: ["メール","生産性","コミュニケーション"]
-description: "メールの返信に追われて1日が終わる。そんな状況から脱出する方法。"
-slug: "email-productivity"
+title: メールに支配されない働き方
+date: '2026-03-17'
+category: 生産性
+tags:
+  - メール
+  - 生産性
+  - コミュニケーション
+description: メールの返信に追われて1日が終わる。そんな状況から脱出する方法。
+slug: email-productivity
 published: true
 ---
 
@@ -16,14 +19,19 @@ published: true
 ## 概念図解
 
 
+### メール処理のトリアージ
+
 ```mermaid
 graph TD
-    A[目標設定] --> B{優先順位}
-    B -- 重要かつ緊急 --> C[即実行]
-    B -- 重要だが緊急でない --> D[計画・習慣化]
-    B -- 緊急だが重要でない --> E[委譲・削減]
-    B -- どちらでもない --> F[やめる]
-    D --> G[成果の最大化]
+    Inbox[受信トレイ] --> Open{2分で終わる？}
+    Open -- Yes --> Done[即返信・完了]
+    Open -- No --> Action{要アクション？}
+    
+    Action -- No --> Archive[アーカイブ/削除]
+    Action -- Yes --> Schedule[タスク化・カレンダー]
+    
+    style Done fill:#2dd4bf,color:#fff
+    style Schedule fill:#facc15
 ```
 
 

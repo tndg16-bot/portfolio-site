@@ -1,9 +1,12 @@
 ---
-title: "AI時代の「質問力」 - プロンプトエンジニアリングの本質"
-date: "2026-01-18"
-category: "AI活用"
-tags: ["AI", "ChatGPT", "Productivity"]
-description: "ChatGPTやClaudeを使いこなす人と、使いこなせない人の違い。それは「質問の仕方」にあります。"
+title: AI時代の「質問力」 - プロンプトエンジニアリングの本質
+date: '2026-01-25'
+category: AI活用
+tags:
+  - AI
+  - ChatGPT
+  - Productivity
+description: ChatGPTやClaudeを使いこなす人と、使いこなせない人の違い。それは「質問の仕方」にあります。
 published: true
 ---
 
@@ -35,6 +38,29 @@ published: true
 その特性を理解して使い分けることが重要です。
 
 ## 効果的なプロンプトの5つの要素
+
+## 効果的なプロンプトの5つの要素
+
+### プロンプト構成要素
+
+```mermaid
+classDiagram
+    class Prompt {
+        +役割 (Persona)
+        +文脈 (Context)
+        +命令 (Instruction)
+        +制約 (Constraint)
+        +出力形式 (Output)
+    }
+    class Example {
+        "あなたはB2Bマーケター"
+        "IT企業の部長向け提案"
+        "戦略を考えて"
+        "専門用語なしで"
+        "箇条書き5つ"
+    }
+    Prompt <|-- Example
+```
 
 ### 1. 役割を与える
 

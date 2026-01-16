@@ -1,11 +1,14 @@
 ---
-title: "なぜ「モチベーション」は続かないのか？ - 意志力に頼らない仕組みの作り方"
-description: "やる気に頼るから続かない。仕組みで自動化する習慣化の技術"
-date: "2026-01-12"
-category: "思考法"
-tags: ["モチベーション", "習慣化", "仕組み"]
+title: なぜ「モチベーション」は続かないのか？ - 意志力に頼らない仕組みの作り方
+description: やる気に頼るから続かない。仕組みで自動化する習慣化の技術
+date: '2026-01-10'
+category: 思考法
+tags:
+  - モチベーション
+  - 習慣化
+  - 仕組み
 published: true
-slug: "motivation-systems"
+slug: motivation-systems
 ---
 
 ## はじめに
@@ -54,6 +57,22 @@ slug: "motivation-systems"
 ---
 
 ## 仕組み化の原則
+
+### 意志力 vs 仕組み
+
+```mermaid
+graph TD
+    subgraph Will[意志力頼み (失敗パターン)]
+    A[やる気が出る] -->|行動| B[疲れる/飽きる]
+    B -->|意志力枯渇| C[挫折・三日坊主]
+    end
+    
+    subgraph System[仕組み化 (成功パターン)]
+    D[トリガー設定] -->|自動的に| E[行動発生]
+    E -->|記録/報酬| F[ドーパミン発生]
+    F -->|強化| D
+    end
+```
 
 ### 原則1: 摩擦を減らす
 

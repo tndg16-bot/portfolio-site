@@ -1,10 +1,13 @@
 ---
-title: "読書の生産性を高める技術"
-date: "2026-03-13"
-category: "思考法"
-tags: ["読書","学習","生産性"]
-description: "本を読んでも身につかない。読書の効果を最大化するための読み方。"
-slug: "reading-efficiently"
+title: 読書の生産性を高める技術
+date: '2026-03-20'
+category: 思考法
+tags:
+  - 読書
+  - 学習
+  - 生産性
+description: 本を読んでも身につかない。読書の効果を最大化するための読み方。
+slug: reading-efficiently
 published: true
 ---
 
@@ -16,22 +19,20 @@ published: true
 ## 概念図解
 
 
+### 読書の3つのモード
+
 ```mermaid
-mindmap
-  root((読書の生産性を高める技術))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+pyramid
+    title 読書のピラミッド
+    熟読(Deep Reading)
+    概観(Skimming)
+    探索(Scanning)
 ```
+
+### 目的別使い分け
+- **探索**: 必要な情報だけ探す
+- **概観**: 全体像を把握する
+- **熟読**: 深く理解し血肉にする
 
 
 ## なぜこれが重要なのか

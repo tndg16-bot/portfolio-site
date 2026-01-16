@@ -1,9 +1,12 @@
 ---
-title: "フィードバックは「攻撃」ではない - 成長のための受け取り方"
-date: "2026-01-17"
-category: "Mindset"
-tags: ["Mindset", "Communication", "Growth"]
-description: "批判やフィードバックを受けると防御的になってしまう。でも、その反応があなたの成長を止めている可能性があります。"
+title: フィードバックは「攻撃」ではない - 成長のための受け取り方
+date: '2026-01-24'
+category: Mindset
+tags:
+  - Mindset
+  - Communication
+  - Growth
+description: 批判やフィードバックを受けると防御的になってしまう。でも、その反応があなたの成長を止めている可能性があります。
 published: true
 ---
 
@@ -34,6 +37,22 @@ published: true
 厳しい批判を受けた過去があると、フィードバック全般に対して警戒心が働きます。
 
 ## フィードバックを成長に変える5つのステップ
+
+### 脳の反応メカニズム
+
+```mermaid
+graph TD
+    Input[フィードバック受信] --> Amygdala{扁桃体: 脅威判定}
+    Amygdala -->|危険!| Defense[防御反応: 戦うか逃げるか]
+    Defense --> Reject[拒絶・言い訳]
+    
+    Amygdala -.->|6秒待機| Cortex{前頭葉: 理性}
+    Cortex -->|分析| Analyze[内容の精査]
+    Analyze --> Accept[成長の糧にする]
+    
+    style Reject fill:#ef4444
+    style Accept fill:#2dd4bf
+```
 
 ### Step 1: 一時停止する
 

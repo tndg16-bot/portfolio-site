@@ -1,9 +1,12 @@
 ---
-title: "失敗を「経験値」に変える - ゲーミフィケーション思考"
-date: "2026-01-31"
-category: "Mindset"
-tags: ["Mindset", "Growth", "Gamification"]
-description: "失敗は怖い。でも、RPGのように考えれば、すべての失敗は経験値になります。"
+title: 失敗を「経験値」に変える - ゲーミフィケーション思考
+date: '2026-02-07'
+category: Mindset
+tags:
+  - Mindset
+  - Growth
+  - Gamification
+description: 失敗は怖い。でも、RPGのように考えれば、すべての失敗は経験値になります。
 published: true
 ---
 
@@ -25,6 +28,22 @@ published: true
 人生も同じように捉えてみましょう。
 
 ## ゲームと人生の共通点
+
+### 成長のゲームループ
+
+```mermaid
+graph TD
+    Challenge[挑戦: 敵と戦う] --> Result{結果}
+    Result -->|勝利| ExpWin[経験値 大]
+    Result -->|敗北| ExpLose[経験値 小 + データ]
+    
+    ExpWin --> LevelUp[レベルアップ]
+    ExpLose --> LevelUp
+    
+    LevelUp --> Next[次のボスへ]
+    
+    style LevelUp fill:#facc15,color:#000,stroke-width:2px
+```
 
 ### 1. レベルアップには経験値が必要
 

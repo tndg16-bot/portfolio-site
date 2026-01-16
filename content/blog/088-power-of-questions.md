@@ -1,9 +1,12 @@
 ---
-title: "質問する力 - 答えより問いが大切"
-date: "2026-03-22"
-category: "思考法"
-tags: ["Thinking", "Questions", "Communication"]
-description: "良い答えは、良い質問から生まれる。質問力を磨いて、思考を深める方法。"
+title: 質問する力 - 答えより問いが大切
+date: '2026-03-29'
+category: 思考法
+tags:
+  - Thinking
+  - Questions
+  - Communication
+description: 良い答えは、良い質問から生まれる。質問力を磨いて、思考を深める方法。
 published: true
 ---
 
@@ -13,6 +16,18 @@ published: true
 「もし私が問題を解くのに1時間を与えられたら、55分を質問を考えることに使い、5分で解く」
 
 質問の質が、答えの質を決めます。
+
+### 質問の深掘りプロセス
+
+```mermaid
+graph TD
+    Q1[表面的な質問<br>What?] -->|深掘り| Q2[分析的な質問<br>Why?]
+    Q2 -->|視点転換| Q3[創造的な質問<br>How?]
+    Q3 -->|具体的行動| Action[アクション<br>Do]
+    
+    style Q3 fill:#facc15
+    style Action fill:#2dd4bf,color:#fff
+```
 
 ## 良い質問の特徴
 

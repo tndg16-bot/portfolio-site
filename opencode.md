@@ -16,6 +16,7 @@
 - Claude: ✓ yes (standard)
 - ChatGPT: ✓ yes
 - Gemini: ✓ yes
+- z.ai: ✓ yes
 
 ## 言語設定
 

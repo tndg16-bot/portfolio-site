@@ -1,10 +1,13 @@
 ---
-title: "習慣の科学 - なぜ習慣化は難しいのか"
-date: "2026-02-25"
-category: "メンタルモデル"
-tags: ["習慣","脳科学","行動変容"]
-description: "意志力に頼らず習慣を作る。脳の仕組みを理解した習慣化のアプローチ。"
-slug: "building-habits"
+title: 習慣の科学 - なぜ習慣化は難しいのか
+date: '2026-03-04'
+category: メンタルモデル
+tags:
+  - 習慣
+  - 脳科学
+  - 行動変容
+description: 意志力に頼らず習慣を作る。脳の仕組みを理解した習慣化のアプローチ。
+slug: building-habits
 published: true
 ---
 
@@ -16,21 +19,24 @@ published: true
 ## 概念図解
 
 
+## 習慣の4ステップ（アトミック・ハビッツ）
+
 ```mermaid
-mindmap
-  root((習慣の科学 - なぜ習慣化は難しいのか))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+graph TD
+    Cue[1. きっかけ<br>(Cue)] --> Craving[2. 欲求<br>(Craving)]
+    Craving --> Response[3. 反応/行動<br>(Response)]
+    Response --> Reward[4. 報酬<br>(Reward)]
+    Reward -->|強化| Cue
+    
+    subgraph Problem[問題フェーズ]
+    Cue
+    Craving
+    end
+    
+    subgraph Solution[解決フェーズ]
+    Response
+    Reward
+    end
 ```
 
 

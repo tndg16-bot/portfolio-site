@@ -1,9 +1,12 @@
 ---
-title: "文章力を磨く - 伝わる文章の書き方"
-date: "2026-03-28"
-category: "キャリア"
-tags: ["Writing", "Communication", "Career"]
-description: "メール、報告書、企画書。文章力は仕事の質を左右します。伝わる文章を書くコツ。"
+title: 文章力を磨く - 伝わる文章の書き方
+date: '2026-04-04'
+category: キャリア
+tags:
+  - Writing
+  - Communication
+  - Career
+description: メール、報告書、企画書。文章力は仕事の質を左右します。伝わる文章を書くコツ。
 published: true
 ---
 
@@ -21,6 +24,24 @@ published: true
 - 専門用語が多い
 - 主語と述語がねじれている
 - 一文が長すぎる
+
+### 伝わる型：PREP法
+
+```mermaid
+block-beta
+    columns 1
+    P1["Point (結論)"]
+    R["Reason (理由)"]
+    E["Example (具体例)"]
+    P2["Point (結論・まとめ)"]
+    
+    P1 --> R
+    R --> E
+    E --> P2
+    
+    style P1 fill:#2dd4bf,color:#fff
+    style P2 fill:#2dd4bf,color:#fff
+```
 
 ## 伝わる文章の原則
 

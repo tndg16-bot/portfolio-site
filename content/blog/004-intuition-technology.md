@@ -1,11 +1,14 @@
 ---
-title: "「直感」を信じる技術 - データと感覚を統合する意思決定"
-description: "データに頼りすぎず、直感を軽視しない。両者を統合した質の高い意思決定の方法"
-date: "2026-01-12"
-category: "思考法"
-tags: ["意思決定", "直感", "データ分析"]
+title: 「直感」を信じる技術 - データと感覚を統合する意思決定
+description: データに頼りすぎず、直感を軽視しない。両者を統合した質の高い意思決定の方法
+date: '2026-01-04'
+category: 思考法
+tags:
+  - 意思決定
+  - 直感
+  - データ分析
 published: true
-slug: "intuition-technology"
+slug: intuition-technology
 ---
 
 ## はじめに
@@ -49,6 +52,17 @@ slug: "intuition-technology"
 ---
 
 ## 統合のフレームワーク
+
+### 直感 × データ 統合ループ
+
+```mermaid
+graph LR
+    Step1[1. 直感] -->|仮説・違和感| Step2[2. データ検証]
+    Step2 -->|裏付け| Step3{3. 矛盾はある？}
+    Step3 -->|No| Go[確信を持って実行]
+    Step3 -->|Yes| Deep[洞察のチャンス<br>なぜ違うのか深掘り]
+    Deep --> Step1
+```
 
 ### Step 1: まず直感を言語化する
 

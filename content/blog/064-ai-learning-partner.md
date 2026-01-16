@@ -1,10 +1,13 @@
 ---
-title: "AIを学習パートナーにする方法"
-date: "2026-02-26"
-category: "AI活用"
-tags: ["AI","学習","教育"]
-description: "ChatGPTを家庭教師のように使う。効果的なAI学習活用法。"
-slug: "ai-learning-partner"
+title: AIを学習パートナーにする方法
+date: '2026-03-05'
+category: AI活用
+tags:
+  - AI
+  - 学習
+  - 教育
+description: ChatGPTを家庭教師のように使う。効果的なAI学習活用法。
+slug: ai-learning-partner
 published: true
 ---
 
@@ -16,21 +19,22 @@ ChatGPTを家庭教師のように使う。効果的なAI学習活用法。
 ## 概念図解
 
 
+### AIパートナーの3つの役割
+
 ```mermaid
-mindmap
-  root((AIを学習パートナーにする方法))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+graph TD
+    User((学習者))
+    
+    Tutor[家庭教師<br>解説・質問回答]
+    Debater[壁打ち相手<br>議論・フィードバック]
+    Summarizer[要約者<br>構造化・テスト作成]
+    
+    User <--> Tutor
+    User <--> Debater
+    User <--> Summarizer
+    
+    style User fill:#facc15
+    style Tutor fill:#2dd4bf
 ```
 
 

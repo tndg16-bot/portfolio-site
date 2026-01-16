@@ -1,11 +1,14 @@
 ---
 title: AIを思考パートナーとして使う方法
-description: "AIに任せるのではなく、AIと協働する。より深い思考と創造のために"
-date: "2026-01-10"
-category: "AI"
-tags: ["AI", "ツール", "思考法"]
+description: AIに任せるのではなく、AIと協働する。より深い思考と創造のために
+date: '2026-01-02'
+category: AI
+tags:
+  - AI
+  - ツール
+  - 思考法
 published: true
-slug: "using-ai-as-thinking-partner"
+slug: using-ai-as-thinking-partner
 ---
 
 ## はじめに
@@ -57,6 +60,22 @@ AIを使う人と使わない人。どちらが有利だと思いますか？
 ---
 
 ## セッションでのAI活用
+
+### AI協働サイクル
+
+```mermaid
+graph TD
+    Start[課題・目的の提示] -->|質問| AI[AI: 思考パートナー]
+    AI -->|多角的な視点| View[新しい切り口]
+    AI -->|盲点の指摘| Blind[見落としの発見]
+    
+    View -->|統合| User[あなた: 意思決定者]
+    Blind -->|修正| User
+    
+    User -->|判断・実行| Action[価値創造]
+    
+    style User stroke-width:4px,stroke:#2dd4bf
+```
 
 私のセッションでは、AIを以下の形で活用します：
 

@@ -1,9 +1,12 @@
 ---
-title: "「やりたいこと」が見つからない本当の理由"
-date: "2026-01-24"
-category: "コーチング"
-tags: ["Self-discovery", "Career", "Coaching"]
-description: "「やりたいことがわからない」と悩む人が増えています。実は、それは探し方を間違えているだけかもしれません。"
+title: 「やりたいこと」が見つからない本当の理由
+date: '2026-01-31'
+category: コーチング
+tags:
+  - Self-discovery
+  - Career
+  - Coaching
+description: 「やりたいことがわからない」と悩む人が増えています。実は、それは探し方を間違えているだけかもしれません。
 published: true
 ---
 
@@ -39,6 +42,25 @@ published: true
 ## 見つけるための3つのアプローチ
 
 ### アプローチ1: 過去を振り返る
+
+### アプローチ1: 過去を振り返る
+
+### 情熱の源泉モデル
+
+```mermaid
+graph TD
+    Like[好きなこと]
+    Good[得意なこと]
+    Value[大事なこと]
+    
+    Like -->|x| Passion[情熱の種]
+    Good -->|x| Passion
+    Value -->|x| Passion
+    
+    Passion --> Action[小さく試す] --> Grow[育てる]
+    
+    style Passion fill:#facc15,color:#000,stroke-width:0px
+```
 
 - 子どもの頃、時間を忘れて夢中になったことは？
 - 褒められなくても続けていたことは？

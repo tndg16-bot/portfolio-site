@@ -1,10 +1,13 @@
 ---
-title: "80/20の法則を仕事に活かす"
-date: "2026-02-24"
-category: "生産性"
-tags: ["パレートの法則","生産性","効率化"]
-description: "成果の80%は20%の行動から生まれる。重要な20%を見極める方法。"
-slug: "pareto-principle"
+title: 80/20の法則を仕事に活かす
+date: '2026-03-03'
+category: 生産性
+tags:
+  - パレートの法則
+  - 生産性
+  - 効率化
+description: 成果の80%は20%の行動から生まれる。重要な20%を見極める方法。
+slug: pareto-principle
 published: true
 ---
 
@@ -16,14 +19,21 @@ published: true
 ## 概念図解
 
 
+## 80:20の真実
+
 ```mermaid
-graph TD
-    A[目標設定] --> B{優先順位}
-    B -- 重要かつ緊急 --> C[即実行]
-    B -- 重要だが緊急でない --> D[計画・習慣化]
-    B -- 緊急だが重要でない --> E[委譲・削減]
-    B -- どちらでもない --> F[やめる]
-    D --> G[成果の最大化]
+pie title 成果の80%を生む要因は？
+    "重要な20% (Core)" : 20
+    "些末な80% (Noise)" : 80
+```
+
+```mermaid
+graph LR
+    Input[行動量 20%] -->|High Impact| Output[成果 80%]
+    Input2[行動量 80%] -->|Low Impact| Output2[成果 20%]
+    
+    style Input stroke:#facc15,stroke-width:4px
+    style Output stroke:#facc15,stroke-width:4px
 ```
 
 

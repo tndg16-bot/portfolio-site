@@ -1,9 +1,12 @@
 ---
-title: "1on1ミーティングを価値ある時間に変える方法"
-date: "2026-01-25"
-category: "キャリア"
-tags: ["Career", "Communication", "Management"]
-description: "上司との1on1、ただの雑談で終わっていませんか？キャリアを加速させる1on1の活用法を解説します。"
+title: 1on1ミーティングを価値ある時間に変える方法
+date: '2026-02-01'
+category: キャリア
+tags:
+  - Career
+  - Communication
+  - Management
+description: 上司との1on1、ただの雑談で終わっていませんか？キャリアを加速させる1on1の活用法を解説します。
 published: true
 ---
 
@@ -33,6 +36,25 @@ published: true
 自分がどこを目指しているかを上司に伝えることで、適切な機会を与えてもらいやすくなります。
 
 ## 1on1を最大化する5つの準備
+
+### 1on1 構造化マップ
+
+```mermaid
+mindmap
+  root((1on1))
+    信頼関係 (Ice Break)
+      体調・気分
+      最近のニュース
+    未来 (Growth)
+      キャリアの目標
+      やりたいこと
+    現在 (Support)
+      困っていること
+      人間関係の悩み
+    フィードバック
+      感謝・承認
+      改善のヒント
+```
 
 ### 準備1: アジェンダを事前に用意する
 

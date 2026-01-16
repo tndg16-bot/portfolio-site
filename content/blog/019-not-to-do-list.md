@@ -1,11 +1,14 @@
 ---
-title: "「やらないことリスト」のススメ - \"No\"と言う勇気が時間を生み出す"
-description: "やることを増やすより、やらないことを決める方が生産性は上がる"
-date: "2026-01-12"
-category: "生産性"
-tags: ["時間管理", "優先順位", "断る"]
+title: 「やらないことリスト」のススメ - "No"と言う勇気が時間を生み出す
+description: やることを増やすより、やらないことを決める方が生産性は上がる
+date: '2026-01-19'
+category: 生産性
+tags:
+  - 時間管理
+  - 優先順位
+  - 断る
 published: true
-slug: "not-to-do-list"
+slug: not-to-do-list
 ---
 
 ## はじめに
@@ -38,6 +41,21 @@ Aをやっている時間は、Bをやれない。
 ---
 
 ## やらないことリストの作り方
+
+### タスク仕分けフロー
+
+```mermaid
+graph TD
+    Input[タスク/活動] --> Q1{Q1: 必須か？<br>価値を生むか？}
+    Q1 -->|Yes| Do[やる]
+    Q1 -->|No| Q2{Q2: 将来役立つ？<br>心が満たされる？}
+    
+    Q2 -->|Yes| Later[検討/保留]
+    Q2 -->|No| Trash[やらない]
+    
+    style Trash fill:#ef4444,color:#fff
+    style Do fill:#2dd4bf,color:#000
+```
 
 ### Step 1: 時間を奪っているものを書き出す
 

@@ -1,9 +1,12 @@
 ---
-title: "環境が習慣を作る - 仕組みで自分を変える"
-date: "2026-03-31"
-category: "Productivity"
-tags: ["Habits", "Environment", "Productivity"]
-description: "意志力に頼らない行動変容。環境をデザインして、自然と良い習慣が身につく方法。"
+title: 環境が習慣を作る - 仕組みで自分を変える
+date: '2026-04-07'
+category: Productivity
+tags:
+  - Habits
+  - Environment
+  - Productivity
+description: 意志力に頼らない行動変容。環境をデザインして、自然と良い習慣が身につく方法。
 published: true
 ---
 
@@ -20,9 +23,22 @@ published: true
 
 研究によると、人の行動の多くは環境によって左右されます。
 
-お皿が大きいと、食べる量が増える。
 お菓子が目に見える場所にあると、つい手が伸びる。
 ジムが近いと、運動頻度が上がる。
+
+### 行動変容のメカニズム
+
+```mermaid
+graph LR
+    Env[環境<br>Trigger] -->|自然と| Action[行動<br>Action]
+    Action --> Result[結果<br>Result]
+    Result -.->|強化| Env
+    
+    Will[意志力] -.->|× 長続きしない| Action
+    
+    style Env fill:#2dd4bf,color:#fff
+    style Will fill:#94a3b8,color:#fff,stroke-dasharray: 5 5
+```
 
 ## 環境デザインの原則
 

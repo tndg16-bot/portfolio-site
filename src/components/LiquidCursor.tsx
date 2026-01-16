@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export const LiquidCursor = () => {
-    const [isHovered, setIsHovered] = useState(false);
     const cursorX = useMotionValue(-100);
     const cursorY = useMotionValue(-100);
 
@@ -27,7 +26,7 @@ export const LiquidCursor = () => {
         <>
             {/* 液体のようなメインカーソル */}
             <motion.div
-                className="pointer-events-none fixed left-0 top-0 z-[9999] h-10 w-10 border border-teal-400/40 bg-teal-500/10"
+                className="pointer-events-none fixed left-0 top-0 z-[9999] h-10 w-10 border border-japan-indigo/40 bg-japan-indigo/10"
                 style={{
                     x: springX,
                     y: springY,
@@ -38,12 +37,12 @@ export const LiquidCursor = () => {
                 }}
             >
                 {/* 水滴のコア */}
-                <div className="absolute inset-0 m-auto h-2 w-2 rounded-full bg-teal-300 opacity-80 shadow-[0_0_10px_rgba(45,212,191,0.8)]" />
+                <div className="absolute inset-0 m-auto h-2 w-2 rounded-full bg-japan-indigo opacity-80 shadow-[0_0_10px_rgba(27,54,93,0.5)]" />
             </motion.div>
 
             {/* マウスの軌跡（Trails）- 簡易版。Framer Motionで制御 */}
             <motion.div
-                className="pointer-events-none fixed left-0 top-0 z-[9998] h-12 w-12 rounded-full border border-teal-400/20 bg-teal-400/5 shadow-2xl"
+                className="pointer-events-none fixed left-0 top-0 z-[9998] h-12 w-12 rounded-full border border-japan-indigo/20 bg-japan-indigo/5 shadow-xl"
                 style={{
                     x: useSpring(cursorX, { stiffness: 50, damping: 30 }),
                     y: useSpring(cursorY, { stiffness: 50, damping: 30 }),

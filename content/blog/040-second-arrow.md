@@ -1,9 +1,12 @@
 ---
-title: "第二の矢を射らない - 感情をこじらせないための仏教的知恵"
-date: "2026-02-02"
-category: "Mental Model"
-tags: ["Mental Model", "Mindset", "Buddhism"]
-description: "嫌なことが起きたとき、さらに自分を責めて苦しみを増幅させていませんか？仏教の「第二の矢」の教えから学びます。"
+title: 第二の矢を射らない - 感情をこじらせないための仏教的知恵
+date: '2026-02-09'
+category: Mental Model
+tags:
+  - Mental Model
+  - Mindset
+  - Buddhism
+description: 嫌なことが起きたとき、さらに自分を責めて苦しみを増幅させていませんか？仏教の「第二の矢」の教えから学びます。
 published: true
 ---
 
@@ -27,6 +30,25 @@ published: true
 
 しかし、多くの人は自分で第二の矢を射っています。
 「最初の痛み」に対して「自分を責める」「将来を悲観する」「過去を悔やむ」という追加の矢を放つのです。
+
+## 「第二の矢」の教え
+
+### 第二の矢のメカニズム
+
+```mermaid
+graph TD
+    Event[第一の矢: 出来事] --> Pain[痛み: 避けられない]
+    Pain --> Choice{どう反応するか？}
+    
+    Choice -->|受容| Healing[自然治癒]
+    Choice -->|拒絶・自責| Arrow2[第二の矢: 苦しみ]
+    
+    Arrow2 --> Loop[苦しみの増幅]
+    Loop --> Arrow2
+    
+    style Pain fill:#94a3b8,color:#fff
+    style Arrow2 fill:#ef4444,color:#fff,stroke-width:4px
+```
 
 第一の矢は避けられない。
 でも、第二の矢を射るかどうかは、自分で選べます。

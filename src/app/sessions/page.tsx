@@ -1,16 +1,16 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { CheckCircle2, ArrowRight, Clock, Video, MessageCircle, ShieldCheck, HelpCircle, CalendarDays } from "lucide-react";
+import { CheckCircle2, ArrowRight, Clock, Video, MessageCircle, ShieldCheck, HelpCircle, CalendarDays, User, Briefcase } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import Link from "next/link";
 
 const BookingForm = dynamic(() => import('@/components/BookingForm'), {
-  loading: () => <div className="flex items-center justify-center min-h-[400px]">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
-  </div>,
-  ssr: true
+    loading: () => <div className="flex items-center justify-center min-h-[400px]">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
+    </div>,
+    ssr: true
 });
 
 export default function SessionsPage() {
@@ -141,6 +141,81 @@ export default function SessionsPage() {
                                 <p className="text-white font-semibold">{t.after}</p>
                             </motion.div>
                         ))}
+                    </div>
+                </section>
+
+                {/* Service Lineup */}
+                <section className="w-full max-w-5xl px-4 mb-20">
+                    <motion.h2
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="text-2xl md:text-3xl font-bold text-white mb-10 text-center"
+                    >
+                        提供メニュー
+                    </motion.h2>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Personal Coaching */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="glass-panel p-8 rounded-2xl border border-teal-500/20 hover:bg-zinc-900/50 transition-colors"
+                        >
+                            <div className="h-12 w-12 bg-teal-500/10 rounded-xl flex items-center justify-center mb-6">
+                                <User className="text-teal-400" size={28} />
+                            </div>
+                            <h3 className="text-xl font-bold text-white mb-4">パーソナルコーチング</h3>
+                            <p className="text-zinc-300 mb-6 leading-relaxed">
+                                個人のキャリア、ライフプラン、副業戦略に特化した1on1セッション。
+                                あなたの中にある「答え」を引き出し、行動可能なプランに落とし込みます。
+                            </p>
+                            <ul className="space-y-3 mb-8">
+                                <li className="flex items-center gap-2 text-zinc-200">
+                                    <CheckCircle2 size={16} className="text-teal-400" />
+                                    <span>自己理解・価値観の言語化</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-zinc-200">
+                                    <CheckCircle2 size={16} className="text-teal-400" />
+                                    <span>AI活用・副業立ち上げ支援</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-zinc-200">
+                                    <CheckCircle2 size={16} className="text-teal-400" />
+                                    <span>メンタルブロックの解消</span>
+                                </li>
+                            </ul>
+                        </motion.div>
+
+                        {/* Business Consulting */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="glass-panel p-8 rounded-2xl border border-purple-500/20 hover:bg-zinc-900/50 transition-colors"
+                        >
+                            <div className="h-12 w-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6">
+                                <Briefcase className="text-purple-400" size={28} />
+                            </div>
+                            <h3 className="text-xl font-bold text-white mb-4">ビジネスコンサルティング</h3>
+                            <p className="text-zinc-300 mb-6 leading-relaxed">
+                                チームの意思決定プロセス改善、新規事業の壁打ち、組織文化の変革を支援。
+                                外部視点からのフィードバックで、停滞を打破します。
+                            </p>
+                            <ul className="space-y-3 mb-8">
+                                <li className="flex items-center gap-2 text-zinc-200">
+                                    <CheckCircle2 size={16} className="text-purple-400" />
+                                    <span>意思決定フローの最適化</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-zinc-200">
+                                    <CheckCircle2 size={16} className="text-purple-400" />
+                                    <span>新規事業アイディエーション</span>
+                                </li>
+                                <li className="flex items-center gap-2 text-zinc-200">
+                                    <CheckCircle2 size={16} className="text-purple-400" />
+                                    <span>1on1導入・マネジメント支援</span>
+                                </li>
+                            </ul>
+                        </motion.div>
                     </div>
                 </section>
 

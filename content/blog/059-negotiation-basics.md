@@ -1,10 +1,13 @@
 ---
-title: "交渉の基本 - WinWinを実現する技術"
-date: "2026-02-21"
-category: "キャリア"
-tags: ["交渉","コミュニケーション","キャリア"]
-description: "交渉は奪い合いではない。双方が満足する結果を生み出す方法。"
-slug: "negotiation-basics"
+title: 交渉の基本 - WinWinを実現する技術
+date: '2026-02-28'
+category: キャリア
+tags:
+  - 交渉
+  - コミュニケーション
+  - キャリア
+description: 交渉は奪い合いではない。双方が満足する結果を生み出す方法。
+slug: negotiation-basics
 published: true
 ---
 
@@ -16,21 +19,17 @@ published: true
 ## 概念図解
 
 
+### 交渉の4つの結末
+
 ```mermaid
-mindmap
-  root((交渉の基本 - WinWinを実現する技術))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+quadrantChart
+    title 交渉のマトリックス
+    x-axis 自分の利益: 低 --> 高
+    y-axis 相手の利益: 低 --> 高
+    quadrant-1 相手だけ得 (Lose-Win)
+    quadrant-2 共倒れ (Lose-Lose)
+    quadrant-3 自分だけ得 (Win-Lose)
+    quadrant-4 Win-Win (創造的合意)
 ```
 
 

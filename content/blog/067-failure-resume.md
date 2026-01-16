@@ -1,10 +1,13 @@
 ---
-title: "「失敗履歴書」を書く - 失敗から学ぶ技術"
-date: "2026-03-01"
-category: "マインドセット"
-tags: ["失敗","成長","内省"]
-description: "成功履歴書ではなく失敗履歴書を書く。失敗を資産に変える方法。"
-slug: "failure-resume"
+title: 「失敗履歴書」を書く - 失敗から学ぶ技術
+date: '2026-03-08'
+category: マインドセット
+tags:
+  - 失敗
+  - 成長
+  - 内省
+description: 成功履歴書ではなく失敗履歴書を書く。失敗を資産に変える方法。
+slug: failure-resume
 published: true
 ---
 
@@ -16,12 +19,17 @@ published: true
 ## 概念図解
 
 
+### 失敗を資産に変えるプロセス
+
 ```mermaid
 graph LR
-    A[固定マインドセット] -->|壁にぶつかる| B[諦める]
-    C[成長マインドセット] -->|壁にぶつかる| D[挑戦のチャンス]
-    D --> E[努力・学習]
-    E --> F[成長・達成]
+    Fail[失敗発生] --> Emotion[感情: 悔しさ・恥]
+    Emotion -->|記録する| Analysis[分析: 原因と教訓]
+    Analysis -->|ストック| Asset[資産: ネタ・知恵]
+    Asset --> Success[次の成功]
+    
+    style Fail fill:#94a3b8
+    style Asset fill:#facc15
 ```
 
 

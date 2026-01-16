@@ -1,9 +1,12 @@
 ---
-title: "第一印象の科学 - 最初の7秒で決まること"
-date: "2026-03-19"
-category: "キャリア"
-tags: ["Communication", "Career", "Psychology"]
-description: "人は出会って7秒で第一印象を形成すると言われています。その7秒を最大化する方法。"
+title: 第一印象の科学 - 最初の7秒で決まること
+date: '2026-03-26'
+category: キャリア
+tags:
+  - Communication
+  - Career
+  - Psychology
+description: 人は出会って7秒で第一印象を形成すると言われています。その7秒を最大化する方法。
 published: true
 ---
 
@@ -21,6 +24,16 @@ published: true
 - 視覚情報（見た目、表情、姿勢）: 55%
 - 聴覚情報（声のトーン、話し方）: 38%
 - 言語情報（話の内容）: 7%
+
+### メラビアンの法則
+
+```mermaid
+pie
+    title 第一印象の要素
+    "視覚(Visual)" : 55
+    "聴覚(Vocal)" : 38
+    "言語(Verbal)" : 7
+```
 
 つまり、何を言うかより、どう見えるかが重要。
 

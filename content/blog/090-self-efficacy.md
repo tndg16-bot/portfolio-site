@@ -1,9 +1,12 @@
 ---
-title: "自己効力感を高める - 「できる」という感覚"
-date: "2026-03-24"
-category: "Mindset"
-tags: ["Self-efficacy", "Mindset", "Psychology"]
-description: "「自分にはできる」という感覚が、実際の行動と結果を左右します。自己効力感の高め方。"
+title: 自己効力感を高める - 「できる」という感覚
+date: '2026-03-31'
+category: Mindset
+tags:
+  - Self-efficacy
+  - Mindset
+  - Psychology
+description: 「自分にはできる」という感覚が、実際の行動と結果を左右します。自己効力感の高め方。
 published: true
 ---
 
@@ -28,6 +31,21 @@ published: true
 - 挑戦を避ける
 - 少しの困難で諦める
 - 否定的な結果を想像する
+
+### 自己効力感を支える4つの柱
+
+```mermaid
+graph TD
+    Center((自己効力感<br>I CAN))
+    
+    S1[達成体験<br>自分でできた] -->|最強| Center
+    S2[代理体験<br>あの人もできた] --> Center
+    S3[言語的説得<br>君ならできる] --> Center
+    S4[生理的状態<br>心身が快調] --> Center
+    
+    style Center fill:#facc15,stroke-width:4px
+    style S1 fill:#2dd4bf,color:#fff
+```
 
 ## 自己効力感の4つの源泉
 

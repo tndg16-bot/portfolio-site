@@ -1,11 +1,14 @@
 ---
-title: "\"完璧主義\"からの解放宣言 - 80点で走り出す「最速実行」の技術"
-description: "完璧を目指すあまり動けない人へ。80点で始めて、走りながら改善する方法"
-date: "2026-01-12"
-category: "思考法"
-tags: ["完璧主義", "行動力", "マインドセット"]
+title: '"完璧主義"からの解放宣言 - 80点で走り出す「最速実行」の技術'
+description: 完璧を目指すあまり動けない人へ。80点で始めて、走りながら改善する方法
+date: '2026-01-07'
+category: 思考法
+tags:
+  - 完璧主義
+  - 行動力
+  - マインドセット
 published: true
-slug: "perfectionism-freedom"
+slug: perfectionism-freedom
 ---
 
 ## はじめに
@@ -54,6 +57,26 @@ slug: "perfectionism-freedom"
 ---
 
 ## 80点主義のすすめ
+
+### 完璧主義 vs 80点主義
+
+```mermaid
+gantt
+    title リリースまでのスピード比較
+    dateFormat  X
+    axisFormat %s
+    
+    section 完璧主義
+    準備・修正・悩み (100点目指す) :active, a1, 0, 100
+    リリース :crit, a2, after a1, 10
+    
+    section 80点主義
+    Ver.1 (80点) :done, b1, 0, 20
+    フィードバック :b2, after b1, 10
+    Ver.2 (90点) :active, b3, after b2, 20
+    フィードバック :b4, after b3, 10
+    Ver.3 (95点) :crit, b5, after b4, 20
+```
 
 ### 「完成」より「完了」
 

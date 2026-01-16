@@ -1,10 +1,13 @@
 ---
-title: "内向型のためのネットワーキング術"
-date: "2026-02-27"
-category: "キャリア"
-tags: ["人脈","内向型","キャリア"]
-description: "パーティーが苦手でも大丈夫。内向型の強みを活かした人脈構築法。"
-slug: "networking-introvert"
+title: 内向型のためのネットワーキング術
+date: '2026-03-06'
+category: キャリア
+tags:
+  - 人脈
+  - 内向型
+  - キャリア
+description: パーティーが苦手でも大丈夫。内向型の強みを活かした人脈構築法。
+slug: networking-introvert
 published: true
 ---
 
@@ -16,21 +19,15 @@ published: true
 ## 概念図解
 
 
+### 外向型 vs 内向型の戦略
+
 ```mermaid
-mindmap
-  root((内向型のためのネットワーキング術))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+xychart-beta
+    title 人脈のスタイル比較
+    x-axis 数(広さ), 深さ(信頼), 刺激への耐性
+    y-axis 低い(0) --> 高い(100)
+    line "外向型 (パーティー・交流会)" [90, 40, 90]
+    line "内向型 (1対1・深い対話)" [30, 90, 30]
 ```
 
 

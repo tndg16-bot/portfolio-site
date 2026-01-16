@@ -1,11 +1,14 @@
 ---
-title: "\"書くだけ\"で悩みは9割消える - 思考を整理するジャーナリング入門"
-description: "頭の中のモヤモヤを紙に書き出すだけで、驚くほど思考が整理される方法"
-date: "2026-01-12"
-category: "思考法"
-tags: ["ジャーナリング", "思考整理", "セルフケア"]
+title: '"書くだけ"で悩みは9割消える - 思考を整理するジャーナリング入門'
+description: 頭の中のモヤモヤを紙に書き出すだけで、驚くほど思考が整理される方法
+date: '2026-01-05'
+category: 思考法
+tags:
+  - ジャーナリング
+  - 思考整理
+  - セルフケア
 published: true
-slug: "journaling-intro"
+slug: journaling-intro
 ---
 
 ## はじめに
@@ -41,6 +44,28 @@ slug: "journaling-intro"
 感情を客観視することで、冷静な判断ができるようになります。
 
 ---
+
+## ジャーナリングのメカニズム
+
+```mermaid
+graph TD
+    subgraph Brain[脳内: カオス]
+    A[モヤモヤ] --> B[不安]
+    B --> C[ループ思考]
+    C --> A
+    end
+    
+    Brain -->|書く (Output)| Paper[紙の上: 秩序]
+    
+    subgraph Note[客観化された思考]
+    Paper --> D[事実]
+    Paper --> E[感情]
+    Paper --> F[対策]
+    end
+    
+    style Brain fill:#1e293b,stroke:#ef4444
+    style Note fill:#1e293b,stroke:#2dd4bf
+```
 
 ## ジャーナリングの始め方
 

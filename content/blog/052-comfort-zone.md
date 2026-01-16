@@ -1,10 +1,13 @@
 ---
-title: "コンフォートゾーンを抜け出す方法"
-date: "2026-02-14"
-category: "マインドセット"
-tags: ["マインドセット","成長","挑戦"]
-description: "居心地の良い場所にいると成長は止まる。でも、無謀な挑戦も危険。適切な「ストレッチゾーン」の見つけ方。"
-slug: "comfort-zone"
+title: コンフォートゾーンを抜け出す方法
+date: '2026-02-21'
+category: マインドセット
+tags:
+  - マインドセット
+  - 成長
+  - 挑戦
+description: 居心地の良い場所にいると成長は止まる。でも、無謀な挑戦も危険。適切な「ストレッチゾーン」の見つけ方。
+slug: comfort-zone
 published: true
 ---
 
@@ -16,12 +19,24 @@ published: true
 ## 概念図解
 
 
+### 3つのゾーン
+
 ```mermaid
-graph LR
-    A[固定マインドセット] -->|壁にぶつかる| B[諦める]
-    C[成長マインドセット] -->|壁にぶつかる| D[挑戦のチャンス]
-    D --> E[努力・学習]
-    E --> F[成長・達成]
+block-beta
+    columns 3
+    space
+    Panic["パニックゾーン<br>(ストレス過多)"]
+    space
+    space
+    Stretch["ストレッチゾーン<br>(成長領域)"]
+    space
+    space
+    Comfort["コンフォートゾーン<br>(安心だが成長なし)"]
+    space
+ 
+    style Comfort fill:#94a3b8
+    style Stretch fill:#2dd4bf
+    style Panic fill:#ef4444
 ```
 
 

@@ -1,10 +1,13 @@
 ---
-title: "上司からの依頼を断る技術"
-date: "2026-02-16"
-category: "キャリア"
-tags: ["キャリア","コミュニケーション","境界線"]
-description: "上司の頼みは断れない？実は、上手に断ることでむしろ信頼を得られます。"
-slug: "saying-no-at-work"
+title: 上司からの依頼を断る技術
+date: '2026-02-23'
+category: キャリア
+tags:
+  - キャリア
+  - コミュニケーション
+  - 境界線
+description: 上司の頼みは断れない？実は、上手に断ることでむしろ信頼を得られます。
+slug: saying-no-at-work
 published: true
 ---
 
@@ -16,21 +19,25 @@ published: true
 ## 概念図解
 
 
+### 断るかどうかの判断フロー
+
 ```mermaid
-mindmap
-  root((上司からの依頼を断る技術))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+graph TD
+    Request[依頼が来る] --> Impact{重要ですか？}
+    Impact -- No --> Trash[断る/委譲]
+    Impact -- Yes --> Urgent{緊急ですか？}
+    
+    Urgent -- Yes --> Cap{余裕ある？}
+    Cap -- Yes --> Accept[引き受ける]
+    Cap -- No --> Negot[条件交渉]
+    
+    Urgent -- No --> Schedule[期限を決めて受ける]
+    
+    Negot -->|期限延長| Accept
+    Negot -->|範囲縮小| Accept
+    
+    style Trash fill:#ef4444,color:#fff
+    style Accept fill:#2dd4bf,color:#fff
 ```
 
 

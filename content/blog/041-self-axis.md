@@ -1,9 +1,12 @@
 ---
-title: "「自分軸」と「他人軸」 - 誰の人生を生きていますか？"
-date: "2026-02-03"
-category: "コーチング"
-tags: ["Self-awareness", "Coaching", "Mindset"]
-description: "親の期待、社会の常識、周りの目。気づけば「他人の人生」を生きていませんか？自分軸を取り戻す方法。"
+title: 「自分軸」と「他人軸」 - 誰の人生を生きていますか？
+date: '2026-02-10'
+category: コーチング
+tags:
+  - Self-awareness
+  - Coaching
+  - Mindset
+description: 親の期待、社会の常識、周りの目。気づけば「他人の人生」を生きていませんか？自分軸を取り戻す方法。
 published: true
 ---
 
@@ -37,6 +40,26 @@ published: true
 - 「納得解」を追求する
 
 ## なぜ他人軸になるのか
+
+### 他人軸 vs 自分軸のサイクル
+
+```mermaid
+graph TD
+    subgraph Other[他人軸のサイクル]
+    O_Act[他人の期待で行動] --> O_Eval[評価を気にする]
+    O_Eval --> O_Fear[失敗への恐怖]
+    O_Fear --> O_Lose[自信喪失]
+    end
+
+    subgraph Self[自分軸のサイクル]
+    S_Val[価値観で決定] --> S_Act[行動]
+    S_Act --> S_Res[結果を受け入れる]
+    S_Res --> S_Grow[自信・納得感]
+    end
+
+    style O_Lose fill:#ef4444,stroke:#fff
+    style S_Grow fill:#2dd4bf,stroke:#fff
+```
 
 ### 1. 教育の影響
 

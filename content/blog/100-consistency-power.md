@@ -1,9 +1,12 @@
 ---
-title: "100日で人生は変えられる - 継続の力"
-date: "2026-04-03"
-category: "Mindset"
-tags: ["Habits", "Consistency", "Transformation"]
-description: "100日間の継続が、人生を変える力を持っています。最後の記事として、継続の力を伝えます。"
+title: 100日で人生は変えられる - 継続の力
+date: '2026-04-10'
+category: Mindset
+tags:
+  - Habits
+  - Consistency
+  - Transformation
+description: 100日間の継続が、人生を変える力を持っています。最後の記事として、継続の力を伝えます。
 published: true
 ---
 
@@ -15,7 +18,19 @@ published: true
 1日10分運動すれば → 16時間以上
 1日1つ学べば → 100の知識
 
+1日1つ学べば → 100の知識
+
 積み重ねの威力は、私たちの想像を超えます。
+
+### 継続による指数関数的成長
+
+```mermaid
+xychart-beta
+    title 1.01の法則 (1%の改善の積み重ね)
+    x-axis Day 1, Day 30, Day 60, Day 100
+    y-axis 成果
+    line [1, 1.3, 1.8, 2.7]
+```
 
 ## なぜ100日か
 

@@ -1,9 +1,12 @@
 ---
-title: "言語化の力 - モヤモヤを言葉にすると何が変わるのか"
-date: "2026-02-12"
-category: "思考法"
-tags: ["Thinking", "Writing", "Self-awareness"]
-description: "頭の中がぐるぐるしている。そんなとき、言葉にするだけで世界が変わります。"
+title: 言語化の力 - モヤモヤを言葉にすると何が変わるのか
+date: '2026-02-19'
+category: 思考法
+tags:
+  - Thinking
+  - Writing
+  - Self-awareness
+description: 頭の中がぐるぐるしている。そんなとき、言葉にするだけで世界が変わります。
 published: true
 ---
 
@@ -22,6 +25,26 @@ published: true
 考えていること、感じていることを、文字や言葉にして表現することです。
 
 ## なぜ言語化が重要か
+
+### 言語化のプロセス
+
+```mermaid
+graph LR
+    Chaos[モヤモヤ<br>(混沌)] -->|言語化| Order[構造化<br>(整理)]
+    Order -->|客観視| Action[行動可能<br>(スッキリ)]
+    
+    subgraph Unknown[未知]
+    Chaos
+    end
+    
+    subgraph Known[既知]
+    Order
+    Action
+    end
+    
+    style Chaos fill:#94a3b8,stroke-dasharray: 5 5
+    style Action fill:#2dd4bf
+```
 
 ### 1. 思考が整理される
 

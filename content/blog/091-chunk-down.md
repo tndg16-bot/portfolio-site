@@ -1,9 +1,12 @@
 ---
-title: "チャンクダウン思考 - 大きな目標を小さく分解する"
-date: "2026-03-25"
-category: "Productivity"
-tags: ["Productivity", "Goal Setting", "Thinking"]
-description: "大きな目標に圧倒されて動けない。チャンクダウンで、一歩ずつ進める形に変える方法。"
+title: チャンクダウン思考 - 大きな目標を小さく分解する
+date: '2026-04-01'
+category: Productivity
+tags:
+  - Productivity
+  - Goal Setting
+  - Thinking
+description: 大きな目標に圧倒されて動けない。チャンクダウンで、一歩ずつ進める形に変える方法。
 published: true
 ---
 
@@ -21,6 +24,28 @@ published: true
 大きな固まり（チャンク）を、小さな固まりに分解すること。
 
 一口サイズにすることで、管理可能になり、行動しやすくなります。
+
+### チャンクダウンのイメージ
+
+```mermaid
+graph TD
+    Big[大きな目標<br>本を出版する]
+    
+    Big --> M1[企画書作成]
+    Big --> M2[執筆]
+    Big --> M3[編集・校正]
+    
+    M2 --> T1[第1章]
+    M2 --> T2[第2章]
+    M2 --> T3[第3章]
+    
+    T1 --> A1[構成案]
+    T1 --> A2[本文執筆]
+    
+    A2 --> Now[★今日: 最初の5行を書く]
+    
+    style Now fill:#2dd4bf,color:#fff,stroke:#000,stroke-width:2px
+```
 
 ## なぜチャンクダウンが効果的か
 

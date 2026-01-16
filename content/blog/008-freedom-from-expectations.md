@@ -1,11 +1,14 @@
 ---
-title: "他人の「期待」から自由になる - 本当の自分の欲求を見つける方法"
-description: "周囲の期待に応えようとするあまり、自分を見失っていませんか？"
-date: "2026-01-12"
-category: "コーチング"
-tags: ["自分軸", "期待", "自己理解"]
+title: 他人の「期待」から自由になる - 本当の自分の欲求を見つける方法
+description: 周囲の期待に応えようとするあまり、自分を見失っていませんか？
+date: '2026-01-08'
+category: コーチング
+tags:
+  - 自分軸
+  - 期待
+  - 自己理解
 published: true
-slug: "freedom-from-expectations"
+slug: freedom-from-expectations
 ---
 
 ## はじめに
@@ -56,6 +59,25 @@ slug: "freedom-from-expectations"
 ---
 
 ## 自分の欲求を見つける方法
+
+### 「期待」と「欲求」の境界線
+
+```mermaid
+graph TD
+    Expect[他人の期待<br>(すべき)]
+    Want[自分の欲求<br>(したい)]
+    
+    subgraph Conflict[葛藤ゾーン]
+    Expect -.->|衝突| Want
+    end
+    
+    subgraph Freedom[自分軸]
+    Want -->|選択| Action[行動]
+    Expect -->|参考| Action
+    end
+    
+    style Want stroke:#facc15,stroke-width:4px
+```
 
 ### 1. 「〜すべき」と「〜したい」を分ける
 

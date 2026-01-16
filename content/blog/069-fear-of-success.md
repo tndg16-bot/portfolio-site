@@ -1,10 +1,13 @@
 ---
-title: "「成功への恐怖」という逆説"
-date: "2026-03-03"
-category: "メンタルモデル"
-tags: ["恐怖","成功","心理学"]
-description: "失敗が怖いのは当然。でも、成功も怖い？意外と多い成功への無意識の抵抗。"
-slug: "fear-of-success"
+title: 「成功への恐怖」という逆説
+date: '2026-03-10'
+category: メンタルモデル
+tags:
+  - 恐怖
+  - 成功
+  - 心理学
+description: 失敗が怖いのは当然。でも、成功も怖い？意外と多い成功への無意識の抵抗。
+slug: fear-of-success
 published: true
 ---
 
@@ -16,21 +19,26 @@ published: true
 ## 概念図解
 
 
+### ホメオスタシス（現状維持機能）
+
 ```mermaid
-mindmap
-  root((「成功への恐怖」という逆説))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+graph TD
+    Current[現状: 安全・快適]
+    Change[変化: 成功への上昇]
+    Thermostat{ホメオスタシス<br>(検知)}
+    PullBack[引き戻し現象<br>(不安・トラブル)]
+    
+    Current --> Change
+    Change --> Thermostat
+    Thermostat -->|異常と判断| PullBack
+    PullBack --> Current
+    
+    subgraph Break[突破]
+    Change -->|繰り返し| NewNormal[新しい当たり前]
+    end
+    
+    style PullBack fill:#ef4444,color:#fff
+    style NewNormal fill:#2dd4bf,color:#fff
 ```
 
 

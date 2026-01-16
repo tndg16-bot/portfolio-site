@@ -1,11 +1,14 @@
 ---
-title: "\"強み\"は探すな、\"創り出せ\" - 才能を掛け合わせるキャリア戦略"
-description: "唯一無二の強みは、複数のスキルの掛け合わせから生まれる"
-date: "2026-01-12"
-category: "キャリア"
-tags: ["強み", "キャリア", "スキル"]
+title: '"強み"は探すな、"創り出せ" - 才能を掛け合わせるキャリア戦略'
+description: 唯一無二の強みは、複数のスキルの掛け合わせから生まれる
+date: '2026-01-09'
+category: キャリア
+tags:
+  - 強み
+  - キャリア
+  - スキル
 published: true
-slug: "create-your-strengths"
+slug: create-your-strengths
 ---
 
 ## はじめに
@@ -49,6 +52,21 @@ slug: "create-your-strengths"
 ---
 
 ## 強みを創る3ステップ
+
+### スキルの掛け算モデル
+
+```mermaid
+graph TD
+    S1[スキルA: 上位25%]
+    S2[スキルB: 上位25%]
+    S3[スキルC: 上位25%]
+    
+    S1 -->|x| S2
+    S2 -->|x| S3
+    S3 --> unique{唯一無二の<br>レア人材<br>(1/10000)}
+    
+    style unique fill:#1e293b,stroke:#facc15,stroke-width:4px,color:#fff
+```
 
 ### Step 1: 棚卸しをする
 

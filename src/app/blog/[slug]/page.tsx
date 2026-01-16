@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: post.title,
         description: post.description,
         url: `https://takahiro-motoyama.vercel.app/blog/${slug}`,
-        siteName: '本山貴大 Portfolio',
+        siteName: '本山貴裕 Portfolio',
         locale: 'ja_JP',
         type: 'article',
         images: [
@@ -204,41 +204,66 @@ export default async function PostPage({ params }: Props) {
           </div>
         </article>
 
-        {/* Mermaid.js Script for Rendering Diagrams */}
-        <Script
-          type="module"
-          strategy="afterInteractive"
-          src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"
-        />
         <Script id="mermaid-init" strategy="afterInteractive">
           {`
-            // Wait for mermaid to load then init
             import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs').then((mermaid) => {
               mermaid.default.initialize({
-                startOnLoad: true,
-                theme: 'dark',
-                securityLevel: 'loose',
-                fontFamily: 'sans-serif'
-              });
-              
-              // Find all code blocks with language-mermaid and render them
-              // Note: Remark usually outputs <pre><code class="language-mermaid">
-              // Mermaid expects <pre class="mermaid"> or <div class="mermaid">
-              // We need to transform them or tell mermaid to look for .language-mermaid
-              
-              const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
-              mermaidBlocks.forEach((block, index) => {
-                const pre = block.parentElement;
-                if (pre) {
-                   // Create a div for mermaid to render into
-                   const div = document.createElement('div');
-                   div.className = 'mermaid';
-                   div.textContent = block.textContent;
-                   pre.parentNode.replaceChild(div, pre);
+                startOnLoad: false,
+                theme: 'base',
+                themeVariables: {
+                  fontFamily: 'inherit',
+                  darkMode: true,
+                  background: 'transparent',
+                  
+                  /* Nodes: Deep Slate with Bright Sky Border */
+                  mainBkg: '#0f172a',              /* Slate 900 (Darker) */
+                  nodeBorder: '#38bdf8',           /* Sky 400 (Vibrant Blue) */
+                  textColor: '#f0f9ff',            /* Sky 50 (Bright White-Blue) */
+                  
+                  /* Lines: Clearly visible but not distracting */
+                  lineColor: '#cbd5e1',            /* Slate 300 */
+                  arrowheadColor: '#38bdf8',       /* Match Border */
+                  
+                  /* Clusters */
+                  clusterBkg: 'rgba(255, 255, 255, 0.03)',
+                  clusterBorder: '#38bdf8',
+                  titleColor: '#f0f9ff',
+                  edgeLabelBackground: '#1e293b',  /* Slate 800 */
+                  
+                  /* Flowchart Specifics */
+                  primaryColor: '#0f172a',
+                  primaryTextColor: '#f0f9ff',
+                  primaryBorderColor: '#38bdf8',
+                  tertiaryColor: '#fff'
                 }
               });
-              
-              mermaid.default.run();
+
+              const renderMermaid = async () => {
+                const mermaidBlocks = document.querySelectorAll('code.language-mermaid');
+                
+                for (const block of mermaidBlocks) {
+                  const pre = block.parentElement;
+                  if (pre && pre.tagName === 'PRE') {
+                    const container = document.createElement('div');
+                    container.className = 'mermaid-container';
+                    
+                    const div = document.createElement('div');
+                    div.className = 'mermaid';
+                    div.textContent = block.textContent;
+                    
+                    container.appendChild(div);
+                    pre.replaceWith(container);
+                  }
+                }
+                
+                await mermaid.default.run();
+              };
+
+              if (document.readyState === 'complete') {
+                renderMermaid();
+              } else {
+                window.addEventListener('load', renderMermaid);
+              }
             });
           `}
         </Script>
@@ -248,4 +273,3 @@ export default async function PostPage({ params }: Props) {
     notFound();
   }
 }
-

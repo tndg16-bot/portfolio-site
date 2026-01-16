@@ -1,10 +1,13 @@
 ---
-title: "睡眠と生産性 - 寝ることが最高の投資"
-date: "2026-02-28"
-category: "生産性"
-tags: ["睡眠","生産性","健康"]
-description: "睡眠を削って働くのは逆効果。睡眠の質を高めて、パフォーマンスを最大化する方法。"
-slug: "sleep-productivity"
+title: 睡眠と生産性 - 寝ることが最高の投資
+date: '2026-03-07'
+category: 生産性
+tags:
+  - 睡眠
+  - 生産性
+  - 健康
+description: 睡眠を削って働くのは逆効果。睡眠の質を高めて、パフォーマンスを最大化する方法。
+slug: sleep-productivity
 published: true
 ---
 

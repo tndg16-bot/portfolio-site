@@ -1,9 +1,12 @@
 ---
-title: "7つの習慣のエッセンス - 効果性の原則"
-date: "2026-03-27"
-category: "思考法"
-tags: ["Seven Habits", "Covey", "Self-improvement"]
-description: "スティーブン・R・コヴィーの名著「7つの習慣」のエッセンスをまとめました。"
+title: 7つの習慣のエッセンス - 効果性の原則
+date: '2026-04-03'
+category: 思考法
+tags:
+  - Seven Habits
+  - Covey
+  - Self-improvement
+description: スティーブン・R・コヴィーの名著「7つの習慣」のエッセンスをまとめました。
 published: true
 ---
 
@@ -12,6 +15,29 @@ published: true
 スティーブン・R・コヴィーによる自己啓発の古典的名著。
 
 テクニックではなく「原則」に基づいた、本質的な成功の習慣を説いています。
+
+### 成長の連続体（Maturity Continuum）
+
+```mermaid
+graph BT
+    subgraph S3[相互依存<br>Interdependence]
+        H6[第6: シナジー]
+        H5[第5: 理解]
+        H4[第4: Win-Win]
+    end
+    
+    subgraph S2[自立<br>Independence]
+        H3[第3: 最優先]
+        H2[第2: 目的]
+        H1[第1: 主体性]
+    end
+    
+    Depend[依存<br>Dependence] --> S2
+    S2 --> S3
+    
+    style S3 fill:#2dd4bf,color:#fff
+    style S2 fill:#facc15
+```
 
 ## 私的成功の3つの習慣
 

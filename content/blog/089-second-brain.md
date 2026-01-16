@@ -1,9 +1,12 @@
 ---
-title: "セカンドブレインを構築する"
-date: "2026-03-23"
-category: "Productivity"
-tags: ["Productivity", "PKM", "Note-taking"]
-description: "情報が多すぎて覚えきれない。デジタルツールを使った「第二の脳」で、知識を外部化する方法。"
+title: セカンドブレインを構築する
+date: '2026-03-30'
+category: Productivity
+tags:
+  - Productivity
+  - PKM
+  - Note-taking
+description: 情報が多すぎて覚えきれない。デジタルツールを使った「第二の脳」で、知識を外部化する方法。
 published: true
 ---
 
@@ -21,6 +24,22 @@ published: true
 デジタルツールを使って、自分の知識・アイデア・情報を外部に保存し、必要なときに取り出せる仕組み。
 
 脳の記憶負担を減らし、創造的な思考に集中できるようにします。
+
+### セカンドブレインのワークフロー (CODE)
+
+```mermaid
+graph LR
+    C[Capture<br>収集] --> O[Organize<br>整理]
+    O --> D[Distill<br>抽出]
+    D --> E[Express<br>表現]
+    
+    C -.->|Inbox| O
+    O -.->|Projects| D
+    D -.->|Essence| E
+    E -->|Value| World((世界))
+    
+    style E fill:#2dd4bf,color:#fff
+```
 
 ## セカンドブレインの4つの機能（CODE）
 

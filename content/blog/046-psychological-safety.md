@@ -1,9 +1,12 @@
 ---
-title: "心理的安全性 - チームの生産性を決める見えない要素"
-date: "2026-02-08"
-category: "キャリア"
-tags: ["Leadership", "Team", "Psychological Safety"]
-description: "Googleが発見した最高のチームの秘密。それは心理的安全性でした。"
+title: 心理的安全性 - チームの生産性を決める見えない要素
+date: '2026-02-15'
+category: キャリア
+tags:
+  - Leadership
+  - Team
+  - Psychological Safety
+description: Googleが発見した最高のチームの秘密。それは心理的安全性でした。
 published: true
 ---
 
@@ -40,6 +43,23 @@ Googleは「Project Aristotle」という調査で、生産性の高いチーム
 成長が止まります。
 
 ## 心理的安全性が高いチームの特徴
+
+### 心理的安全性と成果の関係
+
+```mermaid
+graph TD
+    Safety[心理的安全性] --> Open[発言・質問・失敗の開示]
+    Open --> Learn[学習・改善スピード向上]
+    Open --> Idea[多様なアイデア]
+    
+    Learn --> HighPerf[高い成果]
+    Idea --> HighPerf
+    
+    HighPerf --> Safety
+    
+    style Safety fill:#2dd4bf,stroke:#fff
+    style HighPerf fill:#facc15,stroke:#fff
+```
 
 ### 1. 失敗をオープンに話せる
 

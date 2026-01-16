@@ -1,10 +1,13 @@
 ---
-title: "EQ（感情知能）を高める - IQより大切なもの"
-date: "2026-02-20"
-category: "コーチング"
-tags: ["EQ","リーダーシップ","自己認識"]
-description: "頭の良さだけでは成功できない。自分と他者の感情を扱う力が、人生の質を決めます。"
-slug: "emotional-intelligence"
+title: EQ（感情知能）を高める - IQより大切なもの
+date: '2026-02-27'
+category: コーチング
+tags:
+  - EQ
+  - リーダーシップ
+  - 自己認識
+description: 頭の良さだけでは成功できない。自分と他者の感情を扱う力が、人生の質を決めます。
+slug: emotional-intelligence
 published: true
 ---
 
@@ -16,21 +19,17 @@ published: true
 ## 概念図解
 
 
+### EQの4つの領域
+
 ```mermaid
-mindmap
-  root((EQ（感情知能）を高める - IQより大切なもの))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+quadrantChart
+    title EQ(感情知能)のマトリックス
+    x-axis 自分 --> 他者
+    y-axis 認識 --> 管理
+    quadrant-1 社会的認識 (共感)
+    quadrant-2 自己認識 (気づく)
+    quadrant-3 自己管理 (コントロール)
+    quadrant-4 関係管理 (影響力)
 ```
 
 

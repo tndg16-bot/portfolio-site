@@ -1,10 +1,13 @@
 ---
-title: "「生きがい」のフレームワーク - 4つの円が交わる場所"
-date: "2026-02-15"
-category: "コーチング"
-tags: ["生きがい","キャリア","包括的"]
-description: "好きなこと、得意なこと、稼げること、世界が必要としていること。4つの円が重なる場所に、あなたの生きがいがあります。"
-slug: "ikigai"
+title: 「生きがい」のフレームワーク - 4つの円が交わる場所
+date: '2026-02-22'
+category: コーチング
+tags:
+  - 生きがい
+  - キャリア
+  - 包括的
+description: 好きなこと、得意なこと、稼げること、世界が必要としていること。4つの円が重なる場所に、あなたの生きがいがあります。
+slug: ikigai
 published: true
 ---
 
@@ -16,21 +19,23 @@ published: true
 ## 概念図解
 
 
+### 生きがいの4要素
+
 ```mermaid
-mindmap
-  root((「生きがい」のフレームワーク - 4つの円が交わる場所))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+graph TD
+    Love[好きなこと]
+    Good[得意なこと]
+    Paid[稼げること]
+    Need[必要とされること]
+    
+    Love & Good --> Passion[情熱]
+    Good & Paid --> Profession[専門性]
+    Paid & Need --> Vocation[天職]
+    Need & Love --> Mission[使命]
+    
+    Passion & Profession & Vocation & Mission --> IKIGAI((生きがい))
+    
+    style IKIGAI fill:#facc15,color:#000,stroke-width:4px
 ```
 
 

@@ -1,10 +1,13 @@
 ---
-title: "未来の自分と対話する - 長期思考の技術"
-date: "2026-03-14"
-category: "コーチング"
-tags: ["未来","計画","内省"]
-description: "10年後の自分は、今の自分に何と言うか？長期的な視点で今を考える方法。"
-slug: "future-self"
+title: 未来の自分と対話する - 長期思考の技術
+date: '2026-03-21'
+category: コーチング
+tags:
+  - 未来
+  - 計画
+  - 内省
+description: 10年後の自分は、今の自分に何と言うか？長期的な視点で今を考える方法。
+slug: future-self
 published: true
 ---
 
@@ -16,21 +19,23 @@ published: true
 ## 概念図解
 
 
+### 未来との対話ループ
+
 ```mermaid
-mindmap
-  root((未来の自分と対話する - 長期思考の技術))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+graph TD
+    Present[現在の自分]
+    Future[10年後の自分]
+    
+    Present -- 悩み・選択 --> Future
+    Future -- 助言・視点 --> Present
+    
+    subgraph Action[行動]
+    Present -->|長期視点の選択| Growth[成長]
+    Growth --> Future
+    end
+    
+    style Future fill:#facc15,color:#000
+    style Growth fill:#2dd4bf,color:#fff
 ```
 
 

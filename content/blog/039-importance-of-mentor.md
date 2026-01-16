@@ -1,13 +1,29 @@
 ---
-title: "メンターを持つべき3つの理由"
-date: "2026-02-01"
-category: "キャリア"
-tags: ["Career", "Growth", "Mentorship"]
-description: "一人で成長するには限界がある。メンターを持つことで、キャリアは加速します。"
+title: メンターを持つべき3つの理由
+date: '2026-02-08'
+category: キャリア
+tags:
+  - Career
+  - Growth
+  - Mentorship
+description: 一人で成長するには限界がある。メンターを持つことで、キャリアは加速します。
 published: true
 ---
 
 ## なぜ一人では限界があるのか
+
+## なぜ一人では限界があるのか
+
+### メンター効果のイメージ
+
+```mermaid
+xychart-beta
+    title 成長曲線の違い
+    x-axis 1年目, 2年目, 3年目, 4年目, 5年目
+    y-axis 成長度
+    line "独学 (試行錯誤)" [10, 20, 35, 50, 65]
+    line "メンターあり (加速)" [10, 40, 80, 150, 250]
+```
 
 「自分の力で成長したい」
 「人に頼るのは甘え」

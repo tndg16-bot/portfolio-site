@@ -1,10 +1,13 @@
 ---
-title: "リモートワークで生産性を高める7つの習慣"
-date: "2026-02-17"
-category: "生産性"
-tags: ["生産性","リモートワーク","習慣"]
-description: "自宅だと集中できない。オンオフの切り替えが難しい。リモートワークの課題を解決する具体的な方法。"
-slug: "remote-work-productivity"
+title: リモートワークで生産性を高める7つの習慣
+date: '2026-02-24'
+category: 生産性
+tags:
+  - 生産性
+  - リモートワーク
+  - 習慣
+description: 自宅だと集中できない。オンオフの切り替えが難しい。リモートワークの課題を解決する具体的な方法。
+slug: remote-work-productivity
 published: true
 ---
 

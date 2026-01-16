@@ -1,11 +1,14 @@
 ---
-title: "\"やりたいこと\"が見つからない君へ - 「仮説検証」としてのキャリアの歩き方"
-description: "やりたいことは探すのではなく、試しながら見つけていくもの"
-date: "2026-01-12"
-category: "キャリア"
-tags: ["キャリア", "やりたいこと", "仮説検証"]
+title: '"やりたいこと"が見つからない君へ - 「仮説検証」としてのキャリアの歩き方'
+description: やりたいことは探すのではなく、試しながら見つけていくもの
+date: '2026-01-14'
+category: キャリア
+tags:
+  - キャリア
+  - やりたいこと
+  - 仮説検証
 published: true
-slug: "career-hypothesis"
+slug: career-hypothesis
 ---
 
 ## はじめに
@@ -56,6 +59,22 @@ slug: "career-hypothesis"
 ---
 
 ## 仮説検証の具体的ステップ
+
+### キャリアの実験サイクル
+
+```mermaid
+graph TD
+    Hypothesis[1. 仮説<br>これ好きかも？] --> Experiment[2. 小さな実験<br>本・副業・話を聞く]
+    Experiment --> Data[3. 検証データ<br>感情・適性]
+    Data --> Judge{4. 判断}
+    
+    Judge -->|Go| Deep[本格的に始める]
+    Judge -->|No| Next[次の仮説へ]
+    Judge -->|Pivot| Modify[方向修正して<br>再実験]
+    
+    Next --> Hypothesis
+    Modify --> Experiment
+```
 
 ### Step 1: 興味のリストを作る
 

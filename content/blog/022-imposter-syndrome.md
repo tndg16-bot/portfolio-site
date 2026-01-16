@@ -1,9 +1,12 @@
 ---
-title: "インポスター症候群との向き合い方 - 「自分はまだ足りない」という呪い"
-date: "2026-01-15"
-category: "Mindset"
-tags: ["Mindset", "Self-awareness", "Career"]
-description: "成功しても「自分にはその価値がない」と感じてしまう。インポスター症候群を理解し、自己肯定感を取り戻すための処方箋。"
+title: インポスター症候群との向き合い方 - 「自分はまだ足りない」という呪い
+date: '2026-01-22'
+category: Mindset
+tags:
+  - Mindset
+  - Self-awareness
+  - Career
+description: 成功しても「自分にはその価値がない」と感じてしまう。インポスター症候群を理解し、自己肯定感を取り戻すための処方箋。
 published: true
 ---
 
@@ -26,6 +29,19 @@ published: true
 ハーバード大学の学生の70%以上が、入学後にこの感覚を経験したという調査結果もあります。
 
 ## なぜ起こるのか
+
+### インポスターの悪循環
+
+```mermaid
+graph TD
+    Success[成果が出る] --> Doubt[不安: 運が良かっただけ]
+    Doubt --> Pressure[プレッシャー: 次はバレるかも]
+    Pressure --> Work[過剰な労働 or 先延ばし]
+    Work --> Success2[また成果が出る]
+    Success2 -->|内在化できない| Doubt
+    
+    style Doubt stroke:#ef4444,stroke-width:4px
+```
 
 ### 1. 高い基準を持っている
 

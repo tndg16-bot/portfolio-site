@@ -1,9 +1,12 @@
 ---
-title: "「聞く力」が信頼を作る - アクティブリスニングの技術"
-date: "2026-02-07"
-category: "コーチング"
-tags: ["Communication", "Coaching", "Leadership"]
-description: "話し上手より聞き上手が信頼される。相手が「この人にはもっと話したい」と思うリスニング技術。"
+title: 「聞く力」が信頼を作る - アクティブリスニングの技術
+date: '2026-02-14'
+category: コーチング
+tags:
+  - Communication
+  - Coaching
+  - Leadership
+description: 話し上手より聞き上手が信頼される。相手が「この人にはもっと話したい」と思うリスニング技術。
 published: true
 ---
 
@@ -38,6 +41,22 @@ published: true
 良い聞き手がいると、自分で答えにたどり着くことも多い。
 
 ## アクティブリスニングの5つの技術
+
+### 聞く力の循環
+
+```mermaid
+sequenceDiagram
+    participant Speaker as 話し手
+    participant Listener as 聞き手
+    
+    Speaker->>Listener: 話す (情報+感情)
+    Note right of Listener: 100%集中
+    Listener-->>Speaker: うなずき・反応
+    Listener->>Listener: 理解・要約 (パラフレーズ)
+    Listener->>Speaker: 「つまり○○ということ？」
+    Speaker->>Listener: 「そうです！」 (理解された安心感)
+    Speaker->>Listener: さらに深く話す
+```
 
 ### 技術1: 100%の注意を向ける
 

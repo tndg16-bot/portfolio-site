@@ -1,9 +1,12 @@
 ---
-title: "ゴールセッティングの科学 - SMARTでは足りない"
-date: "2026-02-04"
-category: "Productivity"
-tags: ["Productivity", "Goal Setting", "Growth"]
-description: "目標を立てても達成できない。それはSMARTだけでは不十分だからかもしれません。"
+title: ゴールセッティングの科学 - SMARTでは足りない
+date: '2026-02-11'
+category: Productivity
+tags:
+  - Productivity
+  - Goal Setting
+  - Growth
+description: 目標を立てても達成できない。それはSMARTだけでは不十分だからかもしれません。
 published: true
 ---
 
@@ -35,6 +38,20 @@ published: true
 
 「TOEICで800点を取る」というSMART目標は良い。
 でも、なぜそれを達成したいのか？
+
+### 目標の3層構造（ゴール・ピラミッド）
+
+```mermaid
+graph BT
+    Outcome[結果: What<br>TOEIC 800点]
+    Process[プロセス: How<br>毎朝30分学習]
+    Identity[アイデンティティ: Why/Who<br>英語で世界と繋がる人]
+    
+    Identity --> Process
+    Process --> Outcome
+    
+    style Identity fill:#1e293b,stroke:#7dd3fc,stroke-width:4px
+```
 
 - 海外で働きたい
 - 自己成長を実感したい

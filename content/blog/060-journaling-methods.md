@@ -1,10 +1,13 @@
 ---
-title: "効果的なジャーナリング5つの手法"
-date: "2026-02-22"
-category: "思考法"
-tags: ["ジャーナリング","自己認識","ライティング"]
-description: "日記を書くだけでは効果が限定的。目的に応じた書き方で、自己理解を深めましょう。"
-slug: "journaling-methods"
+title: 効果的なジャーナリング5つの手法
+date: '2026-03-01'
+category: 思考法
+tags:
+  - ジャーナリング
+  - 自己認識
+  - ライティング
+description: 日記を書くだけでは効果が限定的。目的に応じた書き方で、自己理解を深めましょう。
+slug: journaling-methods
 published: true
 ---
 
@@ -16,21 +19,17 @@ published: true
 ## 概念図解
 
 
+### ジャーナリングのフィードバックループ
+
 ```mermaid
-mindmap
-  root((効果的なジャーナリング5つの手法))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+graph TD
+    Exper[体験・感情] -->|書く| Record[記録・言語化]
+    Record -->|読み返す| Notice[気づき・発見]
+    Notice -->|活かす| Action[行動の変化]
+    Action --> Exper
+    
+    style Record fill:#2dd4bf,color:#fff
+    style Notice fill:#facc15,color:#000
 ```
 
 

@@ -1,9 +1,12 @@
 ---
-title: "AIと共に働く時代 - 代替されない人材になるために"
-date: "2026-02-05"
-category: "AI活用"
-tags: ["AI", "Career", "Future of Work"]
-description: "AIに仕事を奪われる？その心配より、AIと共に働くスキルを身につけることが重要です。"
+title: AIと共に働く時代 - 代替されない人材になるために
+date: '2026-02-12'
+category: AI活用
+tags:
+  - AI
+  - Career
+  - Future of Work
+description: AIに仕事を奪われる？その心配より、AIと共に働くスキルを身につけることが重要です。
 published: true
 ---
 
@@ -34,6 +37,21 @@ published: true
 - 未知の状況への対応
 
 ## 代替されない3つのスキル
+
+### AIと人間の協働領域
+
+```mermaid
+graph TD
+    AI[AIの得意領域<br>処理・パターン・高速化]
+    Human[人間の得意領域<br>感情・文脈・創造・倫理]
+    
+    AI --- Co[協働領域<br>Co-Creation]
+    Human --- Co
+    
+    style AI fill:#94a3b8
+    style Human fill:#facc15
+    style Co fill:#2dd4bf,stroke-width:4px
+```
 
 ### スキル1: コミュニケーション力
 

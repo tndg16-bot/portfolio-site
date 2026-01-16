@@ -1,9 +1,12 @@
 ---
-title: "ゼロイチ思考をやめる - グラデーションで物事を見る"
-date: "2026-01-28"
-category: "Mental Model"
-tags: ["Mental Model", "Mindset", "Thinking"]
-description: "成功か失敗か、敵か味方か、正しいか間違いか。二項対立的な思考が、あなたの可能性を狭めています。"
+title: ゼロイチ思考をやめる - グラデーションで物事を見る
+date: '2026-02-04'
+category: Mental Model
+tags:
+  - Mental Model
+  - Mindset
+  - Thinking
+description: 成功か失敗か、敵か味方か、正しいか間違いか。二項対立的な思考が、あなたの可能性を狭めています。
 published: true
 ---
 
@@ -16,6 +19,26 @@ published: true
 物事を二択で考える「ゼロイチ思考」は、わかりやすい反面、現実を歪めてしまいます。
 
 ## ゼロイチ思考の弊害
+
+### 二極化 vs グラデーション
+
+```mermaid
+graph LR
+    subgraph ZeroOne[ゼロイチ思考]
+    White[成功 100] --- Black[失敗 0]
+    linkStyle 0 stroke-width:0px
+    end
+    
+    subgraph Gradient[グラデーション思考]
+    G100[100] --- G80[80]
+    G80 --- G50[50]
+    G50 --- G20[20]
+    G20 --- G0[0]
+    end
+    
+    style ZeroOne fill:#ef4444,fill-opacity:0.1
+    style Gradient fill:#2dd4bf,fill-opacity:0.1
+```
 
 ### 1. 極端な結論に至る
 

@@ -1,11 +1,14 @@
 ---
-title: "\"自己肯定感が低い\"は勘違い - 自信を行動から作るフィードバックループ"
-description: "自己肯定感は高めるものではなく、行動の結果として生まれるもの"
-date: "2026-01-12"
-category: "コーチング"
-tags: ["自己肯定感", "自信", "行動"]
+title: '"自己肯定感が低い"は勘違い - 自信を行動から作るフィードバックループ'
+description: 自己肯定感は高めるものではなく、行動の結果として生まれるもの
+date: '2026-01-11'
+category: コーチング
+tags:
+  - 自己肯定感
+  - 自信
+  - 行動
 published: true
-slug: "self-esteem-action"
+slug: self-esteem-action
 ---
 
 ## はじめに

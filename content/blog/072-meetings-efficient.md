@@ -1,10 +1,13 @@
 ---
-title: "会議を半分にする方法"
-date: "2026-03-06"
-category: "生産性"
-tags: ["会議","生産性","コミュニケーション"]
-description: "この会議、本当に必要？無駄な会議を減らし、必要な会議を効率化する方法。"
-slug: "meetings-efficient"
+title: 会議を半分にする方法
+date: '2026-03-13'
+category: 生産性
+tags:
+  - 会議
+  - 生産性
+  - コミュニケーション
+description: この会議、本当に必要？無駄な会議を減らし、必要な会議を効率化する方法。
+slug: meetings-efficient
 published: true
 ---
 
@@ -16,14 +19,26 @@ published: true
 ## 概念図解
 
 
+### その会議、本当に必要？
+
 ```mermaid
 graph TD
-    A[目標設定] --> B{優先順位}
-    B -- 重要かつ緊急 --> C[即実行]
-    B -- 重要だが緊急でない --> D[計画・習慣化]
-    B -- 緊急だが重要でない --> E[委譲・削減]
-    B -- どちらでもない --> F[やめる]
-    D --> G[成果の最大化]
+    Start{会議を開催したい}
+    Purpose{目的は？}
+    
+    Start --> Purpose
+    Purpose -->|共有| Email[メール/チャットでOK]
+    Purpose -->|報告| Report[レポート提出でOK]
+    Purpose -->|議論・決定| Member{全員必要？}
+    
+    Member -->|No| Select[必須メンバーのみに絞る]
+    Member -->|Yes| Time{時間は？}
+    
+    Select --> Time
+    Time -->|30分以内| Go[開催決定<br>(アジェンダ必須)]
+    
+    style Email fill:#2dd4bf,color:#fff
+    style Go fill:#facc15
 ```
 
 

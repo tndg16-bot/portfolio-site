@@ -1,9 +1,12 @@
 ---
-title: "スキマ時間の活用術"
-date: "2026-03-18"
-category: "Productivity"
-tags: ["Productivity", "Time Management", "Efficiency"]
-description: "通勤時間、待ち時間、移動時間。スキマ時間を味方につければ、人生が変わります。"
+title: スキマ時間の活用術
+date: '2026-03-25'
+category: Productivity
+tags:
+  - Productivity
+  - Time Management
+  - Efficiency
+description: 通勤時間、待ち時間、移動時間。スキマ時間を味方につければ、人生が変わります。
 published: true
 ---
 
@@ -26,6 +29,17 @@ published: true
 
 1日30分でも、年間180時間。
 使い方次第で大きな差になります。
+
+### チリモツ効果の可視化
+
+```mermaid
+xychart-beta
+    title 1日30分の投資効果(年間)
+    x-axis 1日, 1ヶ月, 6ヶ月, 1年
+    y-axis 時間(h)
+    line [0.5, 15, 90, 180]
+    bar [0.5, 15, 90, 180]
+```
 
 ## スキマ時間を活かす準備
 

@@ -1,10 +1,13 @@
 ---
-title: "対立を解消する対話の技術"
-date: "2026-03-08"
-category: "コーチング"
-tags: ["対立","コミュニケーション","調停"]
-description: "意見が対立したとき、どう対処しますか？対立を建設的に解消する方法。"
-slug: "conflict-resolution"
+title: 対立を解消する対話の技術
+date: '2026-03-15'
+category: コーチング
+tags:
+  - 対立
+  - コミュニケーション
+  - 調停
+description: 意見が対立したとき、どう対処しますか？対立を建設的に解消する方法。
+slug: conflict-resolution
 published: true
 ---
 
@@ -16,22 +19,20 @@ published: true
 ## 概念図解
 
 
+### 対立解消の5つのスタイル
+
 ```mermaid
-mindmap
-  root((対立を解消する対話の技術))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+quadrantChart
+    title トーマス・キルマンの対立モード
+    x-axis 協力度(相手への配慮): 低 --> 高
+    y-axis 自己主張(自分への配慮): 低 --> 高
+    quadrant-1 迎合 (Accommodating)
+    quadrant-2 回避 (Avoiding)
+    quadrant-3 競争 (Competing)
+    quadrant-4 協調 (Collaborating)
 ```
+
+### 妥協（Compromising）は真ん中
 
 
 ## なぜこれが重要なのか

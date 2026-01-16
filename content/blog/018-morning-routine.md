@@ -1,11 +1,14 @@
 ---
-title: "\"朝時間\"を制する者は人生を制す - タイプ別・最強のモーニングルーティン"
-description: "朝の過ごし方が一日を決める。あなたに合ったモーニングルーティンの見つけ方"
-date: "2026-01-12"
-category: "生産性"
-tags: ["朝活", "ルーティン", "生産性"]
+title: '"朝時間"を制する者は人生を制す - タイプ別・最強のモーニングルーティン'
+description: 朝の過ごし方が一日を決める。あなたに合ったモーニングルーティンの見つけ方
+date: '2026-01-18'
+category: 生産性
+tags:
+  - 朝活
+  - ルーティン
+  - 生産性
 published: true
-slug: "morning-routine"
+slug: morning-routine
 ---
 
 ## はじめに
@@ -18,11 +21,31 @@ slug: "morning-routine"
 でも、成功者の多くが「朝の時間」を大切にしています。
 なぜなら、朝は一日で最も生産性が高い時間だから。
 
-今日は、あなたに合ったモーニングルーティンの見つけ方を紹介します。
+今日は、あなたに合った
+## 理想のモーニングルーティン
 
----
+朝の時間を制するものは、一日を制します。しかし、無理な早起きは続きません。
 
-## なぜ朝が重要なのか？
+### ルーティンの構造
+
+```mermaid
+sequenceDiagram
+    participant Self as 自分
+    participant Sun as 朝日
+    participant Brain as 脳
+
+    Note over Self: 6:00 起床
+    Self->>Sun: 日光を浴びる
+    Sun-->>Brain: セロトニン分泌
+    Self->>Self: 水を飲む (1杯)
+    Self->>Self: 瞑想 (5分)
+    Note over Brain: モード切り替え完了
+    Self->>Self: 最重要タスク着手
+```
+
+## 習慣化のコツ
+
+気合で起きるのではなく、前夜の準備が９割です。
 
 ### 1. 意志力が最も高い
 

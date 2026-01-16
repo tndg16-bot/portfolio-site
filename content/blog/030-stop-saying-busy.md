@@ -1,9 +1,12 @@
 ---
-title: "「忙しい」と言わない技術 - 時間の支配者になるために"
-date: "2026-01-23"
-category: "Productivity"
-tags: ["Productivity", "Time Management", "Mindset"]
-description: "「忙しい」が口癖になっていませんか？その言葉が、あなたの時間とチャンスを奪っている可能性があります。"
+title: 「忙しい」と言わない技術 - 時間の支配者になるために
+date: '2026-01-30'
+category: Productivity
+tags:
+  - Productivity
+  - Time Management
+  - Mindset
+description: 「忙しい」が口癖になっていませんか？その言葉が、あなたの時間とチャンスを奪っている可能性があります。
 published: true
 ---
 
@@ -42,8 +45,24 @@ NetflixやSNSを見る時間はあるのに、運動する時間がない。
 
 ### 「優先度が低い」
 
-正直に、自分の選択を認める。
-「行けない」のではなく「行くことを選んでいない」
+### 忙しい人 vs 生産的な人
+
+```mermaid
+graph TD
+    subgraph Busy["忙しい人 (思考停止)"]
+    A[全部やる] --> B[時間がない]
+    B --> C[断れない]
+    C --> D[常に追われる]
+    end
+    
+    subgraph Productive["生産的な人 (主導権)"]
+    E[選択と集中] --> F[余白がある]
+    F --> G[Noと言う]
+    G --> H[重要なことに投資]
+    end
+    
+    style Productive fill:#1e293b,stroke:#facc15
+```
 
 ### 「今は別のことに集中している」
 

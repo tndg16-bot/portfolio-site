@@ -1,9 +1,12 @@
 ---
-title: "戦略的休息 - 働くために休む"
-date: "2026-03-21"
-category: "Productivity"
-tags: ["Productivity", "Rest", "Performance"]
-description: "休むことに罪悪感を感じていませんか？戦略的な休息が、最高のパフォーマンスを生みます。"
+title: 戦略的休息 - 働くために休む
+date: '2026-03-28'
+category: Productivity
+tags:
+  - Productivity
+  - Rest
+  - Performance
+description: 休むことに罪悪感を感じていませんか？戦略的な休息が、最高のパフォーマンスを生みます。
 published: true
 ---
 
@@ -40,6 +43,17 @@ published: true
 
 「休む」を意図的に計画すること。
 休息を成果のための投資と捉える。
+
+### パフォーマンスと休息の関係
+
+```mermaid
+xychart-beta
+    title 休息の有無によるパフォーマンス推移
+    x-axis 9時, 12時, 15時, 18時
+    y-axis パフォーマンス
+    line "休息あり" [100, 90, 95, 85]
+    line "休息なし" [100, 70, 50, 30]
+```
 
 ## 休息の種類
 

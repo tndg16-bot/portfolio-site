@@ -1,9 +1,12 @@
 ---
-title: "レジリエンス - 逆境から立ち直る力"
-date: "2026-03-26"
-category: "Mindset"
-tags: ["Resilience", "Mindset", "Mental Health"]
-description: "困難に直面したとき、折れる人と立ち直る人がいます。その差はレジリエンスにあります。"
+title: レジリエンス - 逆境から立ち直る力
+date: '2026-04-02'
+category: Mindset
+tags:
+  - Resilience
+  - Mindset
+  - Mental Health
+description: 困難に直面したとき、折れる人と立ち直る人がいます。その差はレジリエンスにあります。
 published: true
 ---
 
@@ -20,6 +23,18 @@ published: true
 
 困難な状況から立ち直り、適応する力。
 折れずに、しなやかに戻ってくる能力です。
+
+### 逆境への反応パターン
+
+```mermaid
+xychart-beta
+    title レジリエンスによる回復の違い
+    x-axis 発生前, 発生, 直後, 回復期, 成長期
+    y-axis メンタル状態
+    line "脆弱(折れる)" [80, 20, 10, 20, 30]
+    line "回復(戻る)" [80, 20, 40, 70, 80]
+    line "成長(強くなる)" [80, 20, 50, 85, 95]
+```
 
 ## レジリエントな人の特徴
 

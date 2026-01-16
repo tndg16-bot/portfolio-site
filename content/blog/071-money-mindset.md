@@ -1,10 +1,13 @@
 ---
-title: "お金のマインドブロックを外す"
-date: "2026-03-05"
-category: "マインドセット"
-tags: ["お金","マインドセット","富"]
-description: "「お金は汚い」「稼ぐのは悪いこと」。無意識の思い込みが、あなたの経済状況を決めています。"
-slug: "money-mindset"
+title: お金のマインドブロックを外す
+date: '2026-03-12'
+category: マインドセット
+tags:
+  - お金
+  - マインドセット
+  - 富
+description: 「お金は汚い」「稼ぐのは悪いこと」。無意識の思い込みが、あなたの経済状況を決めています。
+slug: money-mindset
 published: true
 ---
 
@@ -16,12 +19,26 @@ published: true
 ## 概念図解
 
 
+### 貧困マインド vs 富裕マインド
+
 ```mermaid
-graph LR
-    A[固定マインドセット] -->|壁にぶつかる| B[諦める]
-    C[成長マインドセット] -->|壁にぶつかる| D[挑戦のチャンス]
-    D --> E[努力・学習]
-    E --> F[成長・達成]
+graph TD
+    subgraph Poor[貧困マインド]
+    Lack[欠乏感] --> Save[過度な節約]
+    Save --> NoInvest[自己投資しない]
+    NoInvest --> LowValue[価値提供できない]
+    LowValue --> Lack
+    end
+
+    subgraph Rich[富裕マインド]
+    Abundance[充足感] --> Invest[投資・循環]
+    Invest --> Skill[スキル・経験UP]
+    Skill --> HighValue[高い価値提供]
+    HighValue --> Abundance
+    end
+    
+    style Lack fill:#94a3b8
+    style Abundance fill:#facc15
 ```
 
 

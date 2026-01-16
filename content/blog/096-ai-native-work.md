@@ -1,9 +1,12 @@
 ---
-title: "AIネイティブ世代の働き方"
-date: "2026-03-30"
-category: "AI活用"
-tags: ["AI", "Future of Work", "Career"]
-description: "AIが当たり前の時代に、どう働くか。AIネイティブ世代が当たり前にやっていること。"
+title: AIネイティブ世代の働き方
+date: '2026-04-06'
+category: AI活用
+tags:
+  - AI
+  - Future of Work
+  - Career
+description: AIが当たり前の時代に、どう働くか。AIネイティブ世代が当たり前にやっていること。
 published: true
 ---
 
@@ -37,7 +40,31 @@ AI × 人間の創造性
 AI × 専門知識
 AI × 人間関係
 
+AI × 人間関係
+
 組み合わせで価値を生み出す。
+
+### AIと人間の協働モデル
+
+```mermaid
+graph TD
+    Human[人間<br>目的設定・判断・倫理]
+    AI[AI<br>生成・分析・処理]
+    
+    Human -->|指示(Prompt)| AI
+    AI -->|出力(Output)| Human
+    Human -->|修正・評価| AI
+    
+    subgraph Value
+    Output[最終成果物]
+    end
+    
+    AI --> Output
+    Human -->|仕上げ| Output
+    
+    style Output fill:#facc15
+    style Human fill:#2dd4bf,color:#fff
+```
 
 ## 今日からできること
 

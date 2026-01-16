@@ -1,9 +1,12 @@
 ---
-title: "年齢を言い訳にしない - 何歳からでも学べる脳の可塑性"
-date: "2026-01-22"
-category: "Mindset"
-tags: ["Mindset", "Learning", "Neuroscience"]
-description: "「もう若くないから」と新しいことを諦めていませんか？脳科学が証明する、人生100年時代の学習可能性。"
+title: 年齢を言い訳にしない - 何歳からでも学べる脳の可塑性
+date: '2026-01-29'
+category: Mindset
+tags:
+  - Mindset
+  - Learning
+  - Neuroscience
+description: 「もう若くないから」と新しいことを諦めていませんか？脳科学が証明する、人生100年時代の学習可能性。
 published: true
 ---
 
@@ -30,6 +33,18 @@ published: true
 つまり、何歳からでも、脳は「作り変える」ことができるのです。
 
 ## 年齢と学習に関する事実
+
+### 年齢と脳の変化
+
+```mermaid
+xychart-beta
+    title 脳の可塑性と経験値の関係
+    x-axis 10代, 20代, 40代, 60代, 80代
+    y-axis 低 --> 高
+    line "流動性知能 (瞬発力)" [90, 80, 50, 30, 20]
+    line "結晶性知能 (経験/知恵)" [10, 30, 60, 80, 95]
+    line "総合的学習力" [50, 55, 55, 55, 57]
+```
 
 ### 事実1: 若さだけが有利ではない
 

@@ -1,10 +1,13 @@
 ---
-title: "パーソナルブランディング入門"
-date: "2026-03-11"
-category: "キャリア"
-tags: ["パーソナルブランディング","キャリア","マーケティング"]
-description: "自分を「ブランド」として確立する。選ばれる人になるための自己プロデュース。"
-slug: "personal-branding"
+title: パーソナルブランディング入門
+date: '2026-03-18'
+category: キャリア
+tags:
+  - パーソナルブランディング
+  - キャリア
+  - マーケティング
+description: 自分を「ブランド」として確立する。選ばれる人になるための自己プロデュース。
+slug: personal-branding
 published: true
 ---
 
@@ -16,21 +19,17 @@ published: true
 ## 概念図解
 
 
+### ブランドの3要素
+
 ```mermaid
-mindmap
-  root((パーソナルブランディング入門))
-    基本概念
-      原理原則
-      歴史的背景
-    実践方法
-      ステップ1
-      ステップ2
-    メリット
-      効率化
-      品質向上
-    注意点
-      落とし穴
-      対策
+graph TD
+    Skill[機能的価値<br>(スキル・実績)]
+    Mind[情緒的価値<br>(物語・想い)]
+    Style[表現的価値<br>(外見・発信)]
+    
+    Skill & Mind & Style --> Brand[パーソナルブランド]
+    
+    style Brand fill:#facc15,stroke-width:4px
 ```
 
 
