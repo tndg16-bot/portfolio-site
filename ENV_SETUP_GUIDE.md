@@ -10,6 +10,7 @@
 2. [GitHub API連携設定（Issue #29）](#2-github-api連携設定)
 3. [Resend API設定（Issue #27）](#3-resend-api設定)
 4. [Vercelへの環境変数設定](#4-vercelへの環境変数設定)
+5. [GitHub Actions用Vercel Token設定（Issue #65）](#5-github-actions用vercel-token設定)
 
 ---
 
@@ -252,7 +253,53 @@ ADMIN_EMAIL=your-email@example.com
 
 ---
 
+## 5. GitHub Actions用Vercel Token設定
+
+### 目的
+ブログ記事の自動公開（Issue #65）を有効化するため、GitHub ActionsからVercelへのデプロイを実行できるようにします。
+
+### ステップ1: Vercel Tokenの発行
+
+1. [Vercelダッシュボード](https://vercel.com/dashboard)にアクセス
+2. 右上のアバター → **Settings** → **Tokens**
+3. **Create** ボタンをクリック
+4. 以下の設定:
+   - **Name**: `portfolio-github-actions`
+   - **Scope**: プロジェクトを選択（`portfolio-site`）
+5. **Create**をクリック
+6. **重要**: トークンをコピー（再表示されません）
+
+### ステップ2: GitHub Secretsへの追加
+
+1. [GitHubリポジトリ](https://github.com/tndg16-bot/portfolio-site)に移動
+2. **Settings** → **Secrets and variables** → **Actions**
+3. **New repository secret**をクリック
+4. 以下を入力:
+   - **Name**: `VERCEL_TOKEN`
+   - **Secret**: ステップ1でコピーしたトークンを貼り付け
+5. **Add secret**をクリック
+
+### ステップ3: 動作確認
+
+1. GitHub Actionsページに移動
+2. **Daily Production Rebuild** ワークフローを探す
+3. **Run workflow** ボタンをクリックして手動実行
+4. 実行ログで成功を確認
+
+### 注意事項
+
+- ✅ **トークンのスコープ**: プロジェクト単位のトークンが推奨（より安全）
+- ✅ **トークンの有効期限**: 必要に応じて期限を設定
+- ⚠️ **トークンの再発行**: 流出した場合は即座に再発行
+
+### 自動実行スケジュール
+
+ワークフローは毎日**JST 00:00（UTC 15:00）**に自動実行されます。
+
+---
+
 **関連Issue**:
 - Issue #28: お問い合わせフォームのGoogle Forms連携完了
 - Issue #29: GitHub API連携の強化
 - Issue #27: Resend APIキーの設定
+- Issue #65: ブログ自動公開システム（毎日JST 00:00自動ビルド）
