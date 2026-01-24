@@ -79,6 +79,9 @@ export default function Header() {
           <button
             className="md:hidden p-2 text-zinc-500 hover:text-japan-indigo"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -87,38 +90,38 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             className="md:hidden mt-4 pb-4 border-t border-japan-indigo/10 pt-4"
+            role="navigation"
+            aria-label="モバイルメニュー"
           >
-            <div className="flex flex-col gap-3">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`py-2 text-sm font-medium transition-colors ${pathname === item.href
-                    ? 'text-japan-indigo'
-                    : 'text-zinc-500 hover:text-japan-indigo'
-                    }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-              {externalLinks.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="py-2 px-3 text-sm font-medium bg-gradient-to-r from-japan-indigo to-japan-vermilion text-white rounded-full text-center hover:brightness-110 transition-all"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`block py-3 px-4 text-sm font-medium transition-colors ${pathname === item.href
+                  ? 'text-japan-indigo bg-japan-indigo/5'
+                  : 'text-zinc-500 hover:text-japan-indigo'
+                  }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+
+            {externalLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block py-3 px-4 text-sm font-medium bg-gradient-to-r from-japan-indigo to-japan-vermilion text-white rounded-lg mx-2 text-center"
+              >
+                {item.label}
+              </a>
+            ))}
           </motion.div>
         )}
       </nav>

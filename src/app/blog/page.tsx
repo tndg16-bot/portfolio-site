@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { getSortedPostsData, getAllTags, getAllCategories } from '@/lib/posts';
 import { Metadata } from 'next';
 import NewsletterForm from '@/components/NewsletterForm';
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   description: 'コーチング、AI活用、思考法、キャリア、生産性に関するブログ記事一覧',
 };
 
-export default function BlogPage() {
+function BlogPageContent() {
   const allPostsData = getSortedPostsData();
   const allTags = getAllTags();
   const allCategories = getAllCategories();
@@ -131,6 +132,14 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function BlogPage() {
+  return (
+    <Suspense fallback={<div className="text-white">読み込み中...</div>}>
+      <BlogPageContent />
+    </Suspense>
   );
 }
 
