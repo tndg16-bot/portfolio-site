@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Menu, X, Search } from 'lucide-react';
 import { useState } from 'react';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -36,6 +37,9 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4">
+            {/* Language Switcher */}
+            <LanguageSwitcher />
+
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
@@ -97,7 +101,8 @@ export default function Header() {
             className="md:hidden mt-4 pb-4 border-t border-japan-indigo/10 pt-4"
             role="navigation"
             aria-label="モバイルメニュー"
-          >
+            >
+            <LanguageSwitcher />
             {navItems.map((item) => (
               <Link
                 key={item.href}

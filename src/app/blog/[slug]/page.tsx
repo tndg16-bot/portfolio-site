@@ -7,6 +7,7 @@ import GiscusComments from '@/components/GiscusComments';
 import AuthorBio from '@/components/AuthorBio';
 import NewsletterForm from '@/components/NewsletterForm';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
+import { TableOfContents } from '@/components/TableOfContents';
 import Script from 'next/script'; // Add Script import
 
 type Props = {
@@ -75,8 +76,9 @@ export default async function PostPage({ params }: Props) {
 
     return (
       <div className="container mx-auto px-4 py-8">
-        <article className="max-w-3xl mx-auto">
-          <ArticleJsonLd
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
+          <article className="max-w-3xl">
+            <ArticleJsonLd
             title={post.title}
             description={post.description || ''}
             datePublished={post.date}
@@ -202,7 +204,18 @@ export default async function PostPage({ params }: Props) {
             <h3 className="text-xl font-semibold mb-4 text-zinc-300">コメント</h3>
             <GiscusComments />
           </div>
-        </article>
+          </article>
+
+          {/* Table of Contents - Desktop Sidebar */}
+          <aside className="hidden lg:block">
+            <TableOfContents content={post.contentHtml} />
+          </aside>
+        </div>
+
+        {/* Table of Contents - Mobile */}
+        <div className="lg:hidden mt-8 mb-4">
+          <TableOfContents content={post.contentHtml} />
+        </div>
 
         <Script id="mermaid-init" strategy="afterInteractive">
           {`
