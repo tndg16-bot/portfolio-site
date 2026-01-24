@@ -1,8 +1,8 @@
 export const jsonLdPerson = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "本山貴裕",
-  "givenName": "貴裕",
+  "name": "本山貴大",
+  "givenName": "貴大",
   "familyName": "本山",
   "jobTitle": "Life Self-Determination Coach",
   "description": "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
@@ -24,7 +24,7 @@ export const jsonLdPerson = {
 export const jsonLdOrganization = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "本山 貴裕 | Life Self-Determination Protocol",
+  "name": "本山 貴大 | Life Self-Determination Protocol",
   "description": "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
   "url": "https://takahiro-motoyama.vercel.app",
   "logo": "https://takahiro-motoyama.vercel.app/images/logo.png",
@@ -39,7 +39,7 @@ export const jsonLdOrganization = {
 export const jsonLdWebSite = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "本山 貴裕 | Life Self-Determination Protocol",
+  "name": "本山 貴大 | Life Self-Determination Protocol",
   "description": "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
   "url": "https://takahiro-motoyama.vercel.app",
   "potentialAction": {

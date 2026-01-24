@@ -4,6 +4,7 @@ import "./globals.css";
 import { LiquidCursor } from "@/components/LiquidCursor";
 import { SectionBackground } from "@/components/SectionBackground";
 import { PersonJsonLd, OrganizationJsonLd, WebsiteJsonLd } from "@/components/JsonLd";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -83,6 +84,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
       </head>
       <body className={`${inter.variable} ${notoJP.variable} font-sans antialiased japan-bg overflow-x-hidden`}>
+        <GoogleAnalytics />
         <PersonJsonLd />
         <OrganizationJsonLd />
         <WebsiteJsonLd />

@@ -6,12 +6,17 @@ import { Mail } from 'lucide-react';
 export default function NewsletterForm() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email) {
+      setErrorMessage('メールアドレスを入力してください。');
+      return;
+    }
 
     setStatus('loading');
+    setErrorMessage('');
 
     // Simulate API call
     setTimeout(() => {
@@ -40,8 +45,9 @@ export default function NewsletterForm() {
           スパムは送りません。いつでも解除可能です。
         </p>
 
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3" aria-label="ニュースレター登録フォーム">
           <input
+            id="newsletter-email"
             type="email"
             placeholder="email@example.com"
             value={email}
@@ -49,18 +55,28 @@ export default function NewsletterForm() {
             disabled={status === 'loading' || status === 'success'}
             className="flex-1 bg-black/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all disabled:opacity-50"
             required
+            aria-label="メールアドレス"
+            aria-invalid={!!errorMessage}
+            aria-describedby={errorMessage ? 'newsletter-error' : undefined}
           />
           <button
             type="submit"
             disabled={status === 'loading' || status === 'success'}
             className="bg-teal-500 hover:bg-teal-400 text-black font-semibold px-6 py-3 rounded-lg transition-colors disabled:opacity-50 whitespace-nowrap"
+            aria-live="polite"
           >
             {status === 'loading' ? '送信中...' : status === 'success' ? '登録完了！' : '登録する'}
           </button>
         </form>
 
+        {errorMessage && (
+          <p id="newsletter-error" className="text-red-400 text-sm mt-2" role="alert">
+            {errorMessage}
+          </p>
+        )}
+
         {status === 'success' && (
-          <p className="text-teal-400 text-sm mt-4 animate-fade-in">
+          <p className="text-teal-400 text-sm mt-4 animate-fade-in" role="status">
             登録ありがとうございます！確認メールをお送りしました。
           </p>
         )}
