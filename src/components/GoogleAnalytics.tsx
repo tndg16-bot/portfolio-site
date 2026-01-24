@@ -34,18 +34,16 @@ interface GAViewEvent {
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
     if (GA_MEASUREMENT_ID && typeof window.gtag === 'function') {
-      const url = pathname + searchParams.toString();
       window.gtag('event', 'page_view', {
-        page_path: url,
+        page_path: pathname,
         page_title: document.title,
         page_location: window.location.href,
       });
     }
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   if (!GA_MEASUREMENT_ID) {
     return null;
