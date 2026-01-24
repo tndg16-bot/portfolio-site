@@ -1,130 +1,83 @@
-# 次のタスク指示 - Phase 2-5 完了後の次のステップ
+# 次のAIエージェントへの指示
 
-## 📋 現状確認
+## 🎯 今すぐ実行すべきタスク
 
-- **ブランチ**: `feature/blog-enhancements-share-ogp-newsletter`
-- **PR #67**: OPEN - https://github.com/tndg16-bot/portfolio-site/pull/67
-- **ビルド**: ✅ 成功（189ページ生成）
-- **完了済み**: Phase 2-5のすべてのタスク
+1. **PR #67 を確認し、マージの可否を判断**
+   ```bash
+   gh pr view 67
+   gh pr checks 67
+   ```
 
----
+2. **ビルドが成功しているか確認**
+   ```bash
+   npm run build
+   ```
 
-## 🎯 次に取り組むべきタスク
-
-### 優先度順
-
-1. **PR #67のレビューとマージ**
-   - PRの変更内容を確認
-   - レビューコメントがあれば対応
-   - マージ可能ならマージ実行
-
-2. **i18n（多言語対応）の実装**
-   - 計画書: `docs/i18n-implementation-plan.md`
-   - 推奨ライブラリ: next-intl
-   - 見積もり: 8-12時間
-
-3. **Giscusコメント機能の設定**
-   - 外部サービス設定: https://giscus.app
-   - `src/components/GiscusComments.tsx` にIDを更新
-
-4. **コンテンツ追加**
-   - ブログ記事の追加
-   - プロジェクトの追加
+3. **問題なければ、mainブランチにマージ**
+   ```bash
+   gh pr merge 67
+   ```
 
 ---
 
-## 🚀 実行コマンド
+## 📝 マージ後のタスク
 
-### 作業開始前
-```bash
-cd C:\Users\chatg\portfolio-site
-git checkout feature/blog-enhancements-share-ogp-newsletter
-git pull origin feature/blog-enhancements-share-ogp-newsletter
-```
+### 1. Giscusコメント機能の設定
+**重要**: ユーザー作業が必要です。以下の手順をユーザーに提示してください：
 
-### 開発サーバー起動
-```bash
-npm run dev
-```
+1. https://giscus.app にアクセス
+2. リポジトリ `tndg16-bot/portfolio-site` を入力
+3. 生成されたIDを `src/components/GiscusComments.tsx` に設定
+4. 以下の値を確認・更新：
+   - `repo`
+   - `repoId`
+   - `category`
+   - `categoryId`
+   - `mapping`
+   - `term` (必要な場合)
 
-### ビルド検証
-```bash
-npm run build
-```
+### 2. 多言語対応の実装 (next-intl)
 
----
+**参考ドキュメント**: `docs/i18n-implementation-plan.md`
 
-## 📝 PR #67の内容
+**手順**:
+1. next-intlをインストール済みか確認
+   ```bash
+   npm list next-intl
+   ```
 
-**タイトル**: [Phase 2-5] ブログ機能強化 - ニュースレター、管理UI、GA4、パフォーマンス最適化
+2. 5フェーズの計画に従って実装
+   - Phase 1: 基本設定
+   - Phase 2: コンテンツ翻訳
+   - Phase 3: コンポーネント対応
+   - Phase 4: SEO設定
+   - Phase 5: テストとデプロイ
 
-**主な変更**:
-- Phase 2: SNSシェア、OGP、JSON-LD、Giscus、ニュースレター
-- Phase 3: 検索、購読者管理、関連記事、パフォーマンス、アクセシビリティ
-- Phase 4: API追加、next.config.ts最適化
-- Phase 5: ブログ管理UI、GA4
-
-**変更統計**:
-- 39 files changed
-- 6,773 insertions(+)
-- 337 deletions(-)
+**注意**: `src/app/[locale]/` ディレクトリは、ビルドが完全に動作する状態で再作成してください
 
 ---
 
 ## ⚠️ 注意点
 
-### ビルドエラーの修正履歴
-1. 不完全なi18nファイル `src/app/[locale]/` を削除
-2. `GoogleAnalytics.tsx` から `useSearchParams()` を削除
+### ビルドエラー
+前回、以下のエラーが発生しました：
+1. **i18n関連**: `src/app/[locale]/` が不完全でビルドエラー
+2. **useSearchParams**: `GoogleAnalytics.tsx` で使用するとエラー
 
-### 外部サービス設定
-- **Supabase**: ニュースレター用（未設定の場合）
-- **Google Analytics 4**: Measurement IDを `.env.local` に追加
-- **Giscus**: コメント機能用（設定待ち）
-- **Resend**: ニュースレター送信用（設定待ち）
-
----
-
-## 🔐 環境変数（.env.local）
-
-```bash
-# Admin
-ADMIN_PASSWORD=your-secure-password
-ADMIN_JWT_SECRET=your-secret-key
-
-# Google Analytics 4
-NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-
-# Supabase（ニュースレター用）
-NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
-
-# Resend（ニュースレター送信用）
-RESEND_API_KEY=re_xxxxxxxxxxxxxx
-ADMIN_EMAIL=your-email@example.com
-```
+解決策：
+- i18nの実装は、必ず小規模から始めてテストする
+- `useSearchParams()` は Suspense でラップする必要がある
 
 ---
 
-## 📚 参考ドキュメント
+## 📊 現在のPR状態
 
-- `WORK_LOG.md` - 完全な作業履歴
-- `HANDOFF.md` - セッション引き継ぎドキュメント
-- `docs/ACCESSIBILITY.md` - アクセシビリティガイドライン
-- `docs/PERFORMANCE.md` - パフォーマンス最適化ガイド
-- `docs/i18n-implementation-plan.md` - 多言語対応計画書
-
----
-
-## ✅ 開始チェックリスト
-
-- [ ] 現在のブランチを確認
-- [ ] 最新の変更をプル
-- [ ] WORK_LOG.mdを確認
-- [ ] 次のタスクを優先度順に確認
-- [ ] 環境変数が設定されているか確認
+**PR #67**: [Phase 2-5] ブログ機能強化
+- URL: https://github.com/tndg16-bot/portfolio-site/pull/67
+- 状態: OPEN
+- ビルド: ✅ 成功
 
 ---
 
-**担当者**: 次のAIアシスタント
-**開始日時**: [日時を入力]
+*最終更新: 2026-01-24*
+*ブランチ: feature/blog-enhancements-share-ogp-newsletter*
