@@ -1,4 +1,11 @@
-export default function VideoPlayer({ title }: { title: string }) {
+interface VideoPlayerProps {
+  videoId: string;
+  lessonId: string;
+  onProgressUpdate: (position: number) => Promise<void>;
+  onComplete: () => Promise<void>;
+}
+
+export default function VideoPlayer({ videoId, lessonId, onProgressUpdate, onComplete }: VideoPlayerProps) {
     return (
         <div className="aspect-video bg-black rounded-xl overflow-hidden border border-zinc-800 relative group">
             <div className="absolute inset-0 flex items-center justify-center bg-zinc-900">
@@ -7,7 +14,7 @@ export default function VideoPlayer({ title }: { title: string }) {
                         <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-teal-500 border-b-[10px] border-b-transparent ml-1" />
                     </div>
                     <p className="text-zinc-500 text-sm">Video Host (Mock)</p>
-                    <p className="text-zinc-300 font-bold mt-2">{title}</p>
+                    <p className="text-zinc-300 font-bold mt-2">Video ID: {videoId}</p>
                 </div>
             </div>
 

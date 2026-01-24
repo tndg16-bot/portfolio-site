@@ -1,25 +1,38 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, XCircle, CreditCard } from 'lucide-react';
 import type { Course } from '@/types/course';
 
 interface CheckoutPageProps {
-  params: Promise<{
+  params: {
     course_slug: string;
-  }>;
+  };
 }
 
-export default async function CheckoutPage({ params }: CheckoutPageProps) {
-  const { course_slug } = await params;
+export default function CheckoutPage({ params }: CheckoutPageProps) {
+  const { course_slug } = params;
 
   // NOTE: This component requires Stripe integration
   // Install with: npm install stripe @stripe/stripe-js
   // Configure STRIPE_PUBLISHABLE_KEY in .env.local
 
   // Fetch course details (placeholder - will be from Supabase in production)
-  const course: Course | null = null;
+  const course: Course | null = {
+    id: 'placeholder',
+    title: 'Sample Course Title',
+    slug: 'sample-course',
+    description: 'This is a placeholder course description.',
+    price: 9900,
+    currency: 'usd',
+    total_lessons: 10,
+    total_duration: 600,
+    is_published: true,
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+    level: 'beginner',
+    tags: [],
+  };
 
   if (!course) {
     return (

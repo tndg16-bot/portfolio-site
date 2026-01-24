@@ -36,6 +36,15 @@
 - BlogページへのTOC統合
 - **状態**: 完了
 
+#### ✅ TypeScript エラー修正（2026-01-24）
+- Stripe webhook route: `headers()` async呼び出し修正、`NextResponse` import追加
+- Checkout page: 型エラー修正（Course型完全準拠）
+- VideoPlayer component: props interface更新（videoId, lessonId, onProgressUpdate, onComplete）
+- Learn pages: Supabase query修正、cn utility import追加
+- Learn slug page: VideoPlayer props修正
+- **検証**: `npx tsc --noEmit` 完了（0エラー）
+- **状態**: ✅ すべてのTypeScriptエラー解消 → **次回セッションでStripe実装アクティベーション可能**
+
 ---
 
 ## 🔴 高優先タスク（ユーザー作業が必要）
@@ -226,6 +235,15 @@ NEXT_PUBLIC_SITE_URL=https://takahiro-motoyama.vercel.app
 **優先度**: 🟡 中
 **見積もり**: 2-3時間
 **前提**: #61 Supabase Setup 完了
+**状態**: 🟢 コード実装完了、TypeScriptエラー解消済み → **ユーザー作業のみ**
+
+**実装済み**:
+- ✅ Stripe Checkout API route (`src/app/api/checkout/[course_slug]/route.ts`)
+- ✅ Stripe Webhook handler (`src/app/api/webhooks/stripe/route.ts`)
+- ✅ Checkout UI page (`src/app/checkout/[course_slug]/page.tsx`)
+- ✅ VideoPlayer component（progress tracking対応）
+- ✅ Learning dashboard pages
+- ✅ 全TypeScriptエラー解消
 
 #### 手順:
 
@@ -264,6 +282,17 @@ STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxxxxxxxxxx
 **優先度**: 🟡 中
 **見積もり**: 2-3時間
 **前提**: #61 Supabase Setup 完了、#57 Stripe 統合完了
+**状態**: 🟡 npmレジストリ問題あり → **代替案: Vercel Blob Storage**
+
+**問題点**:
+- npm registry token expired（@cloudflare/video-jsインストール不可）
+- `pnpm`コマンド未インストール
+
+**代替案（推奨）: Vercel Blob Storage**
+- ✅ ドキュメント作成済み（`VERCEL_BLOB_IMPLEMENTATION.md`）
+- ✅ npmパッケージ不要
+- ✅ 環境変数設定後すぐ実装可能
+- 📋 次回セッションでの実装準備完了
 
 #### 手順:
 
@@ -355,21 +384,40 @@ CLOUDFLARE_API_TOKEN=your-api-token
 
 ## 💡 実行推奨順序
 
-### 即時実行（今すぐ）
-1. **Supabase プロジェクト作成** (15-30分)
-2. **Social Login プロバイダーの有効化** (30-45分)
-3. **環境変数の完全設定** (10分)
+### ユーザー作業（本日〜数日以内）
+1. **Supabase プロジェクト作成** (15-30分) 🔴 極高
+2. **Social Login プロバイダーの有効化** (30-45分) 🔴 極高
+3. **環境変数の完全設定** (10分) 🔴 極高
+   - Supabase
+   - Stripe（テストモード）
+   - Vercel Blob Token
+
+### AI実装タスク（次回セッション）
+
+**優先度1: Vercel Blob Storage実装**（推奨）
+- Cloudflareのnpm問題を回避
+- ドキュメント完備済み
+- 見積もり: 2-3時間
+
+**優先度2: Stripe実装のアクティベーション**
+- プレースホルダーコードを有効化（コメント解除）
+- 環境変数設定後に実施可能
+- 見積もり: 1-2時間
+
+**優先度3: i18nページ移行**
+- 既存ページを`[locale]`構造に移行
+- 見積もり: 4-6時間
 
 ### 短期実行（1-2時間後）
-4. **Giscus コメント設定** (15-30分)
+4. **Giscus コメント設定** (15-30分) 🟡 中
 
 ### 中期実行（数日〜1週間後）
-5. **Stripe 決済統合** (2-3時間)
-6. **Cloudflare Stream 統合** (2-3時間)
+5. **Stripe 決済統合** (2-3時間) 🟡 中 → **コード実装済み、ユーザー作業のみ**
+6. **Vercel Blob Storage** (2-3時間) 🟡 中 → **代替案**
 
 ### 長期実装（改善フェーズ）
-7. **多言語対応のページ実装** (4-6時間)
-8. **Learning Dashboard 実装** (#68)
+7. **多言語対応のページ実装** (4-6時間) 🟢 低
+8. **Learning Dashboard 実装** (#68) 🟢 低
 
 ---
 
@@ -382,5 +430,6 @@ CLOUDFLARE_API_TOKEN=your-api-token
 
 ---
 
-**最終更新**: 2026-01-24
+**最終更新**: 2026-01-24 (TypeScriptエラー修正完了)
 **AI担当**: Sisyphus
+**次回セッション**: Vercel Blob Storage実装 OR Stripeアクティベーション OR i18nページ移行

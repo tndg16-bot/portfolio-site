@@ -155,7 +155,7 @@ function ProjectCard({ project }: { project: Project }) {
         <StatusBadge status={project.status} />
         {isClickable && (
           <div className="flex items-center text-japan-indigo text-sm font-medium group-hover:gap-3 transition-all">
-            {project.url ? '詳細を見る' : 'GitHubを見る'}
+            詳細を見る
             <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
           </div>
         )}

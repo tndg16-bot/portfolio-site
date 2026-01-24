@@ -37,8 +37,8 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4">
-            {/* Language Switcher */}
-            <LanguageSwitcher />
+            {/* Language Switcher - Temporarily disabled until [locale] routing migration */}
+            {/* <LanguageSwitcher /> */}
 
             {/* Search Button */}
             <button

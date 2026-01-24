@@ -8,10 +8,10 @@ import { NextResponse } from 'next/server';
 
 export async function GET(
   request: Request,
-  { params }: { params: { video_id: string } }
+  { params }: { params: Promise<{ video_id: string }> }
 ) {
   try {
-    const { video_id } = params;
+    const { video_id } = await params;
 
     // NOTE: Cloudflare Stream integration requires package installation
     // The code below will work once @cloudflare/video-js is installed

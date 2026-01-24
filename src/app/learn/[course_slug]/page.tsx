@@ -58,7 +58,7 @@ export default function LearnCoursePage({ params }: { params: { course_slug: str
           const { data: lessonsData } = await supabase
             .from('lessons')
             .select('*')
-            .in('module_id', `(${moduleIds.join(',')})`)
+            .in('module_id', moduleIds)
             .order('order_index', { ascending: true });
 
           setLessons(lessonsData || []);

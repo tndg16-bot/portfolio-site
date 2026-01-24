@@ -29,6 +29,9 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
       'Web Speech APIによる発音練習',
     ],
     description: 'AIキャラクターとの会話を通じて、楽しみながら日本語を学べる学習プラットフォーム。',
+    links: [
+      { label: "詳細を見る", url: "/lp/nihongo-mate" }
+    ]
   },
   'gamified-mandala-chart': {
     slug: 'gamified-mandala-chart',
@@ -45,7 +48,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     ],
     description: '目標達成のための曼荼羅チャートをゲーム化し、継続的なモチベーション維持を支援するツール。',
     links: [
-        { label: "Demo", url: "https://mandala-chart-gamma.vercel.app/" }
+      { label: "詳細を見る", url: "/lp/gamified-mandala-chart" }
     ]
   },
   'talent-diagnosis': {
@@ -61,6 +64,9 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
       'AIによるパーソナライズされたスピリチュアルアドバイス',
     ],
     description: '生年月日から、あなたの隠れた才能や運勢を多角的に診断するスピリチュアルAIツール。',
+    links: [
+      { label: "詳細を見る", url: "/lp/talent-diagnosis" }
+    ]
   },
   'ai-diagnosis-six': {
     slug: 'ai-diagnosis-six',
@@ -76,7 +82,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     ],
     description: '簡単な質問に答えるだけで、あなたに最適なAI副業を提案する診断ツール。',
     links: [
-      { label: "診断を試す", url: "https://ai-diagnosis-six.vercel.app" }
+      { label: "詳細を見る", url: "/lp/ai-diagnosis-six" }
     ]
   },
   'xboost': {
@@ -93,7 +99,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     ],
     description: 'X（旧Twitter）運用に必要な「作成・投稿・分析・改善」の全サイクルを一元管理し、発信力を最大化するSaaSツール。',
     links: [
-      { label: "公式サイト", url: "https://www.xboost.now/" }
+      { label: "詳細を見る", url: "/lp/xboost" }
     ]
   },
   'emo-sns': {
@@ -109,6 +115,9 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
       'Next.jsによるモダンなWebアプリケーション',
     ],
     description: '日常の些細な「感情」を共有し、共感し合うための新しいソーシャルプラットフォーム（開発中）。',
+    links: [
+      { label: "詳細を見る", url: "/lp/emo-sns" }
+    ]
   },
   'instagram': {
     slug: 'instagram',
@@ -123,6 +132,9 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
       'ビジネス成長を加速させる統合プラットフォーム',
     ],
     description: '複数のAIエージェントが連携してインスタグラム運用を自動化・最適化する次世代マーケティングプラットフォーム。',
+    links: [
+      { label: "詳細を見る", url: "/lp/instagram" }
+    ]
   },
   'ai-writing-automation': {
     slug: 'ai-writing-automation',
@@ -137,6 +149,9 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
       '80-90%の時間短縮を実現',
     ],
     description: 'ブログ記事や動画台本の作成をAIで自動化し、コンテンツ制作の時間を劇的に短縮するツール。',
+    links: [
+      { label: "詳細を見る", url: "/lp/ai-writing-automation" }
+    ]
   },
   'kindlescanpdf': {
     slug: 'kindlescanpdf',
@@ -151,20 +166,60 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
       'PDFへの自動変換・結合機能',
     ],
     description: 'Kindle Cloud Readerの書籍を自動でキャプチャし、個人的な学習用にPDF化するChrome拡張機能。',
+    links: [
+      { label: "詳細を見る", url: "/lp/kindlescanpdf" }
+    ]
   },
-  'calendar-sync-manager': {
-    slug: 'calendar-sync-manager',
-    title: 'Calendar Sync Manager',
+  'task-manager': {
+    slug: 'task-manager',
+    title: 'タスク管理ツール',
     emoji: '📅',
     category: 'tool',
-    featured: false,
+    featured: true,
     iconColor: 'cyan',
     highlights: [
-      'Google Calendar/Tasks双方向同期',
-      '音声入力によるクイック登録',
-      'ウィジェット形式のUI',
+      '音声入力対応 (Web Speech API)',
+      'Google Calendar/Tasks 双方向連携',
+      'OAuth 2.0によるセキュアな認証',
     ],
-    description: 'カレンダーとタスクをシームレスに同期し、音声入力で素早く予定管理ができる生産性向上ツール。',
+    description: '音声入力で素早くタスク登録ができ、GoogleカレンダーとToDoリストに自動同期するWebアプリケーション。',
+    links: [
+      { label: "詳細を見る", url: "/lp/task-manager" }
+    ]
+  },
+  'termlog-opencode': {
+    slug: 'termlog-opencode',
+    title: 'TermLog for OpenCode',
+    emoji: '📝',
+    category: 'tool',
+    featured: false,
+    iconColor: 'slate',
+    highlights: [
+      'AIチャットセッションの自動保存・要約',
+      'ローカルLLMを用いた会話抽出',
+      'ObsidianへのMarkdown自動エクスポート',
+    ],
+    description: 'OpenCodeでのAIとの対話履歴を自動的に記録・要約し、Obsidianに知識として蓄積するツール。',
+    links: [
+      { label: "詳細を見る", url: "/lp/termlog-opencode" }
+    ]
+  },
+  'portfolio': {
+    slug: 'portfolio',
+    title: 'Portfolio Site',
+    emoji: '🎨',
+    category: 'main',
+    featured: false, // トップページに表示しない
+    iconColor: 'indigo',
+    highlights: [
+      'Next.js 14 + Tailwind CSSによる構築',
+      'マルチエージェント開発体制の実践',
+      'プロジェクトメタデータの集中管理',
+    ],
+    description: 'AI活用プロジェクトのショーケース。開発プロセス自体をAIと協調して行う実験場としても機能。',
+    links: [
+      { label: "詳細を見る", url: "/lp/portfolio" }
+    ]
   },
   'termlog': {
     slug: 'termlog',
@@ -179,6 +234,9 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
       'セッション単位での履歴管理',
     ],
     description: '開発者のターミナル操作をすべて記録・保存し、過去の作業内容をいつでも検索・参照できるログ管理ツール。',
+    links: [
+      { label: "詳細を見る", url: "/lp/termlog" }
+    ]
   },
   'session-vault': {
     slug: 'session-vault',
@@ -193,20 +251,26 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
       '過去の対話からのナレッジ再利用',
     ],
     description: 'AIとの対話履歴をセキュアに保存し、必要な時にいつでも知識として引き出せるセッション管理システム。',
+    links: [
+      { label: "詳細を見る", url: "/lp/session-vault" }
+    ]
   },
   'antigravity-vault': {
     slug: 'antigravity-vault',
     title: 'AntigravityVault',
     emoji: '🚀',
     category: 'tool',
-    featured: false,
+    featured: true,
     iconColor: 'pink',
     highlights: [
-      'Obsidian Vaultとの双方向同期',
-      'ノートとコードベースの統合管理',
-      '思考と実装のシームレスな連携',
+      'Antigravity会話ログのObsidian自動保存',
+      'Protocol Buffers解析によるログ抽出',
+      'Local REST API経由のシームレス連携',
     ],
-    description: '個人の知識ベース（Obsidian）と開発環境を統合し、思考の整理から実装までを一気通貫で支援するシステム。',
+    description: 'Google IDE (Antigravity) の会話ログを解析し、Obsidianにナレッジとして自動蓄積する連携ツール。',
+    links: [
+      { label: "詳細を見る", url: "/lp/antigravity-vault" }
+    ]
   },
   'self-analysis-notification': {
     slug: 'self-analysis-notification',
@@ -221,5 +285,8 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
       '内省習慣の自動化と定着支援',
     ],
     description: '定期的に自己分析のための問いかけを通知し、忙しい日常の中で自分を見つめ直す時間を確保するツール。',
+    links: [
+      { label: "詳細を見る", url: "/lp/self-analysis-notification" }
+    ]
   },
 };

@@ -1,15 +1,85 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import { createClient } from '@supabase/supabase-js';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { BookOpen, Play, Clock, CheckCircle, Lock } from 'lucide-react';
 import type { UserEnrolledCourse } from '@/types/course';
+import { cn } from '@/lib/utils';
 
-interface CourseListProps {
-  courses: UserEnrolledCourse[];
-}
+export default function LearnPage() {
+  const [courses, setCourses] = useState<UserEnrolledCourse[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-export default function CourseList({ courses }: CourseListProps) {
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        setLoading(true);
+        const supabase = createClient(
+          process.env.NEXT_PUBLIC_SUPABASE_URL || '',
+          process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+        );
+
+        // Get current user
+        const { data: userData } = await supabase.auth.getUser();
+
+        if (!userData?.user) {
+          setError('Please log in to view your courses');
+          setLoading(false);
+          return;
+        }
+
+        // Fetch user's enrolled courses with progress
+        const { data: enrollments, error: enrollmentsError } = await supabase
+          .from('enrollments')
+          .select(`
+            *,
+            courses (
+              id,
+              title,
+              slug,
+              description,
+              thumbnail_url,
+              total_lessons,
+              total_duration
+            )
+          `)
+          .eq('user_id', userData.user.id)
+          .eq('is_active', true)
+          .order('enrolled_at', { ascending: false });
+
+        if (enrollmentsError) throw enrollmentsError;
+
+        // Transform data to match UserEnrolledCourse type
+        const userCourses: UserEnrolledCourse[] = (enrollments || []).map((enrollment: any) => ({
+          enrollment_id: enrollment.id,
+          user_id: userData.user.id,
+          course_id: enrollment.course_id,
+          course_slug: enrollment.courses?.slug || '',
+          course_title: enrollment.courses?.title || 'Unknown Course',
+          course_description: enrollment.courses?.description || null,
+          course_thumbnail_url: enrollment.courses?.thumbnail_url || null,
+          course_total_lessons: enrollment.courses?.total_lessons || 0,
+          progress_percentage: enrollment.progress_percentage || 0,
+          enrolled_at: enrollment.enrolled_at,
+          expires_at: enrollment.expires_at || null,
+          is_active: enrollment.is_active,
+          completed_at: enrollment.completed_at || null,
+        }));
+
+        setCourses(userCourses);
+        setLoading(false);
+      } catch (err) {
+        console.error('Failed to fetch courses:', err);
+        setError('Failed to load courses');
+        setLoading(false);
+      }
+    };
+
+    fetchCourses();
+  }, []);
   if (courses.length === 0) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">

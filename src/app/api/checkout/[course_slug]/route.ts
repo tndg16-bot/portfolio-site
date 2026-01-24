@@ -11,10 +11,10 @@ import type { CheckoutSessionRequest } from '@/types/course';
 
 export async function POST(
   request: Request,
-  { params }: { params: { course_slug: string } }
+  { params }: { params: Promise<{ course_slug: string }> }
 ) {
   try {
-    const { course_slug } = params;
+    const { course_slug } = await params;
     const body: CheckoutSessionRequest = await request.json();
 
     // Initialize Supabase client

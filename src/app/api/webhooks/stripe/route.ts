@@ -1,4 +1,5 @@
 import { headers } from 'next/headers';
+import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
 // NOTE: This webhook requires @stripe/stripe-js to be installed
@@ -11,7 +12,8 @@ import { createClient } from '@supabase/supabase-js';
 export async function POST(request: Request) {
   try {
     const body = await request.text();
-    const signature = headers().get('stripe-signature');
+    const headersList = await headers();
+    const signature = headersList.get('stripe-signature');
 
     if (!signature) {
       return NextResponse.json(
