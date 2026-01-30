@@ -1,0 +1,253 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+datasource db {
+  url = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  name          String
+  company       String?
+  passwordHash  String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  tasks                Task[]
+  selfDeterminationProcesses SelfDeterminationProcess[]
+  trustScoreHistories  TrustScoreHistory[]
+  activities           Activity[]
+  feedbacks            Feedback[]
+  contracts            Contract[]
+  referralsAsReferrer  Referral[] @relation("ReferrerReferrals")
+  referralsAsReferee   Referral[] @relation("RefereeReferrals")
+  journals             Journal[]
+}
+
+model Task {
+  id            String   @id @default(uuid())
+  userId        String
+  title         String
+  description   String?
+  status        TaskStatus
+  priority      TaskPriority
+  assignee      String   @default("development-team")
+  dueDate       DateTime
+  dependencies  String[] @default([])
+  issueNumber   Int?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+  @@index([priority])
+  @@index([dueDate])
+  @@index([issueNumber])
+}
+
+model SelfDeterminationProcess {
+  id          String   @id @default(uuid())
+  userId      String
+  stepNumber  Int
+  stepTitle   String
+  status      ProcessStatus
+  content     Json?
+  completedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([stepNumber])
+  @@index([status])
+}
+
+model TrustScoreHistory {
+  id                   String   @id @default(uuid())
+  userId               String
+  activityScore        Int      @default(0) @db.SmallInt
+  relationshipScore     Int      @default(0) @db.SmallInt
+  qualityScore         Int      @default(0) @db.SmallInt
+  revenueScore         Int      @default(0) @db.SmallInt
+  referralScore        Int      @default(0) @db.SmallInt
+  totalTrustScore      Int      @default(0) @db.SmallInt
+  trustLevel           Int      @default(1) @db.SmallInt
+  recordedAt           DateTime @default(now())
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([recordedAt])
+  @@index([totalTrustScore])
+  @@index([trustLevel])
+}
+
+model Activity {
+  id          String   @id @default(uuid())
+  userId      String
+  type        ActivityType
+  timestamp   DateTime @default(now())
+  details     Json?
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([type])
+  @@index([timestamp])
+}
+
+model Feedback {
+  id          String   @id @default(uuid())
+  userId      String
+  type        FeedbackType
+  score       Int
+  timestamp   DateTime @default(now())
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([type])
+  @@index([timestamp])
+}
+
+model Contract {
+  id          String   @id @default(uuid())
+  userId      String
+  startDate   DateTime
+  endDate     DateTime?
+  amount      Int
+  status      ContractStatus
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+  @@index([startDate])
+}
+
+model Referral {
+  id             String   @id @default(uuid())
+  referrerId     String
+  refereeId      String
+  qualityScore   Int      @default(0) @db.SmallInt
+  timestamp      DateTime @default(now())
+
+  // Relations
+  referrer User @relation("ReferrerReferrals", fields: [referrerId], references: [id], onDelete: Cascade)
+  referee  User @relation("RefereeReferrals", fields: [refereeId], references: [id], onDelete: Cascade)
+
+  @@index([referrerId])
+  @@index([refereeId])
+  @@index([timestamp])
+}
+
+model AiPromptTemplate {
+  id          String   @id @default(uuid())
+  category    String
+  title       String
+  template    String
+  context     String?
+  temperature Decimal  @db.Decimal(3, 2) @default(0.7)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+  @@index([title])
+}
+
+model QuestioningScript {
+  id                  String   @id @default(uuid())
+  category            String
+  question            String
+  followUpQuestions   String[]
+  answerType          AnswerType
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  // Relations
+  selfDeterminationProcesses SelfDeterminationProcess[]
+
+  @@index([category])
+}
+
+model Journal {
+  id          String   @id @default(uuid())
+  userId      String
+  title       String
+  content     Json
+  tags        String[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([createdAt])
+  @@index([tags])
+}
+
+// Enums
+enum TaskStatus {
+  completed
+  in_progress
+  pending
+  blocked
+}
+
+enum TaskPriority {
+  critical
+  high
+  medium
+  low
+}
+
+enum ProcessStatus {
+  completed
+  in_progress
+  pending
+}
+
+enum ActivityType {
+  content_view
+  session_attended
+  feature_used
+  email_sent
+  form_submitted
+}
+
+enum FeedbackType {
+  satisfaction
+  nps
+  open_rate
+}
+
+enum ContractStatus {
+  active
+  completed
+  cancelled
+}
+
+enum AnswerType {
+  text
+  choice
+  rating
+}

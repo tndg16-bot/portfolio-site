@@ -182,6 +182,14 @@ export function getPostsByTag(tag: string): PostData[] {
   );
 }
 
+// Get posts filtered by category
+export function getPostsByCategory(category: string): PostData[] {
+  const posts = getSortedPostsData();
+  return posts.filter(post =>
+    post.category && post.category === category
+  );
+}
+
 // Get all unique categories
 export function getAllCategories(): string[] {
   const posts = getSortedPostsData();
@@ -194,6 +202,21 @@ export function getAllCategories(): string[] {
   });
 
   return Array.from(categorySet).sort();
+}
+
+// Get category with article count
+export function getCategoryCounts(): Map<string, number> {
+  const posts = getSortedPostsData();
+  const categoryCountMap = new Map<string, number>();
+
+  posts.forEach(post => {
+    if (post.category) {
+      const currentCount = categoryCountMap.get(post.category) || 0;
+      categoryCountMap.set(post.category, currentCount + 1);
+    }
+  });
+
+  return categoryCountMap;
 }
 
 
@@ -221,6 +244,16 @@ export function getAllTagSlugs() {
   return tags.map((tag) => ({
     params: {
       tag: tag.toLowerCase(),
+    },
+  }));
+}
+
+// Get all category slugs for static generation
+export function getAllCategorySlugs() {
+  const categories = getAllCategories();
+  return categories.map((category) => ({
+    params: {
+      category: encodeURIComponent(category),
     },
   }));
 }

@@ -1,0 +1,100 @@
+{
+  "tasks": [
+    {
+      "id": "task-1",
+      "title": "GitHub Projects API research",
+      "description": "Research GitHub Projects API documentation and capabilities",
+      "status": "completed",
+      "priority": "high",
+      "assignee": "development-team",
+      "dueDate": "2026-01-16",
+      "dependencies": []
+    },
+    {
+      "id": "task-2",
+      "title": "Evaluate task management tools",
+      "description": "Evaluate Linear, ZenHub, Notion task management capabilities",
+      "status": "in_progress",
+      "priority": "high",
+      "assignee": "development-team",
+      "dueDate": "2026-01-23",
+      "dependencies": ["task-1"]
+    },
+    {
+      "id": "task-3",
+      "title": "Create simple task management UI",
+      "description": "Create a basic task management UI component",
+      "status": "pending",
+      "priority": "high",
+      "assignee": "development-team",
+      "dueDate": "2026-01-30",
+      "dependencies": ["task-2"]
+    },
+    {
+      "id": "task-4",
+      "title": "Implement progress visualization",
+      "description": "Implement progress bars and status indicators",
+      "status": "pending",
+      "priority": "high",
+      "assignee": "development-team",
+      "dueDate": "2026-02-06",
+      "dependencies": ["task-3"]
+    },
+    {
+      "id": "task-5",
+      "title": "Standardize issue labeling",
+      "description": "Create a standard system for GitHub issue labels",
+      "status": "pending",
+      "priority": "medium",
+      "assignee": "development-team",
+      "dueDate": "2026-02-06",
+      "dependencies": []
+    },
+    {
+      "id": "task-6",
+      "title": "Create project structure documentation",
+      "description": "Update project structure documentation",
+      "status": "pending",
+      "priority": "medium",
+      "assignee": "development-team",
+      "dueDate": "2026-02-06",
+      "dependencies": []
+    },
+    {
+      "id": "task-7",
+      "title": "Implement Issue #83: Self-determination product",
+      "description": "Implement self-determination product features",
+      "status": "pending",
+      "priority": "medium",
+      "assignee": "development-team",
+      "dueDate": "2026-02-13",
+      "dependencies": []
+    },
+    {
+      "id": "task-8",
+      "title": "Implement Issue #84: Trust-based acquisition",
+      "description": "Implement trust-based acquisition strategy",
+      "status": "pending",
+      "priority": "medium",
+      "assignee": "development-team",
+      "dueDate": "2026-02-13",
+      "dependencies": []
+    },
+    {
+      "id": "task-9",
+      "title": "Implement Issue #85: AI revenue roadmap",
+      "description": "Implement AI-powered revenue roadmap features",
+      "status": "pending",
+      "priority": "medium",
+      "assignee": "development-team",
+      "dueDate": "2026-02-13",
+      "dependencies": []
+    }
+  ],
+  "metadata": {
+    "created": "2026-01-16",
+    "lastUpdated": "2026-01-16",
+    "version": "1.0",
+    "status": "in_progress"
+  }
+}

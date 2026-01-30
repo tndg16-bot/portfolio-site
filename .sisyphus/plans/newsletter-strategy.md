@@ -34,11 +34,25 @@
 
 ---
 
-## 🎁 登録特典（要検討）
+## 🎁 登録特典
 
 登録率を上げるためのインセンティブ。
 
-### 候補案
+### ✅ 決定案: 「本当の自分を見つける」自己分析ワークシート
+
+**採用理由**:
+- ターゲット「自分を変えたい人」に刺さる内容
+- 実用的で、すぐに使える
+- ニュースレターの価値（自己啓発・思考法）と整合性が高い
+
+**コンテンツ** (`content/newsletter/self-analysis-worksheet.md`):
+- 価値観の明確化
+- 強みの再発見
+- 行動の軸を決める
+- 理想の未来を描く
+- 行動プラン作成
+
+### 候補案（未採用）
 
 | 特典 | メリット | デメリット | 難易度 |
 |------|----------|------------|--------|
@@ -77,10 +91,12 @@
 
 ## 🔧 技術的なTODO
 
-- [ ] Resendアカウント作成 & APIキー設定（Issue #27）
-- [ ] 配信テンプレートのデザイン
-- [ ] 登録特典の作成
-- [ ] 登録フォームに特典の説明を追加
+- [x] Resendアカウント作成 & APIキー設定ガイド作成（Issue #27）
+- [x] 配信テンプレートの作成 (`content/newsletter/`)
+- [x] 登録特典の作成 (`content/newsletter/self-analysis-worksheet.md`)
+- [x] 登録フォームに特典の説明を追加 (`src/components/NewsletterForm.tsx`)
+- [x] NewsletterFormを修正して実際のAPIエンドポイントを呼び出す
+- [ ] Resendアカウント作成 & APIキー設定（ユーザー操作）
 - [ ] 自動配信の仕組み検討（手動 or 自動化）
 
 ---
@@ -97,4 +113,33 @@
 ---
 
 *作成日: 2026-01-12*
-*ステータス: 計画中*
+*最終更新: 2026-01-29*
+*ステータス: 実装完了（設定待ち）*
+
+---
+
+## 🔗 関連リンク
+
+- [Resend APIキー設定ガイド](../../docs/guides/RESEND_SETUP_GUIDE.md) - APIキー設定手順
+- [ニュースレター配信テンプレート](../../content/newsletter/templates.md) - 配信テンプレート一覧
+- [自己分析ワークシート](../../content/newsletter/self-analysis-worksheet.md) - 登録特典コンテンツ
+- [NewsletterFormコンポーネント](../../src/components/NewsletterForm.tsx) - 登録フォーム実装
+- [Subscribe APIルート](../../src/app/api/subscribe/route.ts) - APIエンドポイント
+
+---
+
+## 📝 次のステップ
+
+1. **Resendアカウント作成**
+   - [Resendにサインアップ](https://resend.com)
+   - APIキー作成
+   - ドメイン認証
+
+2. **環境変数設定**
+   - ローカル開発環境: `.env.local`
+   - Vercel本番環境: Environment Variables
+
+3. **配信開始**
+   - 最初のメインニュースレター作成
+   - 配信テスト
+   - ライト配信の自動化検討

@@ -11,6 +11,7 @@ const navItems = [
   { href: '/about', label: 'About' },
   { href: '/philosophy', label: 'Philosophy' },
   { href: '/sessions', label: 'Sessions' },
+  { href: '/tasks', label: 'Tasks' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
 ];

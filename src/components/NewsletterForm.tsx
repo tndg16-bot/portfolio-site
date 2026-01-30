@@ -13,12 +13,27 @@ export default function NewsletterForm() {
 
     setStatus('loading');
 
-    // Simulate API call
-    setTimeout(() => {
-      console.log('Subscribed:', email);
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to subscribe');
+      }
+
+      const data = await response.json();
+      console.log('Subscribed:', email, data);
       setStatus('success');
       setEmail('');
-    }, 1000);
+    } catch (error) {
+      console.error('Subscribe error:', error);
+      setStatus('error');
+    }
   };
 
   return (
@@ -35,10 +50,26 @@ export default function NewsletterForm() {
           Deep Diveを受け取る
         </h3>
 
-        <p className="text-zinc-400 mb-8">
+        <p className="text-zinc-400 mb-6">
           ブログの更新情報や、より深い考察、限定コンテンツをニュースレターとしてお届けします。
           スパムは送りません。いつでも解除可能です。
         </p>
+
+        {/* 登録特典 */}
+        <div className="bg-zinc-800/50 rounded-lg p-4 mb-6 border border-zinc-700">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-yellow-400">🎁</span>
+            <span className="text-white font-semibold">登録特典</span>
+          </div>
+          <p className="text-zinc-300 text-sm">
+            「本当の自分を見つける」自己分析ワークシートをプレゼント！
+          </p>
+          <ul className="text-zinc-400 text-xs mt-2 space-y-1">
+            <li>• 価値観の明確化</li>
+            <li>• 強みの再発見</li>
+            <li>• 行動の軸を決める</li>
+          </ul>
+        </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
           <input
@@ -62,6 +93,15 @@ export default function NewsletterForm() {
         {status === 'success' && (
           <p className="text-teal-400 text-sm mt-4 animate-fade-in">
             登録ありがとうございます！確認メールをお送りしました。
+            <span className="block mt-2 text-zinc-400">
+              📧 登録特典：自己分析ワークシートもお届けします！
+            </span>
+          </p>
+        )}
+
+        {status === 'error' && (
+          <p className="text-red-400 text-sm mt-4">
+            エラーが発生しました。もう一度お試しください。
           </p>
         )}
       </div>
