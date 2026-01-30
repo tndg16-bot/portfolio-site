@@ -35,7 +35,6 @@ const rehypeImageCaption = () => {
           type: 'element',
           tagName: 'img',
           properties: {
-            ...node.properties,
             'data-next-image': 'true',
             'data-caption': title || ''
           },
