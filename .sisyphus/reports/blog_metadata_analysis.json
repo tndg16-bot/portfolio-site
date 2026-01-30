@@ -1,0 +1,506 @@
+{
+  "metadata": [
+    {
+      "filename": "001-knowhow-dependency.md",
+      "title": "ノウハウ依存からの卒業",
+      "category": "コーチング",
+      "tags": "",
+      "date": "'2026-01-01'",
+      "slug": "graduating-from-knowhow-dependency",
+      "published": "true"
+    },
+    {
+      "filename": "002-ai-thinking-partner.md",
+      "title": "AIを思考パートナーとして使う方法",
+      "category": "AI活用",
+      "tags": "",
+      "date": "'2026-01-02'",
+      "slug": "using-ai-as-thinking-partner",
+      "published": "true"
+    },
+    {
+      "filename": "003-three-questions.md",
+      "title": "判断軸を見つける3つの質問",
+      "category": "コーチング",
+      "tags": "",
+      "date": "'2026-01-03'",
+      "slug": "three-questions-to-find-your-compass",
+      "published": "true"
+    },
+    {
+      "filename": "004-intuition-technology.md",
+      "title": "「直感」を信じる技術 - データと感覚を統合する意思決定",
+      "category": "思考法",
+      "tags": "",
+      "date": "'2026-01-04'",
+      "slug": "intuition-technology",
+      "published": "true"
+    },
+    {
+      "filename": "005-journaling-intro.md",
+      "title": "'\"書くだけ\"で悩みは9割消える - 思考を整理するジャーナリング入門'",
+      "category": "思考法",
+      "tags": "",
+      "date": "'2026-01-05'",
+      "slug": "journaling-intro",
+      "published": "true"
+    },
+    {
+      "filename": "006-mental-model.md",
+      "title": "あなたの「当たり前」を疑う - 成長を妨げる\"メンタルモデル\"の見つけ方",
+      "category": "コーチング",
+      "tags": "",
+      "date": "'2026-01-06'",
+      "slug": "mental-model",
+      "published": "true"
+    },
+    {
+      "filename": "006-merged-perfectionism-article.md",
+      "title": "完璧主義からの解放 - 80点で走り出し、そこから磨く技術",
+      "category": "マインドセット",
+      "tags": "",
+      "date": "'2026-01-30'",
+      "slug": "let-go-of-perfectionism",
+      "published": "true"
+    },
+    {
+      "filename": "007-perfectionism-freedom.md",
+      "title": "完璧主義からの解放宣言（統合版）",
+      "category": "マインドセット",
+      "tags": "",
+      "date": "'2026-01-07'",
+      "slug": "perfectionism-freedom-legacy",
+      "published": "false"
+    },
+    {
+      "filename": "008-freedom-from-expectations.md",
+      "title": "他人の「期待」から自由になる - 本当の自分の欲求を見つける方法",
+      "category": "コーチング",
+      "tags": "",
+      "date": "'2026-01-08'",
+      "slug": "freedom-from-expectations",
+      "published": "true"
+    },
+    {
+      "filename": "009-create-your-strengths.md",
+      "title": "'\"強み\"は探すな、\"創り出せ\" - 才能を掛け合わせるキャリア戦略'",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-01-09'",
+      "slug": "create-your-strengths",
+      "published": "true"
+    },
+    {
+      "filename": "010-motivation-systems.md",
+      "title": "なぜ「モチベーション」は続かないのか？ - 意志力に頼らない仕組みの作り方",
+      "category": "思考法",
+      "tags": "",
+      "date": "'2026-01-10'",
+      "slug": "motivation-systems",
+      "published": "true"
+    },
+    {
+      "filename": "011-self-esteem-action.md",
+      "title": "'\"自己肯定感が低い\"は勘違い - 自信を行動から作るフィードバックループ'",
+      "category": "コーチング",
+      "tags": "",
+      "date": "'2026-01-11'",
+      "slug": "self-esteem-action",
+      "published": "true"
+    },
+    {
+      "filename": "012-ai-information-gathering.md",
+      "title": "\"AI時代の情報収集術 - \\\"ググる\\\"から\\\"対話する\\\"へ\"",
+      "category": "AI活用",
+      "tags": [
+        "AI",
+        "情報収集",
+        "生産性"
+      ],
+      "date": "\"2026-01-12\"",
+      "slug": "\"ai-information-gathering\"",
+      "published": "true"
+    },
+    {
+      "filename": "013-ai-career-future.md",
+      "title": "あなたの仕事、AIでどう変わる？ - 3つのステップで考える未来のキャリアプラン",
+      "category": "AI活用",
+      "tags": "",
+      "date": "'2026-01-13'",
+      "slug": "ai-career-future",
+      "published": "true"
+    },
+    {
+      "filename": "014-career-hypothesis.md",
+      "title": "'\"やりたいこと\"が見つからない君へ - 「仮説検証」としてのキャリアの歩き方'",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-01-14'",
+      "slug": "career-hypothesis",
+      "published": "true"
+    },
+    {
+      "filename": "015-before-job-change.md",
+      "title": "'\"転職\"の前にやるべきこと - あなたの市場価値を測る3つの指標'",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-01-15'",
+      "slug": "before-job-change",
+      "published": "true"
+    },
+    {
+      "filename": "016-reskilling-trap.md",
+      "title": "「リスキリング」の罠 - 学ぶだけで終わらない人の共通点",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-01-16'",
+      "slug": "reskilling-trap",
+      "published": "true"
+    },
+    {
+      "filename": "017-pomodoro-technique.md",
+      "title": "'\"時間がない\"は幻想 - 脳をだますポモドーロ・テクニック活用法'",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-01-17'",
+      "slug": "pomodoro-technique",
+      "published": "true"
+    },
+    {
+      "filename": "018-morning-routine.md",
+      "title": "'\"朝時間\"を制する者は人生を制す - タイプ別・最強のモーニングルーティン'",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-01-18'",
+      "slug": "morning-routine",
+      "published": "true"
+    },
+    {
+      "filename": "019-not-to-do-list.md",
+      "title": "「やらないことリスト」のススメ - \"No\"と言う勇気が時間を生み出す",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-01-19'",
+      "slug": "not-to-do-list",
+      "published": "true"
+    },
+    {
+      "filename": "020-art-of-rest.md",
+      "title": "最高の休息法 - \"何もしない\"をする勇気",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-01-20'",
+      "slug": "art-of-rest",
+      "published": "true"
+    },
+    {
+      "filename": "021-decision-fatigue.md",
+      "title": "決断疲れを防ぐ - 判断力を温存する技術",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-01-21'",
+      "slug": "decision-fatigue",
+      "published": "true"
+    },
+    {
+      "filename": "051-growth-mindset.md",
+      "title": "グロースマインドセット - 才能は伸ばせるという信念",
+      "category": "マインドセット",
+      "tags": "",
+      "date": "'2026-02-20'",
+      "slug": "growth-mindset",
+      "published": "true"
+    },
+    {
+      "filename": "052-comfort-zone.md",
+      "title": "コンフォートゾーンを抜け出す方法",
+      "category": "マインドセット",
+      "tags": "",
+      "date": "'2026-02-21'",
+      "slug": "comfort-zone",
+      "published": "true"
+    },
+    {
+      "filename": "053-ikigai.md",
+      "title": "「生きがい」のフレームワーク - 4つの円が交わる場所",
+      "category": "コーチング",
+      "tags": "",
+      "date": "'2026-02-22'",
+      "slug": "ikigai",
+      "published": "true"
+    },
+    {
+      "filename": "054-saying-no-at-work.md",
+      "title": "上司からの依頼を断る技術",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-02-23'",
+      "slug": "saying-no-at-work",
+      "published": "true"
+    },
+    {
+      "filename": "055-remote-work-productivity.md",
+      "title": "リモートワークで生産性を高める7つの習慣",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-02-24'",
+      "slug": "remote-work-productivity",
+      "published": "true"
+    },
+    {
+      "filename": "056-cognitive-bias.md",
+      "title": "認知バイアス入門 - 脳の癖を知って判断を改善する",
+      "category": "メンタルモデル",
+      "tags": "",
+      "date": "'2026-02-25'",
+      "slug": "cognitive-bias",
+      "published": "true"
+    },
+    {
+      "filename": "057-minimal-lifestyle.md",
+      "title": "ミニマリズムと生産性 - 少なく持つことで得られるもの",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-02-26'",
+      "slug": "minimal-lifestyle",
+      "published": "true"
+    },
+    {
+      "filename": "058-emotional-intelligence.md",
+      "title": "EQ（感情知能）を高める - IQより大切なもの",
+      "category": "コーチング",
+      "tags": "",
+      "date": "'2026-02-27'",
+      "slug": "emotional-intelligence",
+      "published": "true"
+    },
+    {
+      "filename": "059-negotiation-basics.md",
+      "title": "交渉の基本 - WinWinを実現する技術",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-02-28'",
+      "slug": "negotiation-basics",
+      "published": "true"
+    },
+    {
+      "filename": "060-journaling-methods.md",
+      "title": "効果的なジャーナリング5つの手法",
+      "category": "思考法",
+      "tags": "",
+      "date": "'2026-03-01'",
+      "slug": "journaling-methods",
+      "published": "true"
+    },
+    {
+      "filename": "061-presentation-fear.md",
+      "title": "プレゼン恐怖症を克服する",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-03-02'",
+      "slug": "presentation-fear",
+      "published": "true"
+    },
+    {
+      "filename": "062-pareto-principle.md",
+      "title": "80/20の法則を仕事に活かす",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-03-03'",
+      "slug": "pareto-principle",
+      "published": "true"
+    },
+    {
+      "filename": "063-building-habits.md",
+      "title": "習慣の科学 - なぜ習慣化は難しいのか",
+      "category": "メンタルモデル",
+      "tags": "",
+      "date": "'2026-03-04'",
+      "slug": "building-habits",
+      "published": "true"
+    },
+    {
+      "filename": "064-ai-learning-partner.md",
+      "title": "AIを学習パートナーにする方法",
+      "category": "AI活用",
+      "tags": "",
+      "date": "'2026-03-05'",
+      "slug": "ai-learning-partner",
+      "published": "true"
+    },
+    {
+      "filename": "065-networking-introvert.md",
+      "title": "内向型のためのネットワーキング術",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-03-06'",
+      "slug": "networking-introvert",
+      "published": "true"
+    },
+    {
+      "filename": "066-sleep-productivity.md",
+      "title": "睡眠と生産性 - 寝ることが最高の投資",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-03-07'",
+      "slug": "sleep-productivity",
+      "published": "true"
+    },
+    {
+      "filename": "067-failure-resume.md",
+      "title": "「失敗履歴書」を書く - 失敗から学ぶ技術",
+      "category": "マインドセット",
+      "tags": "",
+      "date": "'2026-03-08'",
+      "slug": "failure-resume",
+      "published": "true"
+    },
+    {
+      "filename": "068-time-blocking.md",
+      "title": "タイムブロッキング - カレンダーを味方につける",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-03-09'",
+      "slug": "time-blocking",
+      "published": "true"
+    },
+    {
+      "filename": "069-fear-of-success.md",
+      "title": "「成功への恐怖」という逆説",
+      "category": "メンタルモデル",
+      "tags": "",
+      "date": "'2026-03-10'",
+      "slug": "fear-of-success",
+      "published": "true"
+    },
+    {
+      "filename": "070-delegation-art.md",
+      "title": "任せる技術 - 一人で抱え込まない",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-03-11'",
+      "slug": "delegation-art",
+      "published": "true"
+    },
+    {
+      "filename": "071-money-mindset.md",
+      "title": "お金のマインドブロックを外す",
+      "category": "マインドセット",
+      "tags": "",
+      "date": "'2026-03-12'",
+      "slug": "money-mindset",
+      "published": "true"
+    },
+    {
+      "filename": "072-meetings-efficient.md",
+      "title": "会議を半分にする方法",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-03-13'",
+      "slug": "meetings-efficient",
+      "published": "true"
+    },
+    {
+      "filename": "073-creative-thinking.md",
+      "title": "クリエイティブ思考を鍛える5つの習慣",
+      "category": "思考法",
+      "tags": "",
+      "date": "'2026-03-14'",
+      "slug": "creative-thinking",
+      "published": "true"
+    },
+    {
+      "filename": "074-conflict-resolution.md",
+      "title": "対立を解消する対話の技術",
+      "category": "コーチング",
+      "tags": "",
+      "date": "'2026-03-15'",
+      "slug": "conflict-resolution",
+      "published": "true"
+    },
+    {
+      "filename": "075-learning-curve.md",
+      "title": "学習曲線を理解する - 成長の停滞期を乗り越える",
+      "category": "メンタルモデル",
+      "tags": "",
+      "date": "'2026-03-16'",
+      "slug": "learning-curve",
+      "published": "true"
+    },
+    {
+      "filename": "076-email-productivity.md",
+      "title": "メールに支配されない働き方",
+      "category": "生産性",
+      "tags": "",
+      "date": "'2026-03-17'",
+      "slug": "email-productivity",
+      "published": "true"
+    },
+    {
+      "filename": "077-personal-branding.md",
+      "title": "パーソナルブランディング入門",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-03-18'",
+      "slug": "personal-branding",
+      "published": "true"
+    },
+    {
+      "filename": "078-stress-management.md",
+      "title": "ストレスは敵ではない - 味方につける方法",
+      "category": "マインドセット",
+      "tags": "",
+      "date": "'2026-03-19'",
+      "slug": "stress-management",
+      "published": "true"
+    },
+    {
+      "filename": "079-reading-efficiently.md",
+      "title": "読書の生産性を高める技術",
+      "category": "思考法",
+      "tags": "",
+      "date": "'2026-03-20'",
+      "slug": "reading-efficiently",
+      "published": "true"
+    },
+    {
+      "filename": "080-future-self.md",
+      "title": "未来の自分と対話する - 長期思考の技術",
+      "category": "コーチング",
+      "tags": "",
+      "date": "'2026-03-21'",
+      "slug": "future-self",
+      "published": "true"
+    },
+    {
+      "filename": "081-done-is-better.md",
+      "title": "'「完璧」より「完了」を目指す（統合版）'",
+      "category": "マインドセット",
+      "tags": "",
+      "date": "'2026-03-22'",
+      "slug": "done-is-better-legacy",
+      "published": "false"
+    },
+    {
+      "filename": "101-30s-career-change-guide.md",
+      "title": "30代からのキャリアチェンジ完全ガイド - 40代からでも間に合う転職戦略",
+      "category": "キャリア",
+      "tags": "",
+      "date": "'2026-02-03'",
+      "slug": "30s-career-change-guide",
+      "published": "true"
+    }
+  ],
+  "analysis": {
+    "category_count": {
+      "コーチング": 9,
+      "AI活用": 4,
+      "思考法": 6,
+      "マインドセット": 8,
+      "キャリア": 11,
+      "生産性": 12,
+      "メンタルモデル": 4
+    },
+    "english_categories": []
+  }
+}
