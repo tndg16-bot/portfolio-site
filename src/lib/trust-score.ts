@@ -36,7 +36,6 @@ export enum ReferralBusinessOwnerType {
 
 export enum TrustLevel {
   LEVEL_1_LOWEST = 1,
-  LEVEL_1_LOW = 1,
   LEVEL_2_LOW = 2,
   LEVEL_3_STANDARD = 3,
   LEVEL_4_HIGH = 4,
@@ -55,7 +54,7 @@ export interface Activity {
   userId: string;
   type: ActivityType;
   timestamp: Date;
-  details?: Record<string, any>;
+  details?: Record<string, unknown>;
 }
 
 export interface Feedback {
