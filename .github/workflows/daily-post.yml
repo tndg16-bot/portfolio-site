@@ -1,0 +1,127 @@
+name: Daily Blog Post
+
+on:
+  schedule:
+    # 毎日午前9時（JST）に実行
+    - cron: '0 0 * * *'  # UTC 00:00 = JST 09:00
+  workflow_dispatch:
+    inputs:
+      article_number:
+        description: '特定の記事番号を投稿（空白の場合は次の未公開記事）'
+        required: false
+        default: ''
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  post-article:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+    
+    - name: Find next article to publish
+      id: find-article
+      run: |
+        # 公開済み記事を確認
+        PUBLISHED=$(curl -s "https://api.github.com/repos/${{ github.repository }}/contents/content/blog" | jq -r '.[].name' | grep -E '^[0-9]{3}-' | sort)
+        
+        # 次に投稿する記事を特定
+        if [ -n "${{ github.event.inputs.article_number }}" ]; then
+          NEXT_NUM=$(printf "%03d" ${{ github.event.inputs.article_number }})
+        else
+          # 現在の日付から何日目かを計算
+          START_DATE="2026-01-01"
+          TODAY=$(date +%Y-%m-%d)
+          DAYS_DIFF=$(( ($(date -d "$TODAY" +%s) - $(date -d "$START_DATE" +%s)) / 86400 ))
+          NEXT_NUM=$(printf "%03d" $((DAYS_DIFF + 1)))
+        fi
+        
+        echo "next_number=$NEXT_NUM" >> $GITHUB_OUTPUT
+        echo "Next article number: $NEXT_NUM"
+    
+    - name: Update article date and publish
+      id: publish
+      run: |
+        NEXT_NUM="${{ steps.find-article.outputs.next_number }}"
+        FILE_PATTERN="content/blog/${NEXT_NUM}-*.md"
+        
+        # ファイルを検索
+        FILES=$(ls $FILE_PATTERN 2>/dev/null || echo "")
+        
+        if [ -z "$FILES" ]; then
+          echo "No article found for number $NEXT_NUM"
+          echo "skip=true" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+        
+        # 最初のファイルを使用
+        FILE=$(echo "$FILES" | head -1)
+        echo "Publishing: $FILE"
+        
+        # 日付を今日に更新
+        TODAY=$(date +%Y-%m-%d)
+        sed -i "s/date: .*/date: '$TODAY'/" "$FILE"
+        
+        # ファイル名を取得
+        FILENAME=$(basename "$FILE")
+        echo "filename=$FILENAME" >> $GITHUB_OUTPUT
+        echo "skip=false" >> $GITHUB_OUTPUT
+    
+    - name: Commit and push changes
+      if: steps.publish.outputs.skip != 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add content/blog/
+        git commit -m "📰 Publish article: ${{ steps.publish.outputs.filename }} [$(date +%Y-%m-%d)]"
+        git push
+    
+    - name: Trigger Vercel Deploy
+      if: steps.publish.outputs.skip != 'true'
+      run: |
+        # Vercelのデプロイフックを呼び出し
+        curl -X POST "https://api.vercel.com/v1/integrations/deploy/${{ secrets.VERCEL_DEPLOY_HOOK }}" \
+          -H "Content-Type: application/json" \
+          -d '{}' || echo "Deploy hook skipped"
+    
+    - name: Create notification
+      if: steps.publish.outputs.skip != 'true'
+      run: |
+        echo "✅ Article published successfully!"
+        echo "📅 Date: $(date +%Y-%m-%d)"
+        echo "📝 File: ${{ steps.publish.outputs.filename }}"
+
+  build-check:
+    needs: post-article
+    if: needs.post-article.outputs.skip != 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build check
+      run: npm run build
+      env:
+        CI: true

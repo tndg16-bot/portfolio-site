@@ -1,0 +1,71 @@
+name: Batch Schedule Articles
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_number:
+        description: '開始記事番号（例: 105）'
+        required: true
+      end_number:
+        description: '終了記事番号（例: 320）'
+        required: true
+      start_date:
+        description: '開始日（YYYY-MM-DD形式、空白の場合は今日）'
+        required: false
+        default: ''
+
+jobs:
+  schedule-articles:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Schedule articles
+      run: |
+        START_NUM=${{ github.event.inputs.start_number }}
+        END_NUM=${{ github.event.inputs.end_number }}
+        
+        if [ -n "${{ github.event.inputs.start_date }}" ]; then
+          CURRENT_DATE="${{ github.event.inputs.start_date }}"
+        else
+          CURRENT_DATE=$(date +%Y-%m-%d)
+        fi
+        
+        echo "📅 Scheduling articles $START_NUM to $END_NUM"
+        echo "🗓️  Start date: $CURRENT_DATE"
+        
+        for ((i=START_NUM; i<=END_NUM; i++)); do
+          NUM=$(printf "%03d" $i)
+          FILES=$(ls content/blog/${NUM}-*.md 2>/dev/null || echo "")
+          
+          if [ -n "$FILES" ]; then
+            FILE=$(echo "$FILES" | head -1)
+            # 日付を設定
+            sed -i "s/date: .*/date: '$CURRENT_DATE'/" "$FILE"
+            echo "✅ Scheduled: $(basename $FILE) -> $CURRENT_DATE"
+            
+            # 次の日に進む
+            CURRENT_DATE=$(date -d "$CURRENT_DATE + 1 day" +%Y-%m-%d)
+          else
+            echo "⚠️  No file found for number $NUM"
+          fi
+        done
+    
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add content/blog/
+        git commit -m "📅 Batch schedule articles ${{ github.event.inputs.start_number }}-${{ github.event.inputs.end_number }}"
+        git push
+    
+    - name: Summary
+      run: |
+        echo "✅ Batch scheduling completed!"
+        echo "📊 Articles ${{ github.event.inputs.start_number }}-${{ github.event.inputs.end_number }} have been scheduled."
