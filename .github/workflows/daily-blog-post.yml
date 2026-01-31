@@ -1,0 +1,140 @@
+name: Daily Blog Post & Rebuild
+
+on:
+  schedule:
+    # 毎日午前9時（JST）に実行 - UTC 00:00
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      article_number:
+        description: '特定の記事番号を投稿（空白の場合は次の未公開記事）'
+        required: false
+        default: ''
+
+env:
+  NODE_VERSION: '20'
+
+jobs:
+  post-article:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    outputs:
+      skip: ${{ steps.publish.outputs.skip }}
+      filename: ${{ steps.publish.outputs.filename }}
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Find next article to publish
+      id: find-article
+      run: |
+        # 現在の日付から何日目かを計算（2026-01-01から）
+        START_DATE="2026-01-01"
+        TODAY=$(date +%Y-%m-%d)
+        
+        # 日付差分を計算
+        if [ "$(uname)" = "Darwin" ]; then
+          # macOS
+          START_SEC=$(date -j -f "%Y-%m-%d" "$START_DATE" +%s)
+          TODAY_SEC=$(date -j -f "%Y-%m-%d" "$TODAY" +%s)
+        else
+          # Linux
+          START_SEC=$(date -d "$START_DATE" +%s)
+          TODAY_SEC=$(date -d "$TODAY" +%s)
+        fi
+        
+        DAYS_DIFF=$(( (TODAY_SEC - START_SEC) / 86400 ))
+        
+        # 入力がある場合はそれを使用、なければ自動計算
+        if [ -n "${{ github.event.inputs.article_number }}" ]; then
+          NEXT_NUM=$(printf "%03d" ${{ github.event.inputs.article_number }})
+        else
+          NEXT_NUM=$(printf "%03d" $((DAYS_DIFF + 1)))
+        fi
+        
+        echo "next_number=$NEXT_NUM" >> $GITHUB_OUTPUT
+        echo "Start date: $START_DATE"
+        echo "Today: $TODAY"
+        echo "Days diff: $DAYS_DIFF"
+        echo "Next article: $NEXT_NUM"
+    
+    - name: Check if article exists
+      id: check-file
+      run: |
+        NEXT_NUM="${{ steps.find-article.outputs.next_number }}"
+        FILE=$(ls content/blog/${NEXT_NUM}-*.md 2>/dev/null | head -1 || echo "")
+        
+        if [ -z "$FILE" ]; then
+          echo "Article $NEXT_NUM not found"
+          echo "exists=false" >> $GITHUB_OUTPUT
+        else
+          echo "Found: $FILE"
+          echo "exists=true" >> $GITHUB_OUTPUT
+          echo "filepath=$FILE" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Update article date
+      id: publish
+      if: steps.check-file.outputs.exists == 'true'
+      run: |
+        FILE="${{ steps.check-file.outputs.filepath }}"
+        TODAY=$(date +%Y-%m-%d)
+        FILENAME=$(basename "$FILE")
+        
+        echo "Publishing: $FILENAME"
+        echo "Setting date to: $TODAY"
+        
+        # 日付を更新（YAML frontmatterのdateフィールド）
+        sed -i "s/^date: .*/date: '$TODAY'/" "$FILE"
+        
+        echo "filename=$FILENAME" >> $GITHUB_OUTPUT
+        echo "skip=false" >> $GITHUB_OUTPUT
+    
+    - name: Commit and push
+      if: steps.publish.outputs.skip == 'false'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add content/blog/
+        git commit -m "📰 Publish article: ${{ steps.publish.outputs.filename }} [$TODAY]"
+        git push
+
+  rebuild-and-deploy:
+    needs: post-article
+    if: needs.post-article.outputs.skip == 'false'
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Install Vercel CLI
+      run: npm install --global vercel@latest
+    
+    - name: Pull Vercel Environment
+      run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+    
+    - name: Build Project
+      run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+    
+    - name: Deploy to Vercel
+      run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+    
+    - name: Success notification
+      run: |
+        echo "✅ Article published and deployed!"
+        echo "📅 $(date +%Y-%m-%d)"
+        echo "📝 ${{ needs.post-article.outputs.filename }}"
