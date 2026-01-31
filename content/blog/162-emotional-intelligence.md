@@ -1,6 +1,6 @@
 ---
 title: EQ（感情知能）を高める - IQより大切なもの
-date: '2026-02-27'
+date: "2026-02-27"
 category: コーチング
 tags:
   - EQ

@@ -1,6 +1,6 @@
 ---
 title: AIと共に働く時代 - 代替されない人材になるために
-date: '2026-02-12'
+date: "2026-02-12"
 category: AI活用
 tags:
   - AI

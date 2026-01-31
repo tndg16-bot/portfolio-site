@@ -1,6 +1,6 @@
 ---
 title: AIネイティブ世代の働き方
-date: '2026-04-06'
+date: "2026-04-06"
 category: AI活用
 tags:
   - AI

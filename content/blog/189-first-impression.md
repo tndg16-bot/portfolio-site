@@ -1,6 +1,6 @@
 ---
 title: 第一印象の科学 - 最初の7秒で決まること
-date: '2026-03-26'
+date: "2026-03-26"
 category: キャリア
 tags:
   - Communication

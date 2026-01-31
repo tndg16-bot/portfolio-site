@@ -1,6 +1,6 @@
 ---
 title: 「自分軸」と「他人軸」 - 誰の人生を生きていますか？
-date: '2026-02-10'
+date: "2026-02-10"
 category: コーチング
 tags:
   - Self-awareness

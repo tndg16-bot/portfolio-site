@@ -1,6 +1,6 @@
 ---
 title: 交渉の基本 - WinWinを実現する技術
-date: '2026-04-22'
+date: "2026-04-22"
 category: キャリア
 tags:
   - 交渉

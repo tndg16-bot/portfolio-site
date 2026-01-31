@@ -1,6 +1,6 @@
 ---
 title: 「聞く力」が信頼を作る - アクティブリスニングの技術
-date: '2026-02-14'
+date: "2026-02-14"
 category: コーチング
 tags:
   - Communication

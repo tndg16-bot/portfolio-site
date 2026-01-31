@@ -1,6 +1,6 @@
 ---
 title: メンターを持つべき3つの理由
-date: '2026-02-08'
+date: "2026-02-08"
 category: キャリア
 tags:
   - Career

@@ -1,6 +1,6 @@
 ---
 title: 質問する力 - 答えより問いが大切
-date: '2026-03-29'
+date: "2026-03-29"
 category: 思考法
 tags:
   - Thinking

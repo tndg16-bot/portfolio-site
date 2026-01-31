@@ -1,6 +1,6 @@
 ---
 title: 7つの習慣のエッセンス - 効果性の原則
-date: '2026-05-26'
+date: "2026-05-26"
 category: 思考法
 tags:
   - Seven Habits

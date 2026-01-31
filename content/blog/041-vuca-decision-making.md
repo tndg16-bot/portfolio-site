@@ -1,6 +1,6 @@
 ---
 title: 「正解」を探すな - VUCA時代の意思決定
-date: '2026-01-27'
+date: "2026-01-27"
 category: 思考法
 tags:
   - Decision Making

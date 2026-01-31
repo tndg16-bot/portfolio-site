@@ -1,6 +1,6 @@
 ---
 title: AIを学習パートナーにする方法
-date: '2026-03-05'
+date: "2026-03-05"
 category: AI活用
 tags:
   - AI

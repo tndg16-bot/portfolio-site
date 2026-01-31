@@ -1,6 +1,6 @@
 ---
 title: 「忙しい」と言わない技術 - 時間の支配者になるために
-date: '2026-01-30'
+date: "2026-01-30"
 category: 生産性
 tags:
   - Productivity

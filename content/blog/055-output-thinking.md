@@ -1,6 +1,6 @@
 ---
 title: アウトプット思考 - インプット過多から抜け出す
-date: '2026-02-02'
+date: "2026-02-02"
 category: 思考法
 tags:
   - Learning

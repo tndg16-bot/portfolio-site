@@ -1,6 +1,6 @@
 ---
 title: 人生の優先順位 - 大きな石から入れる
-date: '2026-04-09'
+date: "2026-04-09"
 category: コーチング
 tags:
   - Priorities

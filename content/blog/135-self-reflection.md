@@ -1,6 +1,6 @@
 ---
 title: 内省の技術 - 自分を知るための問いかけ
-date: '2026-05-15'
+date: "2026-05-15"
 category: コーチング
 tags:
   - Self-reflection

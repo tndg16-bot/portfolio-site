@@ -1,6 +1,6 @@
 ---
 title: 逆算思考 - ゴールから今日を決める
-date: '2026-04-08'
+date: "2026-04-08"
 category: 思考法
 tags:
   - Thinking

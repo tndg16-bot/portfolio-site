@@ -1,6 +1,6 @@
 ---
 title: 言語化の力 - モヤモヤを言葉にすると何が変わるのか
-date: '2026-02-19'
+date: "2026-02-19"
 category: 思考法
 tags:
   - Thinking

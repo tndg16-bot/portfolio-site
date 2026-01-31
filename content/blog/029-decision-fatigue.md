@@ -1,6 +1,6 @@
 ---
 title: 決断疲れを防ぐ - 判断力を温存する技術
-date: '2026-01-21'
+date: "2026-01-21"
 category: 生産性
 tags:
   - Productivity

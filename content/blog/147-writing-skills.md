@@ -1,6 +1,6 @@
 ---
 title: 文章力を磨く - 伝わる文章の書き方
-date: '2026-05-27'
+date: "2026-05-27"
 category: キャリア
 tags:
   - Writing

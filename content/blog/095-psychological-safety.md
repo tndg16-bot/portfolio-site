@@ -1,6 +1,6 @@
 ---
 title: 心理的安全性 - チームの生産性を決める見えない要素
-date: '2026-02-15'
+date: "2026-02-15"
 category: キャリア
 tags:
   - Leadership
