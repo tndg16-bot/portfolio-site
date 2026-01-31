@@ -12,12 +12,11 @@ export default function GiscusComments() {
         category="General"
         categoryId="DIC_kwDOQ2r01c4C01dx"
         mapping="pathname"
-        term="Welcome to @giscus/react component!"
         reactionsEnabled="1"
         emitMetadata="0"
         inputPosition="top"
         theme="dark"
-        lang="en"
+        lang="ja"
         loading="lazy"
       />
     </div>

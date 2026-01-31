@@ -1,27 +1,34 @@
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { getSortedPostsData, getAllTags, getAllCategories } from '@/lib/posts';
 import { Metadata } from 'next';
 import NewsletterForm from '@/components/NewsletterForm';
+import SearchBar from '@/components/SearchBar';
 
 export const metadata: Metadata = {
   title: 'Blog | 本山貴大',
   description: 'コーチング、AI活用、思考法、キャリア、生産性に関するブログ記事一覧',
 };
 
-export default function BlogPage() {
+function BlogPageContent() {
   const allPostsData = getSortedPostsData();
   const allTags = getAllTags();
   const allCategories = getAllCategories();
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <header className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Blog</h1>
-          <p className="text-zinc-400 max-w-2xl mx-auto">
-            コーチング、AI活用、思考法、キャリア、生産性など、人生をより豊かにするヒントをお届けします。
-          </p>
+        <div className="max-w-6xl mx-auto">
+        {/* Header with Search */}
+        <header className="mb-12">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-white mb-4">Blog</h1>
+            <p className="text-zinc-400 max-w-2xl mx-auto">
+              コーチング、AI活用、思考法、キャリア、生産性など、人生をより豊かにするヒントをお届けします。
+            </p>
+          </div>
+          <div className="mb-8">
+            <SearchBar />
+          </div>
         </header>
 
         <div className="grid lg:grid-cols-4 gap-8">
@@ -125,6 +132,14 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function BlogPage() {
+  return (
+    <Suspense fallback={<div className="text-white">読み込み中...</div>}>
+      <BlogPageContent />
+    </Suspense>
   );
 }
 

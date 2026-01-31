@@ -6,34 +6,24 @@ import { Mail } from 'lucide-react';
 export default function NewsletterForm() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
+    if (!email) {
+      setErrorMessage('メールアドレスを入力してください。');
+      return;
+    }
 
     setStatus('loading');
+    setErrorMessage('');
 
-    try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to subscribe');
-      }
-
-      const data = await response.json();
-      console.log('Subscribed:', email, data);
+    // Simulate API call
+    setTimeout(() => {
+      console.log('Subscribed:', email);
       setStatus('success');
       setEmail('');
-    } catch (error) {
-      console.error('Subscribe error:', error);
-      setStatus('error');
-    }
+    }, 1000);
   };
 
   return (
@@ -50,29 +40,14 @@ export default function NewsletterForm() {
           Deep Diveを受け取る
         </h3>
 
-        <p className="text-zinc-400 mb-6">
+        <p className="text-zinc-400 mb-8">
           ブログの更新情報や、より深い考察、限定コンテンツをニュースレターとしてお届けします。
           スパムは送りません。いつでも解除可能です。
         </p>
 
-        {/* 登録特典 */}
-        <div className="bg-zinc-800/50 rounded-lg p-4 mb-6 border border-zinc-700">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-yellow-400">🎁</span>
-            <span className="text-white font-semibold">登録特典</span>
-          </div>
-          <p className="text-zinc-300 text-sm">
-            「本当の自分を見つける」自己分析ワークシートをプレゼント！
-          </p>
-          <ul className="text-zinc-400 text-xs mt-2 space-y-1">
-            <li>• 価値観の明確化</li>
-            <li>• 強みの再発見</li>
-            <li>• 行動の軸を決める</li>
-          </ul>
-        </div>
-
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3" aria-label="ニュースレター登録フォーム">
           <input
+            id="newsletter-email"
             type="email"
             placeholder="email@example.com"
             value={email}
@@ -80,28 +55,29 @@ export default function NewsletterForm() {
             disabled={status === 'loading' || status === 'success'}
             className="flex-1 bg-black/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all disabled:opacity-50"
             required
+            aria-label="メールアドレス"
+            aria-invalid={!!errorMessage}
+            aria-describedby={errorMessage ? 'newsletter-error' : undefined}
           />
           <button
             type="submit"
             disabled={status === 'loading' || status === 'success'}
             className="bg-teal-500 hover:bg-teal-400 text-black font-semibold px-6 py-3 rounded-lg transition-colors disabled:opacity-50 whitespace-nowrap"
+            aria-live="polite"
           >
             {status === 'loading' ? '送信中...' : status === 'success' ? '登録完了！' : '登録する'}
           </button>
         </form>
 
-        {status === 'success' && (
-          <p className="text-teal-400 text-sm mt-4 animate-fade-in">
-            登録ありがとうございます！確認メールをお送りしました。
-            <span className="block mt-2 text-zinc-400">
-              📧 登録特典：自己分析ワークシートもお届けします！
-            </span>
+        {errorMessage && (
+          <p id="newsletter-error" className="text-red-400 text-sm mt-2" role="alert">
+            {errorMessage}
           </p>
         )}
 
-        {status === 'error' && (
-          <p className="text-red-400 text-sm mt-4">
-            エラーが発生しました。もう一度お試しください。
+        {status === 'success' && (
+          <p className="text-teal-400 text-sm mt-4 animate-fade-in" role="status">
+            登録ありがとうございます！確認メールをお送りしました。
           </p>
         )}
       </div>

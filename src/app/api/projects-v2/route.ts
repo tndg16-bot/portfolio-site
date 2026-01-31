@@ -5,17 +5,23 @@ import { projectsMetadata, type ProjectMetadata } from '@/data/projects-metadata
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_OWNER = process.env.GITHUB_OWNER || 'tndg16-bot';
 
-// プロジェクトを含むリポジトリ名のリスト
+// プロジェクトを含むリポジトリ名のリスト（projects-metadata.tsの全プロジェクト）
+// tndg16-bot（このリポジトリ）は除外
 const PROJECT_REPOS = [
   'nihongo-mate',
   'gamified-mandala-chart',
   'talent-diagnosis',
   'ai-diagnosis-six',
+  'xboost',
+  'emo-sns',
+  'instagram-automation-platform',
   'ai-writing-automation',
   'kindlescanpdf',
-  'calendar-sync-manager',
-  'termlog',
-  'session-vault',
+  'task-manager',
+  'TermLog-OpenCode',
+  // 'portfolio', // 除外: このサイト自体のリポジトリ
+  'TermLog',
+  'SessionVault',
   'antigravity-vault',
   'self-analysis-notification',
 ];

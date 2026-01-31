@@ -1,96 +1,84 @@
 /**
- * Supabase Client Setup
+ * Supabase Client Configuration
  *
- * This module initializes the Supabase client with environment variables.
- * Environment variables must be set in .env.local for local development
- * and in Vercel for production.
+ * This file sets up the Supabase client for database and auth operations.
+ * Environment variables must be configured in .env.local
  */
 
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-// Supabase configuration
+// Environment variables
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
 
 /**
- * Supabase client instance
- * Use this for all database operations
+ * Create a Supabase client for use in browser and API routes
+ * Uses the anon key for client-side operations
  */
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const createSupabaseClient = (): SupabaseClient => {
+  if (!supabaseUrl || !supabaseAnonKey) {
+    throw new Error('Missing Supabase environment variables');
+  }
+
+  return createClient(supabaseUrl, supabaseAnonKey);
+};
 
 /**
- * Type definitions for database tables
+ * Create a Supabase client with service role privileges
+ * Only use on the server side (API routes, server components)
  */
-export type Database = {
-  public: {
-    Tables: {
-      courses: {
-        Row: {
-          id: string;
-          slug: string;
-          title: string;
-          description: string;
-          thumbnail_url: string;
-          price: number;
-          status: 'draft' | 'published' | 'archived';
-          instructor_name: string;
-          instructor_image_url: string;
-          created_at: string;
-          updated_at: string;
-        };
-        Insert: Omit<Database['public']['Tables']['courses']['Row'], 'id' | 'created_at' | 'updated_at'>;
-        Update: Partial<Database['public']['Tables']['courses']['Insert']>;
-      };
-      modules: {
-        Row: {
-          id: string;
-          course_id: string;
-          title: string;
-          description: string;
-          order: number;
-          created_at: string;
-        };
-        Insert: Omit<Database['public']['Tables']['modules']['Row'], 'id' | 'created_at'>;
-        Update: Partial<Database['public']['Tables']['modules']['Insert']>;
-      };
-      lessons: {
-        Row: {
-          id: string;
-          module_id: string;
-          title: string;
-          description: string;
-          video_url: string;
-          duration: number; // in seconds
-          order: number;
-          created_at: string;
-        };
-        Insert: Omit<Database['public']['Tables']['lessons']['Row'], 'id' | 'created_at'>;
-        Update: Partial<Database['public']['Tables']['lessons']['Insert']>;
-      };
-      enrollments: {
-        Row: {
-          id: string;
-          user_id: string;
-          course_id: string;
-          enrolled_at: string;
-          completed_at: string | null;
-          progress: number; // 0-100
-        };
-        Insert: Omit<Database['public']['Tables']['enrollments']['Row'], 'id' | 'enrolled_at'>;
-        Update: Partial<Database['public']['Tables']['enrollments']['Insert']>;
-      };
-      user_progress: {
-        Row: {
-          id: string;
-          user_id: string;
-          lesson_id: string;
-          completed: boolean;
-          completed_at: string | null;
-          watch_duration: number; // in seconds
-        };
-        Insert: Omit<Database['public']['Tables']['user_progress']['Row'], 'id'>;
-        Update: Partial<Database['public']['Tables']['user_progress']['Insert']>;
-      };
-    };
-  };
+export const createSupabaseServiceClient = (): SupabaseClient => {
+  if (!supabaseUrl || !supabaseServiceRoleKey) {
+    throw new Error('Missing Supabase service role environment variables');
+  }
+
+  return createClient(supabaseUrl, supabaseServiceRoleKey, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false,
+    },
+  });
+};
+
+/**
+ * Singleton instances for reuse
+ */
+let supabaseClientInstance: SupabaseClient | null = null;
+let supabaseServiceClientInstance: SupabaseClient | null = null;
+
+/**
+ * Get the Supabase client (singleton pattern)
+ * For use in API routes and server components
+ */
+export const getSupabaseClient = (): SupabaseClient => {
+  if (!supabaseClientInstance) {
+    supabaseClientInstance = createSupabaseClient();
+  }
+  return supabaseClientInstance;
+};
+
+/**
+ * Get the Supabase service client (singleton pattern)
+ * For server-side operations with elevated privileges
+ */
+export const getSupabaseServiceClient = (): SupabaseClient => {
+  if (!supabaseServiceClientInstance) {
+    supabaseServiceClientInstance = createSupabaseServiceClient();
+  }
+  return supabaseServiceClientInstance;
+};
+
+/**
+ * Check if Supabase is configured
+ */
+export const isSupabaseConfigured = (): boolean => {
+  return !!(supabaseUrl && supabaseAnonKey);
+};
+
+/**
+ * Check if Supabase service role is configured
+ */
+export const isSupabaseServiceConfigured = (): boolean => {
+  return !!(supabaseUrl && supabaseServiceRoleKey);
 };

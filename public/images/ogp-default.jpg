@@ -1,0 +1,7 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#030712"/>
+  <circle cx="200" cy="200" r="300" fill="rgba(59, 130, 246, 0.2)"/>
+  <circle cx="1000" cy="430" r="300" fill="rgba(147, 51, 234, 0.2)"/>
+  <rect x="350" y="140" width="500" height="350" rx="20" fill="rgba(0,0,0,0.5)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="600" y="340" font-family="sans-serif" font-size="64" font-weight="900" fill="#fff" text-anchor="middle">本山貴大 Portfolio</text>
+</svg>
