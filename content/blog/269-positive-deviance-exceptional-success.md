@@ -2,7 +2,7 @@
 title: "ポジティブ・デビアンス（前向きな逸脱）：例外的な成功者に学ぶ思考"
 description: "同じ環境でなぜかうまくいっている人の「普通じゃない行動」に注目し、逆境を乗り越えるための新しい視点を得る方法を解説します。"
 date: "2026-01-31"
-category: "思考法"
+category: 思考法
 tags: ["ポジティブ・デビアンス", "成功パターン", "逆境", "学習"]
 slug: "positive-deviance-exceptional-success"
 published: true

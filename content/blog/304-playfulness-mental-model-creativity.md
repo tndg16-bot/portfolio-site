@@ -2,7 +2,7 @@
 title: "遊び心のメンタルモデル：真面目すぎる自分に「余裕」を取り戻す"
 description: "仕事をゲームのように楽しみ、クリエイティブな発想を引き出す余裕を持つことで、パフォーマンスと幸福感を高める方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["遊び心", "余裕", "クリエイティビティ", "楽しさ"]
 slug: "playfulness-mental-model-creativity"
 published: true

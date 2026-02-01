@@ -2,7 +2,7 @@
 title: "マインドフルネス：今この瞬間に100%存在するための練習"
 description: "過去の後悔や未来の不安に意識を飛ばさず、目の前のことに没頭することで、充実感とパフォーマンスを高める方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["マインドフルネス", "今を生きる", "集中力", "充実感"]
 slug: "mindfulness-present-moment"
 published: true

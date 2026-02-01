@@ -2,7 +2,7 @@
 title: "承認欲求との付き合い方：他人の評価を「おまけ」と考える"
 description: "自分の価値を外側に求めず、内側から湧き出る充実感を優先することで、健康的な承認欲求のバランスを取る方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["承認欲求", "自己肯定感", "内面の充実", "自己価値"]
 slug: "approval-seeking-internal-validation"
 published: true

@@ -2,7 +2,7 @@
 title: "幸福のメンタルモデル：条件付きの幸せから、今すぐ感じられる幸せへ"
 description: "「〜すれば幸せになれる」という幻想を捨て、日常の充足感に目を向けることで、今この瞬間から幸福を感じる方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["幸福", "充足感", "マインドセット", "今を生きる"]
 slug: "happiness-mental-model-present"
 published: true

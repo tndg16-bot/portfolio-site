@@ -2,7 +2,7 @@
 title: "思考の「レバレッジ」：小さな力で大きな成果を出すための視点"
 description: "どこを動かせば全体が大きく変わるか、力の支点を探し出す「レバレッジ思考」を身につけ、効率的に成果を上げる方法を解説します。"
 date: "2026-01-31"
-category: "思考法"
+category: 思考法
 tags: ["レバレッジ", "効率性", "成果最大化", "戦略的思考"]
 slug: "thinking-leverage-small-effort-big-results"
 published: true

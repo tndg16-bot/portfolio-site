@@ -2,7 +2,7 @@
 title: "自分の「内なる子供（インナーチャイルド）」を癒し、今の自分を助ける"
 description: "幼少期の満たされなかった想いに気づき、自分で自分を愛するプロセスを通じて、内なる癒しを実現する方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["インナーチャイルド", "癒し", "自己愛", "過去"]
 slug: "inner-child-healing-self-love"
 published: true

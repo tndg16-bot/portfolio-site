@@ -2,7 +2,7 @@
 title: "自分の「キャパシティ」を知り、限界を超える前にブレーキをかける"
 description: "バーンアウト（燃え尽き）を防ぐために、自分の疲労度を正確に測るセンサーを持ち、適切なタイミングで休息を取る方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["キャパシティ", "バーンアウト", "セルフケア", "限界"]
 slug: "capacity-awareness-burnout-prevention"
 published: true

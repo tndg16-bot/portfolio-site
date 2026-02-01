@@ -2,7 +2,7 @@
 title: "ストレスを「敵」にしない。適度な負荷を成長の糧に変える方法"
 description: "ストレス反応を「体が準備を整えているサイン」と捉え直すマインドセットと、適度な負荷を活用して成長する方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["ストレス", "レジリエンス", "成長", "マインドセット"]
 slug: "stress-growth-mindset-challenge"
 published: true

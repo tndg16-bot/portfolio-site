@@ -2,7 +2,7 @@
 title: "メンタルヘルスのための「逃げ場」を複数持っておく戦略"
 description: "仕事以外に、趣味やサードプレイスなど、自分を肯定できる場所を分散させることで、メンタルの安定を保つ方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["メンタルヘルス", "逃げ場", "多様性", "安定"]
 slug: "mental-health-multiple-sanctuaries"
 published: true

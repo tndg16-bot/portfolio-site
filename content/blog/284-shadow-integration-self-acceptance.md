@@ -2,7 +2,7 @@
 title: "自分の「影（シャドウ）」を認め、統合することで人格を完成させる"
 description: "自分の中の認めたくない部分を直視し、それも自分の一部として受け入れることで、より完全な自己を実現する方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["シャドウ", "自己統合", "自己受容", "人格形成"]
 slug: "shadow-integration-self-acceptance"
 published: true

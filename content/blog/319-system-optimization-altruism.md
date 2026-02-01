@@ -2,7 +2,7 @@
 title: "全体最適のメンタル：自分の利益だけでなく、周囲や社会の幸せを願う"
 description: "結局は他人のために動くことが、自分に最大の幸福を運んでくるという真理を理解し、全体最適を目指す生き方を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["全体最適", "利他", "幸福", "社会貢献"]
 slug: "system-optimization-altruism"
 published: true

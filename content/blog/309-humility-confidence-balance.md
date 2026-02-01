@@ -2,7 +2,7 @@
 title: "謙虚さと自信の同居：学び続ける姿勢と、自分の価値を信じる力"
 description: "傲慢にならず、かといって卑下もせず、ありのままの自分を表現することで、健全な自信と謙虚さのバランスを取る方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["謙虚", "自信", "バランス", "自己表現"]
 slug: "humility-confidence-balance"
 published: true

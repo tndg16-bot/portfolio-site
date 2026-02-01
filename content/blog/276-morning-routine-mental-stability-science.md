@@ -2,7 +2,7 @@
 title: "モーニングルーティンが「メンタルの安定」に効く科学的理由"
 description: "毎朝の決まった動作が脳に安心感を与え、1日のパフォーマンスを底上げする「モーニングルーティン」の科学と実践法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["モーニングルーティン", "習慣", "メンタルヘルス", "パフォーマンス"]
 slug: "morning-routine-mental-stability-science"
 published: true

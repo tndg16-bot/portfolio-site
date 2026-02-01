@@ -2,7 +2,7 @@
 title: "思考の「美学」：正解よりも「自分らしい答え」を追求する"
 description: "効率や利益だけでなく、自分の倫理観や感性に照らして正しいと思える答えを追求する「思考の美学」を解説します。"
 date: "2026-01-31"
-category: "思考法"
+category: 思考法
 tags: ["思考の美学", "価値観", "自己実現", "倫理"]
 slug: "thinking-aesthetics-personal-answer"
 published: true

@@ -2,7 +2,7 @@
 title: "自分の「感情のトリガー」を知り、反応を遅らせる練習"
 description: "何に怒り、何に悲しむのか。自分の地雷を把握して、反射的な行動を防ぎ、より適切な対応ができるようになる方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["感情トリガー", "自己認識", "反応コントロール", "EQ"]
 slug: "emotional-triggers-self-awareness"
 published: true

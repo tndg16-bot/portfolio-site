@@ -2,7 +2,7 @@
 title: "メンタルブロックの正体：過去のトラウマをどう癒し、前へ進むか"
 description: "無意識に自分を止めている記憶を、専門的なワークで書き換えていくことで、過去から解放され、新しい一歩を踏み出す方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["メンタルブロック", "トラウマ", "過去の解放", "前進"]
 slug: "mental-blocks-trauma-healing"
 published: true

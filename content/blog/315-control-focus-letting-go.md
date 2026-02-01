@@ -2,7 +2,7 @@
 title: "「コントロールできること」だけに集中し、それ以外は手放す思考"
 description: "天気や他人の評価は変えられない。自分の反応と行動に全力を注ぐことで、無駄なエネルギーを削減し、充実感を得る方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["コントロール", "手放す", "集中", "ストイック"]
 slug: "control-focus-letting-go"
 published: true

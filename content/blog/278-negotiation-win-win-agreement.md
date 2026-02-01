@@ -2,7 +2,7 @@
 title: "交渉のメンタルモデル：相手を倒すのではなく「合意」を作る"
 description: "敵対的な姿勢を捨て、お互いの利益を最大化するパートナーシップを構築する「Win-Win」の交渉術を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["交渉", "Win-Win", "コミュニケーション", "対立解消"]
 slug: "negotiation-win-win-agreement"
 published: true

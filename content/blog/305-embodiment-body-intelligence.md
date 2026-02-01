@@ -2,7 +2,7 @@
 title: "身体的知性（エンボディメント）：体の感覚を思考に活かす方法"
 description: "違和感やワクワクなど、体の反応を重要な判断材料として採用し、頭だけでなく体全体を使って生きる方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["エンボディメント", "身体知", "直感", "全体性"]
 slug: "embodiment-body-intelligence"
 published: true

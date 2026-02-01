@@ -2,7 +2,7 @@
 title: "レジリエンスを高める「感謝」の力：脳のフォーカスを変える習慣"
 description: "欠乏ではなく、今あるものに目を向けることで、メンタルの回復力を強め、逆境を乗り越える力を育む方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["感謝", "レジリエンス", "ポジティブ心理学", "回復力"]
 slug: "gratitude-resilience-focus"
 published: true

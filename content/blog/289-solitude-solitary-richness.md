@@ -2,7 +2,7 @@
 title: "「孤独」を「孤高」に変える：一人でいる時間を豊かに過ごす思考"
 description: "寂しさを埋めるための付き合いをやめ、自分と対話する時間を大切にすることで、内なる豊かさを育む方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["孤独", "孤高", "自己対話", "内面の豊かさ"]
 slug: "solitude-solitary-richness"
 published: true

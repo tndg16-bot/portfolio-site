@@ -2,7 +2,7 @@
 title: "プロフェッショナルのメンタル：気分に左右されず、淡々と成果を出す"
 description: "モチベーションを言い訳にせず、決めたルーティンをやり抜く精神的規律を身につけ、プロとしての信頼を築く方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["プロフェッショナル", "規律", "モチベーション", "習慣"]
 slug: "professional-mental-discipline"
 published: true

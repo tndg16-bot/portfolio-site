@@ -2,7 +2,7 @@
 title: "セルフイメージの書き換え：自分が思う「自分像」が現実を作る"
 description: "「自分はこういう人間だ」という定義を更新し、行動を劇的に変えることで、望む現実を引き寄せる方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["セルフイメージ", "自己実現", "現実創造", "マインドセット"]
 slug: "self-image-rewriting-reality"
 published: true

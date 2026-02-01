@@ -2,7 +2,7 @@
 title: "自己肯定感の「土台」を作る：根拠のない自信を持つ勇気"
 description: "実績や評価に関わらず、自分の存在そのものにYesを言える感覚を育むことで、揺るぎない自己肯定感を築く方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["自己肯定感", "自信", "自己受容", "土台"]
 slug: "self-esteem-foundation-worthiness"
 published: true

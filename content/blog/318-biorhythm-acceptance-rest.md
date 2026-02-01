@@ -2,7 +2,7 @@
 title: "自分の「バイオリズム」を受け入れ、停滞期を静かに過ごす"
 description: "絶好調が続かないことを知り、エネルギーが低い時はあえて無理をしないことで、長期的なパフォーマンスを維持する方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["バイオリズム", "停滞期", "受容", "長期的視点"]
 slug: "biorhythm-acceptance-rest"
 published: true

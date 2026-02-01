@@ -2,7 +2,7 @@
 title: "自分の「怒りのパターン」を分析し、クールダウンの仕組みを作る"
 description: "なぜ自分は怒るのか？その背景にある「悲しみ」や「寂しさ」に気づき、怒りを適切に管理する方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["怒り", "感情管理", "パターン分析", "クールダウン"]
 slug: "anger-pattern-analysis-cooldown"
 published: true

@@ -2,7 +2,7 @@
 title: "「許す」ということ：過去の自分や他人を解放し、軽やかに生きる"
 description: "恨みや後悔の重荷を下ろし、自分のためのエネルギーを現在に取り戻すことで、心の自由を手に入れる方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["許し", "解放", "過去", "軽やかさ"]
 slug: "forgiveness-letting-go-freedom"
 published: true

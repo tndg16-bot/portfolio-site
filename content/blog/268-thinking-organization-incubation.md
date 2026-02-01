@@ -2,7 +2,7 @@
 title: "思考の「整理学」：情報を寝かせて、アイデアを熟成させる時間"
 description: "必死に考えても答えが出ない時は、あえて離れる。無意識の働きを活用し、創造的なアイデアを引き出す「インキュベーション」の技術を解説します。"
 date: "2026-01-31"
-category: "思考法"
+category: 思考法
 tags: ["創造性", "インキュベーション", "無意識", "アイデア発想"]
 slug: "thinking-organization-incubation"
 published: true

@@ -2,7 +2,7 @@
 title: "期待値のコントロール：自分と他人に過度な期待をしない技術"
 description: "「こうあるべき」という理想を押し付けず、現状をありのままに受け止め、より健康的な期待値を設定する方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["期待値管理", "現実受容", "ストレス軽減", "人間関係"]
 slug: "expectation-management-reality-acceptance"
 published: true

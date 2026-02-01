@@ -2,7 +2,7 @@
 title: "「問い」の質が人生の質を決める。自分への質問をアップデートする"
 description: "無意識に繰り返している「質問のパターン」を見直し、より建設的で創造的な問いに切り替えることで、人生の方向性を変える方法を解説します。"
 date: "2026-01-31"
-category: "思考法"
+category: 思考法
 tags: ["問いの力", "自己対話", "マインドセット", "思考の質"]
 slug: "question-quality-determines-life"
 published: true

@@ -2,7 +2,7 @@
 title: "お金との健全な関係性：不安から解放され、自由に使うための哲学"
 description: "貯めること自体を目的化せず、自分の人生を豊かにする道具としてお金を再定義し、健全なマネーマインドセットを構築する方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["マネーマインドセット", "お金", "価値観", "豊かさ"]
 slug: "healthy-money-relationship-philosophy"
 published: true

@@ -2,7 +2,7 @@
 title: "自分の「強みの暗部」を知る：強みが裏目に出る時の対処法"
 description: "責任感が強すぎて抱え込むなど、長所の行き過ぎを自覚し調整することで、強みをより効果的に活かす方法を解説します。"
 date: "2026-01-31"
-category: "メンタルモデル"
+category: メンタルモデル
 tags: ["強み", "シャドウ", "バランス", "自己認識"]
 slug: "strengths-shadow-side-management"
 published: true
