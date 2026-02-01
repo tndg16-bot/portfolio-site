@@ -2,13 +2,13 @@
 title: "第一印象をコントロールし、最初から「信頼」を勝ち取る"
 description: "外見、話し方、表情。非言語コミュニケーションがコーチングに与える影響"
 date: "2026-05-27"
-category: コーチング
+category: "コーチング"
 tags:
-  - 第一印象
-  - 信頼
-  - 非言語コミュニケーション
+  - "第一印象"
+  - "信頼"
+  - "非言語コミュニケーション"
 published: true
-slug: first-impression-control-trust
+slug: "first-impression-control-trust"
 ---
 
 コーチング関係において、最初の数秒で信頼の基盤が作られます。外見、話し方、表情などの非言語コミュニケーションをコントロールし、最初から信頼を勝ち取る方法を解説します。

@@ -1,12 +1,12 @@
 ---
-title: ディープワークの時代 - なぜ集中力が最強のスキルになったのか
+title: "ディープワークの時代 - なぜ集中力が最強のスキルになったのか"
 date: "2026-01-23"
-category: 生産性
+category: "生産性"
 tags:
-  - Productivity
-  - Focus
-  - Work Style
-description: 通知、メール、会議…分断される現代の仕事。集中力を取り戻し、圧倒的な成果を出すディープワークの技術。
+  - "Productivity"
+  - "Focus"
+  - "Work Style"
+description: "通知、メール、会議…分断される現代の仕事。集中力を取り戻し、圧倒的な成果を出すディープワークの技術。"
 published: true
 ---
 

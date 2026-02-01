@@ -1,12 +1,12 @@
 ---
-title: ゴールセッティングの科学 - SMARTでは足りない
+title: "ゴールセッティングの科学 - SMARTでは足りない"
 date: "2026-02-11"
-category: 生産性
+category: "生産性"
 tags:
-  - 生産性
-  - 目標設定
-  - 成長
-description: 目標を立てても達成できない。それはSMARTだけでは不十分だからかもしれません。
+  - "生産性"
+  - "目標設定"
+  - "成長"
+description: "目標を立てても達成できない。それはSMARTだけでは不十分だからかもしれません。"
 published: true
 ---
 

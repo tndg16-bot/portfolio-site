@@ -1,12 +1,12 @@
 ---
-title: 文章力を磨く - 伝わる文章の書き方
+title: "文章力を磨く - 伝わる文章の書き方"
 date: "2026-05-27"
-category: キャリア
+category: "キャリア"
 tags:
-  - Writing
-  - Communication
-  - Career
-description: メール、報告書、企画書。文章力は仕事の質を左右します。伝わる文章を書くコツ。
+  - "Writing"
+  - "Communication"
+  - "Career"
+description: "メール、報告書、企画書。文章力は仕事の質を左右します。伝わる文章を書くコツ。"
 published: true
 ---
 

@@ -2,14 +2,14 @@
 title: "プログラミング未経験者がAIでツールを自作する時代"
 description: "CursorやClineを使い、自分に必要なデスクトップアプリを作る手順。"
 date: "2026-01-12"
-category: AI活用
+category: "AI活用"
 tags:
-  - ノーコード
-  - Cursor
-  - プログラミング
-  - ツール開発
+  - "ノーコード"
+  - "Cursor"
+  - "プログラミング"
+  - "ツール開発"
 published: true
-slug: ai-no-code-tools
+slug: "ai-no-code-tools"
 ---
 
 ## はじめに

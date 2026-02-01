@@ -2,14 +2,14 @@
 title: "AIによるメール返信のドラフト作成で「返信疲れ」を防ぐ"
 description: "相手のトーンに合わせた適切な表現を、AIに一瞬で提案させるコツ。"
 date: "2026-01-18"
-category: AI活用
+category: "AI活用"
 tags:
-  - メール
-  - 返信
-  - テンプレート
-  - コミュニケーション
+  - "メール"
+  - "返信"
+  - "テンプレート"
+  - "コミュニケーション"
 published: true
-slug: ai-email-reply
+slug: "ai-email-reply"
 ---
 
 ## はじめに

@@ -2,13 +2,13 @@
 title: "感情的な相手への対処法：共感しつつ、冷静な対話へ導く"
 description: "相手の感情の荒波に巻き込まれず、安全な避難所として機能するコーチの姿勢"
 date: "2026-06-05"
-category: コーチング
+category: "コーチング"
 tags:
-  - 感情
-  - 共感
-  - 冷静
+  - "感情"
+  - "共感"
+  - "冷静"
 published: true
-slug: handle-emotional-clients-empathy
+slug: "handle-emotional-clients-empathy"
 ---
 
 感情的になっているクライアントに対して、共感しつつも冷静さを保ち、建設的な対話へ導くことが重要です。感情の荒波に巻き込まれず、安全な存在として機能する方法を解説します。

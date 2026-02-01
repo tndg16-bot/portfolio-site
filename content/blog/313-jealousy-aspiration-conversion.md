@@ -2,8 +2,12 @@
 title: "嫉妬を「憧れ」に変換し、自分の成長エネルギーにする技術"
 description: "他人の成功を憎むのではなく、自分が本当に求めているものを知るヒントにして、嫉妬を前向きな力に変える方法を解説します。"
 date: "2026-01-31"
-category: メンタルモデル
-tags: ["嫉妬", "憧れ", "成長", "感情変換"]
+category: "メンタルモデル"
+tags:
+  - "嫉妬"
+  - "憧れ"
+  - "成長"
+  - "感情変換"
 slug: "jealousy-aspiration-conversion"
 published: true
 ---

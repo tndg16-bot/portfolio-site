@@ -1,13 +1,13 @@
 ---
-title: ミニマリズムと生産性 - 少なく持つことで得られるもの
+title: "ミニマリズムと生産性 - 少なく持つことで得られるもの"
 date: "2026-02-26"
-category: 生産性
+category: "生産性"
 tags:
-  - ミニマリズム
-  - 生産性
-  - ライフスタイル
-description: 物が多いと選択が増え、脳が疲れる。減らすことで増えるものがあります。
-slug: minimal-lifestyle
+  - "ミニマリズム"
+  - "生産性"
+  - "ライフスタイル"
+description: "物が多いと選択が増え、脳が疲れる。減らすことで増えるものがあります。"
+slug: "minimal-lifestyle"
 published: true
 ---
 

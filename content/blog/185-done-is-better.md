@@ -1,14 +1,14 @@
 ---
-title: '「完璧」より「完了」を目指す（統合版）"
+title: "「完璧」より「完了」を目指す（統合版）"
 date: "2026-03-22"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 完璧主義
-  - 完了主義
-  - 行動力
-description: 完璧を求めて動けなくなるより、まず完了させる。Done is better than perfectの実践法。統合版記事はこちらをご覧ください。
+  - "完璧主義"
+  - "完了主義"
+  - "行動力"
+description: "完璧を求めて動けなくなるより、まず完了させる。Done is better than perfectの実践法。統合版記事はこちらをご覧ください。"
 published: false
-slug: done-is-better-legacy
+slug: "done-is-better-legacy"
 ---
 
 # 📝 アーカイブ化のお知らせ

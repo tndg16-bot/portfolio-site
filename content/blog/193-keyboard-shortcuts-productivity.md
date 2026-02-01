@@ -2,13 +2,13 @@
 title: "パソコンのショートカットキーを習得して「秒単位」で得をする"
 description: "マウス操作を減らし、思考を途切れさせずに操作を完結させるための厳選10選"
 date: "2026-03-30"
-category: 生産性
+category: "生産性"
 tags:
-  - ショートカットキー
-  - PC操作
-  - 効率化
+  - "ショートカットキー"
+  - "PC操作"
+  - "効率化"
 published: true
-slug: keyboard-shortcuts-productivity
+slug: "keyboard-shortcuts-productivity"
 ---
 
 パソコン作業において、マウスとキーボードを行き来する時間は意外と多く、思考の流れも断ち切られがちです。ショートカットキーを活用することで、操作がスムーズになり、秒単位の積み重ねが大きな生産性向上につながります。

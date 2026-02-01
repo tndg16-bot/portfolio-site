@@ -2,14 +2,14 @@
 title: "AI時代の「人間にしかできない仕事」を再定義する"
 description: "自動化が進む中で、最後まで残る付加価値の高いスキルの見極め方。"
 date: "2026-01-13"
-category: AI活用
+category: "AI活用"
 tags:
-  - AI時代
-  - スキル
-  - キャリア
-  - 人間力
+  - "AI時代"
+  - "スキル"
+  - "キャリア"
+  - "人間力"
 published: true
-slug: human-only-work-ai-era
+slug: "human-only-work-ai-era"
 ---
 
 ## はじめに

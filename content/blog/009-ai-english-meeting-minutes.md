@@ -2,14 +2,14 @@
 title: "英語会議の議事録作成をAIで完全自動化する"
 description: "Whisperなどの文字起こしツールと連携し、要点を抽出するワークフロー。"
 date: "2026-01-10"
-category: AI活用
+category: "AI活用"
 tags:
-  - 議事録
-  - Whisper
-  - 英語
-  - 自動化
+  - "議事録"
+  - "Whisper"
+  - "英語"
+  - "自動化"
 published: true
-slug: ai-english-meeting-minutes
+slug: "ai-english-meeting-minutes"
 ---
 
 ## はじめに

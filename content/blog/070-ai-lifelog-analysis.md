@@ -2,14 +2,14 @@
 title: "AIを活用したライフログの分析：理想のルーティンを見つける"
 description: "行動記録をAIに読み込ませ、最もパフォーマンスが高い日の共通点を探す。"
 date: "2026-02-07"
-category: AI活用
+category: "AI活用"
 tags:
-  - ライフログ
-  - 行動分析
-  - ルーティン
-  - 自己改善
+  - "ライフログ"
+  - "行動分析"
+  - "ルーティン"
+  - "自己改善"
 published: true
-slug: ai-lifelog-analysis
+slug: "ai-lifelog-analysis"
 ---
 
 ## はじめに

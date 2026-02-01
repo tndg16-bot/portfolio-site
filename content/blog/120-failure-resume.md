@@ -1,13 +1,13 @@
 ---
-title: 「失敗履歴書」を書く - 失敗から学ぶ技術
+title: "「失敗履歴書」を書く - 失敗から学ぶ技術"
 date: "2026-04-30"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 失敗
-  - 成長
-  - 内省
-description: 成功履歴書ではなく失敗履歴書を書く。失敗を資産に変える方法。
-slug: failure-resume
+  - "失敗"
+  - "成長"
+  - "内省"
+description: "成功履歴書ではなく失敗履歴書を書く。失敗を資産に変える方法。"
+slug: "failure-resume"
 published: true
 ---
 

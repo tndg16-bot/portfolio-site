@@ -2,14 +2,14 @@
 title: "AI時代の「知的誠実さ」と著作権の考え方"
 description: "AIを利用して成果物を出す際の、倫理的な注意点と権利関係の基礎知識。"
 date: "2026-02-14"
-category: AI活用
+category: "AI活用"
 tags:
-  - 倫理
-  - 著作権
-  - 知的財産
-  - AI活用
+  - "倫理"
+  - "著作権"
+  - "知的財産"
+  - "AI活用"
 published: true
-slug: ai-intellectual-honesty
+slug: "ai-intellectual-honesty"
 ---
 
 ## はじめに

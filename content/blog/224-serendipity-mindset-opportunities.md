@@ -2,13 +2,13 @@
 title: "運を引き寄せる「偶然の活用力」を育てるマインドセット"
 description: "計画通りにいかないことを楽しみ、予期せぬチャンスを掴み取るための柔軟性"
 date: "2026-04-30"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - セレンディピティ
-  - 偶然
-  - 機会
+  - "セレンディピティ"
+  - "偶然"
+  - "機会"
 published: true
-slug: serendipity-mindset-opportunities
+slug: "serendipity-mindset-opportunities"
 ---
 
 人生において、計画通りにいかない「偶然」は避けられません。しかし、この偶然を「障害」ではなく「機会」として捉える「セレンディピティ・マインドセット」を持つことで、予期せぬチャンスを掴むことができます。

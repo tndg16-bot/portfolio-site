@@ -2,13 +2,13 @@
 title: "マインドセットの更新頻度を上げ、時代の変化に追随する"
 description: "一度身につけた考え方に固執せず、常に「OS」を最新版に保つ"
 date: "2026-05-17"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - マインドセット
-  - 更新
-  - 学習
+  - "マインドセット"
+  - "更新"
+  - "学習"
 published: true
-slug: update-mindset-frequency
+slug: "update-mindset-frequency"
 ---
 
 一度身につけた考え方や信念に固執すると、変化する時代に取り残されます。マインドセットを定期的に更新し、常に最新の「OS」を保つことが重要です。

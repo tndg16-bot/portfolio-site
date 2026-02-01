@@ -1,12 +1,12 @@
 ---
-title: AIと共に働く時代 - 代替されない人材になるために
+title: "AIと共に働く時代 - 代替されない人材になるために"
 date: "2026-02-12"
-category: AI活用
+category: "AI活用"
 tags:
-  - AI
-  - Career
-  - Future of Work
-description: AIに仕事を奪われる？その心配より、AIと共に働くスキルを身につけることが重要です。
+  - "AI"
+  - "Career"
+  - "Future of Work"
+description: "AIに仕事を奪われる？その心配より、AIと共に働くスキルを身につけることが重要です。"
 published: true
 ---
 

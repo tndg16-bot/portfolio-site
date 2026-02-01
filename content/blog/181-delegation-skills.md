@@ -1,15 +1,15 @@
 ---
-title: 「任せる技術」：自分の時給に合わない仕事を手放す基準
-description: 自分でやったほうが早いという誘惑に勝ち、チームに権限を譲渡する。
+title: "「任せる技術」：自分の時給に合わない仕事を手放す基準"
+description: "自分でやったほうが早いという誘惑に勝ち、チームに権限を譲渡する。"
 date: "2026-03-18"
-category: 生産性
+category: "生産性"
 tags:
-  - 委任
-  - 任せる技術
-  - チームワーク
-  - 生産性
+  - "委任"
+  - "任せる技術"
+  - "チームワーク"
+  - "生産性"
 published: true
-slug: delegation-skills
+slug: "delegation-skills"
 ---
 
 ## はじめに

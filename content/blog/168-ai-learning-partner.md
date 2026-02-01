@@ -1,13 +1,13 @@
 ---
-title: AIを学習パートナーにする方法
+title: "AIを学習パートナーにする方法"
 date: "2026-03-05"
-category: AI活用
+category: "AI活用"
 tags:
-  - AI
-  - 学習
-  - 教育
-description: ChatGPTを家庭教師のように使う。効果的なAI学習活用法。
-slug: ai-learning-partner
+  - "AI"
+  - "学習"
+  - "教育"
+description: "ChatGPTを家庭教師のように使う。効果的なAI学習活用法。"
+slug: "ai-learning-partner"
 published: true
 ---
 

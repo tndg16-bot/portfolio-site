@@ -1,13 +1,13 @@
 ---
-title: 読書の生産性を高める技術
+title: "読書の生産性を高める技術"
 date: "2026-03-20"
-category: 思考法
+category: "思考法"
 tags:
-  - 読書
-  - 学習
-  - 生産性
-description: 本を読んでも身につかない。読書の効果を最大化するための読み方。
-slug: reading-efficiently
+  - "読書"
+  - "学習"
+  - "生産性"
+description: "本を読んでも身につかない。読書の効果を最大化するための読み方。"
+slug: "reading-efficiently"
 published: true
 ---
 

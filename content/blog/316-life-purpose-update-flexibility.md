@@ -2,8 +2,12 @@
 title: "人生の「目的」を何度でもアップデートする柔軟性"
 description: "10代、20代の頃の目標に縛られず、今の自分が心から望むことを定義し直すことで、常に新鮮な動機を保つ方法を解説します。"
 date: "2026-01-31"
-category: メンタルモデル
-tags: ["目的", "アップデート", "柔軟性", "成長"]
+category: "メンタルモデル"
+tags:
+  - "目的"
+  - "アップデート"
+  - "柔軟性"
+  - "成長"
 slug: "life-purpose-update-flexibility"
 published: true
 ---

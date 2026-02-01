@@ -2,13 +2,13 @@
 title: "孤立を恐れず「自分の正解」を信じて突き進む時期"
 description: "周囲の反対があっても、自分の直感と検証結果を信じて勝負する時の心得"
 date: "2026-05-04"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 孤立
-  - 信念
-  - 自分軸
+  - "孤立"
+  - "信念"
+  - "自分軸"
 published: true
-slug: trust-own-path-despite-isolation
+slug: "trust-own-path-despite-isolation"
 ---
 
 周囲の反対や理解が得られない時、孤独を感じ、自分の道を信じられなくなることがあります。しかし、人生の重要な転機では、孤立を恐れず自分の正解を信じて進む勇気が必要です。

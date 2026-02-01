@@ -1,15 +1,15 @@
 ---
-title: 「集中力の切れるサイン」を察知して先回りして休む
-description: 疲れ果てる前に小休止を挟むことで、1日のトータルアウトプットを最大化。
+title: "「集中力の切れるサイン」を察知して先回りして休む"
+description: "疲れ果てる前に小休止を挟むことで、1日のトータルアウトプットを最大化。"
 date: "2026-03-16"
-category: 生産性
+category: "生産性"
 tags:
-  - 集中力
-  - 休息
-  - セルフモニタリング
-  - 生産性
+  - "集中力"
+  - "休息"
+  - "セルフモニタリング"
+  - "生産性"
 published: true
-slug: focus-warning-signs
+slug: "focus-warning-signs"
 ---
 
 ## はじめに

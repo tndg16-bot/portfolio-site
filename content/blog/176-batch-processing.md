@@ -1,15 +1,15 @@
 ---
-title: 仕事の「バッチ処理」で集中力を一定に保つ方法
-description: 似たようなタスクをまとめて処理し、脳の切り替え回数を最小化する。
+title: "仕事の「バッチ処理」で集中力を一定に保つ方法"
+description: "似たようなタスクをまとめて処理し、脳の切り替え回数を最小化する。"
 date: "2026-03-13"
-category: 生産性
+category: "生産性"
 tags:
-  - バッチ処理
-  - 集中力
-  - 効率化
-  - ワークフロー
+  - "バッチ処理"
+  - "集中力"
+  - "効率化"
+  - "ワークフロー"
 published: true
-slug: batch-processing-work
+slug: "batch-processing-work"
 ---
 
 ## はじめに

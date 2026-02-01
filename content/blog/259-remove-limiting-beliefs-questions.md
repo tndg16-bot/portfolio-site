@@ -2,13 +2,13 @@
 title: "相手の「思い込み（リミッティング・ビリーフ）」を外す問いかけ"
 description: "「できない」を「どうすればできるか」に変換するための、視点変更の質問"
 date: "2026-06-04"
-category: コーチング
+category: "コーチング"
 tags:
-  - リミッティングビリーフ
-  - 質問
-  - 視点変更
+  - "リミッティングビリーフ"
+  - "質問"
+  - "視点変更"
 published: true
-slug: remove-limiting-beliefs-questions
+slug: "remove-limiting-beliefs-questions"
 ---
 
 「できない」「無理だ」という思い込み（リミッティング・ビリーフ）は、可能性を閉ざします。これらの制限的な信念を、「どうすればできるか」に変換する質問技術を解説します。

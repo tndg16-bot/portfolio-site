@@ -1,12 +1,12 @@
 ---
-title: 7つの習慣のエッセンス - 効果性の原則
+title: "7つの習慣のエッセンス - 効果性の原則"
 date: "2026-05-26"
-category: 思考法
+category: "思考法"
 tags:
-  - Seven Habits
-  - Covey
-  - Self-improvement
-description: スティーブン・R・コヴィーの名著「7つの習慣」のエッセンスをまとめました。
+  - "Seven Habits"
+  - "Covey"
+  - "Self-improvement"
+description: "スティーブン・R・コヴィーの名著「7つの習慣」のエッセンスをまとめました。"
 published: true
 ---
 

@@ -2,13 +2,13 @@
 title: "「情報のセカンドブレイン」を構築して忘れることを許可する"
 description: "記憶はツールに任せ、自分は考えることに100%の力を使うための仕組み"
 date: "2026-05-24"
-category: 生産性
+category: "生産性"
 tags:
-  - セカンドブレイン
-  - 知識管理
-  - ノート術
+  - "セカンドブレイン"
+  - "知識管理"
+  - "ノート術"
 published: true
-slug: second-brain-forget-permission
+slug: "second-brain-forget-permission"
 ---
 
 私たちの脳は、すべての情報を覚えておくように設計されていません。代わりに、外部のツールに情報を預け、脳は創造的な思考や問題解決に専念できる「セカンドブレイン」を構築する方法を解説します。

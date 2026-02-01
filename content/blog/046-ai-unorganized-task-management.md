@@ -2,14 +2,14 @@
 title: "AIを活用した「整理しない」タスク管理術"
 description: "散乱したメモから、AIが今の優先順位を抽出してくれる次世代の管理法。"
 date: "2026-01-30"
-category: AI活用
+category: "AI活用"
 tags:
-  - タスク管理
-  - GTD
-  - 整理
-  - 生産性
+  - "タスク管理"
+  - "GTD"
+  - "整理"
+  - "生産性"
 published: true
-slug: ai-unorganized-task-management
+slug: "ai-unorganized-task-management"
 ---
 
 ## はじめに

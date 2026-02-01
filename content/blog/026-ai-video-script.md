@@ -2,14 +2,14 @@
 title: "動画コンテンツのスクリプトをAIで構造化する"
 description: "視聴者の興味を惹きつけるストーリー構成を、AIと論理的に組み立てる。"
 date: "2026-01-20"
-category: AI活用
+category: "AI活用"
 tags:
-  - 動画
-  - スクリプト
-  - コンテンツ
-  - ストーリー
+  - "動画"
+  - "スクリプト"
+  - "コンテンツ"
+  - "ストーリー"
 published: true
-slug: ai-video-script
+slug: "ai-video-script"
 ---
 
 ## はじめに

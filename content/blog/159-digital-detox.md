@@ -1,15 +1,15 @@
 ---
-title: 週に一度の「デジタル断食」で脳をリセットする習慣
-description: 日曜日にデバイスから離れることで、月曜日の生産性を劇的に高める。
+title: "週に一度の「デジタル断食」で脳をリセットする習慣"
+description: "日曜日にデバイスから離れることで、月曜日の生産性を劇的に高める。"
 date: "2026-02-24"
-category: 生産性
+category: "生産性"
 tags:
-  - デジタル断食
-  - 休息
-  - リセット
-  - 週末
+  - "デジタル断食"
+  - "休息"
+  - "リセット"
+  - "週末"
 published: true
-slug: digital-detox-weekly
+slug: "digital-detox-weekly"
 ---
 
 ## はじめに

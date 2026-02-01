@@ -1,12 +1,12 @@
 ---
-title: 「自分軸」と「他人軸」 - 誰の人生を生きていますか？
+title: "「自分軸」と「他人軸」 - 誰の人生を生きていますか？"
 date: "2026-02-10"
-category: コーチング
+category: "コーチング"
 tags:
-  - Self-awareness
-  - Coaching
-  - Mindset
-description: 親の期待、社会の常識、周りの目。気づけば「他人の人生」を生きていませんか？自分軸を取り戻す方法。
+  - "Self-awareness"
+  - "Coaching"
+  - "Mindset"
+description: "親の期待、社会の常識、周りの目。気づけば「他人の人生」を生きていませんか？自分軸を取り戻す方法。"
 published: true
 ---
 

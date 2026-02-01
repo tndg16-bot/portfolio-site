@@ -1,12 +1,12 @@
 ---
-title: 質問する力 - 答えより問いが大切
+title: "質問する力 - 答えより問いが大切"
 date: "2026-03-29"
-category: 思考法
+category: "思考法"
 tags:
-  - Thinking
-  - Questions
-  - Communication
-description: 良い答えは、良い質問から生まれる。質問力を磨いて、思考を深める方法。
+  - "Thinking"
+  - "Questions"
+  - "Communication"
+description: "良い答えは、良い質問から生まれる。質問力を磨いて、思考を深める方法。"
 published: true
 ---
 

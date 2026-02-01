@@ -2,13 +2,13 @@
 title: "楽観的でありながら、最悪の事態を想定する「ストイックな希望」"
 description: "結果は信じるが、プロセスにおいては徹底的にリスクを排除する二段構え"
 date: "2026-05-10"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - ストイック
-  - 楽観主義
-  - 希望
+  - "ストイック"
+  - "楽観主義"
+  - "希望"
 published: true
-slug: stoic-hope-optimism-preparedness
+slug: "stoic-hope-optimism-preparedness"
 ---
 
 単なる楽観主義は現実を見ていないと批判されますし、悲観主義は行動を阻害します。「ストイックな希望」は、良い結果を信じつつも、最悪の事態を想定し準備することで、どちらの極端も避ける賢明な姿勢です。

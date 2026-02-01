@@ -2,13 +2,13 @@
 title: "自分の「器」を広げるために、あえて居心地の悪い場所に身を置く"
 description: "自分より優れた人たちに囲まれることで、基準値を強制的に引き上げる"
 date: "2026-05-14"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 成長
-  - 挑戦
-  - 環境
+  - "成長"
+  - "挑戦"
+  - "環境"
 published: true
-slug: expand-capacity-uncomfortable-environments
+slug: "expand-capacity-uncomfortable-environments"
 ---
 
 居心地のいい環境に留まっていると、成長は止まります。自分より優れた人々に囲まれ、居心地の悪い場所に身を置くことで、自分の「器」は広がります。

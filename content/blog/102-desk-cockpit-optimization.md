@@ -1,15 +1,15 @@
 ---
-title: デスク周りを「コックピット化」して作業効率を最大化する
-description: 物の配置一つで集中力が変わる、生産性を高める環境構築の科学。
+title: "デスク周りを「コックピット化」して作業効率を最大化する"
+description: "物の配置一つで集中力が変わる、生産性を高める環境構築の科学。"
 date: "2026-02-19"
-category: 生産性
+category: "生産性"
 tags:
-  - 環境構築
-  - デスク整理
-  - 集中力
-  - ワークスペース
+  - "環境構築"
+  - "デスク整理"
+  - "集中力"
+  - "ワークスペース"
 published: true
-slug: desk-cockpit-optimization
+slug: "desk-cockpit-optimization"
 ---
 
 ## はじめに

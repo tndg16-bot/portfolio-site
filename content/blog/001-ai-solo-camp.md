@@ -2,14 +2,14 @@
 title: "ChatGPTと並走する「一人合宿」のやり方"
 description: "生成AIを壁打ち相手にして、一気に思考を深める集中ワークの手法を解説します。"
 date: "2026-01-01"
-category: AI活用
+category: "AI活用"
 tags:
-  - ChatGPT
-  - 集中力
-  - ディープワーク
-  - 生産性
+  - "ChatGPT"
+  - "集中力"
+  - "ディープワーク"
+  - "生産性"
 published: true
-slug: ai-solo-camp
+slug: "ai-solo-camp"
 ---
 
 ## はじめに

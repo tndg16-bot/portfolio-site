@@ -2,14 +2,14 @@
 title: "AIを活用したSNS運用：コンテンツ量産と質の担保"
 description: "投稿案の作成からハッシュタグ選定まで、AIで行う一貫した運用術。"
 date: "2026-01-26"
-category: AI活用
+category: "AI活用"
 tags:
-  - SNS
-  - コンテンツ
-  - ソーシャルメディア
-  - マーケティング
+  - "SNS"
+  - "コンテンツ"
+  - "ソーシャルメディア"
+  - "マーケティング"
 published: true
-slug: ai-social-media-management
+slug: "ai-social-media-management"
 ---
 
 ## はじめに

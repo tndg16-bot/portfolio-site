@@ -2,14 +2,14 @@
 title: "複雑な契約書や論文をAIで「5歳児でもわかる」ように解説"
 description: "難解な専門知識のハードルをAIで下げ、理解を加速させる。"
 date: "2026-01-27"
-category: AI活用
+category: "AI活用"
 tags:
-  - 契約書
-  - 論文
-  - 解説
-  - 平易化
+  - "契約書"
+  - "論文"
+  - "解説"
+  - "平易化"
 published: true
-slug: ai-simplify-complex-docs
+slug: "ai-simplify-complex-docs"
 ---
 
 ## はじめに

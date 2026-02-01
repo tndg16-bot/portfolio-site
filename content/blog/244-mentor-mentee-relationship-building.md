@@ -2,13 +2,13 @@
 title: "メンターとメンティー：成長を加速させる最高の関係性の築き方"
 description: "導く側と導かれる側、それぞれの役割と期待値のすり合わせ術"
 date: "2026-05-20"
-category: コーチング
+category: "コーチング"
 tags:
-  - メンター
-  - メンティー
-  - 関係性
+  - "メンター"
+  - "メンティー"
+  - "関係性"
 published: true
-slug: mentor-mentee-relationship-building
+slug: "mentor-mentee-relationship-building"
 ---
 
 メンターとメンティーの関係は、お互いの成長を加速させる強力なツールです。導く側と導かれる側、それぞれの役割を理解し、効果的な関係性を築く方法を解説します。

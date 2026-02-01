@@ -2,14 +2,14 @@
 title: "AIネイティブな次世代リーダーの条件"
 description: "AIを使いこなすだけでなく、AIと人間のチームを指揮するマネジメント力。"
 date: "2026-01-22"
-category: AI活用
+category: "AI活用"
 tags:
-  - リーダーシップ
-  - マネジメント
-  - AIネイティブ
-  - 組織
+  - "リーダーシップ"
+  - "マネジメント"
+  - "AIネイティブ"
+  - "組織"
 published: true
-slug: ai-native-leader
+slug: "ai-native-leader"
 ---
 
 ## はじめに

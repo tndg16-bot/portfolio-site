@@ -2,13 +2,13 @@
 title: "「飽き性」を武器にする：多読・多趣味がもたらすセレンディピティ"
 description: "一つのことを極められないコンプレックスを、多様な視点を持つ強みに変える"
 date: "2026-04-28"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 飽き性
-  - 多趣味
-  - セレンディピティ
+  - "飽き性"
+  - "多趣味"
+  - "セレンディピティ"
 published: true
-slug: use-multipotentialite-as-strength
+slug: "use-multipotentialite-as-strength"
 ---
 
 「飽きっぽい」「一つのことに集中できない」と悩む人は多いです。しかし、多様な興味を持つことは、実は創造的な価値を生み出す強みとなります。「飽き性」を武器に変える方法を解説します。

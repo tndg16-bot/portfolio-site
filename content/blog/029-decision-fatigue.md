@@ -1,13 +1,13 @@
 ---
-title: 決断疲れを防ぐ - 判断力を温存する技術
+title: "決断疲れを防ぐ - 判断力を温存する技術"
 date: "2026-01-21"
-category: 生産性
+category: "生産性"
 tags:
-  - Productivity
-  - Decision Making
-  - Mental Energy
-description: 毎日多くの決断を迫られると、判断力が低下する。決断疲れを防いで、重要な判断に集中する方法。
-slug: decision-fatigue
+  - "Productivity"
+  - "Decision Making"
+  - "Mental Energy"
+description: "毎日多くの決断を迫られると、判断力が低下する。決断疲れを防いで、重要な判断に集中する方法。"
+slug: "decision-fatigue"
 published: true
 ---
 

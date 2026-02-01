@@ -2,13 +2,13 @@
 title: "ストレングスファインダーを「強み」の武器化に活用する"
 description: "診断結果を眺めるだけでなく、日々の業務でどう活用し、補い合うか"
 date: "2026-05-23"
-category: コーチング
+category: "コーチング"
 tags:
-  - ストレングスファインダー
-  - 強み
-  - チーム
+  - "ストレングスファインダー"
+  - "強み"
+  - "チーム"
 published: true
-slug: strengths-finder-weaponize
+slug: "strengths-finder-weaponize"
 ---
 
 ストレングスファインダー（CliftonStrengths）は、自分の強みを理解する強力なツールです。しかし、診断結果を眺めるだけではなく、日々の業務やチームでどう活用するかが重要です。

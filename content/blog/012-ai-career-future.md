@@ -1,14 +1,14 @@
 ---
-title: あなたの仕事、AIでどう変わる？ - 3つのステップで考える未来のキャリアプラン
-description: AI時代に生き残るキャリア戦略。代替されるのではなく、AIを味方につける
+title: "あなたの仕事、AIでどう変わる？ - 3つのステップで考える未来のキャリアプラン"
+description: "AI時代に生き残るキャリア戦略。代替されるのではなく、AIを味方につける"
 date: "2026-01-13"
-category: AI活用
+category: "AI活用"
 tags:
-  - AI
-  - キャリア
-  - 未来
+  - "AI"
+  - "キャリア"
+  - "未来"
 published: true
-slug: ai-career-future
+slug: "ai-career-future"
 ---
 
 ## はじめに

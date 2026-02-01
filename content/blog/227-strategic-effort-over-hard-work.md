@@ -2,13 +2,13 @@
 title: "「努力は報われる」という呪いから抜け出し、戦略的に動く"
 description: "闇雲に頑張るのではなく、最もレバレッジがかかる場所に注力する賢明さ"
 date: "2026-05-03"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 努力
-  - 戦略
-  - レバレッジ
+  - "努力"
+  - "戦略"
+  - "レバレッジ"
 published: true
-slug: strategic-effort-over-hard-work
+slug: "strategic-effort-over-hard-work"
 ---
 
 「頑張れば報われる」という信念は、時に私たちを無駄な努力へと導きます。闇雲に頑張るのではなく、レバレッジ（てこ）の効く場所に注力する戦略的思考が、真の成功を生み出します。

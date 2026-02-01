@@ -1,12 +1,12 @@
 ---
-title: 逆算思考 - ゴールから今日を決める
+title: "逆算思考 - ゴールから今日を決める"
 date: "2026-04-08"
-category: 思考法
+category: "思考法"
 tags:
-  - Thinking
-  - Goal Setting
-  - Planning
-description: 目標から逆算して今日やることを決める。戦略的な計画の立て方。
+  - "Thinking"
+  - "Goal Setting"
+  - "Planning"
+description: "目標から逆算して今日やることを決める。戦略的な計画の立て方。"
 published: true
 ---
 

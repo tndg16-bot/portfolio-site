@@ -1,12 +1,12 @@
 ---
-title: 「正解」を探すな - VUCA時代の意思決定
+title: "「正解」を探すな - VUCA時代の意思決定"
 date: "2026-01-27"
-category: 思考法
+category: "思考法"
 tags:
-  - Decision Making
-  - Mindset
-  - Business
-description: 変化が激しく、予測不能な時代。唯一の正解を探すのではなく、仮説を立てて検証するマインドセットが求められています。
+  - "Decision Making"
+  - "Mindset"
+  - "Business"
+description: "変化が激しく、予測不能な時代。唯一の正解を探すのではなく、仮説を立てて検証するマインドセットが求められています。"
 published: true
 ---
 

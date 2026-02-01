@@ -2,13 +2,13 @@
 title: "ギバー（与える人）として成功するための、健全な利己心"
 description: "自分を犠牲にせず、他者に貢献しながら共に成長するネットワークの作り方"
 date: "2026-05-05"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - ギバー
-  - 健全な利己心
-  - 共感
+  - "ギバー"
+  - "健全な利己心"
+  - "共感"
 published: true
-slug: healthy-selfishness-giver-success
+slug: "healthy-selfishness-giver-success"
 ---
 
 アダム・グラントの「GIVE AND TAKE」で注目された「ギバー（与える人）」は、組織や社会で最も価値を生み出す存在です。しかし、無理な自己犠牲は持続しません。健全な利己心を持ちながら、他者に貢献する方法を解説します。

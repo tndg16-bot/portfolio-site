@@ -1,13 +1,13 @@
 ---
-title: 対立を解消する対話の技術
+title: "対立を解消する対話の技術"
 date: "2026-03-15"
-category: コーチング
+category: "コーチング"
 tags:
-  - 対立
-  - コミュニケーション
-  - 調停
-description: 意見が対立したとき、どう対処しますか？対立を建設的に解消する方法。
-slug: conflict-resolution
+  - "対立"
+  - "コミュニケーション"
+  - "調停"
+description: "意見が対立したとき、どう対処しますか？対立を建設的に解消する方法。"
+slug: "conflict-resolution"
 published: true
 ---
 

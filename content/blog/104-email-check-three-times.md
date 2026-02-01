@@ -1,15 +1,15 @@
 ---
-title: 「メールチェックは1日3回まで」を貫くための仕事術
-description: 常に受信トレイを監視する習慣を断ち切り、まとまった作業時間を確保する。
+title: "「メールチェックは1日3回まで」を貫くための仕事術"
+description: "常に受信トレイを監視する習慣を断ち切り、まとまった作業時間を確保する。"
 date: "2026-02-20"
-category: 生産性
+category: "生産性"
 tags:
-  - メール管理
-  - 時間ブロッキング
-  - 集中力
-  - 仕事術
+  - "メール管理"
+  - "時間ブロッキング"
+  - "集中力"
+  - "仕事術"
 published: true
-slug: email-check-three-times
+slug: "email-check-three-times"
 ---
 
 ## はじめに

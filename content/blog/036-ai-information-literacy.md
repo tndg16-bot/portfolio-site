@@ -2,14 +2,14 @@
 title: "AI時代の情報リテラシー：フェイクと真実を見極める"
 description: "生成AIが普及した社会で、情報の信頼性を検証するためのチェックリスト。"
 date: "2026-01-25"
-category: AI活用
+category: "AI活用"
 tags:
-  - 情報リテラシー
-  - フェイクニュース
-  - 検証
-  - AI
+  - "情報リテラシー"
+  - "フェイクニュース"
+  - "検証"
+  - "AI"
 published: true
-slug: ai-era-information-literacy
+slug: "ai-era-information-literacy"
 ---
 
 ## はじめに

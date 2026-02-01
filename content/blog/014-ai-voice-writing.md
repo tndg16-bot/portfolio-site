@@ -2,14 +2,14 @@
 title: "AIによる音声入力で「歩きながら執筆」を実現する"
 description: "スマートフォンとAIを組み合わせ、移動時間をアウトプットに変える方法。"
 date: "2026-01-14"
-category: AI活用
+category: "AI活用"
 tags:
-  - 音声入力
-  - 移動時間
-  - 執筆
-  - 生産性
+  - "音声入力"
+  - "移動時間"
+  - "執筆"
+  - "生産性"
 published: true
-slug: ai-voice-writing
+slug: "ai-voice-writing"
 ---
 
 ## はじめに

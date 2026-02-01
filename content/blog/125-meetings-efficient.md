@@ -1,13 +1,13 @@
 ---
-title: 会議を半分にする方法
+title: "会議を半分にする方法"
 date: "2026-05-05"
-category: 生産性
+category: "生産性"
 tags:
-  - 会議
-  - 生産性
-  - コミュニケーション
-description: この会議、本当に必要？無駄な会議を減らし、必要な会議を効率化する方法。
-slug: meetings-efficient
+  - "会議"
+  - "生産性"
+  - "コミュニケーション"
+description: "この会議、本当に必要？無駄な会議を減らし、必要な会議を効率化する方法。"
+slug: "meetings-efficient"
 published: true
 ---
 

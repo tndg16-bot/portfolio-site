@@ -1,12 +1,12 @@
 ---
-title: ストレングスファインダー活用術 - 強みを知って活かす
+title: "ストレングスファインダー活用術 - 強みを知って活かす"
 date: "2026-02-17"
-category: コーチング
+category: "コーチング"
 tags:
-  - Strengths
-  - Self-awareness
-  - Career
-description: 苦手を克服するより、強みを伸ばす。ストレングスベースのアプローチで成果を最大化する方法。
+  - "Strengths"
+  - "Self-awareness"
+  - "Career"
+description: "苦手を克服するより、強みを伸ばす。ストレングスベースのアプローチで成果を最大化する方法。"
 published: true
 ---
 

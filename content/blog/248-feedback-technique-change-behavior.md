@@ -2,13 +2,13 @@
 title: "フィードバックの技術：相手を傷つけずに「行動」を変える"
 description: "人格否定にならず、具体的な変化を促すための「サンドイッチ法」とその先"
 date: "2026-05-24"
-category: コーチング
+category: "コーチング"
 tags:
-  - フィードバック
-  - 行動変容
-  - コミュニケーション
+  - "フィードバック"
+  - "行動変容"
+  - "コミュニケーション"
 published: true
-slug: feedback-technique-change-behavior
+slug: "feedback-technique-change-behavior"
 ---
 
 フィードバックは成長に不可欠ですが、伝え方次第で相手を傷つけたり、逆効果になったりします。相手を傷つけずに行動を変えるフィードバックの技術を解説します。

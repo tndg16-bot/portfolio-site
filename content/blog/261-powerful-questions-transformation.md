@@ -2,13 +2,13 @@
 title: "「問い」を磨く：本質的な変化を引き起こす「パワフル・クエスチョン」"
 description: "相手の思考を停止させず、新しい世界を広げるための鋭く温かい質問集"
 date: "2026-06-06"
-category: コーチング
+category: "コーチング"
 tags:
-  - パワフルクエスチョン
-  - 質問
-  - 変容
+  - "パワフルクエスチョン"
+  - "質問"
+  - "変容"
 published: true
-slug: powerful-questions-transformation
+slug: "powerful-questions-transformation"
 ---
 
 パワフル・クエスチョン（力強い質問）は、相手の思考を停止させ、新しい視点や可能性を開く質問です。コーチングの質を決定づける重要なスキルです。

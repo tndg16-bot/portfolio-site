@@ -1,12 +1,12 @@
 ---
-title: AI時代の「質問力」 - プロンプトエンジニアリングの本質
+title: "AI時代の「質問力」 - プロンプトエンジニアリングの本質"
 date: "2026-01-25"
-category: AI活用
+category: "AI活用"
 tags:
-  - AI
-  - ChatGPT
-  - Productivity
-description: ChatGPTやClaudeを使いこなす人と、使いこなせない人の違い。それは「質問の仕方」にあります。
+  - "AI"
+  - "ChatGPT"
+  - "Productivity"
+description: "ChatGPTやClaudeを使いこなす人と、使いこなせない人の違い。それは「質問の仕方」にあります。"
 published: true
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: 言語化の力 - モヤモヤを言葉にすると何が変わるのか
+title: "言語化の力 - モヤモヤを言葉にすると何が変わるのか"
 date: "2026-02-19"
-category: 思考法
+category: "思考法"
 tags:
-  - Thinking
-  - Writing
-  - Self-awareness
-description: 頭の中がぐるぐるしている。そんなとき、言葉にするだけで世界が変わります。
+  - "Thinking"
+  - "Writing"
+  - "Self-awareness"
+description: "頭の中がぐるぐるしている。そんなとき、言葉にするだけで世界が変わります。"
 published: true
 ---
 

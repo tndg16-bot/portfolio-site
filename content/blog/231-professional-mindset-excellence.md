@@ -2,13 +2,13 @@
 title: "プロ意識：報酬の有無に関わらず、期待以上の成果を出し続ける"
 description: "プロとしての誇りを持ち、細部にまでこだわり抜くことで信頼を築く"
 date: "2026-05-07"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - プロ意識
-  - 職業倫理
-  - 信頼
+  - "プロ意識"
+  - "職業倫理"
+  - "信頼"
 published: true
-slug: professional-mindset-excellence
+slug: "professional-mindset-excellence"
 ---
 
 「プロ」とは、単に職業として何かをしている人ではなく、職業に対する誇りと責任を持ち、常に高い基準を追求する人です。プロ意識を持つことで、信頼と評価を獲得し、長期的な成功を築けます。

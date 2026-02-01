@@ -2,13 +2,13 @@
 title: "相手の「やる気スイッチ」を探る、価値観のヒアリング術"
 description: "何がその人の原動力なのか。本人が気づいていないコアな動機を見つけ出す"
 date: "2026-06-01"
-category: コーチング
+category: "コーチング"
 tags:
-  - 動機
-  - 価値観
-  - ヒアリング
+  - "動機"
+  - "価値観"
+  - "ヒアリング"
 published: true
-slug: motivation-switch-values-hearing
+slug: "motivation-switch-values-hearing"
 ---
 
 人が動く原動力は、表面的な理由ではなく、深層の価値観や動機にあります。本人が気づいていないコアな動機を見つけ出し、やる気スイッチを探るヒアリング術を解説します。

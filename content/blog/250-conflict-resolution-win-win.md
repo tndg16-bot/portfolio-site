@@ -2,13 +2,13 @@
 title: "対立解消のコミュニケーション：Win-Winの着地点を見つける"
 description: "意見の相違を「敵対」ではなく「別の視点」と捉え、第3の案を創出する"
 date: "2026-05-26"
-category: コーチング
+category: "コーチング"
 tags:
-  - 対立解消
-  - Win-Win
-  - 交渉
+  - "対立解消"
+  - "Win-Win"
+  - "交渉"
 published: true
-slug: conflict-resolution-win-win
+slug: "conflict-resolution-win-win"
 ---
 
 意見の相違は敵対ではなく、異なる視点の表れです。対立をWin-Winの解決に導き、第3の案を創出するコミュニケーション技術を解説します。

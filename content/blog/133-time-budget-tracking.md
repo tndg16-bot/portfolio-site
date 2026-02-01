@@ -1,15 +1,15 @@
 ---
-title: 「時間がない」を言い訳にしないための、時間の家計簿
-description: 自分が何にどれだけの時間を使っているか、15分単位で可視化する衝撃。
+title: "「時間がない」を言い訳にしないための、時間の家計簿"
+description: "自分が何にどれだけの時間を使っているか、15分単位で可視化する衝撃。"
 date: "2026-05-13"
-category: 生産性
+category: "生産性"
 tags:
-  - 時間管理
-  - 時間の家計簿
-  - 可視化
-  - 自己分析
+  - "時間管理"
+  - "時間の家計簿"
+  - "可視化"
+  - "自己分析"
 published: true
-slug: time-budget-tracking
+slug: "time-budget-tracking"
 ---
 
 ## はじめに

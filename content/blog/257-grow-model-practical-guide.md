@@ -2,13 +2,13 @@
 title: "目標達成を支援する「GROWモデル」の実践ガイド"
 description: "理想、現状、選択肢、意志。論理的なステップで行動計画を具体化する"
 date: "2026-06-02"
-category: コーチング
+category: "コーチング"
 tags:
-  - GROWモデル
-  - 目標設定
-  - 行動計画
+  - "GROWモデル"
+  - "目標設定"
+  - "行動計画"
 published: true
-slug: grow-model-practical-guide
+slug: "grow-model-practical-guide"
 ---
 
 GROWモデルは、コーチングで広く使われている目標達成のフレームワークです。Goal（目標）、Reality（現状）、Options（選択肢）、Will（意志）の4ステップで、論理的に行動計画を具体化します。

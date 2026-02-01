@@ -2,14 +2,14 @@
 title: "AIを使った市場調査（リサーチ）のショートカット術"
 description: "競合分析やトレンド把握を、AIを使って数時間で完了させるプロセス。"
 date: "2026-01-11"
-category: AI活用
+category: "AI活用"
 tags:
-  - 市場調査
-  - リサーチ
-  - 競合分析
-  - AI活用
+  - "市場調査"
+  - "リサーチ"
+  - "競合分析"
+  - "AI活用"
 published: true
-slug: ai-market-research
+slug: "ai-market-research"
 ---
 
 ## はじめに

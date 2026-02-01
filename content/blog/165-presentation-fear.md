@@ -1,13 +1,13 @@
 ---
-title: プレゼン恐怖症を克服する
+title: "プレゼン恐怖症を克服する"
 date: "2026-03-02"
-category: キャリア
+category: "キャリア"
 tags:
-  - プレゼンテーション
-  - コミュニケーション
-  - 心理学
-description: 人前で話すのが苦手。緊張で頭が真っ白になる。そんな恐怖を乗り越える具体的な方法。
-slug: presentation-fear
+  - "プレゼンテーション"
+  - "コミュニケーション"
+  - "心理学"
+description: "人前で話すのが苦手。緊張で頭が真っ白になる。そんな恐怖を乗り越える具体的な方法。"
+slug: "presentation-fear"
 published: true
 ---
 

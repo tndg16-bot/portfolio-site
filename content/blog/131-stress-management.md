@@ -1,13 +1,13 @@
 ---
-title: ストレスは敵ではない - 味方につける方法
+title: "ストレスは敵ではない - 味方につける方法"
 date: "2026-05-11"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - ストレス
-  - マインドセット
-  - 健康
-description: ストレスをゼロにすることは不可能。ストレスを成長のエネルギーに変える考え方。
-slug: stress-management
+  - "ストレス"
+  - "マインドセット"
+  - "健康"
+description: "ストレスをゼロにすることは不可能。ストレスを成長のエネルギーに変える考え方。"
+slug: "stress-management"
 published: true
 ---
 

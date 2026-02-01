@@ -1,15 +1,15 @@
 ---
-title: 「週末の準備」が月曜朝のスタートダッシュを決める
-description: 金曜日の退勤前の15分で、来週の自分を楽にするルーティン。
+title: "「週末の準備」が月曜朝のスタートダッシュを決める"
+description: "金曜日の退勤前の15分で、来週の自分を楽にするルーティン。"
 date: "2026-05-01"
-category: 生産性
+category: "生産性"
 tags:
-  - 週末準備
-  - 月曜日
-  - ルーティン
-  - 準備
+  - "週末準備"
+  - "月曜日"
+  - "ルーティン"
+  - "準備"
 published: true
-slug: weekend-preparation
+slug: "weekend-preparation"
 ---
 
 ## はじめに

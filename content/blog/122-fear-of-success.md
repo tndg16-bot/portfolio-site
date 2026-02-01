@@ -1,13 +1,13 @@
 ---
-title: 「成功への恐怖」という逆説
+title: "「成功への恐怖」という逆説"
 date: "2026-05-02"
-category: メンタルモデル
+category: "メンタルモデル"
 tags:
-  - 恐怖
-  - 成功
-  - 心理学
-description: 失敗が怖いのは当然。でも、成功も怖い？意外と多い成功への無意識の抵抗。
-slug: fear-of-success
+  - "恐怖"
+  - "成功"
+  - "心理学"
+description: "失敗が怖いのは当然。でも、成功も怖い？意外と多い成功への無意識の抵抗。"
+slug: "fear-of-success"
 published: true
 ---
 

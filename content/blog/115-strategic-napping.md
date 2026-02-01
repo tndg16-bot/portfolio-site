@@ -1,15 +1,15 @@
 ---
-title: 「戦略的な昼寝」で午後の集中力を120%に引き上げる
-description: 15分から20分のパワーナップが、脳のパフォーマンスに与える影響。
+title: "「戦略的な昼寝」で午後の集中力を120%に引き上げる"
+description: "15分から20分のパワーナップが、脳のパフォーマンスに与える影響。"
 date: "2026-04-25"
-category: 生産性
+category: "生産性"
 tags:
-  - 昼寝
-  - パワーナップ
-  - 集中力
-  - 回復
+  - "昼寝"
+  - "パワーナップ"
+  - "集中力"
+  - "回復"
 published: true
-slug: strategic-napping
+slug: "strategic-napping"
 ---
 
 ## はじめに

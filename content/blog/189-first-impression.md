@@ -1,12 +1,12 @@
 ---
-title: 第一印象の科学 - 最初の7秒で決まること
+title: "第一印象の科学 - 最初の7秒で決まること"
 date: "2026-03-26"
-category: キャリア
+category: "キャリア"
 tags:
-  - Communication
-  - Career
-  - Psychology
-description: 人は出会って7秒で第一印象を形成すると言われています。その7秒を最大化する方法。
+  - "Communication"
+  - "Career"
+  - "Psychology"
+description: "人は出会って7秒で第一印象を形成すると言われています。その7秒を最大化する方法。"
 published: true
 ---
 

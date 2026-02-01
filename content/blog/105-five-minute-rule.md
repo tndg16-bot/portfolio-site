@@ -1,15 +1,15 @@
 ---
-title: 5分以内のタスクは「即実行」するルールの驚くべき効果
-description: 小さな未完了タスクを溜め込まないことで、脳のメモリ消費を最小限にする。
+title: "5分以内のタスクは「即実行」するルールの驚くべき効果"
+description: "小さな未完了タスクを溜め込まないことで、脳のメモリ消費を最小限にする。"
 date: "2026-04-15"
-category: 生産性
+category: "生産性"
 tags:
-  - 即実行
-  - タスク管理
-  - GTD
-  - 脳科学
+  - "即実行"
+  - "タスク管理"
+  - "GTD"
+  - "脳科学"
 published: true
-slug: five-minute-rule
+slug: "five-minute-rule"
 ---
 
 ## はじめに

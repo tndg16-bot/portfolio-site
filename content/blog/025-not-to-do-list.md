@@ -1,14 +1,14 @@
 ---
-title: 「やらないことリスト」のススメ - "No"と言う勇気が時間を生み出す
-description: やることを増やすより、やらないことを決める方が生産性は上がる
+title: "「やらないことリスト」のススメ - \"No\"と言う勇気が時間を生み出す"
+description: "やることを増やすより、やらないことを決める方が生産性は上がる"
 date: "2026-01-19"
-category: 生産性
+category: "生産性"
 tags:
-  - 時間管理
-  - 優先順位
-  - 断る
+  - "時間管理"
+  - "優先順位"
+  - "断る"
 published: true
-slug: not-to-do-list
+slug: "not-to-do-list"
 ---
 
 ## はじめに

@@ -2,14 +2,14 @@
 title: "AIによる多言語翻訳の「ニュアンス」調整術"
 description: "単なる直訳ではなく、相手の文化や背景に合わせた表現にAIで補正する。"
 date: "2026-02-09"
-category: AI活用
+category: "AI活用"
 tags:
-  - 翻訳
-  - 多言語
-  - ニュアンス
-  - コミュニケーション
+  - "翻訳"
+  - "多言語"
+  - "ニュアンス"
+  - "コミュニケーション"
 published: true
-slug: ai-translation-nuance
+slug: "ai-translation-nuance"
 ---
 
 ## はじめに

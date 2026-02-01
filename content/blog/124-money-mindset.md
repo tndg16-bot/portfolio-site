@@ -1,13 +1,13 @@
 ---
-title: お金のマインドブロックを外す
+title: "お金のマインドブロックを外す"
 date: "2026-05-04"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - お金
-  - マインドセット
-  - 富
-description: 「お金は汚い」「稼ぐのは悪いこと」。無意識の思い込みが、あなたの経済状況を決めています。
-slug: money-mindset
+  - "お金"
+  - "マインドセット"
+  - "富"
+description: "「お金は汚い」「稼ぐのは悪いこと」。無意識の思い込みが、あなたの経済状況を決めています。"
+slug: "money-mindset"
 published: true
 ---
 

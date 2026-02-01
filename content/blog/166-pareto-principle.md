@@ -1,13 +1,13 @@
 ---
-title: 80/20の法則を仕事に活かす
+title: "80/20の法則を仕事に活かす"
 date: "2026-03-03"
-category: 生産性
+category: "生産性"
 tags:
-  - パレートの法則
-  - 生産性
-  - 効率化
-description: 成果の80%は20%の行動から生まれる。重要な20%を見極める方法。
-slug: pareto-principle
+  - "パレートの法則"
+  - "生産性"
+  - "効率化"
+description: "成果の80%は20%の行動から生まれる。重要な20%を見極める方法。"
+slug: "pareto-principle"
 published: true
 ---
 

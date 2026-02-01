@@ -1,15 +1,15 @@
 ---
-title: 深い集中を阻害する「内的な割り込み」の対処法
-description: 作業中に関係ないことを思い出した時に、メモしてすぐに忘れる技術。
+title: "深い集中を阻害する「内的な割り込み」の対処法"
+description: "作業中に関係ないことを思い出した時に、メモしてすぐに忘れる技術。"
 date: "2026-03-19"
-category: 生産性
+category: "生産性"
 tags:
-  - 割り込み
-  - 集中力
-  - 内的妨害
-  - マインドフルネス
+  - "割り込み"
+  - "集中力"
+  - "内的妨害"
+  - "マインドフルネス"
 published: true
-slug: internal-interruptions
+slug: "internal-interruptions"
 ---
 
 ## はじめに

@@ -2,13 +2,13 @@
 title: "自分の「限界」を決めているのは、実は自分の過去の経験である"
 description: "過去のデータに基づいた自己像を更新し、新しいセルフイメージを構築する"
 date: "2026-05-08"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 限界
-  - 自己像
-  - 成長
+  - "限界"
+  - "自己像"
+  - "成長"
 published: true
-slug: limits-are-past-experiences
+slug: "limits-are-past-experiences"
 ---
 
 「自分には限界がある」「これ以上は無理だ」と思い込んでいる制限は、実は過去の経験に基づいた自己像に過ぎません。過去のデータを更新し、新しい可能性を開く方法を解説します。

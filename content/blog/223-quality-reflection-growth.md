@@ -2,13 +2,13 @@
 title: "内省（リフレクション）の質が、経験を成長に変える"
 description: "単なる反省ではなく、次のアクションに繋げるための建設的な振り返り"
 date: "2026-04-29"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 内省
-  - リフレクション
-  - 学習
+  - "内省"
+  - "リフレクション"
+  - "学習"
 published: true
-slug: quality-reflection-growth
+slug: "quality-reflection-growth"
 ---
 
 経験そのものは成長につながりません。経験から学びを抽出し、次のアクションに繋げる「内省（リフレクション）」の質が、経験を成長に変えます。効果的な内省の方法を解説します。

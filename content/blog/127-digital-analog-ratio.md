@@ -1,15 +1,15 @@
 ---
-title: デジタルメモとアナログノートの「黄金比」を見つける
-description: アイデア出しは紙、ストックはデジタル。使い分けで思考を加速させる。
+title: "デジタルメモとアナログノートの「黄金比」を見つける"
+description: "アイデア出しは紙、ストックはデジタル。使い分けで思考を加速させる。"
 date: "2026-05-07"
-category: 生産性
+category: "生産性"
 tags:
-  - メモ
-  - ノート
-  - アナログ
-  - デジタル
+  - "メモ"
+  - "ノート"
+  - "アナログ"
+  - "デジタル"
 published: true
-slug: digital-analog-note-ratio
+slug: "digital-analog-note-ratio"
 ---
 
 ## はじめに

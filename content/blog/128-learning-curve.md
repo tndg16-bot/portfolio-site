@@ -1,13 +1,13 @@
 ---
-title: 学習曲線を理解する - 成長の停滞期を乗り越える
+title: "学習曲線を理解する - 成長の停滞期を乗り越える"
 date: "2026-05-08"
-category: メンタルモデル
+category: "メンタルモデル"
 tags:
-  - 学習
-  - 成長
-  - プラトー
-description: 成長が止まったように感じる時期がある。それは「停滞」ではなく「蓄積」の期間です。
-slug: learning-curve
+  - "学習"
+  - "成長"
+  - "プラトー"
+description: "成長が止まったように感じる時期がある。それは「停滞」ではなく「蓄積」の期間です。"
+slug: "learning-curve"
 published: true
 ---
 

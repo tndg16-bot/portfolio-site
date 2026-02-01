@@ -2,13 +2,13 @@
 title: "「死を意識する」ことで、今この瞬間の生を燃焼させる"
 description: "人生の有限さを自覚し、本当に大切なことに時間とエネルギーを投下する"
 date: "2026-05-18"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 死
-  - 有限性
-  - 充実感
+  - "死"
+  - "有限性"
+  - "充実感"
 published: true
-slug: awareness-of-death-live-fully
+slug: "awareness-of-death-live-fully"
 ---
 
 死を意識することは、陰鬱なことではなく、人生を充実させるための強力なツールです。人生の有限性を自覚することで、本当に大切なことに焦点を当て、今この瞬間を全力で生きることができます。

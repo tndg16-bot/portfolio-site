@@ -2,14 +2,14 @@
 title: "音声AIで「自分のコピー」と英会話練習をする"
 description: "自分の声に近いAIと対話することで、心理的ハードルを下げる語学学習。"
 date: "2026-01-31"
-category: AI活用
+category: "AI活用"
 tags:
-  - 英会話
-  - 語学学習
-  - AI音声
-  - 練習
+  - "英会話"
+  - "語学学習"
+  - "AI音声"
+  - "練習"
 published: true
-slug: ai-english-conversation-practice
+slug: "ai-english-conversation-practice"
 ---
 
 ## はじめに

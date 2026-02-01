@@ -2,8 +2,12 @@
 title: "EQ（心の知能指数）を高め、自分と他人の感情を乗りこなす"
 description: "感情を抑制するのではなく、理解し、適切に活用するためのEQトレーニングと、対人関係を円滑にする方法を解説します。"
 date: "2026-01-31"
-category: メンタルモデル
-tags: ["EQ", "感情知能", "対人関係", "自己理解"]
+category: "メンタルモデル"
+tags:
+  - "EQ"
+  - "感情知能"
+  - "対人関係"
+  - "自己理解"
 slug: "eq-emotional-intelligence-mastery"
 published: true
 ---

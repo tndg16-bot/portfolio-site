@@ -2,8 +2,12 @@
 title: "環境設計：意志力に頼らず、自然に行動が変わる「仕組み」の作り方"
 description: "やる気を出そうとするのをやめ、そうせざるを得ない物理的な環境を整えることで、持続可能な習慣を作る方法を解説します。"
 date: "2026-01-31"
-category: メンタルモデル
-tags: ["環境設計", "習慣", "行動変容", "仕組み作り"]
+category: "メンタルモデル"
+tags:
+  - "環境設計"
+  - "習慣"
+  - "行動変容"
+  - "仕組み作り"
 slug: "environment-design-behavior-change"
 published: true
 ---

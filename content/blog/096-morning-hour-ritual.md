@@ -1,15 +1,15 @@
 ---
-title: 「朝の1時間」で1日の勝負を決める儀式
-description: 脳が最も冴えている時間に、最優先の「大きな石」を片付ける具体的手順。
+title: "「朝の1時間」で1日の勝負を決める儀式"
+description: "脳が最も冴えている時間に、最優先の「大きな石」を片付ける具体的手順。"
 date: "2026-02-16"
-category: 生産性
+category: "生産性"
 tags:
-  - 朝活
-  - 時間管理
-  - 優先順位
-  - 儀式
+  - "朝活"
+  - "時間管理"
+  - "優先順位"
+  - "儀式"
 published: true
-slug: morning-hour-ritual
+slug: "morning-hour-ritual"
 ---
 
 ## はじめに

@@ -2,13 +2,13 @@
 title: "「結果」が出ない時期をどう耐え、種をまき続けるか"
 description: "潜伏期間を「蓄積の時」と捉え、腐らずに淡々とルーティンをこなす精神力"
 date: "2026-05-15"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 忍耐
-  - 潜伏期間
-  - 継続
+  - "忍耐"
+  - "潜伏期間"
+  - "継続"
 published: true
-slug: endure-quiet-periods-keep-sowing
+slug: "endure-quiet-periods-keep-sowing"
 ---
 
 努力しても結果が出ない「潜伏期間」は誰にでもあります。この期間を腐らずに耐え、種をまき続けることが、長期的な成功に繋がります。

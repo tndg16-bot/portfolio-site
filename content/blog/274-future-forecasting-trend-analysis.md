@@ -2,8 +2,12 @@
 title: "未来予測の思考法：トレンドを読み、一歩先に自分を配置する"
 description: "テクノロジー、人口動態、価値観の変化から必然的に来る未来を想定し、先んじて準備をする「未来予測」の技術を解説します。"
 date: "2026-01-31"
-category: 思考法
-tags: ["未来予測", "トレンド分析", "先見性", "キャリア戦略"]
+category: "思考法"
+tags:
+  - "未来予測"
+  - "トレンド分析"
+  - "先見性"
+  - "キャリア戦略"
 slug: "future-forecasting-trend-analysis"
 published: true
 ---

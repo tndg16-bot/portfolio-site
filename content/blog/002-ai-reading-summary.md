@@ -2,14 +2,14 @@
 title: "リーディング時間を5分の1にするAI要約術"
 description: "膨大な文献や資料を、精度を落とさずにAIで高速インプットする具体的なプロンプトを紹介。"
 date: "2026-01-02"
-category: AI活用
+category: "AI活用"
 tags:
-  - AI要約
-  - 読書術
-  - ChatGPT
-  - インプット
+  - "AI要約"
+  - "読書術"
+  - "ChatGPT"
+  - "インプット"
 published: true
-slug: ai-reading-summary
+slug: "ai-reading-summary"
 ---
 
 ## はじめに

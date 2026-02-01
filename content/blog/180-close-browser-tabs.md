@@ -1,15 +1,15 @@
 ---
-title: 不要な「ブラウザのタブ」を閉じるだけで頭が軽くなる理由
-description: 視覚的なノイズを減らし、今取り組んでいるタスクだけに意識を向ける。
+title: "不要な「ブラウザのタブ」を閉じるだけで頭が軽くなる理由"
+description: "視覚的なノイズを減らし、今取り組んでいるタスクだけに意識を向ける。"
 date: "2026-03-17"
-category: 生産性
+category: "生産性"
 tags:
-  - ブラウザ
-  - タブ管理
-  - 集中力
-  - デジタル
+  - "ブラウザ"
+  - "タブ管理"
+  - "集中力"
+  - "デジタル"
 published: true
-slug: close-browser-tabs
+slug: "close-browser-tabs"
 ---
 
 ## はじめに

@@ -1,13 +1,13 @@
 ---
-title: 習慣の科学 - なぜ習慣化は難しいのか
+title: "習慣の科学 - なぜ習慣化は難しいのか"
 date: "2026-03-04"
-category: メンタルモデル
+category: "メンタルモデル"
 tags:
-  - 習慣
-  - 脳科学
-  - 行動変容
-description: 意志力に頼らず習慣を作る。脳の仕組みを理解した習慣化のアプローチ。
-slug: building-habits
+  - "習慣"
+  - "脳科学"
+  - "行動変容"
+description: "意志力に頼らず習慣を作る。脳の仕組みを理解した習慣化のアプローチ。"
+slug: "building-habits"
 published: true
 ---
 

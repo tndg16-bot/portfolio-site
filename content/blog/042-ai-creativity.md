@@ -2,14 +2,14 @@
 title: "AI時代のクリエイティビティ：模倣から新しい結合へ"
 description: "既存のアイデアをAIでシャッフルし、誰も見たことがない企画を生む。"
 date: "2026-01-28"
-category: AI活用
+category: "AI活用"
 tags:
-  - 創造性
-  - アイデア
-  - イノベーション
-  - クリエイティビティ
+  - "創造性"
+  - "アイデア"
+  - "イノベーション"
+  - "クリエイティビティ"
 published: true
-slug: ai-creativity-combination
+slug: "ai-creativity-combination"
 ---
 
 ## はじめに

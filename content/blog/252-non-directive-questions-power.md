@@ -2,13 +2,13 @@
 title: "「答えを与えない」質問の力：相手に気づきを促す技術"
 description: "ティーチングとコーチングを使い分け、相手の自律的な成長を支援する"
 date: "2026-05-28"
-category: コーチング
+category: "コーチング"
 tags:
-  - 非指示的
-  - 質問
-  - 気づき
+  - "非指示的"
+  - "質問"
+  - "気づき"
 published: true
-slug: non-directive-questions-power
+slug: "non-directive-questions-power"
 ---
 
 答えを与えるティーチングと、答えを引き出すコーチングを使い分けることで、相手の自律的な成長を支援できます。答えを与えない質問の力と使い方を解説します。

@@ -2,8 +2,12 @@
 title: "依存と自立のバランス：適切な「助け」を求められるのが本当の自立"
 description: "すべて自分一人でやろうとせず、相互依存のネットワークを築くことで、より強く、より豊かに生きる方法を解説します。"
 date: "2026-01-31"
-category: メンタルモデル
-tags: ["自立", "依存", "相互依存", "人間関係"]
+category: "メンタルモデル"
+tags:
+  - "自立"
+  - "依存"
+  - "相互依存"
+  - "人間関係"
 slug: "dependence-independence-interdependence"
 published: true
 ---

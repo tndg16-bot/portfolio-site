@@ -2,14 +2,14 @@
 title: "AIによるメンタルヘルスチェックとセルフケア"
 description: "日記の内容をAIに分析させ、ストレスの兆候を客観的に把握する。"
 date: "2026-01-21"
-category: AI活用
+category: "AI活用"
 tags:
-  - メンタルヘルス
-  - セルフケア
-  - 日記
-  - ストレス管理
+  - "メンタルヘルス"
+  - "セルフケア"
+  - "日記"
+  - "ストレス管理"
 published: true
-slug: ai-mental-health-check
+slug: "ai-mental-health-check"
 ---
 
 ## はじめに

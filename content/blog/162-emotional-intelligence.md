@@ -1,13 +1,13 @@
 ---
-title: EQ（感情知能）を高める - IQより大切なもの
+title: "EQ（感情知能）を高める - IQより大切なもの"
 date: "2026-02-27"
-category: コーチング
+category: "コーチング"
 tags:
-  - EQ
-  - リーダーシップ
-  - 自己認識
-description: 頭の良さだけでは成功できない。自分と他者の感情を扱う力が、人生の質を決めます。
-slug: emotional-intelligence
+  - "EQ"
+  - "リーダーシップ"
+  - "自己認識"
+description: "頭の良さだけでは成功できない。自分と他者の感情を扱う力が、人生の質を決めます。"
+slug: "emotional-intelligence"
 published: true
 ---
 

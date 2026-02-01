@@ -1,12 +1,12 @@
 ---
-title: 「忙しい」と言わない技術 - 時間の支配者になるために
+title: "「忙しい」と言わない技術 - 時間の支配者になるために"
 date: "2026-01-30"
-category: 生産性
+category: "生産性"
 tags:
-  - Productivity
-  - Time Management
-  - Mindset
-description: 「忙しい」が口癖になっていませんか？その言葉が、あなたの時間とチャンスを奪っている可能性があります。
+  - "Productivity"
+  - "Time Management"
+  - "Mindset"
+description: "「忙しい」が口癖になっていませんか？その言葉が、あなたの時間とチャンスを奪っている可能性があります。"
 published: true
 ---
 

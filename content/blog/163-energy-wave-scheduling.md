@@ -1,15 +1,15 @@
 ---
-title: 自分の「エネルギーの波」を把握してスケジュールを組む
-description: 集中力が高い時間帯と、単純作業に向く時間帯を見極めるセルフ分析。
+title: "自分の「エネルギーの波」を把握してスケジュールを組む"
+description: "集中力が高い時間帯と、単純作業に向く時間帯を見極めるセルフ分析。"
 date: "2026-02-28"
-category: 生産性
+category: "生産性"
 tags:
-  - エネルギー管理
-  - クロノタイプ
-  - スケジュール
-  - 自己分析
+  - "エネルギー管理"
+  - "クロノタイプ"
+  - "スケジュール"
+  - "自己分析"
 published: true
-slug: energy-wave-scheduling
+slug: "energy-wave-scheduling"
 ---
 
 ## はじめに

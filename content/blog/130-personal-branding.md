@@ -1,13 +1,13 @@
 ---
-title: パーソナルブランディング入門
+title: "パーソナルブランディング入門"
 date: "2026-05-10"
-category: キャリア
+category: "キャリア"
 tags:
-  - パーソナルブランディング
-  - キャリア
-  - マーケティング
-description: 自分を「ブランド」として確立する。選ばれる人になるための自己プロデュース。
-slug: personal-branding
+  - "パーソナルブランディング"
+  - "キャリア"
+  - "マーケティング"
+description: "自分を「ブランド」として確立する。選ばれる人になるための自己プロデュース。"
+slug: "personal-branding"
 published: true
 ---
 

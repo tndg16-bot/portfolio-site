@@ -2,14 +2,14 @@
 title: "AIを活用したパーソナル学習カリキュラムの作り方"
 description: "独学を加速させるために、AIに自分専用の教科書を作らせる方法。"
 date: "2026-01-16"
-category: AI活用
+category: "AI活用"
 tags:
-  - 学習
-  - カリキュラム
-  - 独学
-  - 教育
+  - "学習"
+  - "カリキュラム"
+  - "独学"
+  - "教育"
 published: true
-slug: ai-personal-curriculum
+slug: "ai-personal-curriculum"
 ---
 
 ## はじめに

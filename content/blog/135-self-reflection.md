@@ -1,12 +1,12 @@
 ---
-title: 内省の技術 - 自分を知るための問いかけ
+title: "内省の技術 - 自分を知るための問いかけ"
 date: "2026-05-15"
-category: コーチング
+category: "コーチング"
 tags:
-  - Self-reflection
-  - Coaching
-  - Self-awareness
-description: 忙しさの中で自分を見失っていませんか？定期的な内省が、人生の羅針盤になります。
+  - "Self-reflection"
+  - "Coaching"
+  - "Self-awareness"
+description: "忙しさの中で自分を見失っていませんか？定期的な内省が、人生の羅針盤になります。"
 published: true
 ---
 

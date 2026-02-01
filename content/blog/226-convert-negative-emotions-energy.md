@@ -2,13 +2,13 @@
 title: "怒りや嫉妬という「ネガティブ感情」をエネルギーに変換する"
 description: "感情を否定するのではなく、その裏にある自分の「本当の願い」に気づく"
 date: "2026-05-02"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - ネガティブ感情
-  - 怒り
-  - エネルギー
+  - "ネガティブ感情"
+  - "怒り"
+  - "エネルギー"
 published: true
-slug: convert-negative-emotions-energy
+slug: "convert-negative-emotions-energy"
 ---
 
 怒りや嫉妬、不安などのネガティブ感情は、避けたいものですが、実は貴重な情報源です。感情を否定するのではなく、その裏にあるメッセージを読み取り、前向きなエネルギーに変換する方法を解説します。

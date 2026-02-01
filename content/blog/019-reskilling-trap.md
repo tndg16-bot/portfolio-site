@@ -1,14 +1,14 @@
 ---
-title: 「リスキリング」の罠 - 学ぶだけで終わらない人の共通点
-description: 学習だけで満足していませんか？成果につなげるリスキリングの方法
+title: "「リスキリング」の罠 - 学ぶだけで終わらない人の共通点"
+description: "学習だけで満足していませんか？成果につなげるリスキリングの方法"
 date: "2026-01-16"
-category: キャリア
+category: "キャリア"
 tags:
-  - リスキリング
-  - 学習
-  - キャリア
+  - "リスキリング"
+  - "学習"
+  - "キャリア"
 published: true
-slug: reskilling-trap
+slug: "reskilling-trap"
 ---
 
 ## はじめに

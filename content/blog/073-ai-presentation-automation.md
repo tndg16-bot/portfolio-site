@@ -2,14 +2,14 @@
 title: "AI時代のプレゼンテーション：スライド作成をAIで半自動化"
 description: "構成案からビジュアル生成まで、AIツールを組み合わせて最短で仕上げる。"
 date: "2026-02-08"
-category: AI活用
+category: "AI活用"
 tags:
-  - プレゼンテーション
-  - スライド
-  - AIツール
-  - 効率化
+  - "プレゼンテーション"
+  - "スライド"
+  - "AIツール"
+  - "効率化"
 published: true
-slug: ai-presentation-automation
+slug: "ai-presentation-automation"
 ---
 
 ## はじめに

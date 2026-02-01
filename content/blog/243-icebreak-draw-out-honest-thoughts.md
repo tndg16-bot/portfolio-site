@@ -2,13 +2,13 @@
 title: "1on1で部下の「本音」を引き出すためのアイスブレイク"
 description: "業務の話に入る前に、いかにして心理的な安全性を確保するか"
 date: "2026-05-19"
-category: コーチング
+category: "コーチング"
 tags:
-  - 1on1
-  - アイスブレイク
-  - 心理的安全性
+  - "1on1"
+  - "アイスブレイク"
+  - "心理的安全性"
 published: true
-slug: icebreak-draw-out-honest-thoughts
+slug: "icebreak-draw-out-honest-thoughts"
 ---
 
 1on1ミーティングで部下の本音を引き出すためには、業務の話に入る前に心理的安全性を確保することが重要です。効果的なアイスブレイクの方法を解説します。

@@ -2,14 +2,14 @@
 title: "AIを反論者として使い、思考の盲点をなくす"
 description: "自分の案に対して、あえて批判的な立場で意見をもらうデビルズアドボケート活用法。"
 date: "2026-01-29"
-category: AI活用
+category: "AI活用"
 tags:
-  - 批判的思考
-  - 意思決定
-  - 改善
-  - フィードバック
+  - "批判的思考"
+  - "意思決定"
+  - "改善"
+  - "フィードバック"
 published: true
-slug: ai-devils-advocate
+slug: "ai-devils-advocate"
 ---
 
 ## はじめに

@@ -1,12 +1,12 @@
 ---
-title: 年齢を言い訳にしない - 何歳からでも学べる脳の可塑性
+title: "年齢を言い訳にしない - 何歳からでも学べる脳の可塑性"
 date: "2026-01-29"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - Mindset
-  - Learning
-  - Neuroscience
-description: 「もう若くないから」と新しいことを諦めていませんか？脳科学が証明する、人生100年時代の学習可能性。
+  - "Mindset"
+  - "Learning"
+  - "Neuroscience"
+description: "「もう若くないから」と新しいことを諦めていませんか？脳科学が証明する、人生100年時代の学習可能性。"
 published: true
 ---
 

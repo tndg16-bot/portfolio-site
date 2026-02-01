@@ -2,13 +2,13 @@
 title: "毎日の「振り返り」を5分で終わらせる3つの質問"
 description: "良かった点、課題、明日の一歩。シンプルに継続できる内省の形"
 date: "2026-03-23"
-category: 生産性
+category: "生産性"
 tags:
-  - 振り返り
-  - 日記
-  - 内省
+  - "振り返り"
+  - "日記"
+  - "内省"
 published: true
-slug: daily-reflection-three-questions
+slug: "daily-reflection-three-questions"
 ---
 
 日々の振り返りは成長に欠かせない習慣ですが、時間をかけすぎると継続が難しくなります。シンプルな3つの質問に答えるだけの軽量な振り返り方法を紹介します。

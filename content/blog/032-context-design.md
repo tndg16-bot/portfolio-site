@@ -2,14 +2,14 @@
 title: "プロンプトエンジニアリングを超えた「コンテキスト設計」"
 description: "AIから最高の成果を引き出すための、背景情報の伝え方の極意。"
 date: "2026-01-23"
-category: AI活用
+category: "AI活用"
 tags:
-  - プロンプト
-  - コンテキスト
-  - AI活用
-  - 設計
+  - "プロンプト"
+  - "コンテキスト"
+  - "AI活用"
+  - "設計"
 published: true
-slug: context-design-beyond-prompt
+slug: "context-design-beyond-prompt"
 ---
 
 ## はじめに

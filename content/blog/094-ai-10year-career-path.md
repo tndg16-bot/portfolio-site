@@ -2,14 +2,14 @@
 title: "AIエージェントと共創する「10年後の自分」のキャリアパス"
 description: "変化の激しい時代を生き抜くための、AIと描く長期的な戦略。"
 date: "2026-02-15"
-category: AI活用
+category: "AI活用"
 tags:
-  - キャリアパス
-  - 長期戦略
-  - 未来設計
-  - キャリア
+  - "キャリアパス"
+  - "長期戦略"
+  - "未来設計"
+  - "キャリア"
 published: true
-slug: ai-10year-career-path
+slug: "ai-10year-career-path"
 ---
 
 ## はじめに

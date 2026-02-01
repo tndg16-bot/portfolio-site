@@ -2,13 +2,13 @@
 title: "コーチングの品質向上：自身の「セッション録音」を振り返る"
 description: "自分の質問の癖や、沈黙の使い方の甘さを客観的に分析し、修正する"
 date: "2026-05-31"
-category: コーチング
+category: "コーチング"
 tags:
-  - コーチング品質
-  - 自己分析
-  - 録音
+  - "コーチング品質"
+  - "自己分析"
+  - "録音"
 published: true
-slug: coaching-quality-session-recording
+slug: "coaching-quality-session-recording"
 ---
 
 自分のコーチングセッションを録音して振り返ることで、気づかなかった癖や改善点が見えてきます。客観的な分析を通じて、コーチングの質を向上させる方法を解説します。

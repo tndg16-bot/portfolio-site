@@ -2,13 +2,13 @@
 title: "沈黙を味方につける：相手が考える時間を「奪わない」技術"
 description: "問いを投げた後の静寂こそが、相手の脳がフル回転している貴重な時間"
 date: "2026-06-09"
-category: コーチング
+category: "コーチング"
 tags:
-  - 沈黙
-  - 傾聴
-  - 忍耐
+  - "沈黙"
+  - "傾聴"
+  - "忍耐"
 published: true
-slug: silence-ally-thinking-time
+slug: "silence-ally-thinking-time"
 ---
 
 問いを投げた後の沈黙は、コーチにとって耐え難い時間かもしれません。しかし、その沈黙こそが相手の脳がフル回転し、深い気づきを生む貴重な時間です。沈黙を味方につける技術を解説します。

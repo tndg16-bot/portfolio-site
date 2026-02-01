@@ -1,13 +1,13 @@
 ---
-title: 未来の自分と対話する - 長期思考の技術
+title: "未来の自分と対話する - 長期思考の技術"
 date: "2026-03-21"
-category: コーチング
+category: "コーチング"
 tags:
-  - 未来
-  - 計画
-  - 内省
-description: 10年後の自分は、今の自分に何と言うか？長期的な視点で今を考える方法。
-slug: future-self
+  - "未来"
+  - "計画"
+  - "内省"
+description: "10年後の自分は、今の自分に何と言うか？長期的な視点で今を考える方法。"
+slug: "future-self"
 published: true
 ---
 

@@ -1,13 +1,13 @@
 ---
-title: 上司からの依頼を断る技術
+title: "上司からの依頼を断る技術"
 date: "2026-02-23"
-category: キャリア
+category: "キャリア"
 tags:
-  - キャリア
-  - コミュニケーション
-  - 境界線
-description: 上司の頼みは断れない？実は、上手に断ることでむしろ信頼を得られます。
-slug: saying-no-at-work
+  - "キャリア"
+  - "コミュニケーション"
+  - "境界線"
+description: "上司の頼みは断れない？実は、上手に断ることでむしろ信頼を得られます。"
+slug: "saying-no-at-work"
 published: true
 ---
 

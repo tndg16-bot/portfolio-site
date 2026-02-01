@@ -2,14 +2,14 @@
 title: "AI時代の「検索」から「生成」へのシフト"
 description: "情報を探す時間から、AIと対話して結論を導き出す時間への移行戦略。"
 date: "2026-01-19"
-category: AI活用
+category: "AI活用"
 tags:
-  - AI検索
-  - 情報収集
-  - 生成AI
-  - 効率化
+  - "AI検索"
+  - "情報収集"
+  - "生成AI"
+  - "効率化"
 published: true
-slug: ai-search-to-generate
+slug: "ai-search-to-generate"
 ---
 
 ## はじめに

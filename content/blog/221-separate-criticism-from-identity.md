@@ -2,13 +2,13 @@
 title: "批判を受けた時に「人格」と「意見」を切り離す訓練"
 description: "指摘を攻撃と受け取らず、自分をアップデートするための貴重なフィードバックとして使う"
 date: "2026-04-27"
-category: マインドセット
+category: "マインドセット"
 tags:
-  - 批判
-  - フィードバック
-  - 自己成長
+  - "批判"
+  - "フィードバック"
+  - "自己成長"
 published: true
-slug: separate-criticism-from-identity
+slug: "separate-criticism-from-identity"
 ---
 
 批判を受けた時、「自分はダメな人間だ」と感じてしまう人は多いです。しかし、批判された「行動」や「成果」と、自分の「人格」を切り離せば、批判は成長の貴重なフィードバックとなります。

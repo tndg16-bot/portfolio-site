@@ -1,12 +1,12 @@
 ---
-title: AIネイティブ世代の働き方
+title: "AIネイティブ世代の働き方"
 date: "2026-04-06"
-category: AI活用
+category: "AI活用"
 tags:
-  - AI
-  - Future of Work
-  - Career
-description: AIが当たり前の時代に、どう働くか。AIネイティブ世代が当たり前にやっていること。
+  - "AI"
+  - "Future of Work"
+  - "Career"
+description: "AIが当たり前の時代に、どう働くか。AIネイティブ世代が当たり前にやっていること。"
 published: true
 ---
 

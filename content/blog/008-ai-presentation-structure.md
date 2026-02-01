@@ -2,14 +2,14 @@
 title: "プレゼン資料の構成案をAIと30分で完成させる"
 description: "ターゲット設定から論理構成まで、AIをコンサルタントとして使う方法。"
 date: "2026-01-08"
-category: AI活用
+category: "AI活用"
 tags:
-  - プレゼンテーション
-  - ChatGPT
-  - 資料作成
-  - ビジネス
+  - "プレゼンテーション"
+  - "ChatGPT"
+  - "資料作成"
+  - "ビジネス"
 published: true
-slug: ai-presentation-structure
+slug: "ai-presentation-structure"
 ---
 
 ## はじめに

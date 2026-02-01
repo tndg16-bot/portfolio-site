@@ -1,13 +1,13 @@
 ---
-title: AIツールによるタスク自動化 - ChatGPT/Claude等を活用した効率化
+title: "AIツールによるタスク自動化 - ChatGPT/Claude等を活用した効率化"
 date: "2026-02-06"
-category: 生産性
+category: "生産性"
 tags:
-  - AI活用
-  - タスク管理
-  - 自動化
-  - 効率化
-description: AI活用によるタスク自動化の実践。ChatGPT、Claude、Geminiを使ったToDo管理、カレンダー連動、自動化スクリプトの具体的な方法。
+  - "AI活用"
+  - "タスク管理"
+  - "自動化"
+  - "効率化"
+description: "AI活用によるタスク自動化の実践。ChatGPT、Claude、Geminiを使ったToDo管理、カレンダー連動、自動化スクリプトの具体的な方法。"
 published: true
 ---
 

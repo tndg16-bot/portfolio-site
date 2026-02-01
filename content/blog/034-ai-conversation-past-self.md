@@ -2,14 +2,14 @@
 title: "AIで過去の自分と「対話」して自己理解を深める"
 description: "過去のログをAIに読み込ませ、思考のパターンや成長を客観視する。"
 date: "2026-01-24"
-category: AI活用
+category: "AI活用"
 tags:
-  - 自己理解
-  - 振り返り
-  - 日記分析
-  - 成長
+  - "自己理解"
+  - "振り返り"
+  - "日記分析"
+  - "成長"
 published: true
-slug: ai-conversation-past-self
+slug: "ai-conversation-past-self"
 ---
 
 ## はじめに

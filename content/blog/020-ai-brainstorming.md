@@ -2,14 +2,14 @@
 title: "AIと共創する「新商品企画」のブレインストーミング"
 description: "アイデアの壁を突破するために、AIに逆説的な視点を投げかけさせる。"
 date: "2026-01-17"
-category: AI活用
+category: "AI活用"
 tags:
-  - ブレインストーミング
-  - 新商品
-  - アイデア
-  - 企画
+  - "ブレインストーミング"
+  - "新商品"
+  - "アイデア"
+  - "企画"
 published: true
-slug: ai-brainstorming
+slug: "ai-brainstorming"
 ---
 
 ## はじめに

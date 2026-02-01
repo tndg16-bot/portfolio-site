@@ -2,8 +2,12 @@
 title: "メンタルモデルの「解体と再構築」：常に自分を疑い、新しくなる"
 description: "自分が世界をどう見ているかという「レンズ」自体を、定期的に磨き、取り替えることで、常に進化し続ける方法を解説します。"
 date: "2026-01-31"
-category: メンタルモデル
-tags: ["メンタルモデル", "解体", "再構築", "進化"]
+category: "メンタルモデル"
+tags:
+  - "メンタルモデル"
+  - "解体"
+  - "再構築"
+  - "進化"
 slug: "mental-models-deconstruction-rebuilding"
 published: true
 ---

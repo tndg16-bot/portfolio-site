@@ -2,13 +2,13 @@
 title: "心理的安全性が高いチームが、なぜ圧倒的な成果を出すのか"
 description: "失敗を恐れず意見を言える環境が、創造性と問題解決能力を最大化する"
 date: "2026-05-22"
-category: コーチング
+category: "コーチング"
 tags:
-  - 心理的安全性
-  - チーム
-  - パフォーマンス
+  - "心理的安全性"
+  - "チーム"
+  - "パフォーマンス"
 published: true
-slug: psychological-safety-team-results
+slug: "psychological-safety-team-results"
 ---
 
 Googleの「Project Aristotle」で明らかになったように、高パフォーマンスチームの最も重要な要素は「心理的安全性」です。失敗を恐れずに意見を言える環境が、なぜ圧倒的な成果を生むのかを解説します。

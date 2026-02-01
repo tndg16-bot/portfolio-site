@@ -2,13 +2,13 @@
 title: "大切なのは「時間管理」ではなく「エネルギー管理」である"
 description: "休息、食事、運動。体調を整えることが最強の生産性向上策"
 date: "2026-03-25"
-category: 生産性
+category: "生産性"
 tags:
-  - エネルギー管理
-  - 健康
-  - 生産性
+  - "エネルギー管理"
+  - "健康"
+  - "生産性"
 published: true
-slug: energy-over-time-management
+slug: "energy-over-time-management"
 ---
 
 多くの人が時間を効率的に使う方法を模索しますが、実は時間よりも大切なのは「エネルギー」の管理です。同じ1時間でも、エネルギー満タンの状態と消耗した状態では、生産性が雲泥の差になります。

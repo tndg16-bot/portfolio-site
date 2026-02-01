@@ -1,12 +1,12 @@
 ---
-title: 人生の優先順位 - 大きな石から入れる
+title: "人生の優先順位 - 大きな石から入れる"
 date: "2026-04-09"
-category: コーチング
+category: "コーチング"
 tags:
-  - Priorities
-  - Life
-  - Time Management
-description: 「忙しい」と言いながら、本当に大切なことに時間を使えていますか？大きな石の法則。
+  - "Priorities"
+  - "Life"
+  - "Time Management"
+description: "「忙しい」と言いながら、本当に大切なことに時間を使えていますか？大きな石の法則。"
 published: true
 ---
 

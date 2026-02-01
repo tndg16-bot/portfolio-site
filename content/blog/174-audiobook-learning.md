@@ -1,15 +1,15 @@
 ---
-title: 耳からのインプット「オーディオブック活用」で移動を学びに
-description: 手と目が使えない時間を、いかにして生産的なインプットに変えるか。
+title: "耳からのインプット「オーディオブック活用」で移動を学びに"
+description: "手と目が使えない時間を、いかにして生産的なインプットに変えるか。"
 date: "2026-03-11"
-category: 生産性
+category: "生産性"
 tags:
-  - オーディオブック
-  - インプット
-  - 移動時間
-  - 学習
+  - "オーディオブック"
+  - "インプット"
+  - "移動時間"
+  - "学習"
 published: true
-slug: audiobook-learning
+slug: "audiobook-learning"
 ---
 
 ## はじめに

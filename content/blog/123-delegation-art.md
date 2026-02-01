@@ -1,13 +1,13 @@
 ---
-title: 任せる技術 - 一人で抱え込まない
+title: "任せる技術 - 一人で抱え込まない"
 date: "2026-05-03"
-category: キャリア
+category: "キャリア"
 tags:
-  - 権限委譲
-  - リーダーシップ
-  - マネジメント
-description: 自分でやった方が早い。その考えが、あなたのボトルネックになっています。
-slug: delegation-art
+  - "権限委譲"
+  - "リーダーシップ"
+  - "マネジメント"
+description: "自分でやった方が早い。その考えが、あなたのボトルネックになっています。"
+slug: "delegation-art"
 published: true
 ---
 

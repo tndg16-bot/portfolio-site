@@ -1,12 +1,12 @@
 ---
-title: Noと言われてからが始まり - 営業マインドセット
+title: "Noと言われてからが始まり - 営業マインドセット"
 date: "2026-05-28"
-category: キャリア
+category: "キャリア"
 tags:
-  - Sales
-  - Mindset
-  - Rejection
-description: 断られるのが怖い？Noは終わりではなく、始まりです。拒絶を恐れないマインドセット。
+  - "Sales"
+  - "Mindset"
+  - "Rejection"
+description: "断られるのが怖い？Noは終わりではなく、始まりです。拒絶を恐れないマインドセット。"
 published: true
 ---
 

@@ -2,14 +2,14 @@
 title: "カスタムGPTsで「自分専用の秘書」を構築する"
 description: "定型業務を自動化し、自分の判断基準を学習させた専用AIの作り方。"
 date: "2026-01-04"
-category: AI活用
+category: "AI活用"
 tags:
-  - カスタムGPTs
-  - ChatGPT
-  - 業務効率化
-  - 自動化
+  - "カスタムGPTs"
+  - "ChatGPT"
+  - "業務効率化"
+  - "自動化"
 published: true
-slug: custom-gpts-personal-assistant
+slug: "custom-gpts-personal-assistant"
 ---
 
 ## はじめに

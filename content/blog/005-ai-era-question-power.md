@@ -2,14 +2,14 @@
 title: "AI時代の「問いを立てる力」を鍛える3つの習慣"
 description: "回答が溢れる時代だからこそ重要になる、本質的な課題を見抜く思考トレーニング。"
 date: "2026-01-05"
-category: AI活用
+category: "AI活用"
 tags:
-  - 質問力
-  - クリティカルシンキング
-  - AI活用
-  - 思考法
+  - "質問力"
+  - "クリティカルシンキング"
+  - "AI活用"
+  - "思考法"
 published: true
-slug: ai-era-question-power
+slug: "ai-era-question-power"
 ---
 
 ## はじめに

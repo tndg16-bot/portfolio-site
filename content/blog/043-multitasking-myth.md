@@ -1,12 +1,12 @@
 ---
-title: マルチタスクの幻想 - 脳は同時処理できない
+title: "マルチタスクの幻想 - 脳は同時処理できない"
 date: "2026-01-28"
-category: 生産性
+category: "生産性"
 tags:
-  - Productivity
-  - Focus
-  - Neuroscience
-description: 複数のことを同時にこなしているつもりが、実は何も成し遂げていない。脳科学が明かすマルチタスクの真実。
+  - "Productivity"
+  - "Focus"
+  - "Neuroscience"
+description: "複数のことを同時にこなしているつもりが、実は何も成し遂げていない。脳科学が明かすマルチタスクの真実。"
 published: true
 ---
 

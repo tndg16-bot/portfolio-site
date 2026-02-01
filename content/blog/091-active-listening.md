@@ -1,12 +1,12 @@
 ---
-title: 「聞く力」が信頼を作る - アクティブリスニングの技術
+title: "「聞く力」が信頼を作る - アクティブリスニングの技術"
 date: "2026-02-14"
-category: コーチング
+category: "コーチング"
 tags:
-  - Communication
-  - Coaching
-  - Leadership
-description: 話し上手より聞き上手が信頼される。相手が「この人にはもっと話したい」と思うリスニング技術。
+  - "Communication"
+  - "Coaching"
+  - "Leadership"
+description: "話し上手より聞き上手が信頼される。相手が「この人にはもっと話したい」と思うリスニング技術。"
 published: true
 ---
 

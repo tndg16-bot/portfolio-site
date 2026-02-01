@@ -1,15 +1,15 @@
 ---
-title: 集中力を削ぐ「プッシュ通知」を完全遮断するスマホ設定
-description: デジタルデバイスを支配するのではなく、仕事の道具として使いこなす方法。
+title: "集中力を削ぐ「プッシュ通知」を完全遮断するスマホ設定"
+description: "デジタルデバイスを支配するのではなく、仕事の道具として使いこなす方法。"
 date: "2026-02-17"
-category: 生産性
+category: "生産性"
 tags:
-  - 通知管理
-  - スマホ設定
-  - 集中力
-  - デジタル
+  - "通知管理"
+  - "スマホ設定"
+  - "集中力"
+  - "デジタル"
 published: true
-slug: smartphone-notification-block
+slug: "smartphone-notification-block"
 ---
 
 ## はじめに

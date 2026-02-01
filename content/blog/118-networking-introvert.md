@@ -1,13 +1,13 @@
 ---
-title: 内向型のためのネットワーキング術
+title: "内向型のためのネットワーキング術"
 date: "2026-04-28"
-category: キャリア
+category: "キャリア"
 tags:
-  - 人脈
-  - 内向型
-  - キャリア
-description: パーティーが苦手でも大丈夫。内向型の強みを活かした人脈構築法。
-slug: networking-introvert
+  - "人脈"
+  - "内向型"
+  - "キャリア"
+description: "パーティーが苦手でも大丈夫。内向型の強みを活かした人脈構築法。"
+slug: "networking-introvert"
 published: true
 ---
 

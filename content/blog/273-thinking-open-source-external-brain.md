@@ -2,8 +2,12 @@
 title: "思考の「オープンソース化」：他人の頭脳を自分の思考に取り入れる"
 description: "自分の限界を認め、外部の専門家やAIの知恵をいかに統合するか。思考のオープンソース化で、より深い洞察を得る方法を解説します。"
 date: "2026-01-31"
-category: 思考法
-tags: ["オープンソース思考", "知識統合", "コラボレーション", "AI活用"]
+category: "思考法"
+tags:
+  - "オープンソース思考"
+  - "知識統合"
+  - "コラボレーション"
+  - "AI活用"
 slug: "thinking-open-source-external-brain"
 published: true
 ---

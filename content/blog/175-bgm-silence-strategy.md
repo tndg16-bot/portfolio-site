@@ -1,15 +1,15 @@
 ---
-title: 集中力を維持する「BGM」と「無音」の使い分け戦略
-description: 作業の種類によって最適な音響環境を選び、深い没入状態（フロー）を作る。
+title: "集中力を維持する「BGM」と「無音」の使い分け戦略"
+description: "作業の種類によって最適な音響環境を選び、深い没入状態（フロー）を作る。"
 date: "2026-03-12"
-category: 生産性
+category: "生産性"
 tags:
-  - BGM
-  - 集中力
-  - 環境
-  - フロー
+  - "BGM"
+  - "集中力"
+  - "環境"
+  - "フロー"
 published: true
-slug: bgm-silence-strategy
+slug: "bgm-silence-strategy"
 ---
 
 ## はじめに

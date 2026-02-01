@@ -1,12 +1,12 @@
 ---
-title: 「やりたいこと」が見つからない本当の理由
+title: "「やりたいこと」が見つからない本当の理由"
 date: "2026-01-31"
-category: コーチング
+category: "コーチング"
 tags:
-  - Self-discovery
-  - Career
-  - Coaching
-description: 「やりたいことがわからない」と悩む人が増えています。実は、それは探し方を間違えているだけかもしれません。
+  - "Self-discovery"
+  - "Career"
+  - "Coaching"
+description: "「やりたいことがわからない」と悩む人が増えています。実は、それは探し方を間違えているだけかもしれません。"
 published: true
 ---
 
