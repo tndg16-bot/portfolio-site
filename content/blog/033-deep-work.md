@@ -1,6 +1,6 @@
 ---
 title: "ディープワークの時代 - なぜ集中力が最強のスキルになったのか"
-date: "2026-01-23"
+date: '2026-02-02'
 category: "生産性"
 tags:
   - "Productivity"
