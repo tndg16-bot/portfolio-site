@@ -1,6 +1,6 @@
 ---
 title: "マルチタスクの幻想 - 脳は同時処理できない"
-date: "2026-01-28"
+date: '2026-02-12'
 category: "生産性"
 tags:
   - "Productivity"
