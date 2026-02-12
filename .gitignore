@@ -52,3 +52,6 @@ setup_vercel_env.ps1
 .env.development
 .env.test
 nul
+
+# local worktree artifacts
+.worktrees/
