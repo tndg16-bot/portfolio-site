@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     domains: ['github.com', 'avatars.githubusercontent.com'],
   },
+  // NOTE: Next.js 16+ no longer supports `eslint` config in next.config.js.
 };
 
 module.exports = nextConfig;
