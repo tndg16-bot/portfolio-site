@@ -1,16 +1,10 @@
 'use client';
 
+// Avoid creating Supabase client at module scope.
+// In CI/Vercel builds, env vars may be missing and Next will still evaluate this module while prerendering.
+
 import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.error('Supabase environment variables not configured');
-}
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -22,7 +16,21 @@ export default function LoginPage() {
     setLoading(true);
     setMessage(null);
 
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
+    if (!supabaseUrl || !supabaseAnonKey) {
+      setMessage({
+        type: 'error',
+        text: 'Supabaseの環境変数が未設定のため、現在ログイン機能を利用できません。',
+      });
+      setLoading(false);
+      return;
+    }
+
     try {
+      const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {

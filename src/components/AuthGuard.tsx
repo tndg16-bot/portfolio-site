@@ -5,11 +5,6 @@ import { useRouter } from 'next/navigation';
 import { createClient } from '@supabase/supabase-js';
 import type { User } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
 interface AuthGuardProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
@@ -21,6 +16,18 @@ export default function AuthGuard({ children, fallback }: AuthGuardProps) {
   const router = useRouter();
 
   useEffect(() => {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
+    if (!supabaseUrl || !supabaseAnonKey) {
+      // Supabase未設定なら、認証ガードは機能しないためログインページへ誘導
+      setUser(null);
+      setLoading(false);
+      return;
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
     // Check current session
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
