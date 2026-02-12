@@ -56,6 +56,19 @@
     "lightningcss-freebsd-x64": "^1.30.2",
     "lightningcss-android-arm64": "^1.30.2",
     "lightningcss-win32-arm64-msvc": "^1.30.2",
-    "lightningcss-win32-x64-msvc": "^1.30.2"
+    "lightningcss-win32-x64-msvc": "^1.30.2",
+
+    "@tailwindcss/oxide-darwin-arm64": "4.1.18",
+    "@tailwindcss/oxide-darwin-x64": "4.1.18",
+    "@tailwindcss/oxide-freebsd-x64": "4.1.18",
+    "@tailwindcss/oxide-linux-arm-gnueabihf": "4.1.18",
+    "@tailwindcss/oxide-linux-arm64-musl": "4.1.18",
+    "@tailwindcss/oxide-linux-arm64-gnu": "4.1.18",
+    "@tailwindcss/oxide-linux-x64-gnu": "4.1.18",
+    "@tailwindcss/oxide-linux-x64-musl": "4.1.18",
+    "@tailwindcss/oxide-wasm32-wasi": "4.1.18",
+    "@tailwindcss/oxide-win32-arm64-msvc": "4.1.18",
+    "@tailwindcss/oxide-win32-x64-msvc": "4.1.18",
+    "@tailwindcss/oxide-android-arm64": "4.1.18"
   }
 }
