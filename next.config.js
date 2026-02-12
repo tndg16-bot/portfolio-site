@@ -4,9 +4,6 @@ const nextConfig = {
   images: {
     domains: ['github.com', 'avatars.githubusercontent.com'],
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
 
 module.exports = nextConfig;
