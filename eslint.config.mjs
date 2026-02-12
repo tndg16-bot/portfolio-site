@@ -12,6 +12,14 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+
+    // Local dev artifacts
+    ".worktrees/**",
+
+    // One-off scripts / non-app utilities (exclude from lint to keep signal focused)
+    "scripts/**",
+    "prisma/**",
+    "check-*.js",
   ]),
 
   // NOTE: Temporary relaxations to keep CI green while we incrementally fix lint.
