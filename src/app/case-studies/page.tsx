@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { getCaseStudies } from '@/data/case-studies';
 import Header from '@/components/Header';
 import Link from 'next/link';
-import { ArrowRight, User, TrendingUp } from 'lucide-react';
+import { ArrowRight, TrendingUp } from 'lucide-react';
 
 export default function CaseStudiesPage() {
     const caseStudies = getCaseStudies();

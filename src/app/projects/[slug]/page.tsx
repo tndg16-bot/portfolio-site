@@ -4,7 +4,8 @@ import { projectsMetadata } from "@/data/projects-metadata";
 import { notFound, useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
-import { ArrowLeft, ArrowRight, CheckCircle2, Cpu, ExternalLink } from "lucide-react";
+import Link from 'next/link';
+import { ArrowLeft, CheckCircle2, Cpu, ExternalLink } from "lucide-react";
 
 const colorVariants: Record<string, { bg: string; text: string; border: string; iconBg: string; baseBg: string }> = {
     rose: { bg: "bg-rose-50", text: "text-rose-600", border: "border-rose-100", iconBg: "bg-rose-100", baseBg: "bg-rose-100" },
@@ -47,10 +48,10 @@ export default function ProjectPage() {
                     transition={{ duration: 0.6 }}
                 >
                     <div className="flex items-center justify-center gap-2 mb-6">
-                        <a href="/" className="group flex items-center gap-1 text-sm text-zinc-500 hover:text-japan-indigo transition-colors">
+                        <Link href="/" className="group flex items-center gap-1 text-sm text-zinc-500 hover:text-japan-indigo transition-colors">
                             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                             ホームに戻る
-                        </a>
+                        </Link>
                     </div>
 
                     <div className={`mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-3xl ${colors.baseBg} text-6xl shadow-lg border ${colors.border}`}>

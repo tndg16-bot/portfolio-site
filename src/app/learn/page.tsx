@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { BookOpen, Play, Clock, CheckCircle, Lock } from 'lucide-react';
+import { BookOpen, Play, Clock, CheckCircle } from 'lucide-react';
 import type { UserEnrolledCourse } from '@/types/course';
 import { cn } from '@/lib/utils';
 
@@ -12,6 +13,10 @@ export default function LearnPage() {
   const [courses, setCourses] = useState<UserEnrolledCourse[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Avoid unused-vars warnings until loading/error UI is implemented
+  void loading;
+  void error;
 
   useEffect(() => {
     const fetchCourses = async () => {
@@ -52,22 +57,44 @@ export default function LearnPage() {
 
         if (enrollmentsError) throw enrollmentsError;
 
+        type EnrollmentRow = {
+          id: string;
+          course_id: string;
+          progress_percentage: number | null;
+          enrolled_at: string;
+          expires_at: string | null;
+          is_active: boolean;
+          completed_at: string | null;
+          courses?: {
+            slug: string | null;
+            title: string | null;
+            description: string | null;
+            thumbnail_url: string | null;
+            total_lessons: number | null;
+          } | null;
+        };
+
         // Transform data to match UserEnrolledCourse type
-        const userCourses: UserEnrolledCourse[] = (enrollments || []).map((enrollment: any) => ({
-          enrollment_id: enrollment.id,
-          user_id: userData.user.id,
-          course_id: enrollment.course_id,
-          course_slug: enrollment.courses?.slug || '',
-          course_title: enrollment.courses?.title || 'Unknown Course',
-          course_description: enrollment.courses?.description || null,
-          course_thumbnail_url: enrollment.courses?.thumbnail_url || null,
-          course_total_lessons: enrollment.courses?.total_lessons || 0,
-          progress_percentage: enrollment.progress_percentage || 0,
-          enrolled_at: enrollment.enrolled_at,
-          expires_at: enrollment.expires_at || null,
-          is_active: enrollment.is_active,
-          completed_at: enrollment.completed_at || null,
-        }));
+        const userCourses: UserEnrolledCourse[] = (enrollments || []).map((row: unknown) => {
+          const enrollment = row as EnrollmentRow;
+          const course = enrollment.courses ?? null;
+
+          return {
+            enrollment_id: enrollment.id,
+            user_id: userData.user.id,
+            course_id: enrollment.course_id,
+            course_slug: course?.slug || '',
+            course_title: course?.title || 'Unknown Course',
+            course_description: course?.description || null,
+            course_thumbnail_url: course?.thumbnail_url || null,
+            course_total_lessons: course?.total_lessons || 0,
+            progress_percentage: enrollment.progress_percentage || 0,
+            enrolled_at: enrollment.enrolled_at,
+            expires_at: enrollment.expires_at || null,
+            is_active: enrollment.is_active,
+            completed_at: enrollment.completed_at || null,
+          };
+        });
 
         setCourses(userCourses);
         setLoading(false);
@@ -87,7 +114,7 @@ export default function LearnPage() {
           <BookOpen className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-zinc-900 mb-4">No Courses Yet</h2>
           <p className="text-zinc-600 mb-6">
-            You haven't enrolled in any courses yet. Browse available courses and start your learning journey!
+            You haven&apos;t enrolled in any courses yet. Browse available courses and start your learning journey!
           </p>
           <Link
             href="/"
@@ -125,10 +152,13 @@ export default function LearnPage() {
                 {/* Course Thumbnail */}
                 <div className="aspect-video bg-zinc-900 relative overflow-hidden">
                   {course.course_thumbnail_url ? (
-                    <img
+                    <Image
                       src={course.course_thumbnail_url}
                       alt={course.course_title}
-                      className="w-full h-full object-cover"
+                      fill
+                      unoptimized
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zinc-800">

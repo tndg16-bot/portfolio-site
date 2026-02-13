@@ -70,15 +70,21 @@ export default async function PostPage({ params }: Props) {
   const { slug } = await params;
   const url = `https://takahiro-motoyama.vercel.app/blog/${slug}`;
 
+  let post: Awaited<ReturnType<typeof getPostData>>;
   try {
-    const post = await getPostData(slug);
-    const ogImageUrl = `https://takahiro-motoyama.vercel.app/api/og?title=${encodeURIComponent(post.title)}`;
+    post = await getPostData(slug);
+  } catch {
+    notFound();
+  }
 
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
-          <article className="max-w-3xl">
-            <ArticleJsonLd
+  const ogImageUrl = `https://takahiro-motoyama.vercel.app/api/og?title=${encodeURIComponent(post.title)}`;
+  const relatedPosts = getRelatedPosts(slug, 3);
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
+        <article className="max-w-3xl">
+          <ArticleJsonLd
             title={post.title}
             description={post.description || ''}
             datePublished={post.date}
@@ -103,24 +109,16 @@ export default async function PostPage({ params }: Props) {
 
           {/* Article Header */}
           <header className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
-              {post.title}
-            </h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">{post.title}</h1>
 
             {/* Meta information */}
             <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400">
               <time dateTime={post.date}>{post.date}</time>
 
-              {post.readingTime && (
-                <span className="reading-time-badge">
-                  📖 {post.readingTime}分で読める
-                </span>
-              )}
+              {post.readingTime && <span className="reading-time-badge">📖 {post.readingTime}分で読める</span>}
 
               {post.category && (
-                <span className="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs">
-                  {post.category}
-                </span>
+                <span className="px-3 py-1 bg-teal-500/10 text-teal-400 rounded-full text-xs">{post.category}</span>
               )}
             </div>
 
@@ -146,47 +144,36 @@ export default async function PostPage({ params }: Props) {
           </div>
 
           {/* Article Content */}
-          <div
-            className="prose-blog"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-          />
+          <div className="prose-blog" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
 
           {/* Author Bio */}
           <AuthorBio className="mt-12" />
 
           {/* Related Posts */}
-          {(() => {
-            const relatedPosts = getRelatedPosts(slug, 3);
-            if (relatedPosts.length === 0) return null;
-            return (
-              <div className="mt-12 border-t border-zinc-800 pt-8">
-                <h3 className="text-xl font-semibold mb-6 text-zinc-300">関連記事</h3>
-                <div className="grid gap-4 md:grid-cols-3">
-                  {relatedPosts.map((relatedPost) => (
-                    <Link
-                      key={relatedPost.id}
-                      href={`/blog/${relatedPost.id}`}
-                      className="glass-card p-4 rounded-xl hover:border-teal-500/30 transition-all group block"
-                    >
-                      <h4 className="text-sm font-semibold text-white group-hover:text-teal-400 transition-colors line-clamp-2 mb-2">
-                        {relatedPost.title}
-                      </h4>
-                      <div className="flex items-center gap-2 text-xs text-zinc-500">
-                        {relatedPost.category && (
-                          <span className="px-2 py-0.5 bg-teal-500/10 text-teal-400 rounded">
-                            {relatedPost.category}
-                          </span>
-                        )}
-                        {relatedPost.readingTime && (
-                          <span>📖 {relatedPost.readingTime}分</span>
-                        )}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+          {relatedPosts.length > 0 && (
+            <div className="mt-12 border-t border-zinc-800 pt-8">
+              <h3 className="text-xl font-semibold mb-6 text-zinc-300">関連記事</h3>
+              <div className="grid gap-4 md:grid-cols-3">
+                {relatedPosts.map((relatedPost) => (
+                  <Link
+                    key={relatedPost.id}
+                    href={`/blog/${relatedPost.id}`}
+                    className="glass-card p-4 rounded-xl hover:border-teal-500/30 transition-all group block"
+                  >
+                    <h4 className="text-sm font-semibold text-white group-hover:text-teal-400 transition-colors line-clamp-2 mb-2">
+                      {relatedPost.title}
+                    </h4>
+                    <div className="flex items-center gap-2 text-xs text-zinc-500">
+                      {relatedPost.category && (
+                        <span className="px-2 py-0.5 bg-teal-500/10 text-teal-400 rounded">{relatedPost.category}</span>
+                      )}
+                      {relatedPost.readingTime && <span>📖 {relatedPost.readingTime}分</span>}
+                    </div>
+                  </Link>
+                ))}
               </div>
-            );
-          })()}
+            </div>
+          )}
 
           {/* Share section */}
           <div className="mt-12 border-t border-zinc-800 pt-8">
@@ -204,20 +191,20 @@ export default async function PostPage({ params }: Props) {
             <h3 className="text-xl font-semibold mb-4 text-zinc-300">コメント</h3>
             <GiscusComments />
           </div>
-          </article>
+        </article>
 
-          {/* Table of Contents - Desktop Sidebar */}
-          <aside className="hidden lg:block">
-            <TableOfContents content={post.contentHtml} />
-          </aside>
-        </div>
-
-        {/* Table of Contents - Mobile */}
-        <div className="lg:hidden mt-8 mb-4">
+        {/* Table of Contents - Desktop Sidebar */}
+        <aside className="hidden lg:block">
           <TableOfContents content={post.contentHtml} />
-        </div>
+        </aside>
+      </div>
 
-        <Script id="mermaid-init" strategy="afterInteractive">
+      {/* Table of Contents - Mobile */}
+      <div className="lg:hidden mt-8 mb-4">
+        <TableOfContents content={post.contentHtml} />
+      </div>
+
+      <Script id="mermaid-init" strategy="afterInteractive">
           {`
             import('https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs').then((mermaid) => {
               mermaid.default.initialize({
@@ -279,10 +266,7 @@ export default async function PostPage({ params }: Props) {
               }
             });
           `}
-        </Script>
-      </div>
-    );
-  } catch {
-    notFound();
-  }
+      </Script>
+    </div>
+  );
 }
