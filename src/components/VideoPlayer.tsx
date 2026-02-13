@@ -5,8 +5,18 @@ interface VideoPlayerProps {
   onComplete: () => Promise<void>;
 }
 
-export default function VideoPlayer({ videoId, lessonId, onProgressUpdate, onComplete }: VideoPlayerProps) {
-    return (
+export default function VideoPlayer({
+  videoId,
+  lessonId: _lessonId,
+  onProgressUpdate: _onProgressUpdate,
+  onComplete: _onComplete,
+}: VideoPlayerProps) {
+  // Currently a mock player; keep props for future integration.
+  void _lessonId;
+  void _onProgressUpdate;
+  void _onComplete;
+
+  return (
         <div className="aspect-video bg-black rounded-xl overflow-hidden border border-zinc-800 relative group">
             <div className="absolute inset-0 flex items-center justify-center bg-zinc-900">
                 <div className="text-center">

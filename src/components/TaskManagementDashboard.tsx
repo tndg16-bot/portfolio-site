@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { LayoutDashboard, List, Filter, Plus, Calendar, Check, Clock, AlertCircle, User } from 'lucide-react';
+import { LayoutDashboard, List, Filter, Plus, Check, Clock, AlertCircle, User } from 'lucide-react';
 
 interface Task {
   id: string;
@@ -14,10 +14,7 @@ interface Task {
   dependencies: string[];
 }
 
-interface TaskCardProps {
-  task: Task;
-  onStatusChange: (taskId: string, status: Task['status']) => void;
-}
+// (lint) TaskCardProps unused - reserved for future extraction
 
 export default function TaskManagementDashboard() {
   const [tasks, setTasks] = useState<Task[]>([
@@ -63,7 +60,7 @@ export default function TaskManagementDashboard() {
     }
   ]);
   
-  const [filter, setFilter] = useState<'all' | 'completed' | 'in_progress' | 'pending'>('all');
+  const [filter, setFilter] = useState<'all' | Task['status']>('all');
   const [sortBy, setSortBy] = useState<'priority' | 'dueDate' | 'status'>('priority');
 
   const filteredTasks = tasks.filter((task) => {
@@ -165,7 +162,7 @@ export default function TaskManagementDashboard() {
             <Filter className="w-5 h-5 text-zinc-400" />
             <select
               value={filter}
-              onChange={(e) => setFilter(e.target.value as any)}
+              onChange={(e) => setFilter(e.target.value as 'all' | Task['status'])}
               className="bg-zinc-800/50 border border-zinc-700 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50"
             >
               <option value="all">すべてのタスク</option>
@@ -180,7 +177,7 @@ export default function TaskManagementDashboard() {
             <LayoutDashboard className="w-5 h-5 text-zinc-400" />
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
+              onChange={(e) => setSortBy(e.target.value as 'priority' | 'dueDate' | 'status')}
               className="bg-zinc-800/50 border border-zinc-700 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50"
             >
               <option value="priority">優先度順</option>

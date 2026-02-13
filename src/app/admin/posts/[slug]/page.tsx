@@ -6,11 +6,10 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Save, Eye, Plus, X } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { ArrowLeft, Save, Eye } from 'lucide-react';
 import { AdminPostContent } from '@/types/blog';
 
 export default function PostEditorPage() {
@@ -34,14 +33,7 @@ export default function PostEditorPage() {
     content: '',
   });
 
-  // Load existing post if editing
-  useEffect(() => {
-    if (!isNew) {
-      loadPost();
-    }
-  }, [slug, isNew]);
-
-  const loadPost = async () => {
+  const loadPost = useCallback(async () => {
     setLoading(true);
     try {
       const response = await fetch(`/api/admin/posts/${slug}`);
@@ -61,12 +53,19 @@ export default function PostEditorPage() {
       } else {
         setError('Post not found');
       }
-    } catch (error) {
+    } catch {
       setError('Failed to load post');
     } finally {
       setLoading(false);
     }
-  };
+  }, [slug]);
+
+  // Load existing post if editing
+  useEffect(() => {
+    if (!isNew) {
+      loadPost();
+    }
+  }, [isNew, loadPost]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -105,7 +104,7 @@ export default function PostEditorPage() {
         const data = await response.json();
         setError(data.message || 'Failed to save post');
       }
-    } catch (error) {
+    } catch {
       setError('An error occurred while saving');
     } finally {
       setSaving(false);

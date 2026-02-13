@@ -111,7 +111,7 @@ export async function GET(request: NextRequest) {
     };
 
     return NextResponse.json(response);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Internal Server Error', message: 'Failed to fetch posts' },
       { status: 500 }
@@ -169,7 +169,7 @@ export async function POST(request: NextRequest) {
     };
 
     return NextResponse.json(response, { status: 201 });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Internal Server Error', message: 'Failed to create post' },
       { status: 500 }

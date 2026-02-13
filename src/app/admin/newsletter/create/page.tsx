@@ -34,7 +34,7 @@ export default function CreateNewsletterPage() {
       setTimeout(() => {
         router.push('/admin/newsletter');
       }, 2000);
-    } catch (error) {
+    } catch {
       setStatus('error');
       setMessage('エラーが発生しました');
     }

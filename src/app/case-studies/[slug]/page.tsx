@@ -3,19 +3,17 @@
 import { getCaseStudyBySlug } from '@/data/case-studies';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, User, Briefcase, Target, Zap, TrendingUp, Quote } from 'lucide-react';
-import BookingForm from '@/components/BookingForm'; // Reuse booking form or link to sessions
+import { ArrowLeft, ArrowRight, User, Target, Zap, TrendingUp } from 'lucide-react';
 
 type Props = {
-    params: Promise<{
+    params: {
         slug: string;
-    }>;
+    };
 };
 
-export default async function CaseStudyPage({ params }: Props) {
-    const { slug } = await params;
+export default function CaseStudyPage({ params }: Props) {
+    const { slug } = params;
     const study = getCaseStudyBySlug(slug);
 
     if (!study) {
@@ -104,7 +102,7 @@ export default async function CaseStudyPage({ params }: Props) {
                             <blockquote className="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 relative">
                                 <User className="absolute top-8 left-8 text-zinc-700 w-12 h-12" />
                                 <p className="text-xl md:text-2xl italic text-zinc-200 mb-6 relative z-10 leading-relaxed">
-                                    "{study.testimonial.quote}"
+                                    &quot;{study.testimonial.quote}&quot;
                                 </p>
                                 <footer className="text-right">
                                     <cite className="not-italic block font-bold text-white">{study.testimonial.author}</cite>

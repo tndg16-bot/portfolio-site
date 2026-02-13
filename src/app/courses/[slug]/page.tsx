@@ -3,18 +3,17 @@
 import { getCourseBySlug } from '@/data/courses';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, CheckCircle2, PlayCircle, Lock, Clock, BookOpen, Users, Star, Target } from 'lucide-react';
 
 type Props = {
-    params: Promise<{
+    params: {
         slug: string;
-    }>;
+    };
 };
 
-export default async function CourseDetailPage({ params }: Props) {
-    const { slug } = await params;
+export default function CourseDetailPage({ params }: Props) {
+    const { slug } = params;
     const course = getCourseBySlug(slug);
 
     if (!course) {
@@ -149,7 +148,7 @@ export default async function CourseDetailPage({ params }: Props) {
                                 カリキュラム
                             </h2>
                             <div className="space-y-6">
-                                {course.modules.map((module, i) => (
+                                {course.modules.map((module) => (
                                     <div key={module.id} className="border border-japan-indigo/10 rounded-2xl overflow-hidden">
                                         <div className="bg-japan-indigo/5 p-4 border-b border-japan-indigo/10 flex justify-between items-center">
                                             <span className="font-bold text-japan-indigo text-sm md:text-base">

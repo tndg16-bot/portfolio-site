@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { getCourses } from '@/data/courses';
 import Header from '@/components/Header';
 import Link from 'next/link';
-import { Clock, BookOpen, ArrowRight, CheckCircle2, Users, Target } from 'lucide-react';
+import { Clock, BookOpen, ArrowRight, CheckCircle2, Users } from 'lucide-react';
 
 export default function CoursesPage() {
     const courses = getCourses();

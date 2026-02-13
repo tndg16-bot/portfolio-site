@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Search, X } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function SearchBar() {

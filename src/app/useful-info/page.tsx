@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Book, Lightbulb, Target, HelpCircle, CheckCircle2, ArrowRight, ExternalLink } from 'lucide-react';
+import { Book, Lightbulb, Target, HelpCircle, CheckCircle2, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function UsefulInfoPage() {

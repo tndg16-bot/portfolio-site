@@ -11,8 +11,7 @@ type FAQ = {
   category: string;
 };
 
-export default function FAQPage() {
-  const faqs: FAQ[] = [
+const faqs: FAQ[] = [
     {
       id: 'faq-0',
       question: 'セッションはどのような形式で行われますか？',
@@ -106,9 +105,10 @@ export default function FAQPage() {
     },
   ];
 
+export default function FAQPage() {
   const categories = useMemo(
     () => Array.from(new Set(faqs.map((faq) => faq.category))),
-    [faqs]
+    []
   );
 
   const [selectedCategory, setSelectedCategory] = useState<string>('すべて');
@@ -127,7 +127,7 @@ export default function FAQPage() {
       const haystack = `${faq.question} ${faq.answer} ${faq.category}`.toLowerCase();
       return inCategory && haystack.includes(q);
     });
-  }, [faqs, query, selectedCategory]);
+  }, [query, selectedCategory]);
 
   const toggleOpen = (faq: FAQ) => {
     setOpenId(openId === faq.id ? null : faq.id);

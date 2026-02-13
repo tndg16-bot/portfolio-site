@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Mic, Play, ArrowRight, Code, AlertTriangle, CheckCircle, Maximize2, Minimize2 } from "lucide-react";
 
@@ -151,7 +151,7 @@ const slides = [
                 <div className="p-4 bg-red-50/50 rounded-xl border border-red-200">
                     <h3 className="font-bold text-red-800 mb-2 flex items-center gap-2 text-sm"><AlertTriangle size={16} /> 悪い指示 (Bad)</h3>
                     <p className="text-red-900 font-mono text-xs bg-white/50 p-2 rounded">
-                        "かっこいいサイト作って"
+                        &quot;かっこいいサイト作って&quot;
                     </p>
                     <div className="mt-2 text-[10px] text-red-700 leading-tight">
                         😰 AI: 「かっこいい」の定義がわからず、ありきたりな青いサイトを作る。
@@ -160,7 +160,7 @@ const slides = [
                 <div className="p-4 bg-green-50/50 rounded-xl border border-green-200">
                     <h3 className="font-bold text-green-800 mb-2 flex items-center gap-2 text-sm"><CheckCircle size={16} /> 良い指示 (Good)</h3>
                     <p className="text-green-900 font-mono text-xs bg-white/50 p-2 rounded">
-                        "バリ島の夕日イメージLP / メイン色:#FF5722と紫 / ヒーローに波の画像"
+                        &quot;バリ島の夕日イメージLP / メイン色:#FF5722と紫 / ヒーローに波の画像&quot;
                     </p>
                     <div className="mt-2 text-[10px] text-green-700 leading-tight">
                         😃 AI: 具体的な色と画像指定があるため、一発で期待通りのものを作る。
@@ -185,7 +185,7 @@ const slides = [
                     <div className="w-2 h-2 rounded-full bg-green-500"></div>
                 </div>
                 <div className="text-green-400 font-mono text-xs leading-relaxed">
-                    <span className="opacity-50">// AI Generating Code...</span><br />
+                    <span className="opacity-50">{/* AI Generating Code... */}</span><br />
                     <Typewriter text={`const HeroSection = () => {
     return (
         <div className="bg-gradient-to-r from-orange to-purple flex center">
@@ -272,25 +272,23 @@ export default function SlidePage() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isFullscreen, setIsFullscreen] = useState(false);
 
-    const nextSlide = () => {
-        if (currentSlide < slides.length - 1) setCurrentSlide(curr => curr + 1);
-    };
+    const nextSlide = useCallback(() => {
+        setCurrentSlide((curr) => Math.min(curr + 1, slides.length - 1));
+    }, []);
 
-    const prevSlide = () => {
-        if (currentSlide > 0) setCurrentSlide(curr => curr - 1);
-    };
+    const prevSlide = useCallback(() => {
+        setCurrentSlide((curr) => Math.max(curr - 1, 0));
+    }, []);
 
-    const toggleFullscreen = () => {
+    const toggleFullscreen = useCallback(() => {
         if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen();
             setIsFullscreen(true);
-        } else {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-                setIsFullscreen(false);
-            }
+        } else if (document.exitFullscreen) {
+            document.exitFullscreen();
+            setIsFullscreen(false);
         }
-    };
+    }, []);
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -300,7 +298,7 @@ export default function SlidePage() {
         };
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [currentSlide]);
+    }, [nextSlide, prevSlide, toggleFullscreen]);
 
     const curr = slides[currentSlide];
 
@@ -370,7 +368,7 @@ export default function SlidePage() {
                         >
                             <Mic className="shrink-0 opacity-70 mt-1" size={24} />
                             <p className="text-lg md:text-xl italic leading-relaxed font-serif font-medium opacity-90">
-                                "{curr.narration}"
+                                &quot;{curr.narration}&quot;
                             </p>
                         </motion.div>
                     </AnimatePresence>

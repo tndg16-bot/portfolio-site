@@ -34,7 +34,12 @@ function determineActivityType(message: string): 'milestone' | 'update' | 'compl
     if (lowerMessage.includes('feat:') || lowerMessage.includes('feature') || lowerMessage.includes('🚀')) {
         return 'milestone';
     }
-    if (lowerMessage.includes('fix:') || lowerMessage.includes('complete') || lowerMessage.includes('close') || lowerMessage.includes('✅')) {
+    if (
+        lowerMessage.includes('fix:') ||
+        lowerMessage.includes('complete') ||
+        lowerMessage.includes('close') ||
+        lowerMessage.includes('✅')
+    ) {
         return 'completed';
     }
     return 'update';
@@ -59,15 +64,15 @@ function formatDate(isoDate: string): string {
 async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
     const url = `https://api.github.com/users/${GITHUB_OWNER}/repos?per_page=100&sort=updated`;
     const headers: HeadersInit = {
-        'Accept': 'application/vnd.github.v3+json',
+        Accept: 'application/vnd.github.v3+json',
     };
     if (GITHUB_TOKEN) {
-        headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
+        headers.Authorization = `Bearer ${GITHUB_TOKEN}`;
     }
 
     const response = await fetch(url, {
         headers,
-        next: { revalidate: 3600 } // 1時間ごとに再検証
+        next: { revalidate: 3600 }, // 1時間ごとに再検証
     });
 
     if (!response.ok) {
@@ -82,16 +87,16 @@ async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
 async function fetchGitHubCommitsForRepo(repoName: string): Promise<GitHubCommit[]> {
     const url = `https://api.github.com/repos/${GITHUB_OWNER}/${repoName}/commits?per_page=5`;
     const headers: HeadersInit = {
-        'Accept': 'application/vnd.github.v3+json',
+        Accept: 'application/vnd.github.v3+json',
     };
 
     if (GITHUB_TOKEN) {
-        headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
+        headers.Authorization = `Bearer ${GITHUB_TOKEN}`;
     }
 
     const response = await fetch(url, {
         headers,
-        next: { revalidate: 300 } // 5分ごとに再検証
+        next: { revalidate: 300 }, // 5分ごとに再検証
     });
 
     if (!response.ok) {
@@ -100,19 +105,6 @@ async function fetchGitHubCommitsForRepo(repoName: string): Promise<GitHubCommit
     }
 
     return response.json();
-}
-
-// コミットをアクティビティに変換
-function parseCommitsToActivities(commits: GitHubCommit[], repoName: string): Activity[] {
-    return commits
-        .filter(commit => commit.commit && commit.commit.message) // 無効なコミットを除外
-        .map(commit => ({
-            date: formatDate(commit.commit.author.date),
-            message: formatCommitMessage(commit.commit.message),
-            type: determineActivityType(commit.commit.message),
-            sha: commit.sha.substring(0, 7),
-            repoName: repoName
-        }));
 }
 
 export async function GET() {
@@ -125,7 +117,7 @@ export async function GET() {
 
         // 各リポジトリのコミットを並列で取得
         const commitsArrays = await Promise.all(
-            recentRepos.map(repo => fetchGitHubCommitsForRepo(repo.name))
+            recentRepos.map((repo) => fetchGitHubCommitsForRepo(repo.name))
         );
 
         const allCommits = commitsArrays.flat();
@@ -139,7 +131,7 @@ export async function GET() {
                 message: formatCommitMessage(commit.commit.message),
                 type: activityType,
                 sha: commit.sha.substring(0, 7),
-                repoName: repoName
+                repoName: repoName,
             };
         });
 
@@ -155,25 +147,55 @@ export async function GET() {
             reposFetched: repos.length,
             commitsFetched: allCommits.length,
             lastUpdated: new Date().toISOString(),
-            source: 'github-commits-all-repos'
+            source: 'github-commits-all-repos',
         });
     } catch (error) {
         console.error('Error fetching GitHub commits:', error);
 
         // フォールバックアクティビティ
         const fallbackActivities: Activity[] = [
-            { date: '2026-01-16', message: 'Update blog post publication dates', type: 'completed', sha: 'abc1234', repoName: 'portfolio-site' },
-            { date: '2026-01-16', message: 'Add project dashboard GitHub integration', type: 'milestone', sha: 'def5678', repoName: 'portfolio-site' },
-            { date: '2026-01-15', message: 'Fix date validation logic', type: 'update', sha: 'ghi9012', repoName: 'portfolio-site' },
-            { date: '2026-01-14', message: 'feat: Add dynamic repo fetching', type: 'update', sha: 'jkl3456', repoName: 'portfolio-site' },
-            { date: '2026-01-13', message: 'Improve subtask parsing', type: 'update', sha: 'mno7890', repoName: 'portfolio-site' },
+            {
+                date: '2026-01-16',
+                message: 'Update blog post publication dates',
+                type: 'completed',
+                sha: 'abc1234',
+                repoName: 'portfolio-site',
+            },
+            {
+                date: '2026-01-16',
+                message: 'Add project dashboard GitHub integration',
+                type: 'milestone',
+                sha: 'def5678',
+                repoName: 'portfolio-site',
+            },
+            {
+                date: '2026-01-15',
+                message: 'Fix date validation logic',
+                type: 'update',
+                sha: 'ghi9012',
+                repoName: 'portfolio-site',
+            },
+            {
+                date: '2026-01-14',
+                message: 'feat: Add dynamic repo fetching',
+                type: 'update',
+                sha: 'jkl3456',
+                repoName: 'portfolio-site',
+            },
+            {
+                date: '2026-01-13',
+                message: 'Improve subtask parsing',
+                type: 'update',
+                sha: 'mno7890',
+                repoName: 'portfolio-site',
+            },
         ];
 
         return NextResponse.json({
             success: true,
             activities: fallbackActivities,
             lastUpdated: new Date().toISOString(),
-            source: 'fallback'
+            source: 'fallback',
         });
     }
 }

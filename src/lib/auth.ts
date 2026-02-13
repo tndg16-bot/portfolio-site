@@ -87,7 +87,7 @@ export async function verifySessionToken(token: string): Promise<boolean> {
     const session = payload as unknown as SessionPayload;
 
     return session.authenticated === true;
-  } catch (error) {
+  } catch {
     return false;
   }
 }
@@ -212,7 +212,7 @@ export async function checkAuthorization(request: Request): Promise<boolean> {
     }
 
     return verifySessionToken(token);
-  } catch (error) {
+  } catch {
     return false;
   }
 }

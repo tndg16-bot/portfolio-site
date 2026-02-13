@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { projectsMetadata, type ProjectMetadata } from '@/data/projects-metadata';
+import { projectsMetadata } from '@/data/projects-metadata';
 
 // Environment variables for GitHub integration
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;

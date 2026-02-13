@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import type { Course, Module, Lesson, UserEnrolledCourse } from '@/types/course';
+import type { Course, Module, Lesson } from '@/types/course';
 import VideoPlayer from '@/components/VideoPlayer';
 import LessonNavigation from '@/components/LessonNavigation';
 import Link from 'next/link';

@@ -41,8 +41,9 @@ export default function LoginPage() {
       if (error) throw error;
 
       setMessage({ type: 'success', text: 'ログイン用メールを送信しました。メールをご確認ください。' });
-    } catch (error: any) {
-      setMessage({ type: 'error', text: error.message || 'エラーが発生しました。' });
+    } catch (error: unknown) {
+      const messageText = error instanceof Error ? error.message : 'エラーが発生しました。';
+      setMessage({ type: 'error', text: messageText });
     } finally {
       setLoading(false);
     }

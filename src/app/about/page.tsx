@@ -200,7 +200,7 @@ export default function AboutPage() {
 
                         <motion.p variants={itemVariants} className="text-center text-zinc-300 mt-8 p-4 rounded-xl bg-white/5 border border-white/10">
                             「精神面（価値観・直感）」だけでも、「実務（AIやキャリア）」だけでもなく、<br />
-                            <span className="text-purple-400 font-medium">両方をつないで"意思決定"に落とすのが私のスタイルです。</span>
+                            <span className="text-purple-400 font-medium">両方をつないで&quot;意思決定&quot;に落とすのが私のスタイルです。</span>
                         </motion.p>
                     </motion.div>
                 </section>

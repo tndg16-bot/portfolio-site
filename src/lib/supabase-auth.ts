@@ -29,8 +29,10 @@ export async function createSupabaseAuthClient() {
           return cookie?.value ?? null;
         },
         setItem: (key: string, value: string) => {
-          // Note: Cookies are set via middleware or HTTP-only cookies
-          // This is a simplified version for client-side auth
+          // Note: Cookies are set via middleware or HTTP-only cookies.
+          // This is a simplified placeholder for client-side auth.
+          void key;
+          void value;
         },
         removeItem: (key: string) => {
           cookieStore.delete(key);

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { CheckCircle2, ArrowRight, Clock, User, Briefcase, GraduationCap, Star, Users, Calendar, Lock } from "lucide-react";
+import { CheckCircle2, ArrowRight, Clock, Briefcase, GraduationCap, Star, Users, Calendar, Lock } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { getAllServices } from "@/data/services";

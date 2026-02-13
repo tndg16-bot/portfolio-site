@@ -18,8 +18,6 @@ const rehypeImageCaption = () => {
     visit(tree, 'element', (node: HastElement) => {
       // Check if this is an img element
       if (node.tagName === 'img') {
-        const alt = (node.properties?.alt as string) || '';
-        const src = (node.properties?.src as string) || '';
         const title = (node.properties?.title as string) || '';
 
         // Create a figure element to wrap the image
