@@ -5,6 +5,7 @@ import { CheckCircle2, ArrowRight, Clock, Video, MessageCircle, ShieldCheck, Hel
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import Link from "next/link";
+import TopInfoBanner from "@/components/TopInfoBanner";
 
 const BookingForm = dynamic(() => import('@/components/BookingForm'), {
     loading: () => <div className="flex items-center justify-center min-h-[400px]">
@@ -67,6 +68,11 @@ export default function SessionsPage() {
         <>
             <Header />
             <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-24 pb-16">
+                <TopInfoBanner
+                    title="お知らせ"
+                    message="現在、セッション枠を少数限定でご案内しています。ご希望日時がある場合は、フォーム内の備考欄にご記入ください。"
+                />
+
                 {/* Hero */}
                 <section className="w-full max-w-4xl px-4 mb-16">
                     <motion.div
@@ -379,4 +385,3 @@ export default function SessionsPage() {
         </>
     );
 }
-
