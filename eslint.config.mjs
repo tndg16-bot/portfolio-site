@@ -28,8 +28,8 @@ const eslintConfig = defineConfig([
     rules: {
       "react-hooks/error-boundaries": "warn",
       "react/no-unescaped-entities": "warn",
-      "@typescript-eslint/no-require-imports": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-require-imports": "error",
+      "@typescript-eslint/no-explicit-any": "error",
       "@next/next/no-html-link-for-pages": "warn",
       "react-hooks/set-state-in-effect": "warn",
       "@typescript-eslint/ban-ts-comment": "warn",

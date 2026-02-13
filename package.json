@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint --max-warnings 9999"
   },
   "dependencies": {
     "@giscus/react": "^3.1.0",
