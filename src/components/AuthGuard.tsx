@@ -11,28 +11,33 @@ interface AuthGuardProps {
 }
 
 export default function AuthGuard({ children, fallback }: AuthGuardProps) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+  const hasSupabase = Boolean(supabaseUrl && supabaseAnonKey);
+
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => hasSupabase);
   const router = useRouter();
 
   useEffect(() => {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-
-    if (!supabaseUrl || !supabaseAnonKey) {
-      // Supabase未設定なら、認証ガードは機能しないためログインページへ誘導
-      setUser(null);
-      setLoading(false);
-      return;
-    }
+    if (!hasSupabase) return;
 
     const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    let isActive = true;
 
     // Check current session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-      setLoading(false);
-    });
+    supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => {
+        if (!isActive) return;
+        setUser(session?.user ?? null);
+        setLoading(false);
+      })
+      .catch(() => {
+        if (!isActive) return;
+        setUser(null);
+        setLoading(false);
+      });
 
     // Listen for auth changes
     const {
@@ -41,8 +46,11 @@ export default function AuthGuard({ children, fallback }: AuthGuardProps) {
       setUser(session?.user ?? null);
     });
 
-    return () => subscription.unsubscribe();
-  }, []);
+    return () => {
+      isActive = false;
+      subscription.unsubscribe();
+    };
+  }, [hasSupabase, supabaseAnonKey, supabaseUrl]);
 
   if (loading) {
     return fallback || (
