@@ -32,7 +32,7 @@ export default function AdminPage() {
       if (response.ok) {
         setIsAuthenticated(true);
       }
-    } catch (error) {
+    } catch {
       setIsAuthenticated(false);
     }
   };
@@ -58,7 +58,7 @@ export default function AdminPage() {
       } else {
         setError(data.message || 'Login failed');
       }
-    } catch (error) {
+    } catch {
       setError('An error occurred');
     } finally {
       setLoading(false);
@@ -102,7 +102,7 @@ export default function AdminPage() {
       } else {
         alert('Failed to delete post');
       }
-    } catch (error) {
+    } catch {
       alert('An error occurred while deleting the post');
     }
   };

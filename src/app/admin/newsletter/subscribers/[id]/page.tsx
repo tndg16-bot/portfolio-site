@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, Suspense, useCallback } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Mail, Calendar, Shield, X, RefreshCw } from 'lucide-react';
+import { ArrowLeft, Mail, Shield, X, RefreshCw } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Subscriber } from '@/types/newsletter';
 
@@ -15,7 +15,7 @@ function SubscriberDetailContent({ id }: { id: string }) {
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState(false);
 
-  const fetchSubscriber = async () => {
+  const fetchSubscriber = useCallback(async () => {
     setLoading(true);
     try {
       const response = await fetch(`/api/newsletter/subscribers/${id}`);
@@ -28,11 +28,11 @@ function SubscriberDetailContent({ id }: { id: string }) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id]);
 
   useEffect(() => {
     fetchSubscriber();
-  }, [id]);
+  }, [fetchSubscriber]);
 
   const handleDelete = async () => {
     if (!confirm('この購読者を削除しますか？')) return;
@@ -230,8 +230,8 @@ function SubscriberDetailContent({ id }: { id: string }) {
   );
 }
 
-export default async function SubscriberDetailPage({ params }: RouteContext) {
-  const { id } = await params;
+export default function SubscriberDetailPage({ params }: RouteContext) {
+  const { id } = params;
 
   return (
     <div className="container mx-auto px-4 py-8 min-h-screen">

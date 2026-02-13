@@ -88,7 +88,7 @@ export async function GET(
     const response: PostResponse = { post };
 
     return NextResponse.json(response);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Internal Server Error', message: 'Failed to fetch post' },
       { status: 500 }
@@ -174,7 +174,7 @@ export async function PUT(
     };
 
     return NextResponse.json(response);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Internal Server Error', message: 'Failed to update post' },
       { status: 500 }
@@ -216,7 +216,7 @@ export async function DELETE(
     };
 
     return NextResponse.json(response);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Internal Server Error', message: 'Failed to delete post' },
       { status: 500 }

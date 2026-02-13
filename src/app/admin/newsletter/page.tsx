@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, Suspense, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { Search, ChevronLeft, ChevronRight, Trash2, Eye, Plus, RefreshCw } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -23,14 +23,17 @@ function NewsletterDashboardContent() {
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
   const limit = 20;
+  // Only fetch for the submitted search term (avoid fetching on every keystroke)
+  const submittedSearchRef = useRef('');
 
-  const fetchSubscribers = async () => {
+  const fetchSubscribers = useCallback(async () => {
     setLoading(true);
     try {
+      const searchTerm = submittedSearchRef.current;
       const params = new URLSearchParams({
         page: page.toString(),
         limit: limit.toString(),
-        ...(search && { search }),
+        ...(searchTerm && { search: searchTerm }),
         ...(statusFilter !== 'all' && { status: statusFilter }),
       });
 
@@ -43,16 +46,21 @@ function NewsletterDashboardContent() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [page, statusFilter]);
 
   useEffect(() => {
     fetchSubscribers();
-  }, [page, statusFilter]);
+  }, [fetchSubscribers]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
+    submittedSearchRef.current = search.trim();
     setPage(1);
-    fetchSubscribers();
+    // If we were already on page 1, this triggers an immediate fetch.
+    // Otherwise, the page change will trigger the fetch via the effect.
+    if (page === 1) {
+      fetchSubscribers();
+    }
   };
 
   const handleDelete = async (id: string) => {
