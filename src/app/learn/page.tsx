@@ -86,7 +86,7 @@ export default function LearnPage() {
             course_slug: course?.slug || '',
             course_title: course?.title || 'Unknown Course',
             course_description: course?.description || undefined,
-            course_thumbnail_url: course?.thumbnail_url || null,
+            course_thumbnail_url: course?.thumbnail_url || undefined,
             course_total_lessons: course?.total_lessons || 0,
             progress_percentage: enrollment.progress_percentage || 0,
             enrolled_at: enrollment.enrolled_at,
