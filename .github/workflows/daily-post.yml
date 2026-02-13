@@ -86,8 +86,13 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add content/blog/
-        git commit -m "📰 Publish article: ${{ steps.publish.outputs.filename }} [$(date +%Y-%m-%d)]"
-        git push
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+          echo "skip=true" >> $GITHUB_OUTPUT
+        else
+          git commit -m "📰 Publish article: ${{ steps.publish.outputs.filename }} [$(date +%Y-%m-%d)]"
+          git push
+        fi
     
     - name: Trigger Vercel Deploy
       if: steps.publish.outputs.skip != 'true'
