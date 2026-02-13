@@ -231,7 +231,19 @@ function SubscriberDetailContent({ id }: { id: string }) {
 }
 
 export default function SubscriberDetailPage({ params }: RouteContext) {
-  const { id } = params;
+  const [id, setId] = useState<string>('');
+
+  useEffect(() => {
+    params.then(p => setId(p.id));
+  }, [params]);
+
+  if (!id) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <RefreshCw className="w-12 h-12 text-zinc-500 animate-spin" />
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-8 min-h-screen">
