@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { CheckCircle, XCircle, CreditCard } from 'lucide-react';
 import type { Course } from '@/types/course';
 
@@ -11,7 +12,7 @@ interface CheckoutPageProps {
 }
 
 export default function CheckoutPage({ params }: CheckoutPageProps) {
-  const { course_slug } = params;
+  void params;
 
   // NOTE: This component requires Stripe integration
   // Install with: npm install stripe @stripe/stripe-js
@@ -39,10 +40,10 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
       <div className="flex min-h-screen items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Course Not Found</h1>
-          <p>The course you're looking for doesn't exist.</p>
-          <a href="/learn" className="text-teal-400 hover:underline">
+          <p>The course you&apos;re looking for doesn&apos;t exist.</p>
+          <Link href="/learn" className="text-teal-400 hover:underline">
             Back to Courses
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -62,7 +63,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
               Complete Your Purchase
             </h1>
             <p className="text-zinc-600">
-              You're about to purchase: <strong>{course.title}</strong>
+              You&apos;re about to purchase: <strong>{course.title}</strong>
             </p>
           </div>
 
@@ -172,16 +173,16 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
               <br />
               3. Create Stripe products and prices in dashboard
             </p>
-            <a href="/learn" className="inline-block mt-4 px-6 py-3 bg-zinc-900 text-white rounded-lg font-medium hover:bg-zinc-800 transition-colors">
+            <Link href="/learn" className="inline-block mt-4 px-6 py-3 bg-zinc-900 text-white rounded-lg font-medium hover:bg-zinc-800 transition-colors">
               Back to Courses
-            </a>
+            </Link>
           </div>
 
           {/* Footer Links */}
           <div className="text-center text-sm text-zinc-500 pt-6 border-t border-zinc-200">
-            <a href="/learn" className="hover:text-zinc-700">
+            <Link href="/learn" className="hover:text-zinc-700">
               ← Back to Course List
-            </a>
+            </Link>
             <span className="mx-4">|</span>
             <a href="/contact" className="hover:text-zinc-700">
               Contact Support

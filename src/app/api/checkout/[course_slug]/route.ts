@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
-import type { CheckoutSessionRequest } from '@/types/course';
+// import type { CheckoutSessionRequest } from '@/types/course';
 
 // NOTE: This API requires @stripe/stripe-js to be installed
 // Install with: npm install stripe @stripe/stripe-js
@@ -15,7 +15,7 @@ export async function POST(
 ) {
   try {
     const { course_slug } = await params;
-    const body: CheckoutSessionRequest = await request.json();
+    await request.json();
 
     // Initialize Supabase client
     const supabase = createClient(
