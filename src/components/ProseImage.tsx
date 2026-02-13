@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 interface ProseImageProps {
@@ -10,16 +9,6 @@ interface ProseImageProps {
 }
 
 export default function ProseImage({ src, alt, caption }: ProseImageProps) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null; // Avoid hydration mismatch
-  }
-
   // Convert relative paths to absolute if needed
   const imageSrc = src.startsWith('http') ? src : src;
 

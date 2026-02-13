@@ -156,7 +156,7 @@ export interface TrustScoreReport {
 export interface ExportData {
   format: 'csv';
   headers: string[];
-  rows: any[];
+  rows: unknown[];
 }
 
 export interface TrustScoreData {
@@ -189,7 +189,6 @@ export function calculateActivityScore(activities: Activity[]): number {
  * 関係スコア（Relationship Score）の計算
  */
 export function calculateRelationshipScore(feedbacks: Feedback[], emailCount: number): number {
-  const satisfactionScores = feedbacks.filter(f => f.type === FeedbackType.SATISFACTION) as Satisfaction[];
   const reportsSubmitted = feedbacks.filter(f => f.type === FeedbackType.REPORT_SUBMITTED) as ReportSubmitted[];
   const feedbackProvided = feedbacks.filter(f => f.type === FeedbackType.FEEDBACK_PROVIDED) as FeedbackProvided[];
 
@@ -251,7 +250,6 @@ export function calculateReferralScore(referrals: Referral[]): number {
     : 0;
 
   const businessOwnerReferrals = referrals.filter(r => r.businessOwnerType === ReferralBusinessOwnerType.BUSINESS_OWNER).length;
-  const individualReferrals = referrals.filter(r => r.businessOwnerType === ReferralBusinessOwnerType.INDIVIDUAL).length;
 
   const referralCountScore = Math.min((referralCount / 3) * 100, 100);
   const qualityScore = averageQuality;
@@ -324,8 +322,12 @@ export function createTrustScoreHistory(
 export async function updateTrustScore(
   userId: string,
   eventType: ActivityType | FeedbackType,
-  details?: Record<string, any>
+  details?: Record<string, unknown>
 ): Promise<TrustScoreHistory> {
+  // Currently unused (mock implementation)
+  void eventType;
+  void details;
+
   // TODO: データベースから現在の活動データ、フィードバック、契約、紹介を取得
   // TODO: 各スコアを再計算
   // TODO: 全体の信頼スコアを計算

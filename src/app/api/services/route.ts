@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAllServices, getServiceById, getServicesByTag, getServicesByFormat, getPopularServices } from '@/data/services';
+import { getAllServices, getServicesByTag, getServicesByFormat, getPopularServices } from '@/data/services';
 
 /**
  * GET /api/services
@@ -8,7 +8,7 @@ import { getAllServices, getServiceById, getServicesByTag, getServicesByFormat, 
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
-    const category = searchParams.get('category');
+    // const category = searchParams.get('category');
     const tag = searchParams.get('tag');
     const popular = searchParams.get('popular') === 'true';
     const format = searchParams.get('format');

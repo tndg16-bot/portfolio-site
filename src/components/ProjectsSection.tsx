@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Cpu, ExternalLink, Github, Lock, Sparkles, Target, Code2, Wrench, Rocket } from "lucide-react";
+import { ArrowRight, Cpu, Sparkles, Target } from "lucide-react";
 import { useState, useEffect } from "react";
 import type { Project } from "@/app/api/projects-v2/route";
 
@@ -72,20 +72,7 @@ function StatusBadge({ status }: { status: Project['status'] }) {
   }
 }
 
-// カテゴリアイコン
-function CategoryIcon({ category }: { category: Project['category'] }) {
-  switch (category) {
-    case 'main':
-      return <Rocket size={16} />;
-    case 'tool':
-      return <Wrench size={16} />;
-    case 'experiment':
-      return <Code2 size={16} />;
-    default:
-      return <Cpu size={16} />;
-  }
-}
-
+// (CategoryIcon removed: unused)
 // プロジェクトカード
 function ProjectCard({ project }: { project: Project }) {
   const color = colorMap[project.iconColor] || colorMap.blue;
@@ -167,15 +154,12 @@ function ProjectCard({ project }: { project: Project }) {
 export default function ProjectsSection() {
   const [filter, setFilter] = useState<'all' | 'main' | 'tool'>('all');
   const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
 
   // コンポーネントマウント時にプロジェクトを取得
   useEffect(() => {
     async function loadProjects() {
-      setLoading(true);
       const fetchedProjects = await fetchProjects();
       setProjects(fetchedProjects);
-      setLoading(false);
     }
     loadProjects();
   }, []);

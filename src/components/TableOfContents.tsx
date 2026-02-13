@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { List } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -16,11 +16,12 @@ interface TableOfContentsProps {
 }
 
 export function TableOfContents({ content, className }: TableOfContentsProps) {
-  const [headings, setHeadings] = useState<TocItem[]>([]);
   const [activeId, setActiveId] = useState<string>('');
 
-  useEffect(() => {
-    // Parse headings from HTML content
+  const headings = useMemo<TocItem[]>(() => {
+    // Avoid running DOMParser during SSR.
+    if (typeof window === 'undefined') return [];
+
     const parser = new DOMParser();
     const doc = parser.parseFromString(content, 'text/html');
     const headingElements = doc.querySelectorAll('h2, h3, h4');
@@ -37,7 +38,7 @@ export function TableOfContents({ content, className }: TableOfContentsProps) {
       }
     });
 
-    setHeadings(items);
+    return items;
   }, [content]);
 
   useEffect(() => {

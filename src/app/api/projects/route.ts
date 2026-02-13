@@ -91,7 +91,7 @@ async function fetchGitHubIssuesForRepo(repoName: string): Promise<GitHubIssue[]
     const issues = await response.json();
     // PRを除外
     if (Array.isArray(issues)) {
-        return issues.filter((issue: any) => !issue.hasOwnProperty('pull_request'));
+        return issues.filter((issue: Record<string, unknown>) => !('pull_request' in issue));
     }
     return [];
 }
