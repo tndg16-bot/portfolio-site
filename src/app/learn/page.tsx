@@ -90,7 +90,7 @@ export default function LearnPage() {
             course_total_lessons: course?.total_lessons ?? 0,
             progress_percentage: enrollment.progress_percentage ?? 0,
             enrolled_at: enrollment.enrolled_at,
-            expires_at: enrollment.expires_at ?? null,
+            expires_at: enrollment.expires_at ?? undefined,
             is_active: enrollment.is_active,
             completed_at: enrollment.completed_at ?? null,
           };
