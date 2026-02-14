@@ -1,4 +1,4 @@
-const https = require('https');
+import https from 'https';
 
 // GitHub APIでリポジトリとIssuesを取得
 function fetchGitHubData(username) {

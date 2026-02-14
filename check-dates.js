@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const matter = require('gray-matter');
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 const postsDir = path.join(__dirname, 'content', 'blog');
 const today = new Date('2026-01-16'); // 修正対象: 今日の日付
