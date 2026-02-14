@@ -181,7 +181,7 @@ async function runAllTests() {
 }
 
 // テスト実行
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   runAllTests()
     .then(success => {
       process.exit(success ? 0 : 1);
@@ -192,7 +192,7 @@ if (require.main === module) {
     });
 }
 
-module.exports = {
+export {
   runAllTests,
   testLoadConfig,
   testCheckInType,
