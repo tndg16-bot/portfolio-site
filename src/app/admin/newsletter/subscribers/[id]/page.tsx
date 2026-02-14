@@ -234,7 +234,10 @@ export default function SubscriberDetailPage({ params }: RouteContext) {
   const [id, setId] = useState<string>('');
 
   useEffect(() => {
-    params.then(p => setId(p.id));
+    (async () => {
+      const p = await params;
+      setId(p.id);
+    })();
   }, [params]);
 
   if (!id) {
