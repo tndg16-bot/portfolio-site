@@ -1,0 +1,12 @@
+{
+  "dailyNotesPath": "D:/AntigravityVault/daily",
+  "discordChannel": "#秘書さんの部屋",
+  "morningMessage": "🌅 おはようございます！今日の予定を振り返りましょう。",
+  "eveningMessage": "🌙 おやすみなさい！今日の振り返りをしましょう。",
+  "checkInTimes": ["09:00", "21:00"],
+  "timezone": "Asia/Tokyo",
+  "waitForReplyMinutes": 30,
+  "logPath": "logs/discord-sync.log",
+  "maxRetries": 3,
+  "retryDelayMs": 5000
+}
