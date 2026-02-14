@@ -2,12 +2,12 @@
 
 /**
  * Discord Sync Skill - Main Script
- * 
+ *
  * 朝9:00と夜21:00に自動チェックインし、今日の振り返りを促してObsidianに自動記録
  */
 
-const fs = require('fs').promises;
-const path = require('path');
+import fs from 'fs/promises';
+import path from 'path';
 
 // 設定ファイルのパス
 const CONFIG_PATH = path.join(__dirname, 'config.json');

@@ -2,13 +2,13 @@
 
 /**
  * Discord Sync Skill - Test Script
- * 
+ *
  * ローカルテスト用スクリプト
  */
 
-const { main, loadConfig, getCheckInType, getMessage, appendToObsidian, log } = require('./index');
-const fs = require('fs').promises;
-const path = require('path');
+import { main, loadConfig, getCheckInType, getMessage, appendToObsidian, log } from './index.js';
+import fs from 'fs/promises';
+import path from 'path';
 
 // テスト設定
 const TEST_CONFIG = {
