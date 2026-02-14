@@ -92,7 +92,7 @@ export default function LearnPage() {
             enrolled_at: enrollment.enrolled_at,
             expires_at: enrollment.expires_at ?? undefined,
             is_active: enrollment.is_active,
-            completed_at: enrollment.completed_at ?? null,
+            completed_at: enrollment.completed_at ?? undefined,
           };
         });
 
