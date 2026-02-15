@@ -9,7 +9,7 @@ import AuthorBio from '@/components/AuthorBio';
 import NewsletterForm from '@/components/NewsletterForm';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import { TableOfContents } from '@/components/TableOfContents';
-import Script from 'next/script'; // Add Script import
+import Script from 'next/script';
 
 type Props = {
   params: Promise<{
@@ -17,7 +17,7 @@ type Props = {
   }>;
 };
 
-// Generate metadata for the page
+// Generate metadata for page
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const { slug } = await params;
@@ -205,6 +205,7 @@ export default async function PostPage({ params }: Props) {
       {/* Table of Contents - Mobile */}
       <div className="lg:hidden mt-8 mb-4">
         <TableOfContents content={post.contentHtml} />
+      </div>
       </div>
 
       <Script id="mermaid-init" strategy="afterInteractive">
