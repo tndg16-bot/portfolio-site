@@ -1,0 +1,31 @@
+[2026-02-14T20:27:41.440Z] [INFO] Morning Routine Combined 開始
+[2026-02-14T20:27:41.459Z] [INFO] ステップ1: デイリーチェックリスト生成
+[2026-02-14T20:27:41.462Z] [INFO] デイリーチェックリスト生成開始
+[2026-02-14T20:27:41.465Z] [WARN] デイリーノートディレクトリが存在しません: D:/AntigravityVault/daily
+[2026-02-14T20:27:41.468Z] [INFO] ステップ2: Discordメッセージ作成
+[2026-02-14T20:27:41.470Z] [INFO] ステップ3: Discordメッセージ送信
+[2026-02-14T20:27:41.473Z] [SUCCESS] Discordメッセージ送信成功
+[2026-02-14T20:27:41.474Z] [INFO] ステップ4: Obsidianに記録
+[2026-02-14T20:27:41.566Z] [ERROR] Obsidian書き込みエラー: ENOENT: no such file or directory, open 'D:\AntigravityVault\daily\2026-02-15.md'
+[2026-02-14T20:27:41.568Z] [ERROR] Obsidian記録失敗: ENOENT: no such file or directory, open 'D:\AntigravityVault\daily\2026-02-15.md'
+[2026-02-14T20:27:41.570Z] [INFO] Morning Routine Combined 完了
+[2026-02-14T20:28:00.246Z] [INFO] Morning Routine Combined 開始
+[2026-02-14T20:28:00.265Z] [INFO] ステップ1: デイリーチェックリスト生成
+[2026-02-14T20:28:00.267Z] [INFO] デイリーチェックリスト生成開始
+[2026-02-14T20:28:00.273Z] [SUCCESS] チェックリスト生成完了: 7件（合計: 7件）
+[2026-02-14T20:28:00.275Z] [INFO] ステップ2: Discordメッセージ作成
+[2026-02-14T20:28:00.277Z] [INFO] ステップ3: Discordメッセージ送信
+[2026-02-14T20:28:00.281Z] [SUCCESS] Discordメッセージ送信成功
+[2026-02-14T20:28:00.282Z] [INFO] ステップ4: Obsidianに記録
+[2026-02-14T20:28:00.324Z] [SUCCESS] Obsidianに記録: test-daily\2026-02-15.md
+[2026-02-14T20:28:00.326Z] [INFO] Morning Routine Combined 完了
+[2026-02-14T20:28:32.651Z] [INFO] Morning Routine Combined 開始
+[2026-02-14T20:28:32.667Z] [INFO] ステップ1: デイリーチェックリスト生成
+[2026-02-14T20:28:32.669Z] [INFO] デイリーチェックリスト生成開始
+[2026-02-14T20:28:32.675Z] [SUCCESS] チェックリスト生成完了: 7件（合計: 7件）
+[2026-02-14T20:28:32.678Z] [INFO] ステップ2: Discordメッセージ作成
+[2026-02-14T20:28:32.680Z] [INFO] ステップ3: Discordメッセージ送信
+[2026-02-14T20:28:32.682Z] [SUCCESS] Discordメッセージ送信成功
+[2026-02-14T20:28:32.684Z] [INFO] ステップ4: Obsidianに記録
+[2026-02-14T20:28:32.723Z] [SUCCESS] Obsidianに記録: test-daily\2026-02-15.md
+[2026-02-14T20:28:32.726Z] [INFO] Morning Routine Combined 完了

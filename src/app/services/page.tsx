@@ -47,7 +47,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
             {/* Popular Badge */}
             {service.popular && (
                 <div className="absolute -top-3 -right-3 z-10">
-                    <div className="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1 shadow-lg">
+                    <div className="bg-japan-indigo from-amber-400 to-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1 shadow-lg">
                         <Star className="w-4 h-4" />
                         人気
                     </div>
@@ -58,7 +58,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                 {/* Header */}
                 <div className={`p-8 ${index === 0 ? 'bg-gradient-to-br from-teal-500 to-teal-600' : index === 1 ? 'bg-gradient-to-br from-purple-500 to-purple-600' : 'bg-gradient-to-br from-slate-600 to-slate-700'} text-white`}>
                     <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
-                    <p className="text-white/90 text-base leading-relaxed">{service.description}</p>
+                    <p className="bg-japan-indigo text-white/90 text-base leading-relaxed">{service.description}</p>
                 </div>
 
                 {/* Body */}
@@ -139,7 +139,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                     {/* CTA Button */}
                     <Link
                         href="/sessions#booking"
-                        className="block w-full py-4 rounded-xl bg-gradient-to-r from-teal-500 to-purple-500 text-white font-bold text-center hover:shadow-lg hover:shadow-teal-500/25 transition-all flex items-center justify-center gap-2"
+                        className="block w-full py-4 rounded-xl bg-japan-indigo from-teal-500 to-purple-500 text-white font-bold text-center hover:shadow-lg hover:shadow-teal-500/25 transition-all flex items-center justify-center gap-2"
                     >
                         {service.pricing.type === 'screening' ? '無料相談を予約する' : 'お問い合わせ'}
                         <ArrowRight className="w-5 h-5" />
@@ -256,10 +256,10 @@ export default function ServicesPage() {
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]" />
 
                         <motion.div variants={itemVariants} className="relative z-10">
-                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                            <h2 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4">
                                 あなたの変化を、今から始めましょう
                             </h2>
-                            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                            <p className="text-xl bg-japan-indigo text-white/90 mb-8 max-w-2xl mx-auto">
                                 まずは無料相談で、あなたの状況をお聞かせください。<br />
                                 完璧なタイミングを待つ必要はありません。
                             </p>
@@ -274,7 +274,7 @@ export default function ServicesPage() {
                                 </Link>
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
                                 >
                                     お問い合わせ
                                 </Link>

@@ -18,7 +18,7 @@ export default function CaseStudiesPage() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-5xl font-bold text-white mb-6"
+                        className="text-4xl md:text-5xl font-bold bg-japan-indigo text-white mb-6"
                     >
                         Case Studies
                         <span className="block text-xl md:text-2xl text-teal-400 mt-2 font-normal">
@@ -56,7 +56,7 @@ export default function CaseStudiesPage() {
                                             <span className="text-zinc-500 uppercase tracking-wider">{study.category}</span>
                                         )}
                                     </div>
-                                    <h2 className="text-xl font-bold text-white group-hover:text-teal-400 transition-colors mb-2 line-clamp-3">
+                                    <h2 className="text-xl font-bold bg-japan-indigo text-white group-hover:text-teal-400 transition-colors mb-2 line-clamp-3">
                                         {study.title}
                                     </h2>
                                 </div>
@@ -71,7 +71,7 @@ export default function CaseStudiesPage() {
                                     {study.stats && study.stats.length > 0 && (
                                         <div className="flex items-center gap-2 text-sm text-zinc-300 mb-2">
                                             <TrendingUp size={16} className="text-teal-400" />
-                                            <span className="font-semibold text-white">{study.stats[0].key}: {study.stats[0].value}</span>
+                                            <span className="font-semibold bg-japan-indigo text-white">{study.stats[0].key}: {study.stats[0].value}</span>
                                         </div>
                                     )}
                                 </div>

@@ -118,7 +118,7 @@ export default function LearnPage() {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-japan-indigo text-white rounded-lg font-medium hover:bg-teal-700 transition-colors"
           >
             Browse Courses
           </Link>

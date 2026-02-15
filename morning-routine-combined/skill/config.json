@@ -1,0 +1,12 @@
+{
+  "dailyNotesPath": "D:/AntigravityVault/daily",
+  "discordChannel": "#秘書さんの部屋",
+  "morningMessage": "🌅 おはようございます！今日の予定を振り返りましょう。",
+  "priorityMarkers": ["!!!", "!!", "!"],
+  "dueDatePatterns": ["@due", "@today", "@tomorrow"],
+  "maxTasks": 20,
+  "timezone": "Asia/Tokyo",
+  "logPath": "logs/morning-routine-combined.log",
+  "maxRetries": 3,
+  "retryDelayMs": 5000
+}

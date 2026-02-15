@@ -90,7 +90,7 @@ function NewsletterDashboardContent() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-white mb-2">Newsletter Dashboard</h1>
+          <h1 className="text-3xl font-bold bg-japan-indigo text-white mb-2">Newsletter Dashboard</h1>
           <p className="text-zinc-400">
             購読者: {total.toLocaleString()}人
           </p>
@@ -114,7 +114,7 @@ function NewsletterDashboardContent() {
               placeholder="Emailを検索..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-black/50 border border-zinc-700 rounded-lg pl-10 pr-4 py-2.5 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors"
+              className="w-full bg-japan-indigo/50 border border-zinc-700 rounded-lg pl-10 pr-4 py-2.5 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors"
             />
           </div>
           <select
@@ -123,7 +123,7 @@ function NewsletterDashboardContent() {
               setStatusFilter(e.target.value);
               setPage(1);
             }}
-            className="bg-black/50 border border-zinc-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-teal-500 transition-colors"
+            className="bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-teal-500 transition-colors"
           >
             <option value="all">すべてのステータス</option>
             <option value="verified">認証済み</option>
@@ -179,7 +179,7 @@ function NewsletterDashboardContent() {
                             <div className="w-10 h-10 rounded-full bg-teal-500/10 flex items-center justify-center text-teal-400 font-semibold">
                               {subscriber.email[0].toUpperCase()}
                             </div>
-                            <span className="text-white">{subscriber.email}</span>
+                            <span className="bg-japan-indigo text-white">{subscriber.email}</span>
                           </div>
                         </td>
                         <td className="px-6 py-4 text-zinc-300">
@@ -209,7 +209,7 @@ function NewsletterDashboardContent() {
                           <div className="flex items-center justify-end gap-2">
                             <Link
                               href={`/admin/newsletter/subscribers/${subscriber.id}`}
-                              className="p-2 text-zinc-400 hover:text-white transition-colors"
+                              className="p-2 text-zinc-400 hover:bg-japan-indigo text-white transition-colors"
                               title="詳細を表示"
                             >
                               <Eye className="w-4 h-4" />
@@ -241,7 +241,7 @@ function NewsletterDashboardContent() {
                   <button
                     onClick={() => setPage(Math.max(1, page - 1))}
                     disabled={page === 1}
-                    className="p-2 text-zinc-400 hover:text-white transition-colors disabled:opacity-30"
+                    className="p-2 text-zinc-400 hover:bg-japan-indigo text-white transition-colors disabled:opacity-30"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
@@ -276,7 +276,7 @@ function NewsletterDashboardContent() {
                   <button
                     onClick={() => setPage(Math.min(totalPages, page + 1))}
                     disabled={page === totalPages}
-                    className="p-2 text-zinc-400 hover:text-white transition-colors disabled:opacity-30"
+                    className="p-2 text-zinc-400 hover:bg-japan-indigo text-white transition-colors disabled:opacity-30"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
@@ -294,7 +294,7 @@ export default function NewsletterDashboardPage() {
   return (
     <div className="container mx-auto px-4 py-8 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <Suspense fallback={<div className="text-white">読み込み中...</div>}>
+        <Suspense fallback={<div className="bg-japan-indigo text-white">読み込み中...</div>}>
           <NewsletterDashboardContent />
         </Suspense>
       </div>

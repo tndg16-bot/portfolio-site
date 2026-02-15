@@ -173,7 +173,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
               <br />
               3. Create Stripe products and prices in dashboard
             </p>
-            <Link href="/learn" className="inline-block mt-4 px-6 py-3 bg-zinc-900 text-white rounded-lg font-medium hover:bg-zinc-800 transition-colors">
+            <Link href="/learn" className="inline-block mt-4 px-6 py-3 bg-japan-indigo text-white rounded-lg font-medium hover:bg-zinc-800 transition-colors">
               Back to Courses
             </Link>
           </div>

@@ -36,7 +36,7 @@ export default function NewsletterForm() {
           <Mail size={24} />
         </div>
 
-        <h3 className="text-2xl font-bold text-white mb-3">
+        <h3 className="text-2xl font-bold bg-japan-indigo text-white mb-3">
           Deep Diveを受け取る
         </h3>
 
@@ -53,7 +53,7 @@ export default function NewsletterForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={status === 'loading' || status === 'success'}
-            className="flex-1 bg-black/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all disabled:opacity-50"
+            className="flex-1 bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all disabled:opacity-50"
             required
             aria-label="メールアドレス"
             aria-invalid={!!errorMessage}

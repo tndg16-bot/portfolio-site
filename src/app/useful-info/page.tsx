@@ -121,7 +121,7 @@ export default function UsefulInfoPage() {
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-500/20 to-purple-500/20 flex items-center justify-center">
                     <resourceGroup.icon className="w-7 h-7 text-teal-400" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-white">
+                  <h2 className="text-2xl md:text-3xl font-bold bg-japan-indigo text-white">
                     {resourceGroup.category}
                   </h2>
                 </div>
@@ -140,7 +140,7 @@ export default function UsefulInfoPage() {
                         href={item.url}
                         className="block p-6 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-teal-500/30 transition-all"
                       >
-                        <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-teal-400 transition-colors">
+                        <h3 className="text-lg font-semibold bg-japan-indigo text-white mb-3 group-hover:text-teal-400 transition-colors">
                           {item.title}
                         </h3>
                         <p className="text-zinc-300 leading-relaxed mb-4">
@@ -169,7 +169,7 @@ export default function UsefulInfoPage() {
           >
             <div className="flex items-center justify-center gap-3 mb-6">
               <Book className="w-6 h-6 text-teal-400" />
-              <h2 className="text-2xl md:text-3xl font-bold text-white">
+              <h2 className="text-2xl md:text-3xl font-bold bg-japan-indigo text-white">
                 ブログも公開中
               </h2>
             </div>
@@ -180,7 +180,7 @@ export default function UsefulInfoPage() {
             
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-japan-indigo from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity"
             >
               ブログを見る
               <ArrowRight className="w-5 h-5" />
@@ -200,7 +200,7 @@ export default function UsefulInfoPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.15),transparent_50%)]" />
             
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4">
                 役立つ情報をお届けします
               </h2>
               <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
@@ -212,14 +212,14 @@ export default function UsefulInfoPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/sessions"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-japan-indigo from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
                 >
                   <CheckCircle2 className="w-5 h-5" />
                   セッションを予約
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-japan-indigo/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
                 >
                   <HelpCircle className="w-5 h-5" />
                   お問い合わせ

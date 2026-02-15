@@ -75,7 +75,7 @@ function SubscriberDetailContent({ id }: { id: string }) {
       <div className="flex items-center justify-between">
         <Link
           href="/admin/newsletter"
-          className="inline-flex items-center text-zinc-400 hover:text-white transition-colors"
+          className="inline-flex items-center text-zinc-400 hover:bg-japan-indigo text-white transition-colors"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           ダッシュボードに戻る
@@ -104,7 +104,7 @@ function SubscriberDetailContent({ id }: { id: string }) {
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-3 mb-2">
-                <h2 className="text-xl font-semibold text-white truncate">
+                <h2 className="text-xl font-semibold bg-japan-indigo text-white truncate">
                   {subscriber.email}
                 </h2>
                 {subscriber.unsubscribed_at ? (
@@ -136,14 +136,14 @@ function SubscriberDetailContent({ id }: { id: string }) {
         <div className="grid md:grid-cols-2 gap-6">
           {/* Subscription Info */}
           <div className="glass-card rounded-xl p-6">
-            <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-semibold bg-japan-indigo text-white mb-4 flex items-center gap-2">
               <Mail className="w-5 h-5 text-teal-400" />
               購読情報
             </h3>
             <div className="space-y-3">
               <div>
                 <p className="text-sm text-zinc-500 mb-1">登録日</p>
-                <p className="text-white">
+                <p className="bg-japan-indigo text-white">
                   {new Date(subscriber.subscribed_at).toLocaleDateString('ja-JP', {
                     year: 'numeric',
                     month: 'long',
@@ -156,7 +156,7 @@ function SubscriberDetailContent({ id }: { id: string }) {
               {subscriber.verified_at && (
                 <div>
                   <p className="text-sm text-zinc-500 mb-1">認証日</p>
-                  <p className="text-white">
+                  <p className="bg-japan-indigo text-white">
                     {new Date(subscriber.verified_at).toLocaleDateString('ja-JP', {
                       year: 'numeric',
                       month: 'long',
@@ -186,14 +186,14 @@ function SubscriberDetailContent({ id }: { id: string }) {
 
           {/* Preferences */}
           <div className="glass-card rounded-xl p-6">
-            <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-semibold bg-japan-indigo text-white mb-4 flex items-center gap-2">
               <Shield className="w-5 h-5 text-teal-400" />
               設定
             </h3>
             <div className="space-y-3">
               <div>
                 <p className="text-sm text-zinc-500 mb-1">受信頻度</p>
-                <p className="text-white capitalize">
+                <p className="bg-japan-indigo text-white capitalize">
                   {subscriber.preferences?.frequency || 'weekly'}
                 </p>
               </div>
@@ -219,7 +219,7 @@ function SubscriberDetailContent({ id }: { id: string }) {
         {/* Metadata */}
         {subscriber.metadata && Object.keys(subscriber.metadata).length > 0 && (
           <div className="glass-card rounded-xl p-6">
-            <h3 className="text-lg font-semibold text-white mb-4">メタデータ</h3>
+            <h3 className="text-lg font-semibold bg-japan-indigo text-white mb-4">メタデータ</h3>
             <pre className="bg-black/50 rounded-lg p-4 text-xs text-zinc-300 overflow-x-auto">
               {JSON.stringify(subscriber.metadata, null, 2)}
             </pre>
@@ -251,7 +251,7 @@ export default function SubscriberDetailPage({ params }: RouteContext) {
   return (
     <div className="container mx-auto px-4 py-8 min-h-screen">
       <div className="max-w-4xl mx-auto">
-        <Suspense fallback={<div className="text-white">読み込み中...</div>}>
+        <Suspense fallback={<div className="bg-japan-indigo text-white">読み込み中...</div>}>
           <SubscriberDetailContent id={id} />
         </Suspense>
       </div>

@@ -189,7 +189,7 @@ const slides = [
                     <Typewriter text={`const HeroSection = () => {
     return (
         <div className="bg-gradient-to-r from-orange to-purple flex center">
-            <h1 className="text-6xl text-white">Bali Sunset</h1>
+            <h1 className="text-6xl bg-japan-indigo text-white">Bali Sunset</h1>
             <p>Experience the magic.</p>
         </div>
     );
@@ -376,13 +376,13 @@ export default function SlidePage() {
 
                 {/* Internal Controls */}
                 <div className="absolute bottom-6 right-6 flex gap-2 z-30">
-                    <button onClick={prevSlide} disabled={currentSlide === 0} className="p-2 rounded-full bg-black/20 hover:bg-black/30 text-white disabled:opacity-20 transition">
+                    <button onClick={prevSlide} disabled={currentSlide === 0} className="p-2 rounded-full bg-japan-indigo/20 hover:bg-black/30 text-white disabled:opacity-20 transition">
                         <ChevronLeft size={24} />
                     </button>
-                    <button onClick={nextSlide} disabled={currentSlide === slides.length - 1} className="p-2 rounded-full bg-black/20 hover:bg-black/30 text-white disabled:opacity-20 transition">
+                    <button onClick={nextSlide} disabled={currentSlide === slides.length - 1} className="p-2 rounded-full bg-japan-indigo/20 hover:bg-black/30 text-white disabled:opacity-20 transition">
                         <ChevronRight size={24} />
                     </button>
-                    <button onClick={toggleFullscreen} className="p-2 rounded-full bg-black/20 hover:bg-black/30 text-white transition ml-2">
+                    <button onClick={toggleFullscreen} className="p-2 rounded-full bg-japan-indigo/20 hover:bg-black/30 text-white transition ml-2">
                         {isFullscreen ? <Minimize2 size={24} /> : <Maximize2 size={24} />}
                     </button>
                 </div>

@@ -7,4 +7,4 @@ const nextConfig = {
   // NOTE: Next.js 16+ no longer supports `eslint` config in next.config.js.
 };
 
-module.exports = nextConfig;
+export default nextConfig;

@@ -41,6 +41,8 @@ export default function Dashboard() {
     const [activities, setActivities] = useState<ActivityItem[]>([]);
     const [loading, setLoading] = useState(true);
     const [lastUpdated, setLastUpdated] = useState<string>("");
+    const [error, setError] = useState<string | null>(null);
+    const [dataSource, setDataSource] = useState<string>("");
 
     // Modal state
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -61,6 +63,11 @@ export default function Dashboard() {
                     setProjects(projectsData.projects);
                     setStats(projectsData.stats);
                     setLastUpdated(projectsData.lastUpdated);
+                    setDataSource(projectsData.source || "github-issues");
+                    setError(null);
+                } else {
+                    setError(projectsData.error || "データの取得に失敗しました");
+                    console.error("Projects API error:", projectsData.error);
                 }
 
                 if (activitiesData.success) {
@@ -68,6 +75,7 @@ export default function Dashboard() {
                 }
             } catch (error) {
                 console.error("Error fetching dashboard data:", error);
+                setError(error instanceof Error ? error.message : "不明なエラー");
             } finally {
                 setLoading(false);
             }
@@ -75,8 +83,8 @@ export default function Dashboard() {
 
         fetchData();
 
-        // Refresh every 5 minutes
-        const interval = setInterval(fetchData, 5 * 60 * 1000);
+        // Refresh every 1 minute（更新頻度向上）
+        const interval = setInterval(fetchData, 1 * 60 * 1000);
         return () => clearInterval(interval);
     }, []);
 
@@ -134,13 +142,28 @@ export default function Dashboard() {
                 transition={{ duration: 0.6 }}
             >
                 {/* Header */}
-                <div className="flex items-center justify-between mb-8">
-                    <h2 className="text-3xl font-bold text-japan-indigo">
-                        🎯 プロジェクト進捗
-                    </h2>
-                    <span className="text-sm text-zinc-500" suppressHydrationWarning>
-                        最終更新: {lastUpdated ? new Date(lastUpdated).toLocaleString("ja-JP") : "-"}
-                    </span>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                    <div>
+                        <h2 className="text-3xl font-bold text-japan-indigo">
+                            🎯 プロジェクト進捗
+                        </h2>
+                        {error && (
+                            <div className="mt-2 flex items-center gap-2 text-sm text-red-600 bg-red-50 px-3 py-2 rounded-lg">
+                                <span>⚠️ {error}</span>
+                            </div>
+                        )}
+                        {!error && dataSource && (
+                            <div className="mt-2 flex items-center gap-2 text-xs text-zinc-500">
+                                <span>📡 データソース: {dataSource === "github-issues" ? "GitHub Issues" : dataSource}</span>
+                            </div>
+                        )}
+                    </div>
+                    <div className="flex flex-col items-end gap-1">
+                        <span className="text-sm text-zinc-500" suppressHydrationWarning>
+                            最終更新: {lastUpdated ? new Date(lastUpdated).toLocaleString("ja-JP") : "-"}
+                        </span>
+                        <span className="text-xs text-zinc-400">1分ごとに自動更新</span>
+                    </div>
                 </div>
 
                 {/* Stats Cards */}
