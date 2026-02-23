@@ -7,7 +7,6 @@ tags:
   - "未来"
   - "計画"
   - "内省"
-description: "10年後の自分は、今の自分に何と言うか？長期的な視点で今を考える方法。"
 slug: "future-self"
 published: true
 ---

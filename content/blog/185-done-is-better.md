@@ -7,7 +7,6 @@ tags:
   - "完璧主義"
   - "完了主義"
   - "行動力"
-description: "完璧を求めて動けなくなるより、まず完了させる。Done is better than perfectの実践法。"
 slug: "done-is-better-legacy"
 published: false
 ---

@@ -7,7 +7,6 @@ tags:
   - "読書"
   - "学習"
   - "生産性"
-description: "本を読んでも身につかない。読書の効果を最大化するための読み方。"
 slug: "reading-efficiently"
 published: true
 ---
