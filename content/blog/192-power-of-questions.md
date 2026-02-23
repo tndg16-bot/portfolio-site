@@ -7,7 +7,6 @@ tags:
   - "Thinking"
   - "Questions"
   - "Communication"
-description: "良い答えは、良い質問から生まれる。質問力を磨いて、思考を深める方法。"
 published: true
 slug: "power-of-questions"
 ---

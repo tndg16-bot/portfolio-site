@@ -7,7 +7,6 @@ tags:
   - "翌朝の準備"
   - "習慣化"
   - "着手ハードル"
-description: "翌朝の着手ハードルを極限まで下げ、迷わず仕事に入るための仕掛け"
 published: true
 slug: "prepare-next-day-task"
 ---

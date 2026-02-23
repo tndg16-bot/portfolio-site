@@ -7,7 +7,6 @@ tags:
   - "振り返り"
   - "日記"
   - "内省"
-description: "良かった点、課題、明天の一歩。シンプルに継続できる内省の形"
 published: true
 slug: "daily-reflection-three-questions"
 ---

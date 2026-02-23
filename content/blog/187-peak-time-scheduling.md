@@ -7,7 +7,6 @@ tags:
   - "集中力"
   - "スケジュール"
   - "クロノタイプ"
-description: "自分のクロノタイプ（体内時計）を知り、最高の自分を予約するスケジュール術"
 published: true
 slug: "peak-time-scheduling"
 ---

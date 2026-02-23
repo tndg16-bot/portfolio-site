@@ -7,7 +7,6 @@ tags:
   - "ショートカットキー"
   - "PC操作"
   - "効率化"
-description: "マウス操作を減らし、思考を途切れさせずに操作を完結させるための厳選10選"
 published: true
 slug: "keyboard-shortcuts-productivity"
 ---

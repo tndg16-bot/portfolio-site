@@ -7,7 +7,6 @@ tags:
   - "生産性"
   - "休息"
   - "パフォーマンス"
-description: "休むことに罪悪感を感じていませんか？戦略的な休息が、最高のパフォーマンスを生みます。"
 published: true
 slug: "strategic-rest"
 ---

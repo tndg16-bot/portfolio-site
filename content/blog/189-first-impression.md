@@ -7,7 +7,6 @@ tags:
   - "Communication"
   - "Career"
   - "Psychology"
-description: "人は出会って7秒で第一印象を形成すると言われています。その7秒を最大化する方法。"
 published: true
 ---
 

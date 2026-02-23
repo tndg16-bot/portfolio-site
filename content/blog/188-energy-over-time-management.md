@@ -7,7 +7,6 @@ tags:
   - "エネルギー管理"
   - "健康"
   - "生産性"
-description: "休息、食事、運動。体調を整えることが最強の生産性向上策"
 published: true
 slug: "energy-over-time-management"
 ---

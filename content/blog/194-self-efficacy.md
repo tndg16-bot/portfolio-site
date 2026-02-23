@@ -7,7 +7,6 @@ tags:
   - "自己効力感"
   - "マインドセット"
   - "心理学"
-description: "「自分にはできる」という感覚が、実際の行動と結果を左右します。自己効力感の高め方。"
 published: true
 slug: "self-efficacy"
 ---
