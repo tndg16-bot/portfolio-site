@@ -24,14 +24,14 @@ const GOOGLE_FORMS_CONFIG = {
     // - Verbose:   NEXT_PUBLIC_GOOGLE_FORMS_ENTRY_ID_* (legacy/docs)
     actionUrl: process.env.NEXT_PUBLIC_GOOGLE_FORMS_URL || '',
     entryIds: {
-        name: process.env.NEXT_PUBLIC_ENTRY_NAME || process.env.NEXT_PUBLIC_GOOGLE_FORMS_ENTRY_ID_NAME || 'entry.1234567890',
-        email: process.env.NEXT_PUBLIC_ENTRY_EMAIL || process.env.NEXT_PUBLIC_GOOGLE_FORMS_ENTRY_ID_EMAIL || 'entry.1234567891',
-        occupation: process.env.NEXT_PUBLIC_ENTRY_OCCUPATION || process.env.NEXT_PUBLIC_GOOGLE_FORMS_ENTRY_ID_OCCUPATION || 'entry.1234567892',
-        goal: process.env.NEXT_PUBLIC_ENTRY_GOAL || process.env.NEXT_PUBLIC_GOOGLE_FORMS_ENTRY_ID_GOAL || 'entry.1234567893',
-        motivation: process.env.NEXT_PUBLIC_ENTRY_MOTIVATION || process.env.NEXT_PUBLIC_GOOGLE_FORMS_ENTRY_ID_MOTIVATION || 'entry.1234567894',
-        preferredDate1: process.env.NEXT_PUBLIC_ENTRY_DATE1 || process.env.NEXT_PUBLIC_GOOGLE_FORMS_ENTRY_ID_DATE1 || 'entry.1234567895',
-        preferredDate2: process.env.NEXT_PUBLIC_ENTRY_DATE2 || process.env.NEXT_PUBLIC_GOOGLE_FORMS_ENTRY_ID_DATE2 || 'entry.1234567896',
-        message: process.env.NEXT_PUBLIC_ENTRY_MESSAGE || process.env.NEXT_PUBLIC_GOOGLE_FORMS_ENTRY_ID_MESSAGE || 'entry.1234567897',
+        name: process.env.NEXT_PUBLIC_ENTRY_NAME || 'entry.748946296',
+        email: process.env.NEXT_PUBLIC_ENTRY_EMAIL || 'entry.927838379',
+        occupation: process.env.NEXT_PUBLIC_ENTRY_OCCUPATION || 'entry.1878828453',
+        goal: process.env.NEXT_PUBLIC_ENTRY_GOAL || 'entry.2144465245',
+        motivation: process.env.NEXT_PUBLIC_ENTRY_MOTIVATION || 'entry.1384709182',
+        preferredDate1: process.env.NEXT_PUBLIC_ENTRY_DATE1 || 'entry.1374991460',
+        preferredDate2: process.env.NEXT_PUBLIC_ENTRY_DATE2 || 'entry.1283089140',
+        message: process.env.NEXT_PUBLIC_ENTRY_MESSAGE || 'entry.1655835053',
     }
 };
 

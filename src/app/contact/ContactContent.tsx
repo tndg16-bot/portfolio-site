@@ -3,7 +3,15 @@
 import { motion, Variants } from 'framer-motion';
 import { Mail, MessageCircle, Linkedin, Calendar, MapPin, Clock, ArrowRight, Send } from 'lucide-react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
+
+const BookingForm = dynamic(() => import('@/components/BookingForm'), {
+    loading: () => <div className="flex items-center justify-center min-h-[400px]">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
+    </div>,
+    ssr: true
+});
 
 export default function ContactContent() {
     const containerVariants: Variants = {
@@ -153,6 +161,24 @@ export default function ContactContent() {
                                 )}
                             </motion.a>
                         ))}
+                    </motion.div>
+                </section>
+
+                {/* Booking Form Section */}
+                <section className="w-full max-w-4xl px-4 py-8">
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={containerVariants}
+                    >
+                        <motion.div variants={itemVariants} className="text-center mb-8">
+                            <h2 className="text-3xl font-bold bg-japan-indigo text-white mb-4">セッション予約フォーム</h2>
+                            <p className="text-zinc-400">以下のフォームからお気軽にお申し込みください</p>
+                        </motion.div>
+                        <motion.div variants={itemVariants}>
+                            <BookingForm />
+                        </motion.div>
                     </motion.div>
                 </section>
 
