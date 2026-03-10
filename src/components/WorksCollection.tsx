@@ -280,7 +280,7 @@ export default function WorksCollection() {
             <motion.a
               href="/courses"
               variants={itemVariants}
-              className="group relative overflow-hidden rounded-xl p-6 bg-japan-indigo from-indigo-500 to-purple-600 text-white hover:shadow-2xl transition-all"
+              className="group relative overflow-hidden rounded-xl p-6 bg-japan-indigo text-white hover:shadow-2xl transition-all"
             >
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-3">AI副業コース</h3>
@@ -298,7 +298,7 @@ export default function WorksCollection() {
             <motion.a
               href="/learn"
               variants={itemVariants}
-              className="group relative overflow-hidden rounded-xl p-6 bg-japan-indigo from-amber-500 to-orange-600 text-white hover:shadow-2xl transition-all"
+              className="group relative overflow-hidden rounded-xl p-6 bg-japan-indigo text-white hover:shadow-2xl transition-all"
             >
               <div className="relative z-10">
                 <h3 className="text-2xl font-bold mb-3">学習リソース</h3>
