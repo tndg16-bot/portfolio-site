@@ -28,7 +28,7 @@ function BlogPageContent() {
             </Link>
           </div>
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold bg-japan-indigo text-white mb-4">Blog</h1>
+            <h1 className="text-4xl font-bold text-japan-indigo mb-4">Blog</h1>
             <p className="text-zinc-400 max-w-2xl mx-auto">
               コーチング、AI活用、思考法、キャリア、生産性など、人生をより豊かにするヒントをお届けします。
             </p>
@@ -43,7 +43,7 @@ function BlogPageContent() {
           <aside className="lg:col-span-1">
             {/* Categories */}
             <div className="glass-card rounded-xl p-6 mb-6">
-              <h3 className="text-lg font-semibold bg-japan-indigo text-white mb-4">カテゴリ</h3>
+              <h3 className="text-lg font-semibold text-japan-indigo mb-4">カテゴリ</h3>
               <div className="flex flex-wrap gap-2">
                 {allCategories.map((category) => (
                   <span
@@ -58,7 +58,7 @@ function BlogPageContent() {
 
             {/* Popular Tags */}
             <div className="glass-card rounded-xl p-6">
-              <h3 className="text-lg font-semibold bg-japan-indigo text-white mb-4">タグ</h3>
+              <h3 className="text-lg font-semibold text-japan-indigo mb-4">タグ</h3>
               <div className="flex flex-wrap gap-2">
                 {allTags.slice(0, 15).map((tag) => (
                   <Link
@@ -89,7 +89,7 @@ function BlogPageContent() {
                 >
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                     <div className="flex-1">
-                      <h2 className="text-xl font-semibold bg-japan-indigo text-white group-hover:text-teal-400 transition-colors mb-2">
+                      <h2 className="text-xl font-semibold text-japan-indigo group-hover:text-teal-400 transition-colors mb-2">
                         {post.title}
                       </h2>
                       {post.description && (
@@ -134,7 +134,7 @@ function BlogPageContent() {
         </div>
 
         {/* Newsletter */}
-        <div className="mt-16 border-t border-white/10 pt-8">
+        <div className="mt-16 border-t border-japan-indigo/10 pt-8">
           <NewsletterForm />
         </div>
       </div>
@@ -146,7 +146,7 @@ export default function BlogPage() {
   return (
     <>
       <Header />
-      <Suspense fallback={<div className="bg-japan-indigo text-white pt-20 min-h-screen flex items-center justify-center">読み込み中...</div>}>
+      <Suspense fallback={<div className="bg-japan-cream text-japan-charcoal pt-20 min-h-screen flex items-center justify-center">読み込み中...</div>}>
         <BlogPageContent />
       </Suspense>
     </>

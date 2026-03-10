@@ -115,10 +115,10 @@ export default async function PostPage({ params }: Props) {
 
           {/* Article Header */}
           <header className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4 leading-tight">{post.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4 leading-tight">{post.title}</h1>
 
             {/* Meta information */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-500">
               <time dateTime={post.date}>{post.date}</time>
 
               {post.readingTime && <span className="reading-time-badge">📖 {post.readingTime}分で読める</span>}
@@ -157,8 +157,8 @@ export default async function PostPage({ params }: Props) {
 
           {/* Related Posts */}
           {relatedPosts.length > 0 && (
-            <div className="mt-12 border-t border-zinc-800 pt-8">
-              <h3 className="text-xl font-semibold mb-6 text-zinc-300">関連記事</h3>
+            <div className="mt-12 border-t border-japan-indigo/10 pt-8">
+              <h3 className="text-xl font-semibold mb-6 text-japan-charcoal">関連記事</h3>
               <div className="grid gap-4 md:grid-cols-3">
                 {relatedPosts.map((relatedPost) => (
                   <Link
@@ -166,7 +166,7 @@ export default async function PostPage({ params }: Props) {
                     href={`/blog/${relatedPost.id}`}
                     className="glass-card p-4 rounded-xl hover:border-teal-500/30 transition-all group block"
                   >
-                    <h4 className="text-sm font-semibold bg-japan-indigo text-white group-hover:text-teal-400 transition-colors line-clamp-2 mb-2">
+                    <h4 className="text-sm font-semibold text-japan-indigo group-hover:text-teal-400 transition-colors line-clamp-2 mb-2">
                       {relatedPost.title}
                     </h4>
                     <div className="flex items-center gap-2 text-xs text-zinc-500">
@@ -182,8 +182,8 @@ export default async function PostPage({ params }: Props) {
           )}
 
           {/* Share section */}
-          <div className="mt-12 border-t border-zinc-800 pt-8">
-            <h3 className="text-xl font-semibold mb-4 text-zinc-300">この記事をシェア</h3>
+          <div className="mt-12 border-t border-japan-indigo/10 pt-8">
+            <h3 className="text-xl font-semibold mb-4 text-japan-charcoal">この記事をシェア</h3>
             <ShareButtons url={url} title={post.title} />
           </div>
 
@@ -193,8 +193,8 @@ export default async function PostPage({ params }: Props) {
           </div>
 
           {/* Comments */}
-          <div className="mt-12 border-t border-zinc-800 pt-8">
-            <h3 className="text-xl font-semibold mb-4 text-zinc-300">コメント</h3>
+          <div className="mt-12 border-t border-japan-indigo/10 pt-8">
+            <h3 className="text-xl font-semibold mb-4 text-japan-charcoal">コメント</h3>
             <GiscusComments />
           </div>
         </article>
