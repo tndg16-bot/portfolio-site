@@ -47,12 +47,12 @@ export default function CreateNewsletterPage() {
         <div className="mb-8">
           <Link
             href="/admin/newsletter"
-            className="inline-flex items-center text-zinc-400 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center text-zinc-400 hover:bg-japan-indigo text-white mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             ダッシュボードに戻る
           </Link>
-          <h1 className="text-3xl font-bold text-white mb-2">Create Newsletter</h1>
+          <h1 className="text-3xl font-bold bg-japan-indigo text-white mb-2">Create Newsletter</h1>
           <p className="text-zinc-400">新しいニュースレターを作成して送信する</p>
         </div>
 
@@ -81,7 +81,7 @@ export default function CreateNewsletterPage() {
               value={formData.title}
               onChange={(e) => setFormData({ ...formData, title: e.target.value })}
               placeholder="ニュースレターのタイトル"
-              className="w-full bg-black/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors"
+              className="w-full bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors"
               required
             />
           </div>
@@ -96,7 +96,7 @@ export default function CreateNewsletterPage() {
               value={formData.subject}
               onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
               placeholder="メールの件名"
-              className="w-full bg-black/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors"
+              className="w-full bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors"
               required
             />
           </div>
@@ -111,7 +111,7 @@ export default function CreateNewsletterPage() {
               onChange={(e) => setFormData({ ...formData, preview_text: e.target.value })}
               placeholder="受信トレイに表示される短いテキスト"
               rows={2}
-              className="w-full bg-black/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors resize-none"
+              className="w-full bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors resize-none"
             />
           </div>
 
@@ -125,7 +125,7 @@ export default function CreateNewsletterPage() {
               onChange={(e) => setFormData({ ...formData, content_html: e.target.value })}
               placeholder="<div>...</div>"
               rows={12}
-              className="w-full bg-black/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors resize-none font-mono text-sm"
+              className="w-full bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors resize-none font-mono text-sm"
               required
             />
             <p className="text-xs text-zinc-500 mt-2">HTML形式でコンテンツを入力してください</p>
@@ -141,7 +141,7 @@ export default function CreateNewsletterPage() {
               onChange={(e) => setFormData({ ...formData, content_text: e.target.value })}
               placeholder="プレーンテキスト版"
               rows={8}
-              className="w-full bg-black/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors resize-none"
+              className="w-full bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 transition-colors resize-none"
             />
             <p className="text-xs text-zinc-500 mt-2">HTMLをサポートしないメールクライアント用</p>
           </div>
@@ -155,7 +155,7 @@ export default function CreateNewsletterPage() {
               type="datetime-local"
               value={formData.scheduled_at}
               onChange={(e) => setFormData({ ...formData, scheduled_at: e.target.value })}
-              className="w-full bg-black/50 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-500 transition-colors"
+              className="w-full bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-teal-500 transition-colors"
             />
             <p className="text-xs text-zinc-500 mt-2">空欄の場合はすぐに送信されます</p>
           </div>
@@ -165,7 +165,7 @@ export default function CreateNewsletterPage() {
             <button
               type="button"
               onClick={() => setIsPreview(!isPreview)}
-              className="inline-flex items-center gap-2 text-zinc-400 hover:text-white px-4 py-2 rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 text-zinc-400 hover:bg-japan-indigo text-white px-4 py-2 rounded-lg transition-colors"
             >
               <Eye className="w-4 h-4" />
               {isPreview ? '編集に戻る' : 'プレビュー'}
@@ -176,7 +176,7 @@ export default function CreateNewsletterPage() {
                 type="button"
                 onClick={(e) => handleSubmit(e, true)}
                 disabled={status === 'loading'}
-                className="inline-flex items-center gap-2 bg-zinc-700 hover:bg-zinc-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors disabled:opacity-50"
+                className="inline-flex items-center gap-2 bg-japan-indigo hover:bg-zinc-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors disabled:opacity-50"
               >
                 {status === 'loading' ? (
                   <Loader2 className="w-4 h-4 animate-spin" />
@@ -208,7 +208,7 @@ export default function CreateNewsletterPage() {
             animate={{ opacity: 1, y: 0 }}
             className="mt-8 glass-card rounded-xl p-6"
           >
-            <h2 className="text-xl font-semibold text-white mb-4">プレビュー</h2>
+            <h2 className="text-xl font-semibold bg-japan-indigo text-white mb-4">プレビュー</h2>
             <div className="bg-white rounded-lg p-6 text-black">
               <h3 className="text-2xl font-bold mb-4">{formData.subject}</h3>
               {formData.preview_text && (

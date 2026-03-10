@@ -106,7 +106,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     className="glass-panel rounded-3xl p-12 text-center bg-white/80"
                 >
                     <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-rose-500 to-amber-500 flex items-center justify-center">
-                        <AlertCircle className="w-10 h-10 text-white" />
+                        <AlertCircle className="w-10 h-10 bg-japan-indigo text-white" />
                     </div>
                     <h2 className="text-3xl font-bold text-japan-indigo mb-4">
                         送信に失敗しました
@@ -135,7 +135,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     className="glass-panel rounded-3xl p-12 text-center bg-white/80"
                 >
                     <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-japan-indigo to-japan-vermilion flex items-center justify-center">
-                        <Send className="w-10 h-10 text-white" />
+                        <Send className="w-10 h-10 bg-japan-indigo text-white" />
                     </div>
                     <h2 className="text-3xl font-bold text-japan-indigo mb-4">
                         送信完了しました

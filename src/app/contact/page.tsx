@@ -102,7 +102,7 @@ export default function ContactPage() {
                                 あなたの一歩を
                             </span>
                             <br />
-                            <span className="text-white">お待ちしています</span>
+                            <span className="bg-japan-indigo text-white">お待ちしています</span>
                         </motion.h1>
 
                         <motion.p variants={itemVariants} className="text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
@@ -136,10 +136,10 @@ export default function ContactPage() {
                                         ? 'bg-gradient-to-br from-teal-400 to-purple-500'
                                         : 'bg-white/10 group-hover:bg-white/20'
                                     } transition-colors`}>
-                                    <method.icon className="w-7 h-7 text-white" />
+                                    <method.icon className="w-7 h-7 bg-japan-indigo text-white" />
                                 </div>
 
-                                <h3 className="text-xl font-bold text-white mb-3">{method.title}</h3>
+                                <h3 className="text-xl font-bold bg-japan-indigo text-white mb-3">{method.title}</h3>
                                 <p className="text-zinc-400 mb-6 leading-relaxed">{method.description}</p>
 
                                 <div className={`inline-flex items-center gap-2 font-medium ${method.primary ? 'text-teal-400' : 'text-zinc-300 group-hover:text-white'
@@ -170,7 +170,7 @@ export default function ContactPage() {
                             variants={itemVariants}
                             className="p-8 rounded-2xl bg-white/5 border border-white/10"
                         >
-                            <h3 className="text-2xl font-bold text-white mb-6">セッション情報</h3>
+                            <h3 className="text-2xl font-bold bg-japan-indigo text-white mb-6">セッション情報</h3>
 
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
@@ -178,7 +178,7 @@ export default function ContactPage() {
                                         <MapPin className="w-5 h-5 text-teal-400" />
                                     </div>
                                     <div>
-                                        <h4 className="font-medium text-white mb-1">実施方法</h4>
+                                        <h4 className="font-medium bg-japan-indigo text-white mb-1">実施方法</h4>
                                         <p className="text-zinc-400">オンライン（Zoom）</p>
                                         <p className="text-sm text-zinc-500 mt-1">安定したインターネット環境があればどこからでも参加可能</p>
                                     </div>
@@ -189,7 +189,7 @@ export default function ContactPage() {
                                         <Clock className="w-5 h-5 text-purple-400" />
                                     </div>
                                     <div>
-                                        <h4 className="font-medium text-white mb-1">対応時間</h4>
+                                        <h4 className="font-medium bg-japan-indigo text-white mb-1">対応時間</h4>
                                         <p className="text-zinc-400">平日 10:00 - 20:00</p>
                                         <p className="text-sm text-zinc-500 mt-1">土日祝も事前予約で対応可能</p>
                                     </div>
@@ -202,7 +202,7 @@ export default function ContactPage() {
                             variants={itemVariants}
                             className="p-8 rounded-2xl bg-white/5 border border-white/10"
                         >
-                            <h3 className="text-2xl font-bold text-white mb-6">SNS・その他</h3>
+                            <h3 className="text-2xl font-bold bg-japan-indigo text-white mb-6">SNS・その他</h3>
 
                             <div className="space-y-4">
                                 {socialLinks.map((social, index) => (
@@ -217,10 +217,10 @@ export default function ContactPage() {
                                             <social.icon className="w-6 h-6 text-blue-400" />
                                         </div>
                                         <div className="flex-1">
-                                            <h4 className="font-medium text-white">{social.name}</h4>
+                                            <h4 className="font-medium bg-japan-indigo text-white">{social.name}</h4>
                                             <p className="text-sm text-zinc-400">{social.description}</p>
                                         </div>
-                                        <ArrowRight className="w-5 h-5 text-zinc-500 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                                        <ArrowRight className="w-5 h-5 text-zinc-500 group-hover:bg-japan-indigo text-white group-hover:translate-x-1 transition-all" />
                                     </a>
                                 ))}
                             </div>
@@ -243,7 +243,7 @@ export default function ContactPage() {
                         variants={containerVariants}
                     >
                         <motion.div variants={itemVariants} className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-white mb-4">よくあるご質問</h2>
+                            <h2 className="text-3xl font-bold bg-japan-indigo text-white mb-4">よくあるご質問</h2>
                             <p className="text-zinc-400">お問い合わせ前にご確認ください</p>
                         </motion.div>
 
@@ -254,7 +254,7 @@ export default function ContactPage() {
                                     variants={itemVariants}
                                     className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-colors"
                                 >
-                                    <h3 className="text-lg font-medium text-white mb-3 flex items-start gap-3">
+                                    <h3 className="text-lg font-medium bg-japan-indigo text-white mb-3 flex items-start gap-3">
                                         <span className="text-teal-400 font-bold">Q.</span>
                                         {faq.question}
                                     </h3>
@@ -281,7 +281,7 @@ export default function ContactPage() {
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.15),transparent_50%)]" />
 
                         <motion.div variants={itemVariants} className="relative z-10">
-                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                            <h2 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4">
                                 変化は、一通のメッセージから
                             </h2>
                             <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
@@ -292,14 +292,14 @@ export default function ContactPage() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link
                                     href="/sessions#booking"
-                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
                                 >
                                     <Calendar className="w-5 h-5" />
                                     無料相談を予約する
                                 </Link>
                                 <a
                                     href="mailto:t.ndg16@gmail.com"
-                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
                                 >
                                     <Mail className="w-5 h-5" />
                                     メールで問い合わせ

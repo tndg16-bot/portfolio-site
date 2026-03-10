@@ -1,7 +1,22 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
+
+# Allow all crawlers to access public resources
+Allow: /images/
+Allow: /blog/
+Allow: /about
+Allow: /contact
+Allow: /sessions
+Allow: /philosophy
+Allow: /faq
+Allow: /useful-info
+Allow: /courses
+
+# Crawl delay (optional, for being considerate)
+Crawl-delay: 1
 
 # Sitemap
 Sitemap: https://takahiro-motoyama.vercel.app/sitemap.xml

@@ -128,13 +128,13 @@ export default function PostEditorPage() {
             <div className="flex items-center gap-4">
               <Link
                 href="/admin"
-                className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:bg-japan-indigo text-white transition-colors"
               >
                 <ArrowLeft size={20} />
                 Back
               </Link>
               <div>
-                <h1 className="text-xl font-bold text-gray-900 dark:text-white">
+                <h1 className="text-xl font-bold text-gray-900 dark:bg-japan-indigo text-white">
                   {isNew ? 'New Post' : 'Edit Post'}
                 </h1>
                 {formData.title && (
@@ -160,7 +160,7 @@ export default function PostEditorPage() {
                 type="submit"
                 form="post-form"
                 disabled={saving}
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+                className="inline-flex items-center gap-2 bg-japan-indigo hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
               >
                 <Save size={18} />
                 {saving ? 'Saving...' : 'Save'}
@@ -194,7 +194,7 @@ export default function PostEditorPage() {
               onChange={(e) =>
                 setFormData({ ...formData, slug: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-japan-indigo dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
               placeholder="post-slug"
               required
               pattern="[a-z0-9-]+"
@@ -220,7 +220,7 @@ export default function PostEditorPage() {
               onChange={(e) =>
                 setFormData({ ...formData, title: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-japan-indigo dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
               placeholder="Post title"
               required
             />
@@ -241,7 +241,7 @@ export default function PostEditorPage() {
               onChange={(e) =>
                 setFormData({ ...formData, date: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-japan-indigo dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
               required
             />
           </div>
@@ -261,7 +261,7 @@ export default function PostEditorPage() {
                 setFormData({ ...formData, description: e.target.value })
               }
               rows={2}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-japan-indigo dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
               placeholder="Brief description of the post"
             />
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -284,7 +284,7 @@ export default function PostEditorPage() {
               onChange={(e) =>
                 setFormData({ ...formData, category: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-japan-indigo dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
               placeholder="e.g., Technology, Tutorial"
             />
           </div>
@@ -304,7 +304,7 @@ export default function PostEditorPage() {
               onChange={(e) =>
                 setFormData({ ...formData, tags: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-japan-indigo dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
               placeholder="tag1, tag2, tag3"
             />
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -349,7 +349,7 @@ export default function PostEditorPage() {
                 setFormData({ ...formData, content: e.target.value })
               }
               rows={20}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-y font-mono text-sm"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-japan-indigo dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-y font-mono text-sm"
               placeholder="Write your post in Markdown format..."
               required
             />

@@ -83,12 +83,12 @@ export default function LearnPage() {
             enrollment_id: enrollment.id,
             user_id: userData.user.id,
             course_id: enrollment.course_id,
-            course_slug: course?.slug || '',
-            course_title: course?.title || 'Unknown Course',
+            course_slug: course?.slug ?? '',
+            course_title: course?.title ?? 'Unknown Course',
             course_description: course?.description ?? undefined,
             course_thumbnail_url: course?.thumbnail_url ?? undefined,
-            course_total_lessons: course?.total_lessons || 0,
-            progress_percentage: enrollment.progress_percentage || 0,
+            course_total_lessons: course?.total_lessons ?? 0,
+            progress_percentage: enrollment.progress_percentage ?? 0,
             enrolled_at: enrollment.enrolled_at,
             expires_at: enrollment.expires_at ?? undefined,
             is_active: enrollment.is_active,
@@ -118,7 +118,7 @@ export default function LearnPage() {
           </p>
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-japan-indigo text-white rounded-lg font-medium hover:bg-teal-700 transition-colors"
           >
             Browse Courses
           </Link>

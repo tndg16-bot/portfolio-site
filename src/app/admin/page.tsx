@@ -125,7 +125,7 @@ export default function AdminPage() {
           className="w-full max-w-md"
         >
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700">
-            <h1 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:text-white">
+            <h1 className="text-3xl font-bold text-center mb-6 text-gray-900 dark:bg-japan-indigo text-white">
               Admin Login
             </h1>
 
@@ -142,7 +142,7 @@ export default function AdminPage() {
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-japan-indigo dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
                   placeholder="Enter admin password"
                   required
                 />
@@ -157,7 +157,7 @@ export default function AdminPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
+                className="w-full bg-japan-indigo hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200"
               >
                 {loading ? 'Logging in...' : 'Login'}
               </button>
@@ -180,7 +180,7 @@ export default function AdminPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <h1 className="text-2xl font-bold text-gray-900 dark:bg-japan-indigo text-white">
                 Admin Dashboard
               </h1>
               <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -191,7 +191,7 @@ export default function AdminPage() {
             <div className="flex items-center gap-3">
               <Link
                 href="/admin/posts/new"
-                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+                className="flex items-center gap-2 bg-japan-indigo hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
               >
                 <Plus size={18} />
                 New Post
@@ -222,7 +222,7 @@ export default function AdminPage() {
               placeholder="Search posts..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-japan-indigo dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
             />
           </div>
         </div>
@@ -265,7 +265,7 @@ export default function AdminPage() {
                         )}
                         <Link
                           href={`/blog/${post.slug}`}
-                          className="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors truncate"
+                          className="text-lg font-semibold text-gray-900 dark:bg-japan-indigo text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors truncate"
                           target="_blank"
                         >
                           {post.title}
@@ -324,7 +324,7 @@ export default function AdminPage() {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
             <p className="text-sm text-gray-500 dark:text-gray-400">Total Posts</p>
-            <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">
+            <p className="text-2xl font-bold text-gray-900 dark:bg-japan-indigo text-white mt-1">
               {posts.length}
             </p>
           </div>

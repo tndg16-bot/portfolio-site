@@ -72,11 +72,11 @@ async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
 
     const response = await fetch(url, {
         headers,
-        next: { revalidate: 3600 }, // 1時間ごとに再検証
+        next: { revalidate: 1800 }, // 30分ごとに再検証（更新頻度向上）
     });
 
     if (!response.ok) {
-        console.error('GitHub repos API error:', response.status);
+        console.error('GitHub repos API error:', response.status, response.statusText);
         return [];
     }
 
@@ -96,11 +96,11 @@ async function fetchGitHubCommitsForRepo(repoName: string): Promise<GitHubCommit
 
     const response = await fetch(url, {
         headers,
-        next: { revalidate: 300 }, // 5分ごとに再検証
+        next: { revalidate: 60 }, // 1分ごとに再検証（更新頻度向上）
     });
 
     if (!response.ok) {
-        console.error(`GitHub commits API error for ${repoName}:`, response.status);
+        console.error(`GitHub commits API error for ${repoName}:`, response.status, response.statusText);
         return [];
     }
 
@@ -108,12 +108,18 @@ async function fetchGitHubCommitsForRepo(repoName: string): Promise<GitHubCommit
 }
 
 export async function GET() {
+    const startTime = Date.now();
+    console.log('[API] /api/activities - Fetching GitHub commits...');
+
     try {
         // 全リポジトリを取得
+        console.log('[API] Fetching repos...');
         const repos = await fetchGitHubRepos();
+        console.log(`[API] Fetched ${repos.length} repos`);
 
         // 最近更新されたリポジトリ（上位10個）のコミットを取得
         const recentRepos = repos.slice(0, 10);
+        console.log(`[API] Fetching commits from ${recentRepos.length} recent repos...`);
 
         // 各リポジトリのコミットを並列で取得
         const commitsArrays = await Promise.all(
@@ -121,6 +127,7 @@ export async function GET() {
         );
 
         const allCommits = commitsArrays.flat();
+        console.log(`[API] Total commits fetched: ${allCommits.length}`);
 
         // 全コミットをアクティビティに変換
         const activities: Activity[] = allCommits.map((commit, index) => {
@@ -141,6 +148,9 @@ export async function GET() {
         // 最新50件に制限
         const latestActivities = activities.slice(0, 50);
 
+        const duration = Date.now() - startTime;
+        console.log(`[API] /api/activities - Success (${duration}ms)`);
+
         return NextResponse.json({
             success: true,
             activities: latestActivities,
@@ -148,9 +158,12 @@ export async function GET() {
             commitsFetched: allCommits.length,
             lastUpdated: new Date().toISOString(),
             source: 'github-commits-all-repos',
+            fetchDuration: duration
         });
     } catch (error) {
-        console.error('Error fetching GitHub commits:', error);
+        const duration = Date.now() - startTime;
+        console.error('[API] /api/activities - Error:', error);
+        console.error('[API] Error details:', error instanceof Error ? error.stack : String(error));
 
         // フォールバックアクティビティ
         const fallbackActivities: Activity[] = [
@@ -192,10 +205,12 @@ export async function GET() {
         ];
 
         return NextResponse.json({
-            success: true,
+            success: false,
+            error: error instanceof Error ? error.message : String(error),
             activities: fallbackActivities,
             lastUpdated: new Date().toISOString(),
             source: 'fallback',
+            fetchDuration: duration
         });
     }
 }

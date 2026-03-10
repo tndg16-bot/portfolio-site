@@ -57,7 +57,7 @@ async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
 
     const response = await fetch(url, {
         headers,
-        next: { revalidate: 3600 } // 1時間ごとに再検証
+        next: { revalidate: 1800 } // 30分ごとに再検証（更新頻度向上）
     });
 
     if (!response.ok) {
@@ -80,11 +80,11 @@ async function fetchGitHubIssuesForRepo(repoName: string): Promise<GitHubIssue[]
 
     const response = await fetch(url, {
         headers,
-        next: { revalidate: 300 } // 5分ごとに再検証
+        next: { revalidate: 60 } // 1分ごとに再検証（更新頻度向上）
     });
 
     if (!response.ok) {
-        console.error(`GitHub issues API error for ${repoName}:`, response.status);
+        console.error(`GitHub issues API error for ${repoName}:`, response.status, response.statusText);
         return [];
     }
 
@@ -183,19 +183,27 @@ function convertIssueToProject(issue: GitHubIssue, repoName: string): Project {
 }
 
 export async function GET() {
+    const startTime = Date.now();
+    console.log('[API] /api/projects - Fetching GitHub issues...');
+
     try {
         // 全リポジトリを取得
+        console.log('[API] Fetching repos...');
         const repos = await fetchGitHubRepos();
+        console.log(`[API] Fetched ${repos.length} repos`);
 
         // Issueがあるリポジトリのみを対象に（オプション）
         const reposWithIssues = repos.filter(repo => repo.open_issues_count > 0);
+        console.log(`[API] Found ${reposWithIssues.length} repos with issues`);
 
         // 各リポジトリのIssuesを並列で取得
+        console.log('[API] Fetching issues from repos...');
         const allIssues = await Promise.all(
             reposWithIssues.map(repo => fetchGitHubIssuesForRepo(repo.name))
         );
 
         const issues = allIssues.flat();
+        console.log(`[API] Total issues fetched: ${issues.length}`);
 
         // 全Issuesをプロジェクトに変換
         const projects: Project[] = issues.map(issue => {
@@ -211,6 +219,9 @@ export async function GET() {
             notStarted: projects.filter(p => p.status === 'not_started').length,
         };
 
+        const duration = Date.now() - startTime;
+        console.log(`[API] /api/projects - Success (${duration}ms)`);
+
         return NextResponse.json({
             success: true,
             projects,
@@ -218,10 +229,13 @@ export async function GET() {
             reposFetched: repos.length,
             reposWithIssues: reposWithIssues.length,
             lastUpdated: new Date().toISOString(),
-            source: 'github-issues'
+            source: 'github-issues',
+            fetchDuration: duration
         });
     } catch (error) {
-        console.error('Error fetching GitHub issues:', error);
+        const duration = Date.now() - startTime;
+        console.error('[API] /api/projects - Error:', error);
+        console.error('[API] Error details:', error instanceof Error ? error.stack : String(error));
 
         // エラー時はモックデータを返す
         const fallbackProjects: Project[] = [
@@ -249,7 +263,8 @@ export async function GET() {
         ];
 
         return NextResponse.json({
-            success: true,
+            success: false,
+            error: error instanceof Error ? error.message : String(error),
             projects: fallbackProjects,
             stats: {
                 total: fallbackProjects.length,
@@ -258,7 +273,8 @@ export async function GET() {
                 notStarted: fallbackProjects.filter(p => p.status === 'not_started').length,
             },
             lastUpdated: new Date().toISOString(),
-            source: 'fallback'
+            source: 'fallback',
+            fetchDuration: duration
         });
     }
 }

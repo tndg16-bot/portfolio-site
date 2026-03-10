@@ -55,7 +55,7 @@ export default function SearchBar() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="記事を検索..."
-            className="w-full bg-transparent text-white placeholder-zinc-500 outline-none text-sm"
+            className="w-full bg-japan-indigo text-white placeholder-zinc-500 outline-none text-sm"
             aria-label="記事を検索"
           />
         </motion.div>

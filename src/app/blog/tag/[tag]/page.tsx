@@ -43,7 +43,7 @@ export default async function TagPage({ params }: Props) {
                     >
                         ← ブログ一覧に戻る
                     </Link>
-                    <h1 className="text-3xl font-bold text-white mt-4">
+                    <h1 className="text-3xl font-bold bg-japan-indigo text-white mt-4">
                         <span className="text-teal-400">#</span> {decodedTag}
                     </h1>
                     <p className="text-zinc-400 mt-2">
@@ -62,7 +62,7 @@ export default async function TagPage({ params }: Props) {
                             >
                                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                                     <div className="flex-1">
-                                        <h2 className="text-xl font-semibold text-white group-hover:text-teal-400 transition-colors">
+                                        <h2 className="text-xl font-semibold bg-japan-indigo text-white group-hover:text-teal-400 transition-colors">
                                             {post.title}
                                         </h2>
                                         {post.description && (

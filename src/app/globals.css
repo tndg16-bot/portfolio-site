@@ -106,7 +106,7 @@ h1, h2, h3, h4 {
 }
 
 p {
-  color: #4a4a4a;
+  color: #2D2D2D;
 }
 
 /* Scrollbar */
@@ -163,7 +163,11 @@ p {
 
 /* Compatibility & Helpers */
 .text-zinc-200, .text-zinc-300, .text-zinc-400 {
-  color: #4a4a4a;
+  color: #2D2D2D;
+}
+
+.text-zinc-600 {
+  color: #2D2D2D;
 }
 
 .text-zinc-500 {
@@ -171,7 +175,7 @@ p {
 }
 
 .text-white {
-  color: #2D2D2D !important; /* Force override for white text in light theme */
+  color: #2D2D2D; /* Force override for white text in light theme */
 }
 
 /* Specific overrides for components expecting dark mode */

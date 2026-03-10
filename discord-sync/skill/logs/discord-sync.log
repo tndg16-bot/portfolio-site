@@ -1,0 +1,14 @@
+[2026-02-14T08:16:33.062Z] [INFO] Discord Sync Skill 開始
+[2026-02-14T08:16:33.065Z] [INFO] 現在時刻: 17:16
+[2026-02-14T08:16:33.069Z] [INFO] チェックインタイプ: evening
+[2026-02-14T08:16:33.071Z] [INFO] メッセージ: 🌙 おやすみなさい！今日の振り返りをしましょう。
+[2026-02-14T08:16:33.075Z] [SUCCESS] Discordメッセージ送信成功
+[2026-02-14T08:16:33.080Z] [ERROR] Obsidian記録失敗: ENOENT: no such file or directory, open 'D:\AntigravityVault\daily\2026-02-14.md'
+[2026-02-14T08:16:33.083Z] [INFO] Discord Sync Skill 完了
+[2026-02-14T08:16:43.435Z] [INFO] Discord Sync Skill 開始
+[2026-02-14T08:16:43.541Z] [INFO] 現在時刻: 17:16
+[2026-02-14T08:16:43.544Z] [INFO] チェックインタイプ: evening
+[2026-02-14T08:16:43.547Z] [INFO] メッセージ: 🌙 おやすみなさい！今日の振り返りをしましょう。
+[2026-02-14T08:16:43.552Z] [SUCCESS] Discordメッセージ送信成功
+[2026-02-14T08:16:43.559Z] [ERROR] Obsidian記録失敗: ENOENT: no such file or directory, open 'D:\AntigravityVault\daily\2026-02-14.md'
+[2026-02-14T08:16:43.562Z] [INFO] Discord Sync Skill 完了

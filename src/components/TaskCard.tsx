@@ -67,7 +67,7 @@ export default function TaskCard({ task, onStatusChange }: TaskCardProps) {
         
         <div className="flex-1">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-lg font-semibold text-white">
+            <h3 className="text-lg font-semibold bg-japan-indigo text-white">
               {task.title}
             </h3>
             <div className="flex items-center gap-2 text-xs">

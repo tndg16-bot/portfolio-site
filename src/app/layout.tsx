@@ -5,6 +5,8 @@ import { LiquidCursor } from "@/components/LiquidCursor";
 import { SectionBackground } from "@/components/SectionBackground";
 import { PersonJsonLd, OrganizationJsonLd, WebsiteJsonLd } from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -92,6 +94,8 @@ export default function RootLayout({
         <SectionBackground />
         <LiquidCursor />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

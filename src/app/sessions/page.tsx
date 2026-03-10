@@ -86,7 +86,7 @@ export default function SessionsPage() {
                                 Life Self-Determination Session
                             </span>
                         </motion.div>
-                        <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                        <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold bg-japan-indigo text-white mb-6 leading-tight">
                             自分の人生を、<br />
                             <span className="text-forest">自分で決める力</span>を取り戻す
                         </motion.h1>
@@ -106,7 +106,7 @@ export default function SessionsPage() {
                         variants={containerVariants}
                         className="glass-panel rounded-3xl p-8 md:p-12 border border-white/5"
                     >
-                        <motion.h2 variants={itemVariants} className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                        <motion.h2 variants={itemVariants} className="text-2xl md:text-3xl font-bold bg-japan-indigo text-white mb-8 flex items-center gap-3">
                             <CheckCircle2 className="text-teal-400" /> こんな方へ
                         </motion.h2>
                         <ul className="space-y-4">
@@ -126,7 +126,7 @@ export default function SessionsPage() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-3xl font-bold text-white mb-10 text-center"
+                        className="text-2xl md:text-3xl font-bold bg-japan-indigo text-white mb-10 text-center"
                     >
                         セッションで得られる変化
                     </motion.h2>
@@ -144,7 +144,7 @@ export default function SessionsPage() {
                                 <p className="text-zinc-200 mb-4 line-through decoration-red-400/50">{t.before}</p>
                                 <ArrowRight className="mx-auto text-teal-400 mb-4" />
                                 <div className="text-teal-400 text-base mb-2">After</div>
-                                <p className="text-white font-semibold">{t.after}</p>
+                                <p className="bg-japan-indigo text-white font-semibold">{t.after}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -156,7 +156,7 @@ export default function SessionsPage() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-3xl font-bold text-white mb-10 text-center"
+                        className="text-2xl md:text-3xl font-bold bg-japan-indigo text-white mb-10 text-center"
                     >
                         提供メニュー
                     </motion.h2>
@@ -171,7 +171,7 @@ export default function SessionsPage() {
                             <div className="h-12 w-12 bg-teal-500/10 rounded-xl flex items-center justify-center mb-6">
                                 <User className="text-teal-400" size={28} />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-4">パーソナルコーチング</h3>
+                            <h3 className="text-xl font-bold bg-japan-indigo text-white mb-4">パーソナルコーチング</h3>
                             <p className="text-zinc-300 mb-6 leading-relaxed">
                                 個人のキャリア、ライフプラン、副業戦略に特化した1on1セッション。
                                 あなたの中にある「答え」を引き出し、行動可能なプランに落とし込みます。
@@ -202,7 +202,7 @@ export default function SessionsPage() {
                             <div className="h-12 w-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6">
                                 <Briefcase className="text-purple-400" size={28} />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-4">ビジネスコンサルティング</h3>
+                            <h3 className="text-xl font-bold bg-japan-indigo text-white mb-4">ビジネスコンサルティング</h3>
                             <p className="text-zinc-300 mb-6 leading-relaxed">
                                 チームの意思決定プロセス改善、新規事業の壁打ち、組織文化の変革を支援。
                                 外部視点からのフィードバックで、停滞を打破します。
@@ -231,7 +231,7 @@ export default function SessionsPage() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-3xl font-bold text-white mb-10 text-center flex items-center justify-center gap-3"
+                        className="text-2xl md:text-3xl font-bold bg-japan-indigo text-white mb-10 text-center flex items-center justify-center gap-3"
                     >
                         <Clock className="text-teal-400" /> セッションの進め方
                     </motion.h2>
@@ -248,7 +248,7 @@ export default function SessionsPage() {
                                 <div className="w-10 h-10 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold mb-4">
                                     {s.step}
                                 </div>
-                                <h3 className="text-white font-bold text-lg mb-2">{s.title}</h3>
+                                <h3 className="bg-japan-indigo text-white font-bold text-lg mb-2">{s.title}</h3>
                                 <p className="text-zinc-300 text-base">{s.desc}</p>
                             </motion.div>
                         ))}
@@ -273,7 +273,7 @@ export default function SessionsPage() {
                         viewport={{ once: true }}
                         className="glass-panel rounded-3xl p-8 md:p-12 text-center border border-teal-500/20"
                     >
-                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">料金</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold bg-japan-indigo text-white mb-4">料金</h2>
                         <p className="text-zinc-200 mb-6">
                             現在、<span className="text-teal-400 font-semibold">審査制</span>にてご案内しております。<br />
                             詳細は個別にお伝えいたします。
@@ -288,7 +288,7 @@ export default function SessionsPage() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="text-2xl md:text-3xl font-bold text-white mb-10 text-center flex items-center justify-center gap-3"
+                        className="text-2xl md:text-3xl font-bold bg-japan-indigo text-white mb-10 text-center flex items-center justify-center gap-3"
                     >
                         <HelpCircle className="text-teal-400" /> よくある質問
                     </motion.h2>
@@ -302,7 +302,7 @@ export default function SessionsPage() {
                                 transition={{ delay: i * 0.05 }}
                                 className="glass-panel rounded-xl p-6 border border-white/5"
                             >
-                                <h3 className="text-white font-semibold mb-2 flex items-start gap-2">
+                                <h3 className="bg-japan-indigo text-white font-semibold mb-2 flex items-start gap-2">
                                     <MessageCircle className="text-teal-400 shrink-0 mt-1" size={18} />
                                     {faq.q}
                                 </h3>
@@ -320,13 +320,13 @@ export default function SessionsPage() {
                         viewport={{ once: true }}
                         className="glass-panel rounded-3xl p-8 md:p-12 border border-white/5"
                     >
-                        <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <h2 className="text-2xl font-bold bg-japan-indigo text-white mb-6 flex items-center gap-3">
                             <CalendarDays className="text-teal-400" /> お申込み後の流れ
                         </h2>
                         <ol className="space-y-4 text-zinc-200 leading-relaxed">
                             <li className="flex items-start gap-3">
                                 <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center text-base font-bold shrink-0">1</span>
-                                <span>フォーム送信後、<strong className="text-white">24時間以内</strong>にメールで返信いたします</span>
+                                <span>フォーム送信後、<strong className="bg-japan-indigo text-white">24時間以内</strong>にメールで返信いたします</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center text-base font-bold shrink-0">2</span>
@@ -351,7 +351,7 @@ export default function SessionsPage() {
                         <div className="flex flex-col md:flex-row items-center gap-6">
                             <div className="text-5xl">🤖</div>
                             <div className="flex-1 text-center md:text-left">
-                                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                                <h3 className="text-xl md:text-2xl font-bold bg-japan-indigo text-white mb-2">
                                     まずは無料で適性診断
                                 </h3>
                                 <p className="text-zinc-300 text-base">
@@ -363,7 +363,7 @@ export default function SessionsPage() {
                                 href="https://ai-diagnosis-six.vercel.app"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-bold hover:brightness-110 transition-all whitespace-nowrap"
+                                className="flex items-center gap-2 bg-japan-indigo from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-bold hover:brightness-110 transition-all whitespace-nowrap"
                             >
                                 診断を受ける
                                 <ArrowRight size={18} />

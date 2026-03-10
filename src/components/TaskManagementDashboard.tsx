@@ -102,7 +102,7 @@ export default function TaskManagementDashboard() {
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
-          <h1 className="text-3xl font-bold text-white mb-2">
+          <h1 className="text-3xl font-bold bg-japan-indigo text-white mb-2">
             タスク管理ダッシュボード
           </h1>
           <p className="text-zinc-400">
@@ -116,7 +116,7 @@ export default function TaskManagementDashboard() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs text-zinc-400 mb-1">総タスク</p>
-                <p className="text-2xl font-bold text-white">{stats.total}</p>
+                <p className="text-2xl font-bold bg-japan-indigo text-white">{stats.total}</p>
               </div>
               <List className="w-5 h-5 text-zinc-400" />
             </div>
@@ -163,7 +163,7 @@ export default function TaskManagementDashboard() {
             <select
               value={filter}
               onChange={(e) => setFilter(e.target.value as 'all' | Task['status'])}
-              className="bg-zinc-800/50 border border-zinc-700 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50"
+              className="bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50"
             >
               <option value="all">すべてのタスク</option>
               <option value="completed">完了</option>
@@ -178,7 +178,7 @@ export default function TaskManagementDashboard() {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'priority' | 'dueDate' | 'status')}
-              className="bg-zinc-800/50 border border-zinc-700 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50"
+              className="bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50"
             >
               <option value="priority">優先度順</option>
               <option value="dueDate">期限順</option>
@@ -228,7 +228,7 @@ export default function TaskManagementDashboard() {
                 
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-lg font-semibold text-white">
+                    <h3 className="text-lg font-semibold bg-japan-indigo text-white">
                       {task.title}
                     </h3>
                     <div className="flex items-center gap-2 text-xs">
@@ -282,7 +282,7 @@ export default function TaskManagementDashboard() {
               <LayoutDashboard className="w-8 h-8 text-zinc-500" />
             </div>
           </div>
-          <h3 className="text-xl font-semibold text-white mb-2">
+          <h3 className="text-xl font-semibold bg-japan-indigo text-white mb-2">
             該当するタスクがありません
           </h3>
           <p className="text-zinc-400">
@@ -296,7 +296,7 @@ export default function TaskManagementDashboard() {
         <div className="mt-8 glass-card p-4 rounded-lg">
           <div className="flex justify-between items-center mb-2">
             <span className="text-sm text-zinc-400">全体の進捗</span>
-            <span className="text-sm font-semibold text-white">
+            <span className="text-sm font-semibold bg-japan-indigo text-white">
               {Math.round((stats.completed / stats.total) * 100)}%
             </span>
           </div>

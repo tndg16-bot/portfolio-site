@@ -2,13 +2,14 @@ import { getAllPostIds, getPostData, getRelatedPosts } from '@/lib/posts';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Header from '@/components/Header';
 import ShareButtons from '@/components/ShareButtons';
 import GiscusComments from '@/components/GiscusComments';
 import AuthorBio from '@/components/AuthorBio';
 import NewsletterForm from '@/components/NewsletterForm';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import { TableOfContents } from '@/components/TableOfContents';
-import Script from 'next/script'; // Add Script import
+import Script from 'next/script';
 
 type Props = {
   params: Promise<{
@@ -16,7 +17,7 @@ type Props = {
   }>;
 };
 
-// Generate metadata for the page
+// Generate metadata for page
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
     const { slug } = await params;
@@ -84,7 +85,9 @@ export default async function PostPage({ params }: Props) {
   const relatedPosts = getRelatedPosts(slug, 3);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <>
+      <Header />
+      <div className="container mx-auto px-4 py-8 pt-24">
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
         <article className="max-w-3xl">
           <ArticleJsonLd
@@ -112,7 +115,7 @@ export default async function PostPage({ params }: Props) {
 
           {/* Article Header */}
           <header className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">{post.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4 leading-tight">{post.title}</h1>
 
             {/* Meta information */}
             <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400">
@@ -163,7 +166,7 @@ export default async function PostPage({ params }: Props) {
                     href={`/blog/${relatedPost.id}`}
                     className="glass-card p-4 rounded-xl hover:border-teal-500/30 transition-all group block"
                   >
-                    <h4 className="text-sm font-semibold text-white group-hover:text-teal-400 transition-colors line-clamp-2 mb-2">
+                    <h4 className="text-sm font-semibold bg-japan-indigo text-white group-hover:text-teal-400 transition-colors line-clamp-2 mb-2">
                       {relatedPost.title}
                     </h4>
                     <div className="flex items-center gap-2 text-xs text-zinc-500">
@@ -205,6 +208,7 @@ export default async function PostPage({ params }: Props) {
       {/* Table of Contents - Mobile */}
       <div className="lg:hidden mt-8 mb-4">
         <TableOfContents content={post.contentHtml} />
+      </div>
       </div>
 
       <Script id="mermaid-init" strategy="afterInteractive">
@@ -270,6 +274,6 @@ export default async function PostPage({ params }: Props) {
             });
           `}
       </Script>
-    </div>
+    </>
   );
 }

@@ -189,7 +189,7 @@ export default function FAQPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="例：Zoom / キャンセル / AI"
-              className="w-full rounded-2xl bg-white/5 border border-white/10 pl-12 pr-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-teal-500/40"
+              className="w-full rounded-2xl bg-japan-indigo/5 border border-white/10 pl-12 pr-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-teal-500/40"
             />
           </div>
           <div className="mt-2 text-xs text-zinc-400">
@@ -234,7 +234,7 @@ export default function FAQPage() {
             <div className="glass-panel rounded-2xl border border-white/10 p-5">
               <div className="flex items-center gap-2 mb-4">
                 <List className="w-5 h-5 text-teal-400" />
-                <h2 className="text-base font-semibold text-white">目次</h2>
+                <h2 className="text-base font-semibold bg-japan-indigo text-white">目次</h2>
               </div>
 
               <div className="space-y-2 max-h-[60vh] overflow-auto pr-1">
@@ -246,7 +246,7 @@ export default function FAQPage() {
                       e.preventDefault();
                       jumpToFAQ(faq);
                     }}
-                    className="block rounded-lg px-3 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 transition-colors"
+                    className="block rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-japan-indigo text-white hover:bg-white/5 transition-colors"
                     aria-label={`FAQ ${idx + 1}: ${faq.question}`}
                   >
                     <span className="text-zinc-500 mr-2">{idx + 1}.</span>
@@ -293,7 +293,7 @@ export default function FAQPage() {
                         {faq.category}
                       </span>
                     </div>
-                    <h3 className="text-lg font-semibold text-white">
+                    <h3 className="text-lg font-semibold bg-japan-indigo text-white">
                       {faq.question}
                     </h3>
                   </div>
@@ -327,7 +327,7 @@ export default function FAQPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.15),transparent_50%)]" />
 
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4">
               その他ご質問がございましたら
             </h2>
             <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
@@ -337,14 +337,14 @@ export default function FAQPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
               >
                 <HelpCircle className="w-5 h-5" />
                 お問い合わせ
               </a>
               <a
                 href="/sessions"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
               >
                 <Calendar className="w-5 h-5" />
                 セッションを予約

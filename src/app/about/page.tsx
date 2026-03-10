@@ -78,7 +78,7 @@ export default function AboutPage() {
                                 判断軸を取り戻して、
                             </span>
                             <br />
-                            <span className="text-white">自分で決められる人を増やしたい</span>
+                            <span className="bg-japan-indigo text-white">自分で決められる人を増やしたい</span>
                         </motion.h1>
 
                         <motion.p variants={itemVariants} className="text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
@@ -114,7 +114,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         variants={containerVariants}
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-white mb-8 text-center">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold bg-japan-indigo text-white mb-8 text-center">
                             私がやっていること
                         </motion.h2>
 
@@ -148,7 +148,7 @@ export default function AboutPage() {
                         variants={containerVariants}
                         className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500/10 to-teal-500/10 border border-white/10 p-8"
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-white mb-6">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold bg-japan-indigo text-white mb-6">
                             なぜこれをやっているのか
                         </motion.h2>
 
@@ -177,7 +177,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         variants={containerVariants}
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-white mb-8 text-center">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold bg-japan-indigo text-white mb-8 text-center">
                             経歴（できることの裏付け）
                         </motion.h2>
 
@@ -213,7 +213,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         variants={containerVariants}
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center gap-3">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold bg-japan-indigo text-white mb-8 text-center flex items-center justify-center gap-3">
                             <Heart className="w-8 h-8 text-pink-400" />
                             大切にしている約束
                         </motion.h2>
@@ -241,7 +241,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         variants={containerVariants}
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-white mb-8 text-center">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold bg-japan-indigo text-white mb-8 text-center">
                             セッションが合う人／合わない人
                         </motion.h2>
 
@@ -286,7 +286,7 @@ export default function AboutPage() {
                         variants={containerVariants}
                         className="p-8 rounded-2xl bg-white/5 border border-white/10 text-center"
                     >
-                        <motion.h2 variants={itemVariants} className="text-2xl font-bold text-white mb-4">
+                        <motion.h2 variants={itemVariants} className="text-2xl font-bold bg-japan-indigo text-white mb-4">
                             無料モニターでやっている理由
                         </motion.h2>
                         <motion.p variants={itemVariants} className="text-zinc-300 leading-relaxed">
@@ -305,7 +305,7 @@ export default function AboutPage() {
                         variants={containerVariants}
                         className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-500/20 via-purple-500/10 to-pink-500/20 border border-white/10 p-12 text-center"
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-white mb-4">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold bg-japan-indigo text-white mb-4">
                             頭の中が散らかっていて進めないなら、まずは整理しましょう
                         </motion.h2>
                         <motion.p variants={itemVariants} className="text-xl text-zinc-300 mb-8">
@@ -314,7 +314,7 @@ export default function AboutPage() {
                         <motion.div variants={itemVariants}>
                             <Link
                                 href="/sessions"
-                                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity"
+                                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-japan-indigo from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity"
                             >
                                 セッション詳細はこちら
                                 <ArrowRight className="w-5 h-5" />

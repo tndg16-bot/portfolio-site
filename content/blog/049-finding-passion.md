@@ -1,6 +1,6 @@
 ---
 title: "「やりたいこと」が見つからない本当の理由"
-date: "2026-01-31"
+date: '2026-02-18'
 category: "コーチング"
 tags:
   - "Self-discovery"

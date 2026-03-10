@@ -1,0 +1,7 @@
+{
+  "dailyNotesPath": "D:/AntigravityVault/daily",
+  "priorityMarkers": ["!!!", "!!", "!"],
+  "dueDatePatterns": ["@due", "@today", "@tomorrow"],
+  "maxTasks": 20,
+  "timezone": "Asia/Tokyo"
+}

@@ -26,7 +26,7 @@ export default function CaseStudyPage({ params }: Props) {
             <main className="min-h-screen pt-24 pb-16">
                 {/* Article Header */}
                 <article className="max-w-4xl mx-auto px-4">
-                    <Link href="/case-studies" className="inline-flex items-center text-zinc-400 hover:text-white mb-8 transition-colors">
+                    <Link href="/case-studies" className="inline-flex items-center text-zinc-400 hover:bg-japan-indigo text-white mb-8 transition-colors">
                         <ArrowLeft size={16} className="mr-2" /> 事例一覧に戻る
                     </Link>
 
@@ -37,7 +37,7 @@ export default function CaseStudyPage({ params }: Props) {
                             </span>
                             <span className="text-zinc-500">{study.date}</span>
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        <h1 className="text-3xl md:text-5xl font-bold bg-japan-indigo text-white mb-6 leading-tight">
                             {study.title}
                         </h1>
                         <p className="text-xl text-zinc-300 leading-relaxed font-light">
@@ -50,7 +50,7 @@ export default function CaseStudyPage({ params }: Props) {
                         {study.stats && study.stats.map((stat, i) => (
                             <div key={i} className="glass-panel p-6 rounded-2xl border border-white/5 text-center">
                                 <div className="text-zinc-400 text-sm mb-1">{stat.key}</div>
-                                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                                <div className="text-3xl font-bold bg-japan-indigo text-white mb-2">{stat.value}</div>
                                 <div className="text-teal-400 text-xs">{stat.description}</div>
                             </div>
                         ))}
@@ -58,7 +58,7 @@ export default function CaseStudyPage({ params }: Props) {
 
                     {/* Challenge (Before) */}
                     <section className="mb-16">
-                        <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <h2 className="text-2xl font-bold bg-japan-indigo text-white mb-6 flex items-center gap-3">
                             <Target className="text-red-400" />
                             課題と背景
                         </h2>
@@ -69,7 +69,7 @@ export default function CaseStudyPage({ params }: Props) {
 
                     {/* Solution (Process) */}
                     <section className="mb-16">
-                        <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <h2 className="text-2xl font-bold bg-japan-indigo text-white mb-6 flex items-center gap-3">
                             <Zap className="text-yellow-400" />
                             実施したアプローチ
                         </h2>
@@ -80,14 +80,14 @@ export default function CaseStudyPage({ params }: Props) {
 
                     {/* Results (After) */}
                     <section className="mb-16">
-                        <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <h2 className="text-2xl font-bold bg-japan-indigo text-white mb-6 flex items-center gap-3">
                             <TrendingUp className="text-teal-400" />
                             得られた成果
                         </h2>
                         <div className="bg-gradient-to-br from-teal-500/10 to-purple-500/10 p-8 rounded-2xl border border-teal-500/20">
                             <ul className="space-y-4">
                                 {study.results.map((result, i) => (
-                                    <li key={i} className="flex items-start gap-3 text-white font-medium">
+                                    <li key={i} className="flex items-start gap-3 bg-japan-indigo text-white font-medium">
                                         <span className="w-6 h-6 rounded-full bg-teal-500 text-black flex items-center justify-center text-sm font-bold shrink-0">✓</span>
                                         {result}
                                     </li>
@@ -105,7 +105,7 @@ export default function CaseStudyPage({ params }: Props) {
                                     &quot;{study.testimonial.quote}&quot;
                                 </p>
                                 <footer className="text-right">
-                                    <cite className="not-italic block font-bold text-white">{study.testimonial.author}</cite>
+                                    <cite className="not-italic block font-bold bg-japan-indigo text-white">{study.testimonial.author}</cite>
                                     <span className="text-sm text-zinc-400">{study.testimonial.role}</span>
                                 </footer>
                             </blockquote>
@@ -114,7 +114,7 @@ export default function CaseStudyPage({ params }: Props) {
 
                     {/* CTA */}
                     <section className="text-center py-12 border-t border-white/10">
-                        <h2 className="text-2xl font-bold text-white mb-6">
+                        <h2 className="text-2xl font-bold bg-japan-indigo text-white mb-6">
                             あなたも同じような変化を起こしませんか？
                         </h2>
                         <Link
