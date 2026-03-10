@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const decodedCategory = decodeURIComponent(category);
 
     return {
-        title: `「${decodedCategory}」の記事一覧 | 本山貴大 Blog`,
+        title: `「${decodedCategory}」の記事一覧 | 本山貴裕 Blog`,
         description: `「${decodedCategory}」カテゴリのブログ記事一覧です。`,
     };
 }

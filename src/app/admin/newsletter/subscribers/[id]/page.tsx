@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense, useCallback } from 'react';
+import { useState, useEffect, Suspense, useCallback, use } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Mail, Shield, X, RefreshCw } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -231,22 +231,7 @@ function SubscriberDetailContent({ id }: { id: string }) {
 }
 
 export default function SubscriberDetailPage({ params }: RouteContext) {
-  const [id, setId] = useState<string>('');
-
-  useEffect(() => {
-    (async () => {
-      const p = await params;
-      setId(p.id);
-    })();
-  }, [params]);
-
-  if (!id) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <RefreshCw className="w-12 h-12 text-zinc-500 animate-spin" />
-      </div>
-    );
-  }
+  const { id } = use(params);
 
   return (
     <div className="container mx-auto px-4 py-8 min-h-screen">

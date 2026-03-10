@@ -16,13 +16,14 @@ const inter = Inter({
 const notoJP = Noto_Sans_JP({
   variable: "--font-noto-jp",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://takahiro-motoyama.vercel.app"),
   title: {
-    default: "本山 貴大 | Life Self-Determination Protocol",
-    template: "%s | 本山 貴大"
+    default: "本山 貴裕 | Life Self-Determination Protocol",
+    template: "%s | 本山 貴裕"
   },
   description: "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
   keywords: [
@@ -36,29 +37,29 @@ export const metadata: Metadata = {
     "モヤモヤ整理",
     "対話セッション"
   ],
-  authors: [{ name: "本山貴大" }],
-  creator: "本山貴大",
-  publisher: "本山貴大",
+  authors: [{ name: "本山貴裕" }],
+  creator: "本山貴裕",
+  publisher: "本山貴裕",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "ja_JP",
     url: "https://takahiro-motoyama.vercel.app",
-    siteName: "本山 貴大 | Life Self-Determination Protocol",
-    title: "本山 貴大 | Life Self-Determination Protocol",
+    siteName: "本山 貴裕 | Life Self-Determination Protocol",
+    title: "本山 貴裕 | Life Self-Determination Protocol",
     description: "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
     images: [
       {
         url: "/images/ogp-default.jpg",
         width: 1200,
         height: 630,
-        alt: "本山 貴大 | Life Self-Determination Protocol"
+        alt: "本山 貴裕 | Life Self-Determination Protocol"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "本山 貴大 | Life Self-Determination Protocol",
+    title: "本山 貴裕 | Life Self-Determination Protocol",
     description: "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
     images: ["/images/ogp-default.jpg"],
     // creator: "Set your Twitter handle here when available"

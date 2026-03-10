@@ -37,7 +37,7 @@ export default function ContactPage() {
             title: "メールで問い合わせ",
             description: "ご質問やご相談はメールでも承っております",
             action: "メールを送る",
-            href: "mailto:takahiro.motoyama@example.com",
+            href: "mailto:t.ndg16@gmail.com",
             primary: false
         },
         {
@@ -298,7 +298,7 @@ export default function ContactPage() {
                                     無料相談を予約する
                                 </Link>
                                 <a
-                                    href="mailto:takahiro.motoyama@example.com"
+                                    href="mailto:t.ndg16@gmail.com"
                                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
                                 >
                                     <Mail className="w-5 h-5" />

@@ -7,7 +7,7 @@ import NewsletterForm from '@/components/NewsletterForm';
 import SearchBar from '@/components/SearchBar';
 
 export const metadata: Metadata = {
-  title: 'Blog | 本山貴大',
+  title: 'Blog | 本山貴裕',
   description: 'コーチング、AI活用、思考法、キャリア、生産性に関するブログ記事一覧',
 };
 

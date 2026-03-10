@@ -29,6 +29,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: post.title,
       description: post.description,
+      alternates: {
+        canonical: `https://takahiro-motoyama.vercel.app/blog/${slug}`,
+      },
       openGraph: {
         title: post.title,
         description: post.description,
@@ -216,29 +219,29 @@ export default async function PostPage({ params }: Props) {
                 theme: 'base',
                 themeVariables: {
                   fontFamily: 'inherit',
-                  darkMode: true,
-                  background: 'transparent',
-                  
-                  /* Nodes: Deep Slate with Bright Sky Border */
-                  mainBkg: '#0f172a',              /* Slate 900 (Darker) */
-                  nodeBorder: '#38bdf8',           /* Sky 400 (Vibrant Blue) */
-                  textColor: '#f0f9ff',            /* Sky 50 (Bright White-Blue) */
-                  
-                  /* Lines: Clearly visible but not distracting */
-                  lineColor: '#cbd5e1',            /* Slate 300 */
-                  arrowheadColor: '#38bdf8',       /* Match Border */
-                  
+                  darkMode: false,
+                  background: '#FFFFFF',
+
+                  /* Nodes: Cream bg with Indigo border */
+                  mainBkg: '#F5F1E8',
+                  nodeBorder: '#1B365D',
+                  textColor: '#2D2D2D',
+
+                  /* Lines */
+                  lineColor: '#1B365D',
+                  arrowheadColor: '#C5A059',
+
                   /* Clusters */
-                  clusterBkg: 'rgba(255, 255, 255, 0.03)',
-                  clusterBorder: '#38bdf8',
-                  titleColor: '#f0f9ff',
-                  edgeLabelBackground: '#1e293b',  /* Slate 800 */
-                  
+                  clusterBkg: 'rgba(245, 241, 232, 0.5)',
+                  clusterBorder: '#C5A059',
+                  titleColor: '#1B365D',
+                  edgeLabelBackground: '#FFFFFF',
+
                   /* Flowchart Specifics */
-                  primaryColor: '#0f172a',
-                  primaryTextColor: '#f0f9ff',
-                  primaryBorderColor: '#38bdf8',
-                  tertiaryColor: '#fff'
+                  primaryColor: '#F5F1E8',
+                  primaryTextColor: '#1B365D',
+                  primaryBorderColor: '#1B365D',
+                  tertiaryColor: '#FFFFFF'
                 }
               });
 

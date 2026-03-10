@@ -1,11 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://takahiro-motoyama.vercel.app/sitemap.xml
-
-# Disallow admin and API routes
 Disallow: /api/
 Disallow: /admin/
 
@@ -22,3 +17,6 @@ Allow: /courses
 
 # Crawl delay (optional, for being considerate)
 Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://takahiro-motoyama.vercel.app/sitemap.xml

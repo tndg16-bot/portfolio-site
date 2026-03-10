@@ -1,10 +1,12 @@
 import { MetadataRoute } from 'next'
+import { getSortedPostsData } from '@/lib/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://takahiro-motoyama.vercel.app'
   const lastModified = new Date()
 
-  return [
+  // 静的ページ
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified,
@@ -42,4 +44,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
   ]
+
+  // ブログ記事を動的追加
+  const posts = getSortedPostsData()
+  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/blog/${post.id}`,
+    lastModified: post.date ? new Date(post.date) : lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  return [...staticPages, ...blogPages]
 }
