@@ -28,7 +28,7 @@ export const ArticleJsonLd: React.FC<ArticleJsonLdProps> = ({
   description,
   datePublished,
   dateModified,
-  authorName = '本山貴大',
+  authorName = '本山貴裕',
   url,
   image,
 }) => {
@@ -45,6 +45,11 @@ export const ArticleJsonLd: React.FC<ArticleJsonLdProps> = ({
       name: authorName,
       url: 'https://takahiro-motoyama.vercel.app',
     },
+    publisher: {
+      '@type': 'Organization',
+      name: '本山貴裕',
+      url: 'https://takahiro-motoyama.vercel.app',
+    },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': url,
@@ -58,7 +63,7 @@ export const PersonJsonLd: React.FC = () => {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: '本山貴大',
+    name: '本山貴裕',
     url: 'https://takahiro-motoyama.vercel.app',
     jobTitle: 'Life Self-Determination Coach',
     description: '「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。',
@@ -84,14 +89,14 @@ export const OrganizationJsonLd: React.FC = () => {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: '本山 貴大 | Life Self-Determination Protocol',
+    name: '本山 貴裕 | Life Self-Determination Protocol',
     description: '「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。',
     url: 'https://takahiro-motoyama.vercel.app',
     logo: 'https://takahiro-motoyama.vercel.app/images/logo.png', // Assuming logo exists
     contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer service',
-        email: 'takahiro.motoyama@example.com', // Keep as example or update if known
+        email: 't.ndg16@gmail.com',
         availableLanguage: 'Japanese'
     }
   };
@@ -103,17 +108,9 @@ export const WebsiteJsonLd: React.FC = () => {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: '本山 貴大 | Life Self-Determination Protocol',
+    name: '本山 貴裕 | Life Self-Determination Protocol',
     description: '「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。',
     url: 'https://takahiro-motoyama.vercel.app',
-    potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-            '@type': 'EntryPoint',
-            urlTemplate: 'https://takahiro-motoyama.vercel.app/search?q={search_term_string}'
-        },
-        'query-input': 'required name=search_term_string'
-    }
   };
 
   return <JsonLd data={data} />;

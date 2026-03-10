@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
     const hasTitle = searchParams.has('title');
     const title = hasTitle
       ? searchParams.get('title')?.slice(0, 100)
-      : '本山貴大 Portfolio';
+      : '本山貴裕 Portfolio';
 
     return new ImageResponse(
       (
@@ -21,13 +21,13 @@ export async function GET(req: NextRequest) {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: '#030712', // gray-950
-            color: 'white',
+            backgroundColor: '#F5F1E8',
+            color: '#1B365D',
             fontFamily: 'sans-serif',
             position: 'relative',
           }}
         >
-          {/* Decorative Elements */}
+          {/* Decorative Elements - Gold accent gradients */}
           <div
             style={{
               position: 'absolute',
@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
               left: '-10%',
               width: '40%',
               height: '40%',
-              background: 'radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(197, 160, 89, 0.15) 0%, transparent 70%)',
               filter: 'blur(40px)',
             }}
           />
@@ -46,8 +46,20 @@ export async function GET(req: NextRequest) {
               right: '-10%',
               width: '40%',
               height: '40%',
-              background: 'radial-gradient(circle, rgba(147, 51, 234, 0.2) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(27, 54, 93, 0.1) 0%, transparent 70%)',
               filter: 'blur(40px)',
+            }}
+          />
+
+          {/* Top accent line */}
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              height: '4px',
+              background: 'linear-gradient(90deg, #C5A059, #1B365D, #C5A059)',
             }}
           />
 
@@ -60,21 +72,20 @@ export async function GET(req: NextRequest) {
               textAlign: 'center',
               padding: '40px 80px',
               zIndex: 10,
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(197, 160, 89, 0.3)',
               borderRadius: '20px',
-              backgroundColor: 'rgba(0, 0, 0, 0.5)',
-              boxShadow: '0 20px 50px -12px rgba(0, 0, 0, 0.5)',
+              backgroundColor: 'rgba(255, 255, 255, 0.6)',
+              boxShadow: '0 20px 50px -12px rgba(27, 54, 93, 0.1)',
               maxWidth: '90%',
             }}
           >
             <div
               style={{
-                fontSize: 64,
+                fontSize: 60,
                 fontWeight: 900,
                 marginBottom: 24,
-                color: '#fff',
-                lineHeight: 1.1,
-                textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+                color: '#1B365D',
+                lineHeight: 1.2,
               }}
             >
               {title}
@@ -91,11 +102,11 @@ export async function GET(req: NextRequest) {
                   width: '40px',
                   height: '40px',
                   borderRadius: '50%',
-                  backgroundColor: '#fff',
+                  backgroundColor: '#1B365D',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#000',
+                  color: '#F5F1E8',
                   fontWeight: 'bold',
                   fontSize: '20px',
                 }}
@@ -104,12 +115,12 @@ export async function GET(req: NextRequest) {
               </div>
               <div
                 style={{
-                  fontSize: 28,
-                  color: '#cbd5e1', // slate-300
-                  fontWeight: 500,
+                  fontSize: 26,
+                  color: '#C5A059',
+                  fontWeight: 600,
                 }}
               >
-                本山貴大 | Portfolio
+                本山貴裕 | Portfolio
               </div>
             </div>
           </div>

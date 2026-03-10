@@ -85,14 +85,14 @@ export default function LearnPage() {
             course_id: enrollment.course_id,
             course_slug: course?.slug || '',
             course_title: course?.title || 'Unknown Course',
-            course_description: course?.description || null,
-            course_thumbnail_url: course?.thumbnail_url || null,
+            course_description: course?.description ?? undefined,
+            course_thumbnail_url: course?.thumbnail_url ?? undefined,
             course_total_lessons: course?.total_lessons || 0,
             progress_percentage: enrollment.progress_percentage || 0,
             enrolled_at: enrollment.enrolled_at,
-            expires_at: enrollment.expires_at || null,
+            expires_at: enrollment.expires_at ?? undefined,
             is_active: enrollment.is_active,
-            completed_at: enrollment.completed_at || null,
+            completed_at: enrollment.completed_at ?? undefined,
           };
         });
 

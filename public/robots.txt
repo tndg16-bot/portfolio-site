@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
 
 # Sitemap
-Sitemap: https://your-portfolio-url.vercel.app/sitemap.xml
+Sitemap: https://takahiro-motoyama.vercel.app/sitemap.xml

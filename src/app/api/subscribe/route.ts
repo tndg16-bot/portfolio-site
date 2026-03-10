@@ -26,11 +26,11 @@ export async function POST(request: Request) {
         await resend.emails.send({
           from: 'newsletter@takahiro-motoyama.vercel.app', // Resendで認証済みドメインに変更必要
           to: email,
-          subject: '【本山貴大】ニュースレターへのご登録ありがとうございます',
+          subject: '【本山貴裕】ニュースレターへのご登録ありがとうございます',
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
               <h1 style="color: #333;">ご登録ありがとうございます！</h1>
-              <p>本山貴大のニュースレターにご登録いただき、ありがとうございます。</p>
+              <p>本山貴裕のニュースレターにご登録いただき、ありがとうございます。</p>
               <p>これから以下のような情報をお届けします：</p>
               <ul>
                 <li>新着記事のお知らせ</li>

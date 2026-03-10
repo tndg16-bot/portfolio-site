@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense, useCallback } from 'react';
+import { useState, useEffect, Suspense, useCallback, use } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Mail, Shield, X, RefreshCw } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -231,7 +231,7 @@ function SubscriberDetailContent({ id }: { id: string }) {
 }
 
 export default function SubscriberDetailPage({ params }: RouteContext) {
-  const { id } = params;
+  const { id } = use(params);
 
   return (
     <div className="container mx-auto px-4 py-8 min-h-screen">

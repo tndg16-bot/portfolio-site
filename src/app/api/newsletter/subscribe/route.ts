@@ -70,7 +70,7 @@ export async function POST(request: Request) {
             await resend.emails.send({
               from: 'newsletter@takahiro-motoyama.vercel.app',
               to: email,
-              subject: '【本山貴大】メールアドレスの認証',
+              subject: '【本山貴裕】メールアドレスの認証',
               html: `
                 <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
                   <h1 style="color: #333;">メールアドレスの認証</h1>
@@ -132,11 +132,11 @@ export async function POST(request: Request) {
           await resend.emails.send({
             from: 'newsletter@takahiro-motoyama.vercel.app',
             to: email,
-            subject: '【本山貴大】ニュースレター再登録 - メールアドレスの認証',
+            subject: '【本山貴裕】ニュースレター再登録 - メールアドレスの認証',
             html: `
               <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
                 <h1 style="color: #333;">ニュースレターへの再登録</h1>
-                <p>本山貴大のニュースレターに再登録いただき、ありがとうございます。</p>
+                <p>本山貴裕のニュースレターに再登録いただき、ありがとうございます。</p>
                 <p>以下のリンクをクリックして、登録を完了してください。</p>
                 <p>
                   <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/newsletter/verify?token=${verificationToken}&id=${existingSubscriber.id}"
@@ -199,11 +199,11 @@ export async function POST(request: Request) {
         await resend.emails.send({
           from: 'newsletter@takahiro-motoyama.vercel.app',
           to: email,
-          subject: '【本山貴大】ニュースレターご登録のお知らせ',
+          subject: '【本山貴裕】ニュースレターご登録のお知らせ',
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
               <h1 style="color: #333;">ご登録ありがとうございます！</h1>
-              <p>本山貴大のニュースレターにご登録いただき、ありがとうございます。</p>
+              <p>本山貴裕のニュースレターにご登録いただき、ありがとうございます。</p>
               <p>以下のリンクをクリックして、メールアドレスの認証を完了してください。</p>
               <p>
                 <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/newsletter/verify?token=${verificationToken}&id=${newSubscriber.id}"
