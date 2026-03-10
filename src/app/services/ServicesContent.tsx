@@ -38,6 +38,16 @@ const IdealBadge: React.FC<{ isIdeal: boolean; text: string }> = ({ isIdeal, tex
     </div>
 );
 
+const cardColors = [
+  'bg-gradient-to-br from-blue-500 to-blue-600',    // AI診断
+  'bg-gradient-to-br from-cyan-500 to-cyan-600',     // AIワークショップ
+  'bg-gradient-to-br from-indigo-500 to-indigo-600', // AIコンサル
+  'bg-gradient-to-br from-violet-500 to-violet-600', // AI継続サポート
+  'bg-gradient-to-br from-teal-500 to-teal-600',     // モヤモヤ整理
+  'bg-gradient-to-br from-purple-500 to-purple-600', // 羅針盤
+  'bg-gradient-to-br from-slate-600 to-slate-700',   // 企業向け
+];
+
 const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ service, index }) => {
     return (
         <motion.div
@@ -56,7 +66,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
 
             <div className="bg-white rounded-3xl shadow-xl border border-zinc-100 overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full flex flex-col">
                 {/* Header */}
-                <div className={`p-8 ${index === 0 ? 'bg-gradient-to-br from-teal-500 to-teal-600' : index === 1 ? 'bg-gradient-to-br from-purple-500 to-purple-600' : 'bg-gradient-to-br from-slate-600 to-slate-700'} text-white`}>
+                <div className={`p-8 ${cardColors[index % cardColors.length]} text-white`}>
                     <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
                     <p className="bg-japan-indigo text-white/90 text-base leading-relaxed">{service.description}</p>
                 </div>
@@ -175,8 +185,8 @@ export default function ServicesContent() {
                         </motion.h1>
 
                         <motion.p variants={itemVariants} className="text-xl text-zinc-600 max-w-2xl mx-auto leading-relaxed">
-                            あなたの人生の羅針盤を再構築し、自己決定の力を取り戻す。<br />
-                            パーソナルコーチングからビジネスコンサルティングまで。
+                            AI活用支援からパーソナルコーチングまで。<br />
+                            あなたのビジネスと人生を、次のステージへ。
                         </motion.p>
                     </motion.div>
                 </section>
@@ -222,6 +232,14 @@ export default function ServicesContent() {
                                 {
                                     q: "法人での利用も可能ですか？",
                                     a: "はい。企業向けの意思決定ワークショップも承っております。詳細はお問い合わせください。"
+                                },
+                                {
+                                    q: "AIの知識がなくても大丈夫ですか？",
+                                    a: "はい。無料AI活用診断では、AIの基礎から丁寧にご説明します。実際にその場でデモを見ていただくので、知識ゼロでも安心です。"
+                                },
+                                {
+                                    q: "どんな業種でもAI活用できますか？",
+                                    a: "はい。不動産、飲食、士業、サービス業など、幅広い業種でのAI活用実績があります。業種に合わせた最適な活用法をご提案します。"
                                 }
                             ].map((faq, index) => (
                                 <motion.div
