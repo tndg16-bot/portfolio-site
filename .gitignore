@@ -55,3 +55,4 @@ nul
 
 # local worktree artifacts
 .worktrees/
+.env*.local

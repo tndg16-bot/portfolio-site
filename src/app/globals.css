@@ -22,6 +22,22 @@ body {
   color: var(--foreground);
   min-height: 100vh;
   font-family: var(--font-noto-jp), sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "palt";
+}
+
+/* Improve paragraph readability */
+p {
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+/* Ensure sufficient line-height for list items */
+li {
+  line-height: 1.75;
 }
 
 /* ============================================
@@ -105,9 +121,7 @@ h1, h2, h3, h4 {
   color: #1B365D;
 }
 
-p {
-  color: #2D2D2D;
-}
+/* p color handled in body and specific sections */
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -161,28 +175,22 @@ p {
   color: #1B365D;
 }
 
-/* Compatibility & Helpers */
-.text-zinc-200, .text-zinc-300, .text-zinc-400 {
-  color: #2D2D2D;
-}
-
-.text-zinc-600 {
-  color: #2D2D2D;
-}
-
-.text-zinc-500 {
-  color: #6a6a6a;
-}
-
-.text-white {
-  color: #2D2D2D; /* Force override for white text in light theme */
-}
-
-/* Specific overrides for components expecting dark mode */
+/* Light Theme Color Mappings */
+/* Map dark-theme accent colors to light-theme equivalents */
 .text-teal-400 { color: #1B365D; }
-.bg-teal-500\/10 { background-color: rgba(27, 54, 93, 0.08); }
-.border-teal-500\/20 { border-color: rgba(27, 54, 93, 0.15); }
-.text-teal-900 { color: #fff; } /* Button text might need inversion */
+.text-teal-300 { color: #2a4a7a; }
+.bg-teal-500\/10 { background-color: rgba(27, 54, 93, 0.06); }
+.bg-teal-500\/20 { background-color: rgba(27, 54, 93, 0.08); }
+.border-teal-500\/20 { border-color: rgba(27, 54, 93, 0.12); }
+.border-teal-500\/30 { border-color: rgba(27, 54, 93, 0.2); }
+.text-purple-400 { color: #5f4b8b; }
+.bg-purple-500\/10 { background-color: rgba(95, 75, 139, 0.06); }
+.border-purple-500\/20 { border-color: rgba(95, 75, 139, 0.12); }
+
+/* Dark-themed sections: zinc colors remain appropriate */
+/* Light-themed sections: map zinc to readable equivalents */
+.border-zinc-800 { border-color: rgba(27, 54, 93, 0.1); }
+.hover\:bg-zinc-900\/50:hover { background-color: rgba(27, 54, 93, 0.03); }
 
 /* Accessibility */
 .sr-only {
