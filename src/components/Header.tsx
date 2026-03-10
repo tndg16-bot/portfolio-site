@@ -67,7 +67,7 @@ export default function Header() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-2 px-3 text-sm font-medium bg-japan-indigo from-japan-indigo to-japan-vermilion text-white rounded-full hover:brightness-110 transition-all"
+                className="py-2 px-3 text-sm font-medium bg-japan-indigo text-white rounded-full hover:brightness-110 transition-all"
               >
                 {item.label}
               </a>
@@ -116,7 +116,7 @@ export default function Header() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block py-3 px-4 text-sm font-medium bg-japan-indigo from-japan-indigo to-japan-vermilion text-white rounded-lg mx-2 text-center"
+                className="block py-3 px-4 text-sm font-medium bg-japan-indigo text-white rounded-lg mx-2 text-center"
               >
                 {item.label}
               </a>

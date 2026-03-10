@@ -180,7 +180,7 @@ export default function UsefulInfoPage() {
             
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-japan-indigo from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-japan-indigo text-white font-bold text-lg hover:opacity-90 transition-opacity"
             >
               ブログを見る
               <ArrowRight className="w-5 h-5" />
@@ -212,7 +212,7 @@ export default function UsefulInfoPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/sessions"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-japan-indigo from-teal-400 to-purple-500 text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-japan-indigo text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
                 >
                   <CheckCircle2 className="w-5 h-5" />
                   セッションを予約

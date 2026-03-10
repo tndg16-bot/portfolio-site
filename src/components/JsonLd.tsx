@@ -141,3 +141,61 @@ export const BreadcrumbJsonLd: React.FC<BreadcrumbJsonLdProps> = ({ items }) => 
 
   return <JsonLd data={data} />;
 };
+
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+type FAQPageJsonLdProps = {
+  faqs: FAQItem[];
+};
+
+export const FAQPageJsonLd: React.FC<FAQPageJsonLdProps> = ({ faqs }) => {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+
+  return <JsonLd data={data} />;
+};
+
+type ServiceJsonLdProps = {
+  name: string;
+  description: string;
+  provider?: string;
+  areaServed?: string;
+  url?: string;
+};
+
+export const ServiceJsonLd: React.FC<ServiceJsonLdProps> = ({
+  name,
+  description,
+  provider = '本山貴裕',
+  areaServed = 'JP',
+  url = 'https://takahiro-motoyama.vercel.app/services',
+}) => {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name,
+    description,
+    provider: {
+      '@type': 'Person',
+      name: provider,
+      url: 'https://takahiro-motoyama.vercel.app',
+    },
+    areaServed,
+    url,
+  };
+
+  return <JsonLd data={data} />;
+};
