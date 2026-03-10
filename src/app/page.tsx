@@ -347,6 +347,8 @@ export default function Home() {
             <a href="/contact" className="hover:text-japan-indigo transition-colors">Contact</a>
             <a href="https://ai-diagnosis-six.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition-colors">🤖 AI診断</a>
             <a href="https://lin.ee/VAYurUv" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 transition-colors">LINE</a>
+            <a href="/privacy" className="hover:text-japan-indigo transition-colors">プライバシーポリシー</a>
+            <a href="/legal" className="hover:text-japan-indigo transition-colors">特定商取引法に基づく表記</a>
           </div>
           <p className="text-zinc-500 text-sm tracking-widest uppercase">© 2026 Takahiro Motoyama. Designed for Self-Determination.</p>
         </div>

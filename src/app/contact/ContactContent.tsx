@@ -53,8 +53,10 @@ export default function ContactContent() {
             title: "LINE公式アカウント",
             description: "気軽にメッセージでご連絡いただけます",
             action: "友だち追加",
-            href: "#",
-            primary: false
+            href: "https://lin.ee/VAYurUv",
+            primary: false,
+            target: "_blank" as const,
+            rel: "noopener noreferrer"
         }
     ];
 
@@ -133,6 +135,8 @@ export default function ContactContent() {
                             <motion.a
                                 key={index}
                                 href={method.href}
+                                target={method.target}
+                                rel={method.rel}
                                 variants={itemVariants}
                                 whileHover={{ scale: 1.02, y: -5 }}
                                 className={`group relative p-8 rounded-2xl border transition-all duration-300 ${method.primary
@@ -344,6 +348,8 @@ export default function ContactContent() {
                                 <Link href="/philosophy" className="hover:text-teal-400 transition-colors">Philosophy</Link>
                                 <Link href="/sessions" className="hover:text-teal-400 transition-colors">Sessions</Link>
                                 <Link href="/contact" className="hover:text-teal-400 transition-colors">Contact</Link>
+                                <Link href="/privacy" className="hover:text-teal-400 transition-colors">プライバシーポリシー</Link>
+                                <Link href="/legal" className="hover:text-teal-400 transition-colors">特定商取引法に基づく表記</Link>
                             </div>
                             <p className="text-zinc-500 text-sm">
                                 © 2026 Takahiro Motoyama. All rights reserved.

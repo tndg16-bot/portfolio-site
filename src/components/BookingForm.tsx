@@ -167,13 +167,13 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/10 border border-japan-indigo/20 text-japan-indigo text-sm font-medium mb-4"
                     >
                         <Calendar size={16} />
-                        <span>審査制セッション</span>
+                        <span>無料相談受付中</span>
                     </motion.div>
                     <h2 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4">
-                        「人生の再定義」セッション予約
+                        無料相談・セッション予約
                     </h2>
                     <p className="text-zinc-600 max-w-xl mx-auto">
-                        あなたの内なる羅針盤を見つけ、人生の自己決定を加速させます。
+                        AI活用支援からコーチングまで、お気軽にお申し込みください。
                     </p>
                 </div>
 
@@ -234,15 +234,14 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     <div className="space-y-2">
                         <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
                             <MessageSquare size={16} className="text-japan-indigo" />
-                            セッションで解決したいこと <span className="text-japan-vermilion">*</span>
+                            セッションで解決したいこと
                         </label>
                         <textarea
                             name="goal"
-                            required
                             value={formData.goal}
                             onChange={handleChange}
                             rows={3}
-                            placeholder="例: 副業で独立したいが、何から始めればいいかわからない。自分軸を確立したい。"
+                            placeholder="例: AI活用で業務効率化したい、副業の相談、キャリアの方向性を整理したい（任意）"
                             className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all resize-none"
                         />
                     </div>
@@ -418,7 +417,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
 
                     {/* Note */}
                     <p className="text-center text-sm text-zinc-500">
-                        ※ 審査制のため、後日ご連絡いたします（3営業日以内）
+                        ※ 3営業日以内にご連絡いたします
                     </p>
                 </form>
             </motion.div>

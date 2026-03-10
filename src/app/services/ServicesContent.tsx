@@ -105,6 +105,17 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                                 <p className="text-3xl font-bold text-teal-600 mb-2">{service.pricing.price}</p>
                                 <p className="text-sm text-zinc-600">{service.pricing.notes}</p>
                             </div>
+                        ) : service.pricing.type === 'fixed' && service.pricing.price === '無料' ? (
+                            <div>
+                                <p className="text-3xl font-bold text-green-600 mb-2">無料</p>
+                                <p className="text-sm text-zinc-600">月10件限定</p>
+                                <p className="text-sm text-zinc-600">{service.pricing.notes}</p>
+                            </div>
+                        ) : service.pricing.type === 'fixed' && service.pricing.price && service.pricing.price !== 'お問い合わせください' ? (
+                            <div>
+                                <p className="text-3xl font-bold text-teal-600 mb-2">{service.pricing.price}</p>
+                                <p className="text-sm text-zinc-600">{service.pricing.notes}</p>
+                            </div>
                         ) : (
                             <div>
                                 <p className="text-lg font-semibold text-zinc-700 mb-2">お問い合わせください</p>
@@ -151,7 +162,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                         href="/sessions#booking"
                         className="block w-full py-4 rounded-xl bg-japan-indigo text-white font-bold text-center hover:shadow-lg hover:shadow-teal-500/25 transition-all flex items-center justify-center gap-2"
                     >
-                        {service.pricing.type === 'screening' ? '無料相談を予約する' : 'お問い合わせ'}
+                        {service.pricing.price === '無料' ? '無料診断を申し込む' : service.pricing.type === 'screening' ? '無料相談を予約する' : '詳しく見る・申し込む'}
                         <ArrowRight className="w-5 h-5" />
                     </Link>
                 </div>
@@ -200,8 +211,37 @@ export default function ServicesContent() {
                         variants={containerVariants}
                         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
                     >
-                        {services.map((service, index) => (
+                        {/* AI Services Category Header */}
+                        <motion.div variants={itemVariants} className="col-span-full text-center mb-4 mt-8">
+                            <h2 className="text-2xl md:text-3xl font-bold text-zinc-800 mb-2">AI活用支援サービス</h2>
+                            <p className="text-zinc-600">AIの力で業務を変革。無料診断からスタートできます。</p>
+                        </motion.div>
+
+                        {/* Step-up Flow */}
+                        <motion.div variants={itemVariants} className="col-span-full flex flex-wrap justify-center items-center gap-2 text-sm text-zinc-500 mb-4">
+                            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full font-medium">無料診断</span>
+                            <ArrowRight className="w-4 h-4" />
+                            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-medium">ワークショップ</span>
+                            <ArrowRight className="w-4 h-4" />
+                            <span className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full font-medium">3ヶ月コンサル</span>
+                            <ArrowRight className="w-4 h-4" />
+                            <span className="px-3 py-1 bg-violet-100 text-violet-700 rounded-full font-medium">継続サポート</span>
+                        </motion.div>
+
+                        {/* AI Service Cards */}
+                        {services.slice(0, 4).map((service, index) => (
                             <ServiceCard key={service.id} service={service} index={index} />
+                        ))}
+
+                        {/* Coaching Services Category Header */}
+                        <motion.div variants={itemVariants} className="col-span-full text-center mb-4 mt-8">
+                            <h2 className="text-2xl md:text-3xl font-bold text-zinc-800 mb-2">パーソナルコーチング</h2>
+                            <p className="text-zinc-600">人生と仕事の意思決定力を高める、1対1のセッション。</p>
+                        </motion.div>
+
+                        {/* Coaching Service Cards */}
+                        {services.slice(4).map((service, index) => (
+                            <ServiceCard key={service.id} service={service} index={index + 4} />
                         ))}
                     </motion.div>
                 </section>
@@ -310,6 +350,8 @@ export default function ServicesContent() {
                                 <Link href="/philosophy" className="hover:text-teal-600 transition-colors">Philosophy</Link>
                                 <Link href="/sessions" className="hover:text-teal-600 transition-colors">Sessions</Link>
                                 <Link href="/contact" className="hover:text-teal-600 transition-colors">Contact</Link>
+                                <Link href="/privacy" className="hover:text-teal-600 transition-colors">プライバシーポリシー</Link>
+                                <Link href="/legal" className="hover:text-teal-600 transition-colors">特定商取引法に基づく表記</Link>
                             </div>
                             <p className="text-zinc-500 text-sm">
                                 © 2026 Takahiro Motoyama. All rights reserved.
