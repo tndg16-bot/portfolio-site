@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { Mail } from 'lucide-react';
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export default function NewsletterForm() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -12,6 +14,10 @@ export default function NewsletterForm() {
     e.preventDefault();
     if (!email) {
       setErrorMessage('メールアドレスを入力してください。');
+      return;
+    }
+    if (!EMAIL_PATTERN.test(email)) {
+      setErrorMessage('正しいメールアドレスの形式で入力してください。');
       return;
     }
 

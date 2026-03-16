@@ -231,7 +231,7 @@ export default function ProjectProgressDashboard() {
                           {issue.labels.map((label) => (
                             <span
                               key={label}
-                              className="text-xs px-2 py-1 bg-japan-indigo/10 text-japan-indigo rounded-full"
+                              className="text-xs px-2 py-1 bg-japan-indigo/15 text-japan-indigo rounded-full"
                             >
                               {label}
                             </span>

@@ -111,6 +111,14 @@ export const WebsiteJsonLd: React.FC = () => {
     name: '本山 貴裕 | Life Self-Determination Protocol',
     description: '「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。',
     url: 'https://takahiro-motoyama.vercel.app',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://takahiro-motoyama.vercel.app/blog?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
 
   return <JsonLd data={data} />;

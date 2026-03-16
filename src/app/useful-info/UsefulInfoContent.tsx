@@ -86,7 +86,7 @@ export default function UsefulInfoContent() {
             className="relative z-10 max-w-4xl mx-auto text-center"
           >
             <div className="mb-6 flex justify-center">
-              <span className="inline-block rounded-full bg-japan-indigo/10 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/20">
+              <span className="inline-block rounded-full bg-japan-indigo/15 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/25">
                 Useful Resources
               </span>
             </div>

@@ -23,7 +23,7 @@ export default function CoursesContent() {
                         transition={{ duration: 0.8 }}
                         className="relative z-10 w-full max-w-4xl text-center px-4"
                     >
-                        <div className="inline-flex items-center gap-2 rounded-full bg-japan-indigo/10 px-4 py-2 text-sm font-medium text-japan-indigo border border-japan-indigo/20 mb-8">
+                        <div className="inline-flex items-center gap-2 rounded-full bg-japan-indigo/15 px-4 py-2 text-sm font-medium text-japan-indigo border border-japan-indigo/25 mb-8">
                             <BookOpen size={16} />
                             <span>Life Self-Determination Academy</span>
                         </div>

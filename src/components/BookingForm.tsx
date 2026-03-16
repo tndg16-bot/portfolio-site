@@ -35,6 +35,8 @@ const GOOGLE_FORMS_CONFIG = {
     }
 };
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export default function BookingForm({ className = "" }: { className?: string }) {
     const [formData, setFormData] = useState<FormData>({
         name: "",
@@ -49,13 +51,25 @@ export default function BookingForm({ className = "" }: { className?: string }) 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isError, setIsError] = useState(false);
+    const [emailError, setEmailError] = useState("");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+        if (e.target.name === "email") {
+            if (e.target.value && !EMAIL_PATTERN.test(e.target.value)) {
+                setEmailError("正しいメールアドレスの形式で入力してください。");
+            } else {
+                setEmailError("");
+            }
+        }
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        if (!EMAIL_PATTERN.test(formData.email)) {
+            setEmailError("正しいメールアドレスの形式で入力してください。");
+            return;
+        }
         setIsSubmitting(true);
         setIsError(false);
 
@@ -117,7 +131,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     </p>
                     <button
                         onClick={() => setIsError(false)}
-                        className="px-8 py-3 rounded-full bg-japan-indigo/10 border border-japan-indigo/20 text-japan-indigo font-medium hover:bg-japan-indigo/20 transition-all"
+                        className="px-8 py-3 rounded-full bg-japan-indigo/15 border border-japan-indigo/25 text-japan-indigo font-medium hover:bg-japan-indigo/20 transition-all"
                     >
                         再試行
                     </button>
@@ -164,7 +178,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                         initial={{ opacity: 0, y: -10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/10 border border-japan-indigo/20 text-japan-indigo text-sm font-medium mb-4"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/15 border border-japan-indigo/25 text-japan-indigo text-sm font-medium mb-4"
                     >
                         <Calendar size={16} />
                         <span>無料相談受付中</span>
@@ -209,11 +223,18 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                 id="booking-email"
                                 required
                                 aria-label="メールアドレス"
+                                aria-invalid={!!emailError}
+                                aria-describedby={emailError ? "booking-email-error" : undefined}
                                 value={formData.email}
                                 onChange={handleChange}
                                 placeholder="example@email.com"
-                                className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
+                                className={`w-full px-4 py-3 rounded-xl bg-white border text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all ${emailError ? "border-red-400" : "border-zinc-200"}`}
                             />
+                            {emailError && (
+                                <p id="booking-email-error" className="text-red-500 text-xs mt-1" role="alert">
+                                    {emailError}
+                                </p>
+                            )}
                         </div>
                     </div>
 
