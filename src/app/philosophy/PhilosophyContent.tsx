@@ -54,7 +54,7 @@ export default function PhilosophyContent() {
                     <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl text-japan-indigo">
                         人生の<span className="text-japan-gradient">自己決定</span>を取り戻す
                     </h1>
-                    <p className="text-lg text-zinc-600 md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-lg text-zinc-800 md:text-xl max-w-2xl mx-auto leading-relaxed">
                         溢れる情報と「正解」の押し付けから、魂の呼吸を守り抜く。<br />
                         外部依存を脱却し、自分だけの羅針盤を手にする旅路。
                     </p>
@@ -88,7 +88,7 @@ export default function PhilosophyContent() {
                                     <p className="text-sm text-japan-vermilion mb-3">
                                         {principle.subtitle}
                                     </p>
-                                    <p className="text-zinc-600 leading-relaxed">
+                                    <p className="text-zinc-800 leading-relaxed">
                                         {principle.description}
                                     </p>
                                 </div>
@@ -111,7 +111,7 @@ export default function PhilosophyContent() {
                         「ノウハウ依存」から卒業した先に、<br />
                         <span className="text-japan-gradient font-medium">本当の自由</span>がある。
                     </blockquote>
-                    <p className="text-zinc-500">
+                    <p className="text-zinc-700">
                         — Life Self-Determination Protocol
                     </p>
                 </motion.div>
@@ -119,7 +119,7 @@ export default function PhilosophyContent() {
 
             {/* Footer */}
             <footer className="w-full py-12 text-center border-t border-japan-indigo/5">
-                <p className="text-zinc-500 text-sm">
+                <p className="text-zinc-700 text-sm">
                     © 2026 Takahiro Motoyama. Designed for Self-Determination.
                 </p>
             </footer>

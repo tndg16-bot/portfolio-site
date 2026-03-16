@@ -62,7 +62,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
             <h1 className="text-2xl font-bold text-zinc-900 mb-2">
               Complete Your Purchase
             </h1>
-            <p className="text-zinc-600">
+            <p className="text-zinc-800">
               You&apos;re about to purchase: <strong>{course.title}</strong>
             </p>
           </div>
@@ -72,17 +72,17 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
             <h2 className="text-lg font-semibold text-zinc-900 mb-4">Course Details</h2>
             <div className="space-y-2">
               <div className="flex justify-between">
-                <span className="text-zinc-600">Price:</span>
+                <span className="text-zinc-800">Price:</span>
                 <span className="text-xl font-bold text-zinc-900">
                   ${(course.price / 100).toFixed(2)} {course.currency.toUpperCase()}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-zinc-600">Lessons:</span>
+                <span className="text-zinc-800">Lessons:</span>
                 <span className="font-semibold text-zinc-900">{course.total_lessons}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-zinc-600">Duration:</span>
+                <span className="text-zinc-800">Duration:</span>
                 <span className="font-semibold text-zinc-900">
                   {Math.floor(course.total_duration / 60)} minutes
                 </span>
@@ -125,7 +125,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
               <CreditCard className="w-5 h-5 text-blue-600" />
               <h3 className="text-lg font-semibold text-zinc-900">Secure Payment</h3>
             </div>
-            <p className="text-sm text-zinc-600 mb-4">
+            <p className="text-sm text-zinc-800 mb-4">
               Your payment information is secure and encrypted. We use Stripe for payment processing and don't store your card details.
             </p>
             <div className="flex gap-4 mb-4">
@@ -156,10 +156,10 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
             <h3 className="text-lg font-semibold text-zinc-900 mb-2">
               Stripe Integration Required
             </h3>
-            <p className="text-zinc-600 mb-4">
+            <p className="text-zinc-800 mb-4">
               Payment processing requires Stripe package installation and configuration.
             </p>
-            <p className="text-sm text-zinc-500">
+            <p className="text-sm text-zinc-700">
               <strong>To enable payment:</strong>
               <br />
               1. Run: <code className="bg-zinc-800 text-zinc-100 px-2 py-1 rounded">npm install stripe @stripe/stripe-js</code>
@@ -179,7 +179,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
           </div>
 
           {/* Footer Links */}
-          <div className="text-center text-sm text-zinc-500 pt-6 border-t border-zinc-200">
+          <div className="text-center text-sm text-zinc-700 pt-6 border-t border-zinc-200">
             <Link href="/learn" className="hover:text-zinc-700">
               ← Back to Course List
             </Link>

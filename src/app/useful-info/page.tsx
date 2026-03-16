@@ -233,7 +233,7 @@ export default function UsefulInfoPage() {
         <footer className="w-full py-12 border-t border-white/5 bg-black/20">
           <div className="max-w-6xl mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="flex gap-6 text-zinc-400 text-sm">
+              <div className="flex gap-6 text-zinc-600 text-sm">
                 <Link href="/" className="hover:text-teal-400 transition-colors">Home</Link>
                 <Link href="/about" className="hover:text-teal-400 transition-colors">About</Link>
                 <Link href="/philosophy" className="hover:text-teal-400 transition-colors">Philosophy</Link>
@@ -241,7 +241,7 @@ export default function UsefulInfoPage() {
                 <Link href="/contact" className="hover:text-teal-400 transition-colors">Contact</Link>
                 <Link href="/useful-info" className="hover:text-teal-400 transition-colors">Useful Info</Link>
               </div>
-              <p className="text-zinc-500 text-sm">
+              <p className="text-zinc-700 text-sm">
                 © 2026 Takahiro Motoyama. All rights reserved.
               </p>
             </div>

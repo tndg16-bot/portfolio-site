@@ -32,7 +32,7 @@ const FeatureCheck: React.FC<{ text: string }> = ({ text }) => (
 );
 
 const IdealBadge: React.FC<{ isIdeal: boolean; text: string }> = ({ isIdeal, text }) => (
-    <div className={`flex items-start gap-2 text-sm ${isIdeal ? 'text-teal-600' : 'text-zinc-500'}`}>
+    <div className={`flex items-start gap-2 text-sm ${isIdeal ? 'text-teal-600' : 'text-zinc-700'}`}>
         {isIdeal ? <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" /> : <Lock className="w-4 h-4 shrink-0 mt-0.5" />}
         <span>{text}</span>
     </div>
@@ -74,7 +74,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                 {/* Body */}
                 <div className="p-8 flex-1 flex flex-col">
                     {/* Duration */}
-                    <div className="flex items-center gap-2 text-zinc-600 mb-6">
+                    <div className="flex items-center gap-2 text-zinc-800 mb-6">
                         <Clock className="w-5 h-5" />
                         <span className="font-medium">{service.duration}</span>
                     </div>
@@ -98,28 +98,28 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                                     <Lock className="w-5 h-5" />
                                     <span className="font-semibold">審査制</span>
                                 </div>
-                                <p className="text-sm text-zinc-600">{service.pricing.notes}</p>
+                                <p className="text-sm text-zinc-800">{service.pricing.notes}</p>
                             </div>
                         ) : service.pricing.type === 'package' ? (
                             <div>
                                 <p className="text-3xl font-bold text-teal-600 mb-2">{service.pricing.price}</p>
-                                <p className="text-sm text-zinc-600">{service.pricing.notes}</p>
+                                <p className="text-sm text-zinc-800">{service.pricing.notes}</p>
                             </div>
                         ) : service.pricing.type === 'fixed' && service.pricing.price === '無料' ? (
                             <div>
                                 <p className="text-3xl font-bold text-green-600 mb-2">無料</p>
-                                <p className="text-sm text-zinc-600">月10件限定</p>
-                                <p className="text-sm text-zinc-600">{service.pricing.notes}</p>
+                                <p className="text-sm text-zinc-800">月10件限定</p>
+                                <p className="text-sm text-zinc-800">{service.pricing.notes}</p>
                             </div>
                         ) : service.pricing.type === 'fixed' && service.pricing.price && service.pricing.price !== 'お問い合わせください' ? (
                             <div>
                                 <p className="text-3xl font-bold text-teal-600 mb-2">{service.pricing.price}</p>
-                                <p className="text-sm text-zinc-600">{service.pricing.notes}</p>
+                                <p className="text-sm text-zinc-800">{service.pricing.notes}</p>
                             </div>
                         ) : (
                             <div>
                                 <p className="text-lg font-semibold text-zinc-700 mb-2">お問い合わせください</p>
-                                <p className="text-sm text-zinc-600">{service.pricing.notes}</p>
+                                <p className="text-sm text-zinc-800">{service.pricing.notes}</p>
                             </div>
                         )}
                     </div>
@@ -151,7 +151,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
                         {service.tags.map((tag, i) => (
-                            <span key={i} className="px-3 py-1 bg-zinc-100 text-zinc-600 text-sm rounded-full">
+                            <span key={i} className="px-3 py-1 bg-zinc-100 text-zinc-800 text-sm rounded-full">
                                 {tag}
                             </span>
                         ))}
@@ -188,14 +188,14 @@ export default function ServicesContent() {
                     >
                         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/20 to-purple-500/20 border border-white/10 mb-8">
                             <Briefcase className="w-4 h-4 text-teal-500" />
-                            <span className="text-sm text-zinc-600">Services</span>
+                            <span className="text-sm text-zinc-800">Services</span>
                         </motion.div>
 
                         <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold mb-6 text-zinc-800">
                             サービス紹介
                         </motion.h1>
 
-                        <motion.p variants={itemVariants} className="text-xl text-zinc-600 max-w-2xl mx-auto leading-relaxed">
+                        <motion.p variants={itemVariants} className="text-xl text-zinc-800 max-w-2xl mx-auto leading-relaxed">
                             AI活用支援からパーソナルコーチングまで。<br />
                             あなたのビジネスと人生を、次のステージへ。
                         </motion.p>
@@ -214,11 +214,11 @@ export default function ServicesContent() {
                         {/* AI Services Category Header */}
                         <motion.div variants={itemVariants} className="col-span-full text-center mb-4 mt-8">
                             <h2 className="text-2xl md:text-3xl font-bold text-zinc-800 mb-2">AI活用支援サービス</h2>
-                            <p className="text-zinc-600">AIの力で業務を変革。無料診断からスタートできます。</p>
+                            <p className="text-zinc-800">AIの力で業務を変革。無料診断からスタートできます。</p>
                         </motion.div>
 
                         {/* Step-up Flow */}
-                        <motion.div variants={itemVariants} className="col-span-full flex flex-wrap justify-center items-center gap-2 text-sm text-zinc-500 mb-4">
+                        <motion.div variants={itemVariants} className="col-span-full flex flex-wrap justify-center items-center gap-2 text-sm text-zinc-700 mb-4">
                             <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full font-medium">無料診断</span>
                             <ArrowRight className="w-4 h-4" />
                             <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-medium">ワークショップ</span>
@@ -236,7 +236,7 @@ export default function ServicesContent() {
                         {/* Coaching Services Category Header */}
                         <motion.div variants={itemVariants} className="col-span-full text-center mb-4 mt-8">
                             <h2 className="text-2xl md:text-3xl font-bold text-zinc-800 mb-2">パーソナルコーチング</h2>
-                            <p className="text-zinc-600">人生と仕事の意思決定力を高める、1対1のセッション。</p>
+                            <p className="text-zinc-800">人生と仕事の意思決定力を高める、1対1のセッション。</p>
                         </motion.div>
 
                         {/* Coaching Service Cards */}
@@ -256,7 +256,7 @@ export default function ServicesContent() {
                     >
                         <motion.div variants={itemVariants} className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-zinc-800 mb-4">よくあるご質問</h2>
-                            <p className="text-zinc-600">サービスに関する疑問にお答えします</p>
+                            <p className="text-zinc-800">サービスに関する疑問にお答えします</p>
                         </motion.div>
 
                         <div className="space-y-4">
@@ -291,7 +291,7 @@ export default function ServicesContent() {
                                         <span className="text-teal-500 font-bold">Q.</span>
                                         {faq.q}
                                     </h3>
-                                    <p className="text-zinc-600 pl-7 leading-relaxed">
+                                    <p className="text-zinc-800 pl-7 leading-relaxed">
                                         <span className="text-purple-500 font-bold mr-2">A.</span>
                                         {faq.a}
                                     </p>
@@ -345,7 +345,7 @@ export default function ServicesContent() {
                 <footer className="w-full py-8 border-t border-zinc-200 bg-white">
                     <div className="max-w-6xl mx-auto px-4">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                            <div className="flex gap-6 text-zinc-600 text-sm">
+                            <div className="flex gap-6 text-zinc-800 text-sm">
                                 <Link href="/about" className="hover:text-teal-600 transition-colors">About</Link>
                                 <Link href="/philosophy" className="hover:text-teal-600 transition-colors">Philosophy</Link>
                                 <Link href="/sessions" className="hover:text-teal-600 transition-colors">Sessions</Link>
@@ -353,7 +353,7 @@ export default function ServicesContent() {
                                 <Link href="/privacy" className="hover:text-teal-600 transition-colors">プライバシーポリシー</Link>
                                 <Link href="/legal" className="hover:text-teal-600 transition-colors">特定商取引法に基づく表記</Link>
                             </div>
-                            <p className="text-zinc-500 text-sm">
+                            <p className="text-zinc-700 text-sm">
                                 © 2026 Takahiro Motoyama. All rights reserved.
                             </p>
                         </div>

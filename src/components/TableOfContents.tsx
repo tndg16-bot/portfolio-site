@@ -114,7 +114,7 @@ export function TableOfContents({ content, className }: TableOfContentsProps) {
                   'text-left w-full py-1 hover:text-teal-400 transition-colors',
                   activeId === heading.id
                     ? 'text-teal-400 font-medium'
-                    : 'text-zinc-400'
+                    : 'text-zinc-600'
                 )}
               >
                 {heading.text}

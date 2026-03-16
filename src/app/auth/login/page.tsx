@@ -92,7 +92,7 @@ export default function LoginPage() {
             </div>
           )}
 
-          <p className="mt-6 text-center text-sm text-zinc-600">
+          <p className="mt-6 text-center text-sm text-zinc-800">
             メールに記載されたリンクをクリックすると、ログインできます。
           </p>
         </div>

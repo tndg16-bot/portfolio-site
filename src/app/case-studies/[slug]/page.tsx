@@ -26,7 +26,7 @@ export default function CaseStudyPage({ params }: Props) {
             <main className="min-h-screen pt-24 pb-16">
                 {/* Article Header */}
                 <article className="max-w-4xl mx-auto px-4">
-                    <Link href="/case-studies" className="inline-flex items-center text-zinc-400 hover:bg-japan-indigo text-white mb-8 transition-colors">
+                    <Link href="/case-studies" className="inline-flex items-center text-zinc-700 hover:text-japan-indigo mb-8 transition-colors">
                         <ArrowLeft size={16} className="mr-2" /> 事例一覧に戻る
                     </Link>
 
@@ -35,7 +35,7 @@ export default function CaseStudyPage({ params }: Props) {
                             <span className="px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 font-medium">
                                 {study.client.industry}
                             </span>
-                            <span className="text-zinc-500">{study.date}</span>
+                            <span className="text-zinc-700">{study.date}</span>
                         </div>
                         <h1 className="text-3xl md:text-5xl font-bold bg-japan-indigo text-white mb-6 leading-tight">
                             {study.title}
@@ -49,7 +49,7 @@ export default function CaseStudyPage({ params }: Props) {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                         {study.stats && study.stats.map((stat, i) => (
                             <div key={i} className="glass-panel p-6 rounded-2xl border border-white/5 text-center">
-                                <div className="text-zinc-400 text-sm mb-1">{stat.key}</div>
+                                <div className="text-zinc-700 text-sm mb-1">{stat.key}</div>
                                 <div className="text-3xl font-bold bg-japan-indigo text-white mb-2">{stat.value}</div>
                                 <div className="text-teal-400 text-xs">{stat.description}</div>
                             </div>
@@ -106,7 +106,7 @@ export default function CaseStudyPage({ params }: Props) {
                                 </p>
                                 <footer className="text-right">
                                     <cite className="not-italic block font-bold bg-japan-indigo text-white">{study.testimonial.author}</cite>
-                                    <span className="text-sm text-zinc-400">{study.testimonial.role}</span>
+                                    <span className="text-sm text-zinc-700">{study.testimonial.role}</span>
                                 </footer>
                             </blockquote>
                         </section>

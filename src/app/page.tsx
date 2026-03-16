@@ -92,7 +92,7 @@ export default function Home() {
 
           <motion.p
             variants={itemVariants}
-            className="mb-10 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto text-zinc-600"
+            className="mb-10 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto text-zinc-800"
           >
             溢れる情報と「正解」の押し付けから、魂の呼吸を守り抜く。<br />
             深い静寂の中で研ぎ澄まされる直感と、最先端AIの力が、<br />
@@ -184,7 +184,7 @@ export default function Home() {
               内なる聖域。<br />
               <span className="text-japan-gradient font-light">Spiritual Resilience</span>
             </h2>
-            <p className="mb-8 text-zinc-600 leading-relaxed text-lg">
+            <p className="mb-8 text-zinc-800 leading-relaxed text-lg">
               外部の評価や「稼げるノウハウ」に依存するほど、人生の主導権は遠のきます。
               自身の過去を冷徹に再定義し、他者の期待に侵食されない「自己決定の核」を確立します。
             </p>
@@ -200,7 +200,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-japan-indigo">{item.title}</h4>
-                    <p className="text-sm text-zinc-500">{item.desc}</p>
+                    <p className="text-sm text-zinc-700">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -221,7 +221,7 @@ export default function Home() {
               創造の武器。<br />
               <span className="text-japan-gradient font-light">AI practical Wisdom</span>
             </h2>
-            <p className="mb-8 text-zinc-600 leading-relaxed text-lg">
+            <p className="mb-8 text-zinc-800 leading-relaxed text-lg">
               意志を社会へ実装するための「加速装置」としてのAI。
               単なる「使い方」ではなく、あなたの思想を自律的に拡張させる「デジタル分身」としてのAI設計を伝授します。
             </p>
@@ -237,7 +237,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-bold text-japan-indigo">{item.title}</h4>
-                    <p className="text-sm text-zinc-500">{item.desc}</p>
+                    <p className="text-sm text-zinc-700">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -272,7 +272,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="mb-12 text-zinc-600 text-lg md:text-xl font-light leading-relaxed"
+            className="mb-12 text-zinc-800 text-lg md:text-xl font-light leading-relaxed"
           >
             あなたの内なる静寂から紡がれる「問い」こそが、<br />
             AI時代における最強のコモディティ化への対抗手段となります。
@@ -289,7 +289,7 @@ export default function Home() {
               「人生の再定義」セッションを予約
               <ArrowRight className="h-6 w-6" />
             </a>
-            <p className="mt-6 text-sm text-zinc-500">※限定枠のため、審査制とさせていただいております。</p>
+            <p className="mt-6 text-sm text-zinc-700">※限定枠のため、審査制とさせていただいております。</p>
           </motion.div>
         </motion.div>
       </section>
@@ -321,7 +321,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
               <div className="text-center md:text-left">
                 <h3 className="text-xl font-bold text-japan-indigo mb-2">🎁 LINE登録で無料特典</h3>
-                <p className="text-zinc-600 text-sm">AI副業ロードマップPDF + 初回相談無料</p>
+                <p className="text-zinc-800 text-sm">AI副業ロードマップPDF + 初回相談無料</p>
               </div>
               <a
                 href="https://lin.ee/VAYurUv"
@@ -338,7 +338,7 @@ export default function Home() {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 text-zinc-600 font-medium text-sm">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 text-zinc-800 font-medium text-sm">
             <a href="/about" className="hover:text-japan-indigo transition-colors">About</a>
             <a href="/philosophy" className="hover:text-japan-indigo transition-colors">Philosophy</a>
             <a href="/sessions" className="hover:text-japan-indigo transition-colors">Sessions</a>
@@ -350,7 +350,7 @@ export default function Home() {
             <a href="/privacy" className="hover:text-japan-indigo transition-colors">プライバシーポリシー</a>
             <a href="/legal" className="hover:text-japan-indigo transition-colors">特定商取引法に基づく表記</a>
           </div>
-          <p className="text-zinc-500 text-sm tracking-widest uppercase">© 2026 Takahiro Motoyama. Designed for Self-Determination.</p>
+          <p className="text-zinc-700 text-sm tracking-widest uppercase">© 2026 Takahiro Motoyama. Designed for Self-Determination.</p>
         </div>
       </footer>
     </main>

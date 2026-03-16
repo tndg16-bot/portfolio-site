@@ -47,7 +47,7 @@ export default function WorksCollection() {
             <h2 className="text-3xl font-bold text-japan-indigo">
               開発したサービス
             </h2>
-            <p className="text-zinc-600 mt-1">
+            <p className="text-zinc-800 mt-1">
               実際に稼働中のプロダクトと実験的プロジェクト
             </p>
           </div>
@@ -98,7 +98,7 @@ export default function WorksCollection() {
               <h3 className="text-xl font-bold text-japan-indigo mb-2 group-hover:text-japan-indigo transition-colors">
                 {project.title}
               </h3>
-              <p className="text-zinc-600 mb-4 line-clamp-2">
+              <p className="text-zinc-800 mb-4 line-clamp-2">
                 {project.description}
               </p>
 
@@ -124,13 +124,13 @@ export default function WorksCollection() {
                 {project.techStack.slice(0, 4).map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs px-2 py-1 bg-zinc-100 text-zinc-600 rounded"
+                    className="text-xs px-2 py-1 bg-zinc-100 text-zinc-800 rounded"
                   >
                     {tech}
                   </span>
                 ))}
                 {project.techStack.length > 4 && (
-                  <span className="text-xs px-2 py-1 bg-zinc-100 text-zinc-600 rounded">
+                  <span className="text-xs px-2 py-1 bg-zinc-100 text-zinc-800 rounded">
                     +{project.techStack.length - 4}
                   </span>
                 )}
@@ -155,7 +155,7 @@ export default function WorksCollection() {
             <h2 className="text-3xl font-bold text-japan-indigo">
               作成したスキル・ツール
             </h2>
-            <p className="text-zinc-600 mt-1">
+            <p className="text-zinc-800 mt-1">
               開発効率化と自動化のための実用ツール
             </p>
           </div>
@@ -199,7 +199,7 @@ export default function WorksCollection() {
               <h3 className="text-lg font-bold text-japan-indigo mb-2 group-hover:text-japan-indigo transition-colors line-clamp-1">
                 {project.title}
               </h3>
-              <p className="text-sm text-zinc-600 mb-3 line-clamp-2">
+              <p className="text-sm text-zinc-800 mb-3 line-clamp-2">
                 {project.description}
               </p>
 
@@ -207,13 +207,13 @@ export default function WorksCollection() {
                 {project.techStack.slice(0, 3).map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs px-2 py-0.5 bg-zinc-100 text-zinc-600 rounded"
+                    className="text-xs px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded"
                   >
                     {tech}
                   </span>
                 ))}
                 {project.techStack.length > 3 && (
-                  <span className="text-xs px-2 py-0.5 bg-zinc-100 text-zinc-600 rounded">
+                  <span className="text-xs px-2 py-0.5 bg-zinc-100 text-zinc-800 rounded">
                     +{project.techStack.length - 3}
                   </span>
                 )}
@@ -231,7 +231,7 @@ export default function WorksCollection() {
                     {project.status === 'private' && (
                       <span className="w-2 h-2 rounded-full bg-zinc-500" />
                     )}
-                    <span className="text-xs text-zinc-500 capitalize">
+                    <span className="text-xs text-zinc-700 capitalize">
                       {project.status === 'live' && 'Live'}
                       {project.status === 'development' && '開発中'}
                       {project.status === 'private' && 'プライベート'}
@@ -269,7 +269,7 @@ export default function WorksCollection() {
             <h2 className="text-3xl font-bold text-japan-indigo">
               学習教材・コース
             </h2>
-            <p className="text-zinc-600 mt-1">
+            <p className="text-zinc-800 mt-1">
               知識を体系的に学べる教育コンテンツ
             </p>
           </div>
@@ -350,7 +350,7 @@ export default function WorksCollection() {
         <h3 className="text-2xl font-bold text-japan-indigo mb-4">
           プロジェクトをもっと詳しく見る
         </h3>
-        <p className="text-zinc-600 mb-6 max-w-2xl mx-auto">
+        <p className="text-zinc-800 mb-6 max-w-2xl mx-auto">
           すべてのプロジェクトの詳細、技術スタック、開発ストーリーを確認できます
         </p>
         <Link

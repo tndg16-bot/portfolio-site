@@ -111,7 +111,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     <h2 className="text-3xl font-bold text-japan-indigo mb-4">
                         送信に失敗しました
                     </h2>
-                    <p className="text-zinc-600 max-w-md mx-auto mb-8">
+                    <p className="text-zinc-800 max-w-md mx-auto mb-8">
                         お手数ですが、もう一度お試しください。<br />
                         問題が続く場合はSNSでご連絡ください。
                     </p>
@@ -140,7 +140,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     <h2 className="text-3xl font-bold text-japan-indigo mb-4">
                         送信完了しました
                     </h2>
-                    <p className="text-zinc-600 max-w-md mx-auto">
+                    <p className="text-zinc-800 max-w-md mx-auto">
                         3営業日以内にご連絡いたします。<br />
                         お問い合わせいただきありがとうございます。
                     </p>
@@ -172,7 +172,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     <h2 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4">
                         無料相談・セッション予約
                     </h2>
-                    <p className="text-zinc-600 max-w-xl mx-auto">
+                    <p className="text-zinc-800 max-w-xl mx-auto">
                         AI活用支援からコーチングまで、お気軽にお申し込みください。
                     </p>
                 </div>
@@ -324,7 +324,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                         {/* Date 2 */}
                         <div className="space-y-2">
                             <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
-                                <Calendar size={16} className="text-zinc-400" />
+                                <Calendar size={16} className="text-zinc-600" />
                                 希望日時（第2希望）
                             </label>
                             <div className="grid grid-cols-2 gap-3">
@@ -381,7 +381,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     {/* Row 6: Additional Message */}
                     <div className="space-y-2">
                         <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
-                            <MessageSquare size={16} className="text-zinc-400" />
+                            <MessageSquare size={16} className="text-zinc-600" />
                             その他ご質問・メッセージ
                         </label>
                         <textarea
@@ -416,7 +416,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     </motion.button>
 
                     {/* Note */}
-                    <p className="text-center text-sm text-zinc-500">
+                    <p className="text-center text-sm text-zinc-700">
                         ※ 3営業日以内にご連絡いたします
                     </p>
                 </form>

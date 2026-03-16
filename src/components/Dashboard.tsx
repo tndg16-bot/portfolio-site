@@ -153,16 +153,16 @@ export default function Dashboard() {
                             </div>
                         )}
                         {!error && dataSource && (
-                            <div className="mt-2 flex items-center gap-2 text-xs text-zinc-500">
+                            <div className="mt-2 flex items-center gap-2 text-xs text-zinc-700">
                                 <span>📡 データソース: {dataSource === "github-issues" ? "GitHub Issues" : dataSource}</span>
                             </div>
                         )}
                     </div>
                     <div className="flex flex-col items-end gap-1">
-                        <span className="text-sm text-zinc-500" suppressHydrationWarning>
+                        <span className="text-sm text-zinc-700" suppressHydrationWarning>
                             最終更新: {lastUpdated ? new Date(lastUpdated).toLocaleString("ja-JP") : "-"}
                         </span>
-                        <span className="text-xs text-zinc-400">1分ごとに自動更新</span>
+                        <span className="text-xs text-zinc-600">1分ごとに自動更新</span>
                     </div>
                 </div>
 
@@ -170,19 +170,19 @@ export default function Dashboard() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                     <div className="glass-panel rounded-2xl p-4 text-center bg-white/60">
                         <div className="text-3xl font-bold text-japan-indigo">{stats.total}</div>
-                        <div className="text-sm text-zinc-500">合計</div>
+                        <div className="text-sm text-zinc-700">合計</div>
                     </div>
                     <div className="glass-panel rounded-2xl p-4 text-center bg-white/60">
                         <div className="text-3xl font-bold text-amber-500">{stats.inProgress}</div>
-                        <div className="text-sm text-zinc-500">進行中</div>
+                        <div className="text-sm text-zinc-700">進行中</div>
                     </div>
                     <div className="glass-panel rounded-2xl p-4 text-center bg-white/60">
                         <div className="text-3xl font-bold text-emerald-600">{stats.completed}</div>
-                        <div className="text-sm text-zinc-500">完了</div>
+                        <div className="text-sm text-zinc-700">完了</div>
                     </div>
                     <div className="glass-panel rounded-2xl p-4 text-center bg-white/60">
-                        <div className="text-3xl font-bold text-zinc-500">{stats.notStarted}</div>
-                        <div className="text-sm text-zinc-500">未着手</div>
+                        <div className="text-3xl font-bold text-zinc-700">{stats.notStarted}</div>
+                        <div className="text-sm text-zinc-700">未着手</div>
                     </div>
                 </div>
 
@@ -209,12 +209,12 @@ export default function Dashboard() {
                                             {project.name}
                                         </div>
                                         {project.repoName && (
-                                            <div className="text-xs text-zinc-500 truncate">
+                                            <div className="text-xs text-zinc-700 truncate">
                                                 <span className="text-japan-indigo/70 font-medium">{project.repoName}</span>
                                             </div>
                                         )}
                                         {project.description && (
-                                            <div className="text-xs text-zinc-500 truncate">
+                                            <div className="text-xs text-zinc-700 truncate">
                                                 {project.description}
                                             </div>
                                         )}
@@ -230,7 +230,7 @@ export default function Dashboard() {
                                     <div className="flex flex-col items-end gap-1">
                                         <span className={`text-xs px-2 py-1 rounded-full ${project.status === "completed" ? "bg-emerald-100 text-emerald-700" :
                                             project.status === "in_progress" ? "bg-amber-100 text-amber-700" :
-                                                "bg-zinc-100 text-zinc-500"
+                                                "bg-zinc-100 text-zinc-700"
                                             }`}>
                                             {getStatusLabel(project.status)}
                                         </span>
@@ -261,7 +261,7 @@ export default function Dashboard() {
                                             {getActivityIcon(activity.type)}
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <div className="text-xs text-zinc-500 mb-1">
+                                            <div className="text-xs text-zinc-700 mb-1">
                                                 {activity.date}
                                                 {activity.repoName && <span className="ml-2 text-japan-indigo/70">· {activity.repoName}</span>}
                                             </div>
@@ -270,7 +270,7 @@ export default function Dashboard() {
                                     </motion.div>
                                 ))
                             ) : (
-                                <div className="text-center text-zinc-500 py-8">
+                                <div className="text-center text-zinc-700 py-8">
                                     最近の活動がありません
                                 </div>
                             )}
