@@ -19,38 +19,35 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     outputs:
-      skip: ${{ steps.publish.outputs.skip }}
-      filename: ${{ steps.publish.outputs.filename }}
-    
+      skip: ${{ steps.publish.outputs.skip || steps.rewrite-publish.outputs.skip }}
+      filename: ${{ steps.publish.outputs.filename || steps.rewrite-publish.outputs.filename }}
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-    
+
     - name: Find next article to publish
       id: find-article
       run: |
         # 現在の日付から何日目かを計算（リニューアル後: 2026-03-17から）
         START_DATE="2026-03-17"
-        MAX_ARTICLES=115
         TODAY=$(date +%Y-%m-%d)
-        
+
         # 日付差分を計算
         if [ "$(uname)" = "Darwin" ]; then
-          # macOS
           START_SEC=$(date -j -f "%Y-%m-%d" "$START_DATE" +%s)
           TODAY_SEC=$(date -j -f "%Y-%m-%d" "$TODAY" +%s)
         else
-          # Linux
           START_SEC=$(date -d "$START_DATE" +%s)
           TODAY_SEC=$(date -d "$TODAY" +%s)
         fi
-        
+
         DAYS_DIFF=$(( (TODAY_SEC - START_SEC) / 86400 ))
-        
+
         # 入力がある場合はそれを使用、なければ自動計算
         if [ -n "${{ github.event.inputs.article_number }}" ]; then
           NEXT_NUM=$(printf "%03d" ${{ github.event.inputs.article_number }})
@@ -58,66 +55,100 @@ jobs:
           NEXT_NUM=$(printf "%03d" $((DAYS_DIFF + 1)))
         fi
 
-        # 最大記事数を超えたらスキップ
-        NUM_INT=$((10#$NEXT_NUM))
-        if [ "$NUM_INT" -gt "$MAX_ARTICLES" ]; then
-          echo "All $MAX_ARTICLES articles have been published. Skipping."
+        # 記事ファイルが存在するかチェック
+        FILE=$(ls content/blog/${NEXT_NUM}-*.md 2>/dev/null | head -1 || echo "")
+
+        if [ -n "$FILE" ]; then
+          echo "mode=publish" >> $GITHUB_OUTPUT
+          echo "filepath=$FILE" >> $GITHUB_OUTPUT
           echo "next_number=$NEXT_NUM" >> $GITHUB_OUTPUT
-          echo "exceeded=true" >> $GITHUB_OUTPUT
-          exit 0
+          echo "Found existing article: $FILE"
+        else
+          echo "mode=rewrite" >> $GITHUB_OUTPUT
+          echo "next_number=$NEXT_NUM" >> $GITHUB_OUTPUT
+          echo "No article $NEXT_NUM found. Will rewrite from archive."
         fi
 
-        echo "exceeded=false" >> $GITHUB_OUTPUT
-        echo "next_number=$NEXT_NUM" >> $GITHUB_OUTPUT
         echo "Start date: $START_DATE"
         echo "Today: $TODAY"
         echo "Days diff: $DAYS_DIFF"
         echo "Next article: $NEXT_NUM"
-    
-    - name: Check if article exists
-      if: steps.find-article.outputs.exceeded != 'true'
-      id: check-file
-      run: |
-        NEXT_NUM="${{ steps.find-article.outputs.next_number }}"
-        FILE=$(ls content/blog/${NEXT_NUM}-*.md 2>/dev/null | head -1 || echo "")
-        
-        if [ -z "$FILE" ]; then
-          echo "Article $NEXT_NUM not found"
-          echo "exists=false" >> $GITHUB_OUTPUT
-        else
-          echo "Found: $FILE"
-          echo "exists=true" >> $GITHUB_OUTPUT
-          echo "filepath=$FILE" >> $GITHUB_OUTPUT
-        fi
-    
+
+    # --- Mode A: 既存記事の公開 ---
     - name: Update article date
       id: publish
-      if: steps.check-file.outputs.exists == 'true'
+      if: steps.find-article.outputs.mode == 'publish'
       run: |
-        FILE="${{ steps.check-file.outputs.filepath }}"
+        FILE="${{ steps.find-article.outputs.filepath }}"
         TODAY=$(date +%Y-%m-%d)
         FILENAME=$(basename "$FILE")
-        
+
         echo "Publishing: $FILENAME"
         echo "Setting date to: $TODAY"
-        
-        # 日付を更新（YAML frontmatterのdateフィールド）
+
         sed -i "s/^date: .*/date: '$TODAY'/" "$FILE"
-        
+
         echo "filename=$FILENAME" >> $GITHUB_OUTPUT
         echo "skip=false" >> $GITHUB_OUTPUT
-    
+
+    # --- Mode B: アーカイブ記事をAIリライトして公開 ---
+    - name: Setup Node.js for rewrite
+      if: steps.find-article.outputs.mode == 'rewrite'
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install dependencies for rewrite
+      if: steps.find-article.outputs.mode == 'rewrite'
+      run: npm ci
+
+    - name: Rewrite archive article with AI
+      id: rewrite
+      if: steps.find-article.outputs.mode == 'rewrite'
+      env:
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        echo "Rewriting archive article..."
+        OUTPUT=$(node scripts/rewrite-archive-article.mjs 2>&1)
+        echo "$OUTPUT"
+
+        # 新ファイル名を抽出
+        NEW_FILE=$(echo "$OUTPUT" | grep "^Written:" | sed 's/Written: //')
+
+        if [ -z "$NEW_FILE" ]; then
+          echo "Failed to rewrite article"
+          echo "skip=true" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+
+        echo "new_file=$NEW_FILE" >> $GITHUB_OUTPUT
+
+    - name: Publish rewritten article
+      id: rewrite-publish
+      if: steps.find-article.outputs.mode == 'rewrite' && steps.rewrite.outputs.new_file != ''
+      run: |
+        NEW_FILE="${{ steps.rewrite.outputs.new_file }}"
+        echo "Publishing rewritten article: $NEW_FILE"
+        echo "filename=$NEW_FILE" >> $GITHUB_OUTPUT
+        echo "skip=false" >> $GITHUB_OUTPUT
+
+    # --- 共通: コミット＆プッシュ ---
     - name: Commit and push
-      if: steps.publish.outputs.skip == 'false'
+      if: steps.publish.outputs.skip == 'false' || steps.rewrite-publish.outputs.skip == 'false'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add content/blog/
         if git diff --staged --quiet; then
           echo "No changes to commit"
-          echo "skip=true" >> $GITHUB_OUTPUT
         else
-          git commit -m "📰 Publish article: ${{ steps.publish.outputs.filename }} [$TODAY]"
+          FILENAME="${{ steps.publish.outputs.filename || steps.rewrite-publish.outputs.filename }}"
+          TODAY=$(date +%Y-%m-%d)
+          if [ "${{ steps.find-article.outputs.mode }}" = "rewrite" ]; then
+            git commit -m "🤖 Rewrite & publish: ${FILENAME} [${TODAY}]"
+          else
+            git commit -m "📰 Publish article: ${FILENAME} [${TODAY}]"
+          fi
           git push
         fi
 
@@ -125,31 +156,31 @@ jobs:
     needs: post-article
     if: needs.post-article.outputs.skip == 'false'
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20'
-    
+
     - name: Install dependencies
       run: npm ci
-    
+
     - name: Install Vercel CLI
       run: npm install --global vercel@latest
-    
+
     - name: Pull Vercel Environment
       run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-    
+
     - name: Build Project
       run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-    
+
     - name: Deploy to Vercel
       run: vercel deploy --prebuilt --prod --archive=tgz --token=${{ secrets.VERCEL_TOKEN }}
-    
+
     - name: Success notification
       run: |
         echo "✅ Article published and deployed!"
