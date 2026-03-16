@@ -68,6 +68,9 @@ export interface PostData {
   category?: string;
   tags?: string[];
   readingTime?: number;
+  series?: string;
+  seriesOrder?: number;
+  relatedArticles?: string[];
 }
 
 export interface PostContent extends PostData {
@@ -95,8 +98,8 @@ export function calculateReadingTime(content: string): number {
 }
 
 export function getSortedPostsData(): PostData[] {
-  // Get file names under /content/blog
-  const fileNames = fs.readdirSync(postsDirectory);
+  // Get file names under /content/blog (only .md files, skip directories)
+  const fileNames = fs.readdirSync(postsDirectory).filter(f => f.endsWith('.md'));
   const allPostsData = fileNames.map((fileName) => {
     // Read markdown file as string
     const fullPath = path.join(postsDirectory, fileName);
@@ -112,6 +115,9 @@ export function getSortedPostsData(): PostData[] {
       tags?: string[];
       published?: boolean;
       slug?: string;
+      series?: string;
+      seriesOrder?: number;
+      relatedArticles?: string[];
     };
 
     // Skip unpublished posts
@@ -142,6 +148,9 @@ export function getSortedPostsData(): PostData[] {
       date: data.date,
       title: data.title,
       description: data.description,
+      series: data.series,
+      seriesOrder: data.seriesOrder,
+      relatedArticles: data.relatedArticles,
     };
   });
 
@@ -218,7 +227,7 @@ export function getCategoryCounts(): Map<string, number> {
 
 
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(postsDirectory).filter(f => f.endsWith('.md'));
   return fileNames.map((fileName) => {
     const fullPath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -258,7 +267,7 @@ export function getAllCategorySlugs() {
 
 export async function getPostData(slug: string): Promise<PostContent> {
   // Find the file that matches the slug
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = fs.readdirSync(postsDirectory).filter(f => f.endsWith('.md'));
   let targetFileName = '';
 
   for (const fileName of fileNames) {
@@ -308,6 +317,9 @@ export async function getPostData(slug: string): Promise<PostContent> {
     category?: string;
     tags?: string[];
     slug?: string;
+    series?: string;
+    seriesOrder?: number;
+    relatedArticles?: string[];
   };
   let description = data.description;
 
@@ -339,7 +351,28 @@ export async function getPostData(slug: string): Promise<PostContent> {
     tags: data.tags,
     date: data.date,
     title: data.title,
+    series: data.series,
+    seriesOrder: data.seriesOrder,
+    relatedArticles: data.relatedArticles,
   };
+}
+
+// Get posts in the same series, sorted by seriesOrder
+export function getPostsBySeries(seriesName: string): PostData[] {
+  const allPosts = getSortedPostsData();
+  return allPosts
+    .filter(post => post.series === seriesName)
+    .sort((a, b) => (a.seriesOrder || 0) - (b.seriesOrder || 0));
+}
+
+// Get all unique series names
+export function getAllSeries(): string[] {
+  const posts = getSortedPostsData();
+  const seriesSet = new Set<string>();
+  posts.forEach(post => {
+    if (post.series) seriesSet.add(post.series);
+  });
+  return Array.from(seriesSet).sort();
 }
 
 // Get related posts based on tags and category
