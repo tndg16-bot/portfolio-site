@@ -6,22 +6,6 @@ import { SessionService } from '@/types/services';
  */
 export const services: SessionService[] = [
   {
-    id: 'ai-diagnosis',
-    title: '無料AI活用診断',
-    titleEn: 'Free AI Consultation',
-    description: '30分で、あなたの業務のAI活用可能性を診断します。その場でAIデモを実演し、「AIって本当に使えるんだ」を体験していただきます。',
-    duration: '30分',
-    durationMinutes: 30,
-    pricing: { type: 'fixed', price: '無料', notes: '月10件限定。まずはお気軽にお申し込みください。' },
-    features: ['業務フロー簡易ヒアリング', 'AI活用可能ポイントの特定（3つまで）', 'その場でAIデモ実演', 'AI活用診断レポート（簡易版）', 'Zoom or 対面対応'],
-    idealFor: ['AIに興味はあるが何から始めるか分からない経営者', 'ChatGPTを使ってみたが活用しきれていない方', 'IT担当者がいない中小企業', 'AI導入コストを抑えたい個人事業主'],
-    notIdealFor: ['大規模なシステム開発を求めている方', '既にAI活用が進んでいる企業'],
-    format: 'online',
-    frequency: 'one-time',
-    popular: true,
-    tags: ['AI活用', '無料', '診断', '中小企業']
-  },
-  {
     id: 'ai-workshop',
     title: 'AI導入ワークショップ',
     titleEn: 'AI Workshop',
@@ -35,7 +19,8 @@ export const services: SessionService[] = [
     format: 'hybrid',
     frequency: 'one-time',
     popular: true,
-    tags: ['AI活用', 'ワークショップ', 'ハンズオン', '研修']
+    tags: ['AI活用', 'ワークショップ', 'ハンズオン', '研修'],
+    category: 'both'
   },
   {
     id: 'ai-consulting',
@@ -51,7 +36,8 @@ export const services: SessionService[] = [
     format: 'online',
     frequency: 'series',
     popular: false,
-    tags: ['AI活用', 'コンサルティング', '業務自動化', '法人向け']
+    tags: ['AI活用', 'コンサルティング', '業務自動化', '法人向け'],
+    category: 'business'
   },
   {
     id: 'ai-support',
@@ -67,7 +53,8 @@ export const services: SessionService[] = [
     format: 'online',
     frequency: 'ongoing',
     popular: false,
-    tags: ['AI活用', '月額', '継続', 'サポート']
+    tags: ['AI活用', '月額', '継続', 'サポート'],
+    category: 'business'
   },
   {
     id: 'single-session',
@@ -104,7 +91,8 @@ export const services: SessionService[] = [
     format: 'online',
     frequency: 'one-time',
     popular: true,
-    tags: ['コーチング', 'キャリア', '自己理解', '意思決定']
+    tags: ['コーチング', 'キャリア', '自己理解', '意思決定'],
+    category: 'individual'
   },
   {
     id: 'compass-program',
@@ -142,7 +130,8 @@ export const services: SessionService[] = [
     format: 'online',
     frequency: 'series',
     popular: true,
-    tags: ['長期プログラム', '副業', 'キャリアチェンジ', 'コーチング']
+    tags: ['長期プログラム', '副業', 'キャリアチェンジ', 'コーチング'],
+    category: 'individual'
   },
   {
     id: 'corporate-workshop',
@@ -181,7 +170,42 @@ export const services: SessionService[] = [
     format: 'online',
     frequency: 'one-time',
     popular: false,
-    tags: ['法人向け', 'チームビルディング', 'リーダーシップ', '意思決定']
+    tags: ['法人向け', 'チームビルディング', 'リーダーシップ', '意思決定'],
+    category: 'business'
+  },
+  {
+    id: 'ai-promotion',
+    title: 'AI推進支援（全社展開）',
+    titleEn: 'Enterprise AI Promotion',
+    description: '全社的なAI活用を段階的に推進するプログラム。Phase 0（現状診断）からPhase 3（自走化）まで、御社のペースに合わせて伴走します。',
+    duration: '6ヶ月〜',
+    durationMinutes: 60,
+    pricing: { type: 'fixed', price: 'お問い合わせください', notes: '企業規模・カスタマイズ内容により変動' },
+    features: ['現状診断・AI活用度アセスメント', '全社AI活用ロードマップ策定', '部門別AI活用戦略', '研修プログラム設計・実施', '定着支援・効果測定'],
+    idealFor: ['全社的にAI活用を推進したい企業', 'AI導入が部分的で全社展開できていない企業', 'DX推進担当者がAI戦略に悩んでいる企業'],
+    notIdealFor: ['個人での利用', '特定ツール1つだけ導入したい場合'],
+    format: 'hybrid',
+    frequency: 'series',
+    popular: false,
+    tags: ['法人向け', 'AI推進', '全社展開', 'DX'],
+    category: 'business'
+  },
+  {
+    id: 'ai-development',
+    title: 'AI開発',
+    titleEn: 'Custom AI Development',
+    description: 'オリジナルGPTs、Claude Codeスキル、業務特化チャットボットなど、御社専用のAIプロダクトを開発します。',
+    duration: '要相談',
+    durationMinutes: 60,
+    pricing: { type: 'fixed', price: 'お問い合わせください', notes: '開発内容・規模により変動。まずは無料相談でヒアリングします。' },
+    features: ['オリジナルGPTs作成', 'Claude Codeスキル開発', '業務特化チャットボット構築', 'API連携・ワークフロー自動化', '運用サポート・改善提案'],
+    idealFor: ['既存ツールでは対応できない業務課題がある企業', '社内ナレッジを活用したAIを作りたい企業', 'AI活用をさらに高度化したい企業'],
+    notIdealFor: ['AIの基礎を学びたい方（ワークショップをおすすめ）', '大規模基幹システムの開発'],
+    format: 'online',
+    frequency: 'one-time',
+    popular: false,
+    tags: ['法人向け', 'AI開発', 'GPTs', 'チャットボット'],
+    category: 'business'
   }
 ];
 
