@@ -11,18 +11,22 @@ import CookieConsent from '@/components/CookieConsent';
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const notoJP = Noto_Sans_JP({
   variable: "--font-noto-jp",
   subsets: ["latin"],
   weight: ["400", "700"],
+  display: "swap",
 });
 
 const notoSerifJP = Noto_Serif_JP({
   variable: "--font-noto-serif",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["600", "700"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
