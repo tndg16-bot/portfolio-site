@@ -1,10 +1,9 @@
 name: Daily Blog Post & Rebuild
 
 on:
-  # schedule:
-  #   # 毎日午前9時（JST）に実行 - UTC 00:00
-  #   - cron: '0 0 * * *'
-  #   # ⚠️ ブログリニューアル中のため一時停止（2026-03-17〜）
+  schedule:
+    # 毎日午前9時（JST）に実行 - UTC 00:00
+    - cron: '0 0 * * *'
   workflow_dispatch:
     inputs:
       article_number:
@@ -34,8 +33,9 @@ jobs:
     - name: Find next article to publish
       id: find-article
       run: |
-        # 現在の日付から何日目かを計算（2026-01-01から）
-        START_DATE="2026-01-01"
+        # 現在の日付から何日目かを計算（リニューアル後: 2026-03-17から）
+        START_DATE="2026-03-17"
+        MAX_ARTICLES=115
         TODAY=$(date +%Y-%m-%d)
         
         # 日付差分を計算
@@ -57,7 +57,17 @@ jobs:
         else
           NEXT_NUM=$(printf "%03d" $((DAYS_DIFF + 1)))
         fi
-        
+
+        # 最大記事数を超えたらスキップ
+        NUM_INT=$((10#$NEXT_NUM))
+        if [ "$NUM_INT" -gt "$MAX_ARTICLES" ]; then
+          echo "All $MAX_ARTICLES articles have been published. Skipping."
+          echo "next_number=$NEXT_NUM" >> $GITHUB_OUTPUT
+          echo "exceeded=true" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+
+        echo "exceeded=false" >> $GITHUB_OUTPUT
         echo "next_number=$NEXT_NUM" >> $GITHUB_OUTPUT
         echo "Start date: $START_DATE"
         echo "Today: $TODAY"
@@ -65,6 +75,7 @@ jobs:
         echo "Next article: $NEXT_NUM"
     
     - name: Check if article exists
+      if: steps.find-article.outputs.exceeded != 'true'
       id: check-file
       run: |
         NEXT_NUM="${{ steps.find-article.outputs.next_number }}"
