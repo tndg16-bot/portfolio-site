@@ -5,6 +5,7 @@ import { Mail, MessageCircle, Linkedin, Calendar, MapPin, Clock, ArrowRight, Sen
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
+import Breadcrumb from '@/components/Breadcrumb';
 
 const BookingForm = dynamic(() => import('@/components/BookingForm'), {
     loading: () => <div className="flex items-center justify-center min-h-[400px]">
@@ -92,6 +93,7 @@ export default function ContactContent() {
         <>
             <Header />
             <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20">
+                <Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: 'お問い合わせ' }]} />
                 {/* Hero Section */}
                 <section className="relative w-full py-24 px-4">
                     <div className="absolute inset-0 bg-japan-cream" />
@@ -101,7 +103,7 @@ export default function ContactContent() {
                         variants={containerVariants}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/10 border border-japan-indigo/10 mb-8">
+                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/15 border border-japan-indigo/20 mb-8">
                             <Send className="w-4 h-4 text-japan-indigo" />
                             <span className="text-sm text-zinc-800">お問い合わせはこちら</span>
                         </motion.div>

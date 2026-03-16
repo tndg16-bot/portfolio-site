@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import { CheckCircle2, ArrowRight, Clock, Star, Calendar, Lock, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
 import { getAllServices } from "@/data/services";
 import { SessionService } from "@/types/services";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -201,6 +202,7 @@ export default function ServicesContent() {
         <>
             <Header />
             <main className="flex min-h-screen flex-col items-center overflow-x-hidden bg-gradient-to-b from-zinc-50 to-zinc-100 pt-20 pb-24">
+                <Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: 'サービス' }]} />
                 {/* Hero Section */}
                 <section className="w-full max-w-4xl px-4 py-16">
                     <motion.div
@@ -256,11 +258,11 @@ export default function ServicesContent() {
                 {/* Step-up Flow */}
                 <section className="w-full max-w-4xl px-4 mb-8">
                     <div className="flex flex-wrap justify-center items-center gap-2 text-sm text-zinc-700">
-                        <span className="px-3 py-1 bg-japan-indigo/10 text-japan-indigo rounded-full font-medium">ワークショップ</span>
+                        <span className="px-3 py-1 bg-japan-indigo/15 text-japan-indigo rounded-full font-medium">ワークショップ</span>
                         <ArrowRight className="w-4 h-4" />
-                        <span className="px-3 py-1 bg-japan-indigo/10 text-japan-indigo rounded-full font-medium">3ヶ月コンサル</span>
+                        <span className="px-3 py-1 bg-japan-indigo/15 text-japan-indigo rounded-full font-medium">3ヶ月コンサル</span>
                         <ArrowRight className="w-4 h-4" />
-                        <span className="px-3 py-1 bg-japan-indigo/10 text-japan-indigo rounded-full font-medium">継続サポート</span>
+                        <span className="px-3 py-1 bg-japan-indigo/15 text-japan-indigo rounded-full font-medium">継続サポート</span>
                         <ArrowRight className="w-4 h-4" />
                         <span className="px-3 py-1 bg-japan-gold/10 text-japan-charcoal rounded-full font-medium">AI推進（全社）</span>
                     </div>

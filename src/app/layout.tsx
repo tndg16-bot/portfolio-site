@@ -6,6 +6,7 @@ import { PersonJsonLd, OrganizationJsonLd, WebsiteJsonLd } from "@/components/Js
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import CookieConsent from '@/components/CookieConsent';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -109,6 +110,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
+        <CookieConsent />
       </body>
     </html>
   );

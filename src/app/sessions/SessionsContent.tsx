@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion";
 import { CheckCircle2, ArrowRight, Clock, Video, MessageCircle, ShieldCheck, HelpCircle, CalendarDays, User, Briefcase } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
 import Link from "next/link";
 import TopInfoBanner from "@/components/TopInfoBanner";
 
@@ -68,6 +69,7 @@ export default function SessionsContent() {
         <>
             <Header />
             <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-24 pb-16">
+                <Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: 'セッション予約' }]} />
                 <TopInfoBanner
                     title="お知らせ"
                     message="現在、セッション枠を少数限定でご案内しています。ご希望日時がある場合は、フォーム内の備考欄にご記入ください。"
@@ -82,7 +84,7 @@ export default function SessionsContent() {
                         className="text-center"
                     >
                         <motion.div variants={itemVariants} className="mb-4 flex justify-center">
-                            <span className="inline-block rounded-full bg-japan-indigo/10 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/20">
+                            <span className="inline-block rounded-full bg-japan-indigo/15 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/25">
                                 Life Self-Determination Session
                             </span>
                         </motion.div>
