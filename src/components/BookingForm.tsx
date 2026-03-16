@@ -189,7 +189,9 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                             <input
                                 type="text"
                                 name="name"
+                                id="booking-name"
                                 required
+                                aria-label="お名前"
                                 value={formData.name}
                                 onChange={handleChange}
                                 placeholder="山田 太郎"
@@ -204,7 +206,9 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                             <input
                                 type="email"
                                 name="email"
+                                id="booking-email"
                                 required
+                                aria-label="メールアドレス"
                                 value={formData.email}
                                 onChange={handleChange}
                                 placeholder="example@email.com"
@@ -222,7 +226,9 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                         <input
                             type="text"
                             name="occupation"
+                            id="booking-occupation"
                             required
+                            aria-label="現在のお仕事・活動"
                             value={formData.occupation}
                             onChange={handleChange}
                             placeholder="例: フリーランスエンジニア、会社員、起業準備中"
@@ -238,6 +244,8 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                         </label>
                         <textarea
                             name="goal"
+                            id="booking-goal"
+                            aria-label="セッションで解決したいこと"
                             value={formData.goal}
                             onChange={handleChange}
                             rows={3}
@@ -254,6 +262,8 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                         </label>
                         <textarea
                             name="motivation"
+                            id="booking-motivation"
+                            aria-label="なぜこのセッションに興味を持ちましたか？"
                             value={formData.motivation}
                             onChange={handleChange}
                             rows={2}
@@ -274,6 +284,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                 <input
                                     type="date"
                                     name="preferredDate1Date"
+                                    aria-label="希望日時（第1希望）日付"
                                     required
                                     value={formData.preferredDate1.split('T')[0] || ''}
                                     onChange={(e) => {
@@ -284,6 +295,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                 />
                                 <select
                                     name="preferredDate1Time"
+                                    aria-label="希望日時（第1希望）時刻"
                                     required
                                     value={formData.preferredDate1.split('T')[1] || '13:00'}
                                     onChange={(e) => {
@@ -331,6 +343,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                 <input
                                     type="date"
                                     name="preferredDate2Date"
+                                    aria-label="希望日時（第2希望）日付"
                                     value={formData.preferredDate2.split('T')[0] || ''}
                                     onChange={(e) => {
                                         const time = formData.preferredDate2.split('T')[1] || '13:00';
@@ -340,6 +353,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                 />
                                 <select
                                     name="preferredDate2Time"
+                                    aria-label="希望日時（第2希望）時刻"
                                     value={formData.preferredDate2.split('T')[1] || '13:00'}
                                     onChange={(e) => {
                                         const date = formData.preferredDate2.split('T')[0] || '';
@@ -386,6 +400,8 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                         </label>
                         <textarea
                             name="message"
+                            id="booking-message"
+                            aria-label="その他ご質問・メッセージ"
                             value={formData.message}
                             onChange={handleChange}
                             rows={2}

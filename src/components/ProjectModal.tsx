@@ -47,12 +47,17 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
                         className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none"
                     >
-                        <div className="w-full max-w-2xl bg-white border border-japan-indigo/10 rounded-3xl p-6 shadow-2xl pointer-events-auto max-h-[85vh] overflow-y-auto scrollbar-custom">
+                        <div
+                            role="dialog"
+                            aria-modal="true"
+                            aria-labelledby="project-modal-title"
+                            className="w-full max-w-2xl bg-white border border-japan-indigo/10 rounded-3xl p-6 shadow-2xl pointer-events-auto max-h-[85vh] overflow-y-auto scrollbar-custom"
+                        >
 
                             {/* Header */}
                             <div className="flex justify-between items-start mb-6">
                                 <div>
-                                    <h2 className="text-2xl font-bold text-japan-indigo mb-2">{project.name}</h2>
+                                    <h2 id="project-modal-title" className="text-2xl font-bold text-japan-indigo mb-2">{project.name}</h2>
                                     <div className="flex items-center gap-3 text-sm">
                                         <span className={`px-3 py-1 rounded-full border ${project.status === 'completed'
                                                 ? 'bg-emerald-100 border-emerald-300 text-emerald-700'
@@ -72,6 +77,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                                 </div>
                                 <button
                                     onClick={onClose}
+                                    aria-label="閉じる"
                                     className="p-2 hover:bg-zinc-100 rounded-full transition-colors text-zinc-600 hover:text-japan-indigo"
                                 >
                                     <X size={24} />
