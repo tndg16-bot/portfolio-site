@@ -13,12 +13,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'your-portfolio-url.vercel.app',
+        hostname: 'takahiro-motoyama.vercel.app',
         pathname: '/images/**',
       },
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: '*.supabase.co',
       },
     ],
     // Minimum cache TTL (TTL) in seconds
@@ -30,7 +30,7 @@ const nextConfig: NextConfig = {
     // Turbopack for faster builds (already enabled by default in Next.js 16)
   },
   // Development settings
-  allowedDevOrigins: ['*'],
+  allowedDevOrigins: ['localhost:3000'],
   // Production optimizations
   compress: true,
   poweredByHeader: false,
