@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Sparkles, Users, Briefcase, Code, User } from "lucide-react";
+import { ArrowRight, User } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import Link from 'next/link';
@@ -60,11 +60,10 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="glass-panel z-10 w-full max-w-4xl rounded-3xl p-8 md:p-16 text-center shadow-2xl backdrop-blur-xl"
+          className="z-10 w-full max-w-4xl rounded-3xl p-8 md:p-16 text-center"
         >
           <motion.div variants={itemVariants} className="mb-6 flex justify-center">
             <div className="flex items-center gap-2 rounded-full bg-japan-indigo/5 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/10">
-              <Sparkles size={16} />
               <span>Life Self-Determination Protocol</span>
             </div>
           </motion.div>
@@ -130,25 +129,22 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Users className="h-8 w-8" />,
+                label: "01",
                 title: "個人向けサービス",
-                description: "1on1コーチング・AI活用支援で、あなたの「内なる羅針盤」を研ぎ澄まします。",
+                description: "1on1コーチング・AI活用支援で、キャリア設計と副業立ち上げを伴走します。",
                 href: "/services#individual",
-                gradient: "from-japan-indigo to-japan-violet",
               },
               {
-                icon: <Briefcase className="h-8 w-8" />,
+                label: "02",
                 title: "法人向けサービス",
-                description: "組織のAI導入支援・DX推進コンサルティングで、チーム全体の生産性を変革します。",
+                description: "AI導入支援・DX推進コンサルティングで、業務効率化と組織変革を支援します。",
                 href: "/services#corporate",
-                gradient: "from-japan-violet to-japan-indigo",
               },
               {
-                icon: <Code className="h-8 w-8" />,
+                label: "03",
                 title: "AI開発支援",
-                description: "LLMアプリケーション開発・自動化システム構築で、ビジネスにAIを実装します。",
+                description: "オリジナルGPTs・チャットボット・自動化システムを開発・実装します。",
                 href: "/services#ai-dev",
-                gradient: "from-japan-indigo to-japan-moss",
               },
             ].map((service, index) => (
               <motion.div
@@ -160,13 +156,11 @@ export default function Home() {
               >
                 <Link
                   href={service.href}
-                  className="group block glass-panel rounded-2xl p-8 border border-japan-indigo/10 hover:border-japan-indigo/30 hover:shadow-xl transition-all duration-300 h-full"
+                  className="group block bg-white rounded-2xl p-8 border border-japan-indigo/10 hover:border-japan-indigo/30 hover:shadow-lg transition-all duration-300 h-full"
                 >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-japan-indigo mb-3">{service.title}</h3>
-                  <p className="text-zinc-800 mb-4 leading-relaxed">{service.description}</p>
+                  <span className="text-3xl font-bold text-japan-gold mb-6 block">{service.label}</span>
+                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                  <p className="text-zinc-700 mb-4 leading-relaxed">{service.description}</p>
                   <span className="inline-flex items-center gap-1 text-japan-indigo font-medium text-sm group-hover:gap-2 transition-all">
                     詳しく見る
                     <ArrowRight className="h-4 w-4" />
@@ -208,7 +202,7 @@ export default function Home() {
             className="glass-panel rounded-3xl p-8 md:p-12 border border-japan-indigo/10 flex flex-col md:flex-row items-center gap-8"
           >
             {/* Photo Placeholder */}
-            <div className="shrink-0 w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-japan-indigo to-japan-violet flex items-center justify-center">
+            <div className="shrink-0 w-32 h-32 md:w-40 md:h-40 rounded-full bg-japan-indigo flex items-center justify-center">
               <User className="h-16 w-16 text-white/80" />
             </div>
 

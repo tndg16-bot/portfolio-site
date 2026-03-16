@@ -27,19 +27,19 @@ const itemVariants: Variants = {
   }
 };
 
-// カラーマッピング
+// カラーマッピング（テーマカラーに統一）
 const colorMap: Record<string, { bg: string; text: string; border: string }> = {
-  purple: { bg: 'bg-purple-100', text: 'text-purple-700', border: 'border-purple-500/20' },
-  blue: { bg: 'bg-blue-100', text: 'text-blue-700', border: 'border-blue-500/20' },
-  green: { bg: 'bg-green-100', text: 'text-green-700', border: 'border-green-500/20' },
-  rose: { bg: 'bg-rose-100', text: 'text-rose-700', border: 'border-rose-500/20' },
-  amber: { bg: 'bg-amber-100', text: 'text-amber-700', border: 'border-amber-500/20' },
-  violet: { bg: 'bg-violet-100', text: 'text-violet-700', border: 'border-violet-500/20' },
-  orange: { bg: 'bg-orange-100', text: 'text-orange-700', border: 'border-orange-500/20' },
-  cyan: { bg: 'bg-cyan-100', text: 'text-cyan-700', border: 'border-cyan-500/20' },
-  indigo: { bg: 'bg-indigo-100', text: 'text-indigo-700', border: 'border-indigo-500/20' },
-  pink: { bg: 'bg-pink-100', text: 'text-pink-700', border: 'border-pink-500/20' },
-  yellow: { bg: 'bg-yellow-100', text: 'text-yellow-700', border: 'border-yellow-500/20' },
+  purple: { bg: 'bg-japan-indigo/10', text: 'text-japan-indigo', border: 'border-japan-indigo/20' },
+  blue: { bg: 'bg-japan-indigo/10', text: 'text-japan-indigo', border: 'border-japan-indigo/20' },
+  green: { bg: 'bg-japan-moss/10', text: 'text-japan-moss', border: 'border-japan-moss/20' },
+  rose: { bg: 'bg-japan-vermilion/10', text: 'text-japan-vermilion', border: 'border-japan-vermilion/20' },
+  amber: { bg: 'bg-japan-gold/10', text: 'text-japan-charcoal', border: 'border-japan-gold/20' },
+  violet: { bg: 'bg-japan-indigo/10', text: 'text-japan-indigo', border: 'border-japan-indigo/20' },
+  orange: { bg: 'bg-japan-vermilion/10', text: 'text-japan-vermilion', border: 'border-japan-vermilion/20' },
+  cyan: { bg: 'bg-japan-indigo/10', text: 'text-japan-indigo', border: 'border-japan-indigo/20' },
+  indigo: { bg: 'bg-japan-indigo/10', text: 'text-japan-indigo', border: 'border-japan-indigo/20' },
+  pink: { bg: 'bg-japan-vermilion/10', text: 'text-japan-vermilion', border: 'border-japan-vermilion/20' },
+  yellow: { bg: 'bg-japan-gold/10', text: 'text-japan-charcoal', border: 'border-japan-gold/20' },
 };
 
 /**

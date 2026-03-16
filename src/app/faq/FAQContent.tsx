@@ -174,7 +174,7 @@ export default function FAQContent() {
   return (
     <>
       <section className="relative w-full min-h-[60vh] flex items-center justify-center px-4 py-24">
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-500/5 via-purple-500/5 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-japan-indigo/5 via-japan-indigo/3 to-transparent" />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -183,13 +183,13 @@ export default function FAQContent() {
           className="relative z-10 max-w-4xl mx-auto text-center"
         >
           <div className="mb-6 flex justify-center">
-            <span className="inline-block rounded-full bg-teal-500/10 px-4 py-1 text-sm font-medium text-teal-400 border border-teal-500/20">
+            <span className="inline-block rounded-full bg-japan-indigo/10 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/20">
               FAQ
             </span>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-white via-teal-200 to-purple-200 bg-clip-text text-transparent">
+            <span className="text-japan-indigo">
               よくある質問
             </span>
           </h1>
@@ -217,7 +217,7 @@ export default function FAQContent() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="例：Zoom / キャンセル / AI"
-              className="w-full rounded-2xl bg-japan-indigo/5 border border-white/10 pl-12 pr-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-teal-500/40"
+              className="w-full rounded-2xl bg-japan-indigo/5 border border-white/10 pl-12 pr-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-japan-indigo/40"
             />
           </div>
           <div className="mt-2 text-xs text-zinc-600">
@@ -235,8 +235,8 @@ export default function FAQContent() {
             onClick={() => setSelectedCategory('すべて')}
             className={`px-4 py-2 rounded-full border transition-colors ${
               selectedCategory === 'すべて'
-                ? 'bg-teal-500 border-teal-400 text-white'
-                : 'bg-white/5 border-white/20 text-zinc-300 hover:border-teal-500/50 hover:text-white'
+                ? 'bg-japan-indigo border-japan-indigo text-white'
+                : 'bg-white/5 border-white/20 text-zinc-300 hover:border-japan-indigo/50 hover:text-white'
             }`}
           >
             すべて
@@ -247,8 +247,8 @@ export default function FAQContent() {
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-full border transition-colors ${
                 selectedCategory === category
-                  ? 'bg-teal-500 border-teal-400 text-white'
-                  : 'bg-white/5 border-white/20 text-zinc-300 hover:border-teal-500/50 hover:text-white'
+                  ? 'bg-japan-indigo border-japan-indigo text-white'
+                  : 'bg-white/5 border-white/20 text-zinc-300 hover:border-japan-indigo/50 hover:text-white'
               }`}
             >
               {category}
@@ -261,7 +261,7 @@ export default function FAQContent() {
           <aside className="lg:sticky lg:top-24">
             <div className="glass-panel rounded-2xl border border-white/10 p-5">
               <div className="flex items-center gap-2 mb-4">
-                <List className="w-5 h-5 text-teal-400" />
+                <List className="w-5 h-5 text-japan-indigo" />
                 <h2 className="text-base font-semibold bg-japan-indigo text-white">目次</h2>
               </div>
 
@@ -308,16 +308,16 @@ export default function FAQContent() {
                   aria-expanded={openId === faq.id}
                   aria-controls={`${faq.id}-panel`}
                 >
-                  <div className="w-12 h-12 rounded-lg bg-teal-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-12 h-12 rounded-lg bg-japan-indigo/10 flex items-center justify-center flex-shrink-0 mt-1">
                     {openId === faq.id ? (
-                      <CheckCircle2 className="w-6 h-6 text-teal-400" />
+                      <CheckCircle2 className="w-6 h-6 text-japan-indigo" />
                     ) : (
-                      <HelpCircle className="w-6 h-6 text-teal-400" />
+                      <HelpCircle className="w-6 h-6 text-japan-indigo" />
                     )}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xs px-2 py-1 rounded-full bg-teal-500/10 text-teal-400">
+                      <span className="text-xs px-2 py-1 rounded-full bg-japan-indigo/10 text-japan-indigo">
                         {faq.category}
                       </span>
                     </div>
@@ -349,10 +349,8 @@ export default function FAQContent() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-500/20 via-purple-500/10 to-pink-500/20 border border-white/10 p-12 text-center"
+          className="relative overflow-hidden rounded-3xl bg-japan-indigo p-12 text-center"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(45,212,191,0.15),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.15),transparent_50%)]" />
 
           <div className="relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4">
@@ -365,7 +363,7 @@ export default function FAQContent() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-japan-indigo/25"
               >
                 <HelpCircle className="w-5 h-5" />
                 お問い合わせ
