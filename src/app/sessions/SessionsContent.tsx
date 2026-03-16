@@ -9,7 +9,7 @@ import TopInfoBanner from "@/components/TopInfoBanner";
 
 const BookingForm = dynamic(() => import('@/components/BookingForm'), {
     loading: () => <div className="flex items-center justify-center min-h-[400px]">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-japan-indigo"></div>
     </div>,
     ssr: true
 });
@@ -82,7 +82,7 @@ export default function SessionsContent() {
                         className="text-center"
                     >
                         <motion.div variants={itemVariants} className="mb-4 flex justify-center">
-                            <span className="inline-block rounded-full bg-teal-500/10 px-4 py-1 text-sm font-medium text-teal-400 border border-teal-500/20">
+                            <span className="inline-block rounded-full bg-japan-indigo/10 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/20">
                                 Life Self-Determination Session
                             </span>
                         </motion.div>
@@ -107,12 +107,12 @@ export default function SessionsContent() {
                         className="glass-panel rounded-3xl p-8 md:p-12 border border-japan-indigo/10"
                     >
                         <motion.h2 variants={itemVariants} className="text-2xl md:text-3xl font-bold text-japan-indigo mb-8 flex items-center gap-3">
-                            <CheckCircle2 className="text-teal-400" /> こんな方へ
+                            <CheckCircle2 className="text-japan-indigo" /> こんな方へ
                         </motion.h2>
                         <ul className="space-y-4">
                             {targetAudience.map((item, i) => (
                                 <motion.li key={i} variants={itemVariants} className="flex items-start gap-3 text-japan-charcoal leading-relaxed">
-                                    <ArrowRight className="text-teal-400 shrink-0 mt-1" size={18} />
+                                    <ArrowRight className="text-japan-indigo shrink-0 mt-1" size={18} />
                                     <span>{item}</span>
                                 </motion.li>
                             ))}
@@ -142,8 +142,8 @@ export default function SessionsContent() {
                             >
                                 <div className="text-zinc-800 text-base mb-2">Before</div>
                                 <p className="text-japan-charcoal mb-4 line-through decoration-red-400/50">{t.before}</p>
-                                <ArrowRight className="mx-auto text-teal-400 mb-4" />
-                                <div className="text-teal-400 text-base mb-2">After</div>
+                                <ArrowRight className="mx-auto text-japan-indigo mb-4" />
+                                <div className="text-japan-indigo text-base mb-2">After</div>
                                 <p className="text-japan-indigo font-semibold">{t.after}</p>
                             </motion.div>
                         ))}
@@ -166,10 +166,10 @@ export default function SessionsContent() {
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="glass-panel p-8 rounded-2xl border border-teal-500/20 hover:bg-japan-indigo/5 transition-colors"
+                            className="glass-panel p-8 rounded-2xl border border-japan-indigo/20 hover:bg-japan-indigo/5 transition-colors"
                         >
-                            <div className="h-12 w-12 bg-teal-500/10 rounded-xl flex items-center justify-center mb-6">
-                                <User className="text-teal-400" size={28} />
+                            <div className="h-12 w-12 bg-japan-indigo/10 rounded-xl flex items-center justify-center mb-6">
+                                <User className="text-japan-indigo" size={28} />
                             </div>
                             <h3 className="text-xl font-bold text-japan-indigo mb-4">パーソナルコーチング</h3>
                             <p className="text-zinc-800 mb-6 leading-relaxed">
@@ -178,15 +178,15 @@ export default function SessionsContent() {
                             </p>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-center gap-2 text-japan-charcoal">
-                                    <CheckCircle2 size={16} className="text-teal-400" />
+                                    <CheckCircle2 size={16} className="text-japan-indigo" />
                                     <span>自己理解・価値観の言語化</span>
                                 </li>
                                 <li className="flex items-center gap-2 text-japan-charcoal">
-                                    <CheckCircle2 size={16} className="text-teal-400" />
+                                    <CheckCircle2 size={16} className="text-japan-indigo" />
                                     <span>AI活用・副業立ち上げ支援</span>
                                 </li>
                                 <li className="flex items-center gap-2 text-japan-charcoal">
-                                    <CheckCircle2 size={16} className="text-teal-400" />
+                                    <CheckCircle2 size={16} className="text-japan-indigo" />
                                     <span>メンタルブロックの解消</span>
                                 </li>
                             </ul>
@@ -197,10 +197,10 @@ export default function SessionsContent() {
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="glass-panel p-8 rounded-2xl border border-purple-500/20 hover:bg-japan-indigo/5 transition-colors"
+                            className="glass-panel p-8 rounded-2xl border border-japan-indigo/20 hover:bg-japan-indigo/5 transition-colors"
                         >
-                            <div className="h-12 w-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6">
-                                <Briefcase className="text-purple-400" size={28} />
+                            <div className="h-12 w-12 bg-japan-indigo/10 rounded-xl flex items-center justify-center mb-6">
+                                <Briefcase className="text-japan-indigo" size={28} />
                             </div>
                             <h3 className="text-xl font-bold text-japan-indigo mb-4">ビジネスコンサルティング</h3>
                             <p className="text-zinc-800 mb-6 leading-relaxed">
@@ -209,15 +209,15 @@ export default function SessionsContent() {
                             </p>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-center gap-2 text-japan-charcoal">
-                                    <CheckCircle2 size={16} className="text-purple-400" />
+                                    <CheckCircle2 size={16} className="text-japan-indigo" />
                                     <span>意思決定フローの最適化</span>
                                 </li>
                                 <li className="flex items-center gap-2 text-japan-charcoal">
-                                    <CheckCircle2 size={16} className="text-purple-400" />
+                                    <CheckCircle2 size={16} className="text-japan-indigo" />
                                     <span>新規事業アイディエーション</span>
                                 </li>
                                 <li className="flex items-center gap-2 text-japan-charcoal">
-                                    <CheckCircle2 size={16} className="text-purple-400" />
+                                    <CheckCircle2 size={16} className="text-japan-indigo" />
                                     <span>1on1導入・マネジメント支援</span>
                                 </li>
                             </ul>
@@ -233,7 +233,7 @@ export default function SessionsContent() {
                         viewport={{ once: true }}
                         className="text-2xl md:text-3xl font-bold text-japan-indigo mb-10 text-center flex items-center justify-center gap-3"
                     >
-                        <Clock className="text-teal-400" /> セッションの進め方
+                        <Clock className="text-japan-indigo" /> セッションの進め方
                     </motion.h2>
                     <div className="grid md:grid-cols-3 gap-6">
                         {sessionFlow.map((s, i) => (
@@ -245,7 +245,7 @@ export default function SessionsContent() {
                                 transition={{ delay: i * 0.1 }}
                                 className="glass-panel rounded-2xl p-6 border border-japan-indigo/10"
                             >
-                                <div className="w-10 h-10 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center font-bold mb-4">
+                                <div className="w-10 h-10 rounded-full bg-japan-indigo/20 text-japan-indigo flex items-center justify-center font-bold mb-4">
                                     {s.step}
                                 </div>
                                 <h3 className="text-japan-indigo font-bold text-lg mb-2">{s.title}</h3>
@@ -259,9 +259,9 @@ export default function SessionsContent() {
                         viewport={{ once: true }}
                         className="mt-8 flex flex-wrap justify-center gap-6 text-zinc-800"
                     >
-                        <span className="flex items-center gap-2"><Clock size={18} className="text-teal-400" /> 60〜90分</span>
-                        <span className="flex items-center gap-2"><Video size={18} className="text-teal-400" /> オンライン (Zoom)</span>
-                        <span className="flex items-center gap-2"><ShieldCheck size={18} className="text-teal-400" /> 完全守秘</span>
+                        <span className="flex items-center gap-2"><Clock size={18} className="text-japan-indigo" /> 60〜90分</span>
+                        <span className="flex items-center gap-2"><Video size={18} className="text-japan-indigo" /> オンライン (Zoom)</span>
+                        <span className="flex items-center gap-2"><ShieldCheck size={18} className="text-japan-indigo" /> 完全守秘</span>
                     </motion.div>
                 </section>
 
@@ -271,11 +271,11 @@ export default function SessionsContent() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="glass-panel rounded-3xl p-8 md:p-12 text-center border border-teal-500/20"
+                        className="glass-panel rounded-3xl p-8 md:p-12 text-center border border-japan-indigo/20"
                     >
                         <h2 className="text-2xl md:text-3xl font-bold text-japan-indigo mb-4">料金</h2>
                         <p className="text-japan-charcoal mb-6">
-                            現在、<span className="text-teal-400 font-semibold">審査制</span>にてご案内しております。<br />
+                            現在、<span className="text-japan-indigo font-semibold">審査制</span>にてご案内しております。<br />
                             詳細は個別にお伝えいたします。
                         </p>
                         <p className="text-base text-zinc-600">※ 初回のみ特別価格をご用意しています</p>
@@ -290,7 +290,7 @@ export default function SessionsContent() {
                         viewport={{ once: true }}
                         className="text-2xl md:text-3xl font-bold text-japan-indigo mb-10 text-center flex items-center justify-center gap-3"
                     >
-                        <HelpCircle className="text-teal-400" /> よくある質問
+                        <HelpCircle className="text-japan-indigo" /> よくある質問
                     </motion.h2>
                     <div className="space-y-4">
                         {faqs.map((faq, i) => (
@@ -303,7 +303,7 @@ export default function SessionsContent() {
                                 className="glass-panel rounded-xl p-6 border border-japan-indigo/10"
                             >
                                 <h3 className="text-japan-indigo font-semibold mb-2 flex items-start gap-2">
-                                    <MessageCircle className="text-teal-400 shrink-0 mt-1" size={18} />
+                                    <MessageCircle className="text-japan-indigo shrink-0 mt-1" size={18} />
                                     {faq.q}
                                 </h3>
                                 <p className="text-zinc-800 pl-6">{faq.a}</p>
@@ -321,19 +321,19 @@ export default function SessionsContent() {
                         className="glass-panel rounded-3xl p-8 md:p-12 border border-japan-indigo/10"
                     >
                         <h2 className="text-2xl font-bold text-japan-indigo mb-6 flex items-center gap-3">
-                            <CalendarDays className="text-teal-400" /> お申込み後の流れ
+                            <CalendarDays className="text-japan-indigo" /> お申込み後の流れ
                         </h2>
                         <ol className="space-y-4 text-japan-charcoal leading-relaxed">
                             <li className="flex items-start gap-3">
-                                <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center text-base font-bold shrink-0">1</span>
+                                <span className="w-6 h-6 rounded-full bg-japan-indigo/20 text-japan-indigo flex items-center justify-center text-base font-bold shrink-0">1</span>
                                 <span>フォーム送信後、<strong className="text-japan-indigo">24時間以内</strong>にメールで返信いたします</span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center text-base font-bold shrink-0">2</span>
+                                <span className="w-6 h-6 rounded-full bg-japan-indigo/20 text-japan-indigo flex items-center justify-center text-base font-bold shrink-0">2</span>
                                 <span>日程調整リンクから、ご都合の良い日時をお選びください</span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center text-base font-bold shrink-0">3</span>
+                                <span className="w-6 h-6 rounded-full bg-japan-indigo/20 text-japan-indigo flex items-center justify-center text-base font-bold shrink-0">3</span>
                                 <span>当日、Zoomリンクをお送りします</span>
                             </li>
                         </ol>
@@ -346,7 +346,7 @@ export default function SessionsContent() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="glass-panel rounded-3xl p-8 md:p-10 border border-purple-500/20 bg-gradient-to-r from-purple-500/5 to-pink-500/5"
+                        className="glass-panel rounded-3xl p-8 md:p-10 border border-japan-indigo/20 bg-japan-indigo/5"
                     >
                         <div className="flex flex-col md:flex-row items-center gap-6">
                             <div className="text-5xl">🤖</div>
@@ -377,7 +377,7 @@ export default function SessionsContent() {
 
                 {/* Back Link */}
                 <section className="w-full max-w-4xl px-4 py-12 text-center">
-                    <Link href="/" className="text-zinc-600 hover:text-teal-400 transition-colors text-sm">
+                    <Link href="/" className="text-zinc-600 hover:text-japan-indigo transition-colors text-sm">
                         ← トップページへ戻る
                     </Link>
                 </section>
