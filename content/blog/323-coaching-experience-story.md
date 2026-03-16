@@ -11,6 +11,12 @@ tags:
   - "セッション"
 slug: "coaching-experience-story"
 published: true
+series: "営業マンの独立ロードマップ"
+seriesOrder: 3
+relatedArticles:
+  - "28-career-crossroads"
+  - "cant-take-action-psychology"
+  - "what-is-coaching"
 ---
 
 ## 「やりたいことはあるのに、動けない」が口癖だった

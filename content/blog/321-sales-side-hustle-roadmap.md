@@ -11,6 +11,12 @@ tags:
   - "独立準備"
 slug: "sales-side-hustle-roadmap"
 published: true
+series: "営業マンの独立ロードマップ"
+seriesOrder: 1
+relatedArticles:
+  - "28-career-crossroads"
+  - "cant-take-action-psychology"
+  - "sales-skills-independence"
 ---
 
 ## 「このままでいいのか」と感じている営業マンへ
