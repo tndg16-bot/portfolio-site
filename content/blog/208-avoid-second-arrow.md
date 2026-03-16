@@ -7,7 +7,7 @@ tags:
   - "第二の矢"
   - "反応の選択"
   - "マインドコントロール"
-published: true
+published: false
 slug: "avoid-second-arrow"
 ---
 

@@ -7,7 +7,7 @@ tags:
   - "グロースマインドセット"
   - "キャロル・ドウェック"
   - "成長"
-published: true
+published: false
 slug: "growth-mindset-develop-talent"
 ---
 

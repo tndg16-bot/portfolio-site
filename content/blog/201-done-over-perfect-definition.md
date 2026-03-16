@@ -7,7 +7,7 @@ tags:
   - "完璧主義"
   - "完了主義"
   - "アウトプット"
-published: true
+published: false
 slug: "done-over-perfect-definition"
 ---
 

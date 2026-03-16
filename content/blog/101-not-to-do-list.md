@@ -8,7 +8,7 @@ tags:
   - "やらないことリスト"
   - "優先順位"
   - "意思決定"
-published: true
+published: false
 slug: "not-to-do-list"
 ---
 

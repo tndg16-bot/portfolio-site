@@ -7,7 +7,7 @@ tags:
   - "先延ばし"
   - "不安"
   - "心理的抵抗"
-published: true
+published: false
 slug: "procrastination-is-anxiety"
 ---
 
