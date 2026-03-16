@@ -212,6 +212,26 @@ h4 {
 .border-zinc-800 { border-color: rgba(22, 94, 131, 0.1); }
 .hover\:bg-zinc-900\/50:hover { background-color: rgba(22, 94, 131, 0.03); }
 
+/* Slow bounce animation for scroll indicator */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bounce-slow {
+    animation: none;
+  }
+}
+
 /* Accessibility */
 .sr-only {
   position: absolute;
