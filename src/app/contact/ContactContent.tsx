@@ -98,7 +98,7 @@ export default function ContactContent() {
                         initial="hidden"
                         animate="visible"
                         variants={containerVariants}
-                        className="relative z-10 max-w-4xl mx-auto text-center"
+                        className="max-w-4xl mx-auto text-center"
                     >
                         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-japan-indigo/10 to-japan-violet/10 border border-japan-indigo/10 mb-8">
                             <Send className="w-4 h-4 text-teal-400" />
