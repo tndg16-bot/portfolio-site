@@ -346,7 +346,6 @@ export default function Home() {
               <Link href="/legal" className="hover:text-japan-indigo transition-colors">特定商取引法に基づく表記</Link>
             </div>
           </div>
- 603560f (feat: redesign header nav (7→4 items + CTA) and restructure footer (#232))
         </div>
       </footer>
     </main>
