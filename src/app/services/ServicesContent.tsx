@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { CheckCircle2, ArrowRight, Clock, Briefcase, GraduationCap, Star, Users, Calendar, Lock } from "lucide-react";
+import { CheckCircle2, ArrowRight, Clock, Briefcase, GraduationCap, Star, Users, Calendar, Lock, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { getAllServices } from "@/data/services";
@@ -39,14 +40,17 @@ const IdealBadge: React.FC<{ isIdeal: boolean; text: string }> = ({ isIdeal, tex
 );
 
 const cardColors = [
-  'bg-gradient-to-br from-blue-500 to-blue-600',    // AI診断
-  'bg-gradient-to-br from-cyan-500 to-cyan-600',     // AIワークショップ
-  'bg-gradient-to-br from-indigo-500 to-indigo-600', // AIコンサル
-  'bg-gradient-to-br from-violet-500 to-violet-600', // AI継続サポート
-  'bg-gradient-to-br from-teal-500 to-teal-600',     // モヤモヤ整理
-  'bg-gradient-to-br from-purple-500 to-purple-600', // 羅針盤
-  'bg-gradient-to-br from-slate-600 to-slate-700',   // 企業向け
+    'bg-gradient-to-br from-cyan-600 to-cyan-700',     // AIワークショップ
+    'bg-gradient-to-br from-japan-indigo to-blue-800',  // AIコンサル
+    'bg-gradient-to-br from-blue-600 to-blue-700',      // AI継続サポート
+    'bg-gradient-to-br from-teal-600 to-teal-700',      // モヤモヤ整理
+    'bg-gradient-to-br from-indigo-600 to-indigo-700',  // 羅針盤
+    'bg-gradient-to-br from-slate-700 to-slate-800',    // 企業向けWS
+    'bg-gradient-to-br from-amber-600 to-amber-700',    // AI推進支援
+    'bg-gradient-to-br from-violet-600 to-violet-700',  // AI開発
 ];
+
+type TabKey = 'all' | 'individual' | 'business';
 
 const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ service, index }) => {
     return (
@@ -68,7 +72,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                 {/* Header */}
                 <div className={`p-8 ${cardColors[index % cardColors.length]} text-white`}>
                     <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
-                    <p className="bg-japan-indigo text-white/90 text-base leading-relaxed">{service.description}</p>
+                    <p className="text-white/90 text-base leading-relaxed">{service.description}</p>
                 </div>
 
                 {/* Body */}
@@ -103,12 +107,6 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                         ) : service.pricing.type === 'package' ? (
                             <div>
                                 <p className="text-3xl font-bold text-teal-600 mb-2">{service.pricing.price}</p>
-                                <p className="text-sm text-zinc-800">{service.pricing.notes}</p>
-                            </div>
-                        ) : service.pricing.type === 'fixed' && service.pricing.price === '無料' ? (
-                            <div>
-                                <p className="text-3xl font-bold text-green-600 mb-2">無料</p>
-                                <p className="text-sm text-zinc-800">月10件限定</p>
                                 <p className="text-sm text-zinc-800">{service.pricing.notes}</p>
                             </div>
                         ) : service.pricing.type === 'fixed' && service.pricing.price && service.pricing.price !== 'お問い合わせください' ? (
@@ -157,14 +155,23 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                         ))}
                     </div>
 
-                    {/* CTA Button */}
+                    {/* CTA Buttons */}
                     <Link
-                        href="/sessions#booking"
-                        className="block w-full py-4 rounded-xl bg-japan-indigo text-white font-bold text-center hover:shadow-lg hover:shadow-teal-500/25 transition-all flex items-center justify-center gap-2"
+                        href="/contact"
+                        className="block w-full py-4 rounded-xl bg-japan-indigo text-white font-bold text-center hover:shadow-lg hover:shadow-japan-indigo/25 transition-all flex items-center justify-center gap-2"
                     >
-                        {service.pricing.price === '無料' ? '無料診断を申し込む' : service.pricing.type === 'screening' ? '無料相談を予約する' : '詳しく見る・申し込む'}
+                        無料相談を予約する
                         <ArrowRight className="w-5 h-5" />
                     </Link>
+                    <a
+                        href="https://lin.ee/VAYurUv"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 flex items-center justify-center gap-1 text-sm text-japan-indigo hover:underline"
+                    >
+                        <MessageCircle className="w-4 h-4" />
+                        LINEで気軽に相談 →
+                    </a>
                 </div>
             </div>
         </motion.div>
@@ -172,7 +179,21 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
 };
 
 export default function ServicesContent() {
-    const services = getAllServices();
+    const allServices = getAllServices();
+    const [activeTab, setActiveTab] = useState<TabKey>('all');
+
+    const filteredServices = allServices.filter((service) => {
+        if (activeTab === 'all') return true;
+        if (activeTab === 'individual') return service.category === 'individual' || service.category === 'both';
+        if (activeTab === 'business') return service.category === 'business' || service.category === 'both';
+        return true;
+    });
+
+    const tabs: { key: TabKey; label: string }[] = [
+        { key: 'all', label: 'すべて' },
+        { key: 'individual', label: '個人向け' },
+        { key: 'business', label: '法人向け' },
+    ];
 
     return (
         <>
@@ -186,8 +207,8 @@ export default function ServicesContent() {
                         variants={containerVariants}
                         className="text-center"
                     >
-                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-teal-500/20 to-purple-500/20 border border-white/10 mb-8">
-                            <Briefcase className="w-4 h-4 text-teal-500" />
+                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-japan-indigo/10 to-japan-gold/10 border border-japan-indigo/10 mb-8">
+                            <Briefcase className="w-4 h-4 text-japan-indigo" />
                             <span className="text-sm text-zinc-800">Services</span>
                         </motion.div>
 
@@ -202,8 +223,54 @@ export default function ServicesContent() {
                     </motion.div>
                 </section>
 
+                {/* Social Proof Bar */}
+                <section className="w-full max-w-4xl px-4 mb-8">
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="bg-japan-indigo/5 border border-japan-indigo/10 rounded-2xl py-4 px-6 text-center"
+                    >
+                        <p className="text-japan-indigo font-bold text-lg">
+                            副業人材 <span className="text-2xl">500</span>名 / 法人 <span className="text-2xl">20</span>社 の支援実績
+                        </p>
+                    </motion.div>
+                </section>
+
+                {/* Tab UI */}
+                <section className="w-full max-w-4xl px-4 mb-8">
+                    <div className="flex justify-center gap-3">
+                        {tabs.map((tab) => (
+                            <button
+                                key={tab.key}
+                                onClick={() => setActiveTab(tab.key)}
+                                className={`transition-all ${
+                                    activeTab === tab.key
+                                        ? 'bg-japan-indigo text-white rounded-full px-6 py-2'
+                                        : 'text-japan-indigo border border-japan-indigo/20 rounded-full px-6 py-2 hover:bg-japan-indigo/5'
+                                }`}
+                            >
+                                {tab.label}
+                            </button>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Step-up Flow */}
+                <section className="w-full max-w-4xl px-4 mb-8">
+                    <div className="flex flex-wrap justify-center items-center gap-2 text-sm text-zinc-700">
+                        <span className="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full font-medium">ワークショップ</span>
+                        <ArrowRight className="w-4 h-4" />
+                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-medium">3ヶ月コンサル</span>
+                        <ArrowRight className="w-4 h-4" />
+                        <span className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full font-medium">継続サポート</span>
+                        <ArrowRight className="w-4 h-4" />
+                        <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full font-medium">AI推進（全社）</span>
+                    </div>
+                </section>
+
                 {/* Services Grid */}
-                <section className="w-full max-w-7xl px-4 py-16">
+                <section className="w-full max-w-7xl px-4 py-8">
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -211,93 +278,12 @@ export default function ServicesContent() {
                         variants={containerVariants}
                         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
                     >
-                        {/* AI Services Category Header */}
-                        <motion.div variants={itemVariants} className="col-span-full text-center mb-4 mt-8">
-                            <h2 className="text-2xl md:text-3xl font-bold text-zinc-800 mb-2">AI活用支援サービス</h2>
-                            <p className="text-zinc-800">AIの力で業務を変革。無料診断からスタートできます。</p>
-                        </motion.div>
-
-                        {/* Step-up Flow */}
-                        <motion.div variants={itemVariants} className="col-span-full flex flex-wrap justify-center items-center gap-2 text-sm text-zinc-700 mb-4">
-                            <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full font-medium">無料診断</span>
-                            <ArrowRight className="w-4 h-4" />
-                            <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-medium">ワークショップ</span>
-                            <ArrowRight className="w-4 h-4" />
-                            <span className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full font-medium">3ヶ月コンサル</span>
-                            <ArrowRight className="w-4 h-4" />
-                            <span className="px-3 py-1 bg-violet-100 text-violet-700 rounded-full font-medium">継続サポート</span>
-                        </motion.div>
-
-                        {/* AI Service Cards */}
-                        {services.slice(0, 4).map((service, index) => (
-                            <ServiceCard key={service.id} service={service} index={index} />
-                        ))}
-
-                        {/* Coaching Services Category Header */}
-                        <motion.div variants={itemVariants} className="col-span-full text-center mb-4 mt-8">
-                            <h2 className="text-2xl md:text-3xl font-bold text-zinc-800 mb-2">パーソナルコーチング</h2>
-                            <p className="text-zinc-800">人生と仕事の意思決定力を高める、1対1のセッション。</p>
-                        </motion.div>
-
-                        {/* Coaching Service Cards */}
-                        {services.slice(4).map((service, index) => (
-                            <ServiceCard key={service.id} service={service} index={index + 4} />
-                        ))}
-                    </motion.div>
-                </section>
-
-                {/* FAQ Section */}
-                <section className="w-full max-w-4xl px-4 py-16">
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={containerVariants}
-                    >
-                        <motion.div variants={itemVariants} className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-zinc-800 mb-4">よくあるご質問</h2>
-                            <p className="text-zinc-800">サービスに関する疑問にお答えします</p>
-                        </motion.div>
-
-                        <div className="space-y-4">
-                            {[
-                                {
-                                    q: "初めての方でも大丈夫ですか？",
-                                    a: "はい。初めての方でも安心してご参加いただけます。まずは無料相談からお試しいただけます。"
-                                },
-                                {
-                                    q: "オンラインでのセッションは可能ですか？",
-                                    a: "はい。すべてのセッションはZoomを使用したオンラインで行っております。場所を選ばず、ご自宅から安心して参加いただけます。"
-                                },
-                                {
-                                    q: "法人での利用も可能ですか？",
-                                    a: "はい。企業向けの意思決定ワークショップも承っております。詳細はお問い合わせください。"
-                                },
-                                {
-                                    q: "AIの知識がなくても大丈夫ですか？",
-                                    a: "はい。無料AI活用診断では、AIの基礎から丁寧にご説明します。実際にその場でデモを見ていただくので、知識ゼロでも安心です。"
-                                },
-                                {
-                                    q: "どんな業種でもAI活用できますか？",
-                                    a: "はい。不動産、飲食、士業、サービス業など、幅広い業種でのAI活用実績があります。業種に合わせた最適な活用法をご提案します。"
-                                }
-                            ].map((faq, index) => (
-                                <motion.div
-                                    key={index}
-                                    variants={itemVariants}
-                                    className="bg-white rounded-2xl p-6 shadow-sm border border-zinc-100 hover:shadow-md transition-shadow"
-                                >
-                                    <h3 className="text-lg font-semibold text-zinc-800 mb-3 flex items-start gap-3">
-                                        <span className="text-teal-500 font-bold">Q.</span>
-                                        {faq.q}
-                                    </h3>
-                                    <p className="text-zinc-800 pl-7 leading-relaxed">
-                                        <span className="text-purple-500 font-bold mr-2">A.</span>
-                                        {faq.a}
-                                    </p>
-                                </motion.div>
-                            ))}
-                        </div>
+                        {filteredServices.map((service) => {
+                            const originalIndex = allServices.findIndex((s) => s.id === service.id);
+                            return (
+                                <ServiceCard key={service.id} service={service} index={originalIndex} />
+                            );
+                        })}
                     </motion.div>
                 </section>
 
@@ -308,34 +294,37 @@ export default function ServicesContent() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={containerVariants}
-                        className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-500 via-teal-600 to-purple-600 p-12 text-center"
+                        className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-japan-indigo via-blue-800 to-indigo-900 p-12 text-center"
                     >
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]" />
 
                         <motion.div variants={itemVariants} className="relative z-10">
-                            <h2 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4">
+                            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                                 あなたの変化を、今から始めましょう
                             </h2>
-                            <p className="text-xl bg-japan-indigo text-white/90 mb-8 max-w-2xl mx-auto">
+                            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                                 まずは無料相談で、あなたの状況をお聞かせください。<br />
                                 完璧なタイミングを待つ必要はありません。
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link
-                                    href="/sessions#booking"
-                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-teal-600 font-bold text-lg hover:bg-zinc-50 transition-colors shadow-lg"
+                                    href="/contact"
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-japan-indigo font-bold text-lg hover:bg-zinc-50 transition-colors shadow-lg"
                                 >
                                     <Calendar className="w-5 h-5" />
                                     無料相談を予約する
                                 </Link>
-                                <Link
-                                    href="/contact"
-                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
+                                <a
+                                    href="https://lin.ee/VAYurUv"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 text-white font-bold text-lg hover:bg-white/20 transition-colors border border-white/20"
                                 >
-                                    お問い合わせ
-                                </Link>
+                                    <MessageCircle className="w-5 h-5" />
+                                    LINEで気軽に相談
+                                </a>
                             </div>
                         </motion.div>
                     </motion.div>

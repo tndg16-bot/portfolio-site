@@ -21,6 +21,7 @@ export interface SessionService {
   frequency?: 'one-time' | 'series' | 'ongoing';
   popular?: boolean;
   tags: string[];
+  category: 'individual' | 'business' | 'both';
 }
 
 export interface Pricing {
