@@ -1,17 +1,10 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Compass, Cpu, Target, CheckCircle2, Sparkles, Zap, Shield } from "lucide-react";
+import { ArrowRight, Compass, Cpu, Target, Sparkles, Users, Briefcase, Code, User } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import Link from 'next/link';
-
-const Dashboard = dynamic(() => import('@/components/Dashboard'), {
-  loading: () => <div className="flex items-center justify-center min-h-[400px]">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-japan-indigo"></div>
-  </div>,
-  ssr: false
-});
 
 const BookingForm = dynamic(() => import('@/components/BookingForm'), {
   loading: () => <div className="flex items-center justify-center min-h-[400px]">
@@ -20,22 +13,15 @@ const BookingForm = dynamic(() => import('@/components/BookingForm'), {
   ssr: false
 });
 
-const ProjectsSection = dynamic(() => import('@/components/ProjectsSection'), {
-  loading: () => <div className="flex items-center justify-center min-h-[400px]">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-japan-indigo"></div>
-  </div>,
-  ssr: false
-});
-
-const ProjectProgressDashboard = dynamic(() => import('@/components/ProjectProgressDashboard'), {
-  loading: () => <div className="flex items-center justify-center min-h-[400px]">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-japan-indigo"></div>
-  </div>,
-  ssr: false
-});
-
 const WorksCollection = dynamic(() => import('@/components/WorksCollection'), {
   loading: () => <div className="flex items-center justify-center min-h-[400px]">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-japan-indigo"></div>
+  </div>,
+  ssr: false
+});
+
+const NewsletterForm = dynamic(() => import('@/components/NewsletterForm'), {
+  loading: () => <div className="flex items-center justify-center min-h-[200px]">
     <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-japan-indigo"></div>
   </div>,
   ssr: false
@@ -67,7 +53,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20 text-japan-charcoal">
       <Header />
-      {/* Hero Section */}
+
+      {/* ===== 1. Hero Section ===== */}
       <section id="section-hero" className="relative flex min-h-screen w-full flex-col items-center justify-center px-4">
         <motion.div
           initial="hidden"
@@ -92,7 +79,7 @@ export default function Home() {
 
           <motion.p
             variants={itemVariants}
-            className="mb-10 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto text-zinc-800"
+            className="mb-10 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto text-zinc-600"
           >
             溢れる情報と「正解」の押し付けから、魂の呼吸を守り抜く。<br />
             深い静寂の中で研ぎ澄まされる直感と、最先端AIの力が、<br />
@@ -103,28 +90,21 @@ export default function Home() {
             variants={itemVariants}
             className="flex flex-wrap justify-center gap-4"
           >
-            <a
-              href="/sessions"
-              className="flex h-14 items-center gap-2 rounded-full bg-japan-indigo px-8 text-lg font-bold text-white transition-all hover:bg-japan-indigo/90 hover:scale-105 active:scale-95 shadow-xl group"
+            {/* Primary CTA */}
+            <Link
+              href="/contact"
+              className="bg-japan-vermilion text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center gap-2 group"
             >
-              羅針盤を手にする
+              無料で相談する
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
+            {/* Secondary CTA */}
             <a
-              href="https://ai-diagnosis-six.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-14 items-center gap-2 rounded-full bg-japan-vermilion px-8 text-lg font-bold text-white transition-all hover:brightness-110 hover:scale-105 active:scale-95 shadow-xl group"
+              href="#works"
+              className="border-2 border-japan-indigo text-japan-indigo px-8 py-4 rounded-full text-lg hover:bg-japan-indigo hover:text-white transition-all flex items-center gap-2"
             >
-              <Sparkles className="h-5 w-5" />
-              無料で適性診断
-              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              href="/philosophy"
-              className="glass-card flex h-14 items-center gap-2 rounded-full px-8 text-lg font-bold text-japan-indigo border border-japan-indigo/20 hover:bg-japan-indigo/5 transition-all"
-            >
-              メソッドを探究する
+              実績を見る
+              <ArrowRight className="h-5 w-5" />
             </a>
           </motion.div>
         </motion.div>
@@ -166,168 +146,167 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section id="section-philosophy" className="w-full max-w-7xl px-4 py-24 min-h-screen flex items-center relative">
-        <div className="absolute inset-0 pattern-seigaiha opacity-30 z-[-1]" />
-        <div className="grid gap-8 md:grid-cols-2 lg:gap-12 w-full">
+      {/* ===== 2. Services Overview Section ===== */}
+      <section id="services" className="w-full py-24 bg-white/40">
+        <div className="max-w-6xl mx-auto px-4">
           <motion.div
-            whileInView="visible"
-            initial="hidden"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={itemVariants}
-            className="glass-panel group relative flex flex-col justify-center rounded-3xl p-10 md:p-14 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-all duration-700 bg-white/60"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
           >
-            <div className="absolute -top-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border border-japan-indigo/10 text-japan-indigo group-hover:scale-110 transition-transform duration-500">
-              <Shield size={32} />
-            </div>
-            <h2 className="mb-6 text-3xl font-bold md:text-5xl leading-tight text-japan-indigo">
-              内なる聖域。<br />
-              <span className="text-japan-gradient font-light">Spiritual Resilience</span>
-            </h2>
-            <p className="mb-8 text-zinc-800 leading-relaxed text-lg">
-              外部の評価や「稼げるノウハウ」に依存するほど、人生の主導権は遠のきます。
-              自身の過去を冷徹に再定義し、他者の期待に侵食されない「自己決定の核」を確立します。
+            <h2 className="text-3xl md:text-5xl font-bold text-japan-indigo mb-4">サービス</h2>
+            <p className="text-zinc-600 text-lg max-w-2xl mx-auto">
+              あなたの課題に合わせた3つのアプローチで、自己決定の力を取り戻します。
             </p>
-            <div className="space-y-5">
-              {[
-                { title: "ノウハウ依存からの「卒業」", desc: "情報の奴隷から、知恵の主へ。" },
-                { title: "自己確信の再構築", desc: "揺るぎない根源的な自信の復元。" },
-                { title: "メンタル・レジリエンス", desc: "荒波を乗りこなす精神の柔軟性。" }
-              ].map((item) => (
-                <div key={item.title} className="flex gap-4 group/item">
-                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-japan-indigo/10 text-japan-indigo group-hover/item:scale-110 transition-all">
-                    <CheckCircle2 className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-japan-indigo">{item.title}</h4>
-                    <p className="text-sm text-zinc-700">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Users className="h-8 w-8" />,
+                title: "個人向けサービス",
+                description: "1on1コーチング・AI活用支援で、あなたの「内なる羅針盤」を研ぎ澄まします。",
+                href: "/services#individual",
+                gradient: "from-japan-indigo to-japan-violet",
+              },
+              {
+                icon: <Briefcase className="h-8 w-8" />,
+                title: "法人向けサービス",
+                description: "組織のAI導入支援・DX推進コンサルティングで、チーム全体の生産性を変革します。",
+                href: "/services#corporate",
+                gradient: "from-japan-violet to-japan-indigo",
+              },
+              {
+                icon: <Code className="h-8 w-8" />,
+                title: "AI開発支援",
+                description: "LLMアプリケーション開発・自動化システム構築で、ビジネスにAIを実装します。",
+                href: "/services#ai-dev",
+                gradient: "from-japan-indigo to-japan-moss",
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+              >
+                <Link
+                  href={service.href}
+                  className="group block glass-panel rounded-2xl p-8 border border-japan-indigo/10 hover:border-japan-indigo/30 hover:shadow-xl transition-all duration-300 h-full"
+                >
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-japan-indigo mb-3">{service.title}</h3>
+                  <p className="text-zinc-600 mb-4 leading-relaxed">{service.description}</p>
+                  <span className="inline-flex items-center gap-1 text-japan-indigo font-medium text-sm group-hover:gap-2 transition-all">
+                    詳しく見る
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== 3. Works / Portfolio Section ===== */}
+      <section id="works" className="w-full py-24">
+        <div className="max-w-6xl mx-auto px-4">
           <motion.div
-            whileInView="visible"
-            initial="hidden"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={itemVariants}
-            className="glass-panel group relative flex flex-col justify-center rounded-3xl p-10 md:p-14 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-all duration-700 bg-white/60"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
           >
-            <div className="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-lg border border-japan-indigo/10 text-japan-indigo group-hover:scale-110 transition-transform duration-500">
-              <Zap size={32} />
-            </div>
-            <h2 className="mb-6 text-3xl font-bold md:text-5xl leading-tight text-japan-indigo">
-              創造の武器。<br />
-              <span className="text-japan-gradient font-light">AI practical Wisdom</span>
-            </h2>
-            <p className="mb-8 text-zinc-800 leading-relaxed text-lg">
-              意志を社会へ実装するための「加速装置」としてのAI。
-              単なる「使い方」ではなく、あなたの思想を自律的に拡張させる「デジタル分身」としてのAI設計を伝授します。
+            <h2 className="text-3xl md:text-5xl font-bold text-japan-indigo mb-4">実績・ポートフォリオ</h2>
+            <p className="text-zinc-600 text-lg max-w-2xl mx-auto">
+              開発したサービス・ツール・学習教材をご覧ください。
             </p>
-            <div className="space-y-5">
-              {[
-                { title: "AI思考パートナーシップ", desc: "LLMを「道具」から「鏡」へ変える。" },
-                { title: "高付加価値のプロダクト化", desc: "独自の思想をデジタル資産へ転換。" },
-                { title: "自律型ビジネスモデル", desc: "時間と場所を自己決定するための構造。" }
-              ].map((item) => (
-                <div key={item.title} className="flex gap-4 group/item">
-                  <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-japan-indigo/10 text-japan-indigo group-hover/item:scale-110 transition-all">
-                    <CheckCircle2 className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-japan-indigo">{item.title}</h4>
-                    <p className="text-sm text-zinc-700">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+          </motion.div>
+          <WorksCollection />
+        </div>
+      </section>
+
+      {/* ===== 4. About Overview Section ===== */}
+      <section id="about" className="w-full py-24 bg-white/40">
+        <div className="max-w-4xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="glass-panel rounded-3xl p-8 md:p-12 border border-japan-indigo/10 flex flex-col md:flex-row items-center gap-8"
+          >
+            {/* Photo Placeholder */}
+            <div className="shrink-0 w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-japan-indigo to-japan-violet flex items-center justify-center">
+              <User className="h-16 w-16 text-white/80" />
+            </div>
+
+            {/* Bio */}
+            <div className="text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold text-japan-indigo mb-3">Takahiro Motoyama</h2>
+              <p className="text-zinc-600 leading-relaxed mb-2">
+                AI時代の「自己決定」を支援するコーチ兼エンジニア。
+                情報過多の時代に、静寂の中で研ぎ澄まされる直感と最先端AIの力を掛け合わせ、
+                一人ひとりが自分だけの羅針盤を手にするためのセッション・プロダクトを提供しています。
+              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-japan-indigo font-medium hover:gap-3 transition-all mt-4 group"
+              >
+                詳しく見る
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Future Section (Indoor Focus) */}
-      <section id="section-future" className="w-full max-w-6xl px-4 py-24 min-h-screen flex items-center justify-center relative">
-        <div className="absolute inset-0 pattern-asanoha opacity-30 z-[-1]" />
-        <motion.div
-          whileInView={{ opacity: 1, scale: 1 }}
-          initial={{ opacity: 0, scale: 0.95 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="glass-panel relative max-w-3xl rounded-3xl p-12 md:p-20 text-center overflow-hidden border border-japan-indigo/10 shadow-3xl bg-white/80"
-        >
-          {/* Subtle Glow Effect */}
-          <div className="absolute -inset-10 bg-japan-gold/5 blur-[100px] pointer-events-none" />
+      {/* ===== 5. Booking / Contact Section ===== */}
+      <section id="booking-section" className="w-full py-24">
+        <BookingForm />
+      </section>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="mb-8 text-4xl font-bold md:text-6xl text-japan-indigo leading-tight"
-          >
-            静かな確信から、<br />
-            <span className="text-japan-gradient">世界を変える一歩</span>を。
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="mb-12 text-zinc-800 text-lg md:text-xl font-light leading-relaxed"
-          >
-            あなたの内なる静寂から紡がれる「問い」こそが、<br />
-            AI時代における最強のコモディティ化への対抗手段となります。
-          </motion.p>
+      {/* ===== 6. Newsletter + LINE CTA Section ===== */}
+      <section id="newsletter" className="w-full py-24 bg-white/40">
+        <div className="max-w-4xl mx-auto px-4 space-y-8">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8"
           >
-            <a
-              href="/sessions"
-              className="flex h-16 w-full max-w-md mx-auto items-center justify-center gap-3 rounded-full bg-japan-indigo text-xl font-bold text-white transition-all hover:bg-japan-indigo/90 hover:shadow-2xl active:scale-95 shadow-xl"
-            >
-              「人生の再定義」セッションを予約
-              <ArrowRight className="h-6 w-6" />
-            </a>
-            <p className="mt-6 text-sm text-zinc-700">※限定枠のため、審査制とさせていただいております。</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4">最新情報を受け取る</h2>
+            <p className="text-zinc-600 text-lg">ニュースレターやLINEで、限定コンテンツをお届けします。</p>
           </motion.div>
-        </motion.div>
-      </section>
 
-      {/* Dashboard Section */}
-      <Dashboard />
+          {/* Newsletter */}
+          <NewsletterForm />
 
-      {/* Projects Section */}
-      <ProjectsSection />
-
-      {/* Project Progress Dashboard Section */}
-      <section id="section-progress" className="w-full max-w-6xl px-4 py-24">
-        <ProjectProgressDashboard />
-      </section>
-
-      {/* Works Collection Section */}
-      <section id="section-works" className="w-full max-w-6xl px-4 py-24">
-        <WorksCollection />
-      </section>
-
-      {/* Booking Form Section */}
-      <BookingForm />
-
-      {/* Footer */}
-      <footer className="w-full py-20 text-center border-t border-japan-indigo/5 bg-japan-indigo/5">
-        <div className="max-w-4xl mx-auto px-4">
           {/* LINE CTA */}
-          <div className="mb-12 p-8 rounded-2xl bg-white/50 border border-japan-indigo/10 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="p-8 rounded-2xl bg-white/50 border border-japan-indigo/10 shadow-sm"
+          >
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
               <div className="text-center md:text-left">
-                <h3 className="text-xl font-bold text-japan-indigo mb-2">🎁 LINE登録で無料特典</h3>
-                <p className="text-zinc-800 text-sm">AI副業ロードマップPDF + 初回相談無料</p>
+                <h3 className="text-xl font-bold text-japan-indigo mb-2">LINE登録で無料特典</h3>
+                <p className="text-zinc-600 text-sm">AI副業ロードマップPDF + 初回相談無料</p>
               </div>
               <a
                 href="https://lin.ee/VAYurUv"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-[#06C755] bg-japan-indigo text-white px-6 py-3 rounded-full font-bold hover:brightness-110 transition-all"
+                className="flex items-center gap-2 bg-[#06C755] text-white px-6 py-3 rounded-full font-bold hover:brightness-110 transition-all"
               >
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
@@ -335,22 +314,27 @@ export default function Home() {
                 LINEで友だち追加
               </a>
             </div>
-          </div>
+          </motion.div>
+        </div>
+      </section>
 
+      {/* ===== 7. Footer ===== */}
+      <footer className="w-full py-20 text-center border-t border-japan-indigo/5 bg-japan-indigo/5">
+        <div className="max-w-4xl mx-auto px-4">
           {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 text-zinc-800 font-medium text-sm">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 text-zinc-600 font-medium text-sm">
             <a href="/about" className="hover:text-japan-indigo transition-colors">About</a>
             <a href="/philosophy" className="hover:text-japan-indigo transition-colors">Philosophy</a>
+            <a href="/services" className="hover:text-japan-indigo transition-colors">Services</a>
             <a href="/sessions" className="hover:text-japan-indigo transition-colors">Sessions</a>
             <Link href="/blog" className="hover:text-japan-indigo transition-colors">Blog</Link>
             <a href="/faq" className="hover:text-japan-indigo transition-colors">FAQ</a>
             <a href="/contact" className="hover:text-japan-indigo transition-colors">Contact</a>
-            <a href="https://ai-diagnosis-six.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition-colors">🤖 AI診断</a>
             <a href="https://lin.ee/VAYurUv" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 transition-colors">LINE</a>
             <a href="/privacy" className="hover:text-japan-indigo transition-colors">プライバシーポリシー</a>
             <a href="/legal" className="hover:text-japan-indigo transition-colors">特定商取引法に基づく表記</a>
           </div>
-          <p className="text-zinc-700 text-sm tracking-widest uppercase">© 2026 Takahiro Motoyama. Designed for Self-Determination.</p>
+          <p className="text-zinc-500 text-sm tracking-widest uppercase">&copy; 2026 Takahiro Motoyama. Designed for Self-Determination.</p>
         </div>
       </footer>
     </main>
