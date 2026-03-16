@@ -2,9 +2,20 @@
 
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useIsMobile } from "@/hooks/useIsMobile";
+
+/**
+ * Returns the WebP image path, choosing a mobile-optimised variant
+ * when the viewport is narrow.
+ */
+function bgUrl(name: string, mobile: boolean): string {
+    const suffix = mobile ? "-mobile" : "";
+    return `url("/images/${name}${suffix}.webp")`;
+}
 
 export const ParallaxBackground = () => {
     const { scrollYProgress } = useScroll();
+    const isMobile = useIsMobile();
 
     // 各レイヤーの動くスピード（割合）を定義
     const yBack = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
@@ -20,7 +31,7 @@ export const ParallaxBackground = () => {
             >
                 <div
                     className="h-[120vh] w-full bg-cover bg-center"
-                    style={{ backgroundImage: 'url("/images/back.png")' }}
+                    style={{ backgroundImage: bgUrl("back", isMobile) }}
                 />
             </motion.div>
 
@@ -31,7 +42,7 @@ export const ParallaxBackground = () => {
             >
                 <div
                     className="h-[150vh] w-full bg-cover bg-center"
-                    style={{ backgroundImage: 'url("/images/middle.png")' }}
+                    style={{ backgroundImage: bgUrl("middle", isMobile) }}
                 />
             </motion.div>
 
@@ -42,7 +53,7 @@ export const ParallaxBackground = () => {
             >
                 <div
                     className="h-[200vh] w-full bg-cover bg-center"
-                    style={{ backgroundImage: 'url("/images/overlay.png")' }}
+                    style={{ backgroundImage: bgUrl("overlay", isMobile) }}
                 />
             </motion.div>
         </div>
