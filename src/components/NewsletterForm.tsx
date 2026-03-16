@@ -27,11 +27,8 @@ export default function NewsletterForm() {
   };
 
   return (
-    <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 relative overflow-hidden group">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-teal-500/10 transition-colors duration-500" />
-
-      <div className="relative z-10 text-center max-w-lg mx-auto">
+    <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 relative overflow-hidden">
+      <div className="text-center max-w-lg mx-auto">
         <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/10 text-teal-400 mb-6">
           <Mail size={24} />
         </div>

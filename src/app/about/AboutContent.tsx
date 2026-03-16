@@ -60,13 +60,11 @@ export default function AboutContent() {
             <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20">
                 {/* Hero Section */}
                 <section className="relative w-full py-24 px-4">
-                    <div className="absolute inset-0 bg-gradient-to-b from-japan-indigo/5 via-japan-violet/5 to-transparent" />
-
                     <motion.div
                         initial="hidden"
                         animate="visible"
                         variants={containerVariants}
-                        className="relative z-10 max-w-4xl mx-auto text-center"
+                        className="max-w-4xl mx-auto text-center"
                     >
                         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-japan-indigo/10 to-japan-violet/10 border border-japan-indigo/10 mb-8">
                             <Sparkles className="w-4 h-4 text-teal-400" />
