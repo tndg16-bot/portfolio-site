@@ -7,7 +7,7 @@ tags:
   - "失敗履歴書"
   - "挫折からの学び"
   - "自己分析"
-published: true
+published: false
 slug: "failure-resume-asset"
 ---
 

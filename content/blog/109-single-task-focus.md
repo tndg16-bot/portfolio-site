@@ -8,7 +8,7 @@ tags:
   - "マルチタスク"
   - "集中力"
   - "ディープワーク"
-published: true
+published: false
 slug: "single-task-focus"
 ---
 

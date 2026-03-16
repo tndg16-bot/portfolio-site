@@ -7,7 +7,7 @@ tags:
   - "セルフトーク"
   - "内なる声"
   - "自己肯定感"
-published: true
+published: false
 slug: "improve-self-talk-quality"
 ---
 
