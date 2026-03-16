@@ -40,8 +40,8 @@ export default function WorksCollection() {
         variants={containerVariants}
       >
         <div className="flex items-center gap-3 mb-8">
-          <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl">
-            <Rocket className="h-6 w-6 bg-japan-indigo text-white" />
+          <div className="flex items-center justify-center w-12 h-12 bg-japan-indigo rounded-xl">
+            <Rocket className="h-6 w-6 text-white" />
           </div>
           <div>
             <h2 className="text-3xl font-bold text-japan-indigo">
@@ -148,8 +148,8 @@ export default function WorksCollection() {
         variants={containerVariants}
       >
         <div className="flex items-center gap-3 mb-8">
-          <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl">
-            <Code className="h-6 w-6 bg-japan-indigo text-white" />
+          <div className="flex items-center justify-center w-12 h-12 bg-japan-indigo rounded-xl">
+            <Code className="h-6 w-6 text-white" />
           </div>
           <div>
             <h2 className="text-3xl font-bold text-japan-indigo">
@@ -262,8 +262,8 @@ export default function WorksCollection() {
         variants={containerVariants}
       >
         <div className="flex items-center gap-3 mb-8">
-          <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl">
-            <BookOpen className="h-6 w-6 bg-japan-indigo text-white" />
+          <div className="flex items-center justify-center w-12 h-12 bg-japan-gold rounded-xl">
+            <BookOpen className="h-6 w-6 text-white" />
           </div>
           <div>
             <h2 className="text-3xl font-bold text-japan-indigo">
@@ -321,7 +321,7 @@ export default function WorksCollection() {
             <h4 className="font-semibold text-japan-indigo mb-4">学習カテゴリー</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { icon: '🤖', label: 'AI活用', color: 'bg-violet-100 text-violet-700' },
+                { icon: '🤖', label: 'AI活用', color: 'bg-japan-indigo/10 text-japan-indigo' },
                 { icon: '💻', label: 'プログラミング', color: 'bg-blue-100 text-blue-700' },
                 { icon: '📝', label: 'ライティング', color: 'bg-green-100 text-green-700' },
                 { icon: '🎯', label: '生産性', color: 'bg-amber-100 text-amber-700' },

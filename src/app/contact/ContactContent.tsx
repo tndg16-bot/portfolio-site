@@ -8,7 +8,7 @@ import Header from '@/components/Header';
 
 const BookingForm = dynamic(() => import('@/components/BookingForm'), {
     loading: () => <div className="flex items-center justify-center min-h-[400px]">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-400"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-japan-indigo"></div>
     </div>,
     ssr: true
 });
@@ -94,19 +94,20 @@ export default function ContactContent() {
             <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20">
                 {/* Hero Section */}
                 <section className="relative w-full py-24 px-4">
+                    <div className="absolute inset-0 bg-japan-cream" />
                     <motion.div
                         initial="hidden"
                         animate="visible"
                         variants={containerVariants}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-japan-indigo/10 to-japan-violet/10 border border-japan-indigo/10 mb-8">
-                            <Send className="w-4 h-4 text-teal-400" />
+                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/10 border border-japan-indigo/10 mb-8">
+                            <Send className="w-4 h-4 text-japan-indigo" />
                             <span className="text-sm text-zinc-800">お問い合わせはこちら</span>
                         </motion.div>
 
                         <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold mb-6">
-                            <span className="bg-gradient-to-r from-white via-teal-200 to-purple-200 bg-clip-text text-transparent">
+                            <span className="text-japan-indigo">
                                 あなたの一歩を
                             </span>
                             <br />
@@ -138,28 +139,28 @@ export default function ContactContent() {
                                 variants={itemVariants}
                                 whileHover={{ scale: 1.02, y: -5 }}
                                 className={`group relative p-8 rounded-2xl border transition-all duration-300 ${method.primary
-                                        ? 'bg-gradient-to-br from-teal-500/20 to-purple-500/20 border-teal-500/30 hover:border-teal-400/50'
+                                        ? 'bg-japan-indigo/10 border-japan-indigo/20 hover:border-japan-indigo/40'
                                         : 'bg-white/60 border-japan-indigo/10 hover:border-japan-indigo/20 hover:bg-japan-indigo/5'
                                     }`}
                             >
                                 <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${method.primary
-                                        ? 'bg-gradient-to-br from-teal-400 to-purple-500'
+                                        ? 'bg-japan-indigo'
                                         : 'bg-japan-indigo/5 group-hover:bg-japan-indigo/10'
                                     } transition-colors`}>
-                                    <method.icon className="w-7 h-7 text-japan-indigo" />
+                                    <method.icon className={`w-7 h-7 ${method.primary ? 'text-white' : 'text-japan-indigo'}`} />
                                 </div>
 
                                 <h3 className="text-xl font-bold text-japan-indigo mb-3">{method.title}</h3>
                                 <p className="text-zinc-700 mb-6 leading-relaxed">{method.description}</p>
 
-                                <div className={`inline-flex items-center gap-2 font-medium ${method.primary ? 'text-teal-400' : 'text-zinc-800 group-hover:text-white'
+                                <div className={`inline-flex items-center gap-2 font-medium ${method.primary ? 'text-japan-indigo' : 'text-zinc-800 group-hover:text-japan-indigo'
                                     } transition-colors`}>
                                     {method.action}
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </div>
 
                                 {method.primary && (
-                                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-teal-400/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    <div className="absolute inset-0 rounded-2xl bg-japan-indigo/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 )}
                             </motion.a>
                         ))}
@@ -202,8 +203,8 @@ export default function ContactContent() {
 
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center flex-shrink-0">
-                                        <MapPin className="w-5 h-5 text-teal-400" />
+                                    <div className="w-10 h-10 rounded-lg bg-japan-indigo/10 flex items-center justify-center flex-shrink-0">
+                                        <MapPin className="w-5 h-5 text-japan-indigo" />
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-japan-indigo mb-1">実施方法</h4>
@@ -213,8 +214,8 @@ export default function ContactContent() {
                                 </div>
 
                                 <div className="flex items-start gap-4">
-                                    <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0">
-                                        <Clock className="w-5 h-5 text-purple-400" />
+                                    <div className="w-10 h-10 rounded-lg bg-japan-indigo/10 flex items-center justify-center flex-shrink-0">
+                                        <Clock className="w-5 h-5 text-japan-indigo" />
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-japan-indigo mb-1">対応時間</h4>
@@ -241,8 +242,8 @@ export default function ContactContent() {
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-4 p-4 rounded-xl bg-white/60 hover:bg-japan-indigo/5 border border-japan-indigo/10 hover:border-japan-indigo/20 transition-all group"
                                     >
-                                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center">
-                                            <social.icon className="w-6 h-6 text-blue-400" />
+                                        <div className="w-12 h-12 rounded-xl bg-japan-indigo/10 flex items-center justify-center">
+                                            <social.icon className="w-6 h-6 text-japan-indigo" />
                                         </div>
                                         <div className="flex-1">
                                             <h4 className="font-medium text-japan-indigo">{social.name}</h4>
@@ -253,8 +254,8 @@ export default function ContactContent() {
                                 ))}
                             </div>
 
-                            <div className="mt-6 p-4 rounded-xl bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/20">
-                                <p className="text-sm text-amber-700">
+                            <div className="mt-6 p-4 rounded-xl bg-japan-gold/10 border border-japan-gold/20">
+                                <p className="text-sm text-japan-charcoal">
                                     💡 LinkedInでは、AIと人間の協働に関する考察や、プロジェクトの進捗を発信しています。
                                 </p>
                             </div>
@@ -283,11 +284,11 @@ export default function ContactContent() {
                                     className="p-6 rounded-2xl bg-white/60 border border-japan-indigo/10 hover:border-japan-indigo/20 transition-colors"
                                 >
                                     <h3 className="text-lg font-medium text-japan-indigo mb-3 flex items-start gap-3">
-                                        <span className="text-teal-400 font-bold">Q.</span>
+                                        <span className="text-japan-indigo font-bold">Q.</span>
                                         {faq.question}
                                     </h3>
                                     <p className="text-zinc-700 pl-7 leading-relaxed">
-                                        <span className="text-purple-400 font-bold mr-2">A.</span>
+                                        <span className="text-japan-gold font-bold mr-2">A.</span>
                                         {faq.answer}
                                     </p>
                                 </motion.div>
@@ -303,7 +304,7 @@ export default function ContactContent() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={containerVariants}
-                        className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-500/20 via-purple-500/10 to-pink-500/20 border border-japan-indigo/10 p-12 text-center"
+                        className="relative overflow-hidden rounded-3xl bg-japan-indigo/5 border border-japan-indigo/10 p-12 text-center"
                     >
                         <motion.div variants={itemVariants} className="relative z-10">
                             <h2 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4">
@@ -317,7 +318,7 @@ export default function ContactContent() {
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link
                                     href="/sessions#booking"
-                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
+                                    className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-japan-indigo text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-japan-indigo/25"
                                 >
                                     <Calendar className="w-5 h-5" />
                                     無料相談を予約する
@@ -339,12 +340,12 @@ export default function ContactContent() {
                     <div className="max-w-6xl mx-auto px-4">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                             <div className="flex gap-6 text-zinc-700 text-sm">
-                                <Link href="/about" className="hover:text-teal-400 transition-colors">About</Link>
-                                <Link href="/philosophy" className="hover:text-teal-400 transition-colors">Philosophy</Link>
-                                <Link href="/sessions" className="hover:text-teal-400 transition-colors">Sessions</Link>
-                                <Link href="/contact" className="hover:text-teal-400 transition-colors">Contact</Link>
-                                <Link href="/privacy" className="hover:text-teal-400 transition-colors">プライバシーポリシー</Link>
-                                <Link href="/legal" className="hover:text-teal-400 transition-colors">特定商取引法に基づく表記</Link>
+                                <Link href="/about" className="hover:text-japan-indigo transition-colors">About</Link>
+                                <Link href="/philosophy" className="hover:text-japan-indigo transition-colors">Philosophy</Link>
+                                <Link href="/sessions" className="hover:text-japan-indigo transition-colors">Sessions</Link>
+                                <Link href="/contact" className="hover:text-japan-indigo transition-colors">Contact</Link>
+                                <Link href="/privacy" className="hover:text-japan-indigo transition-colors">プライバシーポリシー</Link>
+                                <Link href="/legal" className="hover:text-japan-indigo transition-colors">特定商取引法に基づく表記</Link>
                             </div>
                             <p className="text-zinc-700 text-sm">
                                 © 2026 Takahiro Motoyama. All rights reserved.
