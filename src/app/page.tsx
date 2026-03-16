@@ -79,7 +79,7 @@ export default function Home() {
 
           <motion.p
             variants={itemVariants}
-            className="mb-10 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto text-zinc-600"
+            className="mb-10 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto text-zinc-800"
           >
             溢れる情報と「正解」の押し付けから、魂の呼吸を守り抜く。<br />
             深い静寂の中で研ぎ澄まされる直感と、最先端AIの力が、<br />
@@ -157,7 +157,7 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-japan-indigo mb-4">サービス</h2>
-            <p className="text-zinc-600 text-lg max-w-2xl mx-auto">
+            <p className="text-zinc-800 text-lg max-w-2xl mx-auto">
               あなたの課題に合わせた3つのアプローチで、自己決定の力を取り戻します。
             </p>
           </motion.div>
@@ -201,7 +201,7 @@ export default function Home() {
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-japan-indigo mb-3">{service.title}</h3>
-                  <p className="text-zinc-600 mb-4 leading-relaxed">{service.description}</p>
+                  <p className="text-zinc-800 mb-4 leading-relaxed">{service.description}</p>
                   <span className="inline-flex items-center gap-1 text-japan-indigo font-medium text-sm group-hover:gap-2 transition-all">
                     詳しく見る
                     <ArrowRight className="h-4 w-4" />
@@ -224,7 +224,7 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-japan-indigo mb-4">実績・ポートフォリオ</h2>
-            <p className="text-zinc-600 text-lg max-w-2xl mx-auto">
+            <p className="text-zinc-800 text-lg max-w-2xl mx-auto">
               開発したサービス・ツール・学習教材をご覧ください。
             </p>
           </motion.div>
@@ -250,7 +250,7 @@ export default function Home() {
             {/* Bio */}
             <div className="text-center md:text-left">
               <h2 className="text-2xl md:text-3xl font-bold text-japan-indigo mb-3">Takahiro Motoyama</h2>
-              <p className="text-zinc-600 leading-relaxed mb-2">
+              <p className="text-zinc-800 leading-relaxed mb-2">
                 AI時代の「自己決定」を支援するコーチ兼エンジニア。
                 情報過多の時代に、静寂の中で研ぎ澄まされる直感と最先端AIの力を掛け合わせ、
                 一人ひとりが自分だけの羅針盤を手にするためのセッション・プロダクトを提供しています。
@@ -283,7 +283,7 @@ export default function Home() {
             className="text-center mb-8"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4">最新情報を受け取る</h2>
-            <p className="text-zinc-600 text-lg">ニュースレターやLINEで、限定コンテンツをお届けします。</p>
+            <p className="text-zinc-800 text-lg">ニュースレターやLINEで、限定コンテンツをお届けします。</p>
           </motion.div>
 
           {/* Newsletter */}
@@ -300,7 +300,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">
               <div className="text-center md:text-left">
                 <h3 className="text-xl font-bold text-japan-indigo mb-2">LINE登録で無料特典</h3>
-                <p className="text-zinc-600 text-sm">AI副業ロードマップPDF + 初回相談無料</p>
+                <p className="text-zinc-800 text-sm">AI副業ロードマップPDF + 初回相談無料</p>
               </div>
               <a
                 href="https://lin.ee/VAYurUv"
@@ -322,7 +322,7 @@ export default function Home() {
       <footer className="w-full py-20 text-center border-t border-japan-indigo/5 bg-japan-indigo/5">
         <div className="max-w-4xl mx-auto px-4">
           {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 text-zinc-600 font-medium text-sm">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 text-zinc-800 font-medium text-sm">
             <a href="/about" className="hover:text-japan-indigo transition-colors">About</a>
             <a href="/philosophy" className="hover:text-japan-indigo transition-colors">Philosophy</a>
             <a href="/services" className="hover:text-japan-indigo transition-colors">Services</a>
@@ -334,7 +334,7 @@ export default function Home() {
             <a href="/privacy" className="hover:text-japan-indigo transition-colors">プライバシーポリシー</a>
             <a href="/legal" className="hover:text-japan-indigo transition-colors">特定商取引法に基づく表記</a>
           </div>
-          <p className="text-zinc-500 text-sm tracking-widest uppercase">&copy; 2026 Takahiro Motoyama. Designed for Self-Determination.</p>
+          <p className="text-zinc-700 text-sm tracking-widest uppercase">&copy; 2026 Takahiro Motoyama. Designed for Self-Determination.</p>
         </div>
       </footer>
     </main>
