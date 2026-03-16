@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { HelpCircle, Calendar, CheckCircle2, Search, List } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import Breadcrumb from '@/components/Breadcrumb';
 
 type FAQ = {
   id: string;
@@ -173,6 +174,9 @@ export default function FAQContent() {
 
   return (
     <>
+      <div className="flex w-full justify-center pt-20">
+        <Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: 'よくある質問' }]} />
+      </div>
       <section className="relative w-full min-h-[60vh] flex items-center justify-center px-4 py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-japan-indigo/5 via-japan-indigo/3 to-transparent" />
 
@@ -183,7 +187,7 @@ export default function FAQContent() {
           className="relative z-10 max-w-4xl mx-auto text-center"
         >
           <div className="mb-6 flex justify-center">
-            <span className="inline-block rounded-full bg-japan-indigo/10 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/20">
+            <span className="inline-block rounded-full bg-japan-indigo/15 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/25">
               FAQ
             </span>
           </div>
@@ -317,7 +321,7 @@ export default function FAQContent() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="text-xs px-2 py-1 rounded-full bg-japan-indigo/10 text-japan-indigo">
+                      <span className="text-xs px-2 py-1 rounded-full bg-japan-indigo/15 text-japan-indigo">
                         {faq.category}
                       </span>
                     </div>

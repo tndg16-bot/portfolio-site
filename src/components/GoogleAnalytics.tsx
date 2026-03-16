@@ -59,6 +59,15 @@ export default function GoogleAnalytics() {
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
+
+          // Google Consent Mode v2 — default to denied, CookieConsent will update
+          gtag('consent', 'default', {
+            analytics_storage: 'denied',
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+          });
+
           gtag('js', new Date());
           gtag('config', '${GA_MEASUREMENT_ID}', {
             page_title: window.document.title,

@@ -4,6 +4,7 @@ import { motion, Variants } from 'framer-motion';
 import { Target, Brain, Briefcase, Heart, CheckCircle, XCircle, ArrowRight, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import Header from '@/components/Header';
+import Breadcrumb from '@/components/Breadcrumb';
 
 export default function AboutContent() {
     const containerVariants: Variants = {
@@ -58,6 +59,7 @@ export default function AboutContent() {
         <>
             <Header />
             <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20">
+                <Breadcrumb items={[{ label: 'ホーム', href: '/' }, { label: 'About' }]} />
                 {/* Hero Section */}
                 <section className="relative w-full py-24 px-4">
                     <div className="absolute inset-0 bg-japan-cream" />
@@ -67,7 +69,7 @@ export default function AboutContent() {
                         variants={containerVariants}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/10 border border-japan-indigo/10 mb-8">
+                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/15 border border-japan-indigo/20 mb-8">
                             <Sparkles className="w-4 h-4 text-japan-indigo" />
                             <span className="text-sm text-zinc-800">About</span>
                         </motion.div>
