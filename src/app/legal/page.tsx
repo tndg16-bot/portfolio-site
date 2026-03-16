@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '特定商取引法に基づく表記',
-  description: '特定商取引法に基づく表記',
+  description: '特定商取引法に基づく表記。事業者情報、支払方法、キャンセルポリシー等',
 };
 
 export default function LegalPage() {
