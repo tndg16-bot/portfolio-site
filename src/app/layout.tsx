@@ -70,8 +70,13 @@ export const metadata: Metadata = {
     // creator: "Set your Twitter handle here when available"
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png"
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
   manifest: "/manifest.json",
   alternates: {
@@ -87,9 +92,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`scroll-smooth ${notoSerifJP.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#165E83" />
       </head>
       <body className={`${inter.variable} ${notoJP.variable} font-sans antialiased japan-bg overflow-x-hidden`}>
         <GoogleAnalytics />
