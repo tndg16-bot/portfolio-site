@@ -8,6 +8,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import CookieConsent from '@/components/CookieConsent';
+import MobileCTA from '@/components/MobileCTA';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -119,6 +120,7 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <SpeedInsights />
         </Suspense>
+        <MobileCTA />
         <CookieConsent />
       </body>
     </html>
