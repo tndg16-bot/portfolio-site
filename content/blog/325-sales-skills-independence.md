@@ -11,6 +11,12 @@ tags:
   - "スキル転換"
 slug: "sales-skills-independence"
 published: true
+series: "営業マンの独立ロードマップ"
+seriesOrder: 5
+relatedArticles:
+  - "cant-take-action-psychology"
+  - "sales-side-hustle-roadmap"
+  - "strengths-finder"
 ---
 
 ## 「営業しかやってこなかった」という焦り

@@ -11,6 +11,12 @@ tags:
   - "自己決定"
 slug: "cant-take-action-psychology"
 published: true
+series: "営業マンの独立ロードマップ"
+seriesOrder: 4
+relatedArticles:
+  - "coaching-experience-story"
+  - "sales-skills-independence"
+  - "procrastination-psychology"
 ---
 
 ## 情報は十分にある。足りないのは「行動」だけ

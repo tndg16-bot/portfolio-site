@@ -11,6 +11,12 @@ tags:
   - "転職"
 slug: "28-career-crossroads"
 published: true
+series: "営業マンの独立ロードマップ"
+seriesOrder: 2
+relatedArticles:
+  - "sales-side-hustle-roadmap"
+  - "coaching-experience-story"
+  - "30s-career-change-guide"
 ---
 
 ## 28歳、日曜日の夜に感じる「このままでいいのか」
