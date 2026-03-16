@@ -4,27 +4,29 @@ import { motion } from 'framer-motion';
 import { Code, Rocket, BookOpen, ExternalLink, Github, ChevronRight } from 'lucide-react';
 import { getProjectsByCategory } from '@/data/projects';
 import Link from 'next/link';
+import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 export default function WorksCollection() {
+  const prefersReducedMotion = useReducedMotion();
   const services = getProjectsByCategory('main');
   const tools = getProjectsByCategory('tool');
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: prefersReducedMotion ? {} : { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
+      transition: prefersReducedMotion ? { duration: 0 } : {
         staggerChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: prefersReducedMotion ? {} : { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
+      transition: prefersReducedMotion ? { duration: 0 } : {
         duration: 0.5,
       },
     },
@@ -342,9 +344,10 @@ export default function WorksCollection() {
 
       {/* CTA Section */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+        whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={prefersReducedMotion ? { duration: 0 } : undefined}
         className="text-center py-12"
       >
         <h3 className="text-2xl font-bold text-japan-indigo mb-4">

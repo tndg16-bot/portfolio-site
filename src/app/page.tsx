@@ -5,6 +5,7 @@ import { ArrowRight, User } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import Link from 'next/link';
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 const BookingForm = dynamic(() => import('@/components/BookingForm'), {
   loading: () => <div className="flex items-center justify-center min-h-[400px]">
@@ -28,30 +29,31 @@ const NewsletterForm = dynamic(() => import('@/components/NewsletterForm'), {
 });
 
 export default function Home() {
+  const prefersReducedMotion = useReducedMotion();
+
   const containerVariants: Variants = {
-    hidden: { opacity: 0 },
+    hidden: prefersReducedMotion ? {} : { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
+      transition: prefersReducedMotion ? { duration: 0 } : {
         staggerChildren: 0.2
       }
     }
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: prefersReducedMotion ? {} : { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-        ease: "easeOut"
+        ...(prefersReducedMotion ? { duration: 0 } : { duration: 0.8, ease: "easeOut" })
       }
     }
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20 text-japan-charcoal">
+    <main id="main-content" className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20 text-japan-charcoal">
       <Header />
 
       {/* ===== 1. Hero Section ===== */}
@@ -114,10 +116,10 @@ export default function Home() {
       <section id="services" className="w-full py-24 bg-white/40">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-japan-indigo mb-4">サービス紹介</h2>
@@ -149,10 +151,10 @@ export default function Home() {
             ].map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
+                whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
+                transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, delay: index * 0.15 }}
               >
                 <Link
                   href={service.href}
@@ -176,10 +178,10 @@ export default function Home() {
       <section id="works" className="w-full py-24">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-japan-indigo mb-4">実績・ポートフォリオ</h2>
@@ -195,10 +197,10 @@ export default function Home() {
       <section id="about" className="w-full py-24 bg-white/40">
         <div className="max-w-4xl mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6 }}
             className="glass-panel rounded-3xl p-8 md:p-12 border border-japan-indigo/10 flex flex-col md:flex-row items-center gap-8"
           >
             {/* Photo Placeholder */}
@@ -235,10 +237,10 @@ export default function Home() {
       <section id="newsletter" className="w-full py-24 bg-white/40">
         <div className="max-w-4xl mx-auto px-4 space-y-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6 }}
             className="text-center mb-8"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4">最新情報を受け取る</h2>
@@ -251,10 +253,10 @@ export default function Home() {
 
           {/* LINE CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, delay: 0.2 }}
             className="p-8 rounded-2xl bg-white/50 border border-japan-indigo/10 shadow-sm"
           >
             <div className="flex flex-col md:flex-row items-center justify-center gap-6">

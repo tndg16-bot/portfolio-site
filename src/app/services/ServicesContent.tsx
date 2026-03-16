@@ -7,23 +7,28 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import { getAllServices } from "@/data/services";
 import { SessionService } from "@/types/services";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
-const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: { staggerChildren: 0.1 }
-    }
-};
+function getVariants(prefersReducedMotion: boolean) {
+    const containerVariants: Variants = {
+        hidden: prefersReducedMotion ? {} : { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: prefersReducedMotion ? { duration: 0 } : { staggerChildren: 0.1 }
+        }
+    };
 
-const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: "easeOut" }
-    }
-};
+    const itemVariants: Variants = {
+        hidden: prefersReducedMotion ? {} : { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: prefersReducedMotion ? { duration: 0 } : { duration: 0.6, ease: "easeOut" }
+        }
+    };
+
+    return { containerVariants, itemVariants };
+}
 
 const FeatureCheck: React.FC<{ text: string }> = ({ text }) => (
     <div className="flex items-start gap-3 text-zinc-700">
@@ -50,7 +55,7 @@ const getCardColor = (category: string) => {
 
 type TabKey = 'all' | 'individual' | 'business';
 
-const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ service, index }) => {
+const ServiceCard: React.FC<{ service: SessionService; index: number; itemVariants: Variants }> = ({ service, index, itemVariants }) => {
     return (
         <motion.div
             variants={itemVariants}
@@ -174,6 +179,8 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
 };
 
 export default function ServicesContent() {
+    const prefersReducedMotion = useReducedMotion();
+    const { containerVariants, itemVariants } = getVariants(prefersReducedMotion);
     const allServices = getAllServices();
     const [activeTab, setActiveTab] = useState<TabKey>('all');
 
@@ -216,9 +223,9 @@ export default function ServicesContent() {
                 {/* Social Proof Bar */}
                 <section className="w-full max-w-4xl px-4 mb-8">
                     <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
+                        initial={prefersReducedMotion ? {} : { opacity: 0, y: 10 }}
+                        animate={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
+                        transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, delay: 0.3 }}
                         className="bg-japan-indigo/5 border border-japan-indigo/10 rounded-2xl py-4 px-6 text-center"
                     >
                         <p className="text-japan-indigo font-bold text-lg">
@@ -271,7 +278,7 @@ export default function ServicesContent() {
                         {filteredServices.map((service) => {
                             const originalIndex = allServices.findIndex((s) => s.id === service.id);
                             return (
-                                <ServiceCard key={service.id} service={service} index={originalIndex} />
+                                <ServiceCard key={service.id} service={service} index={originalIndex} itemVariants={itemVariants} />
                             );
                         })}
                     </motion.div>
