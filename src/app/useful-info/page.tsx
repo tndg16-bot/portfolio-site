@@ -77,7 +77,7 @@ export default function UsefulInfoPage() {
       <div className="min-h-screen pt-20">
         {/* Hero Section */}
         <section className="relative w-full py-24 px-4">
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-teal-500/5 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-japan-indigo/5 via-japan-indigo/5 to-transparent" />
           
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -86,13 +86,13 @@ export default function UsefulInfoPage() {
             className="relative z-10 max-w-4xl mx-auto text-center"
           >
             <div className="mb-6 flex justify-center">
-              <span className="inline-block rounded-full bg-teal-500/10 px-4 py-1 text-sm font-medium text-teal-400 border border-teal-500/20">
+              <span className="inline-block rounded-full bg-japan-indigo/10 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/20">
                 Useful Resources
               </span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white via-teal-200 to-purple-200 bg-clip-text text-transparent">
+              <span className="text-japan-indigo">
                 お役立ち情報
               </span>
             </h1>
@@ -118,8 +118,8 @@ export default function UsefulInfoPage() {
             >
               <div className="glass-panel rounded-3xl p-8">
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-500/20 to-purple-500/20 flex items-center justify-center">
-                    <resourceGroup.icon className="w-7 h-7 text-teal-400" />
+                  <div className="w-14 h-14 rounded-xl bg-japan-indigo/10 flex items-center justify-center">
+                    <resourceGroup.icon className="w-7 h-7 text-japan-indigo" />
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold bg-japan-indigo text-white">
                     {resourceGroup.category}
@@ -138,15 +138,15 @@ export default function UsefulInfoPage() {
                     >
                       <Link
                         href={item.url}
-                        className="block p-6 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-teal-500/30 transition-all"
+                        className="block p-6 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-japan-indigo/30 transition-all"
                       >
-                        <h3 className="text-lg font-semibold bg-japan-indigo text-white mb-3 group-hover:text-teal-400 transition-colors">
+                        <h3 className="text-lg font-semibold bg-japan-indigo text-white mb-3 group-hover:text-japan-indigo transition-colors">
                           {item.title}
                         </h3>
                         <p className="text-zinc-300 leading-relaxed mb-4">
                           {item.description}
                         </p>
-                        <div className="flex items-center gap-2 text-teal-400 group-hover:translate-x-1 transition-transform">
+                        <div className="flex items-center gap-2 text-japan-indigo group-hover:translate-x-1 transition-transform">
                           <span className="text-sm font-medium">詳細を見る</span>
                           <ArrowRight className="w-4 h-4" />
                         </div>
@@ -168,7 +168,7 @@ export default function UsefulInfoPage() {
             className="glass-panel rounded-3xl p-8 md:p-12 text-center"
           >
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Book className="w-6 h-6 text-teal-400" />
+              <Book className="w-6 h-6 text-japan-indigo" />
               <h2 className="text-2xl md:text-3xl font-bold bg-japan-indigo text-white">
                 ブログも公開中
               </h2>
@@ -194,10 +194,8 @@ export default function UsefulInfoPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-500/20 via-purple-500/10 to-pink-500/20 border border-white/10 p-12 text-center"
+            className="relative overflow-hidden rounded-3xl bg-japan-indigo border border-white/10 p-12 text-center"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(45,212,191,0.15),transparent_50%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.15),transparent_50%)]" />
             
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4">
@@ -212,7 +210,7 @@ export default function UsefulInfoPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/sessions"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-japan-indigo text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-teal-500/25"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-japan-indigo text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-japan-indigo/25"
                 >
                   <CheckCircle2 className="w-5 h-5" />
                   セッションを予約
@@ -234,12 +232,12 @@ export default function UsefulInfoPage() {
           <div className="max-w-6xl mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex gap-6 text-zinc-600 text-sm">
-                <Link href="/" className="hover:text-teal-400 transition-colors">Home</Link>
-                <Link href="/about" className="hover:text-teal-400 transition-colors">About</Link>
-                <Link href="/philosophy" className="hover:text-teal-400 transition-colors">Philosophy</Link>
-                <Link href="/sessions" className="hover:text-teal-400 transition-colors">Sessions</Link>
-                <Link href="/contact" className="hover:text-teal-400 transition-colors">Contact</Link>
-                <Link href="/useful-info" className="hover:text-teal-400 transition-colors">Useful Info</Link>
+                <Link href="/" className="hover:text-japan-indigo transition-colors">Home</Link>
+                <Link href="/about" className="hover:text-japan-indigo transition-colors">About</Link>
+                <Link href="/philosophy" className="hover:text-japan-indigo transition-colors">Philosophy</Link>
+                <Link href="/sessions" className="hover:text-japan-indigo transition-colors">Sessions</Link>
+                <Link href="/contact" className="hover:text-japan-indigo transition-colors">Contact</Link>
+                <Link href="/useful-info" className="hover:text-japan-indigo transition-colors">Useful Info</Link>
               </div>
               <p className="text-zinc-700 text-sm">
                 © 2026 Takahiro Motoyama. All rights reserved.
