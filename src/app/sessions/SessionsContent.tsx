@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { CheckCircle2, ArrowRight, Clock, Video, MessageCircle, ShieldCheck, HelpCircle, CalendarDays, User, Briefcase } from "lucide-react";
+import { CheckCircle2, ArrowRight, Clock, Video, MessageCircle, ShieldCheck, HelpCircle, CalendarDays, User, Briefcase, Sparkles } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -59,10 +59,10 @@ export default function SessionsContent() {
     ];
 
     const faqs = [
-        { q: "コーチング経験がなくても大丈夫ですか？", a: "はい。むしろ「初めての方」が多いです。構えず、お話しいただくだけで大丈夫です。" },
+        { q: "コーチング経験がなくても大丈夫ですか？", a: "はい、大丈夫です。参加者のほとんどがコーチング未経験の方です。構えず、お話しいただくだけで十分です。" },
         { q: "どんな話をすればいいかわかりません", a: "問いかけを通じて自然と言葉が出てきます。準備は不要です。" },
         { q: "秘密は守られますか？", a: "はい。お話しいただいた内容は一切外部に漏らしません。" },
-        { q: "1回で効果はありますか？", a: "1回でも「思考の整理」効果を実感される方が多いです。継続は任意です。" },
+        { q: "1回で効果はありますか？", a: "1回のセッションでも「判断軸が言語化できた」「次の一歩が明確になった」という声をいただいています。継続は任意です。" },
     ];
 
     return (
@@ -74,6 +74,33 @@ export default function SessionsContent() {
                     title="お知らせ"
                     message="現在、セッション枠を少数限定でご案内しています。ご希望日時がある場合は、フォーム内の備考欄にご記入ください。"
                 />
+
+                {/* Value Proposition Banner */}
+                <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="w-full max-w-4xl px-4 mb-8"
+                >
+                    <div className="rounded-2xl bg-gradient-to-r from-[#165E83] to-[#1a7a5a] px-6 py-3.5 shadow-lg">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-white/95 text-sm font-medium">
+                            <span className="flex items-center gap-2">
+                                <Clock size={16} className="text-white/80" />
+                                60分の対話
+                            </span>
+                            <span className="hidden sm:block w-px h-4 bg-white/30" aria-hidden="true" />
+                            <span className="flex items-center gap-2">
+                                <Video size={16} className="text-white/80" />
+                                完全オンライン
+                            </span>
+                            <span className="hidden sm:block w-px h-4 bg-white/30" aria-hidden="true" />
+                            <span className="flex items-center gap-2">
+                                <Sparkles size={16} className="text-white/80" />
+                                初回無料
+                            </span>
+                        </div>
+                    </div>
+                </motion.div>
 
                 {/* Hero */}
                 <section className="w-full max-w-4xl px-4 mb-16">
