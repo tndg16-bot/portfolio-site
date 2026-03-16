@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
-import { CheckCircle2, ArrowRight, Clock, Briefcase, GraduationCap, Star, Users, Calendar, Lock, MessageCircle } from "lucide-react";
+import { CheckCircle2, ArrowRight, Clock, Star, Calendar, Lock, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { getAllServices } from "@/data/services";
@@ -27,28 +27,26 @@ const itemVariants: Variants = {
 
 const FeatureCheck: React.FC<{ text: string }> = ({ text }) => (
     <div className="flex items-start gap-3 text-zinc-700">
-        <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
+        <CheckCircle2 className="w-5 h-5 text-japan-indigo shrink-0 mt-0.5" />
         <span>{text}</span>
     </div>
 );
 
 const IdealBadge: React.FC<{ isIdeal: boolean; text: string }> = ({ isIdeal, text }) => (
-    <div className={`flex items-start gap-2 text-sm ${isIdeal ? 'text-teal-600' : 'text-zinc-700'}`}>
+    <div className={`flex items-start gap-2 text-sm ${isIdeal ? 'text-japan-indigo' : 'text-zinc-700'}`}>
         {isIdeal ? <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5" /> : <Lock className="w-4 h-4 shrink-0 mt-0.5" />}
         <span>{text}</span>
     </div>
 );
 
-const cardColors = [
-    'bg-gradient-to-br from-cyan-600 to-cyan-700',     // AIワークショップ
-    'bg-gradient-to-br from-japan-indigo to-blue-800',  // AIコンサル
-    'bg-gradient-to-br from-blue-600 to-blue-700',      // AI継続サポート
-    'bg-gradient-to-br from-teal-600 to-teal-700',      // モヤモヤ整理
-    'bg-gradient-to-br from-indigo-600 to-indigo-700',  // 羅針盤
-    'bg-gradient-to-br from-slate-700 to-slate-800',    // 企業向けWS
-    'bg-gradient-to-br from-amber-600 to-amber-700',    // AI推進支援
-    'bg-gradient-to-br from-violet-600 to-violet-700',  // AI開発
-];
+const getCardColor = (category: string) => {
+    switch (category) {
+        case 'individual': return 'bg-japan-indigo';
+        case 'business': return 'bg-japan-charcoal';
+        case 'both': return 'bg-gradient-to-br from-japan-indigo to-japan-charcoal';
+        default: return 'bg-japan-indigo';
+    }
+};
 
 type TabKey = 'all' | 'individual' | 'business';
 
@@ -70,7 +68,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
 
             <div className="bg-white rounded-3xl shadow-xl border border-zinc-100 overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full flex flex-col">
                 {/* Header */}
-                <div className={`p-8 ${cardColors[index % cardColors.length]} text-white`}>
+                <div className={`p-8 ${getCardColor(service.category)} text-white`}>
                     <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
                     <p className="text-white/90 text-base leading-relaxed">{service.description}</p>
                 </div>
@@ -85,8 +83,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
 
                     {/* Features */}
                     <div className="space-y-3 mb-8 flex-1">
-                        <h4 className="font-semibold text-zinc-800 flex items-center gap-2">
-                            <GraduationCap className="w-5 h-5" />
+                        <h4 className="font-semibold text-zinc-800">
                             サービス内容
                         </h4>
                         {service.features.map((feature, i) => (
@@ -106,12 +103,12 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                             </div>
                         ) : service.pricing.type === 'package' ? (
                             <div>
-                                <p className="text-3xl font-bold text-teal-600 mb-2">{service.pricing.price}</p>
+                                <p className="text-3xl font-bold text-japan-indigo mb-2">{service.pricing.price}</p>
                                 <p className="text-sm text-zinc-800">{service.pricing.notes}</p>
                             </div>
                         ) : service.pricing.type === 'fixed' && service.pricing.price && service.pricing.price !== 'お問い合わせください' ? (
                             <div>
-                                <p className="text-3xl font-bold text-teal-600 mb-2">{service.pricing.price}</p>
+                                <p className="text-3xl font-bold text-japan-indigo mb-2">{service.pricing.price}</p>
                                 <p className="text-sm text-zinc-800">{service.pricing.notes}</p>
                             </div>
                         ) : (
@@ -124,8 +121,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
 
                     {/* Ideal For */}
                     <div className="space-y-2 mb-6">
-                        <h4 className="font-semibold text-zinc-800 flex items-center gap-2">
-                            <Users className="w-5 h-5" />
+                        <h4 className="font-semibold text-zinc-800">
                             こんな方におすすめ
                         </h4>
                         {service.idealFor.map((item, i) => (
@@ -136,8 +132,7 @@ const ServiceCard: React.FC<{ service: SessionService; index: number }> = ({ ser
                     {/* Not Ideal For */}
                     {service.notIdealFor && service.notIdealFor.length > 0 && (
                         <div className="space-y-2 mb-8">
-                            <h4 className="font-semibold text-zinc-800 flex items-center gap-2">
-                                <Briefcase className="w-5 h-5" />
+                            <h4 className="font-semibold text-zinc-800">
                                 注意点
                             </h4>
                             {service.notIdealFor.map((item, i) => (
@@ -207,18 +202,13 @@ export default function ServicesContent() {
                         variants={containerVariants}
                         className="text-center"
                     >
-                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-japan-indigo/10 to-japan-gold/10 border border-japan-indigo/10 mb-8">
-                            <Briefcase className="w-4 h-4 text-japan-indigo" />
-                            <span className="text-sm text-zinc-800">Services</span>
-                        </motion.div>
-
                         <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold mb-6 text-zinc-800">
                             サービス紹介
                         </motion.h1>
 
                         <motion.p variants={itemVariants} className="text-xl text-zinc-800 max-w-2xl mx-auto leading-relaxed">
                             AI活用支援からパーソナルコーチングまで。<br />
-                            あなたのビジネスと人生を、次のステージへ。
+                            個人の意思決定から、法人のAI活用まで。
                         </motion.p>
                     </motion.div>
                 </section>
@@ -259,13 +249,13 @@ export default function ServicesContent() {
                 {/* Step-up Flow */}
                 <section className="w-full max-w-4xl px-4 mb-8">
                     <div className="flex flex-wrap justify-center items-center gap-2 text-sm text-zinc-700">
-                        <span className="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full font-medium">ワークショップ</span>
+                        <span className="px-3 py-1 bg-japan-indigo/10 text-japan-indigo rounded-full font-medium">ワークショップ</span>
                         <ArrowRight className="w-4 h-4" />
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full font-medium">3ヶ月コンサル</span>
+                        <span className="px-3 py-1 bg-japan-indigo/10 text-japan-indigo rounded-full font-medium">3ヶ月コンサル</span>
                         <ArrowRight className="w-4 h-4" />
-                        <span className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full font-medium">継続サポート</span>
+                        <span className="px-3 py-1 bg-japan-indigo/10 text-japan-indigo rounded-full font-medium">継続サポート</span>
                         <ArrowRight className="w-4 h-4" />
-                        <span className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full font-medium">AI推進（全社）</span>
+                        <span className="px-3 py-1 bg-japan-gold/10 text-japan-charcoal rounded-full font-medium">AI推進（全社）</span>
                     </div>
                 </section>
 
@@ -294,18 +284,15 @@ export default function ServicesContent() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={containerVariants}
-                        className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-japan-indigo via-blue-800 to-indigo-900 p-12 text-center"
+                        className="relative overflow-hidden rounded-3xl bg-japan-indigo p-12 text-center"
                     >
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]" />
-
                         <motion.div variants={itemVariants} className="relative z-10">
                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                                あなたの変化を、今から始めましょう
+                                まずは30分の無料相談から
                             </h2>
                             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                                 まずは無料相談で、あなたの状況をお聞かせください。<br />
-                                完璧なタイミングを待つ必要はありません。
+                                オンラインで、あなたの状況に合わせてご提案します。
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -335,12 +322,12 @@ export default function ServicesContent() {
                     <div className="max-w-6xl mx-auto px-4">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                             <div className="flex gap-6 text-zinc-800 text-sm">
-                                <Link href="/about" className="hover:text-teal-600 transition-colors">About</Link>
-                                <Link href="/philosophy" className="hover:text-teal-600 transition-colors">Philosophy</Link>
-                                <Link href="/sessions" className="hover:text-teal-600 transition-colors">Sessions</Link>
-                                <Link href="/contact" className="hover:text-teal-600 transition-colors">Contact</Link>
-                                <Link href="/privacy" className="hover:text-teal-600 transition-colors">プライバシーポリシー</Link>
-                                <Link href="/legal" className="hover:text-teal-600 transition-colors">特定商取引法に基づく表記</Link>
+                                <Link href="/about" className="hover:text-japan-indigo transition-colors">About</Link>
+                                <Link href="/philosophy" className="hover:text-japan-indigo transition-colors">Philosophy</Link>
+                                <Link href="/sessions" className="hover:text-japan-indigo transition-colors">Sessions</Link>
+                                <Link href="/contact" className="hover:text-japan-indigo transition-colors">Contact</Link>
+                                <Link href="/privacy" className="hover:text-japan-indigo transition-colors">プライバシーポリシー</Link>
+                                <Link href="/legal" className="hover:text-japan-indigo transition-colors">特定商取引法に基づく表記</Link>
                             </div>
                             <p className="text-zinc-700 text-sm">
                                 © 2026 Takahiro Motoyama. All rights reserved.

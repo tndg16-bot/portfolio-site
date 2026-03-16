@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Inter, Noto_Sans_JP } from "next/font/google";
+import { Inter, Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
 import { LiquidCursor } from "@/components/LiquidCursor";
 import { SectionBackground } from "@/components/SectionBackground";
@@ -17,6 +17,12 @@ const notoJP = Noto_Sans_JP({
   variable: "--font-noto-jp",
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+const notoSerifJP = Noto_Serif_JP({
+  variable: "--font-noto-serif",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -80,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className="scroll-smooth">
+    <html lang="ja" className={`scroll-smooth ${notoSerifJP.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

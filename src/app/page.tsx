@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Compass, Cpu, Target, Sparkles, Users, Briefcase, Code, User } from "lucide-react";
+import { ArrowRight, Sparkles, Users, Briefcase, Code, User } from "lucide-react";
 import dynamic from 'next/dynamic';
 import Header from "@/components/Header";
 import Link from 'next/link';
@@ -71,19 +71,19 @@ export default function Home() {
 
           <motion.h1
             variants={itemVariants}
-            className="mb-6 text-4xl font-bold tracking-tight md:text-7xl leading-tight drop-shadow-sm text-japan-indigo"
+            className="mb-6 text-4xl font-bold tracking-tight md:text-7xl leading-tight drop-shadow-sm"
           >
-            静寂の中で、<br />
-            <span className="text-japan-gradient">「自分の直感」</span>を再編する
+            AIと人の力で、<br />
+            <span className="text-japan-gradient">ビジネスの仕組み</span>をつくる
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
             className="mb-10 text-lg md:text-2xl font-light leading-relaxed max-w-2xl mx-auto text-zinc-800"
           >
-            溢れる情報と「正解」の押し付けから、魂の呼吸を守り抜く。<br />
-            深い静寂の中で研ぎ澄まされる直感と、最先端AIの力が、<br />
-            妥協のない「人生の再定義」を静かに加速させます。
+            AI導入コンサルティング・業務自動化・1on1コーチング。<br />
+            個人の副業設計から法人のDX推進まで、<br />
+            戦略立案と実装をワンストップで支援します。
           </motion.p>
 
           <motion.div
@@ -109,41 +109,6 @@ export default function Home() {
           </motion.div>
         </motion.div>
 
-        {/* Floating Icons Background */}
-        <div className="absolute inset-0 z-0 opacity-10">
-          {[
-            { top: "15%", left: "10%", duration: 6 },
-            { top: "25%", left: "80%", duration: 7 },
-            { top: "40%", left: "20%", duration: 8 },
-            { top: "60%", left: "70%", duration: 6 },
-            { top: "75%", left: "30%", duration: 9 },
-            { top: "10%", left: "60%", duration: 7 },
-            { top: "85%", left: "85%", duration: 10 },
-            { top: "50%", left: "5%", duration: 8 },
-          ].map((pos, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: [0.1, 0.4, 0.1],
-                y: [0, -60, 0],
-                x: [0, 30, 0],
-              }}
-              transition={{
-                duration: pos.duration,
-                repeat: Infinity,
-                delay: i * 0.7,
-              }}
-              className="absolute text-japan-indigo"
-              style={{
-                top: pos.top,
-                left: pos.left,
-              }}
-            >
-              {i % 3 === 0 ? <Compass size={40} /> : i % 3 === 1 ? <Cpu size={40} /> : <Target size={40} />}
-            </motion.div>
-          ))}
-        </div>
       </section>
 
       {/* ===== 2. Services Overview Section ===== */}
@@ -156,9 +121,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-japan-indigo mb-4">サービス</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-japan-indigo mb-4">サービス紹介</h2>
             <p className="text-zinc-800 text-lg max-w-2xl mx-auto">
-              あなたの課題に合わせた3つのアプローチで、自己決定の力を取り戻します。
+              個人の副業・キャリア設計から、法人のAI導入・DX推進まで対応しています。
             </p>
           </motion.div>
 
