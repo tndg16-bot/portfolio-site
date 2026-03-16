@@ -1,0 +1,2076 @@
+{
+  "tierA": [
+    {
+      "number": "001",
+      "filename": "001-ai-solo-camp.md",
+      "title": "ChatGPTと並走する「一人合宿」のやり方",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "002",
+      "filename": "002-ai-reading-summary.md",
+      "title": "リーディング時間を5分の1にするAI要約術",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "003",
+      "filename": "003-ai-eyecatch-midjourney.md",
+      "title": "AI画像生成でブログのアイキャッチを内製化する",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "004",
+      "filename": "004-custom-gpts-personal-assistant.md",
+      "title": "カスタムGPTsで「自分専用の秘書」を構築する",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "005",
+      "filename": "005-ai-era-question-power.md",
+      "title": "AI時代の「問いを立てる力」を鍛える3つの習慣",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "006",
+      "filename": "006-notion-ai-database.md",
+      "title": "Notion AIをデータベース構築のパートナーにする",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "007",
+      "filename": "007-no-code-automation.md",
+      "title": "AIエンジニアに頼らない業務フローの自動化",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "008",
+      "filename": "008-ai-presentation-structure.md",
+      "title": "プレゼン資料の構成案をAIと30分で完成させる",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "009",
+      "filename": "009-ai-english-meeting-minutes.md",
+      "title": "英語会議の議事録作成をAIで完全自動化する",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "010",
+      "filename": "010-ai-market-research.md",
+      "title": "AIを使った市場調査（リサーチ）のショートカット術",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "016",
+      "filename": "016-ai-excel-analysis.md",
+      "title": "Excelマクロはもう古い？AIでデータ分析を極める",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "018",
+      "filename": "018-ai-personal-curriculum.md",
+      "title": "AIを活用したパーソナル学習カリキュラムの作り方",
+      "category": "AI活用",
+      "action": "polish"
+    },
+    {
+      "number": "059",
+      "filename": "059-30s-career-change-guide.md",
+      "title": "30代からのキャリアチェンジ完全ガイド - 40代からでも間に合う転職戦略",
+      "category": "キャリア",
+      "action": "polish"
+    },
+    {
+      "number": "063",
+      "filename": "063-group-coaching.md",
+      "title": "グループコーチングの設計と運営 - スケーラブルなコーチングビジネスの実践",
+      "category": "コーチング",
+      "action": "polish"
+    },
+    {
+      "number": "069",
+      "filename": "069-ai-task-automation.md",
+      "title": "AIツールによるタスク自動化 - ChatGPT/Claude等を活用した効率化",
+      "category": "生産性",
+      "action": "polish"
+    },
+    {
+      "number": "072",
+      "filename": "072-no-code-productivity.md",
+      "title": "ノーコード×生産性 - 二つの仕事を持つ人の効率的な切り替えと境界線",
+      "category": "生産性",
+      "action": "polish"
+    },
+    {
+      "number": "078",
+      "filename": "078-second-level-thinking.md",
+      "title": "第二レベル思考：抽象的思考から具象的思考へのパラダイムシフト",
+      "category": "思考法",
+      "action": "polish"
+    },
+    {
+      "number": "084",
+      "filename": "084-systems-thinking.md",
+      "title": "システム思考：全体最適化を目指す - 複雑な問題へのアプローチ",
+      "category": "思考法",
+      "action": "polish"
+    },
+    {
+      "number": "087",
+      "filename": "087-mindset-reprogramming.md",
+      "title": "マインドセットの更新プログラミング - 既存のマインドセットを書き換える技術",
+      "category": "マインドセット",
+      "action": "polish"
+    },
+    {
+      "number": "090",
+      "filename": "090-why-am-i-like-this.md",
+      "title": "「なんで自分はこうなんだ」を脱却する技術 - 自己史の客観視と新しい自己イメージの構築",
+      "category": "マインドセット",
+      "action": "polish"
+    },
+    {
+      "number": "321",
+      "filename": "321-sales-side-hustle-roadmap.md",
+      "title": "営業マンが副業で月5万円を稼ぐまでのロードマップ",
+      "category": "キャリア",
+      "action": "polish"
+    },
+    {
+      "number": "322",
+      "filename": "322-28-career-crossroads.md",
+      "title": "28歳、キャリアの分岐点で考えるべき3つの問い",
+      "category": "キャリア",
+      "action": "polish"
+    },
+    {
+      "number": "323",
+      "filename": "323-coaching-experience-story.md",
+      "title": "コーチングを受けて人生が変わった話 — 営業6年目の転機",
+      "category": "コーチング",
+      "action": "polish"
+    },
+    {
+      "number": "324",
+      "filename": "324-cant-take-action-psychology.md",
+      "title": "やりたいことがあるのに行動できない本当の理由",
+      "category": "マインドセット",
+      "action": "polish"
+    },
+    {
+      "number": "325",
+      "filename": "325-sales-skills-independence.md",
+      "title": "営業スキルは独立の最強武器 — 人材営業で培った力の活かし方",
+      "category": "キャリア",
+      "action": "polish"
+    }
+  ],
+  "tierB": [
+    {
+      "number": "011",
+      "filename": "011-ai-no-code-tools.md",
+      "title": "プログラミング未経験者がAIでツールを自作する時代",
+      "category": "AI活用",
+      "action": "rewrite"
+    },
+    {
+      "number": "012",
+      "filename": "012-ai-career-future.md",
+      "title": "あなたの仕事、AIでどう変わる？ - 3つのステップで考える未来のキャリアプラン",
+      "category": "AI活用",
+      "action": "rewrite"
+    },
+    {
+      "number": "013",
+      "filename": "013-human-only-work-ai-era.md",
+      "title": "AI時代の「人間にしかできない仕事」を再定義する",
+      "category": "AI活用",
+      "action": "rewrite"
+    },
+    {
+      "number": "015",
+      "filename": "015-career-hypothesis.md",
+      "title": "やりたいことが見つからない君へ - 「仮説検証」としてのキャリアの歩き方",
+      "category": "キャリア",
+      "action": "rewrite"
+    },
+    {
+      "number": "017",
+      "filename": "017-before-job-change.md",
+      "title": "転職の前にやるべきこと - あなたの市場価値を測る3つの指標",
+      "category": "キャリア",
+      "action": "rewrite"
+    },
+    {
+      "number": "020",
+      "filename": "020-ai-brainstorming.md",
+      "title": "AIと共創する「新商品企画」のブレインストーミング",
+      "category": "AI活用",
+      "action": "rewrite"
+    },
+    {
+      "number": "022",
+      "filename": "022-ai-email-reply.md",
+      "title": "AIによるメール返信のドラフト作成で「返信疲れ」を防ぐ",
+      "category": "AI活用",
+      "action": "rewrite"
+    },
+    {
+      "number": "023",
+      "filename": "023-morning-routine.md",
+      "title": "朝時間を制する者は人生を制す - タイプ別・最強のモーニングルーティン",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "024",
+      "filename": "024-ai-search-to-generate.md",
+      "title": "AI時代の「検索」から「生成」へのシフト",
+      "category": "AI活用",
+      "action": "rewrite"
+    },
+    {
+      "number": "026",
+      "filename": "026-ai-video-script.md",
+      "title": "動画コンテンツのスクリプトをAIで構造化する",
+      "category": "AI活用",
+      "action": "rewrite"
+    },
+    {
+      "number": "027",
+      "filename": "027-art-of-rest.md",
+      "title": "最高の休息法 - 何もしないをする勇気",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "030",
+      "filename": "030-ai-native-leader.md",
+      "title": "AIネイティブな次世代リーダーの条件",
+      "category": "AI活用",
+      "action": "rewrite"
+    },
+    {
+      "number": "033",
+      "filename": "033-deep-work.md",
+      "title": "ディープワークの時代 - なぜ集中力が最強のスキルになったのか",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "035",
+      "filename": "035-feedback-mindset.md",
+      "title": "フィードバックは「攻撃」ではない - 成長のための受け取り方",
+      "category": "マインドセット",
+      "action": "rewrite"
+    },
+    {
+      "number": "037",
+      "filename": "037-ai-prompt-engineering.md",
+      "title": "AI時代の「質問力」 - プロンプトエンジニアリングの本質",
+      "category": "AI活用",
+      "action": "rewrite"
+    },
+    {
+      "number": "040",
+      "filename": "040-ai-simplify-docs.md",
+      "title": "複雑な契約書や論文をAIで「5歳児でもわかる」ように解説",
+      "category": "AI活用",
+      "action": "rewrite"
+    },
+    {
+      "number": "045",
+      "filename": "045-never-too-late.md",
+      "title": "年齢を言い訳にしない - 何歳からでも学べる脳の可塑性",
+      "category": "マインドセット",
+      "action": "rewrite"
+    },
+    {
+      "number": "047",
+      "filename": "047-stop-saying-busy.md",
+      "title": "「忙しい」と言わない技術 - 時間の支配者になるために",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "050",
+      "filename": "050-side-hustle-first-steps.md",
+      "title": "副業・起業への第一歩 - ゼロイチから本業への移行戦略",
+      "category": "キャリア",
+      "action": "rewrite"
+    },
+    {
+      "number": "053",
+      "filename": "053-coaching-client-retention.md",
+      "title": "コーチングクライアントとの長期的関係構築 - リピートビジネスの作り方",
+      "category": "コーチング",
+      "action": "rewrite"
+    },
+    {
+      "number": "066",
+      "filename": "066-coaching-quality.md",
+      "title": "コーチングの品質向上 - ベストプラクティスと持続的な改善",
+      "category": "コーチング",
+      "action": "rewrite"
+    },
+    {
+      "number": "071",
+      "filename": "071-gamification-mindset.md",
+      "title": "失敗を「経験値」に変える - ゲーミフィケーション思考",
+      "category": "マインドセット",
+      "action": "rewrite"
+    },
+    {
+      "number": "098",
+      "filename": "098-smartphone-notification-block.md",
+      "title": "集中力を削ぐ「プッシュ通知」を完全遮断するスマホ設定",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "102",
+      "filename": "102-desk-cockpit-optimization.md",
+      "title": "デスク周りを「コックピット化」して作業効率を最大化する",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "104",
+      "filename": "104-email-check-three-times.md",
+      "title": "「メールチェックは1日3回まで」を貫くための仕事術",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "116",
+      "filename": "116-task-breakdown.md",
+      "title": "仕事を「細分化」して着手ハードルを下げる技術",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "117",
+      "filename": "117-smart-saying-no.md",
+      "title": "「ノー」と言えない人のための、スマートな断り方テンプレート",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "126",
+      "filename": "126-next-three-steps.md",
+      "title": "常に「次の3ステップ」だけを意識するタスク進行術",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "159",
+      "filename": "159-digital-detox.md",
+      "title": "週に一度の「デジタル断食」で脳をリセットする習慣",
+      "category": "生産性",
+      "action": "rewrite"
+    },
+    {
+      "number": "207",
+      "filename": "207-gamification-make-fun.md",
+      "title": "「ゲーミフィケーション」：退屈な作業を楽しいクエストに変える",
+      "category": "マインドセット",
+      "action": "rewrite"
+    },
+    {
+      "number": "214",
+      "filename": "214-build-self-efficacy-small-wins.md",
+      "title": "自己効力感（エフィカシー）を高める「小さな成功」の積み上げ方",
+      "category": "マインドセット",
+      "action": "rewrite"
+    },
+    {
+      "number": "216",
+      "filename": "216-seven-habits-modern-update.md",
+      "title": "7つの習慣を現代版にアップデートして実践する",
+      "category": "マインドセット",
+      "action": "rewrite"
+    },
+    {
+      "number": "219",
+      "filename": "219-learn-success-mindset-not-habits.md",
+      "title": "成功者の「習慣」を真似するのではなく「思考の前提」を学ぶ",
+      "category": "マインドセット",
+      "action": "rewrite"
+    },
+    {
+      "number": "221",
+      "filename": "221-separate-criticism-from-identity.md",
+      "title": "批判を受けた時に「人格」と「意見」を切り離す訓練",
+      "category": "マインドセット",
+      "action": "rewrite"
+    },
+    {
+      "number": "223",
+      "filename": "223-quality-reflection-growth.md",
+      "title": "内省（リフレクション）の質が、経験を成長に変える",
+      "category": "マインドセット",
+      "action": "rewrite"
+    },
+    {
+      "number": "268",
+      "filename": "268-thinking-organization-incubation.md",
+      "title": "思考の「整理学」：情報を寝かせて、アイデアを熟成させる時間",
+      "category": "思考法",
+      "action": "rewrite"
+    },
+    {
+      "number": "270",
+      "filename": "270-thinking-leverage-small-effort-big-results.md",
+      "title": "思考の「レバレッジ」：小さな力で大きな成果を出すための視点",
+      "category": "思考法",
+      "action": "rewrite"
+    },
+    {
+      "number": "271",
+      "filename": "271-story-thinking-empathy-leadership.md",
+      "title": "ストーリー思考：数字や論理だけでなく、共感で人を巻き込む",
+      "category": "思考法",
+      "action": "rewrite"
+    },
+    {
+      "number": "272",
+      "filename": "272-conceptual-skills-abstract-thinking.md",
+      "title": "概念化（コンセプチュアル）スキル：具体的な事象から普遍的な法則を抽出する",
+      "category": "思考法",
+      "action": "rewrite"
+    },
+    {
+      "number": "274",
+      "filename": "274-future-forecasting-trend-analysis.md",
+      "title": "未来予測の思考法：トレンドを読み、一歩先に自分を配置する",
+      "category": "思考法",
+      "action": "rewrite"
+    },
+    {
+      "number": "276",
+      "filename": "276-morning-routine-mental-stability-science.md",
+      "title": "モーニングルーティンが「メンタルの安定」に効く科学的理由",
+      "category": "メンタルモデル",
+      "action": "rewrite"
+    },
+    {
+      "number": "277",
+      "filename": "277-eq-emotional-intelligence-mastery.md",
+      "title": "EQ（心の知能指数）を高め、自分と他人の感情を乗りこなす",
+      "category": "メンタルモデル",
+      "action": "rewrite"
+    },
+    {
+      "number": "278",
+      "filename": "278-negotiation-win-win-agreement.md",
+      "title": "交渉のメンタルモデル：相手を倒すのではなく「合意」を作る",
+      "category": "メンタルモデル",
+      "action": "rewrite"
+    },
+    {
+      "number": "300",
+      "filename": "300-self-image-rewriting-reality.md",
+      "title": "セルフイメージの書き換え：自分が思う「自分像」が現実を作る",
+      "category": "メンタルモデル",
+      "action": "rewrite"
+    },
+    {
+      "number": "301",
+      "filename": "301-dependence-independence-interdependence.md",
+      "title": "依存と自立のバランス：適切な「助け」を求められるのが本当の自立",
+      "category": "メンタルモデル",
+      "action": "rewrite"
+    }
+  ],
+  "tierC": [
+    {
+      "number": "021",
+      "filename": "021-pomodoro-technique.md",
+      "title": "時間がないは幻想 - 脳をだますポモドーロ・テクニック活用法",
+      "category": "生産性",
+      "action": "merge",
+      "mergeWith": "110",
+      "mergeWithTitle": "ポモドーロ・テクニックの「休憩時間」をどう過ごすべきか",
+      "mergeReason": "pomodoro technique"
+    },
+    {
+      "number": "025",
+      "filename": "025-not-to-do-list.md",
+      "title": "「やらないことリスト」のススメ - Noと言う勇気が時間を生み出す",
+      "category": "生産性",
+      "action": "merge",
+      "mergeWith": "101",
+      "mergeWithTitle": "「やらないことリスト」を毎日更新して思考をクリアにする",
+      "mergeReason": "not-to-do-list / やらないことリスト"
+    },
+    {
+      "number": "031",
+      "filename": "031-imposter-syndrome.md",
+      "title": "インポスター症候群との向き合い方 - 「自分はまだ足りない」という呪い",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "198",
+      "mergeWithTitle": "インポスター症候群を乗り越え、自分の実力を認める",
+      "mergeReason": "imposter syndrome / インポスター症候群"
+    },
+    {
+      "number": "043",
+      "filename": "043-multitasking-myth.md",
+      "title": "マルチタスクの幻想 - 脳は同時処理できない",
+      "category": "生産性",
+      "action": "merge",
+      "mergeWith": "109",
+      "mergeWithTitle": "「マルチタスク」の罠を抜け出し、シングルタスクに没入する",
+      "mergeReason": "multitask myth vs single-task focus"
+    },
+    {
+      "number": "077",
+      "filename": "077-second-arrow.md",
+      "title": "第二の矢を射らない - 感情をこじらせないための仏教的知恵",
+      "category": "メンタルモデル",
+      "action": "merge",
+      "mergeWith": "208",
+      "mergeWithTitle": "第二の矢を刺さない：不運が起きた後の「二次被害」を防ぐ",
+      "mergeReason": "second arrow / 第二の矢"
+    },
+    {
+      "number": "097",
+      "filename": "097-procrastination-psychology.md",
+      "title": "先延ばしの心理学 - なぜ大事なことほど後回しにするのか",
+      "category": "メンタルモデル",
+      "action": "merge",
+      "mergeWith": "210",
+      "mergeWithTitle": "「先延ばし」の正体は怠慢ではなく「不安」である",
+      "mergeReason": "procrastination / 先延ばし"
+    },
+    {
+      "number": "101",
+      "filename": "101-not-to-do-list.md",
+      "title": "「やらないことリスト」を毎日更新して思考をクリアにする",
+      "category": "生産性",
+      "action": "merge",
+      "mergeWith": "025",
+      "mergeWithTitle": "「やらないことリスト」のススメ - Noと言う勇気が時間を生み出す",
+      "mergeReason": "not-to-do-list / やらないことリスト"
+    },
+    {
+      "number": "109",
+      "filename": "109-single-task-focus.md",
+      "title": "「マルチタスク」の罠を抜け出し、シングルタスクに没入する",
+      "category": "生産性",
+      "action": "merge",
+      "mergeWith": "043",
+      "mergeWithTitle": "マルチタスクの幻想 - 脳は同時処理できない",
+      "mergeReason": "multitask myth vs single-task focus"
+    },
+    {
+      "number": "110",
+      "filename": "110-pomodoro-break.md",
+      "title": "ポモドーロ・テクニックの「休憩時間」をどう過ごすべきか",
+      "category": "生産性",
+      "action": "merge",
+      "mergeWith": "021",
+      "mergeWithTitle": "時間がないは幻想 - 脳をだますポモドーロ・テクニック活用法",
+      "mergeReason": "pomodoro technique"
+    },
+    {
+      "number": "120",
+      "filename": "120-failure-resume.md",
+      "title": "「失敗履歴書」を書く - 失敗から学ぶ技術",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "153",
+      "mergeWithTitle": "「失敗履歴書」を書いて、挫折を資産に変えるワーク",
+      "mergeReason": "failure resume / 失敗履歴書"
+    },
+    {
+      "number": "122",
+      "filename": "122-fear-of-success.md",
+      "title": "「成功への恐怖」という逆説",
+      "category": "メンタルモデル",
+      "action": "merge",
+      "mergeWith": "152",
+      "mergeWithTitle": "「成功への恐怖」：自分が大きくなることを無意識に避けていないか",
+      "mergeReason": "fear of success / 成功への恐怖"
+    },
+    {
+      "number": "124",
+      "filename": "124-money-mindset.md",
+      "title": "お金のマインドブロックを外す",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "220",
+      "mergeWithTitle": "「お金」に対するメンタルブロックを外し、正当な対価を受け取る",
+      "mergeReason": "money mindset block / お金のブロック"
+    },
+    {
+      "number": "139",
+      "filename": "139-self-talk.md",
+      "title": "セルフトーク - 自分への語りかけが人生を変える",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "213",
+      "mergeWithTitle": "セルフトークの質を高めて、内なる批判者を味方にする",
+      "mergeReason": "self-talk / セルフトーク"
+    },
+    {
+      "number": "145",
+      "filename": "145-resilience.md",
+      "title": "レジリエンス - 逆境から立ち直る力",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "215",
+      "mergeWithTitle": "レジリエンス：折れない心ではなく、しなやかに戻る力を鍛える",
+      "mergeReason": "resilience / レジリエンス"
+    },
+    {
+      "number": "151",
+      "filename": "151-expand-comfort-zone.md",
+      "title": "自分の「コンフォートゾーン」を意図的に広げる習慣",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "156",
+      "mergeWithTitle": "コンフォートゾーンを抜け出す方法",
+      "mergeReason": "comfort zone / コンフォートゾーン"
+    },
+    {
+      "number": "152",
+      "filename": "152-fear-of-success-blocks.md",
+      "title": "「成功への恐怖」：自分が大きくなることを無意識に避けていないか",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "122",
+      "mergeWithTitle": "「成功への恐怖」という逆説",
+      "mergeReason": "fear of success / 成功への恐怖"
+    },
+    {
+      "number": "153",
+      "filename": "153-failure-resume-asset.md",
+      "title": "「失敗履歴書」を書いて、挫折を資産に変えるワーク",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "120",
+      "mergeWithTitle": "「失敗履歴書」を書く - 失敗から学ぶ技術",
+      "mergeReason": "failure resume / 失敗履歴書"
+    },
+    {
+      "number": "154",
+      "filename": "154-shift-teaching-to-coaching.md",
+      "title": "ティーチングからコーチングへのシフト：指示待ち人間を卒業させる",
+      "category": "コーチング",
+      "action": "merge",
+      "mergeWith": "258",
+      "mergeWithTitle": "ティーチングからコーチングへのシフト：指示待ち人間を卒業させる",
+      "mergeReason": "teaching-to-coaching shift (duplicate)"
+    },
+    {
+      "number": "155",
+      "filename": "155-growth-mindset.md",
+      "title": "グロースマインドセット - 才能は伸ばせるという信念",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "211",
+      "mergeWithTitle": "グロースマインドセット：才能は生まれつきではなく育てられる",
+      "mergeReason": "growth mindset / グロースマインドセット"
+    },
+    {
+      "number": "156",
+      "filename": "156-comfort-zone.md",
+      "title": "コンフォートゾーンを抜け出す方法",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "151",
+      "mergeWithTitle": "自分の「コンフォートゾーン」を意図的に広げる習慣",
+      "mergeReason": "comfort zone / コンフォートゾーン"
+    },
+    {
+      "number": "185",
+      "filename": "185-done-is-better.md",
+      "title": "「完璧」より「完了」を目指す（統合版）",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "201",
+      "mergeWithTitle": "「完璧」を求めすぎて動けない時のための「完了」の定義",
+      "mergeReason": "done over perfect / 完璧より完了"
+    },
+    {
+      "number": "198",
+      "filename": "198-overcome-imposter-syndrome.md",
+      "title": "インポスター症候群を乗り越え、自分の実力を認める",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "031",
+      "mergeWithTitle": "インポスター症候群との向き合い方 - 「自分はまだ足りない」という呪い",
+      "mergeReason": "imposter syndrome / インポスター症候群"
+    },
+    {
+      "number": "201",
+      "filename": "201-done-over-perfect-definition.md",
+      "title": "「完璧」を求めすぎて動けない時のための「完了」の定義",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "185",
+      "mergeWithTitle": "「完璧」より「完了」を目指す（統合版）",
+      "mergeReason": "done over perfect / 完璧より完了"
+    },
+    {
+      "number": "208",
+      "filename": "208-avoid-second-arrow.md",
+      "title": "第二の矢を刺さない：不運が起きた後の「二次被害」を防ぐ",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "077",
+      "mergeWithTitle": "第二の矢を射らない - 感情をこじらせないための仏教的知恵",
+      "mergeReason": "second arrow / 第二の矢"
+    },
+    {
+      "number": "210",
+      "filename": "210-procrastination-is-anxiety.md",
+      "title": "「先延ばし」の正体は怠慢ではなく「不安」である",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "097",
+      "mergeWithTitle": "先延ばしの心理学 - なぜ大事なことほど後回しにするのか",
+      "mergeReason": "procrastination / 先延ばし"
+    },
+    {
+      "number": "211",
+      "filename": "211-growth-mindset-develop-talent.md",
+      "title": "グロースマインドセット：才能は生まれつきではなく育てられる",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "155",
+      "mergeWithTitle": "グロースマインドセット - 才能は伸ばせるという信念",
+      "mergeReason": "growth mindset / グロースマインドセット"
+    },
+    {
+      "number": "213",
+      "filename": "213-improve-self-talk-quality.md",
+      "title": "セルフトークの質を高めて、内なる批判者を味方にする",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "139",
+      "mergeWithTitle": "セルフトーク - 自分への語りかけが人生を変える",
+      "mergeReason": "self-talk / セルフトーク"
+    },
+    {
+      "number": "215",
+      "filename": "215-resilience-bounce-back.md",
+      "title": "レジリエンス：折れない心ではなく、しなやかに戻る力を鍛える",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "145",
+      "mergeWithTitle": "レジリエンス - 逆境から立ち直る力",
+      "mergeReason": "resilience / レジリエンス"
+    },
+    {
+      "number": "220",
+      "filename": "220-remove-money-blocks.md",
+      "title": "「お金」に対するメンタルブロックを外し、正当な対価を受け取る",
+      "category": "マインドセット",
+      "action": "merge",
+      "mergeWith": "124",
+      "mergeWithTitle": "お金のマインドブロックを外す",
+      "mergeReason": "money mindset block / お金のブロック"
+    },
+    {
+      "number": "258",
+      "filename": "258-shift-teaching-to-coaching.md",
+      "title": "ティーチングからコーチングへのシフト：指示待ち人間を卒業させる",
+      "category": "コーチング",
+      "action": "merge",
+      "mergeWith": "154",
+      "mergeWithTitle": "ティーチングからコーチングへのシフト：指示待ち人間を卒業させる",
+      "mergeReason": "teaching-to-coaching shift (duplicate)"
+    }
+  ],
+  "tierD": [
+    {
+      "series": "AI実践ワークフロー",
+      "seriesOrder": 1,
+      "title": "AIワークフロー入門：日常業務の自動化マップを作る",
+      "category": "AI活用",
+      "action": "create"
+    },
+    {
+      "series": "AI実践ワークフロー",
+      "seriesOrder": 2,
+      "title": "AIエージェントの使い分け：ChatGPT・Claude・Geminiの最適活用",
+      "category": "AI活用",
+      "action": "create"
+    },
+    {
+      "series": "AI実践ワークフロー",
+      "seriesOrder": 3,
+      "title": "AIとの協働プロセス設計：人間の判断とAIの実行を組み合わせる",
+      "category": "AI活用",
+      "action": "create"
+    },
+    {
+      "series": "AI実践ワークフロー",
+      "seriesOrder": 4,
+      "title": "AI活用の成熟度モデル：初心者からエキスパートへのロードマップ",
+      "category": "AI活用",
+      "action": "create"
+    },
+    {
+      "series": "キャリア戦略シリーズ",
+      "seriesOrder": 1,
+      "title": "キャリアの棚卸し：自分の強み・経験・実績を可視化するワーク",
+      "category": "キャリア",
+      "action": "create"
+    },
+    {
+      "series": "キャリア戦略シリーズ",
+      "seriesOrder": 2,
+      "title": "転職市場の読み方：需要と供給から最適なポジションを見つける",
+      "category": "キャリア",
+      "action": "create"
+    },
+    {
+      "series": "キャリア戦略シリーズ",
+      "seriesOrder": 3,
+      "title": "副業から独立への移行戦略：リスクを最小化するステップ",
+      "category": "キャリア",
+      "action": "create"
+    },
+    {
+      "series": "キャリア戦略シリーズ",
+      "seriesOrder": 4,
+      "title": "40代・50代のキャリア再設計：セカンドキャリアの築き方",
+      "category": "キャリア",
+      "action": "create"
+    },
+    {
+      "series": "思考法マスターシリーズ",
+      "seriesOrder": 1,
+      "title": "メタ認知の技術：自分の思考を俯瞰し、思考の癖を修正する",
+      "category": "思考法",
+      "action": "create"
+    },
+    {
+      "series": "思考法マスターシリーズ",
+      "seriesOrder": 2,
+      "title": "アナロジー思考：異分野の知恵を借りて問題を解決する",
+      "category": "思考法",
+      "action": "create"
+    },
+    {
+      "series": "思考法マスターシリーズ",
+      "seriesOrder": 3,
+      "title": "仮説思考：不確実な状況でも前に進むための思考フレームワーク",
+      "category": "思考法",
+      "action": "create"
+    },
+    {
+      "series": "思考法マスターシリーズ",
+      "seriesOrder": 4,
+      "title": "統合思考：対立するアイデアを止揚し、第三の選択肢を生む",
+      "category": "思考法",
+      "action": "create"
+    },
+    {
+      "series": "コーチング実践シリーズ",
+      "seriesOrder": 1,
+      "title": "コーチングの始め方：最初のセッションで信頼関係を構築する",
+      "category": "コーチング",
+      "action": "create"
+    },
+    {
+      "series": "コーチング実践シリーズ",
+      "seriesOrder": 2,
+      "title": "コーチングの質問術：変容を引き起す5つの質問パターン",
+      "category": "コーチング",
+      "action": "create"
+    },
+    {
+      "series": "コーチング実践シリーズ",
+      "seriesOrder": 3,
+      "title": "オンラインコーチングの設計：対面との違いと効果を最大化する工夫",
+      "category": "コーチング",
+      "action": "create"
+    },
+    {
+      "series": "コーチング実践シリーズ",
+      "seriesOrder": 4,
+      "title": "コーチングビジネスの始め方：集客からリピートまでの実践ガイド",
+      "category": "コーチング",
+      "action": "create"
+    },
+    {
+      "series": "生産性システム構築シリーズ",
+      "seriesOrder": 1,
+      "title": "自分だけの生産性システムを設計する：GTD・Zettelkasten・PARA統合",
+      "category": "生産性",
+      "action": "create"
+    },
+    {
+      "series": "生産性システム構築シリーズ",
+      "seriesOrder": 2,
+      "title": "デジタルツール断捨離：本当に必要なアプリだけで運用する",
+      "category": "生産性",
+      "action": "create"
+    },
+    {
+      "series": "生産性システム構築シリーズ",
+      "seriesOrder": 3,
+      "title": "週次・月次・四半期レビューの仕組み化：振り返りを習慣にする",
+      "category": "生産性",
+      "action": "create"
+    },
+    {
+      "series": "生産性システム構築シリーズ",
+      "seriesOrder": 4,
+      "title": "生産性の測り方：KPIではなくリズムで自分の調子を把握する",
+      "category": "生産性",
+      "action": "create"
+    }
+  ],
+  "tierE": [
+    {
+      "number": "014",
+      "filename": "014-ai-voice-writing.md",
+      "action": "archive"
+    },
+    {
+      "number": "019",
+      "filename": "019-reskilling-trap.md",
+      "action": "archive"
+    },
+    {
+      "number": "028",
+      "filename": "028-ai-mental-health-check.md",
+      "action": "archive"
+    },
+    {
+      "number": "029",
+      "filename": "029-decision-fatigue.md",
+      "action": "archive"
+    },
+    {
+      "number": "032",
+      "filename": "032-context-design.md",
+      "action": "archive"
+    },
+    {
+      "number": "034",
+      "filename": "034-ai-conversation-past-self.md",
+      "action": "archive"
+    },
+    {
+      "number": "036",
+      "filename": "036-ai-information-literacy.md",
+      "action": "archive"
+    },
+    {
+      "number": "038",
+      "filename": "038-ai-sns-management.md",
+      "action": "archive"
+    },
+    {
+      "number": "039",
+      "filename": "039-sunk-cost-fallacy.md",
+      "action": "archive"
+    },
+    {
+      "number": "041",
+      "filename": "041-vuca-decision-making.md",
+      "action": "archive"
+    },
+    {
+      "number": "042",
+      "filename": "042-ai-creativity.md",
+      "action": "archive"
+    },
+    {
+      "number": "044",
+      "filename": "044-ai-devils-advocate.md",
+      "action": "archive"
+    },
+    {
+      "number": "046",
+      "filename": "046-ai-unorganized-task-management.md",
+      "action": "archive"
+    },
+    {
+      "number": "048",
+      "filename": "048-ai-english-practice.md",
+      "action": "archive"
+    },
+    {
+      "number": "049",
+      "filename": "049-finding-passion.md",
+      "action": "archive"
+    },
+    {
+      "number": "051",
+      "filename": "051-ai-team-roadmap.md",
+      "action": "archive"
+    },
+    {
+      "number": "052",
+      "filename": "052-effective-one-on-one.md",
+      "action": "archive"
+    },
+    {
+      "number": "054",
+      "filename": "054-ai-reading-guide.md",
+      "action": "archive"
+    },
+    {
+      "number": "055",
+      "filename": "055-output-thinking.md",
+      "action": "archive"
+    },
+    {
+      "number": "056",
+      "filename": "056-coaching-ai-personalized.md",
+      "action": "archive"
+    },
+    {
+      "number": "057",
+      "filename": "057-ai-poem-business.md",
+      "action": "archive"
+    },
+    {
+      "number": "058",
+      "filename": "058-power-of-no.md",
+      "action": "archive"
+    },
+    {
+      "number": "060",
+      "filename": "060-ai-in-career.md",
+      "action": "archive"
+    },
+    {
+      "number": "061",
+      "filename": "061-ai-career-value.md",
+      "action": "archive"
+    },
+    {
+      "number": "062",
+      "filename": "062-gradient-thinking.md",
+      "action": "archive"
+    },
+    {
+      "number": "064",
+      "filename": "064-ai-sales-email.md",
+      "action": "archive"
+    },
+    {
+      "number": "065",
+      "filename": "065-information-detox.md",
+      "action": "archive"
+    },
+    {
+      "number": "067",
+      "filename": "067-ai-code-explanation.md",
+      "action": "archive"
+    },
+    {
+      "number": "068",
+      "filename": "068-comparison-trap.md",
+      "action": "archive"
+    },
+    {
+      "number": "070",
+      "filename": "070-ai-lifelog-analysis.md",
+      "action": "archive"
+    },
+    {
+      "number": "073",
+      "filename": "073-ai-presentation-automation.md",
+      "action": "archive"
+    },
+    {
+      "number": "074",
+      "filename": "074-importance-of-mentor.md",
+      "action": "archive"
+    },
+    {
+      "number": "075",
+      "filename": "075-project-management-tools.md",
+      "action": "archive"
+    },
+    {
+      "number": "076",
+      "filename": "076-ai-translation-nuance.md",
+      "action": "archive"
+    },
+    {
+      "number": "079",
+      "filename": "079-ai-event-planning.md",
+      "action": "archive"
+    },
+    {
+      "number": "080",
+      "filename": "080-self-axis.md",
+      "action": "archive"
+    },
+    {
+      "number": "081",
+      "filename": "081-critical-thinking.md",
+      "action": "archive"
+    },
+    {
+      "number": "082",
+      "filename": "082-ai-time-investment.md",
+      "action": "archive"
+    },
+    {
+      "number": "083",
+      "filename": "083-goal-setting-science.md",
+      "action": "archive"
+    },
+    {
+      "number": "085",
+      "filename": "085-ai-reader-perspective-editing.md",
+      "action": "archive"
+    },
+    {
+      "number": "086",
+      "filename": "086-working-with-ai.md",
+      "action": "archive"
+    },
+    {
+      "number": "088",
+      "filename": "088-ai-idea-note-tagging.md",
+      "action": "archive"
+    },
+    {
+      "number": "089",
+      "filename": "089-weekly-review.md",
+      "action": "archive"
+    },
+    {
+      "number": "091",
+      "filename": "091-active-listening.md",
+      "action": "archive"
+    },
+    {
+      "number": "092",
+      "filename": "092-ai-intellectual-honesty.md",
+      "action": "archive"
+    },
+    {
+      "number": "093",
+      "filename": "093-mindset-performance.md",
+      "action": "archive"
+    },
+    {
+      "number": "094",
+      "filename": "094-ai-10year-career-path.md",
+      "action": "archive"
+    },
+    {
+      "number": "095",
+      "filename": "095-psychological-safety.md",
+      "action": "archive"
+    },
+    {
+      "number": "096",
+      "filename": "096-morning-hour-ritual.md",
+      "action": "archive"
+    },
+    {
+      "number": "099",
+      "filename": "099-strengths-finder.md",
+      "action": "archive"
+    },
+    {
+      "number": "100",
+      "filename": "100-energy-management.md",
+      "action": "archive"
+    },
+    {
+      "number": "103",
+      "filename": "103-power-of-verbalization.md",
+      "action": "archive"
+    },
+    {
+      "number": "105",
+      "filename": "105-five-minute-rule.md",
+      "action": "archive"
+    },
+    {
+      "number": "106",
+      "filename": "106-meeting-preparation.md",
+      "action": "archive"
+    },
+    {
+      "number": "107",
+      "filename": "107-standing-work.md",
+      "action": "archive"
+    },
+    {
+      "number": "108",
+      "filename": "108-remote-work-productivity.md",
+      "action": "archive"
+    },
+    {
+      "number": "111",
+      "filename": "111-gap-time-tasks.md",
+      "action": "archive"
+    },
+    {
+      "number": "112",
+      "filename": "112-negotiation-basics.md",
+      "action": "archive"
+    },
+    {
+      "number": "113",
+      "filename": "113-output-first-learning.md",
+      "action": "archive"
+    },
+    {
+      "number": "114",
+      "filename": "114-simple-task-management.md",
+      "action": "archive"
+    },
+    {
+      "number": "115",
+      "filename": "115-strategic-napping.md",
+      "action": "archive"
+    },
+    {
+      "number": "118",
+      "filename": "118-networking-introvert.md",
+      "action": "archive"
+    },
+    {
+      "number": "119",
+      "filename": "119-sleep-productivity.md",
+      "action": "archive"
+    },
+    {
+      "number": "121",
+      "filename": "121-weekend-preparation.md",
+      "action": "archive"
+    },
+    {
+      "number": "123",
+      "filename": "123-delegation-art.md",
+      "action": "archive"
+    },
+    {
+      "number": "125",
+      "filename": "125-meetings-efficient.md",
+      "action": "archive"
+    },
+    {
+      "number": "127",
+      "filename": "127-digital-analog-ratio.md",
+      "action": "archive"
+    },
+    {
+      "number": "128",
+      "filename": "128-learning-curve.md",
+      "action": "archive"
+    },
+    {
+      "number": "129",
+      "filename": "129-email-productivity.md",
+      "action": "archive"
+    },
+    {
+      "number": "130",
+      "filename": "130-personal-branding.md",
+      "action": "archive"
+    },
+    {
+      "number": "131",
+      "filename": "131-stress-management.md",
+      "action": "archive"
+    },
+    {
+      "number": "132",
+      "filename": "132-walking-meetings.md",
+      "action": "archive"
+    },
+    {
+      "number": "133",
+      "filename": "133-time-budget-tracking.md",
+      "action": "archive"
+    },
+    {
+      "number": "134",
+      "filename": "134-email-templates-text-expansion.md",
+      "action": "archive"
+    },
+    {
+      "number": "135",
+      "filename": "135-self-reflection.md",
+      "action": "archive"
+    },
+    {
+      "number": "136",
+      "filename": "136-setting-boundaries.md",
+      "action": "archive"
+    },
+    {
+      "number": "137",
+      "filename": "137-using-spare-time.md",
+      "action": "archive"
+    },
+    {
+      "number": "138",
+      "filename": "138-limit-information-inputs.md",
+      "action": "archive"
+    },
+    {
+      "number": "140",
+      "filename": "140-todo-prioritization-methods.md",
+      "action": "archive"
+    },
+    {
+      "number": "141",
+      "filename": "141-tidy-as-you-go.md",
+      "action": "archive"
+    },
+    {
+      "number": "142",
+      "filename": "142-second-brain.md",
+      "action": "archive"
+    },
+    {
+      "number": "143",
+      "filename": "143-self-imposed-deadlines.md",
+      "action": "archive"
+    },
+    {
+      "number": "144",
+      "filename": "144-second-brain-forget-permission.md",
+      "action": "archive"
+    },
+    {
+      "number": "146",
+      "filename": "146-seven-habits.md",
+      "action": "archive"
+    },
+    {
+      "number": "147",
+      "filename": "147-writing-skills.md",
+      "action": "archive"
+    },
+    {
+      "number": "148",
+      "filename": "148-handling-rejection.md",
+      "action": "archive"
+    },
+    {
+      "number": "149",
+      "filename": "149-small-steps-beat-fear.md",
+      "action": "archive"
+    },
+    {
+      "number": "150",
+      "filename": "150-environment-design.md",
+      "action": "archive"
+    },
+    {
+      "number": "157",
+      "filename": "157-ikigai.md",
+      "action": "archive"
+    },
+    {
+      "number": "158",
+      "filename": "158-saying-no-at-work.md",
+      "action": "archive"
+    },
+    {
+      "number": "160",
+      "filename": "160-cognitive-bias.md",
+      "action": "archive"
+    },
+    {
+      "number": "161",
+      "filename": "161-minimal-lifestyle.md",
+      "action": "archive"
+    },
+    {
+      "number": "162",
+      "filename": "162-emotional-intelligence.md",
+      "action": "archive"
+    },
+    {
+      "number": "163",
+      "filename": "163-energy-wave-scheduling.md",
+      "action": "archive"
+    },
+    {
+      "number": "164",
+      "filename": "164-journaling-methods.md",
+      "action": "archive"
+    },
+    {
+      "number": "165",
+      "filename": "165-presentation-fear.md",
+      "action": "archive"
+    },
+    {
+      "number": "166",
+      "filename": "166-pareto-principle.md",
+      "action": "archive"
+    },
+    {
+      "number": "167",
+      "filename": "167-building-habits.md",
+      "action": "archive"
+    },
+    {
+      "number": "168",
+      "filename": "168-ai-learning-partner.md",
+      "action": "archive"
+    },
+    {
+      "number": "169",
+      "filename": "169-done-over-perfect.md",
+      "action": "archive"
+    },
+    {
+      "number": "170",
+      "filename": "170-one-touch-paper.md",
+      "action": "archive"
+    },
+    {
+      "number": "171",
+      "filename": "171-define-project-end.md",
+      "action": "archive"
+    },
+    {
+      "number": "172",
+      "filename": "172-time-blocking.md",
+      "action": "archive"
+    },
+    {
+      "number": "173",
+      "filename": "173-checklist-routine.md",
+      "action": "archive"
+    },
+    {
+      "number": "174",
+      "filename": "174-audiobook-learning.md",
+      "action": "archive"
+    },
+    {
+      "number": "175",
+      "filename": "175-bgm-silence-strategy.md",
+      "action": "archive"
+    },
+    {
+      "number": "176",
+      "filename": "176-batch-processing.md",
+      "action": "archive"
+    },
+    {
+      "number": "177",
+      "filename": "177-creative-thinking.md",
+      "action": "archive"
+    },
+    {
+      "number": "178",
+      "filename": "178-conflict-resolution.md",
+      "action": "archive"
+    },
+    {
+      "number": "179",
+      "filename": "179-focus-warning-signs.md",
+      "action": "archive"
+    },
+    {
+      "number": "180",
+      "filename": "180-close-browser-tabs.md",
+      "action": "archive"
+    },
+    {
+      "number": "181",
+      "filename": "181-delegation-skills.md",
+      "action": "archive"
+    },
+    {
+      "number": "182",
+      "filename": "182-internal-interruptions.md",
+      "action": "archive"
+    },
+    {
+      "number": "183",
+      "filename": "183-reading-efficiently.md",
+      "action": "archive"
+    },
+    {
+      "number": "184",
+      "filename": "184-future-self.md",
+      "action": "archive"
+    },
+    {
+      "number": "186",
+      "filename": "186-daily-reflection-three-questions.md",
+      "action": "archive"
+    },
+    {
+      "number": "187",
+      "filename": "187-peak-time-scheduling.md",
+      "action": "archive"
+    },
+    {
+      "number": "188",
+      "filename": "188-energy-over-time-management.md",
+      "action": "archive"
+    },
+    {
+      "number": "189",
+      "filename": "189-first-impression.md",
+      "action": "archive"
+    },
+    {
+      "number": "190",
+      "filename": "190-prepare-next-day-task.md",
+      "action": "archive"
+    },
+    {
+      "number": "191",
+      "filename": "191-strategic-rest.md",
+      "action": "archive"
+    },
+    {
+      "number": "192",
+      "filename": "192-power-of-questions.md",
+      "action": "archive"
+    },
+    {
+      "number": "193",
+      "filename": "193-keyboard-shortcuts-productivity.md",
+      "action": "archive"
+    },
+    {
+      "number": "194",
+      "filename": "194-self-efficacy.md",
+      "action": "archive"
+    },
+    {
+      "number": "195",
+      "filename": "195-chunk-down.md",
+      "action": "archive"
+    },
+    {
+      "number": "196",
+      "filename": "196-project-visualization-clarity.md",
+      "action": "archive"
+    },
+    {
+      "number": "197",
+      "filename": "197-failure-as-data-thinking.md",
+      "action": "archive"
+    },
+    {
+      "number": "199",
+      "filename": "199-compare-with-yesterday-self.md",
+      "action": "archive"
+    },
+    {
+      "number": "200",
+      "filename": "200-ai-native-work.md",
+      "action": "archive"
+    },
+    {
+      "number": "202",
+      "filename": "202-backward-planning.md",
+      "action": "archive"
+    },
+    {
+      "number": "203",
+      "filename": "203-big-rocks-first.md",
+      "action": "archive"
+    },
+    {
+      "number": "204",
+      "filename": "204-consistency-power.md",
+      "action": "archive"
+    },
+    {
+      "number": "205",
+      "filename": "205-live-by-own-values.md",
+      "action": "archive"
+    },
+    {
+      "number": "206",
+      "filename": "206-gradient-thinking-flexibility.md",
+      "action": "archive"
+    },
+    {
+      "number": "209",
+      "filename": "209-reframe-weakness-as-strength.md",
+      "action": "archive"
+    },
+    {
+      "number": "212",
+      "filename": "212-set-boundaries-separate-issues.md",
+      "action": "archive"
+    },
+    {
+      "number": "217",
+      "filename": "217-self-loathing-to-curiosity.md",
+      "action": "archive"
+    },
+    {
+      "number": "218",
+      "filename": "218-start-now-not-perfect-timing.md",
+      "action": "archive"
+    },
+    {
+      "number": "222",
+      "filename": "222-use-multipotentialite-as-strength.md",
+      "action": "archive"
+    },
+    {
+      "number": "224",
+      "filename": "224-serendipity-mindset-opportunities.md",
+      "action": "archive"
+    },
+    {
+      "number": "225",
+      "filename": "225-discover-your-talents.md",
+      "action": "archive"
+    },
+    {
+      "number": "226",
+      "filename": "226-convert-negative-emotions-energy.md",
+      "action": "archive"
+    },
+    {
+      "number": "227",
+      "filename": "227-strategic-effort-over-hard-work.md",
+      "action": "archive"
+    },
+    {
+      "number": "228",
+      "filename": "228-trust-own-path-despite-isolation.md",
+      "action": "archive"
+    },
+    {
+      "number": "229",
+      "filename": "229-healthy-selfishness-giver-success.md",
+      "action": "archive"
+    },
+    {
+      "number": "230",
+      "filename": "230-break-age-stereotypes-challenge.md",
+      "action": "archive"
+    },
+    {
+      "number": "231",
+      "filename": "231-professional-mindset-excellence.md",
+      "action": "archive"
+    },
+    {
+      "number": "232",
+      "filename": "232-limits-are-past-experiences.md",
+      "action": "archive"
+    },
+    {
+      "number": "233",
+      "filename": "233-growth-hides-in-annoyance.md",
+      "action": "archive"
+    },
+    {
+      "number": "234",
+      "filename": "234-stoic-hope-optimism-preparedness.md",
+      "action": "archive"
+    },
+    {
+      "number": "235",
+      "filename": "235-find-your-mission-purpose.md",
+      "action": "archive"
+    },
+    {
+      "number": "236",
+      "filename": "236-let-go-attachment-change.md",
+      "action": "archive"
+    },
+    {
+      "number": "237",
+      "filename": "237-vulnerability-builds-support.md",
+      "action": "archive"
+    },
+    {
+      "number": "238",
+      "filename": "238-expand-capacity-uncomfortable-environments.md",
+      "action": "archive"
+    },
+    {
+      "number": "239",
+      "filename": "239-endure-quiet-periods-keep-sowing.md",
+      "action": "archive"
+    },
+    {
+      "number": "240",
+      "filename": "240-self-compassion-be-your-ally.md",
+      "action": "archive"
+    },
+    {
+      "number": "241",
+      "filename": "241-update-mindset-frequency.md",
+      "action": "archive"
+    },
+    {
+      "number": "242",
+      "filename": "242-awareness-of-death-live-fully.md",
+      "action": "archive"
+    },
+    {
+      "number": "243",
+      "filename": "243-icebreak-draw-out-honest-thoughts.md",
+      "action": "archive"
+    },
+    {
+      "number": "244",
+      "filename": "244-mentor-mentee-relationship-building.md",
+      "action": "archive"
+    },
+    {
+      "number": "245",
+      "filename": "245-active-listening-emotions.md",
+      "action": "archive"
+    },
+    {
+      "number": "246",
+      "filename": "246-psychological-safety-team-results.md",
+      "action": "archive"
+    },
+    {
+      "number": "247",
+      "filename": "247-strengths-finder-weaponize.md",
+      "action": "archive"
+    },
+    {
+      "number": "248",
+      "filename": "248-feedback-technique-change-behavior.md",
+      "action": "archive"
+    },
+    {
+      "number": "249",
+      "filename": "249-journaling-inner-voice.md",
+      "action": "archive"
+    },
+    {
+      "number": "250",
+      "filename": "250-conflict-resolution-win-win.md",
+      "action": "archive"
+    },
+    {
+      "number": "251",
+      "filename": "251-first-impression-control-trust.md",
+      "action": "archive"
+    },
+    {
+      "number": "252",
+      "filename": "252-non-directive-questions-power.md",
+      "action": "archive"
+    },
+    {
+      "number": "253",
+      "filename": "253-rapid-rapport-building.md",
+      "action": "archive"
+    },
+    {
+      "number": "254",
+      "filename": "254-group-coaching-wisdom.md",
+      "action": "archive"
+    },
+    {
+      "number": "255",
+      "filename": "255-coaching-quality-session-recording.md",
+      "action": "archive"
+    },
+    {
+      "number": "256",
+      "filename": "256-motivation-switch-values-hearing.md",
+      "action": "archive"
+    },
+    {
+      "number": "257",
+      "filename": "257-grow-model-practical-guide.md",
+      "action": "archive"
+    },
+    {
+      "number": "259",
+      "filename": "259-remove-limiting-beliefs-questions.md",
+      "action": "archive"
+    },
+    {
+      "number": "260",
+      "filename": "260-handle-emotional-clients-empathy.md",
+      "action": "archive"
+    },
+    {
+      "number": "261",
+      "filename": "261-powerful-questions-transformation.md",
+      "action": "archive"
+    },
+    {
+      "number": "262",
+      "filename": "262-executive-coaching-leaders.md",
+      "action": "archive"
+    },
+    {
+      "number": "263",
+      "filename": "263-self-coaching-techniques.md",
+      "action": "archive"
+    },
+    {
+      "number": "264",
+      "filename": "264-silence-ally-thinking-time.md",
+      "action": "archive"
+    },
+    {
+      "number": "265",
+      "filename": "265-output-first-input-secret.md",
+      "action": "archive"
+    },
+    {
+      "number": "266",
+      "filename": "266-question-quality-determines-life.md",
+      "action": "archive"
+    },
+    {
+      "number": "267",
+      "filename": "267-mathematical-thinking-data-decisions.md",
+      "action": "archive"
+    },
+    {
+      "number": "269",
+      "filename": "269-positive-deviance-exceptional-success.md",
+      "action": "archive"
+    },
+    {
+      "number": "273",
+      "filename": "273-thinking-open-source-external-brain.md",
+      "action": "archive"
+    },
+    {
+      "number": "275",
+      "filename": "275-thinking-aesthetics-personal-answer.md",
+      "action": "archive"
+    },
+    {
+      "number": "279",
+      "filename": "279-sleep-technology-optimal-rest.md",
+      "action": "archive"
+    },
+    {
+      "number": "280",
+      "filename": "280-healthy-money-relationship-philosophy.md",
+      "action": "archive"
+    },
+    {
+      "number": "281",
+      "filename": "281-stress-growth-mindset-challenge.md",
+      "action": "archive"
+    },
+    {
+      "number": "282",
+      "filename": "282-environment-design-behavior-change.md",
+      "action": "archive"
+    },
+    {
+      "number": "283",
+      "filename": "283-happiness-mental-model-present.md",
+      "action": "archive"
+    },
+    {
+      "number": "284",
+      "filename": "284-shadow-integration-self-acceptance.md",
+      "action": "archive"
+    },
+    {
+      "number": "285",
+      "filename": "285-trust-bank-relationship-assets.md",
+      "action": "archive"
+    },
+    {
+      "number": "286",
+      "filename": "286-expectation-management-reality-acceptance.md",
+      "action": "archive"
+    },
+    {
+      "number": "287",
+      "filename": "287-emotional-triggers-self-awareness.md",
+      "action": "archive"
+    },
+    {
+      "number": "288",
+      "filename": "288-habit-science-21-days-install.md",
+      "action": "archive"
+    },
+    {
+      "number": "289",
+      "filename": "289-solitude-solitary-richness.md",
+      "action": "archive"
+    },
+    {
+      "number": "290",
+      "filename": "290-approval-seeking-internal-validation.md",
+      "action": "archive"
+    },
+    {
+      "number": "291",
+      "filename": "291-shoulds-rewriting-rules.md",
+      "action": "archive"
+    },
+    {
+      "number": "292",
+      "filename": "292-gratitude-resilience-focus.md",
+      "action": "archive"
+    },
+    {
+      "number": "293",
+      "filename": "293-capacity-awareness-burnout-prevention.md",
+      "action": "archive"
+    },
+    {
+      "number": "294",
+      "filename": "294-choice-minimization-decision-energy.md",
+      "action": "archive"
+    },
+    {
+      "number": "295",
+      "filename": "295-mental-blocks-trauma-healing.md",
+      "action": "archive"
+    },
+    {
+      "number": "296",
+      "filename": "296-breathing-nervous-system-control.md",
+      "action": "archive"
+    },
+    {
+      "number": "297",
+      "filename": "297-strengths-shadow-side-management.md",
+      "action": "archive"
+    },
+    {
+      "number": "298",
+      "filename": "298-mindfulness-present-moment.md",
+      "action": "archive"
+    },
+    {
+      "number": "299",
+      "filename": "299-forgiveness-letting-go-freedom.md",
+      "action": "archive"
+    },
+    {
+      "number": "302",
+      "filename": "302-values-priority-clarity-decisions.md",
+      "action": "archive"
+    },
+    {
+      "number": "303",
+      "filename": "303-failure-redefinition-growth.md",
+      "action": "archive"
+    },
+    {
+      "number": "304",
+      "filename": "304-playfulness-mental-model-creativity.md",
+      "action": "archive"
+    },
+    {
+      "number": "305",
+      "filename": "305-embodiment-body-intelligence.md",
+      "action": "archive"
+    },
+    {
+      "number": "306",
+      "filename": "306-memento-mori-life-focus.md",
+      "action": "archive"
+    },
+    {
+      "number": "307",
+      "filename": "307-self-esteem-foundation-worthiness.md",
+      "action": "archive"
+    },
+    {
+      "number": "308",
+      "filename": "308-adaptation-mental-evolution.md",
+      "action": "archive"
+    },
+    {
+      "number": "309",
+      "filename": "309-humility-confidence-balance.md",
+      "action": "archive"
+    },
+    {
+      "number": "310",
+      "filename": "310-mental-health-multiple-sanctuaries.md",
+      "action": "archive"
+    },
+    {
+      "number": "311",
+      "filename": "311-anger-pattern-analysis-cooldown.md",
+      "action": "archive"
+    },
+    {
+      "number": "312",
+      "filename": "312-professional-mental-discipline.md",
+      "action": "archive"
+    },
+    {
+      "number": "313",
+      "filename": "313-jealousy-aspiration-conversion.md",
+      "action": "archive"
+    },
+    {
+      "number": "314",
+      "filename": "314-inner-child-healing-self-love.md",
+      "action": "archive"
+    },
+    {
+      "number": "315",
+      "filename": "315-control-focus-letting-go.md",
+      "action": "archive"
+    },
+    {
+      "number": "316",
+      "filename": "316-life-purpose-update-flexibility.md",
+      "action": "archive"
+    },
+    {
+      "number": "317",
+      "filename": "317-silence-presence-power.md",
+      "action": "archive"
+    },
+    {
+      "number": "318",
+      "filename": "318-biorhythm-acceptance-rest.md",
+      "action": "archive"
+    },
+    {
+      "number": "319",
+      "filename": "319-system-optimization-altruism.md",
+      "action": "archive"
+    },
+    {
+      "number": "320",
+      "filename": "320-mental-models-deconstruction-rebuilding.md",
+      "action": "archive"
+    }
+  ],
+  "summary": {
+    "tierA": 25,
+    "tierB": 45,
+    "tierC_groups": 15,
+    "tierC_articles": 30,
+    "tierD": 20,
+    "tierE": 225,
+    "total_surviving": 105
+  }
+}

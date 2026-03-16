@@ -1,9 +1,10 @@
 name: Daily Blog Post & Rebuild
 
 on:
-  schedule:
-    # 毎日午前9時（JST）に実行 - UTC 00:00
-    - cron: '0 0 * * *'
+  # schedule:
+  #   # 毎日午前9時（JST）に実行 - UTC 00:00
+  #   - cron: '0 0 * * *'
+  #   # ⚠️ ブログリニューアル中のため一時停止（2026-03-17〜）
   workflow_dispatch:
     inputs:
       article_number:
