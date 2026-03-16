@@ -7,7 +7,7 @@ tags:
   - "レジリエンス"
   - "逆境"
   - "回復力"
-published: true
+published: false
 slug: "resilience-bounce-back"
 ---
 
