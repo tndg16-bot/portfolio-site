@@ -49,7 +49,7 @@ export default function CaseStudiesContent() {
                                 {/* Header */}
                                 <div className="mb-4">
                                     <div className="flex items-center gap-2 text-xs text-japan-indigo mb-2">
-                                        <span className="px-2 py-1 rounded-full bg-japan-indigo/10 border border-japan-indigo/20">
+                                        <span className="px-2 py-1 rounded-full bg-japan-indigo/15 border border-japan-indigo/25">
                                             {study.client.industry}
                                         </span>
                                         {study.category && (
