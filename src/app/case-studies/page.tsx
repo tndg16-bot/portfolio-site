@@ -21,7 +21,7 @@ export default function CaseStudiesPage() {
                         className="text-4xl md:text-5xl font-bold bg-japan-indigo text-white mb-6"
                     >
                         Case Studies
-                        <span className="block text-xl md:text-2xl text-teal-400 mt-2 font-normal">
+                        <span className="block text-xl md:text-2xl text-japan-indigo mt-2 font-normal">
                             変化の物語
                         </span>
                     </motion.h1>
@@ -43,20 +43,20 @@ export default function CaseStudiesPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="glass-card hover:bg-zinc-900/80 transition-all group rounded-2xl overflow-hidden border border-white/5 hover:border-teal-500/30 flex flex-col"
+                            className="glass-card hover:bg-zinc-900/80 transition-all group rounded-2xl overflow-hidden border border-white/5 hover:border-japan-indigo/30 flex flex-col"
                         >
                             <Link href={`/case-studies/${study.slug}`} className="flex-1 flex flex-col p-6 md:p-8">
                                 {/* Header */}
                                 <div className="mb-4">
-                                    <div className="flex items-center gap-2 text-xs text-teal-400 mb-2">
-                                        <span className="px-2 py-1 rounded-full bg-teal-500/10 border border-teal-500/20">
+                                    <div className="flex items-center gap-2 text-xs text-japan-indigo mb-2">
+                                        <span className="px-2 py-1 rounded-full bg-japan-indigo/10 border border-japan-indigo/20">
                                             {study.client.industry}
                                         </span>
                                         {study.category && (
                                             <span className="text-zinc-500 uppercase tracking-wider">{study.category}</span>
                                         )}
                                     </div>
-                                    <h2 className="text-xl font-bold bg-japan-indigo text-white group-hover:text-teal-400 transition-colors mb-2 line-clamp-3">
+                                    <h2 className="text-xl font-bold bg-japan-indigo text-white group-hover:text-japan-indigo transition-colors mb-2 line-clamp-3">
                                         {study.title}
                                     </h2>
                                 </div>
@@ -70,13 +70,13 @@ export default function CaseStudiesPage() {
                                 <div className="border-t border-white/10 pt-4 mt-auto">
                                     {study.stats && study.stats.length > 0 && (
                                         <div className="flex items-center gap-2 text-sm text-zinc-300 mb-2">
-                                            <TrendingUp size={16} className="text-teal-400" />
+                                            <TrendingUp size={16} className="text-japan-indigo" />
                                             <span className="font-semibold bg-japan-indigo text-white">{study.stats[0].key}: {study.stats[0].value}</span>
                                         </div>
                                     )}
                                 </div>
 
-                                <div className="mt-6 flex items-center text-teal-400 text-sm font-medium group-hover:translate-x-1 transition-transform">
+                                <div className="mt-6 flex items-center text-japan-indigo text-sm font-medium group-hover:translate-x-1 transition-transform">
                                     詳細を見る <ArrowRight size={16} className="ml-1" />
                                 </div>
                             </Link>
