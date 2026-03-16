@@ -51,7 +51,7 @@ export default function ContactContent() {
         {
             icon: MessageCircle,
             title: "LINE公式アカウント",
-            description: "気軽にメッセージでご連絡いただけます",
+            description: "チャット形式で手軽にご相談いただけます",
             action: "友だち追加",
             href: "https://lin.ee/VAYurUv",
             primary: false,
@@ -80,7 +80,7 @@ export default function ContactContent() {
         },
         {
             question: "キャンセルや日程変更はできますか？",
-            answer: "セッション24時間前までであれば、日程変更を承っております。お気軽にご連絡ください。"
+            answer: "セッション24時間前までであれば、日程変更を承っております。メールまたはLINEでご連絡ください。"
         },
         {
             question: "法人での研修やワークショップは実施していますか？",
@@ -94,8 +94,6 @@ export default function ContactContent() {
             <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20">
                 {/* Hero Section */}
                 <section className="relative w-full py-24 px-4">
-                    <div className="absolute inset-0 bg-gradient-to-b from-japan-indigo/5 via-japan-violet/5 to-transparent" />
-
                     <motion.div
                         initial="hidden"
                         animate="visible"
@@ -104,7 +102,7 @@ export default function ContactContent() {
                     >
                         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-japan-indigo/10 to-japan-violet/10 border border-japan-indigo/10 mb-8">
                             <Send className="w-4 h-4 text-teal-400" />
-                            <span className="text-sm text-zinc-800">気軽にご連絡ください</span>
+                            <span className="text-sm text-zinc-800">お問い合わせはこちら</span>
                         </motion.div>
 
                         <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold mb-6">
@@ -116,8 +114,8 @@ export default function ContactContent() {
                         </motion.h1>
 
                         <motion.p variants={itemVariants} className="text-xl text-zinc-700 max-w-2xl mx-auto leading-relaxed">
-                            変化への第一歩は、小さな「問い合わせ」から始まります。<br />
-                            お気軽にご連絡ください。
+                            サービスに関するご質問・ご相談は、<br />
+                            以下のいずれかの方法でお気軽にどうぞ。
                         </motion.p>
                     </motion.div>
                 </section>
@@ -178,7 +176,7 @@ export default function ContactContent() {
                     >
                         <motion.div variants={itemVariants} className="text-center mb-8">
                             <h2 className="text-3xl font-bold text-japan-indigo mb-4">セッション予約フォーム</h2>
-                            <p className="text-zinc-700">以下のフォームからお気軽にお申し込みください</p>
+                            <p className="text-zinc-700">以下のフォームから直接お申し込みいただけます</p>
                         </motion.div>
                         <motion.div variants={itemVariants}>
                             <BookingForm />
@@ -307,9 +305,6 @@ export default function ContactContent() {
                         variants={containerVariants}
                         className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-500/20 via-purple-500/10 to-pink-500/20 border border-japan-indigo/10 p-12 text-center"
                     >
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(45,212,191,0.15),transparent_50%)]" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.15),transparent_50%)]" />
-
                         <motion.div variants={itemVariants} className="relative z-10">
                             <h2 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4">
                                 変化は、一通のメッセージから
