@@ -91,44 +91,41 @@ jobs:
         echo "filename=$FILENAME" >> $GITHUB_OUTPUT
         echo "skip=false" >> $GITHUB_OUTPUT
 
-    # --- Mode B: アーカイブ記事をAIリライトして公開 ---
-    - name: Setup Node.js for rewrite
+    # --- Mode B: アーカイブ記事を移動して公開 ---
+    - name: Setup Node.js for archive move
       if: steps.find-article.outputs.mode == 'rewrite'
       uses: actions/setup-node@v4
       with:
         node-version: '20'
 
-    - name: Install dependencies for rewrite
+    - name: Install dependencies for archive move
       if: steps.find-article.outputs.mode == 'rewrite'
       run: npm ci
 
-    - name: Rewrite archive article with AI
+    - name: Move archive article to blog
       id: rewrite
       if: steps.find-article.outputs.mode == 'rewrite'
-      env:
-        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       run: |
-        echo "Rewriting archive article..."
+        echo "Moving archive article to blog..."
         OUTPUT=$(node scripts/rewrite-archive-article.mjs 2>&1)
         echo "$OUTPUT"
 
-        # 新ファイル名を抽出
         NEW_FILE=$(echo "$OUTPUT" | grep "^Written:" | sed 's/Written: //')
 
         if [ -z "$NEW_FILE" ]; then
-          echo "Failed to rewrite article"
+          echo "No archive articles available"
           echo "skip=true" >> $GITHUB_OUTPUT
           exit 0
         fi
 
         echo "new_file=$NEW_FILE" >> $GITHUB_OUTPUT
 
-    - name: Publish rewritten article
+    - name: Publish moved article
       id: rewrite-publish
       if: steps.find-article.outputs.mode == 'rewrite' && steps.rewrite.outputs.new_file != ''
       run: |
         NEW_FILE="${{ steps.rewrite.outputs.new_file }}"
-        echo "Publishing rewritten article: $NEW_FILE"
+        echo "Publishing from archive: $NEW_FILE"
         echo "filename=$NEW_FILE" >> $GITHUB_OUTPUT
         echo "skip=false" >> $GITHUB_OUTPUT
 
@@ -145,7 +142,7 @@ jobs:
           FILENAME="${{ steps.publish.outputs.filename || steps.rewrite-publish.outputs.filename }}"
           TODAY=$(date +%Y-%m-%d)
           if [ "${{ steps.find-article.outputs.mode }}" = "rewrite" ]; then
-            git commit -m "🤖 Rewrite & publish: ${FILENAME} [${TODAY}]"
+            git commit -m "♻️ Archive → publish: ${FILENAME} [${TODAY}]"
           else
             git commit -m "📰 Publish article: ${FILENAME} [${TODAY}]"
           fi
