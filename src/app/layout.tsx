@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { Inter, Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
 import "./globals.css";
-import { LiquidCursor } from "@/components/LiquidCursor";
 import { SectionBackground } from "@/components/SectionBackground";
 import { PersonJsonLd, OrganizationJsonLd, WebsiteJsonLd } from "@/components/JsonLd";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -98,7 +97,6 @@ export default function RootLayout({
         <OrganizationJsonLd />
         <WebsiteJsonLd />
         <SectionBackground />
-        <LiquidCursor />
         {children}
         <Analytics />
         <SpeedInsights />
