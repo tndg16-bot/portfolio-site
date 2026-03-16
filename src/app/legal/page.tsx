@@ -19,11 +19,11 @@ export default function LegalPage() {
             </tr>
             <tr className="border-b border-zinc-200">
               <td className="py-4 pr-4 font-medium text-zinc-700">所在地</td>
-              <td className="py-4 text-zinc-800">請求があった場合に遅滞なく開示いたします</td>
+              <td className="py-4 text-zinc-800">請求があった場合、メールにて遅滞なく開示いたします</td>
             </tr>
             <tr className="border-b border-zinc-200">
               <td className="py-4 pr-4 font-medium text-zinc-700">電話番号</td>
-              <td className="py-4 text-zinc-800">請求があった場合に遅滞なく開示いたします</td>
+              <td className="py-4 text-zinc-800">請求があった場合、メールにて遅滞なく開示いたします</td>
             </tr>
             <tr className="border-b border-zinc-200">
               <td className="py-4 pr-4 font-medium text-zinc-700">メールアドレス</td>
@@ -34,12 +34,16 @@ export default function LegalPage() {
               <td className="py-4 text-zinc-800">各サービスページに記載の通り（税込表示）</td>
             </tr>
             <tr className="border-b border-zinc-200">
+              <td className="py-4 pr-4 font-medium text-zinc-700">商品以外の必要料金</td>
+              <td className="py-4 text-zinc-800">インターネット接続料金、通信料等はお客様のご負担となります</td>
+            </tr>
+            <tr className="border-b border-zinc-200">
               <td className="py-4 pr-4 font-medium text-zinc-700">支払方法</td>
               <td className="py-4 text-zinc-800">銀行振込</td>
             </tr>
             <tr className="border-b border-zinc-200">
               <td className="py-4 pr-4 font-medium text-zinc-700">支払時期</td>
-              <td className="py-4 text-zinc-800">サービス提供前にお支払いいただきます</td>
+              <td className="py-4 text-zinc-800">お申し込み確認後、請求書発行から7日以内にお支払いいただきます</td>
             </tr>
             <tr className="border-b border-zinc-200">
               <td className="py-4 pr-4 font-medium text-zinc-700">サービス提供時期</td>
@@ -47,11 +51,15 @@ export default function LegalPage() {
             </tr>
             <tr className="border-b border-zinc-200">
               <td className="py-4 pr-4 font-medium text-zinc-700">キャンセル・返金</td>
-              <td className="py-4 text-zinc-800">セッション24時間前までのキャンセルは全額返金いたします。それ以降のキャンセルは返金いたしかねます。</td>
+              <td className="py-4 text-zinc-800">セッション24時間前までのキャンセルは全額返金いたします。それ以降のキャンセルは返金いたしかねます。事業者都合による中止の場合は全額返金いたします。</td>
+            </tr>
+            <tr className="border-b border-zinc-200">
+              <td className="py-4 pr-4 font-medium text-zinc-700">クーリングオフ</td>
+              <td className="py-4 text-zinc-800">通信販売のため、クーリングオフ制度は適用されません</td>
             </tr>
             <tr className="border-b border-zinc-200">
               <td className="py-4 pr-4 font-medium text-zinc-700">動作環境</td>
-              <td className="py-4 text-zinc-800">オンラインセッション: Zoomが動作するPC・スマートフォン、安定したインターネット接続</td>
+              <td className="py-4 text-zinc-800">オンラインセッション: Google Meetが動作するPC・スマートフォン、安定したインターネット接続</td>
             </tr>
           </tbody>
         </table>
