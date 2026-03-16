@@ -43,6 +43,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/case-studies`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/courses`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ]
 
   // ブログ記事を動的追加

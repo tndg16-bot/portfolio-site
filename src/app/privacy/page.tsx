@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'プライバシーポリシー',
-  description: 'プライバシーポリシー',
+  description: '本サイトにおける個人情報の取り扱い・プライバシーポリシーについて',
 };
 
 export default function PrivacyPage() {
