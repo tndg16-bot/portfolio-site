@@ -46,7 +46,7 @@ export default async function CategoryPage({ params }: Props) {
                     <h1 className="text-3xl font-bold bg-japan-indigo text-white mt-4">
                         {decodedCategory}
                     </h1>
-                    <p className="text-zinc-400 mt-2">
+                    <p className="text-zinc-700 mt-2">
                         {posts.length}件の記事が見つかりました
                     </p>
                 </div>
@@ -66,7 +66,7 @@ export default async function CategoryPage({ params }: Props) {
                                             {post.title}
                                         </h2>
                                         {post.description && (
-                                            <p className="text-zinc-400 mt-2 line-clamp-2">
+                                            <p className="text-zinc-700 mt-2 line-clamp-2">
                                                 {post.description}
                                             </p>
                                         )}
@@ -77,13 +77,13 @@ export default async function CategoryPage({ params }: Props) {
                                                 </span>
                                             )}
                                             {post.readingTime && (
-                                                <span className="text-xs text-zinc-500">
+                                                <span className="text-xs text-zinc-700">
                                                     📖 {post.readingTime}分で読める
                                                 </span>
                                             )}
                                         </div>
                                     </div>
-                                    <div className="text-sm text-zinc-500 whitespace-nowrap">
+                                    <div className="text-sm text-zinc-700 whitespace-nowrap">
                                         {post.date}
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@ export default async function CategoryPage({ params }: Props) {
                     </div>
                 ) : (
                     <div className="text-center py-12">
-                        <p className="text-zinc-400">
+                        <p className="text-zinc-700">
                             このカテゴリの記事はまだありません。
                         </p>
                     </div>

@@ -25,14 +25,14 @@ export default function TaskCard({ task, onStatusChange }: TaskCardProps) {
   const statusColors = {
     completed: 'bg-green-500/20 text-green-400 border-green-500/30',
     in_progress: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
-    pending: 'bg-zinc-500/20 text-zinc-400 border-zinc-500/30',
+    pending: 'bg-zinc-500/20 text-zinc-600 border-zinc-500/30',
     blocked: 'bg-red-500/20 text-red-400 border-red-500/30',
   };
   
   const priorityColors = {
     high: 'text-red-400',
     medium: 'text-yellow-400',
-    low: 'text-zinc-400',
+    low: 'text-zinc-600',
   };
   
   const statusIcons = {
@@ -90,7 +90,7 @@ export default function TaskCard({ task, onStatusChange }: TaskCardProps) {
             {task.description}
           </p>
           
-          <div className="flex items-center gap-4 text-xs text-zinc-400">
+          <div className="flex items-center gap-4 text-xs text-zinc-600">
             <div className="flex items-center gap-1">
               <User className="w-3 h-3" />
               <span>{task.assignee}</span>
@@ -116,7 +116,7 @@ export default function TaskCard({ task, onStatusChange }: TaskCardProps) {
           <h4 className="text-sm font-semibold text-zinc-300 mb-2">
             タスク詳細
           </h4>
-          <div className="space-y-2 text-xs text-zinc-400">
+          <div className="space-y-2 text-xs text-zinc-600">
             <div className="flex justify-between">
               <span>タスクID:</span>
               <span className="font-mono">{task.id}</span>

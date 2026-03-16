@@ -105,7 +105,7 @@ export default function TaskManagementDashboard() {
           <h1 className="text-3xl font-bold bg-japan-indigo text-white mb-2">
             タスク管理ダッシュボード
           </h1>
-          <p className="text-zinc-400">
+          <p className="text-zinc-600">
             プロジェクト進捗を管理するタスク管理システム
           </p>
         </div>
@@ -115,16 +115,16 @@ export default function TaskManagementDashboard() {
           <div className="glass-card p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs text-zinc-400 mb-1">総タスク</p>
+                <p className="text-xs text-zinc-600 mb-1">総タスク</p>
                 <p className="text-2xl font-bold bg-japan-indigo text-white">{stats.total}</p>
               </div>
-              <List className="w-5 h-5 text-zinc-400" />
+              <List className="w-5 h-5 text-zinc-600" />
             </div>
           </div>
           <div className="glass-card p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs text-zinc-400 mb-1">完了</p>
+                <p className="text-xs text-zinc-600 mb-1">完了</p>
                 <p className="text-2xl font-bold text-green-400">{stats.completed}</p>
               </div>
               <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
@@ -135,7 +135,7 @@ export default function TaskManagementDashboard() {
           <div className="glass-card p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs text-zinc-400 mb-1">進行中</p>
+                <p className="text-xs text-zinc-600 mb-1">進行中</p>
                 <p className="text-2xl font-bold text-blue-400">{stats.inProgress}</p>
               </div>
               <div className="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center">
@@ -146,11 +146,11 @@ export default function TaskManagementDashboard() {
           <div className="glass-card p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs text-zinc-400 mb-1">未着手</p>
-                <p className="text-2xl font-bold text-zinc-400">{stats.pending}</p>
+                <p className="text-xs text-zinc-600 mb-1">未着手</p>
+                <p className="text-2xl font-bold text-zinc-600">{stats.pending}</p>
               </div>
               <div className="w-5 h-5 rounded-full bg-zinc-500/20 flex items-center justify-center">
-                <span className="text-zinc-400 text-xs">◯</span>
+                <span className="text-zinc-600 text-xs">◯</span>
               </div>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function TaskManagementDashboard() {
         {/* Filter & Sort Controls */}
         <div className="flex flex-wrap items-center gap-4 mb-6">
           <div className="flex items-center gap-2">
-            <Filter className="w-5 h-5 text-zinc-400" />
+            <Filter className="w-5 h-5 text-zinc-600" />
             <select
               value={filter}
               onChange={(e) => setFilter(e.target.value as 'all' | Task['status'])}
@@ -174,7 +174,7 @@ export default function TaskManagementDashboard() {
           </div>
           
           <div className="flex items-center gap-2">
-            <LayoutDashboard className="w-5 h-5 text-zinc-400" />
+            <LayoutDashboard className="w-5 h-5 text-zinc-600" />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'priority' | 'dueDate' | 'status')}
@@ -199,7 +199,7 @@ export default function TaskManagementDashboard() {
           const statusColors = {
             completed: 'bg-green-500/20 text-green-400 border-green-500/30',
             in_progress: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
-            pending: 'bg-zinc-500/20 text-zinc-400 border-zinc-500/30',
+            pending: 'bg-zinc-500/20 text-zinc-600 border-zinc-500/30',
             blocked: 'bg-red-500/20 text-red-400 border-red-500/30',
           };
           
@@ -232,7 +232,7 @@ export default function TaskManagementDashboard() {
                       {task.title}
                     </h3>
                     <div className="flex items-center gap-2 text-xs">
-                      <span className="px-2 py-1 rounded-full bg-zinc-700/50 text-zinc-400">
+                      <span className="px-2 py-1 rounded-full bg-zinc-700/50 text-zinc-600">
                         {task.priority === 'high' && '高'}
                         {task.priority === 'medium' && '中'}
                         {task.priority === 'low' && '低'}
@@ -249,7 +249,7 @@ export default function TaskManagementDashboard() {
                     {task.description}
                   </p>
                   
-                  <div className="flex items-center gap-4 text-xs text-zinc-400">
+                  <div className="flex items-center gap-4 text-xs text-zinc-600">
                     <div className="flex items-center gap-1">
                       <User className="w-3 h-3" />
                       <span>{task.assignee}</span>
@@ -279,13 +279,13 @@ export default function TaskManagementDashboard() {
         <div className="glass-card p-8 rounded-lg text-center">
           <div className="mb-4">
             <div className="w-16 h-16 mx-auto bg-zinc-800/50 rounded-full flex items-center justify-center mb-4">
-              <LayoutDashboard className="w-8 h-8 text-zinc-500" />
+              <LayoutDashboard className="w-8 h-8 text-zinc-700" />
             </div>
           </div>
           <h3 className="text-xl font-semibold bg-japan-indigo text-white mb-2">
             該当するタスクがありません
           </h3>
-          <p className="text-zinc-400">
+          <p className="text-zinc-600">
             フィルタ条件を変更して、タスクを表示してください。
           </p>
         </div>
@@ -295,7 +295,7 @@ export default function TaskManagementDashboard() {
       {stats.total > 0 && (
         <div className="mt-8 glass-card p-4 rounded-lg">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm text-zinc-400">全体の進捗</span>
+            <span className="text-sm text-zinc-600">全体の進捗</span>
             <span className="text-sm font-semibold bg-japan-indigo text-white">
               {Math.round((stats.completed / stats.total) * 100)}%
             </span>

@@ -29,7 +29,7 @@ export default function CaseStudiesPage() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="text-zinc-400 max-w-2xl mx-auto leading-relaxed"
+                        className="text-zinc-700 max-w-2xl mx-auto leading-relaxed"
                     >
                         コーチングとコンサルティングを通じて、クライアントが直面した課題と、それをどう乗り越えたかの記録です。
                     </motion.p>

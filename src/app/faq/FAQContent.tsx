@@ -211,7 +211,7 @@ export default function FAQContent() {
             キーワード検索
           </label>
           <div className="relative">
-            <Search className="w-5 h-5 text-zinc-400 absolute left-4 top-1/2 -translate-y-1/2" />
+            <Search className="w-5 h-5 text-zinc-600 absolute left-4 top-1/2 -translate-y-1/2" />
             <input
               id="faq-search"
               value={query}
@@ -220,7 +220,7 @@ export default function FAQContent() {
               className="w-full rounded-2xl bg-japan-indigo/5 border border-white/10 pl-12 pr-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-teal-500/40"
             />
           </div>
-          <div className="mt-2 text-xs text-zinc-400">
+          <div className="mt-2 text-xs text-zinc-600">
             {filteredFAQs.length}件ヒット
           </div>
         </motion.div>
@@ -277,13 +277,13 @@ export default function FAQContent() {
                     className="block rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-japan-indigo text-white hover:bg-white/5 transition-colors"
                     aria-label={`FAQ ${idx + 1}: ${faq.question}`}
                   >
-                    <span className="text-zinc-500 mr-2">{idx + 1}.</span>
+                    <span className="text-zinc-700 mr-2">{idx + 1}.</span>
                     {faq.question}
                   </a>
                 ))}
 
                 {filteredFAQs.length === 0 && (
-                  <div className="text-sm text-zinc-400 px-3 py-2">
+                  <div className="text-sm text-zinc-600 px-3 py-2">
                     条件に一致する質問が見つかりませんでした。
                   </div>
                 )}

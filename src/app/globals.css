@@ -8,11 +8,11 @@
 }
 
 :root {
-  --background: #F5F1E8; /* Japan Cream */
-  --foreground: #2D2D2D; /* Japan Charcoal */
-  --japan-indigo: #1B365D;
-  --japan-vermilion: #D9381E;
-  --japan-gold: #C5A059;
+  --background: #F0E8D6; /* Japan Cream */
+  --foreground: #27221F; /* Japan Charcoal */
+  --japan-indigo: #165E83;
+  --japan-vermilion: #EB6101;
+  --japan-gold: #E6B422;
   
   --font-noto-jp: "Noto Sans JP", sans-serif;
 }
@@ -56,50 +56,50 @@ li {
 .pattern-seigaiha {
   background-color: transparent;
   background-image: 
-    radial-gradient(circle at 100% 150%, transparent 20%, rgba(27, 54, 93, 0.05) 21%, rgba(27, 54, 93, 0.05) 34%, transparent 35%, transparent),
-    radial-gradient(circle at 0% 150%, transparent 20%, rgba(27, 54, 93, 0.05) 21%, rgba(27, 54, 93, 0.05) 34%, transparent 35%, transparent),
-    radial-gradient(circle at 50% 100%, transparent 20%, rgba(27, 54, 93, 0.05) 21%, rgba(27, 54, 93, 0.05) 34%, transparent 35%, transparent),
-    radial-gradient(circle at 100% 50%, transparent 20%, rgba(27, 54, 93, 0.05) 21%, rgba(27, 54, 93, 0.05) 34%, transparent 35%, transparent),
-    radial-gradient(circle at 0% 50%, transparent 20%, rgba(27, 54, 93, 0.05) 21%, rgba(27, 54, 93, 0.05) 34%, transparent 35%, transparent),
-    radial-gradient(circle at 50% 0%, transparent 20%, rgba(27, 54, 93, 0.05) 21%, rgba(27, 54, 93, 0.05) 34%, transparent 35%, transparent);
+    radial-gradient(circle at 100% 150%, transparent 20%, rgba(22, 94, 131, 0.05) 21%, rgba(22, 94, 131, 0.05) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 150%, transparent 20%, rgba(22, 94, 131, 0.05) 21%, rgba(22, 94, 131, 0.05) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 50% 100%, transparent 20%, rgba(22, 94, 131, 0.05) 21%, rgba(22, 94, 131, 0.05) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 100% 50%, transparent 20%, rgba(22, 94, 131, 0.05) 21%, rgba(22, 94, 131, 0.05) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 50%, transparent 20%, rgba(22, 94, 131, 0.05) 21%, rgba(22, 94, 131, 0.05) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 50% 0%, transparent 20%, rgba(22, 94, 131, 0.05) 21%, rgba(22, 94, 131, 0.05) 34%, transparent 35%, transparent);
   background-size: 60px 30px;
 }
 
 /* Pattern: Asanoha (Hemp Leaf) - Simplified for CSS */
 .pattern-asanoha {
-  background-image: repeating-linear-gradient(60deg, rgba(27, 54, 93, 0.03) 0, rgba(27, 54, 93, 0.03) 1px, transparent 1px, transparent 20px),
-                    repeating-linear-gradient(-60deg, rgba(27, 54, 93, 0.03) 0, rgba(27, 54, 93, 0.03) 1px, transparent 1px, transparent 20px);
+  background-image: repeating-linear-gradient(60deg, rgba(22, 94, 131, 0.03) 0, rgba(22, 94, 131, 0.03) 1px, transparent 1px, transparent 20px),
+                    repeating-linear-gradient(-60deg, rgba(22, 94, 131, 0.03) 0, rgba(22, 94, 131, 0.03) 1px, transparent 1px, transparent 20px);
 }
 
 /* Washi Card - Replacement for Glass Panel */
 .washi-card, .glass-panel {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(27, 54, 93, 0.08);
-  box-shadow: 0 4px 20px rgba(27, 54, 93, 0.03);
+  border: 1px solid rgba(22, 94, 131, 0.08);
+  box-shadow: 0 4px 20px rgba(22, 94, 131, 0.03);
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
 
 .washi-card:hover, .glass-panel:hover {
-  border-color: rgba(27, 54, 93, 0.2);
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 30px rgba(27, 54, 93, 0.08);
+  border-color: rgba(22, 94, 131, 0.2);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 30px rgba(22, 94, 131, 0.08);
   transform: translateY(-2px);
 }
 
 /* Secondary Card Style */
 .glass-card {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(27, 54, 93, 0.05);
+  border: 1px solid rgba(22, 94, 131, 0.05);
 }
 
 /* Text Gradients */
 .text-japan-gradient, .text-forest {
-  background: linear-gradient(135deg, #1B365D 0%, #2D2D2D 100%);
+  background: linear-gradient(135deg, #165E83 0%, #27221F 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -107,7 +107,7 @@ li {
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, #C5A059, #E5C079);
+  background: linear-gradient(135deg, #E6B422, #F0D060);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -118,7 +118,7 @@ li {
 h1, h2, h3, h4 {
   letter-spacing: 0.05em;
   font-feature-settings: "palt";
-  color: #1B365D;
+  color: #165E83;
 }
 
 /* p color handled in body and specific sections */
@@ -132,11 +132,11 @@ h1, h2, h3, h4 {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(27, 54, 93, 0.2);
+  background: rgba(22, 94, 131, 0.2);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(27, 54, 93, 0.4);
+  background: rgba(22, 94, 131, 0.4);
 }
 
 /* Blog Prose Updates */
@@ -144,53 +144,53 @@ h1, h2, h3, h4 {
   font-size: 17px;
   line-height: 1.8;
   max-width: 65ch;
-  color: #2D2D2D;
-  --tw-prose-body: #2D2D2D;
-  --tw-prose-headings: #1B365D;
-  --tw-prose-links: #D9381E;
-  --tw-prose-bold: #1B365D;
+  color: #27221F;
+  --tw-prose-body: #27221F;
+  --tw-prose-headings: #165E83;
+  --tw-prose-links: #EB6101;
+  --tw-prose-bold: #165E83;
   --tw-prose-quotes: #5f4b8b;
-  --tw-prose-quote-borders: #C5A059;
-  --tw-prose-code: #D9381E;
-  --tw-prose-pre-bg: #1B365D;
+  --tw-prose-quote-borders: #E6B422;
+  --tw-prose-code: #EB6101;
+  --tw-prose-pre-bg: #165E83;
 }
 
 .prose-blog h2 {
-  border-bottom: 2px solid rgba(27, 54, 93, 0.1);
+  border-bottom: 2px solid rgba(22, 94, 131, 0.1);
 }
 
 .prose-blog h2::before {
-  background: linear-gradient(90deg, #1B365D, #5f4b8b);
+  background: linear-gradient(90deg, #165E83, #5f4b8b);
 }
 
 .reading-time-badge {
-  background: rgba(27, 54, 93, 0.05);
-  border: 1px solid rgba(27, 54, 93, 0.1);
-  color: #1B365D;
+  background: rgba(22, 94, 131, 0.05);
+  border: 1px solid rgba(22, 94, 131, 0.1);
+  color: #165E83;
 }
 
 .blog-tag {
-  background: rgba(27, 54, 93, 0.05);
-  border: 1px solid rgba(27, 54, 93, 0.1);
-  color: #1B365D;
+  background: rgba(22, 94, 131, 0.05);
+  border: 1px solid rgba(22, 94, 131, 0.1);
+  color: #165E83;
 }
 
 /* Light Theme Color Mappings */
 /* Map dark-theme accent colors to light-theme equivalents */
-.text-teal-400 { color: #1B365D; }
-.text-teal-300 { color: #2a4a7a; }
-.bg-teal-500\/10 { background-color: rgba(27, 54, 93, 0.06); }
-.bg-teal-500\/20 { background-color: rgba(27, 54, 93, 0.08); }
-.border-teal-500\/20 { border-color: rgba(27, 54, 93, 0.12); }
-.border-teal-500\/30 { border-color: rgba(27, 54, 93, 0.2); }
+.text-teal-400 { color: #165E83; }
+.text-teal-300 { color: #1a7aa0; }
+.bg-teal-500\/10 { background-color: rgba(22, 94, 131, 0.06); }
+.bg-teal-500\/20 { background-color: rgba(22, 94, 131, 0.08); }
+.border-teal-500\/20 { border-color: rgba(22, 94, 131, 0.12); }
+.border-teal-500\/30 { border-color: rgba(22, 94, 131, 0.2); }
 .text-purple-400 { color: #5f4b8b; }
 .bg-purple-500\/10 { background-color: rgba(95, 75, 139, 0.06); }
 .border-purple-500\/20 { border-color: rgba(95, 75, 139, 0.12); }
 
 /* Dark-themed sections: zinc colors remain appropriate */
 /* Light-themed sections: map zinc to readable equivalents */
-.border-zinc-800 { border-color: rgba(27, 54, 93, 0.1); }
-.hover\:bg-zinc-900\/50:hover { background-color: rgba(27, 54, 93, 0.03); }
+.border-zinc-800 { border-color: rgba(22, 94, 131, 0.1); }
+.hover\:bg-zinc-900\/50:hover { background-color: rgba(22, 94, 131, 0.03); }
 
 /* Accessibility */
 .sr-only {

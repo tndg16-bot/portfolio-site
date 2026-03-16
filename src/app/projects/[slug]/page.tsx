@@ -35,7 +35,7 @@ export default function ProjectPage() {
     const colors = colorVariants[project.iconColor] || colorVariants.indigo;
 
     return (
-        <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20 text-japan-charcoal bg-[#FDFBF7]">
+        <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20 text-japan-charcoal bg-japan-cream">
             <Header />
 
             <div className="fixed inset-0 pattern-seigaiha opacity-5 pointer-events-none z-0" />
@@ -48,7 +48,7 @@ export default function ProjectPage() {
                     transition={{ duration: 0.6 }}
                 >
                     <div className="flex items-center justify-center gap-2 mb-6">
-                        <Link href="/" className="group flex items-center gap-1 text-sm text-zinc-500 hover:text-japan-indigo transition-colors">
+                        <Link href="/" className="group flex items-center gap-1 text-sm text-zinc-700 hover:text-japan-indigo transition-colors">
                             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                             ホームに戻る
                         </Link>
@@ -73,7 +73,7 @@ export default function ProjectPage() {
                         {project.title}
                     </h1>
 
-                    <p className="mb-10 text-lg md:text-xl text-zinc-600 max-w-2xl mx-auto leading-relaxed">
+                    <p className="mb-10 text-lg md:text-xl text-zinc-800 max-w-2xl mx-auto leading-relaxed">
                         {project.description}
                     </p>
 

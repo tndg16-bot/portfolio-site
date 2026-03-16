@@ -15,11 +15,11 @@ const config: Config = {
       },
       colors: {
         'japan': {
-          indigo: '#1B365D', // Kachi-iro
-          cream: '#F5F1E8',  // Ecru/Washi
-          vermilion: '#D9381E', // Shu-iro
-          charcoal: '#2D2D2D', // Sumi-iro
-          gold: '#C5A059', // Kin-iro
+          indigo: '#165E83', // Ai-iro (藍色)
+          cream: '#F0E8D6',  // Ecru/Washi
+          vermilion: '#EB6101', // Shu-iro
+          charcoal: '#27221F', // Sumi-iro
+          gold: '#E6B422', // Kin-iro (金色)
           moss: '#546c59', // Matcha
           violet: '#5f4b8b', // Edo-murasaki
         }

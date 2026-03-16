@@ -111,9 +111,9 @@ export default function LearnPage() {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
         <div className="text-center max-w-md">
-          <BookOpen className="w-16 h-16 text-zinc-400 mx-auto mb-4" />
+          <BookOpen className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
           <h2 className="text-2xl font-bold text-zinc-900 mb-4">No Courses Yet</h2>
-          <p className="text-zinc-600 mb-6">
+          <p className="text-zinc-800 mb-6">
             You haven&apos;t enrolled in any courses yet. Browse available courses and start your learning journey!
           </p>
           <Link
@@ -162,7 +162,7 @@ export default function LearnPage() {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zinc-800">
-                      <BookOpen className="w-16 h-16 text-zinc-600" />
+                      <BookOpen className="w-16 h-16 text-zinc-800" />
                     </div>
                   )}
 
@@ -180,13 +180,13 @@ export default function LearnPage() {
                     {course.course_title}
                   </h3>
                   {course.course_description && (
-                    <p className="text-sm text-zinc-600 line-clamp-3 mb-4">
+                    <p className="text-sm text-zinc-800 line-clamp-3 mb-4">
                       {course.course_description}
                     </p>
                   )}
 
                   {/* Stats */}
-                  <div className="flex items-center gap-4 text-sm text-zinc-500 mb-4">
+                  <div className="flex items-center gap-4 text-sm text-zinc-700 mb-4">
                     <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
                       <span>{course.course_total_lessons} lessons</span>
@@ -206,7 +206,7 @@ export default function LearnPage() {
                           `${course.progress_percentage.toFixed(0)}% complete`
                         )}
                       </span>
-                      <span className="text-xs text-zinc-400">
+                      <span className="text-xs text-zinc-600">
                         {course.enrolled_at ? new Date(course.enrolled_at).toLocaleDateString() : ''}
                       </span>
                     </div>

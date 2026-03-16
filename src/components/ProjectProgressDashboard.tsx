@@ -99,7 +99,7 @@ export default function ProjectProgressDashboard() {
           <h2 className="text-3xl font-bold text-japan-indigo mb-2">
             プロジェクト進捗ダッシュボード
           </h2>
-          <p className="text-zinc-600">
+          <p className="text-zinc-800">
             GitHub Issuesからのリアルタイム進捗管理
           </p>
         </div>
@@ -159,7 +159,7 @@ export default function ProjectProgressDashboard() {
           className="bg-gradient-to-br from-zinc-50 to-zinc-100 rounded-xl p-6 border border-zinc-200"
         >
           <div className="flex items-center gap-2 mb-2">
-            <Circle className="h-5 w-5 text-zinc-600" />
+            <Circle className="h-5 w-5 text-zinc-800" />
             <span className="text-sm font-medium text-zinc-700">未着手</span>
           </div>
           <p className="text-3xl font-bold text-zinc-900">{stats?.notStarted || 0}</p>
@@ -183,14 +183,14 @@ export default function ProjectProgressDashboard() {
             className="h-full bg-gradient-to-r from-japan-indigo to-violet-500 rounded-full"
           />
         </div>
-        <p className="text-sm text-zinc-500 mt-2 text-right">
+        <p className="text-sm text-zinc-700 mt-2 text-right">
           {stats?.completed || 0} / {stats?.total || 0} タスク完了
         </p>
       </div>
 
       {/* Last Updated */}
       {stats?.lastUpdated && (
-        <div className="flex items-center justify-center gap-2 text-sm text-zinc-500">
+        <div className="flex items-center justify-center gap-2 text-sm text-zinc-700">
           <Activity className="h-4 w-4" />
           <span>最終更新: {formatDate(stats.lastUpdated)}</span>
         </div>
@@ -218,7 +218,7 @@ export default function ProjectProgressDashboard() {
                     ) : issue.labels.includes('in-progress') ? (
                       <Clock className="h-5 w-5 text-amber-600" />
                     ) : (
-                      <Circle className="h-5 w-5 text-zinc-400" />
+                      <Circle className="h-5 w-5 text-zinc-600" />
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -238,7 +238,7 @@ export default function ProjectProgressDashboard() {
                           ))}
                         </>
                       )}
-                      <span className="text-xs text-zinc-500">
+                      <span className="text-xs text-zinc-700">
                         #{issue.number} · {formatDate(issue.updated_at)}
                       </span>
                     </div>

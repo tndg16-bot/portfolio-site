@@ -118,7 +118,7 @@ export default async function PostPage({ params }: Props) {
             <h1 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4 leading-tight">{post.title}</h1>
 
             {/* Meta information */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-500">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-700">
               <time dateTime={post.date}>{post.date}</time>
 
               {post.readingTime && <span className="reading-time-badge">📖 {post.readingTime}分で読める</span>}
@@ -169,7 +169,7 @@ export default async function PostPage({ params }: Props) {
                     <h4 className="text-sm font-semibold text-japan-indigo group-hover:text-teal-400 transition-colors line-clamp-2 mb-2">
                       {relatedPost.title}
                     </h4>
-                    <div className="flex items-center gap-2 text-xs text-zinc-500">
+                    <div className="flex items-center gap-2 text-xs text-zinc-700">
                       {relatedPost.category && (
                         <span className="px-2 py-0.5 bg-teal-500/10 text-teal-400 rounded">{relatedPost.category}</span>
                       )}
@@ -223,24 +223,24 @@ export default async function PostPage({ params }: Props) {
                   background: '#FFFFFF',
 
                   /* Nodes: Cream bg with Indigo border */
-                  mainBkg: '#F5F1E8',
-                  nodeBorder: '#1B365D',
-                  textColor: '#2D2D2D',
+                  mainBkg: '#F0E8D6',
+                  nodeBorder: '#165E83',
+                  textColor: '#27221F',
 
                   /* Lines */
-                  lineColor: '#1B365D',
-                  arrowheadColor: '#C5A059',
+                  lineColor: '#165E83',
+                  arrowheadColor: '#E6B422',
 
                   /* Clusters */
-                  clusterBkg: 'rgba(245, 241, 232, 0.5)',
-                  clusterBorder: '#C5A059',
-                  titleColor: '#1B365D',
+                  clusterBkg: 'rgba(240, 232, 214, 0.5)',
+                  clusterBorder: '#E6B422',
+                  titleColor: '#165E83',
                   edgeLabelBackground: '#FFFFFF',
 
                   /* Flowchart Specifics */
-                  primaryColor: '#F5F1E8',
-                  primaryTextColor: '#1B365D',
-                  primaryBorderColor: '#1B365D',
+                  primaryColor: '#F0E8D6',
+                  primaryTextColor: '#165E83',
+                  primaryBorderColor: '#165E83',
                   tertiaryColor: '#FFFFFF'
                 }
               });

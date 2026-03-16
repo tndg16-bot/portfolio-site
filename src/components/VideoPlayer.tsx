@@ -23,7 +23,7 @@ export default function VideoPlayer({
                     <div className="w-16 h-16 rounded-full bg-zinc-800 flex items-center justify-center mx-auto mb-4 border border-zinc-700">
                         <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-teal-500 border-b-[10px] border-b-transparent ml-1" />
                     </div>
-                    <p className="text-zinc-500 text-sm">Video Host (Mock)</p>
+                    <p className="text-zinc-700 text-sm">Video Host (Mock)</p>
                     <p className="text-zinc-300 font-bold mt-2">Video ID: {videoId}</p>
                 </div>
             </div>

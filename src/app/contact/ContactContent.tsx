@@ -104,7 +104,7 @@ export default function ContactContent() {
                     >
                         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-japan-indigo/10 to-japan-violet/10 border border-japan-indigo/10 mb-8">
                             <Send className="w-4 h-4 text-teal-400" />
-                            <span className="text-sm text-zinc-600">気軽にご連絡ください</span>
+                            <span className="text-sm text-zinc-800">気軽にご連絡ください</span>
                         </motion.div>
 
                         <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold mb-6">
@@ -115,7 +115,7 @@ export default function ContactContent() {
                             <span className="text-japan-indigo">お待ちしています</span>
                         </motion.h1>
 
-                        <motion.p variants={itemVariants} className="text-xl text-zinc-500 max-w-2xl mx-auto leading-relaxed">
+                        <motion.p variants={itemVariants} className="text-xl text-zinc-700 max-w-2xl mx-auto leading-relaxed">
                             変化への第一歩は、小さな「問い合わせ」から始まります。<br />
                             お気軽にご連絡ください。
                         </motion.p>
@@ -152,9 +152,9 @@ export default function ContactContent() {
                                 </div>
 
                                 <h3 className="text-xl font-bold text-japan-indigo mb-3">{method.title}</h3>
-                                <p className="text-zinc-500 mb-6 leading-relaxed">{method.description}</p>
+                                <p className="text-zinc-700 mb-6 leading-relaxed">{method.description}</p>
 
-                                <div className={`inline-flex items-center gap-2 font-medium ${method.primary ? 'text-teal-400' : 'text-zinc-600 group-hover:text-white'
+                                <div className={`inline-flex items-center gap-2 font-medium ${method.primary ? 'text-teal-400' : 'text-zinc-800 group-hover:text-white'
                                     } transition-colors`}>
                                     {method.action}
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -178,7 +178,7 @@ export default function ContactContent() {
                     >
                         <motion.div variants={itemVariants} className="text-center mb-8">
                             <h2 className="text-3xl font-bold text-japan-indigo mb-4">セッション予約フォーム</h2>
-                            <p className="text-zinc-500">以下のフォームからお気軽にお申し込みください</p>
+                            <p className="text-zinc-700">以下のフォームからお気軽にお申し込みください</p>
                         </motion.div>
                         <motion.div variants={itemVariants}>
                             <BookingForm />
@@ -209,8 +209,8 @@ export default function ContactContent() {
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-japan-indigo mb-1">実施方法</h4>
-                                        <p className="text-zinc-500">オンライン（Zoom）</p>
-                                        <p className="text-sm text-zinc-500 mt-1">安定したインターネット環境があればどこからでも参加可能</p>
+                                        <p className="text-zinc-700">オンライン（Zoom）</p>
+                                        <p className="text-sm text-zinc-700 mt-1">安定したインターネット環境があればどこからでも参加可能</p>
                                     </div>
                                 </div>
 
@@ -220,8 +220,8 @@ export default function ContactContent() {
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-japan-indigo mb-1">対応時間</h4>
-                                        <p className="text-zinc-500">平日 10:00 - 20:00</p>
-                                        <p className="text-sm text-zinc-500 mt-1">土日祝も事前予約で対応可能</p>
+                                        <p className="text-zinc-700">平日 10:00 - 20:00</p>
+                                        <p className="text-sm text-zinc-700 mt-1">土日祝も事前予約で対応可能</p>
                                     </div>
                                 </div>
                             </div>
@@ -248,9 +248,9 @@ export default function ContactContent() {
                                         </div>
                                         <div className="flex-1">
                                             <h4 className="font-medium text-japan-indigo">{social.name}</h4>
-                                            <p className="text-sm text-zinc-500">{social.description}</p>
+                                            <p className="text-sm text-zinc-700">{social.description}</p>
                                         </div>
-                                        <ArrowRight className="w-5 h-5 text-zinc-500 group-hover:text-japan-indigo group-hover:translate-x-1 transition-all" />
+                                        <ArrowRight className="w-5 h-5 text-zinc-700 group-hover:text-japan-indigo group-hover:translate-x-1 transition-all" />
                                     </a>
                                 ))}
                             </div>
@@ -274,7 +274,7 @@ export default function ContactContent() {
                     >
                         <motion.div variants={itemVariants} className="text-center mb-12">
                             <h2 className="text-3xl font-bold text-japan-indigo mb-4">よくあるご質問</h2>
-                            <p className="text-zinc-500">お問い合わせ前にご確認ください</p>
+                            <p className="text-zinc-700">お問い合わせ前にご確認ください</p>
                         </motion.div>
 
                         <div className="space-y-4">
@@ -288,7 +288,7 @@ export default function ContactContent() {
                                         <span className="text-teal-400 font-bold">Q.</span>
                                         {faq.question}
                                     </h3>
-                                    <p className="text-zinc-500 pl-7 leading-relaxed">
+                                    <p className="text-zinc-700 pl-7 leading-relaxed">
                                         <span className="text-purple-400 font-bold mr-2">A.</span>
                                         {faq.answer}
                                     </p>
@@ -314,7 +314,7 @@ export default function ContactContent() {
                             <h2 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4">
                                 変化は、一通のメッセージから
                             </h2>
-                            <p className="text-xl text-zinc-600 mb-8 max-w-2xl mx-auto">
+                            <p className="text-xl text-zinc-800 mb-8 max-w-2xl mx-auto">
                                 完璧なタイミングを待つ必要はありません。<br />
                                 今この瞬間が、あなたの新しい始まりです。
                             </p>
@@ -343,7 +343,7 @@ export default function ContactContent() {
                 <footer className="w-full py-12 border-t border-japan-indigo/5 bg-japan-indigo/5">
                     <div className="max-w-6xl mx-auto px-4">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                            <div className="flex gap-6 text-zinc-500 text-sm">
+                            <div className="flex gap-6 text-zinc-700 text-sm">
                                 <Link href="/about" className="hover:text-teal-400 transition-colors">About</Link>
                                 <Link href="/philosophy" className="hover:text-teal-400 transition-colors">Philosophy</Link>
                                 <Link href="/sessions" className="hover:text-teal-400 transition-colors">Sessions</Link>
@@ -351,7 +351,7 @@ export default function ContactContent() {
                                 <Link href="/privacy" className="hover:text-teal-400 transition-colors">プライバシーポリシー</Link>
                                 <Link href="/legal" className="hover:text-teal-400 transition-colors">特定商取引法に基づく表記</Link>
                             </div>
-                            <p className="text-zinc-500 text-sm">
+                            <p className="text-zinc-700 text-sm">
                                 © 2026 Takahiro Motoyama. All rights reserved.
                             </p>
                         </div>

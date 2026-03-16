@@ -52,7 +52,7 @@ export default function LessonNavigation({
       {/* Progress Bar */}
       <div className="p-4 border-b border-zinc-200">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-zinc-600">Course Progress</span>
+          <span className="text-sm font-medium text-zinc-800">Course Progress</span>
           <span className="text-sm font-bold text-teal-600">{progress.toFixed(0)}%</span>
         </div>
         <div className="w-full bg-zinc-200 rounded-full h-2">
@@ -88,13 +88,13 @@ export default function LessonNavigation({
                     {isCurrentModule && <PlayCircle className="w-5 h-5 text-teal-600" />}
                     <span className="font-semibold text-zinc-900">{module.title}</span>
                   </div>
-                  <span className="text-xs text-zinc-500 bg-zinc-100 px-2 py-1 rounded-full">
+                  <span className="text-xs text-zinc-700 bg-zinc-100 px-2 py-1 rounded-full">
                     {moduleLessons.length} lessons
                   </span>
                 </div>
                 <ChevronDown
                   className={cn(
-                    "w-5 h-5 text-zinc-400 transition-transform",
+                    "w-5 h-5 text-zinc-600 transition-transform",
                     isExpanded ? "rotate-180" : ""
                   )}
                 />
@@ -138,7 +138,7 @@ export default function LessonNavigation({
                             <PlayCircle className="w-full h-full text-teal-600" />
                           ) : (
                             <div className="w-full h-full border-2 border-zinc-300 rounded-full flex items-center justify-center">
-                              <span className="text-xs text-zinc-400">{moduleIndex + 1}</span>
+                              <span className="text-xs text-zinc-600">{moduleIndex + 1}</span>
                             </div>
                           )}
                         </div>
@@ -147,7 +147,7 @@ export default function LessonNavigation({
                         <div className="flex-1">
                           <p className="font-medium text-sm text-zinc-900">{lesson.title}</p>
                           {lesson.video_duration && (
-                            <p className="text-xs text-zinc-500">
+                            <p className="text-xs text-zinc-700">
                               {Math.floor(lesson.video_duration / 60)} min
                             </p>
                           )}
@@ -155,7 +155,7 @@ export default function LessonNavigation({
 
                         {/* Lock icon for non-free lessons */}
                         {!lesson.is_free && !isCompleted && (
-                          <Lock className="w-4 h-4 text-zinc-400 flex-shrink-0" />
+                          <Lock className="w-4 h-4 text-zinc-600 flex-shrink-0" />
                         )}
                       </button>
                     );
@@ -171,7 +171,7 @@ export default function LessonNavigation({
       <div className="p-4 border-t border-zinc-200">
         <Link
           href={`/learn/${courseSlug}`}
-          className="flex items-center gap-2 text-sm font-medium text-zinc-600 hover:text-zinc-900 transition-colors"
+          className="flex items-center gap-2 text-sm font-medium text-zinc-800 hover:text-zinc-900 transition-colors"
         >
           <span>Back to Course List</span>
           <ChevronRight className="w-4 h-4" />

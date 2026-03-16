@@ -58,7 +58,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                                                 ? 'bg-emerald-100 border-emerald-300 text-emerald-700'
                                                 : project.status === 'in_progress'
                                                     ? 'bg-amber-100 border-amber-300 text-amber-700'
-                                                    : 'bg-zinc-100 border-zinc-300 text-zinc-500'
+                                                    : 'bg-zinc-100 border-zinc-300 text-zinc-700'
                                             }`}>
                                             {project.status === 'completed' ? 'Completed' :
                                                 project.status === 'in_progress' ? 'In Progress' : 'Not Started'}
@@ -72,7 +72,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                                 </div>
                                 <button
                                     onClick={onClose}
-                                    className="p-2 hover:bg-zinc-100 rounded-full transition-colors text-zinc-400 hover:text-japan-indigo"
+                                    className="p-2 hover:bg-zinc-100 rounded-full transition-colors text-zinc-600 hover:text-japan-indigo"
                                 >
                                     <X size={24} />
                                 </button>
@@ -80,7 +80,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
 
                             {/* Description */}
                             {project.description && (
-                                <p className="text-zinc-600 mb-8 leading-relaxed">
+                                <p className="text-zinc-800 mb-8 leading-relaxed">
                                     {project.description}
                                 </p>
                             )}
@@ -107,14 +107,14 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                                                     <Circle size={20} className="text-zinc-300" />
                                                 )}
                                             </div>
-                                            <span className={`${task.completed ? 'text-zinc-400 line-through' : 'text-zinc-700'}`}>
+                                            <span className={`${task.completed ? 'text-zinc-600 line-through' : 'text-zinc-700'}`}>
                                                 {task.title}
                                             </span>
                                         </div>
                                     ))}
                                 </div>
                             ) : (
-                                <div className="text-center py-8 text-zinc-500 bg-zinc-50 rounded-xl border border-zinc-100">
+                                <div className="text-center py-8 text-zinc-700 bg-zinc-50 rounded-xl border border-zinc-100">
                                     サブタスク情報はありません
                                 </div>
                             )}
@@ -126,7 +126,7 @@ export default function ProjectModal({ isOpen, onClose, project }: ProjectModalP
                                         href={project.issueUrl ?? `https://github.com/tndg16-bot/papa/issues/${project.issueNumber}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-sm text-zinc-500 hover:text-japan-indigo transition-colors flex items-center gap-2"
+                                        className="text-sm text-zinc-700 hover:text-japan-indigo transition-colors flex items-center gap-2"
                                     >
                                         GitHub Issue{project.issueNumber ? ` #${project.issueNumber}` : ''} を開く ↗
                                     </a>

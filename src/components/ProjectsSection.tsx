@@ -64,7 +64,7 @@ function StatusBadge({ status }: { status: Project['status'] }) {
     case 'development':
       return <span className="text-blue-600 text-sm font-medium">🚧 開発中</span>;
     case 'private':
-      return <span className="text-zinc-500 text-sm font-medium">🔒 プライベート</span>;
+      return <span className="text-zinc-700 text-sm font-medium">🔒 プライベート</span>;
     case 'coming-soon':
       return <span className="text-amber-600 text-sm font-medium">🔜 近日公開</span>;
     default:
@@ -107,13 +107,13 @@ function ProjectCard({ project }: { project: Project }) {
       <h3 className="text-xl font-bold text-japan-indigo mb-2">{project.title}</h3>
       
       {/* 説明 */}
-      <p className="text-zinc-600 text-sm mb-4 flex-grow line-clamp-3">
+      <p className="text-zinc-800 text-sm mb-4 flex-grow line-clamp-3">
         {project.description}
       </p>
       
       {/* ハイライト */}
       {project.highlights && project.highlights.length > 0 && (
-        <ul className="text-xs text-zinc-500 mb-4 space-y-1">
+        <ul className="text-xs text-zinc-700 mb-4 space-y-1">
           {project.highlights.slice(0, 2).map((highlight, i) => (
             <li key={i} className="flex items-start gap-1">
               <span className="text-green-500 mt-0.5">✓</span>
@@ -131,7 +131,7 @@ function ProjectCard({ project }: { project: Project }) {
           </span>
         ))}
         {project.techStack.length > 3 && (
-          <span className="text-xs bg-zinc-100 text-zinc-600 px-2 py-1 rounded-full">
+          <span className="text-xs bg-zinc-100 text-zinc-800 px-2 py-1 rounded-full">
             +{project.techStack.length - 3}
           </span>
         )}
@@ -193,7 +193,7 @@ export default function ProjectsSection() {
         <motion.h2 variants={itemVariants} className="text-4xl font-bold md:text-5xl text-japan-indigo mb-4">
           本山貴裕の作品集
         </motion.h2>
-        <motion.p variants={itemVariants} className="text-zinc-500 text-lg max-w-2xl mx-auto mb-8">
+        <motion.p variants={itemVariants} className="text-zinc-700 text-lg max-w-2xl mx-auto mb-8">
           自己決定力を加速させるためのAIツール・アプリケーションを開発しています
         </motion.p>
         
@@ -250,7 +250,7 @@ export default function ProjectsSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="mt-12 text-zinc-400 text-sm"
+        className="mt-12 text-zinc-600 text-sm"
       >
         計 {mainProjects.length + toolProjects.length} プロジェクト開発中
       </motion.p>

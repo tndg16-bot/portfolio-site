@@ -14,7 +14,7 @@ export default function TopInfoBanner({
           <p className="text-xs font-semibold tracking-wide text-japan-indigo/80">
             {title}
           </p>
-          <p className="text-sm leading-relaxed text-zinc-600">{message}</p>
+          <p className="text-sm leading-relaxed text-zinc-800">{message}</p>
         </div>
       </div>
     </section>
