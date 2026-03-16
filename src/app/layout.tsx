@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Inter, Noto_Sans_JP, Noto_Serif_JP } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 import { SectionBackground } from "@/components/SectionBackground";
 import { PersonJsonLd, OrganizationJsonLd, WebsiteJsonLd } from "@/components/JsonLd";
@@ -112,8 +113,12 @@ export default function RootLayout({
         <WebsiteJsonLd />
         <SectionBackground />
         {children}
-        <Analytics />
-        <SpeedInsights />
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
+        <Suspense fallback={null}>
+          <SpeedInsights />
+        </Suspense>
         <CookieConsent />
       </body>
     </html>
