@@ -289,6 +289,7 @@ export default function Home() {
           {/* Newsletter */}
           <NewsletterForm />
 
+
           {/* LINE CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -318,23 +319,75 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== 7. Footer ===== */}
-      <footer className="w-full py-20 text-center border-t border-japan-indigo/5 bg-japan-indigo/5">
-        <div className="max-w-4xl mx-auto px-4">
-          {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 text-zinc-800 font-medium text-sm">
-            <a href="/about" className="hover:text-japan-indigo transition-colors">About</a>
-            <a href="/philosophy" className="hover:text-japan-indigo transition-colors">Philosophy</a>
-            <a href="/services" className="hover:text-japan-indigo transition-colors">Services</a>
-            <a href="/sessions" className="hover:text-japan-indigo transition-colors">Sessions</a>
-            <Link href="/blog" className="hover:text-japan-indigo transition-colors">Blog</Link>
-            <a href="/faq" className="hover:text-japan-indigo transition-colors">FAQ</a>
-            <a href="/contact" className="hover:text-japan-indigo transition-colors">Contact</a>
-            <a href="https://lin.ee/VAYurUv" target="_blank" rel="noopener noreferrer" className="hover:text-green-600 transition-colors">LINE</a>
-            <a href="/privacy" className="hover:text-japan-indigo transition-colors">プライバシーポリシー</a>
-            <a href="/legal" className="hover:text-japan-indigo transition-colors">特定商取引法に基づく表記</a>
+      {/* Footer */}
+      <footer className="w-full border-t border-japan-indigo/10 bg-japan-indigo/5">
+        {/* 3-Column Links */}
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+            {/* Column 1: Services */}
+            <div>
+              <h4 className="text-sm font-bold text-japan-indigo uppercase tracking-wider mb-4">サービス</h4>
+              <ul className="space-y-3 text-sm text-zinc-600">
+                <li>
+                  <Link href="/services" className="hover:text-japan-indigo transition-colors">個人向けサービス</Link>
+                </li>
+                <li>
+                  <Link href="/services" className="hover:text-japan-indigo transition-colors">法人向けサービス</Link>
+                </li>
+                <li>
+                  <Link href="/services" className="hover:text-japan-indigo transition-colors">AI開発支援</Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 2: Content */}
+            <div>
+              <h4 className="text-sm font-bold text-japan-indigo uppercase tracking-wider mb-4">コンテンツ</h4>
+              <ul className="space-y-3 text-sm text-zinc-600">
+                <li>
+                  <Link href="/blog" className="hover:text-japan-indigo transition-colors">ブログ</Link>
+                </li>
+                <li>
+                  <Link href="/projects" className="hover:text-japan-indigo transition-colors">実績・作品集</Link>
+                </li>
+                <li>
+                  <Link href="/faq" className="hover:text-japan-indigo transition-colors">よくある質問</Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 3: Contact */}
+            <div>
+              <h4 className="text-sm font-bold text-japan-indigo uppercase tracking-wider mb-4">お問い合わせ</h4>
+              <ul className="space-y-3 text-sm text-zinc-600">
+                <li>
+                  <Link href="/contact" className="hover:text-japan-indigo transition-colors">無料相談予約</Link>
+                </li>
+                <li>
+                  <a
+                    href="https://lin.ee/VAYurUv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-japan-indigo transition-colors"
+                  >
+                    LINE
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <p className="text-zinc-700 text-sm tracking-widest uppercase">&copy; 2026 Takahiro Motoyama. Designed for Self-Determination.</p>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-japan-indigo/10">
+          <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
+            <p className="tracking-wide">&copy; 2026 TAKAHIRO MOTOYAMA</p>
+            <div className="flex items-center gap-4 md:gap-6">
+              <Link href="/privacy" className="hover:text-japan-indigo transition-colors">プライバシーポリシー</Link>
+              <Link href="/legal" className="hover:text-japan-indigo transition-colors">特定商取引法に基づく表記</Link>
+            </div>
+          </div>
+ 603560f (feat: redesign header nav (7→4 items + CTA) and restructure footer (#232))
         </div>
       </footer>
     </main>
