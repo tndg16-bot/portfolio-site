@@ -60,19 +60,20 @@ export default function AboutContent() {
             <main className="flex min-h-screen flex-col items-center overflow-x-hidden pt-20">
                 {/* Hero Section */}
                 <section className="relative w-full py-24 px-4">
+                    <div className="absolute inset-0 bg-japan-cream" />
                     <motion.div
                         initial="hidden"
                         animate="visible"
                         variants={containerVariants}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-japan-indigo/10 to-japan-violet/10 border border-japan-indigo/10 mb-8">
-                            <Sparkles className="w-4 h-4 text-teal-400" />
+                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/10 border border-japan-indigo/10 mb-8">
+                            <Sparkles className="w-4 h-4 text-japan-indigo" />
                             <span className="text-sm text-zinc-800">About</span>
                         </motion.div>
 
                         <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold mb-6">
-                            <span className="bg-gradient-to-r from-white via-teal-200 to-purple-200 bg-clip-text text-transparent">
+                            <span className="text-japan-indigo">
                                 判断軸を取り戻して、
                             </span>
                             <br />
@@ -96,10 +97,10 @@ export default function AboutContent() {
                         className="p-8 rounded-2xl bg-white/60 border border-japan-indigo/10"
                     >
                         <motion.p variants={itemVariants} className="text-lg text-zinc-800 leading-relaxed">
-                            はじめまして、<span className="text-teal-400 font-bold">本山 貴裕</span>です。<br /><br />
+                            はじめまして、<span className="text-japan-indigo font-bold">本山 貴裕</span>です。<br /><br />
                             「モヤモヤ整理セッション」は、答えを渡す場所ではありません。<br />
                             自分の価値観と判断軸を言語化して、次の一歩を決めるための時間です。<br /><br />
-                            そのために、<span className="text-purple-400">否定せず、裁かず、押し付けず、伴走します。</span>
+                            そのために、<span className="text-japan-indigo">否定せず、裁かず、押し付けず、伴走します。</span>
                         </motion.p>
                     </motion.div>
                 </section>
@@ -121,10 +122,10 @@ export default function AboutContent() {
                                 <motion.div
                                     key={index}
                                     variants={itemVariants}
-                                    className="flex items-start gap-4 p-6 rounded-xl bg-white/60 border border-japan-indigo/10 hover:border-teal-500/30 transition-colors"
+                                    className="flex items-start gap-4 p-6 rounded-xl bg-white/60 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-colors"
                                 >
-                                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-japan-indigo/10 to-japan-violet/10 flex items-center justify-center flex-shrink-0">
-                                        <service.icon className="w-6 h-6 text-teal-400" />
+                                    <div className="w-12 h-12 rounded-lg bg-japan-indigo/10 flex items-center justify-center flex-shrink-0">
+                                        <service.icon className="w-6 h-6 text-japan-indigo" />
                                     </div>
                                     <p className="text-japan-charcoal leading-relaxed pt-2">{service.text}</p>
                                 </motion.div>
@@ -144,7 +145,7 @@ export default function AboutContent() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={containerVariants}
-                        className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500/10 to-teal-500/10 border border-japan-indigo/10 p-8"
+                        className="relative overflow-hidden rounded-2xl bg-japan-indigo/5 border border-japan-indigo/10 p-8"
                     >
                         <motion.h2 variants={itemVariants} className="text-3xl font-bold text-japan-indigo mb-6">
                             なぜこれをやっているのか
@@ -158,7 +159,7 @@ export default function AboutContent() {
                                 <li>何から手をつけていいか分からない</li>
                             </ul>
                             <p>このあたりで止まっていることが多いと感じています。</p>
-                            <p className="text-teal-400 font-medium pt-4">
+                            <p className="text-japan-indigo font-medium pt-4">
                                 だから私は、まず「自分の意思を言っていい」状態をつくる。<br />
                                 そのうえで、行動まで落とし込む。<br />
                                 この順番を大事にしています。
@@ -180,7 +181,7 @@ export default function AboutContent() {
                         </motion.h2>
 
                         <motion.p variants={itemVariants} className="text-center text-zinc-700 mb-8">
-                            これまで、<span className="text-teal-400">金融・人材・AIの領域</span>で現場を見てきました。
+                            これまで、<span className="text-japan-indigo">金融・人材・AIの領域</span>で現場を見てきました。
                         </motion.p>
 
                         <div className="grid gap-4 md:grid-cols-3">
@@ -190,7 +191,7 @@ export default function AboutContent() {
                                     variants={itemVariants}
                                     className="p-6 rounded-xl bg-white/60 border border-japan-indigo/10"
                                 >
-                                    <h3 className="text-lg font-bold text-teal-400 mb-3">{item.area}</h3>
+                                    <h3 className="text-lg font-bold text-japan-indigo mb-3">{item.area}</h3>
                                     <p className="text-base text-zinc-800">{item.description}</p>
                                 </motion.div>
                             ))}
@@ -198,7 +199,7 @@ export default function AboutContent() {
 
                         <motion.p variants={itemVariants} className="text-center text-zinc-800 mt-8 p-4 rounded-xl bg-white/60 border border-japan-indigo/10">
                             「精神面（価値観・直感）」だけでも、「実務（AIやキャリア）」だけでもなく、<br />
-                            <span className="text-purple-400 font-medium">両方をつないで&quot;意思決定&quot;に落とすのが私のスタイルです。</span>
+                            <span className="text-japan-indigo font-medium">両方をつないで&quot;意思決定&quot;に落とすのが私のスタイルです。</span>
                         </motion.p>
                     </motion.div>
                 </section>
@@ -223,7 +224,7 @@ export default function AboutContent() {
                                     variants={itemVariants}
                                     className="flex items-center gap-3 p-4 rounded-xl bg-white/60 border border-japan-indigo/10"
                                 >
-                                    <CheckCircle className="w-5 h-5 text-teal-400 flex-shrink-0" />
+                                    <CheckCircle className="w-5 h-5 text-japan-indigo flex-shrink-0" />
                                     <p className="text-japan-charcoal">{promise}</p>
                                 </motion.div>
                             ))}
@@ -244,14 +245,14 @@ export default function AboutContent() {
                         </motion.h2>
 
                         <div className="grid gap-6 md:grid-cols-2">
-                            <motion.div variants={itemVariants} className="p-6 rounded-2xl bg-teal-500/10 border border-teal-500/30">
-                                <h3 className="text-xl font-bold text-teal-400 mb-4 flex items-center gap-2">
+                            <motion.div variants={itemVariants} className="p-6 rounded-2xl bg-japan-indigo/10 border border-japan-indigo/30">
+                                <h3 className="text-xl font-bold text-japan-indigo mb-4 flex items-center gap-2">
                                     <CheckCircle className="w-6 h-6" /> 合う人
                                 </h3>
                                 <ul className="space-y-3">
                                     {fitFor.map((item, index) => (
                                         <li key={index} className="flex items-start gap-2 text-japan-charcoal">
-                                            <span className="text-teal-400 mt-1">•</span>
+                                            <span className="text-japan-indigo mt-1">•</span>
                                             {item}
                                         </li>
                                     ))}
@@ -301,7 +302,7 @@ export default function AboutContent() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={containerVariants}
-                        className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-japan-indigo/10 via-japan-violet/5 to-japan-gold/10 border border-japan-indigo/10 p-12 text-center"
+                        className="relative overflow-hidden rounded-3xl bg-japan-indigo/5 border border-japan-indigo/10 p-12 text-center"
                     >
                         <motion.h2 variants={itemVariants} className="text-3xl font-bold text-japan-indigo mb-4">
                             頭の中が散らかっていて進めないなら、まずは整理しましょう
@@ -326,10 +327,10 @@ export default function AboutContent() {
                     <div className="max-w-6xl mx-auto px-4">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                             <div className="flex gap-6 text-zinc-700 text-sm">
-                                <Link href="/" className="hover:text-teal-400 transition-colors">Home</Link>
-                                <Link href="/about" className="hover:text-teal-400 transition-colors">About</Link>
-                                <Link href="/sessions" className="hover:text-teal-400 transition-colors">Sessions</Link>
-                                <Link href="/contact" className="hover:text-teal-400 transition-colors">Contact</Link>
+                                <Link href="/" className="hover:text-japan-indigo transition-colors">Home</Link>
+                                <Link href="/about" className="hover:text-japan-indigo transition-colors">About</Link>
+                                <Link href="/sessions" className="hover:text-japan-indigo transition-colors">Sessions</Link>
+                                <Link href="/contact" className="hover:text-japan-indigo transition-colors">Contact</Link>
                             </div>
                             <p className="text-zinc-700 text-sm">
                                 © 2026 Takahiro Motoyama. All rights reserved.
