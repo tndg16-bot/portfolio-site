@@ -8,16 +8,6 @@ const COOKIE_CONSENT_KEY = 'cookie-consent';
 export default function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (!consent) {
-      setIsVisible(true);
-    } else {
-      // Already consented — update GA consent state
-      updateGAConsent(true);
-    }
-  }, []);
-
   function updateGAConsent(granted: boolean) {
     if (typeof window.gtag === 'function') {
       window.gtag('consent', 'update', {
@@ -28,6 +18,16 @@ export default function CookieConsent() {
       });
     }
   }
+
+  useEffect(() => {
+    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+    if (!consent) {
+      setIsVisible(true);
+    } else {
+      // Already consented — update GA consent state
+      updateGAConsent(true);
+    }
+  }, []);
 
   function handleAccept() {
     localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
