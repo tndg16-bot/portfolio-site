@@ -92,7 +92,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
 
           {/* Features */}
           <div className="mb-8">
-            <h2 className="text-lg font-semibold text-zinc-900 mb-4">What's Included</h2>
+            <h2 className="text-lg font-semibold text-zinc-900 mb-4">What&apos;s Included</h2>
             <ul className="space-y-3">
               {[
                 'Full access to all course materials',
@@ -126,7 +126,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
               <h3 className="text-lg font-semibold text-zinc-900">Secure Payment</h3>
             </div>
             <p className="text-sm text-zinc-800 mb-4">
-              Your payment information is secure and encrypted. We use Stripe for payment processing and don't store your card details.
+              Your payment information is secure and encrypted. We use Stripe for payment processing and don&apos;t store your card details.
             </p>
             <div className="flex gap-4 mb-4">
               <div className="flex items-center gap-2 text-sm">

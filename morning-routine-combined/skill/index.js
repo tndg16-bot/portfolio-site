@@ -228,6 +228,7 @@ function extractIncompleteTasks(content, config) {
 /**
  * 優先順位スコアを計算
  */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function calculatePriorityScore(task, config) {
   let urgencyScore = 1; // low
   

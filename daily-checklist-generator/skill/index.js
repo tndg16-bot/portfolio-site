@@ -250,7 +250,7 @@ function main(args) {
 }
 
 // Export for skill framework
-export default {
+const skillModule = {
   name: 'daily-checklist-generator',
   description: 'Extracts incomplete tasks from Obsidian daily notes and generates a prioritized checklist',
   version: '1.0.0',
@@ -258,3 +258,4 @@ export default {
   generateChecklist: generateChecklist,
   formatChecklist: formatChecklist
 };
+export default skillModule;

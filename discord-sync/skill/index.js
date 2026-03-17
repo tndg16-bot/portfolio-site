@@ -67,6 +67,7 @@ function getCurrentDate() {
 /**
  * メッセージタイプを判定（朝/夜）
  */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function getCheckInType(config) {
   const currentTime = getCurrentTime();
   const [hour] = currentTime.split(':').map(Number);

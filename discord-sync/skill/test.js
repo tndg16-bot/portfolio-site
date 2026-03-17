@@ -6,7 +6,7 @@
  * ローカルテスト用スクリプト
  */
 
-import { main, loadConfig, getCheckInType, getMessage, appendToObsidian, log } from './index.js';
+import { main, loadConfig, getCheckInType, getMessage, appendToObsidian } from './index.js';
 import fs from 'fs/promises';
 import path from 'path';
 

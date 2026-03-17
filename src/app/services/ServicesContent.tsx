@@ -56,6 +56,7 @@ const getCardColor = (category: string) => {
 
 type TabKey = 'all' | 'individual' | 'business';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ServiceCard: React.FC<{ service: SessionService; index: number; itemVariants: Variants }> = ({ service, index, itemVariants }) => {
     return (
         <motion.div
