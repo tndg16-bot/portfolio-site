@@ -17,7 +17,7 @@ const config: Config = {
       colors: {
         'japan': {
           indigo: '#165E83', // Ai-iro (藍色)
-          cream: '#F0E8D6',  // Ecru/Washi
+          cream: '#F5F5F4',  // Light background
           vermilion: '#EB6101', // Shu-iro
           charcoal: '#27221F', // Sumi-iro
           gold: '#E6B422', // Kin-iro (金色)

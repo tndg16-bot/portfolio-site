@@ -99,7 +99,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href={ctaItem.href}
-              className="bg-japan-vermilion text-white px-6 py-2.5 rounded-full font-bold hover:bg-japan-vermilion/90 transition-colors duration-200 flex items-center gap-1.5 text-sm"
+              className="bg-[#0f3a52] text-white px-6 py-2.5 rounded-full font-bold hover:bg-[#0a2d42] transition-colors duration-200 flex items-center gap-1.5 text-sm"
             >
               {ctaItem.label}
               <ArrowRight className="w-4 h-4" />
@@ -155,7 +155,7 @@ export default function Header() {
                   <Link
                     href={ctaItem.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center justify-center gap-2 min-h-[48px] bg-japan-vermilion text-white rounded-full font-bold text-base hover:opacity-90 transition-all"
+                    className="flex items-center justify-center gap-2 min-h-[48px] bg-[#0f3a52] text-white rounded-full font-bold text-base hover:bg-[#0a2d42] transition-colors duration-200"
                   >
                     {ctaItem.label}
                     <ArrowRight className="w-4 h-4" />

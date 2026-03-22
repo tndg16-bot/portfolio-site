@@ -23,14 +23,14 @@
    Light Theme (藍と金ライト)
    ============================================ */
 :root {
-  --background: #F3F3F2;
-  --foreground: #27221F;
+  --background: #F5F5F4;
+  --foreground: #1a1a1a;
 
-  /* Surfaces */
-  --surface: rgba(255, 255, 255, 0.95);
-  --surface-hover: rgba(255, 255, 255, 0.98);
-  --surface-alt: rgba(255, 255, 255, 0.60);
-  --surface-section: rgba(255, 255, 255, 0.40);
+  /* Surfaces — white cards on light gray bg for clear separation */
+  --surface: #ffffff;
+  --surface-hover: #ffffff;
+  --surface-alt: rgba(255, 255, 255, 0.85);
+  --surface-section: #EEEEED;
 
   /* Brand */
   --japan-indigo: #165E83;
@@ -38,22 +38,22 @@
   --japan-gold: #E6B422;
 
   /* Text hierarchy */
-  --text-primary: #27221F;
-  --text-secondary: #52525b;
-  --text-muted: #71717a;
+  --text-primary: #1a1a1a;
+  --text-secondary: #3f3f46;
+  --text-muted: #52525b;
   --text-strong: #165E83;
 
-  /* Borders */
-  --border-subtle: rgba(22, 94, 131, 0.06);
-  --border-default: rgba(22, 94, 131, 0.10);
-  --border-emphasis: rgba(22, 94, 131, 0.20);
+  /* Borders — stronger for card visibility */
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-default: rgba(0, 0, 0, 0.12);
+  --border-emphasis: rgba(0, 0, 0, 0.20);
 
-  /* Shadows */
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Shadows — more visible */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
 
   /* Header */
-  --header-bg: rgba(255, 255, 255, 0.80);
+  --header-bg: rgba(245, 245, 244, 0.90);
 
   /* Scrollbar */
   --scrollbar-thumb: rgba(22, 94, 131, 0.2);
@@ -69,6 +69,11 @@
 .dark {
   --background: #0a1628;
   --foreground: #f5f0e8;
+
+  /* Override brand colors for dark — brighter versions */
+  --japan-indigo: #1a7aa0;
+  --japan-vermilion: #EB6101;
+  --japan-gold: #E6B422;
 
   /* Surfaces — glass effect on deep navy */
   --surface: rgba(255, 255, 255, 0.05);

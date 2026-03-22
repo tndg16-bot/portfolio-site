@@ -67,14 +67,14 @@ export default function HomeContent() {
           >
             <Link
               href="/contact"
-              className="bg-japan-vermilion text-white px-10 py-5 min-h-[56px] rounded-full text-lg font-bold shadow-lg shadow-japan-vermilion/40 hover:shadow-xl hover:scale-105 transition-[transform,box-shadow] duration-200 flex items-center justify-center gap-2 group ring-2 ring-japan-vermilion/20"
+              className="bg-[#0f3a52] text-white px-10 py-5 min-h-[56px] rounded-full text-lg font-bold shadow-lg shadow-[#0f3a52]/30 hover:bg-[#0a2d42] hover:shadow-xl hover:scale-105 transition-[transform,box-shadow,background-color] duration-200 flex items-center justify-center gap-2 group"
             >
               無料相談を予約する
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <a
               href="#case-studies"
-              className="border-2 border-japan-indigo text-japan-indigo px-10 py-5 min-h-[56px] rounded-full text-lg font-bold hover:bg-japan-indigo hover:text-white transition-colors duration-200 flex items-center justify-center gap-2"
+              className="border-2 border-japan-indigo/30 text-japan-indigo bg-white px-10 py-5 min-h-[56px] rounded-full text-lg font-bold hover:bg-japan-indigo hover:text-white hover:border-japan-indigo transition-colors duration-200 flex items-center justify-center gap-2"
             >
               導入事例を見る
             </a>
@@ -387,47 +387,64 @@ export default function HomeContent() {
             whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6 }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-text-strong mb-4">ご支援の流れ</h2>
           </motion.div>
 
-          <div className="space-y-0">
-            {[
-              { step: "①", title: "無料診断（30分）", description: "課題の整理と方向性の確認" },
-              { step: "②", title: "ヒアリング", description: "業務フロー・目標の詳細把握" },
-              { step: "③", title: "提案", description: "カスタマイズされたプランの提示" },
-              { step: "④", title: "実行", description: "戦略立案から実装・自動化まで" },
-              { step: "⑤", title: "成果確認", description: "KPIモニタリングと改善" },
-            ].map((step, index) => (
-              <motion.div
-                key={step.step}
-                initial={prefersReducedMotion ? {} : { opacity: 0, x: -20 }}
-                whileInView={prefersReducedMotion ? {} : { opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start gap-4 py-6 border-b border-border-default last:border-b-0"
-              >
-                <div className="shrink-0 w-10 h-10 rounded-full bg-japan-indigo flex items-center justify-center text-white font-bold text-sm">
-                  {step.step}
-                </div>
-                <div>
-                  <h3 className="font-bold text-text-primary">{step.title}</h3>
-                  <p className="text-text-secondary text-sm">{step.description}</p>
-                </div>
-                {index === 0 && (
-                  <span className="ml-auto shrink-0 text-xs bg-japan-vermilion/10 text-japan-vermilion px-3 py-1 rounded-full font-medium">
-                    無料
-                  </span>
-                )}
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={prefersReducedMotion ? {} : { opacity: 0 }}
+            whileInView={prefersReducedMotion ? {} : { opacity: 1 }}
+            viewport={{ once: true }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.8 }}
+            className="relative"
+          >
+            {/* Horizontal line (desktop) / Vertical line (mobile) */}
+            <div className="hidden md:block absolute top-7 left-[10%] right-[10%] h-1 rounded-full bg-japan-indigo/15" />
+            <div className="md:hidden absolute top-0 bottom-0 left-7 w-1 rounded-full bg-japan-indigo/15" />
+
+            <div className="flex flex-col md:flex-row md:justify-between gap-10 md:gap-0">
+              {[
+                { num: "1", label: "無料診断", sub: "30分", free: true },
+                { num: "2", label: "ヒアリング", sub: "詳細把握" },
+                { num: "3", label: "提案", sub: "プラン提示" },
+                { num: "4", label: "実行", sub: "実装まで" },
+                { num: "5", label: "成果確認", sub: "KPI改善" },
+              ].map((step, index) => (
+                <motion.div
+                  key={step.num}
+                  initial={prefersReducedMotion ? {} : { opacity: 0, y: 15 }}
+                  whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.4, delay: index * 0.1 }}
+                  className="flex md:flex-col items-center md:items-center gap-4 md:gap-0 md:flex-1"
+                >
+                  {/* Node */}
+                  <div className="relative z-10 shrink-0 w-14 h-14 rounded-full bg-[#0f3a52] text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-[#0f3a52]/25 ring-4 ring-white dark:ring-[#0a1628]">
+                    {step.num}
+                  </div>
+
+                  {/* Label */}
+                  <div className="md:mt-4 md:text-center">
+                    <div className="flex items-center gap-2 md:justify-center">
+                      <span className="text-base font-bold text-text-primary">{step.label}</span>
+                      {step.free && (
+                        <span className="text-xs bg-[#C0350A] text-white px-2.5 py-1 rounded-full font-bold">
+                          無料
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs text-text-muted mt-0.5">{step.sub}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* ===== 8. CTA ===== */}
-      <section id="cta" className="w-full py-24 bg-japan-indigo">
+      <section id="cta" className="w-full py-24 bg-[#0a1628]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -439,11 +456,11 @@ export default function HomeContent() {
               まずは無料相談で、<br className="md:hidden" />あなたの状況をお聞かせください。
             </h2>
 
-            <p className="text-white/90 text-lg mb-3">
+            <p className="text-white text-lg mb-3">
               オンラインで、あなたの状況に合わせてご提案します。
             </p>
 
-            <div className="flex flex-col items-center gap-2 mb-8 text-white/80">
+            <div className="flex flex-col items-center gap-2 mb-8 text-white">
               {[
                 "現状の課題を整理",
                 "AI導入・改善の優先順位を提案",
@@ -459,7 +476,7 @@ export default function HomeContent() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="/contact"
-                className="bg-white text-japan-indigo px-8 py-4 min-h-[56px] rounded-full text-lg font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-[transform,box-shadow] duration-200 flex items-center justify-center gap-2 group"
+                className="bg-white text-[#0a1628] px-8 py-4 min-h-[56px] rounded-full text-lg font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-[transform,box-shadow] duration-200 flex items-center justify-center gap-2 group"
               >
                 無料相談を予約する
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
