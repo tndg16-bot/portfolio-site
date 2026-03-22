@@ -50,7 +50,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-zinc-50 to-zinc-100 py-12 px-4">
+    <main className="min-h-screen bg-gradient-to-b from-surface-alt to-surface-section py-12 px-4">
       <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,32 +58,32 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
           className="glass-card rounded-2xl p-8"
         >
           {/* Header */}
-          <div className="mb-8 pb-6 border-b border-zinc-200">
-            <h1 className="text-2xl font-bold text-zinc-900 mb-2">
+          <div className="mb-8 pb-6 border-b border-border-default">
+            <h1 className="text-2xl font-bold text-text-primary mb-2">
               Complete Your Purchase
             </h1>
-            <p className="text-zinc-800">
+            <p className="text-text-primary">
               You&apos;re about to purchase: <strong>{course.title}</strong>
             </p>
           </div>
 
           {/* Course Details */}
-          <div className="mb-8 p-6 bg-zinc-50 rounded-xl">
-            <h2 className="text-lg font-semibold text-zinc-900 mb-4">Course Details</h2>
+          <div className="mb-8 p-6 bg-surface-alt rounded-xl">
+            <h2 className="text-lg font-semibold text-text-primary mb-4">Course Details</h2>
             <div className="space-y-2">
               <div className="flex justify-between">
-                <span className="text-zinc-800">Price:</span>
-                <span className="text-xl font-bold text-zinc-900">
+                <span className="text-text-primary">Price:</span>
+                <span className="text-xl font-bold text-text-primary">
                   ${(course.price / 100).toFixed(2)} {course.currency.toUpperCase()}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-zinc-800">Lessons:</span>
-                <span className="font-semibold text-zinc-900">{course.total_lessons}</span>
+                <span className="text-text-primary">Lessons:</span>
+                <span className="font-semibold text-text-primary">{course.total_lessons}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-zinc-800">Duration:</span>
-                <span className="font-semibold text-zinc-900">
+                <span className="text-text-primary">Duration:</span>
+                <span className="font-semibold text-text-primary">
                   {Math.floor(course.total_duration / 60)} minutes
                 </span>
               </div>
@@ -92,7 +92,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
 
           {/* Features */}
           <div className="mb-8">
-            <h2 className="text-lg font-semibold text-zinc-900 mb-4">What&apos;s Included</h2>
+            <h2 className="text-lg font-semibold text-text-primary mb-4">What&apos;s Included</h2>
             <ul className="space-y-3">
               {[
                 'Full access to all course materials',
@@ -111,7 +111,7 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
               'Expert instructor feedback',
                 'Flexible learning schedule',
               ].map((feature, index) => (
-                <li key={index} className="flex items-start gap-3 text-zinc-700">
+                <li key={index} className="flex items-start gap-3 text-text-secondary">
                   <CheckCircle className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
                   <span>{feature}</span>
                 </li>
@@ -123,9 +123,9 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
             <div className="flex items-center gap-3 mb-4">
               <CreditCard className="w-5 h-5 text-blue-600" />
-              <h3 className="text-lg font-semibold text-zinc-900">Secure Payment</h3>
+              <h3 className="text-lg font-semibold text-text-primary">Secure Payment</h3>
             </div>
-            <p className="text-sm text-zinc-800 mb-4">
+            <p className="text-sm text-text-primary mb-4">
               Your payment information is secure and encrypted. We use Stripe for payment processing and don&apos;t store your card details.
             </p>
             <div className="flex gap-4 mb-4">
@@ -153,13 +153,13 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
           {/* Checkout Button Placeholder */}
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-center">
             <XCircle className="w-12 h-12 text-yellow-600 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-zinc-900 mb-2">
+            <h3 className="text-lg font-semibold text-text-primary mb-2">
               Stripe Integration Required
             </h3>
-            <p className="text-zinc-800 mb-4">
+            <p className="text-text-primary mb-4">
               Payment processing requires Stripe package installation and configuration.
             </p>
-            <p className="text-sm text-zinc-700">
+            <p className="text-sm text-text-secondary">
               <strong>To enable payment:</strong>
               <br />
               1. Run: <code className="bg-zinc-800 text-zinc-100 px-2 py-1 rounded">npm install stripe @stripe/stripe-js</code>
@@ -179,12 +179,12 @@ export default function CheckoutPage({ params }: CheckoutPageProps) {
           </div>
 
           {/* Footer Links */}
-          <div className="text-center text-sm text-zinc-700 pt-6 border-t border-zinc-200">
-            <Link href="/learn" className="hover:text-zinc-700">
+          <div className="text-center text-sm text-text-secondary pt-6 border-t border-border-default">
+            <Link href="/learn" className="hover:text-text-secondary">
               ← Back to Course List
             </Link>
             <span className="mx-4">|</span>
-            <a href="/contact" className="hover:text-zinc-700">
+            <a href="/contact" className="hover:text-text-secondary">
               Contact Support
             </a>
           </div>

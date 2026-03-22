@@ -9,8 +9,8 @@ export default function PrivacyPage() {
   return (
     <main className="flex min-h-screen flex-col items-center pt-24 pb-16 px-4">
       <div className="max-w-3xl w-full prose prose-zinc">
-        <h1 className="text-3xl font-bold text-zinc-800 mb-8">プライバシーポリシー</h1>
-        <p className="text-sm text-zinc-700 mb-8">最終更新日: 2026年3月11日</p>
+        <h1 className="text-3xl font-bold text-text-primary mb-8">プライバシーポリシー</h1>
+        <p className="text-sm text-text-secondary mb-8">最終更新日: 2026年3月11日</p>
 
         <h2>1. 個人情報の収集</h2>
         <p>当サイトでは、お問い合わせフォームやセッション予約時に、以下の個人情報を収集することがあります。</p>

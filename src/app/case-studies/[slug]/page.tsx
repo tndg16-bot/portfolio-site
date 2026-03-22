@@ -26,7 +26,7 @@ export default function CaseStudyPage({ params }: Props) {
             <main className="min-h-screen pt-24 pb-16">
                 {/* Article Header */}
                 <article className="max-w-4xl mx-auto px-4">
-                    <Link href="/case-studies" className="inline-flex items-center text-zinc-700 hover:text-japan-indigo mb-8 transition-colors">
+                    <Link href="/case-studies" className="inline-flex items-center text-text-secondary hover:text-japan-indigo mb-8 transition-colors">
                         <ArrowLeft size={16} className="mr-2" /> 事例一覧に戻る
                     </Link>
 
@@ -35,12 +35,12 @@ export default function CaseStudyPage({ params }: Props) {
                             <span className="px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 font-medium">
                                 {study.client.industry}
                             </span>
-                            <span className="text-zinc-700">{study.date}</span>
+                            <span className="text-text-secondary">{study.date}</span>
                         </div>
                         <h1 className="text-3xl md:text-5xl font-bold bg-japan-indigo text-white mb-6 leading-tight">
                             {study.title}
                         </h1>
-                        <p className="text-xl text-zinc-300 leading-relaxed font-light">
+                        <p className="text-xl text-text-secondary leading-relaxed font-light">
                             {study.subtitle}
                         </p>
                     </header>
@@ -49,7 +49,7 @@ export default function CaseStudyPage({ params }: Props) {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                         {study.stats && study.stats.map((stat, i) => (
                             <div key={i} className="glass-panel p-6 rounded-2xl border border-white/5 text-center">
-                                <div className="text-zinc-700 text-sm mb-1">{stat.key}</div>
+                                <div className="text-text-secondary text-sm mb-1">{stat.key}</div>
                                 <div className="text-3xl font-bold bg-japan-indigo text-white mb-2">{stat.value}</div>
                                 <div className="text-teal-400 text-xs">{stat.description}</div>
                             </div>
@@ -62,7 +62,7 @@ export default function CaseStudyPage({ params }: Props) {
                             <Target className="text-red-400" />
                             課題と背景
                         </h2>
-                        <div className="prose prose-invert max-w-none text-zinc-300 leading-relaxed bg-zinc-900/30 p-8 rounded-2xl border border-white/5">
+                        <div className="prose prose-invert max-w-none text-text-secondary leading-relaxed bg-zinc-900/30 p-8 rounded-2xl border border-white/5">
                             {study.challenge}
                         </div>
                     </section>
@@ -73,7 +73,7 @@ export default function CaseStudyPage({ params }: Props) {
                             <Zap className="text-yellow-400" />
                             実施したアプローチ
                         </h2>
-                        <div className="prose prose-invert max-w-none text-zinc-300 leading-relaxed whitespace-pre-line">
+                        <div className="prose prose-invert max-w-none text-text-secondary leading-relaxed whitespace-pre-line">
                             {study.solution}
                         </div>
                     </section>
@@ -100,13 +100,13 @@ export default function CaseStudyPage({ params }: Props) {
                     {study.testimonial && (
                         <section className="mb-20">
                             <blockquote className="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 relative">
-                                <User className="absolute top-8 left-8 text-zinc-700 w-12 h-12" />
+                                <User className="absolute top-8 left-8 text-text-secondary w-12 h-12" />
                                 <p className="text-xl md:text-2xl italic text-zinc-200 mb-6 relative z-10 leading-relaxed">
                                     &quot;{study.testimonial.quote}&quot;
                                 </p>
                                 <footer className="text-right">
                                     <cite className="not-italic block font-bold bg-japan-indigo text-white">{study.testimonial.author}</cite>
-                                    <span className="text-sm text-zinc-700">{study.testimonial.role}</span>
+                                    <span className="text-sm text-text-secondary">{study.testimonial.role}</span>
                                 </footer>
                             </blockquote>
                         </section>

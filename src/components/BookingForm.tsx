@@ -117,7 +117,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="glass-panel rounded-3xl p-12 text-center bg-white/80"
+                    className="glass-panel rounded-3xl p-12 text-center bg-surface-alt"
                 >
                     <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-rose-500 to-amber-500 flex items-center justify-center">
                         <AlertCircle className="w-10 h-10 bg-japan-indigo text-white" />
@@ -125,7 +125,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     <h2 className="text-3xl font-bold text-japan-indigo mb-4">
                         送信に失敗しました
                     </h2>
-                    <p className="text-zinc-800 max-w-md mx-auto mb-8">
+                    <p className="text-text-primary max-w-md mx-auto mb-8">
                         お手数ですが、もう一度お試しください。<br />
                         問題が続く場合はSNSでご連絡ください。
                     </p>
@@ -146,7 +146,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="glass-panel rounded-3xl p-12 text-center bg-white/80"
+                    className="glass-panel rounded-3xl p-12 text-center bg-surface-alt"
                 >
                     <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-japan-indigo to-japan-vermilion flex items-center justify-center">
                         <Send className="w-10 h-10 bg-japan-indigo text-white" />
@@ -154,7 +154,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     <h2 className="text-3xl font-bold text-japan-indigo mb-4">
                         送信完了しました
                     </h2>
-                    <p className="text-zinc-800 max-w-md mx-auto">
+                    <p className="text-text-primary max-w-md mx-auto">
                         3営業日以内にご連絡いたします。<br />
                         お問い合わせいただきありがとうございます。
                     </p>
@@ -170,7 +170,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="glass-panel rounded-3xl p-8 md:p-12 border border-japan-indigo/10 bg-white/60"
+                className="glass-panel rounded-3xl p-8 md:p-12 border border-japan-indigo/10 bg-surface-alt"
             >
                 {/* Header */}
                 <div className="text-center mb-10">
@@ -186,7 +186,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     <h2 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4">
                         無料相談・セッション予約
                     </h2>
-                    <p className="text-zinc-800 max-w-xl mx-auto">
+                    <p className="text-text-primary max-w-xl mx-auto">
                         AI活用支援からコーチングまで、お気軽にお申し込みください。
                     </p>
                 </div>
@@ -196,7 +196,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     {/* Row 1: Name & Email */}
                     <div className="grid md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                            <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
+                            <label className="flex items-center gap-2 text-sm font-medium text-text-secondary">
                                 <User size={16} className="text-japan-indigo" />
                                 お名前 <span className="text-japan-vermilion">*</span>
                             </label>
@@ -209,11 +209,11 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                 value={formData.name}
                                 onChange={handleChange}
                                 placeholder="山田 太郎"
-                                className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
+                                className="w-full px-4 py-3 rounded-xl bg-surface border border-border-default text-text-primary placeholder-text-muted focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
                             />
                         </div>
                         <div className="space-y-2">
-                            <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
+                            <label className="flex items-center gap-2 text-sm font-medium text-text-secondary">
                                 <Mail size={16} className="text-japan-indigo" />
                                 メールアドレス <span className="text-japan-vermilion">*</span>
                             </label>
@@ -228,7 +228,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                 value={formData.email}
                                 onChange={handleChange}
                                 placeholder="example@email.com"
-                                className={`w-full px-4 py-3 rounded-xl bg-white border text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all ${emailError ? "border-red-400" : "border-zinc-200"}`}
+                                className={`w-full px-4 py-3 rounded-xl bg-surface border text-text-primary placeholder-text-muted focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all ${emailError ? "border-red-400" : "border-border-default"}`}
                             />
                             {emailError && (
                                 <p id="booking-email-error" className="text-red-500 text-xs mt-1" role="alert">
@@ -240,7 +240,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
 
                     {/* Row 2: Occupation */}
                     <div className="space-y-2">
-                        <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
+                        <label className="flex items-center gap-2 text-sm font-medium text-text-secondary">
                             <Briefcase size={16} className="text-japan-indigo" />
                             現在のお仕事・活動 <span className="text-japan-vermilion">*</span>
                         </label>
@@ -253,13 +253,13 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                             value={formData.occupation}
                             onChange={handleChange}
                             placeholder="例: フリーランスエンジニア、会社員、起業準備中"
-                            className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
+                            className="w-full px-4 py-3 rounded-xl bg-surface border border-border-default text-text-primary placeholder-text-muted focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
                         />
                     </div>
 
                     {/* Row 3: Goal */}
                     <div className="space-y-2">
-                        <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
+                        <label className="flex items-center gap-2 text-sm font-medium text-text-secondary">
                             <MessageSquare size={16} className="text-japan-indigo" />
                             セッションで解決したいこと
                         </label>
@@ -271,13 +271,13 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                             onChange={handleChange}
                             rows={3}
                             placeholder="例: AI活用で業務効率化したい、副業の相談、キャリアの方向性を整理したい（任意）"
-                            className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all resize-none"
+                            className="w-full px-4 py-3 rounded-xl bg-surface border border-border-default text-text-primary placeholder-text-muted focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all resize-none"
                         />
                     </div>
 
                     {/* Row 4: Motivation */}
                     <div className="space-y-2">
-                        <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
+                        <label className="flex items-center gap-2 text-sm font-medium text-text-secondary">
                             <HelpCircle size={16} className="text-japan-indigo" />
                             なぜこのセッションに興味を持ちましたか？
                         </label>
@@ -289,7 +289,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                             onChange={handleChange}
                             rows={2}
                             placeholder="任意: きっかけや期待することなど"
-                            className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all resize-none"
+                            className="w-full px-4 py-3 rounded-xl bg-surface border border-border-default text-text-primary placeholder-text-muted focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all resize-none"
                         />
                     </div>
 
@@ -297,7 +297,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     <div className="space-y-4">
                         {/* Date 1 */}
                         <div className="space-y-2">
-                            <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
+                            <label className="flex items-center gap-2 text-sm font-medium text-text-secondary">
                                 <Calendar size={16} className="text-japan-indigo" />
                                 希望日時（第1希望） <span className="text-japan-vermilion">*</span>
                             </label>
@@ -312,7 +312,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                         const time = formData.preferredDate1.split('T')[1] || '13:00';
                                         setFormData({ ...formData, preferredDate1: `${e.target.value}T${time}` });
                                     }}
-                                    className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
+                                    className="w-full px-4 py-3 rounded-xl bg-surface border border-border-default text-text-primary focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
                                 />
                                 <select
                                     name="preferredDate1Time"
@@ -323,7 +323,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                         const date = formData.preferredDate1.split('T')[0] || '';
                                         setFormData({ ...formData, preferredDate1: `${date}T${e.target.value}` });
                                     }}
-                                    className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
+                                    className="w-full px-4 py-3 rounded-xl bg-surface border border-border-default text-text-primary focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
                                 >
                                     <option value="09:00">09:00</option>
                                     <option value="09:30">09:30</option>
@@ -356,8 +356,8 @@ export default function BookingForm({ className = "" }: { className?: string }) 
 
                         {/* Date 2 */}
                         <div className="space-y-2">
-                            <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
-                                <Calendar size={16} className="text-zinc-600" />
+                            <label className="flex items-center gap-2 text-sm font-medium text-text-secondary">
+                                <Calendar size={16} className="text-text-secondary" />
                                 希望日時（第2希望）
                             </label>
                             <div className="grid grid-cols-2 gap-3">
@@ -370,7 +370,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                         const time = formData.preferredDate2.split('T')[1] || '13:00';
                                         setFormData({ ...formData, preferredDate2: `${e.target.value}T${time}` });
                                     }}
-                                    className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
+                                    className="w-full px-4 py-3 rounded-xl bg-surface border border-border-default text-text-primary focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
                                 />
                                 <select
                                     name="preferredDate2Time"
@@ -380,7 +380,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                                         const date = formData.preferredDate2.split('T')[0] || '';
                                         setFormData({ ...formData, preferredDate2: `${date}T${e.target.value}` });
                                     }}
-                                    className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
+                                    className="w-full px-4 py-3 rounded-xl bg-surface border border-border-default text-text-primary focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all"
                                 >
                                     <option value="09:00">09:00</option>
                                     <option value="09:30">09:30</option>
@@ -415,8 +415,8 @@ export default function BookingForm({ className = "" }: { className?: string }) 
 
                     {/* Row 6: Additional Message */}
                     <div className="space-y-2">
-                        <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
-                            <MessageSquare size={16} className="text-zinc-600" />
+                        <label className="flex items-center gap-2 text-sm font-medium text-text-secondary">
+                            <MessageSquare size={16} className="text-text-secondary" />
                             その他ご質問・メッセージ
                         </label>
                         <textarea
@@ -427,7 +427,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                             onChange={handleChange}
                             rows={2}
                             placeholder="任意: 事前に伝えておきたいことなど"
-                            className="w-full px-4 py-3 rounded-xl bg-white border border-zinc-200 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all resize-none"
+                            className="w-full px-4 py-3 rounded-xl bg-surface border border-border-default text-text-primary placeholder-text-muted focus:outline-none focus:border-japan-indigo/50 focus:ring-2 focus:ring-japan-indigo/20 transition-all resize-none"
                         />
                     </div>
 
@@ -453,7 +453,7 @@ export default function BookingForm({ className = "" }: { className?: string }) 
                     </motion.button>
 
                     {/* Note */}
-                    <p className="text-center text-sm text-zinc-700">
+                    <p className="text-center text-sm text-text-secondary">
                         ※ 3営業日以内にご連絡いたします
                     </p>
                 </form>

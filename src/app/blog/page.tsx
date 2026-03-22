@@ -29,7 +29,7 @@ function BlogPageContent() {
           </div>
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-japan-indigo mb-4">Blog</h1>
-            <p className="text-zinc-700 max-w-2xl mx-auto">
+            <p className="text-text-secondary max-w-2xl mx-auto">
               コーチング、AI活用、思考法、キャリア、生産性など、人生をより豊かにするヒントをお届けします。
             </p>
           </div>
@@ -70,7 +70,7 @@ function BlogPageContent() {
                   </Link>
                 ))}
                 {allTags.length > 15 && (
-                  <span className="text-zinc-700 text-sm">
+                  <span className="text-text-secondary text-sm">
                     +{allTags.length - 15} more
                   </span>
                 )}
@@ -93,7 +93,7 @@ function BlogPageContent() {
                         {post.title}
                       </h2>
                       {post.description && (
-                        <p className="text-zinc-700 text-sm line-clamp-2 mb-3">
+                        <p className="text-text-secondary text-sm line-clamp-2 mb-3">
                           {post.description}
                         </p>
                       )}
@@ -104,12 +104,12 @@ function BlogPageContent() {
                           </span>
                         )}
                         {post.readingTime && (
-                          <span className="text-xs text-zinc-700">
+                          <span className="text-xs text-text-secondary">
                             📖 {post.readingTime}分
                           </span>
                         )}
                         {post.tags && post.tags.slice(0, 3).map((tag) => (
-                          <span key={tag} className="text-xs text-zinc-700">
+                          <span key={tag} className="text-xs text-text-secondary">
                             #{tag}
                           </span>
                         ))}
@@ -117,7 +117,7 @@ function BlogPageContent() {
                     </div>
                     <time
                       dateTime={post.date}
-                      className="text-sm text-zinc-700 whitespace-nowrap"
+                      className="text-sm text-text-secondary whitespace-nowrap"
                     >
                       {post.date}
                     </time>
@@ -127,7 +127,7 @@ function BlogPageContent() {
             </div>
 
             {/* Article Count */}
-            <div className="text-center mt-8 text-zinc-700">
+            <div className="text-center mt-8 text-text-secondary">
               全{allPostsData.length}件の記事
             </div>
           </main>

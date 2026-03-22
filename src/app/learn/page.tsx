@@ -111,9 +111,9 @@ export default function LearnPage() {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
         <div className="text-center max-w-md">
-          <BookOpen className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-zinc-900 mb-4">No Courses Yet</h2>
-          <p className="text-zinc-800 mb-6">
+          <BookOpen className="w-16 h-16 text-text-secondary mx-auto mb-4" />
+          <h2 className="text-2xl font-bold text-text-primary mb-4">No Courses Yet</h2>
+          <p className="text-text-primary mb-6">
             You haven&apos;t enrolled in any courses yet. Browse available courses and start your learning journey!
           </p>
           <Link
@@ -134,7 +134,7 @@ export default function LearnPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-3xl font-bold text-zinc-900 mb-8">My Courses</h1>
+        <h1 className="text-3xl font-bold text-text-primary mb-8">My Courses</h1>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {courses.map((course, index) => (
@@ -147,7 +147,7 @@ export default function LearnPage() {
             >
               <Link
                 href={`/learn/${course.course_slug}`}
-                className="block bg-white rounded-xl shadow-lg border border-zinc-200 overflow-hidden hover:shadow-xl hover:border-teal-300 transition-all"
+                className="block bg-surface rounded-xl shadow-lg border border-border-default overflow-hidden hover:shadow-xl hover:border-teal-300 transition-all"
               >
                 {/* Course Thumbnail */}
                 <div className="aspect-video bg-zinc-900 relative overflow-hidden">
@@ -162,31 +162,31 @@ export default function LearnPage() {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zinc-800">
-                      <BookOpen className="w-16 h-16 text-zinc-800" />
+                      <BookOpen className="w-16 h-16 text-text-primary" />
                     </div>
                   )}
 
                   {/* Play Overlay */}
                   <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center">
-                      <Play className="w-6 h-6 text-zinc-900 ml-0.5" />
+                    <div className="w-14 h-14 rounded-full bg-surface-alt flex items-center justify-center">
+                      <Play className="w-6 h-6 text-text-primary ml-0.5" />
                     </div>
                   </div>
                 </div>
 
                 {/* Course Info */}
                 <div className="p-5">
-                  <h3 className="font-bold text-zinc-900 mb-2 line-clamp-2">
+                  <h3 className="font-bold text-text-primary mb-2 line-clamp-2">
                     {course.course_title}
                   </h3>
                   {course.course_description && (
-                    <p className="text-sm text-zinc-800 line-clamp-3 mb-4">
+                    <p className="text-sm text-text-primary line-clamp-3 mb-4">
                       {course.course_description}
                     </p>
                   )}
 
                   {/* Stats */}
-                  <div className="flex items-center gap-4 text-sm text-zinc-700 mb-4">
+                  <div className="flex items-center gap-4 text-sm text-text-secondary mb-4">
                     <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
                       <span>{course.course_total_lessons} lessons</span>
@@ -196,7 +196,7 @@ export default function LearnPage() {
                   {/* Progress Bar */}
                   <div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-zinc-700">
+                      <span className="text-sm font-medium text-text-secondary">
                         {course.progress_percentage >= 100 ? (
                           <span className="text-green-600 flex items-center gap-1">
                             <CheckCircle className="w-4 h-4" />
@@ -206,11 +206,11 @@ export default function LearnPage() {
                           `${course.progress_percentage.toFixed(0)}% complete`
                         )}
                       </span>
-                      <span className="text-xs text-zinc-600">
+                      <span className="text-xs text-text-secondary">
                         {course.enrolled_at ? new Date(course.enrolled_at).toLocaleDateString() : ''}
                       </span>
                     </div>
-                    <div className="w-full bg-zinc-200 rounded-full h-2">
+                    <div className="w-full bg-border-default rounded-full h-2">
                       <div
                         className={cn(
                           "h-2 rounded-full transition-all duration-500",
@@ -229,7 +229,7 @@ export default function LearnPage() {
                     className={cn(
                       "w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-all",
                       course.progress_percentage >= 100
-                        ? "bg-zinc-100 text-zinc-700 hover:bg-zinc-200"
+                        ? "bg-surface-section text-text-secondary hover:bg-surface-section"
                         : "bg-teal-600 text-white hover:bg-teal-700"
                     )}
                   >

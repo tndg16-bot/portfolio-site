@@ -18,7 +18,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
           return (
             <li key={index} className="flex items-center gap-1">
               {index > 0 && (
-                <span className="text-zinc-400 select-none" aria-hidden="true">
+                <span className="text-text-muted select-none" aria-hidden="true">
                   /
                 </span>
               )}
@@ -29,7 +29,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
               ) : (
                 <Link
                   href={item.href}
-                  className="text-zinc-500 transition-colors hover:text-[#165E83]"
+                  className="text-text-muted transition-colors hover:text-[#165E83]"
                 >
                   {item.label}
                 </Link>

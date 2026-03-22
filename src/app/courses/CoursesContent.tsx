@@ -107,7 +107,7 @@ export default function CoursesContent() {
 
                                             {/* Level Badge */}
                                             <div className="absolute top-4 left-4">
-                                                <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-white/90 text-japan-indigo border border-japan-indigo/20 shadow-sm">
+                                                <span className="px-3 py-1.5 rounded-full text-xs font-bold bg-surface-alt text-japan-indigo border border-japan-indigo/20 shadow-sm">
                                                     {course.levelLabel}
                                                 </span>
                                             </div>

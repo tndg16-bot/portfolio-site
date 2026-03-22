@@ -8,7 +8,7 @@ export default function NotFound() {
         <h1 className="text-2xl font-semibold text-japan-charcoal font-[family-name:var(--font-noto-serif)] mb-4">
           ページが見つかりませんでした
         </h1>
-        <p className="text-zinc-600 mb-8">
+        <p className="text-text-secondary mb-8">
           お探しのページは移動または削除された可能性があります。
         </p>
         <Link

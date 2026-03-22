@@ -48,7 +48,7 @@ export default function ProjectPage() {
                     transition={{ duration: 0.6 }}
                 >
                     <div className="flex items-center justify-center gap-2 mb-6">
-                        <Link href="/" className="group flex items-center gap-1 text-sm text-zinc-700 hover:text-japan-indigo transition-colors">
+                        <Link href="/" className="group flex items-center gap-1 text-sm text-text-secondary hover:text-japan-indigo transition-colors">
                             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                             ホームに戻る
                         </Link>
@@ -73,7 +73,7 @@ export default function ProjectPage() {
                         {project.title}
                     </h1>
 
-                    <p className="mb-10 text-lg md:text-xl text-zinc-800 max-w-2xl mx-auto leading-relaxed">
+                    <p className="mb-10 text-lg md:text-xl text-text-primary max-w-2xl mx-auto leading-relaxed">
                         {project.description}
                     </p>
 
@@ -102,7 +102,7 @@ export default function ProjectPage() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
-                    className="glass-panel rounded-3xl p-8 md:p-12 border border-japan-indigo/10 shadow-xl bg-white/60"
+                    className="glass-panel rounded-3xl p-8 md:p-12 border border-japan-indigo/10 shadow-xl bg-surface-alt"
                 >
                     <div className="flex items-center gap-3 mb-8 border-b border-japan-indigo/5 pb-4">
                         <Cpu className="text-japan-indigo" size={28} />
@@ -111,11 +111,11 @@ export default function ProjectPage() {
 
                     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {project.highlights?.map((highlight, index) => (
-                            <div key={index} className="flex gap-4 p-4 rounded-xl bg-white/50 border border-white hover:shadow-md transition-shadow">
+                            <div key={index} className="flex gap-4 p-4 rounded-xl bg-surface-alt border border-surface hover:shadow-md transition-shadow">
                                 <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-japan-indigo/10 text-japan-indigo">
                                     <CheckCircle2 className="h-4 w-4" />
                                 </div>
-                                <p className="text-zinc-700 font-medium leading-relaxed">{highlight}</p>
+                                <p className="text-text-secondary font-medium leading-relaxed">{highlight}</p>
                             </div>
                         ))}
                     </div>

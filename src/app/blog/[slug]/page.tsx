@@ -118,7 +118,7 @@ export default async function PostPage({ params }: Props) {
             <h1 className="text-3xl md:text-4xl font-bold text-japan-indigo mb-4 leading-tight">{post.title}</h1>
 
             {/* Meta information */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-700">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-text-secondary">
               <time dateTime={post.date}>{post.date}</time>
 
               {post.readingTime && <span className="reading-time-badge">📖 {post.readingTime}分で読める</span>}
@@ -169,7 +169,7 @@ export default async function PostPage({ params }: Props) {
                     <h4 className="text-sm font-semibold text-japan-indigo group-hover:text-teal-400 transition-colors line-clamp-2 mb-2">
                       {relatedPost.title}
                     </h4>
-                    <div className="flex items-center gap-2 text-xs text-zinc-700">
+                    <div className="flex items-center gap-2 text-xs text-text-secondary">
                       {relatedPost.category && (
                         <span className="px-2 py-0.5 bg-teal-500/10 text-teal-400 rounded">{relatedPost.category}</span>
                       )}

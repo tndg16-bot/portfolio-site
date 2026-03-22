@@ -163,7 +163,7 @@ export default function LearnCoursePage({ params }: { params: { course_slug: str
   if (loading) {
     return (
       <div className="flex min-h-screen items-center justify-center">
-        <div className="text-zinc-700">Loading course...</div>
+        <div className="text-text-secondary">Loading course...</div>
       </div>
     );
   }
@@ -173,8 +173,8 @@ export default function LearnCoursePage({ params }: { params: { course_slug: str
       <div className="flex min-h-screen items-center justify-center px-4">
         <div className="text-center max-w-md">
           <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-zinc-900 mb-4">Error</h2>
-          <p className="text-zinc-800">{error || 'Course not found'}</p>
+          <h2 className="text-2xl font-bold text-text-primary mb-4">Error</h2>
+          <p className="text-text-primary">{error || 'Course not found'}</p>
           <Link href="/learn" className="text-teal-600 hover:underline">
             Back to Courses
           </Link>
@@ -190,15 +190,15 @@ export default function LearnCoursePage({ params }: { params: { course_slug: str
         <div className="container mx-auto px-4 py-8">
           {/* Course Header */}
           <div className="mb-6">
-            <Link href="/learn" className="inline-flex items-center gap-2 text-zinc-800 hover:text-zinc-900 transition-colors">
+            <Link href="/learn" className="inline-flex items-center gap-2 text-text-primary hover:text-text-primary transition-colors">
               <ArrowLeft className="w-4 h-4" />
               <span className="font-medium">Back to My Courses</span>
             </Link>
           </div>
 
-          <h1 className="text-3xl font-bold text-zinc-900 mb-2">{course.title}</h1>
+          <h1 className="text-3xl font-bold text-text-primary mb-2">{course.title}</h1>
           {course.description && (
-            <p className="text-zinc-800 mb-6">{course.description}</p>
+            <p className="text-text-primary mb-6">{course.description}</p>
           )}
         </div>
 
@@ -217,12 +217,12 @@ export default function LearnCoursePage({ params }: { params: { course_slug: str
 
             {/* Current Lesson Info */}
             {currentLesson && (
-              <div className="bg-white rounded-xl shadow border border-zinc-200 p-6">
-                <h2 className="text-xl font-bold text-zinc-900 mb-3">
+              <div className="bg-surface rounded-xl shadow border border-border-default p-6">
+                <h2 className="text-xl font-bold text-text-primary mb-3">
                   {currentLesson.title}
                 </h2>
                 {currentLesson.content && (
-                  <div className="prose max-w-none text-zinc-700">
+                  <div className="prose max-w-none text-text-secondary">
                     {currentLesson.content}
                   </div>
                 )}
@@ -231,25 +231,25 @@ export default function LearnCoursePage({ params }: { params: { course_slug: str
 
             {/* Course Info */}
             {course && (
-              <div className="bg-zinc-50 rounded-xl p-6">
-                <h3 className="font-semibold text-zinc-900 mb-3">Course Information</h3>
+              <div className="bg-surface-alt rounded-xl p-6">
+                <h3 className="font-semibold text-text-primary mb-3">Course Information</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-zinc-800">Instructor:</span>
-                    <span className="font-medium text-zinc-900">{course.instructor_name || 'Takahiro Motoyama'}</span>
+                    <span className="text-text-primary">Instructor:</span>
+                    <span className="font-medium text-text-primary">{course.instructor_name || 'Takahiro Motoyama'}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-zinc-800">Level:</span>
-                    <span className="font-medium text-zinc-900 capitalize">{course.level}</span>
+                    <span className="text-text-primary">Level:</span>
+                    <span className="font-medium text-text-primary capitalize">{course.level}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-zinc-800">Total Lessons:</span>
-                    <span className="font-medium text-zinc-900">{course.total_lessons}</span>
+                    <span className="text-text-primary">Total Lessons:</span>
+                    <span className="font-medium text-text-primary">{course.total_lessons}</span>
                   </div>
                   {course.category && (
                     <div className="flex justify-between">
-                      <span className="text-zinc-800">Category:</span>
-                      <span className="font-medium text-zinc-900">{course.category}</span>
+                      <span className="text-text-primary">Category:</span>
+                      <span className="font-medium text-text-primary">{course.category}</span>
                     </div>
                   )}
                 </div>

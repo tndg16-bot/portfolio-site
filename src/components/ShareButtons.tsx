@@ -18,7 +18,7 @@ interface ShareButtonsProps {
 export default function ShareButtons({ url, title }: ShareButtonsProps) {
   return (
     <div className="flex gap-4 items-center my-8">
-      <span className="text-gray-400 text-sm font-medium tracking-wider">SHARE</span>
+      <span className="text-text-muted text-sm font-medium tracking-wider">SHARE</span>
       
       <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
         <TwitterShareButton url={url} title={title} className="hover:opacity-80 transition-opacity">

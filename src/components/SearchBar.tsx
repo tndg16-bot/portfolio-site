@@ -45,7 +45,7 @@ export default function SearchBar() {
           onBlur={handleClose}
         >
           <Search
-            className={`w-5 h-5 text-zinc-500 transition-colors ${
+            className={`w-5 h-5 text-text-muted transition-colors ${
               isFocused ? 'text-teal-400' : ''
             }`}
             aria-label="記事を検索"
@@ -55,7 +55,7 @@ export default function SearchBar() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="記事を検索..."
-            className="w-full bg-japan-indigo text-white placeholder-zinc-500 outline-none text-sm"
+            className="w-full bg-japan-indigo text-white placeholder-text-muted outline-none text-sm"
             aria-label="記事を検索"
           />
         </motion.div>

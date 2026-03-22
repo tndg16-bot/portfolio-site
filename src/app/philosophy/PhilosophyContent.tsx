@@ -54,7 +54,7 @@ export default function PhilosophyContent() {
                     <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl text-japan-indigo">
                         人生の<span className="text-japan-gradient">自己決定</span>を取り戻す
                     </h1>
-                    <p className="text-lg text-zinc-800 md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-lg text-text-primary md:text-xl max-w-2xl mx-auto leading-relaxed">
                         溢れる情報と「正解」の押し付けから、魂の呼吸を守り抜く。<br />
                         外部依存を脱却し、自分だけの羅針盤を手にする旅路。
                     </p>
@@ -75,7 +75,7 @@ export default function PhilosophyContent() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="glass-panel rounded-3xl p-8 hover:border-japan-indigo/30 transition-all duration-500 bg-white/60"
+                            className="glass-panel rounded-3xl p-8 hover:border-japan-indigo/30 transition-all duration-500 bg-surface-alt"
                         >
                             <div className="flex items-start gap-4">
                                 <div className="bg-japan-indigo/10 p-3 rounded-2xl text-japan-indigo">
@@ -88,7 +88,7 @@ export default function PhilosophyContent() {
                                     <p className="text-sm text-japan-vermilion mb-3">
                                         {principle.subtitle}
                                     </p>
-                                    <p className="text-zinc-800 leading-relaxed">
+                                    <p className="text-text-primary leading-relaxed">
                                         {principle.description}
                                     </p>
                                 </div>
@@ -104,14 +104,14 @@ export default function PhilosophyContent() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
-                    className="glass-panel rounded-3xl p-12 text-center bg-white/60"
+                    className="glass-panel rounded-3xl p-12 text-center bg-surface-alt"
                 >
                     <Sparkles className="mx-auto mb-6 text-japan-indigo" size={32} />
                     <blockquote className="text-2xl md:text-3xl font-light text-japan-indigo mb-6 leading-relaxed">
                         「ノウハウ依存」から卒業した先に、<br />
                         <span className="text-japan-gradient font-medium">本当の自由</span>がある。
                     </blockquote>
-                    <p className="text-zinc-700">
+                    <p className="text-text-secondary">
                         — Life Self-Determination Protocol
                     </p>
                 </motion.div>
@@ -119,7 +119,7 @@ export default function PhilosophyContent() {
 
             {/* Footer */}
             <footer className="w-full py-12 text-center border-t border-japan-indigo/5">
-                <p className="text-zinc-700 text-sm">
+                <p className="text-text-secondary text-sm">
                     © 2026 Takahiro Motoyama. Designed for Self-Determination.
                 </p>
             </footer>

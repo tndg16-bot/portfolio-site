@@ -105,7 +105,7 @@ export default function GlossaryContent() {
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/15 border border-japan-indigo/20 mb-8"
                         >
                             <BookOpen className="w-4 h-4 text-japan-indigo" />
-                            <span className="text-sm text-zinc-800">Glossary</span>
+                            <span className="text-sm text-text-primary">Glossary</span>
                         </motion.div>
 
                         <motion.h1
@@ -117,7 +117,7 @@ export default function GlossaryContent() {
 
                         <motion.p
                             variants={itemVariants}
-                            className="text-xl text-zinc-800 max-w-2xl mx-auto leading-relaxed"
+                            className="text-xl text-text-primary max-w-2xl mx-auto leading-relaxed"
                         >
                             コーチング・セッションで使われる言葉を、
                             <br />
@@ -140,7 +140,7 @@ export default function GlossaryContent() {
                             placeholder="用語を検索..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/60 border border-japan-indigo/10 text-japan-charcoal placeholder:text-zinc-400 focus:outline-none focus:border-japan-indigo/30 focus:ring-2 focus:ring-japan-indigo/10 transition-all"
+                            className="w-full pl-12 pr-4 py-4 rounded-xl bg-surface-alt border border-japan-indigo/10 text-japan-charcoal placeholder:text-text-muted focus:outline-none focus:border-japan-indigo/30 focus:ring-2 focus:ring-japan-indigo/10 transition-all"
                         />
                     </motion.div>
                 </section>
@@ -159,7 +159,7 @@ export default function GlossaryContent() {
                                 <motion.div
                                     key={item.term}
                                     variants={itemVariants}
-                                    className="p-6 rounded-xl bg-white/60 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-colors"
+                                    className="p-6 rounded-xl bg-surface-alt border border-japan-indigo/10 hover:border-japan-indigo/30 transition-colors"
                                 >
                                     <h3 className="text-lg font-bold text-japan-indigo mb-2">
                                         {item.term}
@@ -172,9 +172,9 @@ export default function GlossaryContent() {
                         ) : (
                             <motion.div
                                 variants={itemVariants}
-                                className="p-8 rounded-xl bg-white/60 border border-japan-indigo/10 text-center"
+                                className="p-8 rounded-xl bg-surface-alt border border-japan-indigo/10 text-center"
                             >
-                                <p className="text-zinc-500">
+                                <p className="text-text-muted">
                                     「{searchQuery}」に一致する用語が見つかりませんでした。
                                 </p>
                             </motion.div>
@@ -199,7 +199,7 @@ export default function GlossaryContent() {
                         </motion.h2>
                         <motion.p
                             variants={itemVariants}
-                            className="text-xl text-zinc-800 mb-8"
+                            className="text-xl text-text-primary mb-8"
                         >
                             60分のセッションで、あなたの判断軸を言語化します。
                         </motion.p>
@@ -219,13 +219,13 @@ export default function GlossaryContent() {
                 <footer className="w-full py-12 border-t border-japan-indigo/5 bg-japan-indigo/5">
                     <div className="max-w-6xl mx-auto px-4">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                            <div className="flex gap-6 text-zinc-700 text-sm">
+                            <div className="flex gap-6 text-text-secondary text-sm">
                                 <Link href="/" className="hover:text-japan-indigo transition-colors">Home</Link>
                                 <Link href="/about" className="hover:text-japan-indigo transition-colors">About</Link>
                                 <Link href="/sessions" className="hover:text-japan-indigo transition-colors">Sessions</Link>
                                 <Link href="/contact" className="hover:text-japan-indigo transition-colors">Contact</Link>
                             </div>
-                            <p className="text-zinc-700 text-sm">
+                            <p className="text-text-secondary text-sm">
                                 &copy; 2026 Takahiro Motoyama. All rights reserved.
                             </p>
                         </div>

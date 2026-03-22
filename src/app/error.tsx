@@ -21,7 +21,7 @@ export default function Error({
         <h1 className="text-2xl font-semibold text-japan-charcoal font-[family-name:var(--font-noto-serif)] mb-4">
           問題が発生しました
         </h1>
-        <p className="text-zinc-600 mb-8">
+        <p className="text-text-secondary mb-8">
           申し訳ございません。しばらく経ってからもう一度お試しください。
         </p>
         <div className="flex gap-4 justify-center">

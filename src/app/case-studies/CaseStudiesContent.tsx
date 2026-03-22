@@ -29,7 +29,7 @@ export default function CaseStudiesContent() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="text-zinc-700 max-w-2xl mx-auto leading-relaxed"
+                        className="text-text-secondary max-w-2xl mx-auto leading-relaxed"
                     >
                         コーチングとコンサルティングを通じて、クライアントが直面した課題と、それをどう乗り越えたかの記録です。
                     </motion.p>
@@ -53,7 +53,7 @@ export default function CaseStudiesContent() {
                                             {study.client.industry}
                                         </span>
                                         {study.category && (
-                                            <span className="text-zinc-500 uppercase tracking-wider">{study.category}</span>
+                                            <span className="text-text-muted uppercase tracking-wider">{study.category}</span>
                                         )}
                                     </div>
                                     <h2 className="text-xl font-bold bg-japan-indigo text-white group-hover:text-japan-indigo transition-colors mb-2 line-clamp-3">
@@ -62,14 +62,14 @@ export default function CaseStudiesContent() {
                                 </div>
 
                                 {/* Summary */}
-                                <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-1 line-clamp-4">
+                                <p className="text-text-muted text-sm leading-relaxed mb-6 flex-1 line-clamp-4">
                                     {study.summary}
                                 </p>
 
                                 {/* Stats Preview */}
                                 <div className="border-t border-white/10 pt-4 mt-auto">
                                     {study.stats && study.stats.length > 0 && (
-                                        <div className="flex items-center gap-2 text-sm text-zinc-300 mb-2">
+                                        <div className="flex items-center gap-2 text-sm text-text-secondary mb-2">
                                             <TrendingUp size={16} className="text-japan-indigo" />
                                             <span className="font-semibold bg-japan-indigo text-white">{study.stats[0].key}: {study.stats[0].value}</span>
                                         </div>

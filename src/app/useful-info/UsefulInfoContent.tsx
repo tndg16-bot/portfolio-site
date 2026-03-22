@@ -97,7 +97,7 @@ export default function UsefulInfoContent() {
               </span>
             </h1>
 
-            <p className="text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
               セッションをより活用するためのリソースや、
               <br />
               自己成長に役立つ情報をまとめています。
@@ -143,7 +143,7 @@ export default function UsefulInfoContent() {
                         <h3 className="text-lg font-semibold bg-japan-indigo text-white mb-3 group-hover:text-japan-indigo transition-colors">
                           {item.title}
                         </h3>
-                        <p className="text-zinc-300 leading-relaxed mb-4">
+                        <p className="text-text-secondary leading-relaxed mb-4">
                           {item.description}
                         </p>
                         <div className="flex items-center gap-2 text-japan-indigo group-hover:translate-x-1 transition-transform">
@@ -174,7 +174,7 @@ export default function UsefulInfoContent() {
               </h2>
             </div>
 
-            <p className="text-zinc-300 max-w-2xl mx-auto mb-8">
+            <p className="text-text-secondary max-w-2xl mx-auto mb-8">
               AI活用や自己決定に関する知見・学びを発信しています。
             </p>
 
@@ -201,7 +201,7 @@ export default function UsefulInfoContent() {
               <h2 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4">
                 役立つ情報をお届けします
               </h2>
-              <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-text-secondary mb-8 max-w-2xl mx-auto">
                 セッション後の復習や、自己成長に役立つリソースを
                 <br />
                 定期的に更新・追加していきます。
@@ -231,7 +231,7 @@ export default function UsefulInfoContent() {
         <footer className="w-full py-12 border-t border-white/5 bg-black/20">
           <div className="max-w-6xl mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="flex gap-6 text-zinc-600 text-sm">
+              <div className="flex gap-6 text-text-secondary text-sm">
                 <Link href="/" className="hover:text-japan-indigo transition-colors">Home</Link>
                 <Link href="/about" className="hover:text-japan-indigo transition-colors">About</Link>
                 <Link href="/philosophy" className="hover:text-japan-indigo transition-colors">Philosophy</Link>
@@ -239,7 +239,7 @@ export default function UsefulInfoContent() {
                 <Link href="/contact" className="hover:text-japan-indigo transition-colors">Contact</Link>
                 <Link href="/useful-info" className="hover:text-japan-indigo transition-colors">Useful Info</Link>
               </div>
-              <p className="text-zinc-700 text-sm">
+              <p className="text-text-secondary text-sm">
                 &copy; 2026 Takahiro Motoyama. All rights reserved.
               </p>
             </div>

@@ -119,7 +119,7 @@ export default function SessionsContent() {
                             自分の人生を、<br />
                             <span className="text-forest">自分で決める力</span>を取り戻す
                         </motion.h1>
-                        <motion.p variants={itemVariants} className="text-zinc-800 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                        <motion.p variants={itemVariants} className="text-text-primary text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
                             情報過多の時代に、外からの「正解」ではなく、内なる「確信」を再構築する。<br />
                             1on1の対話を通じて、あなたの判断軸を研ぎ澄まします。
                         </motion.p>
@@ -169,7 +169,7 @@ export default function SessionsContent() {
                                 transition={{ delay: i * 0.1 }}
                                 className="glass-panel rounded-2xl p-6 border border-japan-indigo/10 text-center"
                             >
-                                <div className="text-zinc-800 text-base mb-2">Before</div>
+                                <div className="text-text-primary text-base mb-2">Before</div>
                                 <p className="text-japan-charcoal mb-4 line-through decoration-red-400/50">{t.before}</p>
                                 <ArrowRight className="mx-auto text-japan-indigo mb-4" />
                                 <div className="text-japan-indigo text-base mb-2">After</div>
@@ -201,7 +201,7 @@ export default function SessionsContent() {
                                 <User className="text-japan-indigo" size={28} />
                             </div>
                             <h3 className="text-xl font-bold text-japan-indigo mb-4">パーソナルコーチング</h3>
-                            <p className="text-zinc-800 mb-6 leading-relaxed">
+                            <p className="text-text-primary mb-6 leading-relaxed">
                                 個人のキャリア、ライフプラン、副業戦略に特化した1on1セッション。
                                 あなたの中にある「答え」を引き出し、行動可能なプランに落とし込みます。
                             </p>
@@ -232,7 +232,7 @@ export default function SessionsContent() {
                                 <Briefcase className="text-japan-indigo" size={28} />
                             </div>
                             <h3 className="text-xl font-bold text-japan-indigo mb-4">ビジネスコンサルティング</h3>
-                            <p className="text-zinc-800 mb-6 leading-relaxed">
+                            <p className="text-text-primary mb-6 leading-relaxed">
                                 チームの意思決定プロセス改善、新規事業の壁打ち、組織文化の変革を支援。
                                 外部視点からのフィードバックで、停滞を打破します。
                             </p>
@@ -278,7 +278,7 @@ export default function SessionsContent() {
                                     {s.step}
                                 </div>
                                 <h3 className="text-japan-indigo font-bold text-lg mb-2">{s.title}</h3>
-                                <p className="text-zinc-800 text-base">{s.desc}</p>
+                                <p className="text-text-primary text-base">{s.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -286,7 +286,7 @@ export default function SessionsContent() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        className="mt-8 flex flex-wrap justify-center gap-6 text-zinc-800"
+                        className="mt-8 flex flex-wrap justify-center gap-6 text-text-primary"
                     >
                         <span className="flex items-center gap-2"><Clock size={18} className="text-japan-indigo" /> 60〜90分</span>
                         <span className="flex items-center gap-2"><Video size={18} className="text-japan-indigo" /> オンライン (Zoom)</span>
@@ -307,7 +307,7 @@ export default function SessionsContent() {
                             現在、<span className="text-japan-indigo font-semibold">審査制</span>にてご案内しております。<br />
                             詳細は個別にお伝えいたします。
                         </p>
-                        <p className="text-base text-zinc-600">※ 初回のみ特別価格をご用意しています</p>
+                        <p className="text-base text-text-secondary">※ 初回のみ特別価格をご用意しています</p>
                     </motion.div>
                 </section>
 
@@ -335,7 +335,7 @@ export default function SessionsContent() {
                                     <MessageCircle className="text-japan-indigo shrink-0 mt-1" size={18} />
                                     {faq.q}
                                 </h3>
-                                <p className="text-zinc-800 pl-6">{faq.a}</p>
+                                <p className="text-text-primary pl-6">{faq.a}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -383,7 +383,7 @@ export default function SessionsContent() {
                                 <h3 className="text-xl md:text-2xl font-bold text-japan-indigo mb-2">
                                     まずは無料で適性診断
                                 </h3>
-                                <p className="text-zinc-800 text-base">
+                                <p className="text-text-primary text-base">
                                     5問の質問で、あなたに向いているAI副業タイプがわかります。<br />
                                     セッションを受ける前に、自分の傾向を把握しておきましょう。
                                 </p>
@@ -406,7 +406,7 @@ export default function SessionsContent() {
 
                 {/* Back Link */}
                 <section className="w-full max-w-4xl px-4 py-12 text-center">
-                    <Link href="/" className="text-zinc-600 hover:text-japan-indigo transition-colors text-sm">
+                    <Link href="/" className="text-text-secondary hover:text-japan-indigo transition-colors text-sm">
                         ← トップページへ戻る
                     </Link>
                 </section>

@@ -57,7 +57,7 @@ export function LanguageSwitcher() {
                 key={loc.code}
                 onClick={() => switchLocale(loc.code)}
                 className={`w-full flex items-center gap-2 px-4 py-2 text-sm hover:bg-zinc-700 transition-colors ${
-                  loc.code === locale ? 'bg-zinc-700 text-teal-400' : 'text-zinc-300'
+                  loc.code === locale ? 'bg-zinc-700 text-teal-400' : 'text-text-secondary'
                 }`}
               >
                 <span>{loc.flag}</span>

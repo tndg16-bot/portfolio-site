@@ -98,7 +98,7 @@ export function TableOfContents({ content, className }: TableOfContentsProps) {
   return (
     <nav className={cn('sticky top-24 self-start', className)}>
       <div className="space-y-4">
-        <div className="flex items-center gap-2 text-sm font-semibold text-zinc-300">
+        <div className="flex items-center gap-2 text-sm font-semibold text-text-secondary">
           <List className="w-4 h-4" />
           <span>目次</span>
         </div>
@@ -114,7 +114,7 @@ export function TableOfContents({ content, className }: TableOfContentsProps) {
                   'text-left w-full py-1 hover:text-teal-400 transition-colors',
                   activeId === heading.id
                     ? 'text-teal-400 font-medium'
-                    : 'text-zinc-600'
+                    : 'text-text-secondary'
                 )}
               >
                 {heading.text}

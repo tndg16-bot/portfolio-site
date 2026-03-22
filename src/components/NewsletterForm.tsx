@@ -43,7 +43,7 @@ export default function NewsletterForm() {
           Deep Diveを受け取る
         </h3>
 
-        <p className="text-zinc-400 mb-8">
+        <p className="text-text-muted mb-8">
           ブログの更新情報や、より深い考察、限定コンテンツをニュースレターとしてお届けします。
           スパムは送りません。いつでも解除可能です。
         </p>
@@ -56,7 +56,7 @@ export default function NewsletterForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={status === 'loading' || status === 'success'}
-            className="flex-1 bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all disabled:opacity-50"
+            className="flex-1 bg-japan-indigo/50 border border-zinc-700 rounded-lg px-4 py-3 text-white placeholder-text-muted focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all disabled:opacity-50"
             required
             aria-label="メールアドレス"
             aria-invalid={!!errorMessage}
