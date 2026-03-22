@@ -5,6 +5,7 @@ import { Target, Brain, Briefcase, Heart, CheckCircle, XCircle, ArrowRight, Spar
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Breadcrumb from '@/components/Breadcrumb';
+import SkillsSummaryCard from '@/components/skills/SkillsSummaryCard';
 
 export default function AboutContent() {
     const containerVariants: Variants = {
@@ -204,6 +205,11 @@ export default function AboutContent() {
                             <span className="text-japan-indigo font-medium">両方をつないで&quot;意思決定&quot;に落とすのが私のスタイルです。</span>
                         </motion.p>
                     </motion.div>
+                </section>
+
+                {/* Skills Summary */}
+                <section className="w-full max-w-4xl px-4 pb-8">
+                    <SkillsSummaryCard />
                 </section>
 
                 {/* Promises */}
