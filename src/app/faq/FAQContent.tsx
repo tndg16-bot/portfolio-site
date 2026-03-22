@@ -193,12 +193,12 @@ export default function FAQContent() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-japan-indigo">
+            <span className="text-text-strong">
               よくある質問
             </span>
           </h1>
 
-          <p className="text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
             セッションに関する疑問にお答えします。
           </p>
         </motion.div>
@@ -211,20 +211,20 @@ export default function FAQContent() {
           animate={{ opacity: 1 }}
           className="max-w-4xl mx-auto mb-8"
         >
-          <label className="block text-sm text-zinc-300 mb-2" htmlFor="faq-search">
+          <label className="block text-sm text-text-secondary mb-2" htmlFor="faq-search">
             キーワード検索
           </label>
           <div className="relative">
-            <Search className="w-5 h-5 text-zinc-600 absolute left-4 top-1/2 -translate-y-1/2" />
+            <Search className="w-5 h-5 text-text-secondary absolute left-4 top-1/2 -translate-y-1/2" />
             <input
               id="faq-search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="例：Zoom / キャンセル / AI"
-              className="w-full rounded-2xl bg-japan-indigo/5 border border-white/10 pl-12 pr-4 py-3 text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-japan-indigo/40"
+              className="w-full rounded-2xl bg-japan-indigo/5 border border-border-default pl-12 pr-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-japan-indigo/40"
             />
           </div>
-          <div className="mt-2 text-xs text-zinc-600">
+          <div className="mt-2 text-xs text-text-secondary">
             {filteredFAQs.length}件ヒット
           </div>
         </motion.div>
@@ -240,7 +240,7 @@ export default function FAQContent() {
             className={`px-4 py-2 rounded-full border transition-colors ${
               selectedCategory === 'すべて'
                 ? 'bg-japan-indigo border-japan-indigo text-white'
-                : 'bg-white/5 border-white/20 text-zinc-300 hover:border-japan-indigo/50 hover:text-white'
+                : 'bg-surface-section border-border-emphasis text-text-secondary hover:border-japan-indigo/50 hover:text-text-primary'
             }`}
           >
             すべて
@@ -252,7 +252,7 @@ export default function FAQContent() {
               className={`px-4 py-2 rounded-full border transition-colors ${
                 selectedCategory === category
                   ? 'bg-japan-indigo border-japan-indigo text-white'
-                  : 'bg-white/5 border-white/20 text-zinc-300 hover:border-japan-indigo/50 hover:text-white'
+                  : 'bg-surface-section border-border-emphasis text-text-secondary hover:border-japan-indigo/50 hover:text-text-primary'
               }`}
             >
               {category}
@@ -263,10 +263,10 @@ export default function FAQContent() {
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8 items-start">
           {/* TOC / Index */}
           <aside className="lg:sticky lg:top-24">
-            <div className="glass-panel rounded-2xl border border-white/10 p-5">
+            <div className="glass-panel rounded-2xl border border-border-default p-5">
               <div className="flex items-center gap-2 mb-4">
                 <List className="w-5 h-5 text-japan-indigo" />
-                <h2 className="text-base font-semibold bg-japan-indigo text-white">目次</h2>
+                <h2 className="text-base font-semibold text-text-strong">目次</h2>
               </div>
 
               <div className="space-y-2 max-h-[60vh] overflow-auto pr-1">
@@ -278,16 +278,16 @@ export default function FAQContent() {
                       e.preventDefault();
                       jumpToFAQ(faq);
                     }}
-                    className="block rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-japan-indigo text-white hover:bg-white/5 transition-colors"
+                    className="block rounded-lg px-3 py-2 text-sm text-text-secondary hover:bg-surface-section transition-colors"
                     aria-label={`FAQ ${idx + 1}: ${faq.question}`}
                   >
-                    <span className="text-zinc-700 mr-2">{idx + 1}.</span>
+                    <span className="text-text-secondary mr-2">{idx + 1}.</span>
                     {faq.question}
                   </a>
                 ))}
 
                 {filteredFAQs.length === 0 && (
-                  <div className="text-sm text-zinc-600 px-3 py-2">
+                  <div className="text-sm text-text-secondary px-3 py-2">
                     条件に一致する質問が見つかりませんでした。
                   </div>
                 )}
@@ -304,11 +304,11 @@ export default function FAQContent() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="glass-panel rounded-2xl border border-white/10 overflow-hidden scroll-mt-24"
+                className="glass-panel rounded-2xl border border-border-default overflow-hidden scroll-mt-24"
               >
                 <button
                   onClick={() => toggleOpen(faq)}
-                  className="w-full p-6 flex items-start gap-4 text-left hover:bg-white/5 transition-colors"
+                  className="w-full p-6 flex items-start gap-4 text-left hover:bg-surface-section transition-colors"
                   aria-expanded={openId === faq.id}
                   aria-controls={`${faq.id}-panel`}
                 >
@@ -325,7 +325,7 @@ export default function FAQContent() {
                         {faq.category}
                       </span>
                     </div>
-                    <h3 className="text-lg font-semibold bg-japan-indigo text-white">
+                    <h3 className="text-lg font-semibold text-text-strong">
                       {faq.question}
                     </h3>
                   </div>
@@ -338,7 +338,7 @@ export default function FAQContent() {
                     animate={{ opacity: 1, height: 'auto' }}
                     className="px-6 pb-6 pt-0"
                   >
-                    <p className="text-zinc-300 leading-relaxed">{faq.answer}</p>
+                    <p className="text-text-secondary leading-relaxed">{faq.answer}</p>
                   </motion.div>
                 )}
               </motion.div>
@@ -357,10 +357,10 @@ export default function FAQContent() {
         >
 
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold bg-japan-indigo text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               その他ご質問がございましたら
             </h2>
-            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
               お気軽にお問い合わせください。
             </p>
 

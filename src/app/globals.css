@@ -3,20 +3,105 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-surface-alt: var(--surface-alt);
+  --color-surface-section: var(--surface-section);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-strong: var(--text-strong);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-default: var(--border-default);
+  --color-border-emphasis: var(--border-emphasis);
+  --color-header-bg: var(--header-bg);
   --font-sans: var(--font-noto-jp);
   --font-mono: var(--font-geist-mono);
 }
 
+/* ============================================
+   Light Theme (藍と金ライト)
+   ============================================ */
 :root {
-  --background: #F0E8D6; /* Japan Cream */
-  --foreground: #27221F; /* Japan Charcoal */
+  --background: #F3F3F2;
+  --foreground: #27221F;
+
+  /* Surfaces */
+  --surface: rgba(255, 255, 255, 0.95);
+  --surface-hover: rgba(255, 255, 255, 0.98);
+  --surface-alt: rgba(255, 255, 255, 0.60);
+  --surface-section: rgba(255, 255, 255, 0.40);
+
+  /* Brand */
   --japan-indigo: #165E83;
   --japan-vermilion: #EB6101;
   --japan-gold: #E6B422;
-  
+
+  /* Text hierarchy */
+  --text-primary: #27221F;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
+  --text-strong: #165E83;
+
+  /* Borders */
+  --border-subtle: rgba(22, 94, 131, 0.06);
+  --border-default: rgba(22, 94, 131, 0.10);
+  --border-emphasis: rgba(22, 94, 131, 0.20);
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* Header */
+  --header-bg: rgba(255, 255, 255, 0.80);
+
+  /* Scrollbar */
+  --scrollbar-thumb: rgba(22, 94, 131, 0.2);
+  --scrollbar-thumb-hover: rgba(22, 94, 131, 0.4);
+
+  /* Font */
   --font-noto-jp: "Noto Sans JP", sans-serif;
 }
 
+/* ============================================
+   Dark Theme (藍と金ダーク)
+   ============================================ */
+.dark {
+  --background: #0a1628;
+  --foreground: #f5f0e8;
+
+  /* Surfaces — glass effect on deep navy */
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --surface-alt: rgba(255, 255, 255, 0.03);
+  --surface-section: rgba(255, 255, 255, 0.02);
+
+  /* Text hierarchy — gold becomes primary accent */
+  --text-primary: #f5f0e8;
+  --text-secondary: #8a9ab0;
+  --text-muted: #6a7a90;
+  --text-strong: #E6B422;
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-default: rgba(255, 255, 255, 0.08);
+  --border-emphasis: rgba(255, 255, 255, 0.15);
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+  /* Header */
+  --header-bg: rgba(10, 22, 40, 0.85);
+
+  /* Scrollbar */
+  --scrollbar-thumb: rgba(230, 180, 34, 0.2);
+  --scrollbar-thumb-hover: rgba(230, 180, 34, 0.4);
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -29,22 +114,40 @@ body {
   font-feature-settings: "palt";
 }
 
-/* Improve paragraph readability */
 p {
   line-height: 1.8;
   letter-spacing: 0.02em;
 }
 
-/* Ensure sufficient line-height for list items */
 li {
   line-height: 1.75;
+}
+
+/* ============================================
+   Theme Transition (specific elements only)
+   ============================================ */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.washi-card,
+.glass-panel,
+.glass-card {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 
 /* ============================================
    🏯 Modern Japanese Theme - Custom Utilities
    ============================================ */
 
-/* Main Background - Washi Paper Texture */
+/* Main Background - Washi Paper Texture (Light) / Navy Gradient (Dark) */
 .japan-bg {
   background-color: var(--background);
   background-image:
@@ -52,9 +155,17 @@ li {
   background-attachment: fixed;
 }
 
-/* Mobile: disable fixed attachment to avoid GPU compositing jank */
+.dark .japan-bg {
+  background: linear-gradient(135deg, #0a1628, #162d50);
+  background-image: none;
+  background-attachment: fixed;
+}
+
 @media (max-width: 768px) {
   .japan-bg {
+    background-attachment: scroll;
+  }
+  .dark .japan-bg {
     background-attachment: scroll;
   }
 }
@@ -62,7 +173,7 @@ li {
 /* Pattern: Seigaiha (Waves) */
 .pattern-seigaiha {
   background-color: transparent;
-  background-image: 
+  background-image:
     radial-gradient(circle at 100% 150%, transparent 20%, rgba(22, 94, 131, 0.05) 21%, rgba(22, 94, 131, 0.05) 34%, transparent 35%, transparent),
     radial-gradient(circle at 0% 150%, transparent 20%, rgba(22, 94, 131, 0.05) 21%, rgba(22, 94, 131, 0.05) 34%, transparent 35%, transparent),
     radial-gradient(circle at 50% 100%, transparent 20%, rgba(22, 94, 131, 0.05) 21%, rgba(22, 94, 131, 0.05) 34%, transparent 35%, transparent),
@@ -72,33 +183,48 @@ li {
   background-size: 60px 30px;
 }
 
-/* Pattern: Asanoha (Hemp Leaf) - Simplified for CSS */
+.dark .pattern-seigaiha {
+  background-image:
+    radial-gradient(circle at 100% 150%, transparent 20%, rgba(230, 180, 34, 0.03) 21%, rgba(230, 180, 34, 0.03) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 150%, transparent 20%, rgba(230, 180, 34, 0.03) 21%, rgba(230, 180, 34, 0.03) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 50% 100%, transparent 20%, rgba(230, 180, 34, 0.03) 21%, rgba(230, 180, 34, 0.03) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 100% 50%, transparent 20%, rgba(230, 180, 34, 0.03) 21%, rgba(230, 180, 34, 0.03) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 50%, transparent 20%, rgba(230, 180, 34, 0.03) 21%, rgba(230, 180, 34, 0.03) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 50% 0%, transparent 20%, rgba(230, 180, 34, 0.03) 21%, rgba(230, 180, 34, 0.03) 34%, transparent 35%, transparent);
+}
+
+/* Pattern: Asanoha (Hemp Leaf) */
 .pattern-asanoha {
   background-image: repeating-linear-gradient(60deg, rgba(22, 94, 131, 0.03) 0, rgba(22, 94, 131, 0.03) 1px, transparent 1px, transparent 20px),
                     repeating-linear-gradient(-60deg, rgba(22, 94, 131, 0.03) 0, rgba(22, 94, 131, 0.03) 1px, transparent 1px, transparent 20px);
 }
 
-/* Washi Card - Replacement for Glass Panel */
+.dark .pattern-asanoha {
+  background-image: repeating-linear-gradient(60deg, rgba(230, 180, 34, 0.02) 0, rgba(230, 180, 34, 0.02) 1px, transparent 1px, transparent 20px),
+                    repeating-linear-gradient(-60deg, rgba(230, 180, 34, 0.02) 0, rgba(230, 180, 34, 0.02) 1px, transparent 1px, transparent 20px);
+}
+
+/* Washi Card / Glass Panel */
 .washi-card, .glass-panel {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(22, 94, 131, 0.08);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  background: var(--surface);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--shadow-card);
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
 
 .washi-card:hover, .glass-panel:hover {
-  border-color: rgba(22, 94, 131, 0.2);
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: var(--border-emphasis);
+  background: var(--surface-hover);
+  box-shadow: var(--shadow-card-hover);
   transform: translateY(-2px);
 }
 
 /* Secondary Card Style */
 .glass-card {
-  background: white;
-  border: 1px solid rgba(22, 94, 131, 0.05);
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
 }
 
 /* Text Gradients */
@@ -110,40 +236,54 @@ li {
   color: transparent;
 }
 
-/* Typography Enhancements */
+.dark .text-japan-gradient, .dark .text-forest {
+  background: linear-gradient(135deg, #E6B422 0%, #f5f0e8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
 h1, h2, h3, h4 {
   font-feature-settings: "palt";
+}
+
+h1, h2 {
+  text-wrap: balance;
 }
 
 h1 {
   font-family: var(--font-noto-serif), serif;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #27221F;
+  color: var(--text-primary);
 }
 
 h2 {
   font-family: var(--font-noto-serif), serif;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: #165E83;
+  color: var(--text-strong);
 }
 
 h3 {
   font-weight: 600;
   letter-spacing: 0.03em;
-  color: #27221F;
+  color: var(--text-primary);
 }
 
 h4 {
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: #27221F;
+  color: var(--text-primary);
 }
 
-/* p color handled in body and specific sections */
-
-/* Scrollbar */
+/* ============================================
+   Scrollbar
+   ============================================ */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -152,51 +292,66 @@ h4 {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(22, 94, 131, 0.2);
+  background: var(--scrollbar-thumb);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(22, 94, 131, 0.4);
+  background: var(--scrollbar-thumb-hover);
 }
 
-/* Blog Prose Updates */
+/* ============================================
+   Blog Prose
+   ============================================ */
 .prose-blog {
   font-size: 17px;
   line-height: 1.8;
   max-width: 65ch;
-  color: #27221F;
-  --tw-prose-body: #27221F;
-  --tw-prose-headings: #165E83;
+  color: var(--text-primary);
+  --tw-prose-body: var(--text-primary);
+  --tw-prose-headings: var(--text-strong);
   --tw-prose-links: #EB6101;
-  --tw-prose-bold: #165E83;
+  --tw-prose-bold: var(--text-strong);
   --tw-prose-quotes: #5f4b8b;
   --tw-prose-quote-borders: #E6B422;
   --tw-prose-code: #EB6101;
   --tw-prose-pre-bg: #165E83;
 }
 
+.dark .prose-blog {
+  --tw-prose-links: #E6B422;
+  --tw-prose-quotes: #8a9ab0;
+  --tw-prose-code: #E6B422;
+  --tw-prose-pre-bg: rgba(255, 255, 255, 0.05);
+}
+
 .prose-blog h2 {
-  border-bottom: 2px solid rgba(22, 94, 131, 0.1);
+  border-bottom: 2px solid var(--border-default);
 }
 
 .prose-blog h2::before {
   background: linear-gradient(90deg, #165E83, #5f4b8b);
 }
 
+.dark .prose-blog h2::before {
+  background: linear-gradient(90deg, #E6B422, #8a9ab0);
+}
+
 .reading-time-badge {
-  background: rgba(22, 94, 131, 0.05);
-  border: 1px solid rgba(22, 94, 131, 0.1);
-  color: #165E83;
+  background: var(--surface-section);
+  border: 1px solid var(--border-default);
+  color: var(--text-strong);
 }
 
 .blog-tag {
-  background: rgba(22, 94, 131, 0.05);
-  border: 1px solid rgba(22, 94, 131, 0.1);
-  color: #165E83;
+  background: var(--surface-section);
+  border: 1px solid var(--border-default);
+  color: var(--text-strong);
 }
 
-/* Light Theme Color Mappings */
-/* Map dark-theme accent colors to light-theme equivalents */
+/* ============================================
+   Light Theme Color Mappings
+   Map dark-theme accent colors to light-theme equivalents
+   ============================================ */
 .text-teal-400 { color: #165E83; }
 .text-teal-300 { color: #1a7aa0; }
 .bg-teal-500\/10 { background-color: rgba(22, 94, 131, 0.06); }
@@ -207,12 +362,12 @@ h4 {
 .bg-purple-500\/10 { background-color: rgba(95, 75, 139, 0.06); }
 .border-purple-500\/20 { border-color: rgba(95, 75, 139, 0.12); }
 
-/* Dark-themed sections: zinc colors remain appropriate */
-/* Light-themed sections: map zinc to readable equivalents */
-.border-zinc-800 { border-color: rgba(22, 94, 131, 0.1); }
-.hover\:bg-zinc-900\/50:hover { background-color: rgba(22, 94, 131, 0.03); }
+.border-zinc-800 { border-color: var(--border-default); }
+.hover\:bg-zinc-900\/50:hover { background-color: var(--surface-alt); }
 
-/* Slow bounce animation for scroll indicator */
+/* ============================================
+   Animations
+   ============================================ */
 @keyframes bounce-slow {
   0%, 100% {
     transform: translateY(0);
@@ -232,7 +387,9 @@ h4 {
   }
 }
 
-/* Accessibility */
+/* ============================================
+   Accessibility
+   ============================================ */
 .sr-only {
   position: absolute;
   width: 1px;

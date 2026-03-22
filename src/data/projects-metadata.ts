@@ -7,7 +7,7 @@ export interface ProjectMetadata {
   slug: string;
   title: string;
   emoji: string;
-  category: 'main' | 'tool' | 'experiment';
+  category: 'individual' | 'corporate' | 'automation' | 'archive';
   featured: boolean;
   iconColor: string;
   highlights?: string[];
@@ -20,8 +20,8 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'nihongo-mate',
     title: 'Nihongo AI',
     emoji: '🇯🇵',
-    category: 'main',
-    featured: true,
+    category: 'archive',
+    featured: false,
     iconColor: 'rose',
     highlights: [
       '5つのキャラクターチューター（アニメ、ビジネス、旅行者など）',
@@ -34,8 +34,8 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'gamified-mandala-chart',
     title: 'Gamified Mandala Chart',
     emoji: '🎯',
-    category: 'main',
-    featured: true,
+    category: 'archive',
+    featured: false,
     iconColor: 'amber',
     highlights: [
       '曼荼羅チャート形式で目標を81セルに分解',
@@ -52,7 +52,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'talent-diagnosis',
     title: '才能診断ツール',
     emoji: '🔮',
-    category: 'main',
+    category: 'individual',
     featured: true,
     iconColor: 'violet',
     highlights: [
@@ -66,7 +66,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'ai-diagnosis-six',
     title: 'AI副業適性診断',
     emoji: '🤖',
-    category: 'main',
+    category: 'individual',
     featured: true,
     iconColor: 'purple',
     highlights: [
@@ -83,7 +83,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'xboost',
     title: 'Xboost',
     emoji: '🚀',
-    category: 'tool',
+    category: 'automation',
     featured: true,
     iconColor: 'sky',
     highlights: [
@@ -100,7 +100,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'emo-sns',
     title: 'EmoSNS',
     emoji: '🥺',
-    category: 'main',
+    category: 'archive',
     featured: false,
     iconColor: 'pink',
     highlights: [
@@ -114,7 +114,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'instagram',
     title: 'InstaFlow AI',
     emoji: '📸',
-    category: 'tool',
+    category: 'automation',
     featured: false,
     iconColor: 'fuchsia',
     highlights: [
@@ -128,7 +128,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'ai-writing-automation',
     title: 'AI Writing Automation',
     emoji: '✍️',
-    category: 'tool',
+    category: 'automation',
     featured: true,
     iconColor: 'blue',
     highlights: [
@@ -142,7 +142,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'kindlescanpdf',
     title: 'Kindle to PDF',
     emoji: '📚',
-    category: 'tool',
+    category: 'automation',
     featured: false,
     iconColor: 'orange',
     highlights: [
@@ -156,7 +156,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'calendar-sync-manager',
     title: 'Calendar Sync Manager',
     emoji: '📅',
-    category: 'tool',
+    category: 'automation',
     featured: false,
     iconColor: 'cyan',
     highlights: [
@@ -170,7 +170,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'termlog',
     title: 'TermLog',
     emoji: '💾',
-    category: 'tool',
+    category: 'automation',
     featured: false,
     iconColor: 'green',
     highlights: [
@@ -184,7 +184,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'session-vault',
     title: 'SessionVault',
     emoji: '🗃️',
-    category: 'tool',
+    category: 'automation',
     featured: false,
     iconColor: 'indigo',
     highlights: [
@@ -198,7 +198,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'antigravity-vault',
     title: 'AntigravityVault',
     emoji: '🚀',
-    category: 'tool',
+    category: 'automation',
     featured: false,
     iconColor: 'pink',
     highlights: [
@@ -212,7 +212,7 @@ export const projectsMetadata: Record<string, ProjectMetadata> = {
     slug: 'self-analysis-notification',
     title: 'Self Analysis Notification',
     emoji: '🔔',
-    category: 'tool',
+    category: 'automation',
     featured: false,
     iconColor: 'yellow',
     highlights: [

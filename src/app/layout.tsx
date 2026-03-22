@@ -9,6 +9,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import CookieConsent from '@/components/CookieConsent';
 import MobileCTA from '@/components/MobileCTA';
+import ThemeProvider from '@/components/ThemeProvider';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,8 +35,8 @@ const notoSerifJP = Noto_Serif_JP({
 export const metadata: Metadata = {
   metadataBase: new URL("https://takahiro-motoyama.vercel.app"),
   title: {
-    default: "本山 貴裕 | Life Self-Determination Protocol",
-    template: "%s | 本山 貴裕"
+    default: "本山貴裕 | AI導入・業務自動化コンサルタント",
+    template: "%s | 本山貴裕"
   },
   description: "「ノウハウ依存」から「人生の自己決定」へ。AIと哲学で、自律的な人生をデザインする。",
   keywords: [
@@ -97,31 +98,38 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`scroll-smooth ${notoSerifJP.variable}`}>
+    <html lang="ja" className={`scroll-smooth ${notoSerifJP.variable}`} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#165E83" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme:dark)').matches;if(s==='dark'||(!s&&d)||s===null&&d)document.documentElement.classList.add('dark')}catch(e){}})();`,
+          }}
+        />
       </head>
       <body className={`${inter.variable} ${notoJP.variable} font-sans antialiased japan-bg overflow-x-hidden`}>
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-japan-indigo focus:text-white focus:rounded-lg focus:outline-none"
-        >
-          メインコンテンツへスキップ
-        </a>
-        <GoogleAnalytics />
-        <PersonJsonLd />
-        <OrganizationJsonLd />
-        <WebsiteJsonLd />
-        <SectionBackground />
-        {children}
-        <Suspense fallback={null}>
-          <Analytics />
-        </Suspense>
-        <Suspense fallback={null}>
-          <SpeedInsights />
-        </Suspense>
-        <MobileCTA />
-        <CookieConsent />
+        <ThemeProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-japan-indigo focus:text-white focus:rounded-lg focus:outline-none"
+          >
+            メインコンテンツへスキップ
+          </a>
+          <GoogleAnalytics />
+          <PersonJsonLd />
+          <OrganizationJsonLd />
+          <WebsiteJsonLd />
+          <SectionBackground />
+          {children}
+          <Suspense fallback={null}>
+            <Analytics />
+          </Suspense>
+          <Suspense fallback={null}>
+            <SpeedInsights />
+          </Suspense>
+          <MobileCTA />
+          <CookieConsent />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -56,7 +56,7 @@ export default function MobileCTA() {
           role="navigation"
           aria-label="モバイル固定アクション"
         >
-          <div className="border-t border-japan-indigo/10 bg-white/90 backdrop-blur-xl px-4 py-3 shadow-[0_-2px_10px_rgba(0,0,0,0.06)]">
+          <div className="border-t border-border-default bg-header-bg backdrop-blur-xl px-4 py-3 shadow-[0_-2px_10px_rgba(0,0,0,0.06)]">
             <div className="flex items-center gap-3 max-w-lg mx-auto">
               {/* Primary CTA */}
               <Link

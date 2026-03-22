@@ -77,18 +77,22 @@ async function fetchProjectRepos(): Promise<GitHubRepo[]> {
 /**
  * topicsからカテゴリを推測
  */
-function inferCategoryFromTopics(topics: string[] | null): 'main' | 'tool' | 'experiment' {
-  if (!topics || topics.length === 0) return 'tool';
+function inferCategoryFromTopics(topics: string[] | null): 'individual' | 'corporate' | 'automation' | 'archive' {
+  if (!topics || topics.length === 0) return 'automation';
 
   const topicStr = topics.join(' ').toLowerCase();
 
-  // Main製品のトピック
-  const mainProductTopics = ['japanese', 'learning', 'mandala', 'diagnosis', 'ai-diagnosis', 'talent'];
-  for (const topic of mainProductTopics) {
-    if (topicStr.includes(topic)) return 'main';
+  const individualTopics = ['diagnosis', 'ai-diagnosis', 'talent', 'kindle', 'self-analysis'];
+  for (const topic of individualTopics) {
+    if (topicStr.includes(topic)) return 'individual';
   }
 
-  return 'tool';
+  const corporateTopics = ['ci-cd', 'github-actions', 'enterprise'];
+  for (const topic of corporateTopics) {
+    if (topicStr.includes(topic)) return 'corporate';
+  }
+
+  return 'automation';
 }
 
 /**
@@ -129,7 +133,7 @@ export interface Project {
   title: string;
   description: string;
   emoji: string;
-  category: 'main' | 'tool' | 'experiment';
+  category: 'individual' | 'corporate' | 'automation' | 'archive';
   status: 'live' | 'development' | 'private' | 'coming-soon';
   url?: string;
   github?: string;
@@ -186,17 +190,18 @@ export async function GET() {
       };
     });
 
-    // mainプロジェクトとtoolプロジェクトの数
-    const mainProjects = projects.filter(p => p.category === 'main').length;
-    const toolProjects = projects.filter(p => p.category === 'tool').length;
+    const individualCount = projects.filter(p => p.category === 'individual').length;
+    const corporateCount = projects.filter(p => p.category === 'corporate').length;
+    const automationCount = projects.filter(p => p.category === 'automation').length;
 
     return NextResponse.json({
       success: true,
-      projects,
+      projects: projects.filter(p => p.category !== 'archive'),
       stats: {
-        total: projects.length,
-        main: mainProjects,
-        tool: toolProjects,
+        total: projects.filter(p => p.category !== 'archive').length,
+        individual: individualCount,
+        corporate: corporateCount,
+        automation: automationCount,
       },
       lastUpdated: new Date().toISOString(),
       source: 'github-api',

@@ -5,15 +5,16 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const navItems = [
-  { href: '/services', label: 'Services' },
-  { href: '/projects', label: 'Works' },
-  { href: '/about', label: 'About' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/services', label: 'サービス' },
+  { href: '/case-studies', label: '導入事例' },
+  { href: '/about', label: '私について' },
+  { href: '/blog', label: 'ブログ' },
 ];
 
-const ctaItem = { href: '/contact', label: '無料相談' };
+const ctaItem = { href: '/contact', label: '無料診断' };
 
 export default function Header() {
   const pathname = usePathname();
@@ -57,7 +58,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-japan-indigo/10 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-header-bg backdrop-blur-xl border-b border-border-default transition-transform duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
@@ -66,7 +67,7 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl font-bold bg-gradient-to-r from-japan-indigo to-japan-vermilion bg-clip-text text-transparent"
+            className="text-xl font-bold text-japan-gradient"
           >
             Takahiro Motoyama
           </Link>
@@ -79,8 +80,8 @@ export default function Header() {
                 href={item.href}
                 className={`relative py-2 text-sm font-medium transition-colors ${
                   pathname === item.href || pathname?.startsWith(item.href + '/')
-                    ? 'text-japan-indigo'
-                    : 'text-zinc-500 hover:text-japan-indigo'
+                    ? 'text-text-strong'
+                    : 'text-text-muted hover:text-text-strong'
                 }`}
               >
                 {item.label}
@@ -93,10 +94,12 @@ export default function Header() {
               </Link>
             ))}
 
+            <ThemeToggle />
+
             {/* CTA Button */}
             <Link
               href={ctaItem.href}
-              className="bg-japan-vermilion text-white px-6 py-2.5 rounded-full font-bold hover:opacity-90 transition-all flex items-center gap-1.5 text-sm"
+              className="bg-japan-vermilion text-white px-6 py-2.5 rounded-full font-bold hover:bg-japan-vermilion/90 transition-colors duration-200 flex items-center gap-1.5 text-sm"
             >
               {ctaItem.label}
               <ArrowRight className="w-4 h-4" />
@@ -104,8 +107,10 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center gap-1">
+            <ThemeToggle />
           <button
-            className="md:hidden p-2 text-zinc-500 hover:text-japan-indigo"
+            className="p-2 text-text-muted hover:text-text-strong"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'}
             aria-expanded={isMenuOpen}
@@ -113,6 +118,7 @@ export default function Header() {
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -128,7 +134,7 @@ export default function Header() {
               role="navigation"
               aria-label="モバイルメニュー"
             >
-              <div className="mt-3 pb-4 border-t border-japan-indigo/10 pt-4 flex flex-col gap-1">
+              <div className="mt-3 pb-4 border-t border-border-default pt-4 flex flex-col gap-1">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
@@ -136,8 +142,8 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                     className={`flex items-center min-h-[48px] px-4 text-base font-medium rounded-lg transition-colors ${
                       pathname === item.href || pathname?.startsWith(item.href + '/')
-                        ? 'text-japan-indigo bg-japan-indigo/5'
-                        : 'text-zinc-600 hover:text-japan-indigo hover:bg-japan-indigo/5'
+                        ? 'text-text-strong bg-surface-section'
+                        : 'text-text-secondary hover:text-text-strong hover:bg-surface-section'
                     }`}
                   >
                     {item.label}

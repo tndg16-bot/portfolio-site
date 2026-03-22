@@ -41,14 +41,14 @@ export default function CookieConsent() {
     <div
       role="dialog"
       aria-label="Cookie同意バナー"
-      className="fixed bottom-0 left-0 right-0 z-50 border-t border-[#165E83]/20 bg-[#F0E8D6] px-4 py-4 shadow-lg sm:px-6"
+      className="fixed bottom-0 left-0 right-0 z-50 border-t border-border-default bg-surface backdrop-blur-xl px-4 py-4 shadow-lg sm:px-6"
     >
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-3 sm:flex-row sm:justify-between">
-        <p className="text-sm text-[#27221F]">
+        <p className="text-sm text-text-primary">
           当サイトでは、サービス向上のためにCookieを使用しています。詳しくは
           <Link
             href="/privacy"
-            className="ml-1 underline underline-offset-2 hover:text-[#165E83]"
+            className="ml-1 underline underline-offset-2 hover:text-text-strong"
           >
             プライバシーポリシー
           </Link>
@@ -56,7 +56,7 @@ export default function CookieConsent() {
         </p>
         <button
           onClick={handleAccept}
-          className="shrink-0 rounded-md bg-[#165E83] px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-[#165E83]/90 focus:outline-none focus:ring-2 focus:ring-[#165E83] focus:ring-offset-2"
+          className="shrink-0 rounded-md bg-japan-indigo px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-japan-indigo/90 focus:outline-none focus:ring-2 focus:ring-japan-indigo focus:ring-offset-2"
         >
           同意する
         </button>

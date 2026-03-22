@@ -9,7 +9,7 @@ export interface Project {
   title: string;
   description: string;
   emoji: string;
-  category: 'main' | 'tool' | 'experiment';
+  category: 'individual' | 'corporate' | 'automation' | 'archive';
   status: 'live' | 'development' | 'private' | 'coming-soon';
   url?: string;
   github?: string;
@@ -20,50 +20,14 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  // ============= Main Products =============
-  {
-    id: 'nihongo-ai',
-    slug: 'nihongo-ai',
-    title: 'Nihongo AI',
-    description: 'AIを活用した日本語学習プラットフォーム。5つのアーキタイプチューター、ゲーミフィケーション、発音練習機能を搭載。',
-    emoji: '🇯🇵',
-    category: 'main',
-    status: 'development',
-    github: 'https://github.com/tndg16-bot/nihongo-mate',
-    techStack: ['Next.js 15', 'TypeScript', 'Supabase', 'Claude API', 'Web Speech API'],
-    featured: true,
-    iconColor: 'rose',
-    highlights: [
-      '5つのアーキタイプチューター（アニメ、ビジネス、旅行者など）',
-      'XP・レベル・実績システムによるゲーミフィケーション',
-      'Web Speech APIによる発音練習',
-    ]
-  },
-  {
-    id: 'gamified-mandala-chart',
-    slug: 'gamified-mandala-chart',
-    title: 'Gamified Mandala Chart',
-    description: 'ゲーミフィケーションを取り入れた曼荼羅チャート形式の目標設定・達成管理アプリケーション。',
-    emoji: '🎯',
-    category: 'main',
-    status: 'development',
-    github: 'https://github.com/tndg16-bot/gamified-mandala-chart',
-    techStack: ['Next.js 16', 'TypeScript', 'Firebase', 'Framer Motion', 'Stripe'],
-    featured: true,
-    iconColor: 'amber',
-    highlights: [
-      '曼荼羅チャート形式で目標を81セルに分解',
-      'XP・レベル・実績によるモチベーション維持',
-      'Obsidian同期・Markdown/PDFエクスポート対応',
-    ]
-  },
+  // ============= 個人向けサービス・ツール =============
   {
     id: 'talent-diagnosis',
     slug: 'talent-diagnosis',
     title: '才能診断ツール',
     description: '数秘術・四柱推命・運気サイクルを統合し、AIによるパーソナライズされたスピリチュアルアドバイスを生成。',
     emoji: '🔮',
-    category: 'main',
+    category: 'individual',
     status: 'live',
     url: 'https://talent-diagnosis.vercel.app',
     techStack: ['Next.js 16', 'TypeScript', 'Ollama', 'Chart.js', 'lunar-javascript'],
@@ -81,7 +45,7 @@ export const projects: Project[] = [
     title: 'AI副業適性診断',
     description: '5問の質問で、あなたに向いているAI副業タイプを診断。MBTI分析も可能。',
     emoji: '🤖',
-    category: 'main',
+    category: 'individual',
     status: 'live',
     url: 'https://ai-diagnosis-six.vercel.app',
     techStack: ['React', 'TypeScript', 'Vercel'],
@@ -94,14 +58,14 @@ export const projects: Project[] = [
     ]
   },
   
-  // ============= Tools =============
+  // ============= 自動化ツール =============
   {
     id: 'ai-writing-automation',
     slug: 'ai-writing-automation',
     title: 'AI Writing Automation',
     description: 'キーワード入力からGoogle Docs完成稿まで、AIライティングノウハウを自動化するシステム。ブログ・YouTube台本・ゆっくり動画台本に対応。',
     emoji: '✍️',
-    category: 'tool',
+    category: 'automation',
     status: 'live',
     github: 'https://github.com/tndg16-bot/ai-writing-automation',
     techStack: ['Python', 'OpenAI API', 'Google Docs API'],
@@ -119,7 +83,7 @@ export const projects: Project[] = [
     title: 'Kindle to PDF',
     description: 'Kindle Web Readerからページをキャプチャし、PDFに変換するChrome拡張機能。500ページ以上の大規模ドキュメントにも対応。',
     emoji: '📚',
-    category: 'tool',
+    category: 'individual',
     status: 'live',
     techStack: ['TypeScript', 'Chrome Extension', 'IndexedDB', 'jsPDF'],
     featured: false,
@@ -136,7 +100,7 @@ export const projects: Project[] = [
     title: 'Calendar Sync Manager',
     description: 'Google Calendar/Tasks連携。音声入力対応で、素早くタスクを登録。',
     emoji: '📋',
-    category: 'tool',
+    category: 'automation',
     status: 'private',
     techStack: ['React', 'Google API', 'Web Speech API'],
     featured: false,
@@ -153,7 +117,7 @@ export const projects: Project[] = [
     title: 'TermLog',
     description: 'ターミナルセッションの自動記録・検索ツール。AI開発セッションのログを永続化。',
     emoji: '💾',
-    category: 'tool',
+    category: 'automation',
     status: 'development',
     techStack: ['Python', 'SQLite', 'Click'],
     featured: false,
@@ -170,7 +134,7 @@ export const projects: Project[] = [
     title: 'SessionVault',
     description: 'AIとのチャットセッションを永続化・検索可能にするナレッジベース。過去のAI対話から学びを抽出。',
     emoji: '🗄️',
-    category: 'tool',
+    category: 'automation',
     status: 'development',
     techStack: ['Python', 'SQLite', 'Semantic Search'],
     featured: false,
@@ -187,7 +151,7 @@ export const projects: Project[] = [
     title: 'AntigravityVault',
     description: 'Obsidian Vaultとの双方向同期を実現するツール。ノートとコードの統合管理。',
     emoji: '🚀',
-    category: 'tool',
+    category: 'automation',
     status: 'development',
     techStack: ['Python', 'Obsidian API'],
     featured: false,
@@ -199,21 +163,21 @@ export const projects: Project[] = [
     title: 'Self Analysis Notification',
     description: '定期的な自己分析プロンプトを通知するツール。内省習慣の自動化。',
     emoji: '🔔',
-    category: 'tool',
+    category: 'individual',
     status: 'development',
     techStack: ['Python', 'Windows Notification'],
     featured: false,
     iconColor: 'yellow',
   },
   
-  // ============= Infrastructure =============
+  // ============= 法人向けサービス・ツール =============
   {
     id: 'github-actions-cicd',
     slug: 'github-actions-cicd',
     title: 'GitHub Actions CI/CD',
     description: 'PRごとの自動Lint/Buildチェック、AIエージェント協調開発のためのマルチエージェント階層構造を構築。',
     emoji: '⚙️',
-    category: 'tool',
+    category: 'corporate',
     status: 'live',
     techStack: ['GitHub Actions', 'CI/CD', 'Multi-Agent'],
     featured: false,
@@ -224,20 +188,47 @@ export const projects: Project[] = [
       'Vercel自動デプロイ連携',
     ]
   },
+  // ============= Archive（非表示） =============
+  {
+    id: 'nihongo-ai',
+    slug: 'nihongo-ai',
+    title: 'Nihongo AI',
+    description: 'AIを活用した日本語学習プラットフォーム。5つのアーキタイプチューター、ゲーミフィケーション、発音練習機能を搭載。',
+    emoji: '🇯🇵',
+    category: 'archive',
+    status: 'development',
+    github: 'https://github.com/tndg16-bot/nihongo-mate',
+    techStack: ['Next.js 15', 'TypeScript', 'Supabase', 'Claude API', 'Web Speech API'],
+    featured: false,
+    iconColor: 'rose',
+  },
+  {
+    id: 'gamified-mandala-chart',
+    slug: 'gamified-mandala-chart',
+    title: 'Gamified Mandala Chart',
+    description: 'ゲーミフィケーションを取り入れた曼荼羅チャート形式の目標設定・達成管理アプリケーション。',
+    emoji: '🎯',
+    category: 'archive',
+    status: 'development',
+    github: 'https://github.com/tndg16-bot/gamified-mandala-chart',
+    techStack: ['Next.js 16', 'TypeScript', 'Firebase', 'Framer Motion', 'Stripe'],
+    featured: false,
+    iconColor: 'amber',
+  },
 ];
 
 /**
- * Get all projects
+ * Get all projects (excluding archive)
  */
 export function getProjects(): Project[] {
-  return projects;
+  return projects.filter((p) => p.category !== 'archive');
 }
 
 /**
- * Get featured projects
+ * Get featured projects (excluding archive)
  */
 export function getFeaturedProjects(): Project[] {
-  return projects.filter((p) => p.featured);
+  return projects.filter((p) => p.featured && p.category !== 'archive');
 }
 
 /**

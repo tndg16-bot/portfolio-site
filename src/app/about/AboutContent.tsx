@@ -69,9 +69,9 @@ export default function AboutContent() {
                         variants={containerVariants}
                         className="max-w-4xl mx-auto text-center"
                     >
-                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/15 border border-japan-indigo/20 mb-8">
+                        <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-japan-indigo/15 border border-border-emphasis mb-8">
                             <Sparkles className="w-4 h-4 text-japan-indigo" />
-                            <span className="text-sm text-zinc-800">About</span>
+                            <span className="text-sm text-text-primary">About</span>
                         </motion.div>
 
                         <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl font-bold mb-6">
@@ -82,7 +82,7 @@ export default function AboutContent() {
                             <span className="text-japan-indigo">自分で決められる人を増やしたい</span>
                         </motion.h1>
 
-                        <motion.p variants={itemVariants} className="text-xl text-zinc-800 max-w-2xl mx-auto leading-relaxed">
+                        <motion.p variants={itemVariants} className="text-xl text-text-primary max-w-2xl mx-auto leading-relaxed">
                             情報も正解も溢れている時代だからこそ、<br />
                             最後に頼れるのは「自分で決められる力」だと思っています。
                         </motion.p>
@@ -96,9 +96,9 @@ export default function AboutContent() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={containerVariants}
-                        className="p-8 rounded-2xl bg-white/60 border border-japan-indigo/10"
+                        className="p-8 rounded-2xl bg-surface-alt border border-border-default"
                     >
-                        <motion.p variants={itemVariants} className="text-lg text-zinc-800 leading-relaxed">
+                        <motion.p variants={itemVariants} className="text-lg text-text-primary leading-relaxed">
                             はじめまして、<span className="text-japan-indigo font-bold">本山 貴裕</span>です。<br /><br />
                             「モヤモヤ整理セッション」は、答えを渡す場所ではありません。<br />
                             自分の価値観と判断軸を言語化して、次の一歩を決めるための時間です。<br /><br />
@@ -115,7 +115,7 @@ export default function AboutContent() {
                         viewport={{ once: true }}
                         variants={containerVariants}
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-japan-indigo mb-8 text-center">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-text-strong mb-8 text-center">
                             私がやっていること
                         </motion.h2>
 
@@ -124,9 +124,9 @@ export default function AboutContent() {
                                 <motion.div
                                     key={index}
                                     variants={itemVariants}
-                                    className="flex items-start gap-4 p-6 rounded-xl bg-white/60 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-colors"
+                                    className="flex items-start gap-4 p-6 rounded-xl bg-surface-alt border border-border-default hover:border-japan-indigo/30 transition-colors"
                                 >
-                                    <div className="w-12 h-12 rounded-lg bg-japan-indigo/10 flex items-center justify-center flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-lg bg-surface-section flex items-center justify-center flex-shrink-0">
                                         <service.icon className="w-6 h-6 text-japan-indigo" />
                                     </div>
                                     <p className="text-japan-charcoal leading-relaxed pt-2">{service.text}</p>
@@ -134,7 +134,7 @@ export default function AboutContent() {
                             ))}
                         </div>
 
-                        <motion.p variants={itemVariants} className="text-center text-zinc-700 mt-6 text-base">
+                        <motion.p variants={itemVariants} className="text-center text-text-secondary mt-6 text-base">
                             ※「売り込み」が目的ではありません。必要な場合にだけ、次の選択肢を提示します。
                         </motion.p>
                     </motion.div>
@@ -147,15 +147,15 @@ export default function AboutContent() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={containerVariants}
-                        className="relative overflow-hidden rounded-2xl bg-japan-indigo/5 border border-japan-indigo/10 p-8"
+                        className="relative overflow-hidden rounded-2xl bg-surface-section border border-border-default p-8"
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-japan-indigo mb-6">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-text-strong mb-6">
                             なぜこれをやっているのか
                         </motion.h2>
 
                         <motion.div variants={itemVariants} className="space-y-4 text-japan-charcoal leading-relaxed">
                             <p>多くの人が、答えを持っていないわけではなくて、</p>
-                            <ul className="list-disc list-inside space-y-3 pl-4 text-zinc-800 leading-relaxed">
+                            <ul className="list-disc list-inside space-y-3 pl-4 text-text-primary leading-relaxed">
                                 <li>自分を信じきれない</li>
                                 <li>言葉にするのが怖い</li>
                                 <li>何から手をつけていいか分からない</li>
@@ -178,11 +178,11 @@ export default function AboutContent() {
                         viewport={{ once: true }}
                         variants={containerVariants}
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-japan-indigo mb-8 text-center">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-text-strong mb-8 text-center">
                             経歴（できることの裏付け）
                         </motion.h2>
 
-                        <motion.p variants={itemVariants} className="text-center text-zinc-700 mb-8">
+                        <motion.p variants={itemVariants} className="text-center text-text-secondary mb-8">
                             これまで、<span className="text-japan-indigo">金融・人材・AIの領域</span>で現場を見てきました。
                         </motion.p>
 
@@ -191,15 +191,15 @@ export default function AboutContent() {
                                 <motion.div
                                     key={index}
                                     variants={itemVariants}
-                                    className="p-6 rounded-xl bg-white/60 border border-japan-indigo/10"
+                                    className="p-6 rounded-xl bg-surface-alt border border-border-default"
                                 >
-                                    <h3 className="text-lg font-bold text-japan-indigo mb-3">{item.area}</h3>
-                                    <p className="text-base text-zinc-800">{item.description}</p>
+                                    <h3 className="text-lg font-bold text-text-strong mb-3">{item.area}</h3>
+                                    <p className="text-base text-text-primary">{item.description}</p>
                                 </motion.div>
                             ))}
                         </div>
 
-                        <motion.p variants={itemVariants} className="text-center text-zinc-800 mt-8 p-4 rounded-xl bg-white/60 border border-japan-indigo/10">
+                        <motion.p variants={itemVariants} className="text-center text-text-primary mt-8 p-4 rounded-xl bg-surface-alt border border-border-default">
                             「精神面（価値観・直感）」だけでも、「実務（AIやキャリア）」だけでもなく、<br />
                             <span className="text-japan-indigo font-medium">両方をつないで&quot;意思決定&quot;に落とすのが私のスタイルです。</span>
                         </motion.p>
@@ -214,7 +214,7 @@ export default function AboutContent() {
                         viewport={{ once: true }}
                         variants={containerVariants}
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-japan-indigo mb-8 text-center flex items-center justify-center gap-3">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-text-strong mb-8 text-center flex items-center justify-center gap-3">
                             <Heart className="w-8 h-8 text-pink-400" />
                             大切にしている約束
                         </motion.h2>
@@ -224,7 +224,7 @@ export default function AboutContent() {
                                 <motion.div
                                     key={index}
                                     variants={itemVariants}
-                                    className="flex items-center gap-3 p-4 rounded-xl bg-white/60 border border-japan-indigo/10"
+                                    className="flex items-center gap-3 p-4 rounded-xl bg-surface-alt border border-border-default"
                                 >
                                     <CheckCircle className="w-5 h-5 text-japan-indigo flex-shrink-0" />
                                     <p className="text-japan-charcoal">{promise}</p>
@@ -242,13 +242,13 @@ export default function AboutContent() {
                         viewport={{ once: true }}
                         variants={containerVariants}
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-japan-indigo mb-8 text-center">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-text-strong mb-8 text-center">
                             セッションが合う人／合わない人
                         </motion.h2>
 
                         <div className="grid gap-6 md:grid-cols-2">
-                            <motion.div variants={itemVariants} className="p-6 rounded-2xl bg-japan-indigo/10 border border-japan-indigo/30">
-                                <h3 className="text-xl font-bold text-japan-indigo mb-4 flex items-center gap-2">
+                            <motion.div variants={itemVariants} className="p-6 rounded-2xl bg-surface-section border border-japan-indigo/30">
+                                <h3 className="text-xl font-bold text-text-strong mb-4 flex items-center gap-2">
                                     <CheckCircle className="w-6 h-6" /> 合う人
                                 </h3>
                                 <ul className="space-y-3">
@@ -285,12 +285,12 @@ export default function AboutContent() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={containerVariants}
-                        className="p-8 rounded-2xl bg-white/60 border border-japan-indigo/10 text-center"
+                        className="p-8 rounded-2xl bg-surface-alt border border-border-default text-center"
                     >
-                        <motion.h2 variants={itemVariants} className="text-2xl font-bold text-japan-indigo mb-4">
+                        <motion.h2 variants={itemVariants} className="text-2xl font-bold text-text-strong mb-4">
                             無料モニターでやっている理由
                         </motion.h2>
-                        <motion.p variants={itemVariants} className="text-zinc-800 leading-relaxed">
+                        <motion.p variants={itemVariants} className="text-text-primary leading-relaxed">
                             将来的に「意思決定できる人を増やす」活動をしていきたいからです。<br />
                             そのために、いまは悩みの構造を多角的に理解し、セッションの質を磨いています。
                         </motion.p>
@@ -304,12 +304,12 @@ export default function AboutContent() {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={containerVariants}
-                        className="relative overflow-hidden rounded-3xl bg-japan-indigo/5 border border-japan-indigo/10 p-12 text-center"
+                        className="relative overflow-hidden rounded-3xl bg-surface-section border border-border-default p-12 text-center"
                     >
-                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-japan-indigo mb-4">
+                        <motion.h2 variants={itemVariants} className="text-3xl font-bold text-text-strong mb-4">
                             頭の中が散らかっていて進めないなら、まずは整理しましょう
                         </motion.h2>
-                        <motion.p variants={itemVariants} className="text-xl text-zinc-800 mb-8">
+                        <motion.p variants={itemVariants} className="text-xl text-text-primary mb-8">
                             60分で、価値観と判断軸を言語化して、次の一歩まで落とします。
                         </motion.p>
                         <motion.div variants={itemVariants}>
@@ -325,16 +325,16 @@ export default function AboutContent() {
                 </section>
 
                 {/* Footer */}
-                <footer className="w-full py-12 border-t border-japan-indigo/5 bg-japan-indigo/5">
+                <footer className="w-full py-12 border-t border-border-default bg-surface-section">
                     <div className="max-w-6xl mx-auto px-4">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                            <div className="flex gap-6 text-zinc-700 text-sm">
+                            <div className="flex gap-6 text-text-secondary text-sm">
                                 <Link href="/" className="hover:text-japan-indigo transition-colors">Home</Link>
                                 <Link href="/about" className="hover:text-japan-indigo transition-colors">About</Link>
                                 <Link href="/sessions" className="hover:text-japan-indigo transition-colors">Sessions</Link>
                                 <Link href="/contact" className="hover:text-japan-indigo transition-colors">Contact</Link>
                             </div>
-                            <p className="text-zinc-700 text-sm">
+                            <p className="text-text-secondary text-sm">
                                 © 2026 Takahiro Motoyama. All rights reserved.
                             </p>
                         </div>

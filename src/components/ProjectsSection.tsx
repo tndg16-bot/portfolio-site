@@ -64,7 +64,7 @@ function StatusBadge({ status }: { status: Project['status'] }) {
     case 'development':
       return <span className="text-blue-600 text-sm font-medium">🚧 開発中</span>;
     case 'private':
-      return <span className="text-zinc-700 text-sm font-medium">🔒 プライベート</span>;
+      return <span className="text-text-secondary text-sm font-medium">🔒 プライベート</span>;
     case 'coming-soon':
       return <span className="text-amber-600 text-sm font-medium">🔜 近日公開</span>;
     default:
@@ -93,10 +93,10 @@ function ProjectCard({ project }: { project: Project }) {
       viewport={{ once: true }}
       variants={itemVariants}
       whileHover={{ scale: 1.02, y: -5 }}
-      className={`glass-panel group relative flex flex-col rounded-3xl p-8 border border-japan-indigo/10 hover:border-japan-indigo/30 transition-all duration-500 bg-white/60 ${isClickable ? 'cursor-pointer' : ''}`}
+      className={`glass-panel group relative flex flex-col rounded-3xl p-8 border border-border-default hover:border-border-emphasis transition-all duration-500 bg-surface-alt ${isClickable ? 'cursor-pointer' : ''}`}
     >
       {/* アイコンバッジ */}
-      <div className={`absolute -top-4 -right-4 bg-white p-3 rounded-xl shadow-md ${color.border} ${color.text} group-hover:scale-110 transition-transform duration-500`}>
+      <div className={`absolute -top-4 -right-4 bg-surface p-3 rounded-xl shadow-md ${color.border} ${color.text} group-hover:scale-110 transition-transform duration-500`}>
         {project.featured ? <Sparkles size={24} /> : <Target size={24} />}
       </div>
       
@@ -107,13 +107,13 @@ function ProjectCard({ project }: { project: Project }) {
       <h3 className="text-xl font-bold text-japan-indigo mb-2">{project.title}</h3>
       
       {/* 説明 */}
-      <p className="text-zinc-800 text-sm mb-4 flex-grow line-clamp-3">
+      <p className="text-text-primary text-sm mb-4 flex-grow line-clamp-3">
         {project.description}
       </p>
       
       {/* ハイライト */}
       {project.highlights && project.highlights.length > 0 && (
-        <ul className="text-xs text-zinc-700 mb-4 space-y-1">
+        <ul className="text-xs text-text-secondary mb-4 space-y-1">
           {project.highlights.slice(0, 2).map((highlight, i) => (
             <li key={i} className="flex items-start gap-1">
               <span className="text-green-500 mt-0.5">✓</span>
@@ -131,7 +131,7 @@ function ProjectCard({ project }: { project: Project }) {
           </span>
         ))}
         {project.techStack.length > 3 && (
-          <span className="text-xs bg-zinc-100 text-zinc-800 px-2 py-1 rounded-full">
+          <span className="text-xs bg-surface-section text-text-primary px-2 py-1 rounded-full">
             +{project.techStack.length - 3}
           </span>
         )}
@@ -152,7 +152,7 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export default function ProjectsSection() {
-  const [filter, setFilter] = useState<'all' | 'main' | 'tool'>('all');
+  const [filter, setFilter] = useState<'all' | 'individual' | 'corporate' | 'automation'>('all');
   const [projects, setProjects] = useState<Project[]>([]);
 
   // コンポーネントマウント時にプロジェクトを取得
@@ -164,16 +164,20 @@ export default function ProjectsSection() {
     loadProjects();
   }, []);
 
-  // フィルタリング
-  const featuredProjects = projects.filter(p => p.featured);
-  const mainProjects = projects.filter(p => p.category === 'main');
-  const toolProjects = projects.filter(p => p.category === 'tool');
+  // フィルタリング（archiveを除外）
+  const activeProjects = projects.filter(p => p.category !== 'archive');
+  const featuredProjects = activeProjects.filter(p => p.featured);
+  const individualProjects = activeProjects.filter(p => p.category === 'individual');
+  const corporateProjects = activeProjects.filter(p => p.category === 'corporate');
+  const automationProjects = activeProjects.filter(p => p.category === 'automation');
 
   const displayProjects = filter === 'all'
     ? featuredProjects
-    : filter === 'main'
-      ? mainProjects
-      : toolProjects;
+    : filter === 'individual'
+      ? individualProjects
+      : filter === 'corporate'
+        ? corporateProjects
+        : automationProjects;
 
   return (
     <section id="section-projects" className="w-full max-w-7xl px-4 py-24 min-h-[70vh] flex flex-col items-center justify-center">
@@ -185,7 +189,7 @@ export default function ProjectsSection() {
         className="text-center mb-16"
       >
         <motion.div variants={itemVariants} className="mb-4 flex justify-center">
-          <div className="flex items-center gap-2 rounded-full bg-japan-indigo/5 px-4 py-1 text-sm font-medium text-japan-indigo border border-japan-indigo/10">
+          <div className="flex items-center gap-2 rounded-full bg-surface-section px-4 py-1 text-sm font-medium text-text-strong border border-border-default">
             <Cpu size={16} />
             <span>Portfolio</span>
           </div>
@@ -193,42 +197,30 @@ export default function ProjectsSection() {
         <motion.h2 variants={itemVariants} className="text-4xl font-bold md:text-5xl text-japan-indigo mb-4">
           本山貴裕の作品集
         </motion.h2>
-        <motion.p variants={itemVariants} className="text-zinc-700 text-lg max-w-2xl mx-auto mb-8">
+        <motion.p variants={itemVariants} className="text-text-secondary text-lg max-w-2xl mx-auto mb-8">
           自己決定力を加速させるためのAIツール・アプリケーションを開発しています
         </motion.p>
         
         {/* フィルターボタン */}
         <motion.div variants={itemVariants} className="flex justify-center gap-2 flex-wrap">
-          <button
-            onClick={() => setFilter('all')}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-              filter === 'all'
-                ? 'bg-japan-indigo text-white'
-                : 'bg-japan-indigo/10 text-japan-indigo hover:bg-japan-indigo/20'
-            }`}
-          >
-            ⭐ Featured
-          </button>
-          <button
-            onClick={() => setFilter('main')}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-              filter === 'main'
-                ? 'bg-japan-indigo text-white'
-                : 'bg-japan-indigo/10 text-japan-indigo hover:bg-japan-indigo/20'
-            }`}
-          >
-            🚀 Main Products ({mainProjects.length})
-          </button>
-          <button
-            onClick={() => setFilter('tool')}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-              filter === 'tool'
-                ? 'bg-japan-indigo text-white'
-                : 'bg-japan-indigo/10 text-japan-indigo hover:bg-japan-indigo/20'
-            }`}
-          >
-            🔧 Tools ({toolProjects.length})
-          </button>
+          {[
+            { key: 'all' as const, label: '⭐ おすすめ', count: featuredProjects.length },
+            { key: 'individual' as const, label: '👤 個人向け', count: individualProjects.length },
+            { key: 'corporate' as const, label: '🏢 法人向け', count: corporateProjects.length },
+            { key: 'automation' as const, label: '⚡ 自動化', count: automationProjects.length },
+          ].map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setFilter(tab.key)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                filter === tab.key
+                  ? 'bg-japan-indigo text-white'
+                  : 'bg-japan-indigo/10 text-japan-indigo hover:bg-japan-indigo/20'
+              }`}
+            >
+              {tab.label} ({tab.count})
+            </button>
+          ))}
         </motion.div>
       </motion.div>
 
@@ -250,9 +242,9 @@ export default function ProjectsSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="mt-12 text-zinc-600 text-sm"
+        className="mt-12 text-text-muted text-sm"
       >
-        計 {mainProjects.length + toolProjects.length} プロジェクト開発中
+        計 {activeProjects.length} プロジェクト
       </motion.p>
     </section>
   );
