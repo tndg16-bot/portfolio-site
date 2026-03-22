@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { ArrowRight, User, Building2, Code, CheckCircle, Quote } from "lucide-react";
+import Image from 'next/image';
 import Link from 'next/link';
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
@@ -92,9 +93,15 @@ export default function HomeContent() {
             transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6 }}
             className="flex flex-col md:flex-row items-center gap-6 md:gap-8"
           >
-            {/* Photo placeholder - replace with actual photo */}
-            <div className="shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-full bg-japan-indigo flex items-center justify-center overflow-hidden">
-              <User className="h-12 w-12 text-white/80" />
+            <div className="shrink-0 w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden ring-2 ring-border-default">
+              <Image
+                src="/images/profile.png"
+                alt="本山貴裕"
+                width={112}
+                height={112}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
             <div className="text-center md:text-left">
               <h2 className="text-xl md:text-2xl font-bold text-text-primary mb-1">本山貴裕</h2>
