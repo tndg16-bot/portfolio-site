@@ -1,7 +1,7 @@
 ---
 title: "AI画像生成でブログのアイキャッチを内製化する"
 description: "デザインセンス不要で、記事のメッセージを視覚化するMidjourney活用法。"
-date: "2026-01-03"
+date: '2026-03-19'
 category: "AI活用"
 tags:
   - "Midjourney"

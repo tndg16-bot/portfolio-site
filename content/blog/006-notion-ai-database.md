@@ -1,7 +1,7 @@
 ---
 title: "Notion AIをデータベース構築のパートナーにする"
 description: "散らばった情報を整理し、意味のある構造に組み替えるためのAI操作術。"
-date: "2026-01-06"
+date: '2026-03-22'
 category: "AI活用"
 tags:
   - "Notion"
