@@ -101,6 +101,8 @@ export default function RootLayout({
     <html lang="ja" className={`scroll-smooth ${notoSerifJP.variable}`} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#165E83" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var s=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme:dark)').matches;if(s==='dark'||(!s&&d)||s===null&&d)document.documentElement.classList.add('dark')}catch(e){}})();`,
