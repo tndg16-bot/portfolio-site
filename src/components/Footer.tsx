@@ -16,6 +16,9 @@ export default function Footer() {
               <li>
                 <Link href="/services#corporate" className="inline-flex items-center min-h-[48px] md:min-h-0 py-2 md:py-0 hover:text-text-strong transition-colors">法人の方へ</Link>
               </li>
+              <li>
+                <Link href="/pricing" className="inline-flex items-center min-h-[48px] md:min-h-0 py-2 md:py-0 hover:text-text-strong transition-colors">料金の目安</Link>
+              </li>
             </ul>
           </div>
 
