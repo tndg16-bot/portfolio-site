@@ -1,7 +1,7 @@
 ---
 title: "AIエンジニアに頼らない業務フローの自動化"
 description: "非エンジニアでもできる、ZapierとAIを組み合わせたスマートな仕事術。"
-date: "2026-01-07"
+date: '2026-03-23'
 category: "AI活用"
 tags:
   - "Zapier"
