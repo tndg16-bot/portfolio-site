@@ -1,7 +1,7 @@
 ---
 title: "Excelマクロはもう古い？AIでデータ分析を極める"
 description: "Pythonを知らなくても、ChatGPTの分析機能で高度な統計を出す手法。"
-date: "2026-01-15"
+date: '2026-04-01'
 category: "AI活用"
 tags:
   - "Excel"
