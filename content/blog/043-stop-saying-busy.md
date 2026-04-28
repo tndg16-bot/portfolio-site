@@ -1,6 +1,6 @@
 ---
 title: "「忙しい」を封印する技術 - 時間の支配者になる具体的メソッド"
-date: '2026-02-16'
+date: '2026-04-28'
 category: "生産性"
 tags:
   - "Productivity"
