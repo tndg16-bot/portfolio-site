@@ -1,6 +1,6 @@
 ---
 title: "AIツールによるタスク自動化 - ChatGPT/Claude等を活用した効率化"
-date: '2026-03-10'
+date: '2026-05-04'
 category: "生産性"
 tags:
   - "AI活用"
