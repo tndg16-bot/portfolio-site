@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/*
+ * r4 Design System Tokens (CSS Variables)
+ * Source: DESIGN_SYSTEM_SPEC.md r4
+ */
+@theme inline {
+  /* ---- Primary palette ---- */
+  --color-wagashi-indigo: #165E83;
+  --color-wagashi-gold: #E6B422;
+  --color-wagashi-vermilion: #EB6101;
+  --color-wagashi-charcoal: #27221F;
+  --color-wagashi-cream: #F0E8D6;
+  /* ---- Secondary (r4 新規) ---- */
+  --color-wagashi-tanboku: #5B5651;
+  --color-wagashi-ginshu: #C25A3C;
+  --color-wagashi-rikyu: #888E7E;
+  --color-wagashi-kinari: #F8F3E6;
+  --color-wagashi-aizumi: #0C3A52;
+
+  /* ---- Typography Families ---- */
+  --font-serif-jp: var(--font-noto-serif-jp), serif;
+  --font-sans-jp: var(--font-noto-sans-jp), sans-serif;
+  --font-num: var(--font-fraunces), serif;
+  --font-en: var(--font-inter-tight), sans-serif;
+
+  /* ---- Spacing (雪月花スケール) ---- */
+  --spacing-w-1: 8px;
+  --spacing-w-2: 16px;
+  --spacing-w-3: 24px;
+  --spacing-w-4: 40px;
+  --spacing-w-5: 64px;
+  --spacing-w-6: 96px;
+  --spacing-w-7: 144px;
+  --spacing-w-8: 200px;
+  --spacing-w-9: 280px;
+}
+
+/* ---- Global resets ---- */
+html, body {
+  background-color: var(--color-wagashi-cream);
+  color: var(--color-wagashi-charcoal);
+  font-family: var(--font-sans-jp);
+  font-size: 17px;
+  line-height: 2.0;
+  letter-spacing: 0.04em;
+}
+@media (max-width: 640px) {
+  html, body { font-size: 16px; }
+}
+
+/* ---- Headings: 書道リズム ---- */
+h1, h2, h3 {
+  font-family: var(--font-serif-jp);
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+/* ---- Focus ring (Vermilion 2px) ---- */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, details > summary:focus-visible {
+  outline: 2px solid var(--color-wagashi-vermilion);
+  outline-offset: 2px;
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Custom scrollbar (subtle) ---- */
+* {
+  scrollbar-color: var(--color-wagashi-tanboku) var(--color-wagashi-cream);
+  scrollbar-width: thin;
+}
+
+/* ---- Selection ---- */
+::selection {
+  background-color: var(--color-wagashi-gold);
+  color: var(--color-wagashi-aizumi);
+}
