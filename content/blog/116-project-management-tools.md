@@ -1,14 +1,15 @@
 ---
-title: "プロジェクト管理ツール活用術 - Notion/Trello/Asanaの比較と選定ガイド"
-date: '2026-03-16'
-category: "生産性"
+title: プロジェクト管理ツール活用術 - Notion/Trello/Asanaの比較と選定ガイド
+date: '2026-07-10'
+category: 生産性
 tags:
-  - "生産性"
-  - "ツール活用"
-  - "プロジェクト管理"
-  - "チームワーク"
-description: "プロジェクト管理ツールの選定と活用。Notion、Trello、Asanaの比較、Kanban方式によるタスク視覚化、進捗管理のベストプラクティス。"
+  - 生産性
+  - ツール活用
+  - プロジェクト管理
+  - チームワーク
+description: プロジェクト管理ツールの選定と活用。Notion、Trello、Asanaの比較、Kanban方式によるタスク視覚化、進捗管理のベストプラクティス。
 published: true
+slug: project-management-tools
 ---
 
 ## プロジェクト管理ツールの重要性
