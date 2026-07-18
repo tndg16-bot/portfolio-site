@@ -1,15 +1,15 @@
 ---
-title: "「やらないことリスト」を毎日更新して思考をクリアにする"
-description: "自分のエネルギーを分散させないために、あえて捨てる業務の選定基準。"
-date: "2026-02-18"
-category: "生産性"
+title: 「やらないことリスト」を毎日更新して思考をクリアにする
+description: 自分のエネルギーを分散させないために、あえて捨てる業務の選定基準。
+date: '2026-07-18'
+category: 生産性
 tags:
-  - "ToDoリスト"
-  - "やらないことリスト"
-  - "優先順位"
-  - "意思決定"
-published: false
-slug: "not-to-do-list"
+  - ToDoリスト
+  - やらないことリスト
+  - 優先順位
+  - 意思決定
+published: true
+slug: not-to-do-list
 ---
 
 ## はじめに
