@@ -1,15 +1,15 @@
 ---
-title: "「マルチタスク」の罠を抜け出し、シングルタスクに没入する"
-description: "脳のスイッチングコストを減らし、一つの作業の質を極限まで高める練習法。"
-date: "2026-04-19"
-category: "生産性"
+title: 「マルチタスク」の罠を抜け出し、シングルタスクに没入する
+description: 脳のスイッチングコストを減らし、一つの作業の質を極限まで高める練習法。
+date: '2026-07-19'
+category: 生産性
 tags:
-  - "シングルタスク"
-  - "マルチタスク"
-  - "集中力"
-  - "ディープワーク"
-published: false
-slug: "single-task-focus"
+  - シングルタスク
+  - マルチタスク
+  - 集中力
+  - ディープワーク
+published: true
+slug: single-task-focus
 ---
 
 ## はじめに
