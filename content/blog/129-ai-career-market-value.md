@@ -1,15 +1,15 @@
 ---
-title: "AIを活用したキャリアの「市場価値」シミュレーション"
-description: "自分のスキルセットをAIに分析させ、どのような業界で需要があるか探る。"
-date: '2026-03-02'
-category: "AI活用"
+title: AIを活用したキャリアの「市場価値」シミュレーション
+description: 自分のスキルセットをAIに分析させ、どのような業界で需要があるか探る。
+date: '2026-07-23'
+category: AI活用
 tags:
-  - "キャリア"
-  - "市場価値"
-  - "スキル分析"
-  - "転職"
+  - キャリア
+  - 市場価値
+  - スキル分析
+  - 転職
 published: true
-slug: "ai-career-market-value"
+slug: ai-career-market-value
 ---
 
 ## はじめに
