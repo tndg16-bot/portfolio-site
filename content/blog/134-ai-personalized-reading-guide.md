@@ -1,15 +1,15 @@
 ---
-title: "AIによる「パーソナライズされた読書案内」"
-description: "自分の興味と課題に合わせて、次に読むべき本をAIに厳選させる。"
-date: '2026-02-23'
-category: "AI活用"
+title: AIによる「パーソナライズされた読書案内」
+description: 自分の興味と課題に合わせて、次に読むべき本をAIに厳選させる。
+date: '2026-07-28'
+category: AI活用
 tags:
-  - "読書"
-  - "書籍推薦"
-  - "学習"
-  - "パーソナライズ"
+  - 読書
+  - 書籍推薦
+  - 学習
+  - パーソナライズ
 published: true
-slug: "ai-personalized-reading-guide"
+slug: ai-personalized-reading-guide
 ---
 
 ## はじめに
