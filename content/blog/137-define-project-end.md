@@ -1,15 +1,15 @@
 ---
-title: "プロジェクトの「終わらせ方」を最初に決めておく重要性"
-description: "ゴールを定義せずに出発しない、無駄な迷走を防ぐための設計思想。"
-date: "2026-03-08"
-category: "生産性"
+title: プロジェクトの「終わらせ方」を最初に決めておく重要性
+description: ゴールを定義せずに出発しない、無駄な迷走を防ぐための設計思想。
+date: '2026-07-31'
+category: 生産性
 tags:
-  - "プロジェクト管理"
-  - "ゴール設定"
-  - "計画"
-  - "完了"
+  - プロジェクト管理
+  - ゴール設定
+  - 計画
+  - 完了
 published: true
-slug: "define-project-end"
+slug: define-project-end
 ---
 
 ## はじめに
