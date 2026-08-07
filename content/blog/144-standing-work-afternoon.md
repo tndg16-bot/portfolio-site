@@ -1,15 +1,15 @@
 ---
-title: "「立ち仕事」を取り入れて午後の眠気を解消する"
-description: "スタンディングデスクの活用や、作業内容に応じた姿勢の変え方を解説。"
-date: "2026-04-17"
-category: "生産性"
+title: 「立ち仕事」を取り入れて午後の眠気を解消する
+description: スタンディングデスクの活用や、作業内容に応じた姿勢の変え方を解説。
+date: '2026-08-07'
+category: 生産性
 tags:
-  - "スタンディングデスク"
-  - "健康"
-  - "集中力"
-  - "姿勢"
+  - スタンディングデスク
+  - 健康
+  - 集中力
+  - 姿勢
 published: true
-slug: "standing-work-afternoon"
+slug: standing-work-afternoon
 ---
 
 ## はじめに
