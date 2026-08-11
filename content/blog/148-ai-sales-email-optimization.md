@@ -1,15 +1,15 @@
 ---
-title: "AIエージェントに「営業メール」の最適化を任せる"
-description: "送信タイミングや文面をAIでA/Bテストし、返信率を劇的に上げる。"
-date: '2026-03-05'
-category: "AI活用"
+title: AIエージェントに「営業メール」の最適化を任せる
+description: 送信タイミングや文面をAIでA/Bテストし、返信率を劇的に上げる。
+date: '2026-08-11'
+category: AI活用
 tags:
-  - "営業メール"
-  - "A/Bテスト"
-  - "マーケティング"
-  - "最適化"
+  - 営業メール
+  - A/Bテスト
+  - マーケティング
+  - 最適化
 published: true
-slug: "ai-sales-email-optimization"
+slug: ai-sales-email-optimization
 ---
 
 ## はじめに
