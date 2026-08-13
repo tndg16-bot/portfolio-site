@@ -1,15 +1,15 @@
 ---
-title: "会議の時間を半分にし、結論を2倍速で出す「事前準備」"
-description: "参加者全員がアジェンダを共有し、決断の場として会議を機能させる方法。"
-date: "2026-04-16"
-category: "生産性"
+title: 会議の時間を半分にし、結論を2倍速で出す「事前準備」
+description: 参加者全員がアジェンダを共有し、決断の場として会議を機能させる方法。
+date: '2026-08-13'
+category: 生産性
 tags:
-  - "会議"
-  - "ファシリテーション"
-  - "事前準備"
-  - "意思決定"
+  - 会議
+  - ファシリテーション
+  - 事前準備
+  - 意思決定
 published: true
-slug: "meeting-preparation-hack"
+slug: meeting-preparation-hack
 ---
 
 ## はじめに
