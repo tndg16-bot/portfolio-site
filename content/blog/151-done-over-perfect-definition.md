@@ -1,14 +1,14 @@
 ---
-title: "「完璧」を求めすぎて動けない時のための「完了」の定義"
-description: "100点を目指すより、まずは終わらせて世に問うことの価値を知る"
-date: "2026-04-07"
-category: "マインドセット"
+title: 「完璧」を求めすぎて動けない時のための「完了」の定義
+description: 100点を目指すより、まずは終わらせて世に問うことの価値を知る
+date: '2026-08-14'
+category: マインドセット
 tags:
-  - "完璧主義"
-  - "完了主義"
-  - "アウトプット"
-published: false
-slug: "done-over-perfect-definition"
+  - 完璧主義
+  - 完了主義
+  - アウトプット
+published: true
+slug: done-over-perfect-definition
 ---
 
 「もっと良くなってから出そう」という完璧主義は、実は多くの機会を逃させます。完璧を目指すより、まずは終わらせて世に出す「完了主義」の価値と実践方法を解説します。
