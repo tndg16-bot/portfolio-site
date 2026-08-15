@@ -1,15 +1,15 @@
 ---
-title: "AIを活用したイベント企画：コンセプトから集客まで"
-description: "ターゲットに刺さるキャッチコピーやプログラム案をAIと共創する。"
-date: "2026-02-10"
-category: "AI活用"
+title: AIを活用したイベント企画：コンセプトから集客まで
+description: ターゲットに刺さるキャッチコピーやプログラム案をAIと共創する。
+date: '2026-08-15'
+category: AI活用
 tags:
-  - "イベント"
-  - "企画"
-  - "集客"
-  - "マーケティング"
+  - イベント
+  - 企画
+  - 集客
+  - マーケティング
 published: true
-slug: "ai-event-planning"
+slug: ai-event-planning
 ---
 
 ## はじめに
