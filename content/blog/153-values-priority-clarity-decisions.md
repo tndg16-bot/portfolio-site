@@ -1,14 +1,14 @@
 ---
-title: "自分の「価値観の優先順位」を明確にし、迷いなき人生を送る"
-description: "自由、安定、挑戦。自分が人生で最も守りたいものを特定することで、迷いなく決断し、後悔のない人生を送る方法を解説します。"
-date: "2026-01-31"
-category: "メンタルモデル"
+title: 自分の「価値観の優先順位」を明確にし、迷いなき人生を送る
+description: 自由、安定、挑戦。自分が人生で最も守りたいものを特定することで、迷いなく決断し、後悔のない人生を送る方法を解説します。
+date: '2026-08-16'
+category: メンタルモデル
 tags:
-  - "価値観"
-  - "優先順位"
-  - "意思決定"
-  - "人生設計"
-slug: "values-priority-clarity-decisions"
+  - 価値観
+  - 優先順位
+  - 意思決定
+  - 人生設計
+slug: values-priority-clarity-decisions
 published: true
 ---
 
