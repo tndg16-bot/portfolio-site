@@ -1,15 +1,15 @@
 ---
-title: "アウトプットから逆算する「インプット制限」の法則"
-description: "何でも学ぶのではなく、今必要な成果に直結する情報だけを厳選する。"
-date: "2026-04-23"
-category: "生産性"
+title: アウトプットから逆算する「インプット制限」の法則
+description: 何でも学ぶのではなく、今必要な成果に直結する情報だけを厳選する。
+date: '2026-08-17'
+category: 生産性
 tags:
-  - "インプット"
-  - "アウトプット"
-  - "学習"
-  - "情報管理"
+  - インプット
+  - アウトプット
+  - 学習
+  - 情報管理
 published: true
-slug: "output-first-learning"
+slug: output-first-learning
 ---
 
 ## はじめに
