@@ -1,15 +1,15 @@
 ---
-title: "タスク管理ツールに「振り回されない」ためのシンプルな運用"
-description: "多機能なツールを使いこなすことではなく、確実に実行することに注力する。"
-date: "2026-04-24"
-category: "生産性"
+title: タスク管理ツールに「振り回されない」ためのシンプルな運用
+description: 多機能なツールを使いこなすことではなく、確実に実行することに注力する。
+date: '2026-08-18'
+category: 生産性
 tags:
-  - "タスク管理"
-  - "TODO"
-  - "シンプル"
-  - "ツール"
+  - タスク管理
+  - TODO
+  - シンプル
+  - ツール
 published: true
-slug: "simple-task-management"
+slug: simple-task-management
 ---
 
 ## はじめに
