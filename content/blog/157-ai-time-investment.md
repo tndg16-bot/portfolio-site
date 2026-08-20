@@ -1,15 +1,15 @@
 ---
-title: "AI時代の「時間術」：AIが浮かせた時間を何に投資するか"
-description: "効率化によって生まれた余白を、真に創造的な活動に充てる設計図。"
-date: "2026-02-11"
-category: "AI活用"
+title: AI時代の「時間術」：AIが浮かせた時間を何に投資するか
+description: 効率化によって生まれた余白を、真に創造的な活動に充てる設計図。
+date: '2026-08-20'
+category: AI活用
 tags:
-  - "時間管理"
-  - "創造性"
-  - "ライフデザイン"
-  - "AI活用"
+  - 時間管理
+  - 創造性
+  - ライフデザイン
+  - AI活用
 published: true
-slug: "ai-time-investment"
+slug: ai-time-investment
 ---
 
 ## はじめに
