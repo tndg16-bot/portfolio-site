@@ -1,15 +1,15 @@
 ---
-title: "AI導入でチームの生産性を2倍にする導入ロードマップ"
-description: "組織全体のAIリテラシーを底上げし、実務に浸透させるステップ。"
-date: '2026-02-20'
-category: "AI活用"
+title: AI導入でチームの生産性を2倍にする導入ロードマップ
+description: 組織全体のAIリテラシーを底上げし、実務に浸透させるステップ。
+date: '2026-08-24'
+category: AI活用
 tags:
-  - "AI導入"
-  - "チーム"
-  - "生産性"
-  - "組織改革"
+  - AI導入
+  - チーム
+  - 生産性
+  - 組織改革
 published: true
-slug: "ai-team-productivity-roadmap"
+slug: ai-team-productivity-roadmap
 ---
 
 ## はじめに
