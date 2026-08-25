@@ -1,15 +1,15 @@
 ---
-title: "ポモドーロ・テクニックの「休憩時間」をどう過ごすべきか"
-description: "科学的に正しい休憩のとり方で、次の25分間の集中力を維持する。"
-date: "2026-04-20"
-category: "生産性"
+title: ポモドーロ・テクニックの「休憩時間」をどう過ごすべきか
+description: 科学的に正しい休憩のとり方で、次の25分間の集中力を維持する。
+date: '2026-08-25'
+category: 生産性
 tags:
-  - "ポモドーロテクニック"
-  - "休憩"
-  - "集中力"
-  - "回復"
-published: false
-slug: "pomodoro-break-optimization"
+  - ポモドーロテクニック
+  - 休憩
+  - 集中力
+  - 回復
+published: true
+slug: pomodoro-break-optimization
 ---
 
 ## はじめに
