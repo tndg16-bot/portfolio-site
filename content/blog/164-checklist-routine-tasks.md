@@ -1,15 +1,15 @@
 ---
-title: "定型作業を「チェックリスト化」して判断の回数を減らす"
-description: "慣れた仕事ほど、確認項目を明文化してミスを防ぎ、脳を疲れさせない。"
-date: "2026-03-10"
-category: "生産性"
+title: 定型作業を「チェックリスト化」して判断の回数を減らす
+description: 慣れた仕事ほど、確認項目を明文化してミスを防ぎ、脳を疲れさせない。
+date: '2026-08-27'
+category: 生産性
 tags:
-  - "チェックリスト"
-  - "定型作業"
-  - "自動化"
-  - "ミス防止"
+  - チェックリスト
+  - 定型作業
+  - 自動化
+  - ミス防止
 published: true
-slug: "checklist-routine-tasks"
+slug: checklist-routine-tasks
 ---
 
 ## はじめに
