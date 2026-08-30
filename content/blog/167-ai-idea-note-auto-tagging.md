@@ -1,15 +1,15 @@
 ---
-title: "AIを活用した「アイデアノート」の自動タグ付けと整理"
-description: "雑多なメモをAIが自動でカテゴリー分けし、検索性を高める管理術。"
-date: "2026-02-13"
-category: "AI活用"
+title: AIを活用した「アイデアノート」の自動タグ付けと整理
+description: 雑多なメモをAIが自動でカテゴリー分けし、検索性を高める管理術。
+date: '2026-08-30'
+category: AI活用
 tags:
-  - "アイデアノート"
-  - "タグ付け"
-  - "整理術"
-  - "ナレッジ管理"
+  - アイデアノート
+  - タグ付け
+  - 整理術
+  - ナレッジ管理
 published: true
-slug: "ai-idea-note-auto-tagging"
+slug: ai-idea-note-auto-tagging
 ---
 
 ## はじめに
