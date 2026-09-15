@@ -1,15 +1,15 @@
 ---
-title: "AIによるブログ記事の「読者視点」添削術"
-description: "執筆した文章が、ターゲット読者にどう伝わるかをAIに客観的に評価させる。"
-date: "2026-02-12"
-category: "AI活用"
+title: AIによるブログ記事の「読者視点」添削術
+description: 執筆した文章が、ターゲット読者にどう伝わるかをAIに客観的に評価させる。
+date: '2026-09-15'
+category: AI活用
 tags:
-  - "ブログ"
-  - "ライティング"
-  - "読者視点"
-  - "添削"
+  - ブログ
+  - ライティング
+  - 読者視点
+  - 添削
 published: true
-slug: "ai-reader-perspective-editing"
+slug: ai-reader-perspective-editing
 ---
 
 ## はじめに
