@@ -1,15 +1,15 @@
 ---
-title: "AI時代のポエムとビジネス文章の使い分け"
-description: "AIが得意な論理構築と、人間にしか出せない情緒的な表現の棲み分け。"
-date: '2026-02-26'
-category: "AI活用"
+title: AI時代のポエムとビジネス文章の使い分け
+description: AIが得意な論理構築と、人間にしか出せない情緒的な表現の棲み分け。
+date: '2026-09-27'
+category: AI活用
 tags:
-  - "ライティング"
-  - "文章術"
-  - "情緒"
-  - "ビジネス"
+  - ライティング
+  - 文章術
+  - 情緒
+  - ビジネス
 published: true
-slug: "ai-poem-business-writing"
+slug: ai-poem-business-writing
 ---
 
 ## はじめに
