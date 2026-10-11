@@ -1,13 +1,14 @@
 ---
-title: "メンターを持つべき3つの理由"
-date: '2026-03-15'
-category: "キャリア"
+title: メンターを持つべき3つの理由
+date: '2026-10-11'
+category: キャリア
 tags:
-  - "Career"
-  - "Growth"
-  - "Mentorship"
-description: "一人で成長するには限界がある。メンターを持つことで、キャリアは加速します。"
+  - Career
+  - Growth
+  - Mentorship
+description: 一人で成長するには限界がある。メンターを持つことで、キャリアは加速します。
 published: true
+slug: importance-of-mentor
 ---
 
 ## なぜ一人では限界があるのか
