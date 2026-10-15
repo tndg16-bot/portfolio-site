@@ -1,13 +1,14 @@
 ---
-title: "心理的安全性 - チームの生産性を決める見えない要素"
-date: "2026-02-15"
-category: "キャリア"
+title: 心理的安全性 - チームの生産性を決める見えない要素
+date: '2026-10-15'
+category: キャリア
 tags:
-  - "Leadership"
-  - "Team"
-  - "Psychological Safety"
-description: "Googleが発見した最高のチームの秘密。それは心理的安全性でした。"
+  - Leadership
+  - Team
+  - Psychological Safety
+description: Googleが発見した最高のチームの秘密。それは心理的安全性でした。
 published: true
+slug: psychological-safety
 ---
 
 ## Googleが発見した「最高のチーム」の秘密
