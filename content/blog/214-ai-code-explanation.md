@@ -1,15 +1,15 @@
 ---
-title: "AIによるプログラミングコードの解説とドキュメント化"
-description: "既存のコードを読み解き、仕様書を自動生成して引き継ぎを楽にする。"
-date: '2026-03-08'
-category: "AI活用"
+title: AIによるプログラミングコードの解説とドキュメント化
+description: 既存のコードを読み解き、仕様書を自動生成して引き継ぎを楽にする。
+date: '2026-10-16'
+category: AI活用
 tags:
-  - "プログラミング"
-  - "コード"
-  - "ドキュメント"
-  - "引き継ぎ"
+  - プログラミング
+  - コード
+  - ドキュメント
+  - 引き継ぎ
 published: true
-slug: "ai-code-explanation"
+slug: ai-code-explanation
 ---
 
 ## はじめに
