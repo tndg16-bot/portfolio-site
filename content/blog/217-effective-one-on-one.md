@@ -1,13 +1,14 @@
 ---
-title: "1on1ミーティングを価値ある時間に変える方法"
-date: '2026-02-21'
-category: "キャリア"
+title: 1on1ミーティングを価値ある時間に変える方法
+date: '2026-10-19'
+category: キャリア
 tags:
-  - "Career"
-  - "Communication"
-  - "Management"
-description: "上司との1on1、ただの雑談で終わっていませんか？キャリアを加速させる1on1の活用法を解説します。"
+  - Career
+  - Communication
+  - Management
+description: 上司との1on1、ただの雑談で終わっていませんか？キャリアを加速させる1on1の活用法を解説します。
 published: true
+slug: effective-one-on-one
 ---
 
 ## 1on1を無駄にしていませんか
