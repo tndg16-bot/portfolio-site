@@ -1,13 +1,14 @@
 ---
-title: "アウトプット思考 - インプット過多から抜け出す"
-date: '2026-02-24'
-category: "思考法"
+title: アウトプット思考 - インプット過多から抜け出す
+date: '2026-10-24'
+category: 思考法
 tags:
-  - "Learning"
-  - "Productivity"
-  - "Output"
-description: "本を読む、動画を見る、セミナーに参加する。でも、何も変わらない。インプット中毒から脱出する方法。"
+  - Learning
+  - Productivity
+  - Output
+description: 本を読む、動画を見る、セミナーに参加する。でも、何も変わらない。インプット中毒から脱出する方法。
 published: true
+slug: output-thinking
 ---
 
 ## 学んでいるのに成長しない
