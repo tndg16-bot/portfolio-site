@@ -1,14 +1,14 @@
 ---
-title: "クリエイティブ思考を鍛える5つの習慣"
-date: "2026-03-14"
-category: "思考法"
+title: クリエイティブ思考を鍛える5つの習慣
+date: '2026-11-03'
+category: 思考法
 tags:
-  - "創造性"
-  - "思考法"
-  - "イノベーション"
-description: "クリエイティブな人は生まれつき？いいえ、創造性は習慣で鍛えられます。"
-slug: "creative-thinking"
-published: false
+  - 創造性
+  - 思考法
+  - イノベーション
+description: クリエイティブな人は生まれつき？いいえ、創造性は習慣で鍛えられます。
+slug: creative-thinking
+published: true
 ---
 
 ## はじめに
