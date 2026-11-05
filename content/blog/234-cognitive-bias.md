@@ -1,14 +1,14 @@
 ---
-title: "認知バイアス入門 - 脳の癖を知って判断を改善する"
-date: "2026-02-25"
-category: "メンタルモデル"
+title: 認知バイアス入門 - 脳の癖を知って判断を改善する
+date: '2026-11-05'
+category: メンタルモデル
 tags:
-  - "メンタルモデル"
-  - "意思決定"
-  - "心理学"
-description: "人間の脳には偏りがある。それを知るだけで、より良い判断ができるようになります。"
-slug: "cognitive-bias"
-published: false
+  - メンタルモデル
+  - 意思決定
+  - 心理学
+description: 人間の脳には偏りがある。それを知るだけで、より良い判断ができるようになります。
+slug: cognitive-bias
+published: true
 ---
 
 ## はじめに
