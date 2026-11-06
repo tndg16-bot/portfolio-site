@@ -1,14 +1,14 @@
 ---
-title: "コンフォートゾーンを抜け出す方法"
-date: "2026-02-21"
-category: "マインドセット"
+title: コンフォートゾーンを抜け出す方法
+date: '2026-11-06'
+category: マインドセット
 tags:
-  - "マインドセット"
-  - "成長"
-  - "挑戦"
-description: "居心地の良い場所にいると成長は止まる。でも、無謀な挑戦も危険。適切な「ストレッチゾーン」の見つけ方。"
-slug: "comfort-zone"
-published: false
+  - マインドセット
+  - 成長
+  - 挑戦
+description: 居心地の良い場所にいると成長は止まる。でも、無謀な挑戦も危険。適切な「ストレッチゾーン」の見つけ方。
+slug: comfort-zone
+published: true
 ---
 
 ## はじめに
