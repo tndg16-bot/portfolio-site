@@ -1,13 +1,14 @@
 ---
-title: "情報デトックス - 脳を休ませる勇気"
-date: '2026-03-06'
-category: "生産性"
+title: 情報デトックス - 脳を休ませる勇気
+date: '2026-11-08'
+category: 生産性
 tags:
-  - "生産性"
-  - "マインドセット"
-  - "デジタルウェルネス"
-description: "朝起きてスマホ、電車でSNS、寝る前にYouTube。情報過多が脳の疲労を招いています。"
+  - 生産性
+  - マインドセット
+  - デジタルウェルネス
+description: 朝起きてスマホ、電車でSNS、寝る前にYouTube。情報過多が脳の疲労を招いています。
 published: true
+slug: information-detox
 ---
 
 ## 脳が休めていない
