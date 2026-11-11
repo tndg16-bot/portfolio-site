@@ -1,14 +1,14 @@
 ---
-title: "タイムブロッキング - カレンダーを味方につける"
-date: "2026-03-09"
-category: "生産性"
+title: タイムブロッキング - カレンダーを味方につける
+date: '2026-11-11'
+category: 生産性
 tags:
-  - "生産性"
-  - "時間管理"
-  - "カレンダー"
-description: "ToDoリストだけでは不十分。時間をブロックすることで、実際に行動に移す。"
-slug: "time-blocking"
-published: false
+  - 生産性
+  - 時間管理
+  - カレンダー
+description: ToDoリストだけでは不十分。時間をブロックすることで、実際に行動に移す。
+slug: time-blocking
+published: true
 ---
 
 ## はじめに
