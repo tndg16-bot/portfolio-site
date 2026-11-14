@@ -634,6 +634,11 @@
       "original": "178-conflict-resolution.md",
       "newFile": "242-conflict-resolution.md",
       "date": "2026-11-13"
+    },
+    {
+      "original": "068-comparison-trap.md",
+      "newFile": "243-comparison-trap.md",
+      "date": "2026-11-14"
     }
   ]
 }
