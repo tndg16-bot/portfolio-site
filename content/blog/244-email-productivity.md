@@ -1,14 +1,14 @@
 ---
-title: "メールに支配されない働き方"
-date: "2026-05-09"
-category: "生産性"
+title: メールに支配されない働き方
+date: '2026-11-15'
+category: 生産性
 tags:
-  - "メール"
-  - "生産性"
-  - "コミュニケーション"
-description: "メールの返信に追われて1日が終わる。そんな状況から脱出する方法。"
-slug: "email-productivity"
-published: false
+  - メール
+  - 生産性
+  - コミュニケーション
+description: メールの返信に追われて1日が終わる。そんな状況から脱出する方法。
+slug: email-productivity
+published: true
 ---
 
 ## はじめに
