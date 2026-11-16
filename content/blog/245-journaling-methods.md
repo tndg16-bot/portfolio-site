@@ -1,14 +1,14 @@
 ---
-title: "効果的なジャーナリング5つの手法"
-date: "2026-03-01"
-category: "思考法"
+title: 効果的なジャーナリング5つの手法
+date: '2026-11-16'
+category: 思考法
 tags:
-  - "ジャーナリング"
-  - "自己認識"
-  - "ライティング"
-description: "日記を書くだけでは効果が限定的。目的に応じた書き方で、自己理解を深めましょう。"
-slug: "journaling-methods"
-published: false
+  - ジャーナリング
+  - 自己認識
+  - ライティング
+description: 日記を書くだけでは効果が限定的。目的に応じた書き方で、自己理解を深めましょう。
+slug: journaling-methods
+published: true
 ---
 
 ## はじめに
