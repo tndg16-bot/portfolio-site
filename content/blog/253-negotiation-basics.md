@@ -1,14 +1,14 @@
 ---
-title: "交渉の基本 - WinWinを実現する技術"
-date: "2026-04-22"
-category: "キャリア"
+title: 交渉の基本 - WinWinを実現する技術
+date: '2026-11-24'
+category: キャリア
 tags:
-  - "交渉"
-  - "コミュニケーション"
-  - "キャリア"
-description: "交渉は奪い合いではない。双方が満足する結果を生み出す方法。"
-slug: "negotiation-basics"
-published: false
+  - 交渉
+  - コミュニケーション
+  - キャリア
+description: 交渉は奪い合いではない。双方が満足する結果を生み出す方法。
+slug: negotiation-basics
+published: true
 ---
 
 ## はじめに
